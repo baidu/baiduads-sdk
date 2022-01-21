@@ -1,0 +1,785 @@
+openapi: 3.0.1
+info:
+  description: '''dev2.baidu.com'' api schema'
+  title: dev2 api schema
+  version: 1.0.0
+servers:
+- url: https://api.baidu.com/
+- url: http://api.baidu.com/
+tags:
+- name: CampaignFeedService
+paths:
+  json/feed/v1/CampaignFeedService/addCampaignFeed:
+    post:
+      operationId: addCampaignFeed
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/AddCampaignFeedRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/AddCampaignFeedResponseWrapper'
+          description: response
+      tags:
+      - CampaignFeedService
+      x-codegen-request-body-name: AddCampaignFeedRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/feed/v1/CampaignFeedService/updateCampaignFeed:
+    post:
+      operationId: updateCampaignFeed
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapper'
+          description: response
+      tags:
+      - CampaignFeedService
+      x-codegen-request-body-name: UpdateCampaignFeedRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/feed/v1/CampaignFeedService/deleteCampaignFeed:
+    post:
+      operationId: deleteCampaignFeed
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper'
+          description: response
+      tags:
+      - CampaignFeedService
+      x-codegen-request-body-name: DeleteCampaignFeedRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/feed/v1/CampaignFeedService/getCampaignFeed:
+    post:
+      operationId: getCampaignFeed
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/GetCampaignFeedRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/GetCampaignFeedResponseWrapper'
+          description: response
+      tags:
+      - CampaignFeedService
+      x-codegen-request-body-name: GetCampaignFeedRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+components:
+  schemas:
+    ScheduleType:
+      example:
+        endHour: 9
+        startHour: 7
+        weekDay: 2
+      properties:
+        weekDay:
+          format: int32
+          type: integer
+        startHour:
+          format: int64
+          type: integer
+        endHour:
+          format: int64
+          type: integer
+      type: object
+    GetCampaignFeedRequestWrapper:
+      example:
+        body:
+          campaignFeedIds:
+          - 0
+          - 0
+          campaignFeedFilter:
+            bstype:
+            - 6
+            - 6
+          campaignFeedFields:
+          - campaignFeedFields
+          - campaignFeedFields
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/GetCampaignFeedRequest'
+      type: object
+    CampaignFeedType:
+      example:
+        subject: 6
+        endtime: endtime
+        starttime: starttime
+        bstype: 4
+        pause: true
+        campaignFeedId: 0
+        schedule:
+        - endHour: 9
+          startHour: 7
+          weekDay: 2
+        - endHour: 9
+          startHour: 7
+          weekDay: 2
+        addtime: addtime
+        bgtctltype: 3
+        appinfo:
+          openurl: openurl
+          apkName: apkName
+          appName: appName
+          docId: 1
+          appUrl: appUrl
+          channelId: 5
+        eshopType: eshopType
+        campaignFeedName: campaignFeedName
+        budget: 5.637376656633329
+        status: 2
+      properties:
+        campaignFeedId:
+          format: int64
+          type: integer
+        campaignFeedName:
+          type: string
+        subject:
+          format: int32
+          type: integer
+        appinfo:
+          $ref: '#/components/schemas/AppInfoType'
+        budget:
+          format: double
+          type: number
+        starttime:
+          type: string
+        endtime:
+          type: string
+        schedule:
+          items:
+            $ref: '#/components/schemas/ScheduleType'
+          type: array
+        bgtctltype:
+          format: int32
+          type: integer
+        pause:
+          type: boolean
+        status:
+          format: int32
+          type: integer
+        bstype:
+          format: int32
+          type: integer
+        addtime:
+          type: string
+        eshopType:
+          type: string
+      type: object
+    GetCampaignFeedRequest:
+      example:
+        campaignFeedIds:
+        - 0
+        - 0
+        campaignFeedFilter:
+          bstype:
+          - 6
+          - 6
+        campaignFeedFields:
+        - campaignFeedFields
+        - campaignFeedFields
+      properties:
+        campaignFeedFields:
+          items:
+            type: string
+          type: array
+        campaignFeedIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+        campaignFeedFilter:
+          $ref: '#/components/schemas/CampaignFeedFilter'
+      type: object
+    ApiErrorInfo:
+      type: object
+    DeleteCampaignFeedResponseWrapper:
+      example:
+        body:
+          data:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+      type: object
+    GetCampaignFeedResponseWrapper:
+      example:
+        body:
+          data:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+      type: object
+    ApiRequestHeader:
+      type: object
+    UpdateCampaignFeedRequestWrapper:
+      example:
+        body:
+          campaignFeedTypes:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper_body'
+      type: object
+    AppInfoType:
+      example:
+        openurl: openurl
+        apkName: apkName
+        appName: appName
+        docId: 1
+        appUrl: appUrl
+        channelId: 5
+      properties:
+        appName:
+          type: string
+        apkName:
+          type: string
+        appUrl:
+          type: string
+        docId:
+          format: int64
+          type: integer
+        channelId:
+          format: int64
+          type: integer
+        openurl:
+          type: string
+      type: object
+    CampaignFeedFilter:
+      example:
+        bstype:
+        - 6
+        - 6
+      properties:
+        bstype:
+          items:
+            format: int32
+            type: integer
+          type: array
+      type: object
+    ApiResponseHeader:
+      type: object
+    UpdateCampaignFeedResponseWrapper:
+      example:
+        body:
+          data:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+      type: object
+    AddCampaignFeedRequestWrapper:
+      example:
+        body:
+          campaignFeedTypes:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper_body'
+      type: object
+    DeleteCampaignFeedRequestWrapper:
+      example:
+        body:
+          campaignFeedIds:
+          - 0
+          - 0
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapper_body'
+      type: object
+    AddCampaignFeedResponseWrapper:
+      example:
+        body:
+          data:
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+          - subject: 6
+            endtime: endtime
+            starttime: starttime
+            bstype: 4
+            pause: true
+            campaignFeedId: 0
+            schedule:
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            - endHour: 9
+              startHour: 7
+              weekDay: 2
+            addtime: addtime
+            bgtctltype: 3
+            appinfo:
+              openurl: openurl
+              apkName: apkName
+              appName: appName
+              docId: 1
+              appUrl: appUrl
+              channelId: 5
+            eshopType: eshopType
+            campaignFeedName: campaignFeedName
+            budget: 5.637376656633329
+            status: 2
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+      type: object
+    DeleteCampaignFeedResponseWrapper_body:
+      example:
+        data:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      type: object
+    UpdateCampaignFeedRequestWrapper_body:
+      example:
+        campaignFeedTypes:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        campaignFeedTypes:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      type: object
+    DeleteCampaignFeedRequestWrapper_body:
+      example:
+        campaignFeedIds:
+        - 0
+        - 0
+      properties:
+        campaignFeedIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+      type: object
+x-original-swagger-version: "2.0"
+

@@ -1,0 +1,12 @@
+baiduads/__init__.py
+baiduads/common/__init__.py
+baiduads/common/__init__.py
+baiduads/common/api/__init__.py
+baiduads/common/model/__init__.py
+baiduads/common/model/api_error_info.py
+baiduads/common/model/api_request_header.py
+baiduads/common/model/api_response_header.py
+docs/ApiErrorInfo.md
+docs/ApiRequestHeader.md
+docs/ApiResponseHeader.md
+test/__init__.py

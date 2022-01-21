@@ -1,0 +1,1 @@
+baiduads-sdk-auto >= 1.0.0

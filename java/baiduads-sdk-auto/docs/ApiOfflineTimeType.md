@@ -1,0 +1,14 @@
+
+
+# ApiOfflineTimeType
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**time** | **String** |  |  [optional]
+**flag** | **Integer** |  |  [optional]
+
+
+
