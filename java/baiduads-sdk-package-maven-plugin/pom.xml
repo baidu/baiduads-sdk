@@ -14,6 +14,12 @@
     <url>https://github.com/baidu/baiduads-sdk</url>
     <description>package-maven-plugin just for baiduads-sdk</description>
 
+    <scm>
+        <connection>scm:git:https://github.com/baidu/baiduads-sdk.git</connection>
+        <developerConnection>scm:git:https://github.com/baidu/baiduads-sdk.git</developerConnection>
+        <url>https://github.com/baidu/baiduads-sdk/tree/main/java/baiduads-sdk-package-maven-plugin</url>
+    </scm>
+
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -132,7 +138,6 @@
                         <arg>--pinentry-mode</arg>
                         <arg>loopback</arg>
                     </gpgArguments>
-                    <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
