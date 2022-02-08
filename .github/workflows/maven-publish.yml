@@ -29,6 +29,9 @@ jobs:
 
     - name: Build with Maven
       run: mvn -B package -Dmaven.test.skip=true --file java/pom.xml
+      
+    - name: run baidu-package-plugin 
+      run: mvn baiduads-sdk-package:alter-sources -Dbaidusdk-package.skip=false --file java/pom.xml
 
     - name: Release Maven package
       uses: samuelmeuli/action-maven-publish@v1
@@ -38,7 +41,7 @@ jobs:
         nexus_username: ${{ secrets.OSSRH_USER }}
         nexus_password: ${{ secrets.OSSRH_PASSWD }}
         directory: java
-        maven_args: -Dmaven.test.skip=true
+        maven_args: -Dmaven.test.skip=true -Dgpg.skip=false
       env:
         MAVEN_USERNAME: ${{ secrets.OSSRH_USER }}
         MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWD }}
