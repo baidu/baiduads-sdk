@@ -1,14 +1,6 @@
 package com.baidu.dev2.api.sdk.manual.oauth.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Builder
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class GetUserInfoRequset {
     /**
      * 授权用户查询标识
@@ -24,4 +16,28 @@ public class GetUserInfoRequset {
      * 同意授权的推广账户ID
      */
     private Long userId;
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 }

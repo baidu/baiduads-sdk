@@ -5,7 +5,6 @@
 
 package com.baidu.dev2.api.sdk.manual.oauth.model;
 
-import lombok.Data;
 
 import java.util.Map;
 
@@ -14,7 +13,6 @@ import java.util.Map;
  * @version 1.0
  * @since  2021/9/9 4:55 下午
  */
-@Data
 public class AccessTokenInfo {
     /**
      * 授权令牌
@@ -60,4 +58,76 @@ public class AccessTokenInfo {
      * 授权账户ID
      */
     private Long userId;
+
+    public String getAccessToken() {
+        return accessToken;
+    }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public String getRefreshToken() {
+        return refreshToken;
+    }
+
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
+
+    public String getExpiresTime() {
+        return expiresTime;
+    }
+
+    public void setExpiresTime(String expiresTime) {
+        this.expiresTime = expiresTime;
+    }
+
+    public String getRefreshExpiresTime() {
+        return refreshExpiresTime;
+    }
+
+    public void setRefreshExpiresTime(String refreshExpiresTime) {
+        this.refreshExpiresTime = refreshExpiresTime;
+    }
+
+    public Integer getExpiresIn() {
+        return expiresIn;
+    }
+
+    public void setExpiresIn(Integer expiresIn) {
+        this.expiresIn = expiresIn;
+    }
+
+    public Integer getRefreshExpiresIn() {
+        return refreshExpiresIn;
+    }
+
+    public void setRefreshExpiresIn(Integer refreshExpiresIn) {
+        this.refreshExpiresIn = refreshExpiresIn;
+    }
+
+    public Map<String, String> getScope() {
+        return scope;
+    }
+
+    public void setScope(Map<String, String> scope) {
+        this.scope = scope;
+    }
+
+    public String getOpenId() {
+        return openId;
+    }
+
+    public void setOpenId(String openId) {
+        this.openId = openId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 }
