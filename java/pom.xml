@@ -16,6 +16,12 @@
     <module>baiduads-sdk-thirdparty</module>
   </modules>
 
+  <scm>
+    <connection>scm:git:https://github.com/baidu/baiduads-sdk.git</connection>
+    <developerConnection>scm:git:https://github.com/baidu/baiduads-sdk.git</developerConnection>
+    <url>https://github.com/baidu/baiduads-sdk/tree/main/java</url>
+  </scm>
+
   <licenses>
     <license>
       <name>The Apache License, Version 2.0</name>
@@ -114,7 +120,6 @@
             <arg>--pinentry-mode</arg>
             <arg>loopback</arg>
           </gpgArguments>
-          <skip>true</skip>
         </configuration>
       </plugin>
       <plugin>
