@@ -31,7 +31,7 @@ jobs:
       run: mvn -B package -Dmaven.test.skip=true --file java/pom.xml
 
     - name: install baiduads-sdk-package-plugin 
-      run: mvn install -Dmaven.test.skip=true --file java/baiduads-sdk-package-maven-plugin/pom.xml
+      run: mvn install -Dmaven.test.skip=true -Dgpg.skip=true --file java/baiduads-sdk-package-maven-plugin/pom.xml
       
     - name: run baiduads-sdk-package-plugin 
       run: mvn baiduads-sdk-package:alter-sources -Dbaidusdk-package.skip=false --file java/pom.xml
