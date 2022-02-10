@@ -7,14 +7,17 @@ import static com.baidu.dev2.maven.plugins.Constants.DEPLOY_PLUGIN_GROUP_ID;
 import static com.baidu.dev2.maven.plugins.Constants.FILE_MAPPING_FILENAME;
 import static com.baidu.dev2.maven.plugins.Constants.IMPORT_LINE_PREFIX;
 import static com.baidu.dev2.maven.plugins.Constants.JAVA_FILE_SUFFIX;
+import static com.baidu.dev2.maven.plugins.Constants.NEXUS_STAGING_PLUGIN_ARTIFACT_ID;
+import static com.baidu.dev2.maven.plugins.Constants.NEXUS_STAGING_PLUGIN_GROUP_ID;
 import static com.baidu.dev2.maven.plugins.Constants.NULLABLE_ANNOTATION;
 import static com.baidu.dev2.maven.plugins.Constants.POM_FILE_NAME;
 import static com.baidu.dev2.maven.plugins.Constants.REPLACE_NULLABLE_ANNOTATION;
 import static com.baidu.dev2.maven.plugins.Constants.SDK_AUTO_MODULE_NAME;
 import static com.baidu.dev2.maven.plugins.Constants.SDK_MODULE_NAME;
 import static com.baidu.dev2.maven.plugins.Constants.SDK_PARENT_MODULE_NAME;
-import static com.baidu.dev2.maven.plugins.Constants.SDK_THIRDPARTY;
+import static com.baidu.dev2.maven.plugins.Constants.SDK_THIRDPARTY_MODULE_NAME;
 import static com.baidu.dev2.maven.plugins.Constants.SKIP_CONF_PROP;
+import static com.baidu.dev2.maven.plugins.Constants.SKIP_NEXUS_STAGING_DEPLOY_MOJO;
 import static com.baidu.dev2.maven.plugins.Constants.SOURCES_COPY_DIR;
 import static com.baidu.dev2.maven.plugins.Constants.importPrefixMapping;
 
@@ -65,16 +68,55 @@ public class AlterSourcesMojo extends AbstractSdkMojo {
 
                 File sdkDir = new File(basedir, SDK_MODULE_NAME);
                 File sdkAutoDir = new File(basedir, SDK_AUTO_MODULE_NAME);
+                File sdkThirdDir = new File(basedir, SDK_THIRDPARTY_MODULE_NAME);
                 // 处理 sdk
                 processSdkModule(sdkDir);
 
                 // 处理 adk-auto
                 processSdkAutoModule(sdkAutoDir);
+
+                // 处理 sdk-thirdparty
+                processSdkThirdModule(sdkThirdDir);
             }
 
         } catch (Exception e) {
             getLog().error("alter sources ex:" + e);
             throw new MojoExecutionException(e);
+        }
+    }
+
+    private void processSdkThirdModule(File basedir) throws Exception {
+        FileInputStream inputStream = null;
+        FileOutputStream outputStream = null;
+        try {
+            File pomFile = new File(basedir, POM_FILE_NAME);
+            MavenXpp3Reader reader = new MavenXpp3Reader();
+            MavenXpp3Writer writer = new MavenXpp3Writer();
+            inputStream = new FileInputStream(pomFile);
+            Model model = reader.read(inputStream);
+
+            // 设置插件信息
+            Build build = model.getBuild();
+            if (build == null) {
+                build = new Build();
+                model.setBuild(build);
+            }
+            // 设置 nexus-staging-maven-plugin 插件，不让这个模块deploy
+            Plugin plugin = genNexusStagingPlugin();
+
+            List<Plugin> plugins = build.getPlugins();
+            if (plugins == null) {
+                plugins = new ArrayList<>();
+                build.setPlugins(plugins);
+            }
+            plugins.add(plugin);
+
+            outputStream = new FileOutputStream(pomFile);
+            writer.write(outputStream, model);
+        } finally {
+            // 关闭流
+            IOUtils.closeQuietly(inputStream);
+            IOUtils.closeQuietly(outputStream);
         }
     }
 
@@ -110,7 +152,6 @@ public class AlterSourcesMojo extends AbstractSdkMojo {
             dependencies.add(thirdparty);
             model.setDependencies(dependencies);
 
-
             // 设置插件信息
             Build build = model.getBuild();
             if (build == null) {
@@ -118,16 +159,14 @@ public class AlterSourcesMojo extends AbstractSdkMojo {
                 model.setBuild(build);
             }
             // 设置deploy插件，不让这个模块deploy
-            Plugin plugin = new Plugin();
-            plugin.setGroupId(DEPLOY_PLUGIN_GROUP_ID);
-            plugin.setArtifactId(DEPLOY_PLUGIN_ARTIFACT_ID);
-            Xpp3Dom conf = new Xpp3Dom(CONF);
-            Xpp3Dom skipConf = new Xpp3Dom(SKIP_CONF_PROP);
-            skipConf.setValue(Boolean.TRUE.toString());
-            conf.addChild(skipConf);
-            plugin.setConfiguration(conf);
+            Plugin deployPlugin = genDeployPlugin();
+
+            // 设置 nexus-staging-maven-plugin 插件，不让这个模块deploy
+            Plugin nexusStagingPlugin = genNexusStagingPlugin();
+
             List<Plugin> plugins = new ArrayList<>();
-            plugins.add(plugin);
+            plugins.add(deployPlugin);
+            plugins.add(nexusStagingPlugin);
             build.setPlugins(plugins);
 
             outputStream = new FileOutputStream(pomFile);
@@ -176,7 +215,7 @@ public class AlterSourcesMojo extends AbstractSdkMojo {
         InputStream inputStream = null;
         try {
             // 尝试去读取同级目录 baiduads-sdk-thirdparty 下的pom文件，获取依赖信息
-            File thirdpartyDir = new File(basedir.getParentFile(), SDK_THIRDPARTY);
+            File thirdpartyDir = new File(basedir.getParentFile(), SDK_THIRDPARTY_MODULE_NAME);
             File pomFile = new File(thirdpartyDir, POM_FILE_NAME);
             MavenXpp3Reader reader = new MavenXpp3Reader();
             inputStream = new FileInputStream(pomFile);
@@ -282,5 +321,29 @@ public class AlterSourcesMojo extends AbstractSdkMojo {
             IOUtils.closeQuietly(printWriter);
         }
 
+    }
+
+    private Plugin genDeployPlugin() {
+        Plugin plugin = new Plugin();
+        plugin.setGroupId(DEPLOY_PLUGIN_GROUP_ID);
+        plugin.setArtifactId(DEPLOY_PLUGIN_ARTIFACT_ID);
+        Xpp3Dom conf = new Xpp3Dom(CONF);
+        Xpp3Dom skipConf = new Xpp3Dom(SKIP_CONF_PROP);
+        skipConf.setValue(Boolean.TRUE.toString());
+        conf.addChild(skipConf);
+        plugin.setConfiguration(conf);
+        return plugin;
+    }
+
+    private Plugin genNexusStagingPlugin() {
+        Plugin plugin = new Plugin();
+        plugin.setGroupId(NEXUS_STAGING_PLUGIN_GROUP_ID);
+        plugin.setArtifactId(NEXUS_STAGING_PLUGIN_ARTIFACT_ID);
+        Xpp3Dom conf = new Xpp3Dom(CONF);
+        Xpp3Dom skipConf = new Xpp3Dom(SKIP_NEXUS_STAGING_DEPLOY_MOJO);
+        skipConf.setValue(Boolean.TRUE.toString());
+        conf.addChild(skipConf);
+        plugin.setConfiguration(conf);
+        return plugin;
     }
 }

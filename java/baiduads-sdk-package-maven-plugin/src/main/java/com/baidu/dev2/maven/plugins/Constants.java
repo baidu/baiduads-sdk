@@ -14,6 +14,8 @@ public class Constants {
     public static final String SDK_MODULE_NAME = "baiduads-sdk";
 
     public static final String SDK_AUTO_MODULE_NAME = "baiduads-sdk-auto";
+    
+    public static final String SDK_THIRDPARTY_MODULE_NAME = "baiduads-sdk-thirdparty";
 
     public static final String BUILD_DIR_NAME = "target";
 
@@ -23,11 +25,15 @@ public class Constants {
 
     public static final String DEPLOY_PLUGIN_ARTIFACT_ID = "maven-deploy-plugin";
 
+    public static final String NEXUS_STAGING_PLUGIN_GROUP_ID = "org.sonatype.plugins";
+
+    public static final String NEXUS_STAGING_PLUGIN_ARTIFACT_ID = "nexus-staging-maven-plugin";
+
+    public static final String SKIP_NEXUS_STAGING_DEPLOY_MOJO = "skipNexusStagingDeployMojo";
+
     public static final String CONF = "configuration";
 
     public static final String SKIP_CONF_PROP = "skip";
-
-    public static final String SDK_THIRDPARTY = "baiduads-sdk-thirdparty";
 
     public static final String JAVA_FILE_SUFFIX = ".java";
 
