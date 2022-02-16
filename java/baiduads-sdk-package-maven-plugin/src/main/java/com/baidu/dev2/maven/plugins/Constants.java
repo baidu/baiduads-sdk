@@ -14,7 +14,7 @@ public class Constants {
     public static final String SDK_MODULE_NAME = "baiduads-sdk";
 
     public static final String SDK_AUTO_MODULE_NAME = "baiduads-sdk-auto";
-    
+
     public static final String SDK_THIRDPARTY_MODULE_NAME = "baiduads-sdk-thirdparty";
 
     public static final String BUILD_DIR_NAME = "target";

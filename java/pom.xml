@@ -1,58 +1,54 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.baidu.dev2</groupId>
   <artifactId>baiduads-sdk-parent</artifactId>
-  <version>2022.0.0-SNAPSHOT</version>
+  <version>2022.0.0</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>baiduads-sdk for java</description>
   <url>https://github.com/baidu/baiduads-sdk</url>
-  <modules>
-    <module>baiduads-sdk</module>
-    <module>baiduads-sdk-auto</module>
-    <module>baiduads-sdk-thirdparty</module>
-  </modules>
-
-  <scm>
-    <connection>scm:git:https://github.com/baidu/baiduads-sdk.git</connection>
-    <developerConnection>scm:git:https://github.com/baidu/baiduads-sdk.git</developerConnection>
-    <url>https://github.com/baidu/baiduads-sdk/tree/main/java</url>
-  </scm>
-
   <licenses>
     <license>
       <name>The Apache License, Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
-
-
   <developers>
     <developer>
       <name>joecqupt</name>
       <email>jiangyuan04@baidu.com</email>
     </developer>
   </developers>
-
-
+  <modules>
+    <module>baiduads-sdk</module>
+    <module>baiduads-sdk-auto</module>
+    <module>baiduads-sdk-thirdparty</module>
+  </modules>
+  <scm>
+    <connection>scm:git:https://github.com/baidu/baiduads-sdk.git</connection>
+    <developerConnection>scm:git:https://github.com/baidu/baiduads-sdk.git</developerConnection>
+    <url>https://github.com/baidu/baiduads-sdk/tree/main/java</url>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+    <snapshotRepository>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
   <properties>
-    <junit.version>4.12</junit.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <junit.version>4.12</junit.version>
   </properties>
-
-
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.20</version>
-      </dependency>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -61,19 +57,6 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </snapshotRepository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
-
-
   <build>
     <plugins>
       <plugin>
@@ -89,7 +72,6 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.3.0</version>
         <executions>
@@ -102,7 +84,6 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
         <version>1.5</version>
         <executions>
@@ -115,7 +96,6 @@
           </execution>
         </executions>
         <configuration>
-          <!-- Prevent `gpg` from using pinentry programs -->
           <gpgArguments>
             <arg>--pinentry-mode</arg>
             <arg>loopback</arg>
@@ -130,25 +110,18 @@
         <configuration>
           <serverId>ossrh</serverId>
           <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-          <!--这个配置会在版本号不带SNAPSHOT的时候，指定release你的jar包到maven官方仓库-->
           <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>com.baidu.dev2</groupId>
         <artifactId>baiduads-sdk-package-maven-plugin</artifactId>
         <version>2022.0.0-SNAPSHOT</version>
       </plugin>
-
-
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.2</version>
       </plugin>
-
     </plugins>
   </build>
-
 </project>
