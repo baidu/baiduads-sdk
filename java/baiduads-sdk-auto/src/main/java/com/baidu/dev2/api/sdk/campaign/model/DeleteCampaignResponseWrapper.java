@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.campaign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.campaign.model.UpdateCampaignResponseWrapperBody;
+import com.baidu.dev2.api.sdk.campaign.model.DeleteCampaignResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class DeleteCampaignResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private UpdateCampaignResponseWrapperBody body;
+  private DeleteCampaignResponseWrapperBody body;
 
   public DeleteCampaignResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class DeleteCampaignResponseWrapper {
   }
 
 
-  public DeleteCampaignResponseWrapper body(UpdateCampaignResponseWrapperBody body) {
+  public DeleteCampaignResponseWrapper body(DeleteCampaignResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class DeleteCampaignResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public UpdateCampaignResponseWrapperBody getBody() {
+  public DeleteCampaignResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(UpdateCampaignResponseWrapperBody body) {
+  public void setBody(DeleteCampaignResponseWrapperBody body) {
     this.body = body;
   }
 

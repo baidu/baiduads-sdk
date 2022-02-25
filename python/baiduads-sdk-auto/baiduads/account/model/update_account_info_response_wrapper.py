@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.account.model.get_account_info_response_wrapper_body import GetAccountInfoResponseWrapperBody
+    from baiduads.account.model.update_account_info_response_wrapper_body import UpdateAccountInfoResponseWrapperBody
     from baiduads.common.model.api_response_header import ApiResponseHeader
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['GetAccountInfoResponseWrapperBody'] = GetAccountInfoResponseWrapperBody
+    globals()['UpdateAccountInfoResponseWrapperBody'] = UpdateAccountInfoResponseWrapperBody
 
 
 class UpdateAccountInfoResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateAccountInfoResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (GetAccountInfoResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateAccountInfoResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateAccountInfoResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetAccountInfoResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateAccountInfoResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateAccountInfoResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetAccountInfoResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateAccountInfoResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

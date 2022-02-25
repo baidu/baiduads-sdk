@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetKeywordIdBySearchResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetKeywordIdBySearchResponseWrapper_body")
+@JsonTypeName("GetKeywordIdBySearchResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetKeywordIdBySearchResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

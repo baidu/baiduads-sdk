@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.creativefeed.model.get_temp_creative_feed_preview_url_response_wrapper_body import GetTempCreativeFeedPreviewUrlResponseWrapperBody
+    from baiduads.creativefeed.model.get_creative_feed_preview_url_with_preview_source_response_wrapper_body import GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['GetTempCreativeFeedPreviewUrlResponseWrapperBody'] = GetTempCreativeFeedPreviewUrlResponseWrapperBody
+    globals()['GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody'] = GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody
 
 
 class GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (GetTempCreativeFeedPreviewUrlResponseWrapperBody,),  # noqa: E501
+            'body': (GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetTempCreativeFeedPreviewUrlResponseWrapperBody): [optional]  # noqa: E501
+            body (GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetTempCreativeFeedPreviewUrlResponseWrapperBody): [optional]  # noqa: E501
+            body (GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | **List&lt;Object&gt;** |  |  [optional]
+**data** | [**List&lt;CreativeFeedType&gt;**](CreativeFeedType.md) |  |  [optional]
 
 
 

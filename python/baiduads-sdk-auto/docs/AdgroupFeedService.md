@@ -38,7 +38,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = adgroup_feed_service.AdgroupFeedService(api_client)
     add_adgroup_feed_request_wrapper = AddAdgroupFeedRequestWrapper(
         header=ApiRequestHeader(),
-        body=UpdateAdgroupFeedRequestWrapperBody(
+        body=AddAdgroupFeedRequestWrapperBody(
             adgroup_feed_types=[
                 AdgroupFeedType(
                     adgroup_feed_id=1,

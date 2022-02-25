@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   StartKeywordResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("StartKeywordResponseWrapper_body")
+@JsonTypeName("StartKeywordResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StartKeywordResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

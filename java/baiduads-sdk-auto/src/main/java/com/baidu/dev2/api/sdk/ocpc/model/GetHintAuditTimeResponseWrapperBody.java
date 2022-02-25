@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetHintAuditTimeResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetHintAuditTimeResponseWrapper_body")
+@JsonTypeName("GetHintAuditTimeResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetHintAuditTimeResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

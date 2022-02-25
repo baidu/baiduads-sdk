@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetRealTimeFeedDataResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetRealTimeFeedDataResponseWrapper_body")
+@JsonTypeName("GetRealTimeFeedDataResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetRealTimeFeedDataResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

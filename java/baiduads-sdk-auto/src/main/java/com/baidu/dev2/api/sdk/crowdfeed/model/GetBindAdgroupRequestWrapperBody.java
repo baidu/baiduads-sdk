@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetBindAdgroupRequestWrapperBody.JSON_PROPERTY_CROWD_FEED_TYPES
 })
-@JsonTypeName("GetBindAdgroupRequestWrapper_body")
+@JsonTypeName("GetBindAdgroupRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetBindAdgroupRequestWrapperBody {
   public static final String JSON_PROPERTY_CROWD_FEED_TYPES = "crowdFeedTypes";

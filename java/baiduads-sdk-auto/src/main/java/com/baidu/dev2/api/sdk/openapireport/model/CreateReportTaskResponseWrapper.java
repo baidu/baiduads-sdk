@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.openapireport.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.openapireport.model.GetTaskStatusResponseWrapperBody;
+import com.baidu.dev2.api.sdk.openapireport.model.CreateReportTaskResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class CreateReportTaskResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private GetTaskStatusResponseWrapperBody body;
+  private CreateReportTaskResponseWrapperBody body;
 
   public CreateReportTaskResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class CreateReportTaskResponseWrapper {
   }
 
 
-  public CreateReportTaskResponseWrapper body(GetTaskStatusResponseWrapperBody body) {
+  public CreateReportTaskResponseWrapper body(CreateReportTaskResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class CreateReportTaskResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public GetTaskStatusResponseWrapperBody getBody() {
+  public CreateReportTaskResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(GetTaskStatusResponseWrapperBody body) {
+  public void setBody(CreateReportTaskResponseWrapperBody body) {
     this.body = body;
   }
 

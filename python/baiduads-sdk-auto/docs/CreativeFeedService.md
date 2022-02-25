@@ -591,7 +591,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = creative_feed_service.CreativeFeedService(api_client)
     update_creative_feed_request_wrapper = UpdateCreativeFeedRequestWrapper(
         header=ApiRequestHeader(),
-        body=AddCreativeFeedRequestWrapperBody(
+        body=UpdateCreativeFeedRequestWrapperBody(
             creative_feed_types=[
                 CreativeFeedType(
                     creative_feed_id=1,

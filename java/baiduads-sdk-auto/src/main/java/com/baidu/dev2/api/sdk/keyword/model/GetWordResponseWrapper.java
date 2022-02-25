@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.keyword.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.keyword.model.AddWordResponseWrapperBody;
+import com.baidu.dev2.api.sdk.keyword.model.GetWordResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetWordResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private AddWordResponseWrapperBody body;
+  private GetWordResponseWrapperBody body;
 
   public GetWordResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetWordResponseWrapper {
   }
 
 
-  public GetWordResponseWrapper body(AddWordResponseWrapperBody body) {
+  public GetWordResponseWrapper body(GetWordResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetWordResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public AddWordResponseWrapperBody getBody() {
+  public GetWordResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(AddWordResponseWrapperBody body) {
+  public void setBody(GetWordResponseWrapperBody body) {
     this.body = body;
   }
 

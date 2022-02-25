@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.adgroupfeed.model.update_adgroup_feed_request_wrapper_body import UpdateAdgroupFeedRequestWrapperBody
+    from baiduads.adgroupfeed.model.add_adgroup_feed_request_wrapper_body import AddAdgroupFeedRequestWrapperBody
     from baiduads.common.model.api_request_header import ApiRequestHeader
+    globals()['AddAdgroupFeedRequestWrapperBody'] = AddAdgroupFeedRequestWrapperBody
     globals()['ApiRequestHeader'] = ApiRequestHeader
-    globals()['UpdateAdgroupFeedRequestWrapperBody'] = UpdateAdgroupFeedRequestWrapperBody
 
 
 class AddAdgroupFeedRequestWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class AddAdgroupFeedRequestWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiRequestHeader,),  # noqa: E501
-            'body': (UpdateAdgroupFeedRequestWrapperBody,),  # noqa: E501
+            'body': (AddAdgroupFeedRequestWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class AddAdgroupFeedRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (UpdateAdgroupFeedRequestWrapperBody): [optional]  # noqa: E501
+            body (AddAdgroupFeedRequestWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class AddAdgroupFeedRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (UpdateAdgroupFeedRequestWrapperBody): [optional]  # noqa: E501
+            body (AddAdgroupFeedRequestWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

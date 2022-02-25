@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetCountByIdResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetCountByIdResponseWrapper_body")
+@JsonTypeName("GetCountByIdResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetCountByIdResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

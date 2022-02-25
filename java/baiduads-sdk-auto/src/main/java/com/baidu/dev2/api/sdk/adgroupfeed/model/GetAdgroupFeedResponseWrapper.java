@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.adgroupfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.adgroupfeed.model.DeleteAdgroupFeedResponseWrapperBody;
+import com.baidu.dev2.api.sdk.adgroupfeed.model.GetAdgroupFeedResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetAdgroupFeedResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private DeleteAdgroupFeedResponseWrapperBody body;
+  private GetAdgroupFeedResponseWrapperBody body;
 
   public GetAdgroupFeedResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetAdgroupFeedResponseWrapper {
   }
 
 
-  public GetAdgroupFeedResponseWrapper body(DeleteAdgroupFeedResponseWrapperBody body) {
+  public GetAdgroupFeedResponseWrapper body(GetAdgroupFeedResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetAdgroupFeedResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public DeleteAdgroupFeedResponseWrapperBody getBody() {
+  public GetAdgroupFeedResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(DeleteAdgroupFeedResponseWrapperBody body) {
+  public void setBody(GetAdgroupFeedResponseWrapperBody body) {
     this.body = body;
   }
 

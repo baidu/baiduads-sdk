@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **header** | [**com.baidu.dev2.api.sdk.common.ApiResponseHeader**](com.baidu.dev2.api.sdk.common.ApiResponseHeader.md) |  |  [optional]
-**body** | [**DeleteCreativeGroupResponseWrapperBody**](DeleteCreativeGroupResponseWrapperBody.md) |  |  [optional]
+**body** | [**DeleteCreativesResponseWrapperBody**](DeleteCreativesResponseWrapperBody.md) |  |  [optional]
 
 
 

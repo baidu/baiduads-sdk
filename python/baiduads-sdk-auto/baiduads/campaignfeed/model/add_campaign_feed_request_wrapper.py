@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.campaignfeed.model.update_campaign_feed_request_wrapper_body import UpdateCampaignFeedRequestWrapperBody
+    from baiduads.campaignfeed.model.add_campaign_feed_request_wrapper_body import AddCampaignFeedRequestWrapperBody
     from baiduads.common.model.api_request_header import ApiRequestHeader
+    globals()['AddCampaignFeedRequestWrapperBody'] = AddCampaignFeedRequestWrapperBody
     globals()['ApiRequestHeader'] = ApiRequestHeader
-    globals()['UpdateCampaignFeedRequestWrapperBody'] = UpdateCampaignFeedRequestWrapperBody
 
 
 class AddCampaignFeedRequestWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class AddCampaignFeedRequestWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiRequestHeader,),  # noqa: E501
-            'body': (UpdateCampaignFeedRequestWrapperBody,),  # noqa: E501
+            'body': (AddCampaignFeedRequestWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class AddCampaignFeedRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (UpdateCampaignFeedRequestWrapperBody): [optional]  # noqa: E501
+            body (AddCampaignFeedRequestWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class AddCampaignFeedRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (UpdateCampaignFeedRequestWrapperBody): [optional]  # noqa: E501
+            body (AddCampaignFeedRequestWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetCreativeDetailReportResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetCreativeDetailReportResponseWrapper_body")
+@JsonTypeName("GetCreativeDetailReportResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetCreativeDetailReportResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

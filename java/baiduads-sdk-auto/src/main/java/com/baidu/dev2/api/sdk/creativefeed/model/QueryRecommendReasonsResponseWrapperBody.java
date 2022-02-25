@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   QueryRecommendReasonsResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("QueryRecommendReasonsResponseWrapper_body")
+@JsonTypeName("QueryRecommendReasonsResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class QueryRecommendReasonsResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

@@ -15,6 +15,7 @@ from __future__ import absolute_import
 # import models into model package
 from baiduads.openapireport.model.create_report_task_request_wrapper import CreateReportTaskRequestWrapper
 from baiduads.openapireport.model.create_report_task_response_wrapper import CreateReportTaskResponseWrapper
+from baiduads.openapireport.model.create_report_task_response_wrapper_body import CreateReportTaskResponseWrapperBody
 from baiduads.openapireport.model.error_info import ErrorInfo
 from baiduads.openapireport.model.filter import Filter
 from baiduads.openapireport.model.get_report_data_request_wrapper import GetReportDataRequestWrapper

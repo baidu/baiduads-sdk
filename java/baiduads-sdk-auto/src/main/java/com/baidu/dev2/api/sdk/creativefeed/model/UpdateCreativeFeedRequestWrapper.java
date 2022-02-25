@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.creativefeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.creativefeed.model.AddCreativeFeedRequestWrapperBody;
+import com.baidu.dev2.api.sdk.creativefeed.model.UpdateCreativeFeedRequestWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class UpdateCreativeFeedRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private AddCreativeFeedRequestWrapperBody body;
+  private UpdateCreativeFeedRequestWrapperBody body;
 
   public UpdateCreativeFeedRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class UpdateCreativeFeedRequestWrapper {
   }
 
 
-  public UpdateCreativeFeedRequestWrapper body(AddCreativeFeedRequestWrapperBody body) {
+  public UpdateCreativeFeedRequestWrapper body(UpdateCreativeFeedRequestWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class UpdateCreativeFeedRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public AddCreativeFeedRequestWrapperBody getBody() {
+  public UpdateCreativeFeedRequestWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(AddCreativeFeedRequestWrapperBody body) {
+  public void setBody(UpdateCreativeFeedRequestWrapperBody body) {
     this.body = body;
   }
 

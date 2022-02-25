@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetBindAdgroupResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetBindAdgroupResponseWrapper_body")
+@JsonTypeName("GetBindAdgroupResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetBindAdgroupResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

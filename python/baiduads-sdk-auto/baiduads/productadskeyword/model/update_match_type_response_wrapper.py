@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.productadskeyword.model.start_keyword_response_wrapper_body import StartKeywordResponseWrapperBody
+    from baiduads.productadskeyword.model.update_match_type_response_wrapper_body import UpdateMatchTypeResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['StartKeywordResponseWrapperBody'] = StartKeywordResponseWrapperBody
+    globals()['UpdateMatchTypeResponseWrapperBody'] = UpdateMatchTypeResponseWrapperBody
 
 
 class UpdateMatchTypeResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateMatchTypeResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (StartKeywordResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateMatchTypeResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateMatchTypeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (StartKeywordResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateMatchTypeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateMatchTypeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (StartKeywordResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateMatchTypeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.campaign.model.update_campaign_response_wrapper_body import UpdateCampaignResponseWrapperBody
+    from baiduads.campaign.model.add_campaign_response_wrapper_body import AddCampaignResponseWrapperBody
     from baiduads.common.model.api_response_header import ApiResponseHeader
+    globals()['AddCampaignResponseWrapperBody'] = AddCampaignResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['UpdateCampaignResponseWrapperBody'] = UpdateCampaignResponseWrapperBody
 
 
 class AddCampaignResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class AddCampaignResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (UpdateCampaignResponseWrapperBody,),  # noqa: E501
+            'body': (AddCampaignResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class AddCampaignResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCampaignResponseWrapperBody): [optional]  # noqa: E501
+            body (AddCampaignResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class AddCampaignResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCampaignResponseWrapperBody): [optional]  # noqa: E501
+            body (AddCampaignResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

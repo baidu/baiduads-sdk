@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   UpdateAdgroupFeedRequestWrapperBody.JSON_PROPERTY_ADGROUP_FEED_TYPES
 })
-@JsonTypeName("UpdateAdgroupFeedRequestWrapper_body")
+@JsonTypeName("UpdateAdgroupFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateAdgroupFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_ADGROUP_FEED_TYPES = "adgroupFeedTypes";

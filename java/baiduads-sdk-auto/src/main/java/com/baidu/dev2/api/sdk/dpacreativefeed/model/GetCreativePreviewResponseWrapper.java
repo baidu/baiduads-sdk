@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.dpacreativefeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.dpacreativefeed.model.AddCreativeFeedResponseWrapperBody;
+import com.baidu.dev2.api.sdk.dpacreativefeed.model.GetCreativePreviewResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetCreativePreviewResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private AddCreativeFeedResponseWrapperBody body;
+  private GetCreativePreviewResponseWrapperBody body;
 
   public GetCreativePreviewResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetCreativePreviewResponseWrapper {
   }
 
 
-  public GetCreativePreviewResponseWrapper body(AddCreativeFeedResponseWrapperBody body) {
+  public GetCreativePreviewResponseWrapper body(GetCreativePreviewResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetCreativePreviewResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public AddCreativeFeedResponseWrapperBody getBody() {
+  public GetCreativePreviewResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(AddCreativeFeedResponseWrapperBody body) {
+  public void setBody(GetCreativePreviewResponseWrapperBody body) {
     this.body = body;
   }
 

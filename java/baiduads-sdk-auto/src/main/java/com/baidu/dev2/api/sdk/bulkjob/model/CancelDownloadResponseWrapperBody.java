@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CancelDownloadResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("CancelDownloadResponseWrapper_body")
+@JsonTypeName("CancelDownloadResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CancelDownloadResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

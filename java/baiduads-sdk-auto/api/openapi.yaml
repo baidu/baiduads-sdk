@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.0.0
+  version: 2022.0.1-SNAPSHOT
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
@@ -283,7 +283,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapperBody'
       type: object
     GetCampaignFeedResponseWrapper:
       example:
@@ -345,7 +345,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+          $ref: '#/components/schemas/GetCampaignFeedResponseWrapperBody'
       type: object
     ApiRequestHeader:
       type: object
@@ -409,7 +409,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper_body'
+          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapperBody'
       type: object
     AppInfoType:
       example:
@@ -509,7 +509,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+          $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapperBody'
       type: object
     AddCampaignFeedRequestWrapper:
       example:
@@ -571,7 +571,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper_body'
+          $ref: '#/components/schemas/AddCampaignFeedRequestWrapperBody'
       type: object
     DeleteCampaignFeedRequestWrapper:
       example:
@@ -583,7 +583,7 @@ components:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapper_body'
+          $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapperBody'
       type: object
     AddCampaignFeedResponseWrapper:
       example:
@@ -645,9 +645,9 @@ components:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper_body'
+          $ref: '#/components/schemas/AddCampaignFeedResponseWrapperBody'
       type: object
-    DeleteCampaignFeedResponseWrapper_body:
+    DeleteCampaignFeedResponseWrapperBody:
       example:
         data:
         - subject: 6
@@ -707,8 +707,71 @@ components:
           items:
             $ref: '#/components/schemas/CampaignFeedType'
           type: array
+      title: DeleteCampaignFeedResponseWrapperBody
       type: object
-    UpdateCampaignFeedRequestWrapper_body:
+    GetCampaignFeedResponseWrapperBody:
+      example:
+        data:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      title: GetCampaignFeedResponseWrapperBody
+      type: object
+    UpdateCampaignFeedRequestWrapperBody:
       example:
         campaignFeedTypes:
         - subject: 6
@@ -768,8 +831,133 @@ components:
           items:
             $ref: '#/components/schemas/CampaignFeedType'
           type: array
+      title: UpdateCampaignFeedRequestWrapperBody
       type: object
-    DeleteCampaignFeedRequestWrapper_body:
+    UpdateCampaignFeedResponseWrapperBody:
+      example:
+        data:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      title: UpdateCampaignFeedResponseWrapperBody
+      type: object
+    AddCampaignFeedRequestWrapperBody:
+      example:
+        campaignFeedTypes:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        campaignFeedTypes:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      title: AddCampaignFeedRequestWrapperBody
+      type: object
+    DeleteCampaignFeedRequestWrapperBody:
       example:
         campaignFeedIds:
         - 0
@@ -780,6 +968,69 @@ components:
             format: int64
             type: integer
           type: array
+      title: DeleteCampaignFeedRequestWrapperBody
+      type: object
+    AddCampaignFeedResponseWrapperBody:
+      example:
+        data:
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+        - subject: 6
+          endtime: endtime
+          starttime: starttime
+          bstype: 4
+          pause: true
+          campaignFeedId: 0
+          schedule:
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          - endHour: 9
+            startHour: 7
+            weekDay: 2
+          addtime: addtime
+          bgtctltype: 3
+          appinfo:
+            openurl: openurl
+            apkName: apkName
+            appName: appName
+            docId: 1
+            appUrl: appUrl
+            channelId: 5
+          eshopType: eshopType
+          campaignFeedName: campaignFeedName
+          budget: 5.637376656633329
+          status: 2
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/CampaignFeedType'
+          type: array
+      title: AddCampaignFeedResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 

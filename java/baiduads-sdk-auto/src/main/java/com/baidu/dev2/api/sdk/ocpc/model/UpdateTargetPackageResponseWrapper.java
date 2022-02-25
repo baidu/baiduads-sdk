@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.ocpc.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.ocpc.model.GetTargetPackageListResponseWrapperBody;
+import com.baidu.dev2.api.sdk.ocpc.model.UpdateTargetPackageResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class UpdateTargetPackageResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private GetTargetPackageListResponseWrapperBody body;
+  private UpdateTargetPackageResponseWrapperBody body;
 
   public UpdateTargetPackageResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class UpdateTargetPackageResponseWrapper {
   }
 
 
-  public UpdateTargetPackageResponseWrapper body(GetTargetPackageListResponseWrapperBody body) {
+  public UpdateTargetPackageResponseWrapper body(UpdateTargetPackageResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class UpdateTargetPackageResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public GetTargetPackageListResponseWrapperBody getBody() {
+  public UpdateTargetPackageResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(GetTargetPackageListResponseWrapperBody body) {
+  public void setBody(UpdateTargetPackageResponseWrapperBody body) {
     this.body = body;
   }
 

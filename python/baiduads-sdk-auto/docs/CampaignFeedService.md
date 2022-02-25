@@ -38,7 +38,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = campaign_feed_service.CampaignFeedService(api_client)
     add_campaign_feed_request_wrapper = AddCampaignFeedRequestWrapper(
         header=ApiRequestHeader(),
-        body=UpdateCampaignFeedRequestWrapperBody(
+        body=AddCampaignFeedRequestWrapperBody(
             campaign_feed_types=[
                 CampaignFeedType(
                     campaign_feed_id=1,

@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   DeleteCampaignFeedRequestWrapperBody.JSON_PROPERTY_CAMPAIGN_FEED_IDS
 })
-@JsonTypeName("DeleteCampaignFeedRequestWrapper_body")
+@JsonTypeName("DeleteCampaignFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DeleteCampaignFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_CAMPAIGN_FEED_IDS = "campaignFeedIds";

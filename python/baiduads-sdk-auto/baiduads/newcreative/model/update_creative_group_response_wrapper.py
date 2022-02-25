@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.newcreative.model.add_creative_group_response_wrapper_body import AddCreativeGroupResponseWrapperBody
-    globals()['AddCreativeGroupResponseWrapperBody'] = AddCreativeGroupResponseWrapperBody
+    from baiduads.newcreative.model.update_creative_group_response_wrapper_body import UpdateCreativeGroupResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
+    globals()['UpdateCreativeGroupResponseWrapperBody'] = UpdateCreativeGroupResponseWrapperBody
 
 
 class UpdateCreativeGroupResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateCreativeGroupResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (AddCreativeGroupResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateCreativeGroupResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateCreativeGroupResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (AddCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateCreativeGroupResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (AddCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
