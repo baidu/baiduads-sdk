@@ -23,3 +23,4 @@ from baiduads.account.model.get_account_info_response_wrapper_body import GetAcc
 from baiduads.account.model.region_price_factor import RegionPriceFactor
 from baiduads.account.model.update_account_info_request_wrapper import UpdateAccountInfoRequestWrapper
 from baiduads.account.model.update_account_info_response_wrapper import UpdateAccountInfoResponseWrapper
+from baiduads.account.model.update_account_info_response_wrapper_body import UpdateAccountInfoResponseWrapperBody

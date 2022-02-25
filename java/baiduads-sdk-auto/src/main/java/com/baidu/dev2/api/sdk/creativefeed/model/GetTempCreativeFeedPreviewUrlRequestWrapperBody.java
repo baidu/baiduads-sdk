@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetTempCreativeFeedPreviewUrlRequestWrapperBody.JSON_PROPERTY_PREVIEW_FEED_TYPES
 })
-@JsonTypeName("GetTempCreativeFeedPreviewUrlRequestWrapper_body")
+@JsonTypeName("GetTempCreativeFeedPreviewUrlRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetTempCreativeFeedPreviewUrlRequestWrapperBody {
   public static final String JSON_PROPERTY_PREVIEW_FEED_TYPES = "previewFeedTypes";

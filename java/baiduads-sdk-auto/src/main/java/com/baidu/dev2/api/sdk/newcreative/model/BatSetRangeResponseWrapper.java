@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.newcreative.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.newcreative.model.DeleteCreativeGroupResponseWrapperBody;
+import com.baidu.dev2.api.sdk.newcreative.model.BatSetRangeResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class BatSetRangeResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private DeleteCreativeGroupResponseWrapperBody body;
+  private BatSetRangeResponseWrapperBody body;
 
   public BatSetRangeResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class BatSetRangeResponseWrapper {
   }
 
 
-  public BatSetRangeResponseWrapper body(DeleteCreativeGroupResponseWrapperBody body) {
+  public BatSetRangeResponseWrapper body(BatSetRangeResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class BatSetRangeResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public DeleteCreativeGroupResponseWrapperBody getBody() {
+  public BatSetRangeResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(DeleteCreativeGroupResponseWrapperBody body) {
+  public void setBody(BatSetRangeResponseWrapperBody body) {
     this.body = body;
   }
 

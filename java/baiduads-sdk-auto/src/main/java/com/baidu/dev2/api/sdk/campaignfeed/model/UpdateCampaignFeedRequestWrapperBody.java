@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   UpdateCampaignFeedRequestWrapperBody.JSON_PROPERTY_CAMPAIGN_FEED_TYPES
 })
-@JsonTypeName("UpdateCampaignFeedRequestWrapper_body")
+@JsonTypeName("UpdateCampaignFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateCampaignFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_CAMPAIGN_FEED_TYPES = "campaignFeedTypes";

@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.newcreative.model.delete_creative_group_response_wrapper_body import DeleteCreativeGroupResponseWrapperBody
+    from baiduads.newcreative.model.bat_set_range_response_wrapper_body import BatSetRangeResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['DeleteCreativeGroupResponseWrapperBody'] = DeleteCreativeGroupResponseWrapperBody
+    globals()['BatSetRangeResponseWrapperBody'] = BatSetRangeResponseWrapperBody
 
 
 class BatSetRangeResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class BatSetRangeResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (DeleteCreativeGroupResponseWrapperBody,),  # noqa: E501
+            'body': (BatSetRangeResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class BatSetRangeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (DeleteCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
+            body (BatSetRangeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class BatSetRangeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (DeleteCreativeGroupResponseWrapperBody): [optional]  # noqa: E501
+            body (BatSetRangeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AddCreativeFeedRequestWrapperBody.JSON_PROPERTY_CREATIVE_FEED_TYPES
 })
-@JsonTypeName("AddCreativeFeedRequestWrapper_body")
+@JsonTypeName("AddCreativeFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddCreativeFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_CREATIVE_FEED_TYPES = "creativeFeedTypes";

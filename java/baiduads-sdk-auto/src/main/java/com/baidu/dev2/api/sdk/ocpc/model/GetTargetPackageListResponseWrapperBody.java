@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetTargetPackageListResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetTargetPackageListResponseWrapper_body")
+@JsonTypeName("GetTargetPackageListResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetTargetPackageListResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

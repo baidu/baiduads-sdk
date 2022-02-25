@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   DeleteAdgroupFeedResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("DeleteAdgroupFeedResponseWrapper_body")
+@JsonTypeName("DeleteAdgroupFeedResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DeleteAdgroupFeedResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

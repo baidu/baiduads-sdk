@@ -30,6 +30,7 @@ from baiduads.bulkjob.model.get_all_changed_objects_response_wrapper_body import
 from baiduads.bulkjob.model.get_all_objects_query import GetAllObjectsQuery
 from baiduads.bulkjob.model.get_all_objects_request_wrapper import GetAllObjectsRequestWrapper
 from baiduads.bulkjob.model.get_all_objects_response_wrapper import GetAllObjectsResponseWrapper
+from baiduads.bulkjob.model.get_all_objects_response_wrapper_body import GetAllObjectsResponseWrapperBody
 from baiduads.bulkjob.model.get_all_objects_type import GetAllObjectsType
 from baiduads.bulkjob.model.get_changed_item_id_co import GetChangedItemIdCO
 from baiduads.bulkjob.model.get_changed_item_id_query import GetChangedItemIdQuery

@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   DeleteCreativeFeedRequestWrapperBody.JSON_PROPERTY_CREATIVE_FEED_IDS
 })
-@JsonTypeName("DeleteCreativeFeedRequestWrapper_body")
+@JsonTypeName("DeleteCreativeFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DeleteCreativeFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_CREATIVE_FEED_IDS = "creativeFeedIds";

@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.adgroup.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.adgroup.model.DeleteAdgroupResponseWrapperBody;
+import com.baidu.dev2.api.sdk.adgroup.model.GetAdgroupResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetAdgroupResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private DeleteAdgroupResponseWrapperBody body;
+  private GetAdgroupResponseWrapperBody body;
 
   public GetAdgroupResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetAdgroupResponseWrapper {
   }
 
 
-  public GetAdgroupResponseWrapper body(DeleteAdgroupResponseWrapperBody body) {
+  public GetAdgroupResponseWrapper body(GetAdgroupResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetAdgroupResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public DeleteAdgroupResponseWrapperBody getBody() {
+  public GetAdgroupResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(DeleteAdgroupResponseWrapperBody body) {
+  public void setBody(GetAdgroupResponseWrapperBody body) {
     this.body = body;
   }
 

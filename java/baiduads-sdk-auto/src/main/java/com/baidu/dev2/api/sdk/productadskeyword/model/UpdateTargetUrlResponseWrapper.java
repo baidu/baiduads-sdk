@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.productadskeyword.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.productadskeyword.model.StartKeywordResponseWrapperBody;
+import com.baidu.dev2.api.sdk.productadskeyword.model.UpdateTargetUrlResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class UpdateTargetUrlResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private StartKeywordResponseWrapperBody body;
+  private UpdateTargetUrlResponseWrapperBody body;
 
   public UpdateTargetUrlResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class UpdateTargetUrlResponseWrapper {
   }
 
 
-  public UpdateTargetUrlResponseWrapper body(StartKeywordResponseWrapperBody body) {
+  public UpdateTargetUrlResponseWrapper body(UpdateTargetUrlResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class UpdateTargetUrlResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public StartKeywordResponseWrapperBody getBody() {
+  public UpdateTargetUrlResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(StartKeywordResponseWrapperBody body) {
+  public void setBody(UpdateTargetUrlResponseWrapperBody body) {
     this.body = body;
   }
 

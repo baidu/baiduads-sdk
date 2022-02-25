@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.ocpc.model.get_target_package_list_response_wrapper_body import GetTargetPackageListResponseWrapperBody
+    from baiduads.ocpc.model.update_target_package_response_wrapper_body import UpdateTargetPackageResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['GetTargetPackageListResponseWrapperBody'] = GetTargetPackageListResponseWrapperBody
+    globals()['UpdateTargetPackageResponseWrapperBody'] = UpdateTargetPackageResponseWrapperBody
 
 
 class UpdateTargetPackageResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateTargetPackageResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (GetTargetPackageListResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateTargetPackageResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateTargetPackageResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetTargetPackageListResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateTargetPackageResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateTargetPackageResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetTargetPackageListResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateTargetPackageResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

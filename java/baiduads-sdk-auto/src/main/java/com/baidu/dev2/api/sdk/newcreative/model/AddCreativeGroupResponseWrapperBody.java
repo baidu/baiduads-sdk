@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AddCreativeGroupResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("AddCreativeGroupResponseWrapper_body")
+@JsonTypeName("AddCreativeGroupResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddCreativeGroupResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

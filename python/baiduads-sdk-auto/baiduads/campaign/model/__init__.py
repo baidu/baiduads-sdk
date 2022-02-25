@@ -15,6 +15,7 @@ from __future__ import absolute_import
 # import models into model package
 from baiduads.campaign.model.add_campaign_request_wrapper import AddCampaignRequestWrapper
 from baiduads.campaign.model.add_campaign_response_wrapper import AddCampaignResponseWrapper
+from baiduads.campaign.model.add_campaign_response_wrapper_body import AddCampaignResponseWrapperBody
 from baiduads.campaign.model.api_campaign_add_request import ApiCampaignAddRequest
 from baiduads.campaign.model.api_campaign_del_request import ApiCampaignDelRequest
 from baiduads.campaign.model.api_campaign_query_request import ApiCampaignQueryRequest
@@ -25,8 +26,10 @@ from baiduads.campaign.model.api_schedule_type import ApiScheduleType
 from baiduads.campaign.model.api_store_page_info_type import ApiStorePageInfoType
 from baiduads.campaign.model.delete_campaign_request_wrapper import DeleteCampaignRequestWrapper
 from baiduads.campaign.model.delete_campaign_response_wrapper import DeleteCampaignResponseWrapper
+from baiduads.campaign.model.delete_campaign_response_wrapper_body import DeleteCampaignResponseWrapperBody
 from baiduads.campaign.model.get_campaign_request_wrapper import GetCampaignRequestWrapper
 from baiduads.campaign.model.get_campaign_response_wrapper import GetCampaignResponseWrapper
+from baiduads.campaign.model.get_campaign_response_wrapper_body import GetCampaignResponseWrapperBody
 from baiduads.campaign.model.region_price_factor import RegionPriceFactor
 from baiduads.campaign.model.schedule_price_factor import SchedulePriceFactor
 from baiduads.campaign.model.update_campaign_request_wrapper import UpdateCampaignRequestWrapper

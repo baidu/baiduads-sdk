@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.campaign.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.campaign.model.UpdateCampaignResponseWrapperBody;
+import com.baidu.dev2.api.sdk.campaign.model.GetCampaignResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetCampaignResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private UpdateCampaignResponseWrapperBody body;
+  private GetCampaignResponseWrapperBody body;
 
   public GetCampaignResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetCampaignResponseWrapper {
   }
 
 
-  public GetCampaignResponseWrapper body(UpdateCampaignResponseWrapperBody body) {
+  public GetCampaignResponseWrapper body(GetCampaignResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetCampaignResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public UpdateCampaignResponseWrapperBody getBody() {
+  public GetCampaignResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(UpdateCampaignResponseWrapperBody body) {
+  public void setBody(GetCampaignResponseWrapperBody body) {
     this.body = body;
   }
 

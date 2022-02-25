@@ -15,6 +15,7 @@ from __future__ import absolute_import
 # import models into model package
 from baiduads.creative.model.add_creative_request_wrapper import AddCreativeRequestWrapper
 from baiduads.creative.model.add_creative_response_wrapper import AddCreativeResponseWrapper
+from baiduads.creative.model.add_creative_response_wrapper_body import AddCreativeResponseWrapperBody
 from baiduads.creative.model.api_creative_add_request import ApiCreativeAddRequest
 from baiduads.creative.model.api_creative_del_request import ApiCreativeDelRequest
 from baiduads.creative.model.api_creative_query_request import ApiCreativeQueryRequest
@@ -26,5 +27,7 @@ from baiduads.creative.model.delete_creative_response_wrapper import DeleteCreat
 from baiduads.creative.model.delete_creative_response_wrapper_body import DeleteCreativeResponseWrapperBody
 from baiduads.creative.model.get_creative_request_wrapper import GetCreativeRequestWrapper
 from baiduads.creative.model.get_creative_response_wrapper import GetCreativeResponseWrapper
+from baiduads.creative.model.get_creative_response_wrapper_body import GetCreativeResponseWrapperBody
 from baiduads.creative.model.update_creative_request_wrapper import UpdateCreativeRequestWrapper
 from baiduads.creative.model.update_creative_response_wrapper import UpdateCreativeResponseWrapper
+from baiduads.creative.model.update_creative_response_wrapper_body import UpdateCreativeResponseWrapperBody

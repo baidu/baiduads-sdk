@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetTempCreativeFeedPreviewUrlResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetTempCreativeFeedPreviewUrlResponseWrapper_body")
+@JsonTypeName("GetTempCreativeFeedPreviewUrlResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetTempCreativeFeedPreviewUrlResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

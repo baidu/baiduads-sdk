@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.accountfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.accountfeed.model.UpdateAccountFeedResponseWrapperBody;
+import com.baidu.dev2.api.sdk.accountfeed.model.GetAccountFeedResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetAccountFeedResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private UpdateAccountFeedResponseWrapperBody body;
+  private GetAccountFeedResponseWrapperBody body;
 
   public GetAccountFeedResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetAccountFeedResponseWrapper {
   }
 
 
-  public GetAccountFeedResponseWrapper body(UpdateAccountFeedResponseWrapperBody body) {
+  public GetAccountFeedResponseWrapper body(GetAccountFeedResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetAccountFeedResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public UpdateAccountFeedResponseWrapperBody getBody() {
+  public GetAccountFeedResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(UpdateAccountFeedResponseWrapperBody body) {
+  public void setBody(GetAccountFeedResponseWrapperBody body) {
     this.body = body;
   }
 

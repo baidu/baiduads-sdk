@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.newcreative.model.update_creatives_response_wrapper_body import UpdateCreativesResponseWrapperBody
+    from baiduads.newcreative.model.add_creatives_response_wrapper_body import AddCreativesResponseWrapperBody
+    globals()['AddCreativesResponseWrapperBody'] = AddCreativesResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['UpdateCreativesResponseWrapperBody'] = UpdateCreativesResponseWrapperBody
 
 
 class AddCreativesResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class AddCreativesResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (UpdateCreativesResponseWrapperBody,),  # noqa: E501
+            'body': (AddCreativesResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class AddCreativesResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCreativesResponseWrapperBody): [optional]  # noqa: E501
+            body (AddCreativesResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class AddCreativesResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCreativesResponseWrapperBody): [optional]  # noqa: E501
+            body (AddCreativesResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

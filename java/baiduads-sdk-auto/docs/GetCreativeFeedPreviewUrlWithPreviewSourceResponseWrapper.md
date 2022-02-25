@@ -8,7 +8,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **header** | [**com.baidu.dev2.api.sdk.common.ApiResponseHeader**](com.baidu.dev2.api.sdk.common.ApiResponseHeader.md) |  |  [optional]
-**body** | [**GetTempCreativeFeedPreviewUrlResponseWrapperBody**](GetTempCreativeFeedPreviewUrlResponseWrapperBody.md) |  |  [optional]
+**body** | [**GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody**](GetCreativeFeedPreviewUrlWithPreviewSourceResponseWrapperBody.md) |  |  [optional]
 
 
 

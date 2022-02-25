@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.campaign.model.update_campaign_response_wrapper_body import UpdateCampaignResponseWrapperBody
+    from baiduads.campaign.model.delete_campaign_response_wrapper_body import DeleteCampaignResponseWrapperBody
     from baiduads.common.model.api_response_header import ApiResponseHeader
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['UpdateCampaignResponseWrapperBody'] = UpdateCampaignResponseWrapperBody
+    globals()['DeleteCampaignResponseWrapperBody'] = DeleteCampaignResponseWrapperBody
 
 
 class DeleteCampaignResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class DeleteCampaignResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (UpdateCampaignResponseWrapperBody,),  # noqa: E501
+            'body': (DeleteCampaignResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class DeleteCampaignResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCampaignResponseWrapperBody): [optional]  # noqa: E501
+            body (DeleteCampaignResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class DeleteCampaignResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (UpdateCampaignResponseWrapperBody): [optional]  # noqa: E501
+            body (DeleteCampaignResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

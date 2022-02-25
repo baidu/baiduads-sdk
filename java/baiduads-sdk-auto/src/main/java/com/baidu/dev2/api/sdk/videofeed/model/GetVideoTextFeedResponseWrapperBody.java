@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetVideoTextFeedResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetVideoTextFeedResponseWrapper_body")
+@JsonTypeName("GetVideoTextFeedResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetVideoTextFeedResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

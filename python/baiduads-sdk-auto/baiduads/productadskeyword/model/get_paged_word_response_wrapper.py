@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.productadskeyword.model.start_keyword_response_wrapper_body import StartKeywordResponseWrapperBody
+    from baiduads.productadskeyword.model.get_paged_word_response_wrapper_body import GetPagedWordResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['StartKeywordResponseWrapperBody'] = StartKeywordResponseWrapperBody
+    globals()['GetPagedWordResponseWrapperBody'] = GetPagedWordResponseWrapperBody
 
 
 class GetPagedWordResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class GetPagedWordResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (StartKeywordResponseWrapperBody,),  # noqa: E501
+            'body': (GetPagedWordResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class GetPagedWordResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (StartKeywordResponseWrapperBody): [optional]  # noqa: E501
+            body (GetPagedWordResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class GetPagedWordResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (StartKeywordResponseWrapperBody): [optional]  # noqa: E501
+            body (GetPagedWordResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

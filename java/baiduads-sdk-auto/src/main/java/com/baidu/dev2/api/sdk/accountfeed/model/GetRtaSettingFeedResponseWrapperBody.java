@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   GetRtaSettingFeedResponseWrapperBody.JSON_PROPERTY_DATA
 })
-@JsonTypeName("GetRtaSettingFeedResponseWrapper_body")
+@JsonTypeName("GetRtaSettingFeedResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetRtaSettingFeedResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";

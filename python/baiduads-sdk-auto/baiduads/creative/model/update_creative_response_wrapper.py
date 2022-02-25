@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.creative.model.delete_creative_response_wrapper_body import DeleteCreativeResponseWrapperBody
+    from baiduads.creative.model.update_creative_response_wrapper_body import UpdateCreativeResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['DeleteCreativeResponseWrapperBody'] = DeleteCreativeResponseWrapperBody
+    globals()['UpdateCreativeResponseWrapperBody'] = UpdateCreativeResponseWrapperBody
 
 
 class UpdateCreativeResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateCreativeResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (DeleteCreativeResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateCreativeResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateCreativeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (DeleteCreativeResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateCreativeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateCreativeResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (DeleteCreativeResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateCreativeResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

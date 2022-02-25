@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.newcreative.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.newcreative.model.AddCreativeGroupResponseWrapperBody;
+import com.baidu.dev2.api.sdk.newcreative.model.UpdateCreativeGroupResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class UpdateCreativeGroupResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private AddCreativeGroupResponseWrapperBody body;
+  private UpdateCreativeGroupResponseWrapperBody body;
 
   public UpdateCreativeGroupResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class UpdateCreativeGroupResponseWrapper {
   }
 
 
-  public UpdateCreativeGroupResponseWrapper body(AddCreativeGroupResponseWrapperBody body) {
+  public UpdateCreativeGroupResponseWrapper body(UpdateCreativeGroupResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class UpdateCreativeGroupResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public AddCreativeGroupResponseWrapperBody getBody() {
+  public UpdateCreativeGroupResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(AddCreativeGroupResponseWrapperBody body) {
+  public void setBody(UpdateCreativeGroupResponseWrapperBody body) {
     this.body = body;
   }
 

@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.keyword.model.add_word_response_wrapper_body import AddWordResponseWrapperBody
-    globals()['AddWordResponseWrapperBody'] = AddWordResponseWrapperBody
+    from baiduads.keyword.model.delete_word_response_wrapper_body import DeleteWordResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
+    globals()['DeleteWordResponseWrapperBody'] = DeleteWordResponseWrapperBody
 
 
 class DeleteWordResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class DeleteWordResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (AddWordResponseWrapperBody,),  # noqa: E501
+            'body': (DeleteWordResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class DeleteWordResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (AddWordResponseWrapperBody): [optional]  # noqa: E501
+            body (DeleteWordResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class DeleteWordResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (AddWordResponseWrapperBody): [optional]  # noqa: E501
+            body (DeleteWordResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_response_header import ApiResponseHeader
-    from baiduads.creativefeed.model.query_recommend_reasons_response_wrapper_body import QueryRecommendReasonsResponseWrapperBody
+    from baiduads.creativefeed.model.bind_recommend_reasons_response_wrapper_body import BindRecommendReasonsResponseWrapperBody
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['QueryRecommendReasonsResponseWrapperBody'] = QueryRecommendReasonsResponseWrapperBody
+    globals()['BindRecommendReasonsResponseWrapperBody'] = BindRecommendReasonsResponseWrapperBody
 
 
 class BindRecommendReasonsResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class BindRecommendReasonsResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (QueryRecommendReasonsResponseWrapperBody,),  # noqa: E501
+            'body': (BindRecommendReasonsResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class BindRecommendReasonsResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (QueryRecommendReasonsResponseWrapperBody): [optional]  # noqa: E501
+            body (BindRecommendReasonsResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class BindRecommendReasonsResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (QueryRecommendReasonsResponseWrapperBody): [optional]  # noqa: E501
+            body (BindRecommendReasonsResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

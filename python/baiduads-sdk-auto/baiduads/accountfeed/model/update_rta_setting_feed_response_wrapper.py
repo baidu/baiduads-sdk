@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.accountfeed.model.get_rta_setting_feed_response_wrapper_body import GetRtaSettingFeedResponseWrapperBody
+    from baiduads.accountfeed.model.update_rta_setting_feed_response_wrapper_body import UpdateRtaSettingFeedResponseWrapperBody
     from baiduads.common.model.api_response_header import ApiResponseHeader
     globals()['ApiResponseHeader'] = ApiResponseHeader
-    globals()['GetRtaSettingFeedResponseWrapperBody'] = GetRtaSettingFeedResponseWrapperBody
+    globals()['UpdateRtaSettingFeedResponseWrapperBody'] = UpdateRtaSettingFeedResponseWrapperBody
 
 
 class UpdateRtaSettingFeedResponseWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateRtaSettingFeedResponseWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiResponseHeader,),  # noqa: E501
-            'body': (GetRtaSettingFeedResponseWrapperBody,),  # noqa: E501
+            'body': (UpdateRtaSettingFeedResponseWrapperBody,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateRtaSettingFeedResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetRtaSettingFeedResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateRtaSettingFeedResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateRtaSettingFeedResponseWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiResponseHeader): [optional]  # noqa: E501
-            body (GetRtaSettingFeedResponseWrapperBody): [optional]  # noqa: E501
+            body (UpdateRtaSettingFeedResponseWrapperBody): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.campaignfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.campaignfeed.model.DeleteCampaignFeedResponseWrapperBody;
+import com.baidu.dev2.api.sdk.campaignfeed.model.AddCampaignFeedResponseWrapperBody;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class AddCampaignFeedResponseWrapper {
   private com.baidu.dev2.api.sdk.common.ApiResponseHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private DeleteCampaignFeedResponseWrapperBody body;
+  private AddCampaignFeedResponseWrapperBody body;
 
   public AddCampaignFeedResponseWrapper() { 
   }
@@ -70,7 +70,7 @@ public class AddCampaignFeedResponseWrapper {
   }
 
 
-  public AddCampaignFeedResponseWrapper body(DeleteCampaignFeedResponseWrapperBody body) {
+  public AddCampaignFeedResponseWrapper body(AddCampaignFeedResponseWrapperBody body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class AddCampaignFeedResponseWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public DeleteCampaignFeedResponseWrapperBody getBody() {
+  public AddCampaignFeedResponseWrapperBody getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(DeleteCampaignFeedResponseWrapperBody body) {
+  public void setBody(AddCampaignFeedResponseWrapperBody body) {
     this.body = body;
   }
 

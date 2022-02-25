@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   UpdateAccountFeedRequestWrapperBody.JSON_PROPERTY_ACCOUNT_FEED_TYPE
 })
-@JsonTypeName("UpdateAccountFeedRequestWrapper_body")
+@JsonTypeName("UpdateAccountFeedRequestWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class UpdateAccountFeedRequestWrapperBody {
   public static final String JSON_PROPERTY_ACCOUNT_FEED_TYPE = "accountFeedType";
