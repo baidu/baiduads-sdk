@@ -2,7 +2,7 @@
 
 该项目为百度商业API SDK的Java实现。 包含两个模块：
 
-* baiduads-sdk：手动开发的sdk部分（目前为空实现）
+* baiduads-sdk：手动开发的sdk部分
 * baiduads-sdk-auto: 自动生成的sdk部分
 
 ## 快速开始
@@ -93,4 +93,4 @@ Class | Method | HTTP request | Description
 
 
 ## 讨论
-百度Hi讨论群：5377199
+百度如流讨论群：5995216
