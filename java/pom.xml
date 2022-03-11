@@ -25,7 +25,6 @@
     <module>baiduads-sdk</module>
     <module>baiduads-sdk-auto</module>
     <module>baiduads-sdk-thirdparty</module>
-    <module>baiduads-sdk-samples</module>
   </modules>
   <scm>
     <connection>scm:git:https://github.com/baidu/baiduads-sdk.git</connection>
