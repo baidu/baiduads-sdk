@@ -28,8 +28,6 @@ import com.baidu.dev2.api.sdk.search.model.GetKeywordIdBySearchRequestWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetKeywordIdBySearchResponseWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetMaterialInfoBySearchRequestWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetMaterialInfoBySearchResponseWrapper;
-import com.baidu.dev2.api.sdk.search.model.GetTabRequestWrapper;
-import com.baidu.dev2.api.sdk.search.model.GetTabResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -327,63 +325,6 @@ public class SearchService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetMaterialInfoBySearchResponseWrapper> localVarReturnType = new TypeReference<GetMaterialInfoBySearchResponseWrapper>() {};
-    return apiClient.invokeAPI(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAccept,
-        localVarContentType,
-        localVarAuthNames,
-        localVarReturnType
-    );
-  }
-  /**
-   * 
-   * 
-   * @param getTabRequestWrapper  (required)
-   * @return GetTabResponseWrapper
-   * @throws ApiException if fails to make API call
-   */
-  public GetTabResponseWrapper getTab(GetTabRequestWrapper getTabRequestWrapper) throws ApiException {
-    Object localVarPostBody = getTabRequestWrapper;
-    
-    // verify the required parameter 'getTabRequestWrapper' is set
-    if (getTabRequestWrapper == null) {
-      throw new ApiException(400, "Missing the required parameter 'getTabRequestWrapper' when calling getTab");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/json/sms/service/SearchService/getTab";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    TypeReference<GetTabResponseWrapper> localVarReturnType = new TypeReference<GetTabResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**get_ids_by_tabs**](SearchService.md#get_ids_by_tabs) | **POST** /json/sms/service/SearchService/getIdsByTabs | 
 [**get_keyword_id_by_search**](SearchService.md#get_keyword_id_by_search) | **POST** /json/sms/service/SearchService/getKeywordIdBySearch | 
 [**get_material_info_by_search**](SearchService.md#get_material_info_by_search) | **POST** /json/sms/service/SearchService/getMaterialInfoBySearch | 
-[**get_tab**](SearchService.md#get_tab) | **POST** /json/sms/service/SearchService/getTab | 
 
 
 # **get_count_by_id**
@@ -378,79 +377,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetMaterialInfoBySearchResponseWrapper**](GetMaterialInfoBySearchResponseWrapper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/json;charset=UTF-8
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_tab**
-> GetTabResponseWrapper get_tab(get_tab_request_wrapper)
-
-
-
-### Example
-
-
-```python
-import time
-import baiduads
-from search.api import search_service
-from baiduads.search.model.get_tab_request_wrapper import GetTabRequestWrapper
-from baiduads.search.model.get_tab_response_wrapper import GetTabResponseWrapper
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.baidu.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = baiduads.Configuration(
-    host = "https://api.baidu.com"
-)
-
-
-# Enter a context with an instance of the API client
-with baiduads.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = search_service.SearchService(api_client)
-    get_tab_request_wrapper = GetTabRequestWrapper(
-        header=ApiRequestHeader(),
-        body=GetTabParams(
-            tab_ids=[
-                1,
-            ],
-            id_type=1,
-        ),
-    ) # GetTabRequestWrapper | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_response = api_instance.get_tab(get_tab_request_wrapper)
-        pprint(api_response)
-    except baiduads.ApiException as e:
-        print("Exception when calling SearchService->get_tab: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **get_tab_request_wrapper** | [**GetTabRequestWrapper**](GetTabRequestWrapper.md)|  |
-
-### Return type
-
-[**GetTabResponseWrapper**](GetTabResponseWrapper.md)
 
 ### Authorization
 

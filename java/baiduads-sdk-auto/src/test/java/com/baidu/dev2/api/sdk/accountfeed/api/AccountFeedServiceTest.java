@@ -16,12 +16,8 @@ package com.baidu.dev2.api.sdk.accountfeed.api;
 import com.baidu.dev2.api.sdk.invoke.ApiException;
 import com.baidu.dev2.api.sdk.accountfeed.model.GetAccountFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.GetAccountFeedResponseWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.GetRtaSettingFeedRequestWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.GetRtaSettingFeedResponseWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.UpdateAccountFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.UpdateAccountFeedResponseWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.UpdateRtaSettingFeedRequestWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.UpdateRtaSettingFeedResponseWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.Assert;
@@ -55,31 +51,9 @@ public class AccountFeedServiceTest {
      *          if the Api call fails
      */
     @Test
-    public void getRtaSettingFeedTest() throws ApiException {
-        GetRtaSettingFeedRequestWrapper getRtaSettingFeedRequestWrapper = null;
-        GetRtaSettingFeedResponseWrapper response = api.getRtaSettingFeed(getRtaSettingFeedRequestWrapper);
-
-        // TODO: test validations
-    }
-    /**
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
     public void updateAccountFeedTest() throws ApiException {
         UpdateAccountFeedRequestWrapper updateAccountFeedRequestWrapper = null;
         UpdateAccountFeedResponseWrapper response = api.updateAccountFeed(updateAccountFeedRequestWrapper);
-
-        // TODO: test validations
-    }
-    /**
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void updateRtaSettingFeedTest() throws ApiException {
-        UpdateRtaSettingFeedRequestWrapper updateRtaSettingFeedRequestWrapper = null;
-        UpdateRtaSettingFeedResponseWrapper response = api.updateRtaSettingFeed(updateRtaSettingFeedRequestWrapper);
 
         // TODO: test validations
     }

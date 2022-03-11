@@ -22,12 +22,8 @@ from baiduads.model_utils import (  # noqa: F401
 )
 from baiduads.accountfeed.model.get_account_feed_request_wrapper import GetAccountFeedRequestWrapper
 from baiduads.accountfeed.model.get_account_feed_response_wrapper import GetAccountFeedResponseWrapper
-from baiduads.accountfeed.model.get_rta_setting_feed_request_wrapper import GetRtaSettingFeedRequestWrapper
-from baiduads.accountfeed.model.get_rta_setting_feed_response_wrapper import GetRtaSettingFeedResponseWrapper
 from baiduads.accountfeed.model.update_account_feed_request_wrapper import UpdateAccountFeedRequestWrapper
 from baiduads.accountfeed.model.update_account_feed_response_wrapper import UpdateAccountFeedResponseWrapper
-from baiduads.accountfeed.model.update_rta_setting_feed_request_wrapper import UpdateRtaSettingFeedRequestWrapper
-from baiduads.accountfeed.model.update_rta_setting_feed_response_wrapper import UpdateRtaSettingFeedResponseWrapper
 
 
 class AccountFeedService(object):
@@ -91,56 +87,6 @@ class AccountFeedService(object):
             },
             api_client=api_client
         )
-        self.get_rta_setting_feed_endpoint = _Endpoint(
-            settings={
-                'response_type': (GetRtaSettingFeedResponseWrapper,),
-                'auth': [],
-                'endpoint_path': '/json/feed/v1/AccountFeedService/getRtaSettingFeed',
-                'operation_id': 'get_rta_setting_feed',
-                'http_method': 'POST',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                    'get_rta_setting_feed_request_wrapper',
-                ],
-                'required': [
-                    'get_rta_setting_feed_request_wrapper',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'get_rta_setting_feed_request_wrapper':
-                        (GetRtaSettingFeedRequestWrapper,),
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                    'get_rta_setting_feed_request_wrapper': 'body',
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json;charset=UTF-8'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8'
-                ]
-            },
-            api_client=api_client
-        )
         self.update_account_feed_endpoint = _Endpoint(
             settings={
                 'response_type': (UpdateAccountFeedResponseWrapper,),
@@ -177,56 +123,6 @@ class AccountFeedService(object):
                 },
                 'location_map': {
                     'update_account_feed_request_wrapper': 'body',
-                },
-                'collection_format_map': {
-                }
-            },
-            headers_map={
-                'accept': [
-                    'application/json;charset=UTF-8'
-                ],
-                'content_type': [
-                    'application/json;charset=UTF-8'
-                ]
-            },
-            api_client=api_client
-        )
-        self.update_rta_setting_feed_endpoint = _Endpoint(
-            settings={
-                'response_type': (UpdateRtaSettingFeedResponseWrapper,),
-                'auth': [],
-                'endpoint_path': '/json/feed/v1/AccountFeedService/updateRtaSettingFeed',
-                'operation_id': 'update_rta_setting_feed',
-                'http_method': 'POST',
-                'servers': None,
-            },
-            params_map={
-                'all': [
-                    'update_rta_setting_feed_request_wrapper',
-                ],
-                'required': [
-                    'update_rta_setting_feed_request_wrapper',
-                ],
-                'nullable': [
-                ],
-                'enum': [
-                ],
-                'validation': [
-                ]
-            },
-            root_map={
-                'validations': {
-                },
-                'allowed_values': {
-                },
-                'openapi_types': {
-                    'update_rta_setting_feed_request_wrapper':
-                        (UpdateRtaSettingFeedRequestWrapper,),
-                },
-                'attribute_map': {
-                },
-                'location_map': {
-                    'update_rta_setting_feed_request_wrapper': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -315,79 +211,6 @@ class AccountFeedService(object):
             get_account_feed_request_wrapper
         return self.get_account_feed_endpoint.call_with_http_info(**kwargs)
 
-    def get_rta_setting_feed(
-        self,
-        get_rta_setting_feed_request_wrapper,
-        **kwargs
-    ):
-        """get_rta_setting_feed  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.get_rta_setting_feed(get_rta_setting_feed_request_wrapper, async_req=True)
-        >>> result = thread.get()
-
-        Args:
-            get_rta_setting_feed_request_wrapper (GetRtaSettingFeedRequestWrapper):
-
-        Keyword Args:
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            GetRtaSettingFeedResponseWrapper
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['get_rta_setting_feed_request_wrapper'] = \
-            get_rta_setting_feed_request_wrapper
-        return self.get_rta_setting_feed_endpoint.call_with_http_info(**kwargs)
-
     def update_account_feed(
         self,
         update_account_feed_request_wrapper,
@@ -460,77 +283,4 @@ class AccountFeedService(object):
         kwargs['update_account_feed_request_wrapper'] = \
             update_account_feed_request_wrapper
         return self.update_account_feed_endpoint.call_with_http_info(**kwargs)
-
-    def update_rta_setting_feed(
-        self,
-        update_rta_setting_feed_request_wrapper,
-        **kwargs
-    ):
-        """update_rta_setting_feed  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.update_rta_setting_feed(update_rta_setting_feed_request_wrapper, async_req=True)
-        >>> result = thread.get()
-
-        Args:
-            update_rta_setting_feed_request_wrapper (UpdateRtaSettingFeedRequestWrapper):
-
-        Keyword Args:
-            _return_http_data_only (bool): response data without head status
-                code and headers. Default is True.
-            _preload_content (bool): if False, the urllib3.HTTPResponse object
-                will be returned without reading/decoding response data.
-                Default is True.
-            _request_timeout (int/float/tuple): timeout setting for this request. If
-                one number provided, it will be total request timeout. It can also
-                be a pair (tuple) of (connection, read) timeouts.
-                Default is None.
-            _check_input_type (bool): specifies if type checking
-                should be done one the data sent to the server.
-                Default is True.
-            _check_return_type (bool): specifies if type checking
-                should be done one the data received from the server.
-                Default is True.
-            _content_type (str/None): force body content-type.
-                Default is None and content-type will be predicted by allowed
-                content-types and body.
-            _host_index (int/None): specifies the index of the server
-                that we want to use.
-                Default is read from the configuration.
-            async_req (bool): execute request asynchronously
-
-        Returns:
-            UpdateRtaSettingFeedResponseWrapper
-                If the method is called asynchronously, returns the request
-                thread.
-        """
-        kwargs['async_req'] = kwargs.get(
-            'async_req', False
-        )
-        kwargs['_return_http_data_only'] = kwargs.get(
-            '_return_http_data_only', True
-        )
-        kwargs['_preload_content'] = kwargs.get(
-            '_preload_content', True
-        )
-        kwargs['_request_timeout'] = kwargs.get(
-            '_request_timeout', None
-        )
-        kwargs['_check_input_type'] = kwargs.get(
-            '_check_input_type', True
-        )
-        kwargs['_check_return_type'] = kwargs.get(
-            '_check_return_type', True
-        )
-        kwargs['_spec_property_naming'] = kwargs.get(
-            '_spec_property_naming', False
-        )
-        kwargs['_content_type'] = kwargs.get(
-            '_content_type')
-        kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['update_rta_setting_feed_request_wrapper'] = \
-            update_rta_setting_feed_request_wrapper
-        return self.update_rta_setting_feed_endpoint.call_with_http_info(**kwargs)
 

@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**getIdsByTabs**](SearchService.md#getIdsByTabs) | **POST** /json/sms/service/SearchService/getIdsByTabs | 
 [**getKeywordIdBySearch**](SearchService.md#getKeywordIdBySearch) | **POST** /json/sms/service/SearchService/getKeywordIdBySearch | 
 [**getMaterialInfoBySearch**](SearchService.md#getMaterialInfoBySearch) | **POST** /json/sms/service/SearchService/getMaterialInfoBySearch | 
-[**getTab**](SearchService.md#getTab) | **POST** /json/sms/service/SearchService/getTab | 
 
 
 
@@ -316,70 +315,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetMaterialInfoBySearchResponseWrapper**](GetMaterialInfoBySearchResponseWrapper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json;charset=UTF-8
-- **Accept**: application/json;charset=UTF-8
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | response |  -  |
-
-
-## getTab
-
-> GetTabResponseWrapper getTab(getTabRequestWrapper)
-
-
-
-### Example
-
-```java
-// Import classes:
-import com.baidu.dev2.api.sdk.invoke.ApiClient;
-import com.baidu.dev2.api.sdk.invoke.ApiException;
-import com.baidu.dev2.api.sdk.invoke.Configuration;
-import com.baidu.dev2.api.sdk.invoke.models.*;
-import com.baidu.dev2.api.sdk.search.api.SearchService;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.baidu.com");
-
-        SearchService apiInstance = new SearchService(defaultClient);
-        GetTabRequestWrapper getTabRequestWrapper = new GetTabRequestWrapper(); // GetTabRequestWrapper | 
-        try {
-            GetTabResponseWrapper result = apiInstance.getTab(getTabRequestWrapper);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SearchService#getTab");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **getTabRequestWrapper** | [**GetTabRequestWrapper**](GetTabRequestWrapper.md)|  |
-
-### Return type
-
-[**GetTabResponseWrapper**](GetTabResponseWrapper.md)
 
 ### Authorization
 

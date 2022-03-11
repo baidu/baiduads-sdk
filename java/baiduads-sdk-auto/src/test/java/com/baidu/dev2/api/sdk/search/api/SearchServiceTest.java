@@ -24,8 +24,6 @@ import com.baidu.dev2.api.sdk.search.model.GetKeywordIdBySearchRequestWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetKeywordIdBySearchResponseWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetMaterialInfoBySearchRequestWrapper;
 import com.baidu.dev2.api.sdk.search.model.GetMaterialInfoBySearchResponseWrapper;
-import com.baidu.dev2.api.sdk.search.model.GetTabRequestWrapper;
-import com.baidu.dev2.api.sdk.search.model.GetTabResponseWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 import org.junit.Assert;
@@ -95,17 +93,6 @@ public class SearchServiceTest {
     public void getMaterialInfoBySearchTest() throws ApiException {
         GetMaterialInfoBySearchRequestWrapper getMaterialInfoBySearchRequestWrapper = null;
         GetMaterialInfoBySearchResponseWrapper response = api.getMaterialInfoBySearch(getMaterialInfoBySearchRequestWrapper);
-
-        // TODO: test validations
-    }
-    /**
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getTabTest() throws ApiException {
-        GetTabRequestWrapper getTabRequestWrapper = null;
-        GetTabResponseWrapper response = api.getTab(getTabRequestWrapper);
 
         // TODO: test validations
     }

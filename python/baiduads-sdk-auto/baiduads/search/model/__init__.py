@@ -38,10 +38,5 @@ from baiduads.search.model.get_material_info_by_search_request_wrapper import Ge
 from baiduads.search.model.get_material_info_by_search_response_wrapper import GetMaterialInfoBySearchResponseWrapper
 from baiduads.search.model.get_material_info_by_search_response_wrapper_body import GetMaterialInfoBySearchResponseWrapperBody
 from baiduads.search.model.get_material_info_result_type import GetMaterialInfoResultType
-from baiduads.search.model.get_tab_params import GetTabParams
-from baiduads.search.model.get_tab_request_wrapper import GetTabRequestWrapper
-from baiduads.search.model.get_tab_response_wrapper import GetTabResponseWrapper
-from baiduads.search.model.get_tab_response_wrapper_body import GetTabResponseWrapperBody
 from baiduads.search.model.keyword_id_search_info_result_type import KeywordIdSearchInfoResultType
 from baiduads.search.model.material_search_info import MaterialSearchInfo
-from baiduads.search.model.tab_type import TabType
