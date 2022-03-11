@@ -20,12 +20,8 @@ import com.baidu.dev2.api.sdk.invoke.Pair;
 
 import com.baidu.dev2.api.sdk.accountfeed.model.GetAccountFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.GetAccountFeedResponseWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.GetRtaSettingFeedRequestWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.GetRtaSettingFeedResponseWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.UpdateAccountFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.accountfeed.model.UpdateAccountFeedResponseWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.UpdateRtaSettingFeedRequestWrapper;
-import com.baidu.dev2.api.sdk.accountfeed.model.UpdateRtaSettingFeedResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -113,63 +109,6 @@ public class AccountFeedService {
   /**
    * 
    * 
-   * @param getRtaSettingFeedRequestWrapper  (required)
-   * @return GetRtaSettingFeedResponseWrapper
-   * @throws ApiException if fails to make API call
-   */
-  public GetRtaSettingFeedResponseWrapper getRtaSettingFeed(GetRtaSettingFeedRequestWrapper getRtaSettingFeedRequestWrapper) throws ApiException {
-    Object localVarPostBody = getRtaSettingFeedRequestWrapper;
-    
-    // verify the required parameter 'getRtaSettingFeedRequestWrapper' is set
-    if (getRtaSettingFeedRequestWrapper == null) {
-      throw new ApiException(400, "Missing the required parameter 'getRtaSettingFeedRequestWrapper' when calling getRtaSettingFeed");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/json/feed/v1/AccountFeedService/getRtaSettingFeed";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    TypeReference<GetRtaSettingFeedResponseWrapper> localVarReturnType = new TypeReference<GetRtaSettingFeedResponseWrapper>() {};
-    return apiClient.invokeAPI(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAccept,
-        localVarContentType,
-        localVarAuthNames,
-        localVarReturnType
-    );
-  }
-  /**
-   * 
-   * 
    * @param updateAccountFeedRequestWrapper  (required)
    * @return UpdateAccountFeedResponseWrapper
    * @throws ApiException if fails to make API call
@@ -209,63 +148,6 @@ public class AccountFeedService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<UpdateAccountFeedResponseWrapper> localVarReturnType = new TypeReference<UpdateAccountFeedResponseWrapper>() {};
-    return apiClient.invokeAPI(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAccept,
-        localVarContentType,
-        localVarAuthNames,
-        localVarReturnType
-    );
-  }
-  /**
-   * 
-   * 
-   * @param updateRtaSettingFeedRequestWrapper  (required)
-   * @return UpdateRtaSettingFeedResponseWrapper
-   * @throws ApiException if fails to make API call
-   */
-  public UpdateRtaSettingFeedResponseWrapper updateRtaSettingFeed(UpdateRtaSettingFeedRequestWrapper updateRtaSettingFeedRequestWrapper) throws ApiException {
-    Object localVarPostBody = updateRtaSettingFeedRequestWrapper;
-    
-    // verify the required parameter 'updateRtaSettingFeedRequestWrapper' is set
-    if (updateRtaSettingFeedRequestWrapper == null) {
-      throw new ApiException(400, "Missing the required parameter 'updateRtaSettingFeedRequestWrapper' when calling updateRtaSettingFeed");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/json/feed/v1/AccountFeedService/updateRtaSettingFeed";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    TypeReference<UpdateRtaSettingFeedResponseWrapper> localVarReturnType = new TypeReference<UpdateRtaSettingFeedResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",
