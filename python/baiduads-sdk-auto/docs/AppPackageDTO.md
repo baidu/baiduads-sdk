@@ -1,0 +1,56 @@
+# AppPackageDTO
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] 
+**channel_name** | **str** |  | [optional] 
+**pkg_upload_type** | **int** |  | [optional] 
+**upload_id** | **int** |  | [optional] 
+**selected_icon** | **str** |  | [optional] 
+**app_screenshots** | **[str]** |  | [optional] 
+**app_introduce** | **str** |  | [optional] 
+**category** | [**CategoryDTO**](CategoryDTO.md) |  | [optional] 
+**private_url** | **str** |  | [optional] 
+**developer_name** | **str** |  | [optional] 
+**summary** | **str** |  | [optional] 
+**is_commit** | **bool** |  | [optional] 
+**auto_update** | **bool** |  | [optional] 
+**copyright** | **[str]** |  | [optional] 
+**licence_desc** | **str** |  | [optional] 
+**video_link** | **str** |  | [optional] 
+**video_pass** | **str** |  | [optional] 
+**test_account** | **str** |  | [optional] 
+**package_link** | **str** |  | [optional] 
+**app_name** | **str** |  | [optional] 
+**package_name** | **str** |  | [optional] 
+**package_version** | **str** |  | [optional] 
+**renew_time** | **str** |  | [optional] 
+**package_url** | **str** |  | [optional] 
+**package_img** | **str** |  | [optional] 
+**state** | **int** |  | [optional] 
+**reject_reason** | **str** |  | [optional] 
+**package_size** | **str** |  | [optional] 
+**tags** | [**[CategoryDTO]**](CategoryDTO.md) |  | [optional] 
+**icons** | **[str]** |  | [optional] 
+**update_time** | **str** |  | [optional] 
+**user_key** | **str** |  | [optional] 
+**version_code** | **int** |  | [optional] 
+**last_parse_time** | **str** |  | [optional] 
+**is_force_commited** | **bool** |  | [optional] 
+**gather_state** | **int** |  | [optional] 
+**docid** | **int** |  | [optional] 
+**package_type** | **int** |  | [optional] 
+**online_state** | **int** |  | [optional] 
+**type** | **int** |  | [optional] 
+**category_info** | [**[TreeNode]**](TreeNode.md) |  | [optional] 
+**target_user_id** | **int** |  | [optional] 
+**app_id** | **int** |  | [optional] 
+**versions** | [**[VersionInfo]**](VersionInfo.md) |  | [optional] 
+**audit_info** | [**AuditInfo**](AuditInfo.md) |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

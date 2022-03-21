@@ -20,6 +20,8 @@ import com.baidu.dev2.api.sdk.invoke.Pair;
 
 import com.baidu.dev2.api.sdk.searchfeed.model.GetAppIdNameFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetAppIdNameFeedResponseWrapper;
+import com.baidu.dev2.api.sdk.searchfeed.model.GetAutoBidCostRequestWrapper;
+import com.baidu.dev2.api.sdk.searchfeed.model.GetAutoBidCostResponseWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetBizAreaFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetBizAreaFeedResponseWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetCoordinateFeedRequestWrapper;
@@ -101,6 +103,63 @@ public class SearchFeedService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetAppIdNameFeedResponseWrapper> localVarReturnType = new TypeReference<GetAppIdNameFeedResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param getAutoBidCostRequestWrapper  (required)
+   * @return GetAutoBidCostResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetAutoBidCostResponseWrapper getAutoBidCost(GetAutoBidCostRequestWrapper getAutoBidCostRequestWrapper) throws ApiException {
+    Object localVarPostBody = getAutoBidCostRequestWrapper;
+    
+    // verify the required parameter 'getAutoBidCostRequestWrapper' is set
+    if (getAutoBidCostRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getAutoBidCostRequestWrapper' when calling getAutoBidCost");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/feed/v1/SearchFeedService/getAutoBidCost";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetAutoBidCostResponseWrapper> localVarReturnType = new TypeReference<GetAutoBidCostResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **field** | **str** |  | [optional] 
 **default_value** | **str** |  | [optional] 
-**datasource** | **[str]** |  | [optional] 
 **type** | **str** |  | [optional] 
 **required** | **bool** |  | [optional] 
 **label** | **str** |  | [optional] 
