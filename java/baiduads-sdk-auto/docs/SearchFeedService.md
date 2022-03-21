@@ -5,6 +5,7 @@ All URIs are relative to *https://api.baidu.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAppIdNameFeed**](SearchFeedService.md#getAppIdNameFeed) | **POST** /json/feed/v1/SearchFeedService/getAppIdNameFeed | 
+[**getAutoBidCost**](SearchFeedService.md#getAutoBidCost) | **POST** /json/feed/v1/SearchFeedService/getAutoBidCost | 
 [**getBizAreaFeed**](SearchFeedService.md#getBizAreaFeed) | **POST** /json/feed/v1/SearchFeedService/getBizAreaFeed | 
 [**getCoordinateFeed**](SearchFeedService.md#getCoordinateFeed) | **POST** /json/feed/v1/SearchFeedService/getCoordinateFeed | 
 [**getMediaPackages**](SearchFeedService.md#getMediaPackages) | **POST** /json/feed/v1/SearchFeedService/getMediaPackages | 
@@ -61,6 +62,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAppIdNameFeedResponseWrapper**](GetAppIdNameFeedResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=UTF-8
+- **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | response |  -  |
+
+
+## getAutoBidCost
+
+> GetAutoBidCostResponseWrapper getAutoBidCost(getAutoBidCostRequestWrapper)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.baidu.dev2.api.sdk.invoke.ApiClient;
+import com.baidu.dev2.api.sdk.invoke.ApiException;
+import com.baidu.dev2.api.sdk.invoke.Configuration;
+import com.baidu.dev2.api.sdk.invoke.models.*;
+import com.baidu.dev2.api.sdk.searchfeed.api.SearchFeedService;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.baidu.com");
+
+        SearchFeedService apiInstance = new SearchFeedService(defaultClient);
+        GetAutoBidCostRequestWrapper getAutoBidCostRequestWrapper = new GetAutoBidCostRequestWrapper(); // GetAutoBidCostRequestWrapper | 
+        try {
+            GetAutoBidCostResponseWrapper result = apiInstance.getAutoBidCost(getAutoBidCostRequestWrapper);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SearchFeedService#getAutoBidCost");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getAutoBidCostRequestWrapper** | [**GetAutoBidCostRequestWrapper**](GetAutoBidCostRequestWrapper.md)|  |
+
+### Return type
+
+[**GetAutoBidCostResponseWrapper**](GetAutoBidCostResponseWrapper.md)
 
 ### Authorization
 

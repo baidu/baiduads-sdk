@@ -2,1035 +2,155 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.2.0
+  version: 2022.2.1-SNAPSHOT
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
 tags:
-- name: CampaignFeedService
+- name: AssetShareFeedService
 paths:
-  json/feed/v1/CampaignFeedService/addCampaignFeed:
+  json/feed/v1/AssetShareFeedService/addAssetShareFeed:
     post:
-      operationId: addCampaignFeed
+      operationId: addAssetShareFeed
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/AddCampaignFeedRequestWrapper'
+              $ref: '#/components/schemas/AddAssetShareFeedRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/AddCampaignFeedResponseWrapper'
+                $ref: '#/components/schemas/AddAssetShareFeedResponseWrapper'
           description: response
       tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: AddCampaignFeedRequestWrapper
-      x-contentType: application/json;charset=UTF-8
-      x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/updateCampaignFeed:
-    post:
-      operationId: updateCampaignFeed
-      requestBody:
-        content:
-          application/json;charset=UTF-8:
-            schema:
-              $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json;charset=UTF-8:
-              schema:
-                $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapper'
-          description: response
-      tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: UpdateCampaignFeedRequestWrapper
-      x-contentType: application/json;charset=UTF-8
-      x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/deleteCampaignFeed:
-    post:
-      operationId: deleteCampaignFeed
-      requestBody:
-        content:
-          application/json;charset=UTF-8:
-            schema:
-              $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapper'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json;charset=UTF-8:
-              schema:
-                $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper'
-          description: response
-      tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: DeleteCampaignFeedRequestWrapper
-      x-contentType: application/json;charset=UTF-8
-      x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/getCampaignFeed:
-    post:
-      operationId: getCampaignFeed
-      requestBody:
-        content:
-          application/json;charset=UTF-8:
-            schema:
-              $ref: '#/components/schemas/GetCampaignFeedRequestWrapper'
-        required: true
-      responses:
-        "200":
-          content:
-            application/json;charset=UTF-8:
-              schema:
-                $ref: '#/components/schemas/GetCampaignFeedResponseWrapper'
-          description: response
-      tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: GetCampaignFeedRequestWrapper
+      - AssetShareFeedService
+      x-codegen-request-body-name: AddAssetShareFeedRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
 components:
   schemas:
-    ScheduleType:
-      example:
-        endHour: 9
-        startHour: 7
-        weekDay: 2
-      properties:
-        weekDay:
-          format: int32
-          type: integer
-        startHour:
-          format: int64
-          type: integer
-        endHour:
-          format: int64
-          type: integer
-      type: object
-    GetCampaignFeedRequestWrapper:
+    AddAssetShareFeedRequestWrapper:
       example:
         body:
-          campaignFeedIds:
-          - 0
-          - 0
-          campaignFeedFilter:
-            bstype:
-            - 6
-            - 6
-          campaignFeedFields:
-          - campaignFeedFields
-          - campaignFeedFields
+          assetShareTypes:
+          - srcAssetId: 0
+            assetId: 5
+            assetContent: assetContent
+            assetName: assetName
+            type: 1
+            toUserId: 6
+          - srcAssetId: 0
+            assetId: 5
+            assetContent: assetContent
+            assetName: assetName
+            type: 1
+            toUserId: 6
       properties:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/GetCampaignFeedRequest'
+          $ref: '#/components/schemas/AddAssetShareFeedRequestWrapperBody'
       type: object
-    CampaignFeedType:
+    AddAssetShareFeedResponseWrapper:
       example:
-        subject: 6
-        endtime: endtime
-        starttime: starttime
-        bstype: 4
-        pause: true
-        campaignFeedId: 0
-        schedule:
-        - endHour: 9
-          startHour: 7
-          weekDay: 2
-        - endHour: 9
-          startHour: 7
-          weekDay: 2
-        addtime: addtime
-        bgtctltype: 3
-        appinfo:
-          openurl: openurl
-          apkName: apkName
-          appName: appName
-          docId: 1
-          appUrl: appUrl
-          channelId: 5
-        eshopType: eshopType
-        campaignFeedName: campaignFeedName
-        budget: 5.637376656633329
-        status: 2
+        body:
+          data:
+          - srcAssetId: 0
+            assetId: 5
+            assetContent: assetContent
+            assetName: assetName
+            type: 1
+            toUserId: 6
+          - srcAssetId: 0
+            assetId: 5
+            assetContent: assetContent
+            assetName: assetName
+            type: 1
+            toUserId: 6
       properties:
-        campaignFeedId:
-          format: int64
-          type: integer
-        campaignFeedName:
-          type: string
-        subject:
-          format: int32
-          type: integer
-        appinfo:
-          $ref: '#/components/schemas/AppInfoType'
-        budget:
-          format: double
-          type: number
-        starttime:
-          type: string
-        endtime:
-          type: string
-        schedule:
-          items:
-            $ref: '#/components/schemas/ScheduleType'
-          type: array
-        bgtctltype:
-          format: int32
-          type: integer
-        pause:
-          type: boolean
-        status:
-          format: int32
-          type: integer
-        bstype:
-          format: int32
-          type: integer
-        addtime:
-          type: string
-        eshopType:
-          type: string
-      type: object
-    GetCampaignFeedRequest:
-      example:
-        campaignFeedIds:
-        - 0
-        - 0
-        campaignFeedFilter:
-          bstype:
-          - 6
-          - 6
-        campaignFeedFields:
-        - campaignFeedFields
-        - campaignFeedFields
-      properties:
-        campaignFeedFields:
-          items:
-            type: string
-          type: array
-        campaignFeedIds:
-          items:
-            format: int64
-            type: integer
-          type: array
-        campaignFeedFilter:
-          $ref: '#/components/schemas/CampaignFeedFilter'
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/AddAssetShareFeedResponseWrapperBody'
       type: object
     ApiErrorInfo:
       type: object
-    DeleteCampaignFeedResponseWrapper:
-      example:
-        body:
-          data:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapperBody'
-      type: object
-    GetCampaignFeedResponseWrapper:
-      example:
-        body:
-          data:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/GetCampaignFeedResponseWrapperBody'
+    ApiResponseHeader:
       type: object
     ApiRequestHeader:
       type: object
-    UpdateCampaignFeedRequestWrapper:
+    AssetShareFeedType:
       example:
-        body:
-          campaignFeedTypes:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
+        srcAssetId: 0
+        assetId: 5
+        assetContent: assetContent
+        assetName: assetName
+        type: 1
+        toUserId: 6
       properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapperBody'
-      type: object
-    AppInfoType:
-      example:
-        openurl: openurl
-        apkName: apkName
-        appName: appName
-        docId: 1
-        appUrl: appUrl
-        channelId: 5
-      properties:
-        appName:
-          type: string
-        apkName:
-          type: string
-        appUrl:
-          type: string
-        docId:
+        srcAssetId:
           format: int64
           type: integer
-        channelId:
+        toUserId:
           format: int64
           type: integer
-        openurl:
+        type:
+          format: int32
+          type: integer
+        assetId:
+          format: int64
+          type: integer
+        assetName:
+          type: string
+        assetContent:
           type: string
       type: object
-    CampaignFeedFilter:
+    AddAssetShareFeedRequestWrapperBody:
       example:
-        bstype:
-        - 6
-        - 6
+        assetShareTypes:
+        - srcAssetId: 0
+          assetId: 5
+          assetContent: assetContent
+          assetName: assetName
+          type: 1
+          toUserId: 6
+        - srcAssetId: 0
+          assetId: 5
+          assetContent: assetContent
+          assetName: assetName
+          type: 1
+          toUserId: 6
       properties:
-        bstype:
+        assetShareTypes:
           items:
-            format: int32
-            type: integer
+            $ref: '#/components/schemas/AssetShareFeedType'
           type: array
+      title: AddAssetShareFeedRequestWrapperBody
       type: object
-    ApiResponseHeader:
-      type: object
-    UpdateCampaignFeedResponseWrapper:
-      example:
-        body:
-          data:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapperBody'
-      type: object
-    AddCampaignFeedRequestWrapper:
-      example:
-        body:
-          campaignFeedTypes:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/AddCampaignFeedRequestWrapperBody'
-      type: object
-    DeleteCampaignFeedRequestWrapper:
-      example:
-        body:
-          campaignFeedIds:
-          - 0
-          - 0
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapperBody'
-      type: object
-    AddCampaignFeedResponseWrapper:
-      example:
-        body:
-          data:
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-          - subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 4
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            - endHour: 9
-              startHour: 7
-              weekDay: 2
-            addtime: addtime
-            bgtctltype: 3
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 5.637376656633329
-            status: 2
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/AddCampaignFeedResponseWrapperBody'
-      type: object
-    DeleteCampaignFeedResponseWrapperBody:
+    AddAssetShareFeedResponseWrapperBody:
       example:
         data:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
+        - srcAssetId: 0
+          assetId: 5
+          assetContent: assetContent
+          assetName: assetName
+          type: 1
+          toUserId: 6
+        - srcAssetId: 0
+          assetId: 5
+          assetContent: assetContent
+          assetName: assetName
+          type: 1
+          toUserId: 6
       properties:
         data:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/AssetShareFeedType'
           type: array
-      title: DeleteCampaignFeedResponseWrapperBody
-      type: object
-    GetCampaignFeedResponseWrapperBody:
-      example:
-        data:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/CampaignFeedType'
-          type: array
-      title: GetCampaignFeedResponseWrapperBody
-      type: object
-    UpdateCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedTypes:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-      properties:
-        campaignFeedTypes:
-          items:
-            $ref: '#/components/schemas/CampaignFeedType'
-          type: array
-      title: UpdateCampaignFeedRequestWrapperBody
-      type: object
-    UpdateCampaignFeedResponseWrapperBody:
-      example:
-        data:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/CampaignFeedType'
-          type: array
-      title: UpdateCampaignFeedResponseWrapperBody
-      type: object
-    AddCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedTypes:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-      properties:
-        campaignFeedTypes:
-          items:
-            $ref: '#/components/schemas/CampaignFeedType'
-          type: array
-      title: AddCampaignFeedRequestWrapperBody
-      type: object
-    DeleteCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedIds:
-        - 0
-        - 0
-      properties:
-        campaignFeedIds:
-          items:
-            format: int64
-            type: integer
-          type: array
-      title: DeleteCampaignFeedRequestWrapperBody
-      type: object
-    AddCampaignFeedResponseWrapperBody:
-      example:
-        data:
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-        - subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 4
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          - endHour: 9
-            startHour: 7
-            weekDay: 2
-          addtime: addtime
-          bgtctltype: 3
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 5.637376656633329
-          status: 2
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/CampaignFeedType'
-          type: array
-      title: AddCampaignFeedResponseWrapperBody
+      title: AddAssetShareFeedResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 

@@ -10,3 +10,6 @@ docs/ApiErrorInfo.md
 docs/ApiRequestHeader.md
 docs/ApiResponseHeader.md
 test/__init__.py
+test/test_api_error_info.py
+test/test_api_request_header.py
+test/test_api_response_header.py
