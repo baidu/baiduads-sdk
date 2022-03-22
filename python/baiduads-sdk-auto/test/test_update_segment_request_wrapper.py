@@ -11,10 +11,10 @@ import sys
 import unittest
 
 import baiduads
-from baiduads.advancedsegment.model.batch_request import BatchRequest
+from baiduads.advancedsegment.model.segment_type_batch_request import SegmentTypeBatchRequest
 from baiduads.common.model.api_request_header import ApiRequestHeader
 globals()['ApiRequestHeader'] = ApiRequestHeader
-globals()['BatchRequest'] = BatchRequest
+globals()['SegmentTypeBatchRequest'] = SegmentTypeBatchRequest
 from baiduads.advancedsegment.model.update_segment_request_wrapper import UpdateSegmentRequestWrapper
 
 

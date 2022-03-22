@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.marketapi.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.marketapi.model.SingleRequest;
+import com.baidu.dev2.api.sdk.marketapi.model.OpenSitePreviewRequestSingleRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class PreviewSiteRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private SingleRequest body;
+  private OpenSitePreviewRequestSingleRequest body;
 
   public PreviewSiteRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class PreviewSiteRequestWrapper {
   }
 
 
-  public PreviewSiteRequestWrapper body(SingleRequest body) {
+  public PreviewSiteRequestWrapper body(OpenSitePreviewRequestSingleRequest body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class PreviewSiteRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public SingleRequest getBody() {
+  public OpenSitePreviewRequestSingleRequest getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(SingleRequest body) {
+  public void setBody(OpenSitePreviewRequestSingleRequest body) {
     this.body = body;
   }
 

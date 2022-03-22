@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.marketapi.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.marketapi.model.SingleRequest;
+import com.baidu.dev2.api.sdk.marketapi.model.OpenOrderInfoRequestSingleRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetOrderInfoRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private SingleRequest body;
+  private OpenOrderInfoRequestSingleRequest body;
 
   public GetOrderInfoRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetOrderInfoRequestWrapper {
   }
 
 
-  public GetOrderInfoRequestWrapper body(SingleRequest body) {
+  public GetOrderInfoRequestWrapper body(OpenOrderInfoRequestSingleRequest body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetOrderInfoRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public SingleRequest getBody() {
+  public OpenOrderInfoRequestSingleRequest getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(SingleRequest body) {
+  public void setBody(OpenOrderInfoRequestSingleRequest body) {
     this.body = body;
   }
 

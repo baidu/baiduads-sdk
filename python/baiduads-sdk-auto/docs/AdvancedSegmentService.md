@@ -38,7 +38,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_service.AdvancedSegmentService(api_client)
     add_segment_request_wrapper = AddSegmentRequestWrapper(
         header=ApiRequestHeader(),
-        body=ApiSegmentBatchRequest(
+        body=SegmentTypeApiSegmentBatchRequest(
             items=[
                 SegmentType(
                     segment_id=1,
@@ -121,7 +121,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_service.AdvancedSegmentService(api_client)
     delete_segment_request_wrapper = DeleteSegmentRequestWrapper(
         header=ApiRequestHeader(),
-        body=BatchRequest(
+        body=LongBatchRequest(
             items=[
                 1,
             ],
@@ -270,9 +270,20 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_service.AdvancedSegmentService(api_client)
     update_segment_request_wrapper = UpdateSegmentRequestWrapper(
         header=ApiRequestHeader(),
-        body=BatchRequest(
+        body=SegmentTypeBatchRequest(
             items=[
-                1,
+                SegmentType(
+                    segment_id=1,
+                    source=1,
+                    segment_type=1,
+                    audit_content={},
+                    content={},
+                    pause=True,
+                    user_id=1,
+                    mod_time="mod_time_example",
+                    status=1,
+                    whole_reason="whole_reason_example",
+                ),
             ],
         ),
     ) # UpdateSegmentRequestWrapper | 

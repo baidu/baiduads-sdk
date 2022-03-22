@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.marketapi.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.marketapi.model.SingleRequest;
+import com.baidu.dev2.api.sdk.marketapi.model.OpenSiteInfoRequestSingleRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class GetSiteInfoRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private SingleRequest body;
+  private OpenSiteInfoRequestSingleRequest body;
 
   public GetSiteInfoRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class GetSiteInfoRequestWrapper {
   }
 
 
-  public GetSiteInfoRequestWrapper body(SingleRequest body) {
+  public GetSiteInfoRequestWrapper body(OpenSiteInfoRequestSingleRequest body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class GetSiteInfoRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public SingleRequest getBody() {
+  public OpenSiteInfoRequestSingleRequest getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(SingleRequest body) {
+  public void setBody(OpenSiteInfoRequestSingleRequest body) {
     this.body = body;
   }
 
