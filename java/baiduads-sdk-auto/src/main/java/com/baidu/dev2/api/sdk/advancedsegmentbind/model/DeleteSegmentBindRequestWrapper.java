@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.advancedsegmentbind.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advancedsegmentbind.model.ApiSegmentBatchRequest;
+import com.baidu.dev2.api.sdk.advancedsegmentbind.model.LongApiSegmentBatchRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class DeleteSegmentBindRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private ApiSegmentBatchRequest body;
+  private LongApiSegmentBatchRequest body;
 
   public DeleteSegmentBindRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class DeleteSegmentBindRequestWrapper {
   }
 
 
-  public DeleteSegmentBindRequestWrapper body(ApiSegmentBatchRequest body) {
+  public DeleteSegmentBindRequestWrapper body(LongApiSegmentBatchRequest body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class DeleteSegmentBindRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public ApiSegmentBatchRequest getBody() {
+  public LongApiSegmentBatchRequest getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(ApiSegmentBatchRequest body) {
+  public void setBody(LongApiSegmentBatchRequest body) {
     this.body = body;
   }
 

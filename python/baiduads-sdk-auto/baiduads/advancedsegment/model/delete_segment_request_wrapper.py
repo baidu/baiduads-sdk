@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.advancedsegment.model.batch_request import BatchRequest
+    from baiduads.advancedsegment.model.long_batch_request import LongBatchRequest
     from baiduads.common.model.api_request_header import ApiRequestHeader
     globals()['ApiRequestHeader'] = ApiRequestHeader
-    globals()['BatchRequest'] = BatchRequest
+    globals()['LongBatchRequest'] = LongBatchRequest
 
 
 class DeleteSegmentRequestWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class DeleteSegmentRequestWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiRequestHeader,),  # noqa: E501
-            'body': (BatchRequest,),  # noqa: E501
+            'body': (LongBatchRequest,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class DeleteSegmentRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (BatchRequest): [optional]  # noqa: E501
+            body (LongBatchRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class DeleteSegmentRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (BatchRequest): [optional]  # noqa: E501
+            body (LongBatchRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

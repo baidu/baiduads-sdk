@@ -38,9 +38,20 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_bind_service.AdvancedSegmentBindService(api_client)
     add_segment_bind_request_wrapper = AddSegmentBindRequestWrapper(
         header=ApiRequestHeader(),
-        body=ApiSegmentBatchRequest(
+        body=SegmentBindTypeApiSegmentBatchRequest(
             items=[
-                1,
+                SegmentBindType(
+                    bind_id=1,
+                    user_id=1,
+                    adgroup_id=1,
+                    segment_type=1,
+                    bind_source=1,
+                    segment_id=1,
+                    campaign_id=1,
+                    pause=True,
+                    campaign_name="campaign_name_example",
+                    adgroup_name="adgroup_name_example",
+                ),
             ],
         ),
     ) # AddSegmentBindRequestWrapper | 
@@ -110,7 +121,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_bind_service.AdvancedSegmentBindService(api_client)
     delete_segment_bind_request_wrapper = DeleteSegmentBindRequestWrapper(
         header=ApiRequestHeader(),
-        body=ApiSegmentBatchRequest(
+        body=LongApiSegmentBatchRequest(
             items=[
                 1,
             ],
@@ -279,9 +290,20 @@ with baiduads.ApiClient() as api_client:
     api_instance = advanced_segment_bind_service.AdvancedSegmentBindService(api_client)
     update_segment_bind_request_wrapper = UpdateSegmentBindRequestWrapper(
         header=ApiRequestHeader(),
-        body=ApiSegmentBatchRequest(
+        body=SegmentBindTypeApiSegmentBatchRequest(
             items=[
-                1,
+                SegmentBindType(
+                    bind_id=1,
+                    user_id=1,
+                    adgroup_id=1,
+                    segment_type=1,
+                    bind_source=1,
+                    segment_id=1,
+                    campaign_id=1,
+                    pause=True,
+                    campaign_name="campaign_name_example",
+                    adgroup_name="adgroup_name_example",
+                ),
             ],
         ),
     ) # UpdateSegmentBindRequestWrapper | 

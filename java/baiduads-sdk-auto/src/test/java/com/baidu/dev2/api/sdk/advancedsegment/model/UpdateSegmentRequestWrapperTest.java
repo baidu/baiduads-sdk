@@ -11,7 +11,7 @@
 
 package com.baidu.dev2.api.sdk.advancedsegment.model;
 
-import com.baidu.dev2.api.sdk.advancedsegment.model.BatchRequest;
+import com.baidu.dev2.api.sdk.advancedsegment.model.SegmentTypeBatchRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;

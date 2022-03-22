@@ -12,9 +12,9 @@ import unittest
 
 import baiduads
 from baiduads.common.model.api_request_header import ApiRequestHeader
-from baiduads.marketapi.model.single_request import SingleRequest
+from baiduads.marketapi.model.open_order_info_request_single_request import OpenOrderInfoRequestSingleRequest
 globals()['ApiRequestHeader'] = ApiRequestHeader
-globals()['SingleRequest'] = SingleRequest
+globals()['OpenOrderInfoRequestSingleRequest'] = OpenOrderInfoRequestSingleRequest
 from baiduads.marketapi.model.get_order_info_request_wrapper import GetOrderInfoRequestWrapper
 
 

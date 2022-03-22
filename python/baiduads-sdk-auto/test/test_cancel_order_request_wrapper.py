@@ -12,9 +12,9 @@ import unittest
 
 import baiduads
 from baiduads.common.model.api_request_header import ApiRequestHeader
-from baiduads.marketapi.model.single_request import SingleRequest
+from baiduads.marketapi.model.open_order_cancel_request_single_request import OpenOrderCancelRequestSingleRequest
 globals()['ApiRequestHeader'] = ApiRequestHeader
-globals()['SingleRequest'] = SingleRequest
+globals()['OpenOrderCancelRequestSingleRequest'] = OpenOrderCancelRequestSingleRequest
 from baiduads.marketapi.model.cancel_order_request_wrapper import CancelOrderRequestWrapper
 
 

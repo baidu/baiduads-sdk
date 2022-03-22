@@ -30,9 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.common.model.api_request_header import ApiRequestHeader
-    from baiduads.marketapi.model.single_request import SingleRequest
+    from baiduads.marketapi.model.open_order_cancel_request_single_request import OpenOrderCancelRequestSingleRequest
     globals()['ApiRequestHeader'] = ApiRequestHeader
-    globals()['SingleRequest'] = SingleRequest
+    globals()['OpenOrderCancelRequestSingleRequest'] = OpenOrderCancelRequestSingleRequest
 
 
 class CancelOrderRequestWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class CancelOrderRequestWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiRequestHeader,),  # noqa: E501
-            'body': (SingleRequest,),  # noqa: E501
+            'body': (OpenOrderCancelRequestSingleRequest,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class CancelOrderRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (SingleRequest): [optional]  # noqa: E501
+            body (OpenOrderCancelRequestSingleRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class CancelOrderRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (SingleRequest): [optional]  # noqa: E501
+            body (OpenOrderCancelRequestSingleRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

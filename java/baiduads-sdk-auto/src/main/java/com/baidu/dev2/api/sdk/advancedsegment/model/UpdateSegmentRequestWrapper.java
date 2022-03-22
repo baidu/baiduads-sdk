@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.advancedsegment.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advancedsegment.model.BatchRequest;
+import com.baidu.dev2.api.sdk.advancedsegment.model.SegmentTypeBatchRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -38,7 +38,7 @@ public class UpdateSegmentRequestWrapper {
   private com.baidu.dev2.api.sdk.common.ApiRequestHeader header;
 
   public static final String JSON_PROPERTY_BODY = "body";
-  private BatchRequest body;
+  private SegmentTypeBatchRequest body;
 
   public UpdateSegmentRequestWrapper() { 
   }
@@ -70,7 +70,7 @@ public class UpdateSegmentRequestWrapper {
   }
 
 
-  public UpdateSegmentRequestWrapper body(BatchRequest body) {
+  public UpdateSegmentRequestWrapper body(SegmentTypeBatchRequest body) {
     
     this.body = body;
     return this;
@@ -85,14 +85,14 @@ public class UpdateSegmentRequestWrapper {
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public BatchRequest getBody() {
+  public SegmentTypeBatchRequest getBody() {
     return body;
   }
 
 
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBody(BatchRequest body) {
+  public void setBody(SegmentTypeBatchRequest body) {
     this.body = body;
   }
 

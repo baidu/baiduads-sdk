@@ -12,9 +12,9 @@ import unittest
 
 import baiduads
 from baiduads.common.model.api_request_header import ApiRequestHeader
-from baiduads.marketapi.model.single_request import SingleRequest
+from baiduads.marketapi.model.open_site_info_request_single_request import OpenSiteInfoRequestSingleRequest
 globals()['ApiRequestHeader'] = ApiRequestHeader
-globals()['SingleRequest'] = SingleRequest
+globals()['OpenSiteInfoRequestSingleRequest'] = OpenSiteInfoRequestSingleRequest
 from baiduads.marketapi.model.get_site_info_request_wrapper import GetSiteInfoRequestWrapper
 
 

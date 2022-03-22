@@ -39,10 +39,13 @@ with baiduads.ApiClient() as api_client:
     api_instance = market_api_service.MarketApiService(api_client)
     cancel_order_request_wrapper = CancelOrderRequestWrapper(
         header=ApiRequestHeader(),
-        body=SingleRequest(
-            item=OpenOrderInfoRequest(
-                order_id_list=[
-                    1,
+        body=OpenOrderCancelRequestSingleRequest(
+            item=OpenOrderCancelRequest(
+                client_request=[
+                    OpenOrderCancelType(
+                        account_id=1,
+                        order_id=1,
+                    ),
                 ],
             ),
         ),
@@ -113,10 +116,19 @@ with baiduads.ApiClient() as api_client:
     api_instance = market_api_service.MarketApiService(api_client)
     create_order_request_wrapper = CreateOrderRequestWrapper(
         header=ApiRequestHeader(),
-        body=SingleRequest(
-            item=OpenOrderInfoRequest(
-                order_id_list=[
-                    1,
+        body=OpenOrderCreateRequestSingleRequest(
+            item=OpenOrderCreateRequest(
+                client_request_list=[
+                    OpenOrderCreateType(
+                        account_id=1,
+                        category_id=[
+                            1,
+                        ],
+                        site_name="site_name_example",
+                        mobile_phone="mobile_phone_example",
+                        remark="remark_example",
+                        pay_channel=1,
+                    ),
                 ],
             ),
         ),
@@ -187,7 +199,7 @@ with baiduads.ApiClient() as api_client:
     api_instance = market_api_service.MarketApiService(api_client)
     get_order_info_request_wrapper = GetOrderInfoRequestWrapper(
         header=ApiRequestHeader(),
-        body=SingleRequest(
+        body=OpenOrderInfoRequestSingleRequest(
             item=OpenOrderInfoRequest(
                 order_id_list=[
                     1,
@@ -261,11 +273,9 @@ with baiduads.ApiClient() as api_client:
     api_instance = market_api_service.MarketApiService(api_client)
     get_site_info_request_wrapper = GetSiteInfoRequestWrapper(
         header=ApiRequestHeader(),
-        body=SingleRequest(
-            item=OpenOrderInfoRequest(
-                order_id_list=[
-                    1,
-                ],
+        body=OpenSiteInfoRequestSingleRequest(
+            item=OpenSiteInfoRequest(
+                site_id=1,
             ),
         ),
     ) # GetSiteInfoRequestWrapper | 
@@ -335,11 +345,11 @@ with baiduads.ApiClient() as api_client:
     api_instance = market_api_service.MarketApiService(api_client)
     preview_site_request_wrapper = PreviewSiteRequestWrapper(
         header=ApiRequestHeader(),
-        body=SingleRequest(
-            item=OpenOrderInfoRequest(
-                order_id_list=[
-                    1,
-                ],
+        body=OpenSitePreviewRequestSingleRequest(
+            item=OpenSitePreviewRequest(
+                id=1,
+                id_type=1,
+                account_id=1,
             ),
         ),
     ) # PreviewSiteRequestWrapper | 

@@ -11,7 +11,7 @@
 
 package com.baidu.dev2.api.sdk.marketapi.model;
 
-import com.baidu.dev2.api.sdk.marketapi.model.SingleRequest;
+import com.baidu.dev2.api.sdk.marketapi.model.OpenOrderCancelRequestSingleRequest;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;

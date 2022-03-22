@@ -29,10 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.advancedsegmentbind.model.api_segment_batch_request import ApiSegmentBatchRequest
+    from baiduads.advancedsegmentbind.model.segment_bind_type_api_segment_batch_request import SegmentBindTypeApiSegmentBatchRequest
     from baiduads.common.model.api_request_header import ApiRequestHeader
     globals()['ApiRequestHeader'] = ApiRequestHeader
-    globals()['ApiSegmentBatchRequest'] = ApiSegmentBatchRequest
+    globals()['SegmentBindTypeApiSegmentBatchRequest'] = SegmentBindTypeApiSegmentBatchRequest
 
 
 class UpdateSegmentBindRequestWrapper(ModelNormal):
@@ -89,7 +89,7 @@ class UpdateSegmentBindRequestWrapper(ModelNormal):
         lazy_import()
         return {
             'header': (ApiRequestHeader,),  # noqa: E501
-            'body': (ApiSegmentBatchRequest,),  # noqa: E501
+            'body': (SegmentBindTypeApiSegmentBatchRequest,),  # noqa: E501
         }
 
     @cached_property
@@ -144,7 +144,7 @@ class UpdateSegmentBindRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (ApiSegmentBatchRequest): [optional]  # noqa: E501
+            body (SegmentBindTypeApiSegmentBatchRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -227,7 +227,7 @@ class UpdateSegmentBindRequestWrapper(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             header (ApiRequestHeader): [optional]  # noqa: E501
-            body (ApiSegmentBatchRequest): [optional]  # noqa: E501
+            body (SegmentBindTypeApiSegmentBatchRequest): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
