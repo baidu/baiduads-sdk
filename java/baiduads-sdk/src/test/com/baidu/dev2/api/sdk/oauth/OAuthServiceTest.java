@@ -18,10 +18,10 @@ import org.junit.Test;
 public class OAuthServiceTest {
     private OAuthService oAuthService;
 
-    private String appId = "xxxxx";
-    private Long userId = 1L;
-    private String authCode = "xxxxx";
-    private String secretKey = "xxxxx";
+    private String appId = "xxxxx"; // 替换为自己的appId
+    private Long userId = 1L; // 替换为自己的userId
+    private String authCode = "xxxxx"; // 替换为自己的authCode
+    private String secretKey = "xxxxx"; // 替换为自己的secretKey
     private String accessToken;
     private String refreshToken;
     private String openId;
