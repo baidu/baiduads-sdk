@@ -16,7 +16,7 @@ class TestUploadClient(unittest.TestCase):
         pass
 
     def test_file_upload(self):
-        file = "/tmp/test2.mp4"
+        file = open("/tmp/test2.mp4", mode="rb")
         params = {"format": "mp4", "source": 2, "videoName": "test" + str(time.time()) + ".mp4", "httpProtocol": "HTTP"}
         path = "/json/sms/service/VideoUploadService/addVideo"
         # 请填写自己的信息

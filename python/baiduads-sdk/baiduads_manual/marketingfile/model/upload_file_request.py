@@ -17,7 +17,7 @@ class UploadFileRequest:
         """
 
         Args:
-            file: str
+            file: file
             params: UploadFileParams
             timeout: int
             uploadOptions: MultiUploadOptions

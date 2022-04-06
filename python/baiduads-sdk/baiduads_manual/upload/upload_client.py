@@ -45,7 +45,7 @@ class UploadClient:
 
     def upload_file(self,
                     path,
-                    filePath,
+                    file,
                     formParams=[],
                     paramsJson={},
                     /,
@@ -60,7 +60,7 @@ class UploadClient:
         文件上传
         Args:
             path: str 请求路径
-            filePath: str 文件路径
+            file: file 文件
             formParams: [Tuple[str,Any]] 表单参数
             paramsJson:dict 额外参数
             returnType: 返回类型
@@ -73,8 +73,8 @@ class UploadClient:
         Returns:
             returnType
         """
-        if filePath is None:
-            raise ApiException(reason="invalid filePath")
+        if file is None:
+            raise ApiException(reason="invalid file")
         if partSize is not None and (partSize < MIN_PART_SIZE or partSize > MAX_PART_SIZE):
             raise ApiException(reason="invalid partSize")
         if partParallel is not None and partParallel < 1:
@@ -123,29 +123,29 @@ class UploadClient:
         collection_format = {}
 
         # check file size
+        filePath = os.path.abspath(file.name)
         file_size = os.path.getsize(filePath)
         if file_size <= multipartThreshold:
-            with open(filePath, "rb") as file:
-                # 简单上传
-                form.append(("params", json.dumps(paramsJson)))
-                received_data = self.api_client.call_api(
-                    endpoint_path, http_method,
-                    path,
-                    query,
-                    header,
-                    body=body,
-                    post_params=form,
-                    files={fileKey: [file]},
-                    response_type=response_type,
-                    auth_settings=auth,
-                    async_req=async_req,
-                    _check_type=_check_return_type,
-                    _return_http_data_only=_return_http_data_only,
-                    _preload_content=_preload_content,
-                    _request_timeout=convert_to_second(_request_timeout),
-                    _host=_host,
-                    collection_formats=collection_format)
-                return received_data
+            # 简单上传
+            form.append(("params", json.dumps(paramsJson)))
+            received_data = self.api_client.call_api(
+                endpoint_path, http_method,
+                path,
+                query,
+                header,
+                body=body,
+                post_params=form,
+                files={fileKey: [file]},
+                response_type=response_type,
+                auth_settings=auth,
+                async_req=async_req,
+                _check_type=_check_return_type,
+                _return_http_data_only=_return_http_data_only,
+                _preload_content=_preload_content,
+                _request_timeout=convert_to_second(_request_timeout),
+                _host=_host,
+                collection_formats=collection_format)
+            return received_data
         else:
             future = multi_upload_pool.submit(self.multi_upload,
                                               endpoint_path, http_method,
