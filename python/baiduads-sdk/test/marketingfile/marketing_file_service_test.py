@@ -20,7 +20,7 @@ class TestMarketingFileService(unittest.TestCase):
         pass
 
     def test_upload_file_simple(self):
-        file = "/tmp/a.txt"
+        file = open("/tmp/a.txt", mode="rb")
         # 请填写自己的信息
         header = ApiRequestHeader(
             token="xxxxx",
@@ -46,7 +46,7 @@ class TestMarketingFileService(unittest.TestCase):
         print(res)
 
     def test_upload_file_simple_with_timeout(self):
-        file = "/tmp/a.txt"
+        file = open("/tmp/a.txt", mode="rb")
         # 请填写自己的信息
         header = ApiRequestHeader(
             token="xxxxx",
@@ -73,7 +73,7 @@ class TestMarketingFileService(unittest.TestCase):
         assert res.header.status == 0
 
     def test_upload_file_multipart(self):
-        file = "/tmp/b.txt"
+        file = open("/tmp/b.txt", mode="rb")
         # 请填写自己的信息
         header = ApiRequestHeader(
             token="xxxxx",
@@ -99,7 +99,7 @@ class TestMarketingFileService(unittest.TestCase):
         assert res.header.status == 0
 
     def test_upload_file_multipart_with_timeout(self):
-        file = "/tmp/b.txt"
+        file = open("/tmp/b.txt", mode="rb")
         # 请填写自己的信息
         header = ApiRequestHeader(
             token="xxxxx",

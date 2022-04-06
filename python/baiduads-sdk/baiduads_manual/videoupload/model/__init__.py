@@ -9,3 +9,7 @@ from __future__ import absolute_import
 from baiduads_manual.videoupload.model.add_video_response_wrapper import AddVideoResponseWrapper
 from baiduads_manual.videoupload.model.add_video_response import AddVideoResponse
 from baiduads_manual.videoupload.model.video_info import VideoInfo
+from baiduads_manual.videoupload.model.add_video_request_wrapper import AddVideoRequestWrapper
+from baiduads_manual.videoupload.model.add_video_request import AddVideoRequest
+from baiduads_manual.videoupload.model.add_video_params import AddVideoParams
+

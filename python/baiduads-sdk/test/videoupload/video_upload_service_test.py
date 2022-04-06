@@ -20,7 +20,7 @@ class TestVideoUploadService(unittest.TestCase):
         pass
 
     def test_add_video(self):
-        file = "/tmp/test2.mp4"
+        file = open("/tmp/test2.mp4", mode="rb")
         # 请填写自己的信息
         header = ApiRequestHeader(
             token="xxxxx",
