@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.2.1.4-SNAPSHOT
+  version: 2022.2.1.5-SNAPSHOT
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
