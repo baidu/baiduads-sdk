@@ -48,7 +48,6 @@ class UploadClient:
                     file,
                     formParams=[],
                     paramsJson={},
-                    /,
                     returnType=None,
                     fileKey="file",
                     multipartThreshold=DEFAULT_MULTIPART_THRESHOLD,
