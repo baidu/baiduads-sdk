@@ -2,79 +2,295 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.2.1.5-SNAPSHOT
+  version: 2022.3.0
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
 tags:
-- name: AssetShareFeedService
+- name: VideoSynthetiseService
 paths:
-  json/feed/v1/AssetShareFeedService/addAssetShareFeed:
+  json/sms/service/VideoSynthetiseService/clipVideo:
     post:
-      operationId: addAssetShareFeed
+      operationId: clipVideo
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/AddAssetShareFeedRequestWrapper'
+              $ref: '#/components/schemas/ClipVideoRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/AddAssetShareFeedResponseWrapper'
+                $ref: '#/components/schemas/ClipVideoResponseWrapper'
           description: response
       tags:
-      - AssetShareFeedService
-      x-codegen-request-body-name: AddAssetShareFeedRequestWrapper
+      - VideoSynthetiseService
+      x-codegen-request-body-name: ClipVideoRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/sms/service/VideoSynthetiseService/queryVideoClipStatus:
+    post:
+      operationId: queryVideoClipStatus
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/QueryVideoClipStatusRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/QueryVideoClipStatusResponseWrapper'
+          description: response
+      tags:
+      - VideoSynthetiseService
+      x-codegen-request-body-name: QueryVideoClipStatusRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
 components:
   schemas:
-    AddAssetShareFeedRequestWrapper:
+    VideoPreviewInfoType:
       example:
-        body:
-          assetShareTypes:
-          - srcAssetId: 0
-            assetId: 5
-            assetContent: assetContent
-            assetName: assetName
-            type: 1
-            toUserId: 6
-          - srcAssetId: 0
-            assetId: 5
-            assetContent: assetContent
-            assetName: assetName
-            type: 1
-            toUserId: 6
+        taskList:
+        - ext: ext
+          thumbnail: thumbnail
+          videoId: 1
+          source: 5
+          tags: tags
+          duration: 7
+          videoUrl: videoUrl
+          createTime: createTime
+          videoName: videoName
+          width: 9
+          batchTaskId: 4
+          progress: 5
+          id: 2
+          renderType: 2
+          taskId: 0
+          errors: errors
+          status: 6
+          height: 3
+          md5: md5
+        - ext: ext
+          thumbnail: thumbnail
+          videoId: 1
+          source: 5
+          tags: tags
+          duration: 7
+          videoUrl: videoUrl
+          createTime: createTime
+          videoName: videoName
+          width: 9
+          batchTaskId: 4
+          progress: 5
+          id: 2
+          renderType: 2
+          taskId: 0
+          errors: errors
+          status: 6
+          height: 3
+          md5: md5
       properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/AddAssetShareFeedRequestWrapperBody'
+        taskList:
+          items:
+            $ref: '#/components/schemas/VideoInfoType'
+          type: array
       type: object
-    AddAssetShareFeedResponseWrapper:
+    VideoInfoType:
+      example:
+        ext: ext
+        thumbnail: thumbnail
+        videoId: 1
+        source: 5
+        tags: tags
+        duration: 7
+        videoUrl: videoUrl
+        createTime: createTime
+        videoName: videoName
+        width: 9
+        batchTaskId: 4
+        progress: 5
+        id: 2
+        renderType: 2
+        taskId: 0
+        errors: errors
+        status: 6
+        height: 3
+        md5: md5
+      properties:
+        taskId:
+          format: int64
+          type: integer
+        status:
+          format: int32
+          type: integer
+        videoId:
+          format: int64
+          type: integer
+        videoUrl:
+          type: string
+        errors:
+          type: string
+        videoName:
+          type: string
+        source:
+          format: int32
+          type: integer
+        progress:
+          format: int32
+          type: integer
+        createTime:
+          type: string
+        tags:
+          type: string
+        id:
+          format: int64
+          type: integer
+        thumbnail:
+          type: string
+        duration:
+          format: int32
+          type: integer
+        width:
+          format: int32
+          type: integer
+        height:
+          format: int32
+          type: integer
+        renderType:
+          format: int32
+          type: integer
+        md5:
+          type: string
+        batchTaskId:
+          format: int64
+          type: integer
+        ext:
+          type: string
+      type: object
+    ClipVideoResponseWrapper:
       example:
         body:
           data:
-          - srcAssetId: 0
-            assetId: 5
-            assetContent: assetContent
-            assetName: assetName
-            type: 1
-            toUserId: 6
-          - srcAssetId: 0
-            assetId: 5
-            assetContent: assetContent
-            assetName: assetName
-            type: 1
-            toUserId: 6
+          - 0
+          - 0
       properties:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/AddAssetShareFeedResponseWrapperBody'
+          $ref: '#/components/schemas/ClipVideoResponseWrapperBody'
+      type: object
+    QueryVideoClipStatusResponseWrapper:
+      example:
+        body:
+          data:
+          - taskList:
+            - ext: ext
+              thumbnail: thumbnail
+              videoId: 1
+              source: 5
+              tags: tags
+              duration: 7
+              videoUrl: videoUrl
+              createTime: createTime
+              videoName: videoName
+              width: 9
+              batchTaskId: 4
+              progress: 5
+              id: 2
+              renderType: 2
+              taskId: 0
+              errors: errors
+              status: 6
+              height: 3
+              md5: md5
+            - ext: ext
+              thumbnail: thumbnail
+              videoId: 1
+              source: 5
+              tags: tags
+              duration: 7
+              videoUrl: videoUrl
+              createTime: createTime
+              videoName: videoName
+              width: 9
+              batchTaskId: 4
+              progress: 5
+              id: 2
+              renderType: 2
+              taskId: 0
+              errors: errors
+              status: 6
+              height: 3
+              md5: md5
+          - taskList:
+            - ext: ext
+              thumbnail: thumbnail
+              videoId: 1
+              source: 5
+              tags: tags
+              duration: 7
+              videoUrl: videoUrl
+              createTime: createTime
+              videoName: videoName
+              width: 9
+              batchTaskId: 4
+              progress: 5
+              id: 2
+              renderType: 2
+              taskId: 0
+              errors: errors
+              status: 6
+              height: 3
+              md5: md5
+            - ext: ext
+              thumbnail: thumbnail
+              videoId: 1
+              source: 5
+              tags: tags
+              duration: 7
+              videoUrl: videoUrl
+              createTime: createTime
+              videoName: videoName
+              width: 9
+              batchTaskId: 4
+              progress: 5
+              id: 2
+              renderType: 2
+              taskId: 0
+              errors: errors
+              status: 6
+              height: 3
+              md5: md5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/QueryVideoClipStatusResponseWrapperBody'
+      type: object
+    ClipVideoRequestWrapper:
+      example:
+        body:
+          duration: 6
+          productLine: productLine
+          cutType: 0
+          videoId: 2
+          beginTime: 1
+          endTime: 5
+          source: 5
+          url: url
+          highlightList:
+          - 7.061401241503109
+          - 7.061401241503109
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/VideoClipRequest'
       type: object
     ApiErrorInfo:
       type: object
@@ -82,75 +298,177 @@ components:
       type: object
     ApiRequestHeader:
       type: object
-    AssetShareFeedType:
+    VideoClipRequest:
       example:
-        srcAssetId: 0
-        assetId: 5
-        assetContent: assetContent
-        assetName: assetName
-        type: 1
-        toUserId: 6
+        duration: 6
+        productLine: productLine
+        cutType: 0
+        videoId: 2
+        beginTime: 1
+        endTime: 5
+        source: 5
+        url: url
+        highlightList:
+        - 7.061401241503109
+        - 7.061401241503109
       properties:
-        srcAssetId:
-          format: int64
-          type: integer
-        toUserId:
-          format: int64
-          type: integer
-        type:
+        cutType:
           format: int32
           type: integer
-        assetId:
+        url:
+          type: string
+        duration:
+          format: int32
+          type: integer
+        beginTime:
+          format: int32
+          type: integer
+        endTime:
+          format: int32
+          type: integer
+        source:
+          format: int32
+          type: integer
+        videoId:
           format: int64
           type: integer
-        assetName:
-          type: string
-        assetContent:
+        highlightList:
+          items:
+            format: double
+            type: number
+          type: array
+        productLine:
           type: string
       type: object
-    AddAssetShareFeedRequestWrapperBody:
+    QueryVideoClipStatusRequestWrapper:
       example:
-        assetShareTypes:
-        - srcAssetId: 0
-          assetId: 5
-          assetContent: assetContent
-          assetName: assetName
-          type: 1
-          toUserId: 6
-        - srcAssetId: 0
-          assetId: 5
-          assetContent: assetContent
-          assetName: assetName
-          type: 1
-          toUserId: 6
+        body:
+          tag: 6
+          taskIds:
+          - 0
+          - 0
       properties:
-        assetShareTypes:
-          items:
-            $ref: '#/components/schemas/AssetShareFeedType'
-          type: array
-      title: AddAssetShareFeedRequestWrapperBody
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/VideoPreviewRequest'
       type: object
-    AddAssetShareFeedResponseWrapperBody:
+    VideoPreviewRequest:
+      example:
+        tag: 6
+        taskIds:
+        - 0
+        - 0
+      properties:
+        taskIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+        tag:
+          format: int32
+          type: integer
+      type: object
+    ClipVideoResponseWrapperBody:
       example:
         data:
-        - srcAssetId: 0
-          assetId: 5
-          assetContent: assetContent
-          assetName: assetName
-          type: 1
-          toUserId: 6
-        - srcAssetId: 0
-          assetId: 5
-          assetContent: assetContent
-          assetName: assetName
-          type: 1
-          toUserId: 6
+        - 0
+        - 0
       properties:
         data:
           items:
-            $ref: '#/components/schemas/AssetShareFeedType'
+            format: int64
+            type: integer
           type: array
-      title: AddAssetShareFeedResponseWrapperBody
+      title: ClipVideoResponseWrapperBody
+      type: object
+    QueryVideoClipStatusResponseWrapperBody:
+      example:
+        data:
+        - taskList:
+          - ext: ext
+            thumbnail: thumbnail
+            videoId: 1
+            source: 5
+            tags: tags
+            duration: 7
+            videoUrl: videoUrl
+            createTime: createTime
+            videoName: videoName
+            width: 9
+            batchTaskId: 4
+            progress: 5
+            id: 2
+            renderType: 2
+            taskId: 0
+            errors: errors
+            status: 6
+            height: 3
+            md5: md5
+          - ext: ext
+            thumbnail: thumbnail
+            videoId: 1
+            source: 5
+            tags: tags
+            duration: 7
+            videoUrl: videoUrl
+            createTime: createTime
+            videoName: videoName
+            width: 9
+            batchTaskId: 4
+            progress: 5
+            id: 2
+            renderType: 2
+            taskId: 0
+            errors: errors
+            status: 6
+            height: 3
+            md5: md5
+        - taskList:
+          - ext: ext
+            thumbnail: thumbnail
+            videoId: 1
+            source: 5
+            tags: tags
+            duration: 7
+            videoUrl: videoUrl
+            createTime: createTime
+            videoName: videoName
+            width: 9
+            batchTaskId: 4
+            progress: 5
+            id: 2
+            renderType: 2
+            taskId: 0
+            errors: errors
+            status: 6
+            height: 3
+            md5: md5
+          - ext: ext
+            thumbnail: thumbnail
+            videoId: 1
+            source: 5
+            tags: tags
+            duration: 7
+            videoUrl: videoUrl
+            createTime: createTime
+            videoName: videoName
+            width: 9
+            batchTaskId: 4
+            progress: 5
+            id: 2
+            renderType: 2
+            taskId: 0
+            errors: errors
+            status: 6
+            height: 3
+            md5: md5
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/VideoPreviewInfoType'
+          type: array
+      title: QueryVideoClipStatusResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 
