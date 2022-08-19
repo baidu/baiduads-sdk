@@ -24,6 +24,8 @@ import com.baidu.dev2.api.sdk.indexapi.model.CreateTaskRequestWrapper;
 import com.baidu.dev2.api.sdk.indexapi.model.CreateTaskResponseWrapper;
 import com.baidu.dev2.api.sdk.indexapi.model.GetResultRequestWrapper;
 import com.baidu.dev2.api.sdk.indexapi.model.GetResultResponseWrapper;
+import com.baidu.dev2.api.sdk.indexapi.model.RefreshAccessTokenRequestWrapper;
+import com.baidu.dev2.api.sdk.indexapi.model.RefreshAccessTokenResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -207,6 +209,63 @@ public class IndexApiService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetResultResponseWrapper> localVarReturnType = new TypeReference<GetResultResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param refreshAccessTokenRequestWrapper  (required)
+   * @return RefreshAccessTokenResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public RefreshAccessTokenResponseWrapper refreshAccessToken(RefreshAccessTokenRequestWrapper refreshAccessTokenRequestWrapper) throws ApiException {
+    Object localVarPostBody = refreshAccessTokenRequestWrapper;
+    
+    // verify the required parameter 'refreshAccessTokenRequestWrapper' is set
+    if (refreshAccessTokenRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'refreshAccessTokenRequestWrapper' when calling refreshAccessToken");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/IndexApiService/refreshAccessToken";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<RefreshAccessTokenResponseWrapper> localVarReturnType = new TypeReference<RefreshAccessTokenResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

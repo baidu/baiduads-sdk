@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.advice.model.AdgroupAutoTargetingInfo;
 import com.baidu.dev2.api.sdk.advice.model.BusinessLabelAcceptInfo;
+import com.baidu.dev2.api.sdk.advice.model.CampaignEstBudgetAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.CampaignRecBudgetAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.CreativeRecommendAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.FeedAccountBudgetAcceptInfo;
@@ -29,7 +30,9 @@ import com.baidu.dev2.api.sdk.advice.model.LandingPageCorrelationInfo;
 import com.baidu.dev2.api.sdk.advice.model.LandingPageInfo;
 import com.baidu.dev2.api.sdk.advice.model.NgtWordAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.OcpcPriceInfo;
+import com.baidu.dev2.api.sdk.advice.model.OcpcTransTypeAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.ProductSegmentInfo;
+import com.baidu.dev2.api.sdk.advice.model.TargetPackageAcceptCampaign;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -60,7 +63,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdviceAcceptParam.JSON_PROPERTY_FEED_PLUGIN_INFO,
   AdviceAcceptParam.JSON_PROPERTY_KEYWORD_UNCORRELATED,
   AdviceAcceptParam.JSON_PROPERTY_FC_ADGROUP_AUTO_TARGETING,
-  AdviceAcceptParam.JSON_PROPERTY_PRODUCT_SEGMENT_INFO
+  AdviceAcceptParam.JSON_PROPERTY_PRODUCT_SEGMENT_INFO,
+  AdviceAcceptParam.JSON_PROPERTY_ECPC_CAMPAIGN_EFFECT,
+  AdviceAcceptParam.JSON_PROPERTY_OCPC_TRANS_TYPE_INFO,
+  AdviceAcceptParam.JSON_PROPERTY_CAMPAIGN_EST_BUDGET
 })
 @JsonTypeName("AdviceAcceptParam")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -115,6 +121,15 @@ public class AdviceAcceptParam {
 
   public static final String JSON_PROPERTY_PRODUCT_SEGMENT_INFO = "productSegmentInfo";
   private ProductSegmentInfo productSegmentInfo;
+
+  public static final String JSON_PROPERTY_ECPC_CAMPAIGN_EFFECT = "ecpcCampaignEffect";
+  private TargetPackageAcceptCampaign ecpcCampaignEffect;
+
+  public static final String JSON_PROPERTY_OCPC_TRANS_TYPE_INFO = "ocpcTransTypeInfo";
+  private OcpcTransTypeAcceptInfo ocpcTransTypeInfo;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_EST_BUDGET = "campaignEstBudget";
+  private CampaignEstBudgetAcceptInfo campaignEstBudget;
 
   public AdviceAcceptParam() { 
   }
@@ -578,6 +593,87 @@ public class AdviceAcceptParam {
   }
 
 
+  public AdviceAcceptParam ecpcCampaignEffect(TargetPackageAcceptCampaign ecpcCampaignEffect) {
+    
+    this.ecpcCampaignEffect = ecpcCampaignEffect;
+    return this;
+  }
+
+   /**
+   * Get ecpcCampaignEffect
+   * @return ecpcCampaignEffect
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ECPC_CAMPAIGN_EFFECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public TargetPackageAcceptCampaign getEcpcCampaignEffect() {
+    return ecpcCampaignEffect;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ECPC_CAMPAIGN_EFFECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEcpcCampaignEffect(TargetPackageAcceptCampaign ecpcCampaignEffect) {
+    this.ecpcCampaignEffect = ecpcCampaignEffect;
+  }
+
+
+  public AdviceAcceptParam ocpcTransTypeInfo(OcpcTransTypeAcceptInfo ocpcTransTypeInfo) {
+    
+    this.ocpcTransTypeInfo = ocpcTransTypeInfo;
+    return this;
+  }
+
+   /**
+   * Get ocpcTransTypeInfo
+   * @return ocpcTransTypeInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_OCPC_TRANS_TYPE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public OcpcTransTypeAcceptInfo getOcpcTransTypeInfo() {
+    return ocpcTransTypeInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_OCPC_TRANS_TYPE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOcpcTransTypeInfo(OcpcTransTypeAcceptInfo ocpcTransTypeInfo) {
+    this.ocpcTransTypeInfo = ocpcTransTypeInfo;
+  }
+
+
+  public AdviceAcceptParam campaignEstBudget(CampaignEstBudgetAcceptInfo campaignEstBudget) {
+    
+    this.campaignEstBudget = campaignEstBudget;
+    return this;
+  }
+
+   /**
+   * Get campaignEstBudget
+   * @return campaignEstBudget
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EST_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public CampaignEstBudgetAcceptInfo getCampaignEstBudget() {
+    return campaignEstBudget;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EST_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignEstBudget(CampaignEstBudgetAcceptInfo campaignEstBudget) {
+    this.campaignEstBudget = campaignEstBudget;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -603,12 +699,15 @@ public class AdviceAcceptParam {
         Objects.equals(this.feedPluginInfo, adviceAcceptParam.feedPluginInfo) &&
         Objects.equals(this.keywordUncorrelated, adviceAcceptParam.keywordUncorrelated) &&
         Objects.equals(this.fcAdgroupAutoTargeting, adviceAcceptParam.fcAdgroupAutoTargeting) &&
-        Objects.equals(this.productSegmentInfo, adviceAcceptParam.productSegmentInfo);
+        Objects.equals(this.productSegmentInfo, adviceAcceptParam.productSegmentInfo) &&
+        Objects.equals(this.ecpcCampaignEffect, adviceAcceptParam.ecpcCampaignEffect) &&
+        Objects.equals(this.ocpcTransTypeInfo, adviceAcceptParam.ocpcTransTypeInfo) &&
+        Objects.equals(this.campaignEstBudget, adviceAcceptParam.campaignEstBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(keyWord, ngtWord, industryUrl, campaignBudegt, landingPageQuality, creativeRecommend, ocpcPriceInfo, businessLabel, feedCreativeInfo, feedCampaignBudget, feedAccountBudget, landingPageCorrelation, feedCampaignAutoBidInfo, feedPluginInfo, keywordUncorrelated, fcAdgroupAutoTargeting, productSegmentInfo);
+    return Objects.hash(keyWord, ngtWord, industryUrl, campaignBudegt, landingPageQuality, creativeRecommend, ocpcPriceInfo, businessLabel, feedCreativeInfo, feedCampaignBudget, feedAccountBudget, landingPageCorrelation, feedCampaignAutoBidInfo, feedPluginInfo, keywordUncorrelated, fcAdgroupAutoTargeting, productSegmentInfo, ecpcCampaignEffect, ocpcTransTypeInfo, campaignEstBudget);
   }
 
   @Override
@@ -632,6 +731,9 @@ public class AdviceAcceptParam {
     sb.append("    keywordUncorrelated: ").append(toIndentedString(keywordUncorrelated)).append("\n");
     sb.append("    fcAdgroupAutoTargeting: ").append(toIndentedString(fcAdgroupAutoTargeting)).append("\n");
     sb.append("    productSegmentInfo: ").append(toIndentedString(productSegmentInfo)).append("\n");
+    sb.append("    ecpcCampaignEffect: ").append(toIndentedString(ecpcCampaignEffect)).append("\n");
+    sb.append("    ocpcTransTypeInfo: ").append(toIndentedString(ocpcTransTypeInfo)).append("\n");
+    sb.append("    campaignEstBudget: ").append(toIndentedString(campaignEstBudget)).append("\n");
     sb.append("}");
     return sb.toString();
   }

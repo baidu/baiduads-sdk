@@ -31,7 +31,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   ApiAdgroupQueryRequest.JSON_PROPERTY_IDS,
   ApiAdgroupQueryRequest.JSON_PROPERTY_ADGROUP_FIELDS,
-  ApiAdgroupQueryRequest.JSON_PROPERTY_ID_TYPE
+  ApiAdgroupQueryRequest.JSON_PROPERTY_ID_TYPE,
+  ApiAdgroupQueryRequest.JSON_PROPERTY_GET_TEMP
 })
 @JsonTypeName("ApiAdgroupQueryRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -44,6 +45,9 @@ public class ApiAdgroupQueryRequest {
 
   public static final String JSON_PROPERTY_ID_TYPE = "idType";
   private Integer idType;
+
+  public static final String JSON_PROPERTY_GET_TEMP = "getTemp";
+  private Integer getTemp;
 
   public ApiAdgroupQueryRequest() { 
   }
@@ -145,6 +149,33 @@ public class ApiAdgroupQueryRequest {
   }
 
 
+  public ApiAdgroupQueryRequest getTemp(Integer getTemp) {
+    
+    this.getTemp = getTemp;
+    return this;
+  }
+
+   /**
+   * Get getTemp
+   * @return getTemp
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_GET_TEMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getGetTemp() {
+    return getTemp;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_GET_TEMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setGetTemp(Integer getTemp) {
+    this.getTemp = getTemp;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -156,12 +187,13 @@ public class ApiAdgroupQueryRequest {
     ApiAdgroupQueryRequest apiAdgroupQueryRequest = (ApiAdgroupQueryRequest) o;
     return Objects.equals(this.ids, apiAdgroupQueryRequest.ids) &&
         Objects.equals(this.adgroupFields, apiAdgroupQueryRequest.adgroupFields) &&
-        Objects.equals(this.idType, apiAdgroupQueryRequest.idType);
+        Objects.equals(this.idType, apiAdgroupQueryRequest.idType) &&
+        Objects.equals(this.getTemp, apiAdgroupQueryRequest.getTemp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ids, adgroupFields, idType);
+    return Objects.hash(ids, adgroupFields, idType, getTemp);
   }
 
   @Override
@@ -171,6 +203,7 @@ public class ApiAdgroupQueryRequest {
     sb.append("    ids: ").append(toIndentedString(ids)).append("\n");
     sb.append("    adgroupFields: ").append(toIndentedString(adgroupFields)).append("\n");
     sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
+    sb.append("    getTemp: ").append(toIndentedString(getTemp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

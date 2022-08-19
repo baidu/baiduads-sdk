@@ -180,7 +180,7 @@ public class UploadClient {
         final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
         final String[] localVarContentTypes = {
-                "multipart/form-data"
+                "multipart/form-data;charset=UTF-8"
         };
         final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

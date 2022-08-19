@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **autoUpdate** | **Boolean** |  |  [optional]
 **privacyProtectionAgreement** | **Boolean** |  |  [optional]
 **tags** | **List&lt;Integer&gt;** |  |  [optional]
+**cateGoryInfo** | [**List&lt;TreeNode&gt;**](TreeNode.md) |  |  [optional]
 
 
 

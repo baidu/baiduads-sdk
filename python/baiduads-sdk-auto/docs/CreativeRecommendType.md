@@ -36,6 +36,12 @@ Name | Type | Description | Notes
 **dynamic_creative** | **int** |  | [optional] 
 **dynamic_creative_name** | **str** |  | [optional] 
 **campaign_bid_type** | **int** |  | [optional] 
+**mobile_final_url** | **str** |  | [optional] 
+**mobile_track_param** | **str** |  | [optional] 
+**mobile_track_template** | **str** |  | [optional] 
+**pc_final_url** | **str** |  | [optional] 
+**pc_track_param** | **str** |  | [optional] 
+**pc_track_template** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

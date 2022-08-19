@@ -5,11 +5,11 @@
   <parent>
     <groupId>com.baidu.dev2</groupId>
     <artifactId>baiduads-sdk-parent</artifactId>
-    <version>2022.3.0</version>
+    <version>2022.4.0</version>
   </parent>
   <groupId>com.baidu.dev2</groupId>
   <artifactId>baiduads-sdk-auto</artifactId>
-  <version>2022.3.0</version>
+  <version>2022.4.0</version>
   <name>baiduads-sdk-auto</name>
   <description>dev2-auto-sdk</description>
   <url>https://github.com/openapitools/openapi-generator</url>

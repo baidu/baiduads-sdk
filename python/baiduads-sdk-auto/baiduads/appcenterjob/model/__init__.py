@@ -32,3 +32,4 @@ from baiduads.appcenterjob.model.get_batch_job_list_results_request_wrapper impo
 from baiduads.appcenterjob.model.get_batch_job_list_results_response_wrapper import GetBatchJobListResultsResponseWrapper
 from baiduads.appcenterjob.model.get_batch_job_list_results_response_wrapper_body import GetBatchJobListResultsResponseWrapperBody
 from baiduads.appcenterjob.model.job_dto import JobDto
+from baiduads.appcenterjob.model.tree_node import TreeNode

@@ -89,7 +89,6 @@ class AdviceDetailQueryRequest(ModelNormal):
             'condition': (DetailQueryCondition,),  # noqa: E501
             'req_newest': (bool,),  # noqa: E501
             'source': (int,),  # noqa: E501
-            'advice_id': (int,),  # noqa: E501
             'advice_key': (str,),  # noqa: E501
         }
 
@@ -102,7 +101,6 @@ class AdviceDetailQueryRequest(ModelNormal):
         'condition': 'condition',  # noqa: E501
         'req_newest': 'reqNewest',  # noqa: E501
         'source': 'source',  # noqa: E501
-        'advice_id': 'adviceId',  # noqa: E501
         'advice_key': 'adviceKey',  # noqa: E501
     }
 
@@ -150,7 +148,6 @@ class AdviceDetailQueryRequest(ModelNormal):
             condition (DetailQueryCondition): [optional]  # noqa: E501
             req_newest (bool): [optional]  # noqa: E501
             source (int): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 
@@ -236,7 +233,6 @@ class AdviceDetailQueryRequest(ModelNormal):
             condition (DetailQueryCondition): [optional]  # noqa: E501
             req_newest (bool): [optional]  # noqa: E501
             source (int): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 

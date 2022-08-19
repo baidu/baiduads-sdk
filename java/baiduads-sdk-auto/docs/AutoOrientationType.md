@@ -8,15 +8,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **Integer** |  |  [optional]
-**adgroupStatusName** | **String** |  |  [optional]
-**cost** | **Double** |  |  [optional]
-**conversion** | **Double** |  |  [optional]
 **keywords** | **String** |  |  [optional]
 **bidType** | **Integer** |  |  [optional]
 **bid** | **Double** |  |  [optional]
 **guidePrice** | **Double** |  |  [optional]
 **ocpcInfo** | [**FeedOcpcType**](FeedOcpcType.md) |  |  [optional]
-**payModeName** | **String** |  |  [optional]
 **estimatedConversionRate** | **Double** |  |  [optional]
 **estimatedCostRate** | **Double** |  |  [optional]
 **estimatedConversion** | **Double** |  |  [optional]

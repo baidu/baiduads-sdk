@@ -30,7 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.creativefeed.model.audit_time_model import AuditTimeModel
+    from baiduads.creativefeed.model.pa_idea_template import PaIdeaTemplate
     globals()['AuditTimeModel'] = AuditTimeModel
+    globals()['PaIdeaTemplate'] = PaIdeaTemplate
 
 
 class CreativeFeedType(ModelNormal):
@@ -101,6 +103,8 @@ class CreativeFeedType(ModelNormal):
             'approvemsgnew': (str,),  # noqa: E501
             'audit_time_model': (AuditTimeModel,),  # noqa: E501
             'attribute_list': (int,),  # noqa: E501
+            'template': (PaIdeaTemplate,),  # noqa: E501
+            'huitus': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -124,6 +128,8 @@ class CreativeFeedType(ModelNormal):
         'approvemsgnew': 'approvemsgnew',  # noqa: E501
         'audit_time_model': 'auditTimeModel',  # noqa: E501
         'attribute_list': 'attributeList',  # noqa: E501
+        'template': 'template',  # noqa: E501
+        'huitus': 'huitus',  # noqa: E501
     }
 
     read_only_vars = {
@@ -182,6 +188,8 @@ class CreativeFeedType(ModelNormal):
             approvemsgnew (str): [optional]  # noqa: E501
             audit_time_model (AuditTimeModel): [optional]  # noqa: E501
             attribute_list (int): [optional]  # noqa: E501
+            template (PaIdeaTemplate): [optional]  # noqa: E501
+            huitus ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -278,6 +286,8 @@ class CreativeFeedType(ModelNormal):
             approvemsgnew (str): [optional]  # noqa: E501
             audit_time_model (AuditTimeModel): [optional]  # noqa: E501
             attribute_list (int): [optional]  # noqa: E501
+            template (PaIdeaTemplate): [optional]  # noqa: E501
+            huitus ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

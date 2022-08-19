@@ -69,6 +69,7 @@ with baiduads.ApiClient() as api_client:
                     crowd_direct_type=1,
                     effect_type=1,
                     create_time="create_time_example",
+                    recent_days=1,
                 ),
             ],
         ),
@@ -218,10 +219,10 @@ with baiduads.ApiClient() as api_client:
             crowd_direct_type=[
                 1,
             ],
-            ids=[
+            limit=[
                 1,
             ],
-            id_type=1,
+            desc=True,
         ),
     ) # GetCrowdRequestWrapper | 
 
@@ -321,6 +322,7 @@ with baiduads.ApiClient() as api_client:
                     crowd_direct_type=1,
                     effect_type=1,
                     create_time="create_time_example",
+                    recent_days=1,
                 ),
             ],
         ),

@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **Long** |  |  [optional]
+**id** | **Integer** |  |  [optional]
 **name** | **String** |  |  [optional]
 **children** | [**List&lt;TreeNode&gt;**](TreeNode.md) |  |  [optional]
 

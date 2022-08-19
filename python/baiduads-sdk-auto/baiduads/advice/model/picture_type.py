@@ -86,8 +86,6 @@ class PictureType(ModelNormal):
             'desc2': (str,),  # noqa: E501
             'width': (int,),  # noqa: E501
             'height': (int,),  # noqa: E501
-            'na_url': (str,),  # noqa: E501
-            'pid': (int,),  # noqa: E501
             'target_url': (int,),  # noqa: E501
         }
 
@@ -103,8 +101,6 @@ class PictureType(ModelNormal):
         'desc2': 'desc2',  # noqa: E501
         'width': 'width',  # noqa: E501
         'height': 'height',  # noqa: E501
-        'na_url': 'naUrl',  # noqa: E501
-        'pid': 'pid',  # noqa: E501
         'target_url': 'targetUrl',  # noqa: E501
     }
 
@@ -155,8 +151,6 @@ class PictureType(ModelNormal):
             desc2 (str): [optional]  # noqa: E501
             width (int): [optional]  # noqa: E501
             height (int): [optional]  # noqa: E501
-            na_url (str): [optional]  # noqa: E501
-            pid (int): [optional]  # noqa: E501
             target_url (int): [optional]  # noqa: E501
         """
 
@@ -245,8 +239,6 @@ class PictureType(ModelNormal):
             desc2 (str): [optional]  # noqa: E501
             width (int): [optional]  # noqa: E501
             height (int): [optional]  # noqa: E501
-            na_url (str): [optional]  # noqa: E501
-            pid (int): [optional]  # noqa: E501
             target_url (int): [optional]  # noqa: E501
         """
 

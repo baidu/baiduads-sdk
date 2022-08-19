@@ -35,7 +35,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreativeRecommendAcceptInfo.JSON_PROPERTY_ITEMS,
   CreativeRecommendAcceptInfo.JSON_PROPERTY_FILTERS,
   CreativeRecommendAcceptInfo.JSON_PROPERTY_PC_DESTINATION_URL,
-  CreativeRecommendAcceptInfo.JSON_PROPERTY_MOBILE_DESTINATION_URL
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_MOBILE_DESTINATION_URL,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_MOBILE_FINAL_URL,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_MOBILE_TRACK_PARAM,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_MOBILE_TRACK_TEMPLATE,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_PC_FINAL_URL,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_PC_TRACK_PARAM,
+  CreativeRecommendAcceptInfo.JSON_PROPERTY_PC_TRACK_TEMPLATE
 })
 @JsonTypeName("CreativeRecommendAcceptInfo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -54,6 +60,24 @@ public class CreativeRecommendAcceptInfo {
 
   public static final String JSON_PROPERTY_MOBILE_DESTINATION_URL = "mobileDestinationUrl";
   private String mobileDestinationUrl;
+
+  public static final String JSON_PROPERTY_MOBILE_FINAL_URL = "mobileFinalUrl";
+  private String mobileFinalUrl;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_PARAM = "mobileTrackParam";
+  private String mobileTrackParam;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_TEMPLATE = "mobileTrackTemplate";
+  private String mobileTrackTemplate;
+
+  public static final String JSON_PROPERTY_PC_FINAL_URL = "pcFinalUrl";
+  private String pcFinalUrl;
+
+  public static final String JSON_PROPERTY_PC_TRACK_PARAM = "pcTrackParam";
+  private String pcTrackParam;
+
+  public static final String JSON_PROPERTY_PC_TRACK_TEMPLATE = "pcTrackTemplate";
+  private String pcTrackTemplate;
 
   public CreativeRecommendAcceptInfo() { 
   }
@@ -209,6 +233,168 @@ public class CreativeRecommendAcceptInfo {
   }
 
 
+  public CreativeRecommendAcceptInfo mobileFinalUrl(String mobileFinalUrl) {
+    
+    this.mobileFinalUrl = mobileFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get mobileFinalUrl
+   * @return mobileFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileFinalUrl() {
+    return mobileFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileFinalUrl(String mobileFinalUrl) {
+    this.mobileFinalUrl = mobileFinalUrl;
+  }
+
+
+  public CreativeRecommendAcceptInfo mobileTrackParam(String mobileTrackParam) {
+    
+    this.mobileTrackParam = mobileTrackParam;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackParam
+   * @return mobileTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackParam() {
+    return mobileTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackParam(String mobileTrackParam) {
+    this.mobileTrackParam = mobileTrackParam;
+  }
+
+
+  public CreativeRecommendAcceptInfo mobileTrackTemplate(String mobileTrackTemplate) {
+    
+    this.mobileTrackTemplate = mobileTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackTemplate
+   * @return mobileTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackTemplate() {
+    return mobileTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackTemplate(String mobileTrackTemplate) {
+    this.mobileTrackTemplate = mobileTrackTemplate;
+  }
+
+
+  public CreativeRecommendAcceptInfo pcFinalUrl(String pcFinalUrl) {
+    
+    this.pcFinalUrl = pcFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get pcFinalUrl
+   * @return pcFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcFinalUrl() {
+    return pcFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcFinalUrl(String pcFinalUrl) {
+    this.pcFinalUrl = pcFinalUrl;
+  }
+
+
+  public CreativeRecommendAcceptInfo pcTrackParam(String pcTrackParam) {
+    
+    this.pcTrackParam = pcTrackParam;
+    return this;
+  }
+
+   /**
+   * Get pcTrackParam
+   * @return pcTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackParam() {
+    return pcTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackParam(String pcTrackParam) {
+    this.pcTrackParam = pcTrackParam;
+  }
+
+
+  public CreativeRecommendAcceptInfo pcTrackTemplate(String pcTrackTemplate) {
+    
+    this.pcTrackTemplate = pcTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get pcTrackTemplate
+   * @return pcTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackTemplate() {
+    return pcTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackTemplate(String pcTrackTemplate) {
+    this.pcTrackTemplate = pcTrackTemplate;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -222,12 +408,18 @@ public class CreativeRecommendAcceptInfo {
         Objects.equals(this.items, creativeRecommendAcceptInfo.items) &&
         Objects.equals(this.filters, creativeRecommendAcceptInfo.filters) &&
         Objects.equals(this.pcDestinationUrl, creativeRecommendAcceptInfo.pcDestinationUrl) &&
-        Objects.equals(this.mobileDestinationUrl, creativeRecommendAcceptInfo.mobileDestinationUrl);
+        Objects.equals(this.mobileDestinationUrl, creativeRecommendAcceptInfo.mobileDestinationUrl) &&
+        Objects.equals(this.mobileFinalUrl, creativeRecommendAcceptInfo.mobileFinalUrl) &&
+        Objects.equals(this.mobileTrackParam, creativeRecommendAcceptInfo.mobileTrackParam) &&
+        Objects.equals(this.mobileTrackTemplate, creativeRecommendAcceptInfo.mobileTrackTemplate) &&
+        Objects.equals(this.pcFinalUrl, creativeRecommendAcceptInfo.pcFinalUrl) &&
+        Objects.equals(this.pcTrackParam, creativeRecommendAcceptInfo.pcTrackParam) &&
+        Objects.equals(this.pcTrackTemplate, creativeRecommendAcceptInfo.pcTrackTemplate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalCount, items, filters, pcDestinationUrl, mobileDestinationUrl);
+    return Objects.hash(totalCount, items, filters, pcDestinationUrl, mobileDestinationUrl, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, pcFinalUrl, pcTrackParam, pcTrackTemplate);
   }
 
   @Override
@@ -239,6 +431,12 @@ public class CreativeRecommendAcceptInfo {
     sb.append("    filters: ").append(toIndentedString(filters)).append("\n");
     sb.append("    pcDestinationUrl: ").append(toIndentedString(pcDestinationUrl)).append("\n");
     sb.append("    mobileDestinationUrl: ").append(toIndentedString(mobileDestinationUrl)).append("\n");
+    sb.append("    mobileFinalUrl: ").append(toIndentedString(mobileFinalUrl)).append("\n");
+    sb.append("    mobileTrackParam: ").append(toIndentedString(mobileTrackParam)).append("\n");
+    sb.append("    mobileTrackTemplate: ").append(toIndentedString(mobileTrackTemplate)).append("\n");
+    sb.append("    pcFinalUrl: ").append(toIndentedString(pcFinalUrl)).append("\n");
+    sb.append("    pcTrackParam: ").append(toIndentedString(pcTrackParam)).append("\n");
+    sb.append("    pcTrackTemplate: ").append(toIndentedString(pcTrackTemplate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

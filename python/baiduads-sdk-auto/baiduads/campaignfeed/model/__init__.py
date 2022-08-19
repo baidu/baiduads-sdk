@@ -17,6 +17,7 @@ from baiduads.campaignfeed.model.add_campaign_feed_request_wrapper import AddCam
 from baiduads.campaignfeed.model.add_campaign_feed_request_wrapper_body import AddCampaignFeedRequestWrapperBody
 from baiduads.campaignfeed.model.add_campaign_feed_response_wrapper import AddCampaignFeedResponseWrapper
 from baiduads.campaignfeed.model.add_campaign_feed_response_wrapper_body import AddCampaignFeedResponseWrapperBody
+from baiduads.campaignfeed.model.app_info_shadow_type import AppInfoShadowType
 from baiduads.campaignfeed.model.app_info_type import AppInfoType
 from baiduads.campaignfeed.model.campaign_feed_filter import CampaignFeedFilter
 from baiduads.campaignfeed.model.campaign_feed_type import CampaignFeedType

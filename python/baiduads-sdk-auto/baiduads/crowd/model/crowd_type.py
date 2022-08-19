@@ -94,6 +94,7 @@ class CrowdType(ModelNormal):
             'crowd_direct_type': (int,),  # noqa: E501
             'effect_type': (int,),  # noqa: E501
             'create_time': (str,),  # noqa: E501
+            'recent_days': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -116,6 +117,7 @@ class CrowdType(ModelNormal):
         'crowd_direct_type': 'crowdDirectType',  # noqa: E501
         'effect_type': 'effectType',  # noqa: E501
         'create_time': 'createTime',  # noqa: E501
+        'recent_days': 'recentDays',  # noqa: E501
     }
 
     read_only_vars = {
@@ -173,6 +175,7 @@ class CrowdType(ModelNormal):
             crowd_direct_type (int): [optional]  # noqa: E501
             effect_type (int): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
+            recent_days (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -268,6 +271,7 @@ class CrowdType(ModelNormal):
             crowd_direct_type (int): [optional]  # noqa: E501
             effect_type (int): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
+            recent_days (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

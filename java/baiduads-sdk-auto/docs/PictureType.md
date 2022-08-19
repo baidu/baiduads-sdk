@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **desc2** | **String** |  |  [optional]
 **width** | **Integer** |  |  [optional]
 **height** | **Integer** |  |  [optional]
-**naUrl** | **String** |  |  [optional]
-**pid** | **Long** |  |  [optional]
 **targetUrl** | **Long** |  |  [optional]
 
 

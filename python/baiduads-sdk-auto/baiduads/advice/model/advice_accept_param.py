@@ -31,6 +31,7 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.advice.model.adgroup_auto_targeting_info import AdgroupAutoTargetingInfo
     from baiduads.advice.model.business_label_accept_info import BusinessLabelAcceptInfo
+    from baiduads.advice.model.campaign_est_budget_accept_info import CampaignEstBudgetAcceptInfo
     from baiduads.advice.model.campaign_rec_budget_accept_info import CampaignRecBudgetAcceptInfo
     from baiduads.advice.model.creative_recommend_accept_info import CreativeRecommendAcceptInfo
     from baiduads.advice.model.feed_account_budget_accept_info import FeedAccountBudgetAcceptInfo
@@ -45,9 +46,12 @@ def lazy_import():
     from baiduads.advice.model.landing_page_info import LandingPageInfo
     from baiduads.advice.model.ngt_word_accept_info import NgtWordAcceptInfo
     from baiduads.advice.model.ocpc_price_info import OcpcPriceInfo
+    from baiduads.advice.model.ocpc_trans_type_accept_info import OcpcTransTypeAcceptInfo
     from baiduads.advice.model.product_segment_info import ProductSegmentInfo
+    from baiduads.advice.model.target_package_accept_campaign import TargetPackageAcceptCampaign
     globals()['AdgroupAutoTargetingInfo'] = AdgroupAutoTargetingInfo
     globals()['BusinessLabelAcceptInfo'] = BusinessLabelAcceptInfo
+    globals()['CampaignEstBudgetAcceptInfo'] = CampaignEstBudgetAcceptInfo
     globals()['CampaignRecBudgetAcceptInfo'] = CampaignRecBudgetAcceptInfo
     globals()['CreativeRecommendAcceptInfo'] = CreativeRecommendAcceptInfo
     globals()['FeedAccountBudgetAcceptInfo'] = FeedAccountBudgetAcceptInfo
@@ -62,7 +66,9 @@ def lazy_import():
     globals()['LandingPageInfo'] = LandingPageInfo
     globals()['NgtWordAcceptInfo'] = NgtWordAcceptInfo
     globals()['OcpcPriceInfo'] = OcpcPriceInfo
+    globals()['OcpcTransTypeAcceptInfo'] = OcpcTransTypeAcceptInfo
     globals()['ProductSegmentInfo'] = ProductSegmentInfo
+    globals()['TargetPackageAcceptCampaign'] = TargetPackageAcceptCampaign
 
 
 class AdviceAcceptParam(ModelNormal):
@@ -135,6 +141,9 @@ class AdviceAcceptParam(ModelNormal):
             'keyword_uncorrelated': (KeywordUncorrelatedAcceptInfo,),  # noqa: E501
             'fc_adgroup_auto_targeting': (AdgroupAutoTargetingInfo,),  # noqa: E501
             'product_segment_info': (ProductSegmentInfo,),  # noqa: E501
+            'ecpc_campaign_effect': (TargetPackageAcceptCampaign,),  # noqa: E501
+            'ocpc_trans_type_info': (OcpcTransTypeAcceptInfo,),  # noqa: E501
+            'campaign_est_budget': (CampaignEstBudgetAcceptInfo,),  # noqa: E501
         }
 
     @cached_property
@@ -160,6 +169,9 @@ class AdviceAcceptParam(ModelNormal):
         'keyword_uncorrelated': 'keywordUncorrelated',  # noqa: E501
         'fc_adgroup_auto_targeting': 'fcAdgroupAutoTargeting',  # noqa: E501
         'product_segment_info': 'productSegmentInfo',  # noqa: E501
+        'ecpc_campaign_effect': 'ecpcCampaignEffect',  # noqa: E501
+        'ocpc_trans_type_info': 'ocpcTransTypeInfo',  # noqa: E501
+        'campaign_est_budget': 'campaignEstBudget',  # noqa: E501
     }
 
     read_only_vars = {
@@ -220,6 +232,9 @@ class AdviceAcceptParam(ModelNormal):
             keyword_uncorrelated (KeywordUncorrelatedAcceptInfo): [optional]  # noqa: E501
             fc_adgroup_auto_targeting (AdgroupAutoTargetingInfo): [optional]  # noqa: E501
             product_segment_info (ProductSegmentInfo): [optional]  # noqa: E501
+            ecpc_campaign_effect (TargetPackageAcceptCampaign): [optional]  # noqa: E501
+            ocpc_trans_type_info (OcpcTransTypeAcceptInfo): [optional]  # noqa: E501
+            campaign_est_budget (CampaignEstBudgetAcceptInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -318,6 +333,9 @@ class AdviceAcceptParam(ModelNormal):
             keyword_uncorrelated (KeywordUncorrelatedAcceptInfo): [optional]  # noqa: E501
             fc_adgroup_auto_targeting (AdgroupAutoTargetingInfo): [optional]  # noqa: E501
             product_segment_info (ProductSegmentInfo): [optional]  # noqa: E501
+            ecpc_campaign_effect (TargetPackageAcceptCampaign): [optional]  # noqa: E501
+            ocpc_trans_type_info (OcpcTransTypeAcceptInfo): [optional]  # noqa: E501
+            campaign_est_budget (CampaignEstBudgetAcceptInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

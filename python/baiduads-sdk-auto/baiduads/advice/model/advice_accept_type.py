@@ -87,7 +87,6 @@ class AdviceAcceptType(ModelNormal):
         lazy_import()
         return {
             'accept_info': (AcceptInfo,),  # noqa: E501
-            'advice_id': (int,),  # noqa: E501
             'advice_key': (str,),  # noqa: E501
         }
 
@@ -98,7 +97,6 @@ class AdviceAcceptType(ModelNormal):
 
     attribute_map = {
         'accept_info': 'acceptInfo',  # noqa: E501
-        'advice_id': 'adviceId',  # noqa: E501
         'advice_key': 'adviceKey',  # noqa: E501
     }
 
@@ -144,7 +142,6 @@ class AdviceAcceptType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             accept_info (AcceptInfo): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 
@@ -228,7 +225,6 @@ class AdviceAcceptType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             accept_info (AcceptInfo): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 

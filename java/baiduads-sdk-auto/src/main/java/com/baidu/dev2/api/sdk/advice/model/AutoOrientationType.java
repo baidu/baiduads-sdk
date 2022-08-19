@@ -30,15 +30,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   AutoOrientationType.JSON_PROPERTY_STATUS,
-  AutoOrientationType.JSON_PROPERTY_ADGROUP_STATUS_NAME,
-  AutoOrientationType.JSON_PROPERTY_COST,
-  AutoOrientationType.JSON_PROPERTY_CONVERSION,
   AutoOrientationType.JSON_PROPERTY_KEYWORDS,
   AutoOrientationType.JSON_PROPERTY_BID_TYPE,
   AutoOrientationType.JSON_PROPERTY_BID,
   AutoOrientationType.JSON_PROPERTY_GUIDE_PRICE,
   AutoOrientationType.JSON_PROPERTY_OCPC_INFO,
-  AutoOrientationType.JSON_PROPERTY_PAY_MODE_NAME,
   AutoOrientationType.JSON_PROPERTY_ESTIMATED_CONVERSION_RATE,
   AutoOrientationType.JSON_PROPERTY_ESTIMATED_COST_RATE,
   AutoOrientationType.JSON_PROPERTY_ESTIMATED_CONVERSION,
@@ -55,15 +51,6 @@ public class AutoOrientationType {
   public static final String JSON_PROPERTY_STATUS = "status";
   private Integer status;
 
-  public static final String JSON_PROPERTY_ADGROUP_STATUS_NAME = "adgroupStatusName";
-  private String adgroupStatusName;
-
-  public static final String JSON_PROPERTY_COST = "cost";
-  private Double cost;
-
-  public static final String JSON_PROPERTY_CONVERSION = "conversion";
-  private Double conversion;
-
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
   private String keywords;
 
@@ -78,9 +65,6 @@ public class AutoOrientationType {
 
   public static final String JSON_PROPERTY_OCPC_INFO = "ocpcInfo";
   private FeedOcpcType ocpcInfo;
-
-  public static final String JSON_PROPERTY_PAY_MODE_NAME = "payModeName";
-  private String payModeName;
 
   public static final String JSON_PROPERTY_ESTIMATED_CONVERSION_RATE = "estimatedConversionRate";
   private Double estimatedConversionRate;
@@ -136,87 +120,6 @@ public class AutoOrientationType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStatus(Integer status) {
     this.status = status;
-  }
-
-
-  public AutoOrientationType adgroupStatusName(String adgroupStatusName) {
-    
-    this.adgroupStatusName = adgroupStatusName;
-    return this;
-  }
-
-   /**
-   * Get adgroupStatusName
-   * @return adgroupStatusName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADGROUP_STATUS_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getAdgroupStatusName() {
-    return adgroupStatusName;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADGROUP_STATUS_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdgroupStatusName(String adgroupStatusName) {
-    this.adgroupStatusName = adgroupStatusName;
-  }
-
-
-  public AutoOrientationType cost(Double cost) {
-    
-    this.cost = cost;
-    return this;
-  }
-
-   /**
-   * Get cost
-   * @return cost
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getCost() {
-    return cost;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCost(Double cost) {
-    this.cost = cost;
-  }
-
-
-  public AutoOrientationType conversion(Double conversion) {
-    
-    this.conversion = conversion;
-    return this;
-  }
-
-   /**
-   * Get conversion
-   * @return conversion
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CONVERSION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getConversion() {
-    return conversion;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONVERSION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversion(Double conversion) {
-    this.conversion = conversion;
   }
 
 
@@ -352,33 +255,6 @@ public class AutoOrientationType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOcpcInfo(FeedOcpcType ocpcInfo) {
     this.ocpcInfo = ocpcInfo;
-  }
-
-
-  public AutoOrientationType payModeName(String payModeName) {
-    
-    this.payModeName = payModeName;
-    return this;
-  }
-
-   /**
-   * Get payModeName
-   * @return payModeName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PAY_MODE_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPayModeName() {
-    return payModeName;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PAY_MODE_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayModeName(String payModeName) {
-    this.payModeName = payModeName;
   }
 
 
@@ -635,15 +511,11 @@ public class AutoOrientationType {
     }
     AutoOrientationType autoOrientationType = (AutoOrientationType) o;
     return Objects.equals(this.status, autoOrientationType.status) &&
-        Objects.equals(this.adgroupStatusName, autoOrientationType.adgroupStatusName) &&
-        Objects.equals(this.cost, autoOrientationType.cost) &&
-        Objects.equals(this.conversion, autoOrientationType.conversion) &&
         Objects.equals(this.keywords, autoOrientationType.keywords) &&
         Objects.equals(this.bidType, autoOrientationType.bidType) &&
         Objects.equals(this.bid, autoOrientationType.bid) &&
         Objects.equals(this.guidePrice, autoOrientationType.guidePrice) &&
         Objects.equals(this.ocpcInfo, autoOrientationType.ocpcInfo) &&
-        Objects.equals(this.payModeName, autoOrientationType.payModeName) &&
         Objects.equals(this.estimatedConversionRate, autoOrientationType.estimatedConversionRate) &&
         Objects.equals(this.estimatedCostRate, autoOrientationType.estimatedCostRate) &&
         Objects.equals(this.estimatedConversion, autoOrientationType.estimatedConversion) &&
@@ -657,7 +529,7 @@ public class AutoOrientationType {
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, adgroupStatusName, cost, conversion, keywords, bidType, bid, guidePrice, ocpcInfo, payModeName, estimatedConversionRate, estimatedCostRate, estimatedConversion, estimatedCost, autoBid, campaignFeedId, campaignFeedName, adgroupFeedId, adgroupFeedName);
+    return Objects.hash(status, keywords, bidType, bid, guidePrice, ocpcInfo, estimatedConversionRate, estimatedCostRate, estimatedConversion, estimatedCost, autoBid, campaignFeedId, campaignFeedName, adgroupFeedId, adgroupFeedName);
   }
 
   @Override
@@ -665,15 +537,11 @@ public class AutoOrientationType {
     StringBuilder sb = new StringBuilder();
     sb.append("class AutoOrientationType {\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    adgroupStatusName: ").append(toIndentedString(adgroupStatusName)).append("\n");
-    sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
-    sb.append("    conversion: ").append(toIndentedString(conversion)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    bidType: ").append(toIndentedString(bidType)).append("\n");
     sb.append("    bid: ").append(toIndentedString(bid)).append("\n");
     sb.append("    guidePrice: ").append(toIndentedString(guidePrice)).append("\n");
     sb.append("    ocpcInfo: ").append(toIndentedString(ocpcInfo)).append("\n");
-    sb.append("    payModeName: ").append(toIndentedString(payModeName)).append("\n");
     sb.append("    estimatedConversionRate: ").append(toIndentedString(estimatedConversionRate)).append("\n");
     sb.append("    estimatedCostRate: ").append(toIndentedString(estimatedCostRate)).append("\n");
     sb.append("    estimatedConversion: ").append(toIndentedString(estimatedConversion)).append("\n");

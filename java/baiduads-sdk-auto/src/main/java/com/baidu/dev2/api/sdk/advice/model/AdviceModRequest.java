@@ -33,7 +33,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdviceModRequest.JSON_PROPERTY_SOURCE,
   AdviceModRequest.JSON_PROPERTY_BATCH_ID,
   AdviceModRequest.JSON_PROPERTY_PROCESS_STAGE,
-  AdviceModRequest.JSON_PROPERTY_ADVICE_ID,
   AdviceModRequest.JSON_PROPERTY_ADVICE_KEY
 })
 @JsonTypeName("AdviceModRequest")
@@ -53,9 +52,6 @@ public class AdviceModRequest {
 
   public static final String JSON_PROPERTY_PROCESS_STAGE = "processStage";
   private String processStage;
-
-  public static final String JSON_PROPERTY_ADVICE_ID = "adviceId";
-  private Long adviceId;
 
   public static final String JSON_PROPERTY_ADVICE_KEY = "adviceKey";
   private String adviceKey;
@@ -198,33 +194,6 @@ public class AdviceModRequest {
   }
 
 
-  public AdviceModRequest adviceId(Long adviceId) {
-    
-    this.adviceId = adviceId;
-    return this;
-  }
-
-   /**
-   * Get adviceId
-   * @return adviceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getAdviceId() {
-    return adviceId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdviceId(Long adviceId) {
-    this.adviceId = adviceId;
-  }
-
-
   public AdviceModRequest adviceKey(String adviceKey) {
     
     this.adviceKey = adviceKey;
@@ -266,13 +235,12 @@ public class AdviceModRequest {
         Objects.equals(this.source, adviceModRequest.source) &&
         Objects.equals(this.batchId, adviceModRequest.batchId) &&
         Objects.equals(this.processStage, adviceModRequest.processStage) &&
-        Objects.equals(this.adviceId, adviceModRequest.adviceId) &&
         Objects.equals(this.adviceKey, adviceModRequest.adviceKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operationType, operationParam, source, batchId, processStage, adviceId, adviceKey);
+    return Objects.hash(operationType, operationParam, source, batchId, processStage, adviceKey);
   }
 
   @Override
@@ -284,7 +252,6 @@ public class AdviceModRequest {
     sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
     sb.append("    processStage: ").append(toIndentedString(processStage)).append("\n");
-    sb.append("    adviceId: ").append(toIndentedString(adviceId)).append("\n");
     sb.append("    adviceKey: ").append(toIndentedString(adviceKey)).append("\n");
     sb.append("}");
     return sb.toString();

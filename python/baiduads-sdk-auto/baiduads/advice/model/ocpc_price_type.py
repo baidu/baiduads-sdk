@@ -106,6 +106,7 @@ class OcpcPriceType(ModelNormal):
             'improve_click': (int,),  # noqa: E501
             'improve_impression': (int,),  # noqa: E501
             'improve_conversion': (int,),  # noqa: E501
+            'campaign_ids': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -132,6 +133,7 @@ class OcpcPriceType(ModelNormal):
         'improve_click': 'improveClick',  # noqa: E501
         'improve_impression': 'improveImpression',  # noqa: E501
         'improve_conversion': 'improveConversion',  # noqa: E501
+        'campaign_ids': 'campaignIds',  # noqa: E501
     }
 
     read_only_vars = {
@@ -193,6 +195,7 @@ class OcpcPriceType(ModelNormal):
             improve_click (int): [optional]  # noqa: E501
             improve_impression (int): [optional]  # noqa: E501
             improve_conversion (int): [optional]  # noqa: E501
+            campaign_ids ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -292,6 +295,7 @@ class OcpcPriceType(ModelNormal):
             improve_click (int): [optional]  # noqa: E501
             improve_impression (int): [optional]  # noqa: E501
             improve_conversion (int): [optional]  # noqa: E501
+            campaign_ids ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

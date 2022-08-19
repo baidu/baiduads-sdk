@@ -16,8 +16,11 @@ Name | Type | Description | Notes
 **pause** | **bool** |  | [optional] 
 **status** | **int** |  | [optional] 
 **bstype** | **int** |  | [optional] 
+**campaign_type** | **int** |  | [optional] 
 **addtime** | **str** |  | [optional] 
 **eshop_type** | **str** |  | [optional] 
+**shadow** | [**AppInfoShadowType**](AppInfoShadowType.md) |  | [optional] 
+**rta_status** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

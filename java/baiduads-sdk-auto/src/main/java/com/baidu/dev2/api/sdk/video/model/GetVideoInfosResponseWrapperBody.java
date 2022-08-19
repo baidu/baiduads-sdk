@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.video.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.video.model.VideoMeta;
+import com.baidu.dev2.api.sdk.video.model.VideoMetaInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -30,16 +31,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * GetVideoInfosResponseWrapperBody
  */
 @JsonPropertyOrder({
+  GetVideoInfosResponseWrapperBody.JSON_PROPERTY_EXPAND,
   GetVideoInfosResponseWrapperBody.JSON_PROPERTY_DATA
 })
 @JsonTypeName("GetVideoInfosResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetVideoInfosResponseWrapperBody {
+  public static final String JSON_PROPERTY_EXPAND = "expand";
+  private VideoMetaInfo expand;
+
   public static final String JSON_PROPERTY_DATA = "data";
   private List<VideoMeta> data = null;
 
   public GetVideoInfosResponseWrapperBody() { 
   }
+
+  public GetVideoInfosResponseWrapperBody expand(VideoMetaInfo expand) {
+    
+    this.expand = expand;
+    return this;
+  }
+
+   /**
+   * Get expand
+   * @return expand
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_EXPAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public VideoMetaInfo getExpand() {
+    return expand;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_EXPAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setExpand(VideoMetaInfo expand) {
+    this.expand = expand;
+  }
+
 
   public GetVideoInfosResponseWrapperBody data(List<VideoMeta> data) {
     
@@ -85,18 +117,20 @@ public class GetVideoInfosResponseWrapperBody {
       return false;
     }
     GetVideoInfosResponseWrapperBody getVideoInfosResponseWrapperBody = (GetVideoInfosResponseWrapperBody) o;
-    return Objects.equals(this.data, getVideoInfosResponseWrapperBody.data);
+    return Objects.equals(this.expand, getVideoInfosResponseWrapperBody.expand) &&
+        Objects.equals(this.data, getVideoInfosResponseWrapperBody.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data);
+    return Objects.hash(expand, data);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetVideoInfosResponseWrapperBody {\n");
+    sb.append("    expand: ").append(toIndentedString(expand)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();

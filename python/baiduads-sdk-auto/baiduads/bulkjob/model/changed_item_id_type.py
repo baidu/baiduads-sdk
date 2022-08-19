@@ -87,6 +87,9 @@ class ChangedItemIdType(ModelNormal):
             'campaign_id': (int,),  # noqa: E501
             'business_label_id': (int,),  # noqa: E501
             'auto_expansion_id': (int,),  # noqa: E501
+            'campaign_feed_id': (int,),  # noqa: E501
+            'adgroup_feed_id': (int,),  # noqa: E501
+            'creative_feed_id': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -102,6 +105,9 @@ class ChangedItemIdType(ModelNormal):
         'campaign_id': 'campaignId',  # noqa: E501
         'business_label_id': 'businessLabelId',  # noqa: E501
         'auto_expansion_id': 'autoExpansionId',  # noqa: E501
+        'campaign_feed_id': 'campaignFeedId',  # noqa: E501
+        'adgroup_feed_id': 'adgroupFeedId',  # noqa: E501
+        'creative_feed_id': 'creativeFeedId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -152,6 +158,9 @@ class ChangedItemIdType(ModelNormal):
             campaign_id (int): [optional]  # noqa: E501
             business_label_id (int): [optional]  # noqa: E501
             auto_expansion_id (int): [optional]  # noqa: E501
+            campaign_feed_id (int): [optional]  # noqa: E501
+            adgroup_feed_id (int): [optional]  # noqa: E501
+            creative_feed_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,6 +249,9 @@ class ChangedItemIdType(ModelNormal):
             campaign_id (int): [optional]  # noqa: E501
             business_label_id (int): [optional]  # noqa: E501
             auto_expansion_id (int): [optional]  # noqa: E501
+            campaign_feed_id (int): [optional]  # noqa: E501
+            adgroup_feed_id (int): [optional]  # noqa: E501
+            creative_feed_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

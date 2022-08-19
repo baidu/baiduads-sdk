@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**addCreative**](CreativeService.md#addCreative) | **POST** /json/sms/service/CreativeService/addCreative | 
 [**deleteCreative**](CreativeService.md#deleteCreative) | **POST** /json/sms/service/CreativeService/deleteCreative | 
 [**getCreative**](CreativeService.md#getCreative) | **POST** /json/sms/service/CreativeService/getCreative | 
+[**getCreativeTemplate**](CreativeService.md#getCreativeTemplate) | **POST** /json/sms/service/CreativeService/getCreativeTemplate | 
 [**updateCreative**](CreativeService.md#updateCreative) | **POST** /json/sms/service/CreativeService/updateCreative | 
 
 
@@ -186,6 +187,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetCreativeResponseWrapper**](GetCreativeResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=UTF-8
+- **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | response |  -  |
+
+
+## getCreativeTemplate
+
+> GetCreativeTemplateResponseWrapper getCreativeTemplate(getCreativeTemplateRequestWrapper)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.baidu.dev2.api.sdk.invoke.ApiClient;
+import com.baidu.dev2.api.sdk.invoke.ApiException;
+import com.baidu.dev2.api.sdk.invoke.Configuration;
+import com.baidu.dev2.api.sdk.invoke.models.*;
+import com.baidu.dev2.api.sdk.creative.api.CreativeService;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.baidu.com");
+
+        CreativeService apiInstance = new CreativeService(defaultClient);
+        GetCreativeTemplateRequestWrapper getCreativeTemplateRequestWrapper = new GetCreativeTemplateRequestWrapper(); // GetCreativeTemplateRequestWrapper | 
+        try {
+            GetCreativeTemplateResponseWrapper result = apiInstance.getCreativeTemplate(getCreativeTemplateRequestWrapper);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling CreativeService#getCreativeTemplate");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getCreativeTemplateRequestWrapper** | [**GetCreativeTemplateRequestWrapper**](GetCreativeTemplateRequestWrapper.md)|  |
+
+### Return type
+
+[**GetCreativeTemplateResponseWrapper**](GetCreativeTemplateResponseWrapper.md)
 
 ### Authorization
 

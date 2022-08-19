@@ -114,6 +114,12 @@ with baiduads.ApiClient() as api_client:
             ],
             page_size=1,
             page_no=1,
+            video_name="video_name_example",
+            channel="channel_example",
+            source="source_example",
+            start_date="start_date_example",
+            end_date="end_date_example",
+            order="order_example",
         ),
     ) # GetVideoInfosRequestWrapper | 
 

@@ -135,6 +135,7 @@ class KeyWordType(ModelNormal):
             'top_page_views': (int,),  # noqa: E501
             'top_p_clicks': (int,),  # noqa: E501
             'campaign_bid_type': (int,),  # noqa: E501
+            'es_conversion': (float,),  # noqa: E501
         }
 
     @cached_property
@@ -192,6 +193,7 @@ class KeyWordType(ModelNormal):
         'top_page_views': 'topPageViews',  # noqa: E501
         'top_p_clicks': 'topPClicks',  # noqa: E501
         'campaign_bid_type': 'campaignBidType',  # noqa: E501
+        'es_conversion': 'esConversion',  # noqa: E501
     }
 
     read_only_vars = {
@@ -284,6 +286,7 @@ class KeyWordType(ModelNormal):
             top_page_views (int): [optional]  # noqa: E501
             top_p_clicks (int): [optional]  # noqa: E501
             campaign_bid_type (int): [optional]  # noqa: E501
+            es_conversion (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -414,6 +417,7 @@ class KeyWordType(ModelNormal):
             top_page_views (int): [optional]  # noqa: E501
             top_p_clicks (int): [optional]  # noqa: E501
             campaign_bid_type (int): [optional]  # noqa: E501
+            es_conversion (float): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

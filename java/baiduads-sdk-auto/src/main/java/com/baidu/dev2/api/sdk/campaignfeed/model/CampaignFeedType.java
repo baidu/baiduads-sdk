@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.campaignfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.campaignfeed.model.AppInfoShadowType;
 import com.baidu.dev2.api.sdk.campaignfeed.model.AppInfoType;
 import com.baidu.dev2.api.sdk.campaignfeed.model.ScheduleType;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -43,8 +44,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedType.JSON_PROPERTY_PAUSE,
   CampaignFeedType.JSON_PROPERTY_STATUS,
   CampaignFeedType.JSON_PROPERTY_BSTYPE,
+  CampaignFeedType.JSON_PROPERTY_CAMPAIGN_TYPE,
   CampaignFeedType.JSON_PROPERTY_ADDTIME,
-  CampaignFeedType.JSON_PROPERTY_ESHOP_TYPE
+  CampaignFeedType.JSON_PROPERTY_ESHOP_TYPE,
+  CampaignFeedType.JSON_PROPERTY_SHADOW,
+  CampaignFeedType.JSON_PROPERTY_RTA_STATUS
 })
 @JsonTypeName("CampaignFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -85,11 +89,20 @@ public class CampaignFeedType {
   public static final String JSON_PROPERTY_BSTYPE = "bstype";
   private Integer bstype;
 
+  public static final String JSON_PROPERTY_CAMPAIGN_TYPE = "campaignType";
+  private Integer campaignType;
+
   public static final String JSON_PROPERTY_ADDTIME = "addtime";
   private String addtime;
 
   public static final String JSON_PROPERTY_ESHOP_TYPE = "eshopType";
   private String eshopType;
+
+  public static final String JSON_PROPERTY_SHADOW = "shadow";
+  private AppInfoShadowType shadow;
+
+  public static final String JSON_PROPERTY_RTA_STATUS = "rtaStatus";
+  private Integer rtaStatus;
 
   public CampaignFeedType() { 
   }
@@ -426,6 +439,33 @@ public class CampaignFeedType {
   }
 
 
+  public CampaignFeedType campaignType(Integer campaignType) {
+    
+    this.campaignType = campaignType;
+    return this;
+  }
+
+   /**
+   * Get campaignType
+   * @return campaignType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getCampaignType() {
+    return campaignType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignType(Integer campaignType) {
+    this.campaignType = campaignType;
+  }
+
+
   public CampaignFeedType addtime(String addtime) {
     
     this.addtime = addtime;
@@ -480,6 +520,60 @@ public class CampaignFeedType {
   }
 
 
+  public CampaignFeedType shadow(AppInfoShadowType shadow) {
+    
+    this.shadow = shadow;
+    return this;
+  }
+
+   /**
+   * Get shadow
+   * @return shadow
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHADOW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public AppInfoShadowType getShadow() {
+    return shadow;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHADOW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setShadow(AppInfoShadowType shadow) {
+    this.shadow = shadow;
+  }
+
+
+  public CampaignFeedType rtaStatus(Integer rtaStatus) {
+    
+    this.rtaStatus = rtaStatus;
+    return this;
+  }
+
+   /**
+   * Get rtaStatus
+   * @return rtaStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_RTA_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getRtaStatus() {
+    return rtaStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_RTA_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRtaStatus(Integer rtaStatus) {
+    this.rtaStatus = rtaStatus;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -501,13 +595,16 @@ public class CampaignFeedType {
         Objects.equals(this.pause, campaignFeedType.pause) &&
         Objects.equals(this.status, campaignFeedType.status) &&
         Objects.equals(this.bstype, campaignFeedType.bstype) &&
+        Objects.equals(this.campaignType, campaignFeedType.campaignType) &&
         Objects.equals(this.addtime, campaignFeedType.addtime) &&
-        Objects.equals(this.eshopType, campaignFeedType.eshopType);
+        Objects.equals(this.eshopType, campaignFeedType.eshopType) &&
+        Objects.equals(this.shadow, campaignFeedType.shadow) &&
+        Objects.equals(this.rtaStatus, campaignFeedType.rtaStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, bgtctltype, pause, status, bstype, addtime, eshopType);
+    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, bgtctltype, pause, status, bstype, campaignType, addtime, eshopType, shadow, rtaStatus);
   }
 
   @Override
@@ -526,8 +623,11 @@ public class CampaignFeedType {
     sb.append("    pause: ").append(toIndentedString(pause)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    bstype: ").append(toIndentedString(bstype)).append("\n");
+    sb.append("    campaignType: ").append(toIndentedString(campaignType)).append("\n");
     sb.append("    addtime: ").append(toIndentedString(addtime)).append("\n");
     sb.append("    eshopType: ").append(toIndentedString(eshopType)).append("\n");
+    sb.append("    shadow: ").append(toIndentedString(shadow)).append("\n");
+    sb.append("    rtaStatus: ").append(toIndentedString(rtaStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

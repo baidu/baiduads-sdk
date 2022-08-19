@@ -24,6 +24,12 @@ Name | Type | Description | Notes
 **deeplink** | **String** |  |  [optional]
 **miniProgramUrl** | **String** |  |  [optional]
 **createTime** | **String** |  |  [optional]
+**mobileFinalUrl** | **String** |  |  [optional]
+**mobileTrackParam** | **String** |  |  [optional]
+**mobileTrackTemplate** | **String** |  |  [optional]
+**pcFinalUrl** | **String** |  |  [optional]
+**pcTrackParam** | **String** |  |  [optional]
+**pcTrackTemplate** | **String** |  |  [optional]
 
 
 

@@ -103,6 +103,12 @@ class ApiCreativeType(ModelNormal):
             'deeplink': (str,),  # noqa: E501
             'mini_program_url': (str,),  # noqa: E501
             'create_time': (str,),  # noqa: E501
+            'mobile_final_url': (str,),  # noqa: E501
+            'mobile_track_param': (str,),  # noqa: E501
+            'mobile_track_template': (str,),  # noqa: E501
+            'pc_final_url': (str,),  # noqa: E501
+            'pc_track_param': (str,),  # noqa: E501
+            'pc_track_template': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -128,6 +134,12 @@ class ApiCreativeType(ModelNormal):
         'deeplink': 'deeplink',  # noqa: E501
         'mini_program_url': 'miniProgramUrl',  # noqa: E501
         'create_time': 'createTime',  # noqa: E501
+        'mobile_final_url': 'mobileFinalUrl',  # noqa: E501
+        'mobile_track_param': 'mobileTrackParam',  # noqa: E501
+        'mobile_track_template': 'mobileTrackTemplate',  # noqa: E501
+        'pc_final_url': 'pcFinalUrl',  # noqa: E501
+        'pc_track_param': 'pcTrackParam',  # noqa: E501
+        'pc_track_template': 'pcTrackTemplate',  # noqa: E501
     }
 
     read_only_vars = {
@@ -188,6 +200,12 @@ class ApiCreativeType(ModelNormal):
             deeplink (str): [optional]  # noqa: E501
             mini_program_url (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -286,6 +304,12 @@ class ApiCreativeType(ModelNormal):
             deeplink (str): [optional]  # noqa: E501
             mini_program_url (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

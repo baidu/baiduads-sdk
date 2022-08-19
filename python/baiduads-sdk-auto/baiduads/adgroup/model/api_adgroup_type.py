@@ -97,6 +97,12 @@ class ApiAdgroupType(ModelNormal):
             'monitor_url': (str,),  # noqa: E501
             'create_time': (str,),  # noqa: E501
             'adgroup_auto_targeting_status': (bool,),  # noqa: E501
+            'pc_final_url': (str,),  # noqa: E501
+            'pc_track_param': (str,),  # noqa: E501
+            'pc_track_template': (str,),  # noqa: E501
+            'mobile_final_url': (str,),  # noqa: E501
+            'mobile_track_param': (str,),  # noqa: E501
+            'mobile_track_template': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -122,6 +128,12 @@ class ApiAdgroupType(ModelNormal):
         'monitor_url': 'monitorUrl',  # noqa: E501
         'create_time': 'createTime',  # noqa: E501
         'adgroup_auto_targeting_status': 'adgroupAutoTargetingStatus',  # noqa: E501
+        'pc_final_url': 'pcFinalUrl',  # noqa: E501
+        'pc_track_param': 'pcTrackParam',  # noqa: E501
+        'pc_track_template': 'pcTrackTemplate',  # noqa: E501
+        'mobile_final_url': 'mobileFinalUrl',  # noqa: E501
+        'mobile_track_param': 'mobileTrackParam',  # noqa: E501
+        'mobile_track_template': 'mobileTrackTemplate',  # noqa: E501
     }
 
     read_only_vars = {
@@ -182,6 +194,12 @@ class ApiAdgroupType(ModelNormal):
             monitor_url (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
             adgroup_auto_targeting_status (bool): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -280,6 +298,12 @@ class ApiAdgroupType(ModelNormal):
             monitor_url (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
             adgroup_auto_targeting_status (bool): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

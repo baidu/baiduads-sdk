@@ -91,7 +91,6 @@ class AdviceModRequest(ModelNormal):
             'source': (int,),  # noqa: E501
             'batch_id': (int,),  # noqa: E501
             'process_stage': (str,),  # noqa: E501
-            'advice_id': (int,),  # noqa: E501
             'advice_key': (str,),  # noqa: E501
         }
 
@@ -106,7 +105,6 @@ class AdviceModRequest(ModelNormal):
         'source': 'source',  # noqa: E501
         'batch_id': 'batchId',  # noqa: E501
         'process_stage': 'processStage',  # noqa: E501
-        'advice_id': 'adviceId',  # noqa: E501
         'advice_key': 'adviceKey',  # noqa: E501
     }
 
@@ -156,7 +154,6 @@ class AdviceModRequest(ModelNormal):
             source (int): [optional]  # noqa: E501
             batch_id (int): [optional]  # noqa: E501
             process_stage (str): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 
@@ -244,7 +241,6 @@ class AdviceModRequest(ModelNormal):
             source (int): [optional]  # noqa: E501
             batch_id (int): [optional]  # noqa: E501
             process_stage (str): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 

@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **docId** | **Long** |  |  [optional]
 **channelId** | **Long** |  |  [optional]
 **openurl** | **String** |  |  [optional]
+**downloadType** | **Integer** |  |  [optional]
 
 
 

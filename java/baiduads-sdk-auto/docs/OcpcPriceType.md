@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **improveClick** | **Long** |  |  [optional]
 **improveImpression** | **Long** |  |  [optional]
 **improveConversion** | **Long** |  |  [optional]
+**campaignIds** | **List&lt;Long&gt;** |  |  [optional]
 
 
 

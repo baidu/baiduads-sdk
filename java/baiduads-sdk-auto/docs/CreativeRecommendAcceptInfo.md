@@ -12,6 +12,12 @@ Name | Type | Description | Notes
 **filters** | [**List&lt;FieldFilter&gt;**](FieldFilter.md) |  |  [optional]
 **pcDestinationUrl** | **String** |  |  [optional]
 **mobileDestinationUrl** | **String** |  |  [optional]
+**mobileFinalUrl** | **String** |  |  [optional]
+**mobileTrackParam** | **String** |  |  [optional]
+**mobileTrackTemplate** | **String** |  |  [optional]
+**pcFinalUrl** | **String** |  |  [optional]
+**pcTrackParam** | **String** |  |  [optional]
+**pcTrackTemplate** | **String** |  |  [optional]
 
 
 

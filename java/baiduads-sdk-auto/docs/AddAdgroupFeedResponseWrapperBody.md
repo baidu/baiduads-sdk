@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;DpaAdgroupFeedType&gt;**](DpaAdgroupFeedType.md) |  |  [optional]
+**data** | [**List&lt;AdgroupFeedType&gt;**](AdgroupFeedType.md) |  |  [optional]
 
 
 

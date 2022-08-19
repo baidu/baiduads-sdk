@@ -90,6 +90,9 @@ class GetChangedItemIdQuery(ModelNormal):
             'creative_level': (bool,),  # noqa: E501
             'business_label_level': (bool,),  # noqa: E501
             'auto_expansion_level': (bool,),  # noqa: E501
+            'campaign_feed_level': (bool,),  # noqa: E501
+            'adgroup_feed_level': (bool,),  # noqa: E501
+            'creative_feed_level': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -108,6 +111,9 @@ class GetChangedItemIdQuery(ModelNormal):
         'creative_level': 'creativeLevel',  # noqa: E501
         'business_label_level': 'businessLabelLevel',  # noqa: E501
         'auto_expansion_level': 'autoExpansionLevel',  # noqa: E501
+        'campaign_feed_level': 'campaignFeedLevel',  # noqa: E501
+        'adgroup_feed_level': 'adgroupFeedLevel',  # noqa: E501
+        'creative_feed_level': 'creativeFeedLevel',  # noqa: E501
     }
 
     read_only_vars = {
@@ -161,6 +167,9 @@ class GetChangedItemIdQuery(ModelNormal):
             creative_level (bool): [optional]  # noqa: E501
             business_label_level (bool): [optional]  # noqa: E501
             auto_expansion_level (bool): [optional]  # noqa: E501
+            campaign_feed_level (bool): [optional]  # noqa: E501
+            adgroup_feed_level (bool): [optional]  # noqa: E501
+            creative_feed_level (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,6 +261,9 @@ class GetChangedItemIdQuery(ModelNormal):
             creative_level (bool): [optional]  # noqa: E501
             business_label_level (bool): [optional]  # noqa: E501
             auto_expansion_level (bool): [optional]  # noqa: E501
+            campaign_feed_level (bool): [optional]  # noqa: E501
+            adgroup_feed_level (bool): [optional]  # noqa: E501
+            creative_feed_level (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

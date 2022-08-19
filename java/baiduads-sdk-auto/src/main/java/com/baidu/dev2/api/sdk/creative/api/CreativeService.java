@@ -24,6 +24,8 @@ import com.baidu.dev2.api.sdk.creative.model.DeleteCreativeRequestWrapper;
 import com.baidu.dev2.api.sdk.creative.model.DeleteCreativeResponseWrapper;
 import com.baidu.dev2.api.sdk.creative.model.GetCreativeRequestWrapper;
 import com.baidu.dev2.api.sdk.creative.model.GetCreativeResponseWrapper;
+import com.baidu.dev2.api.sdk.creative.model.GetCreativeTemplateRequestWrapper;
+import com.baidu.dev2.api.sdk.creative.model.GetCreativeTemplateResponseWrapper;
 import com.baidu.dev2.api.sdk.creative.model.UpdateCreativeRequestWrapper;
 import com.baidu.dev2.api.sdk.creative.model.UpdateCreativeResponseWrapper;
 
@@ -209,6 +211,63 @@ public class CreativeService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetCreativeResponseWrapper> localVarReturnType = new TypeReference<GetCreativeResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param getCreativeTemplateRequestWrapper  (required)
+   * @return GetCreativeTemplateResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetCreativeTemplateResponseWrapper getCreativeTemplate(GetCreativeTemplateRequestWrapper getCreativeTemplateRequestWrapper) throws ApiException {
+    Object localVarPostBody = getCreativeTemplateRequestWrapper;
+    
+    // verify the required parameter 'getCreativeTemplateRequestWrapper' is set
+    if (getCreativeTemplateRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getCreativeTemplateRequestWrapper' when calling getCreativeTemplate");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/CreativeService/getCreativeTemplate";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetCreativeTemplateResponseWrapper> localVarReturnType = new TypeReference<GetCreativeTemplateResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

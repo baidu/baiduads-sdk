@@ -24,6 +24,9 @@ Name | Type | Description | Notes
 **keywordUncorrelated** | [**KeywordUncorrelatedAcceptInfo**](KeywordUncorrelatedAcceptInfo.md) |  |  [optional]
 **fcAdgroupAutoTargeting** | [**AdgroupAutoTargetingInfo**](AdgroupAutoTargetingInfo.md) |  |  [optional]
 **productSegmentInfo** | [**ProductSegmentInfo**](ProductSegmentInfo.md) |  |  [optional]
+**ecpcCampaignEffect** | [**TargetPackageAcceptCampaign**](TargetPackageAcceptCampaign.md) |  |  [optional]
+**ocpcTransTypeInfo** | [**OcpcTransTypeAcceptInfo**](OcpcTransTypeAcceptInfo.md) |  |  [optional]
+**campaignEstBudget** | [**CampaignEstBudgetAcceptInfo**](CampaignEstBudgetAcceptInfo.md) |  |  [optional]
 
 
 

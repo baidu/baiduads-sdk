@@ -38,7 +38,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetChangedItemIdQuery.JSON_PROPERTY_KEYWORD_LEVEL,
   GetChangedItemIdQuery.JSON_PROPERTY_CREATIVE_LEVEL,
   GetChangedItemIdQuery.JSON_PROPERTY_BUSINESS_LABEL_LEVEL,
-  GetChangedItemIdQuery.JSON_PROPERTY_AUTO_EXPANSION_LEVEL
+  GetChangedItemIdQuery.JSON_PROPERTY_AUTO_EXPANSION_LEVEL,
+  GetChangedItemIdQuery.JSON_PROPERTY_CAMPAIGN_FEED_LEVEL,
+  GetChangedItemIdQuery.JSON_PROPERTY_ADGROUP_FEED_LEVEL,
+  GetChangedItemIdQuery.JSON_PROPERTY_CREATIVE_FEED_LEVEL
 })
 @JsonTypeName("GetChangedItemIdQuery")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -72,6 +75,15 @@ public class GetChangedItemIdQuery {
 
   public static final String JSON_PROPERTY_AUTO_EXPANSION_LEVEL = "autoExpansionLevel";
   private Boolean autoExpansionLevel;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_FEED_LEVEL = "campaignFeedLevel";
+  private Boolean campaignFeedLevel;
+
+  public static final String JSON_PROPERTY_ADGROUP_FEED_LEVEL = "adgroupFeedLevel";
+  private Boolean adgroupFeedLevel;
+
+  public static final String JSON_PROPERTY_CREATIVE_FEED_LEVEL = "creativeFeedLevel";
+  private Boolean creativeFeedLevel;
 
   public GetChangedItemIdQuery() { 
   }
@@ -354,6 +366,87 @@ public class GetChangedItemIdQuery {
   }
 
 
+  public GetChangedItemIdQuery campaignFeedLevel(Boolean campaignFeedLevel) {
+    
+    this.campaignFeedLevel = campaignFeedLevel;
+    return this;
+  }
+
+   /**
+   * Get campaignFeedLevel
+   * @return campaignFeedLevel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getCampaignFeedLevel() {
+    return campaignFeedLevel;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignFeedLevel(Boolean campaignFeedLevel) {
+    this.campaignFeedLevel = campaignFeedLevel;
+  }
+
+
+  public GetChangedItemIdQuery adgroupFeedLevel(Boolean adgroupFeedLevel) {
+    
+    this.adgroupFeedLevel = adgroupFeedLevel;
+    return this;
+  }
+
+   /**
+   * Get adgroupFeedLevel
+   * @return adgroupFeedLevel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ADGROUP_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getAdgroupFeedLevel() {
+    return adgroupFeedLevel;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ADGROUP_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAdgroupFeedLevel(Boolean adgroupFeedLevel) {
+    this.adgroupFeedLevel = adgroupFeedLevel;
+  }
+
+
+  public GetChangedItemIdQuery creativeFeedLevel(Boolean creativeFeedLevel) {
+    
+    this.creativeFeedLevel = creativeFeedLevel;
+    return this;
+  }
+
+   /**
+   * Get creativeFeedLevel
+   * @return creativeFeedLevel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CREATIVE_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getCreativeFeedLevel() {
+    return creativeFeedLevel;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CREATIVE_FEED_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCreativeFeedLevel(Boolean creativeFeedLevel) {
+    this.creativeFeedLevel = creativeFeedLevel;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -372,12 +465,15 @@ public class GetChangedItemIdQuery {
         Objects.equals(this.keywordLevel, getChangedItemIdQuery.keywordLevel) &&
         Objects.equals(this.creativeLevel, getChangedItemIdQuery.creativeLevel) &&
         Objects.equals(this.businessLabelLevel, getChangedItemIdQuery.businessLabelLevel) &&
-        Objects.equals(this.autoExpansionLevel, getChangedItemIdQuery.autoExpansionLevel);
+        Objects.equals(this.autoExpansionLevel, getChangedItemIdQuery.autoExpansionLevel) &&
+        Objects.equals(this.campaignFeedLevel, getChangedItemIdQuery.campaignFeedLevel) &&
+        Objects.equals(this.adgroupFeedLevel, getChangedItemIdQuery.adgroupFeedLevel) &&
+        Objects.equals(this.creativeFeedLevel, getChangedItemIdQuery.creativeFeedLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(startTime, itemType, type, ids, campaignLevel, adgroupLevel, keywordLevel, creativeLevel, businessLabelLevel, autoExpansionLevel);
+    return Objects.hash(startTime, itemType, type, ids, campaignLevel, adgroupLevel, keywordLevel, creativeLevel, businessLabelLevel, autoExpansionLevel, campaignFeedLevel, adgroupFeedLevel, creativeFeedLevel);
   }
 
   @Override
@@ -394,6 +490,9 @@ public class GetChangedItemIdQuery {
     sb.append("    creativeLevel: ").append(toIndentedString(creativeLevel)).append("\n");
     sb.append("    businessLabelLevel: ").append(toIndentedString(businessLabelLevel)).append("\n");
     sb.append("    autoExpansionLevel: ").append(toIndentedString(autoExpansionLevel)).append("\n");
+    sb.append("    campaignFeedLevel: ").append(toIndentedString(campaignFeedLevel)).append("\n");
+    sb.append("    adgroupFeedLevel: ").append(toIndentedString(adgroupFeedLevel)).append("\n");
+    sb.append("    creativeFeedLevel: ").append(toIndentedString(creativeFeedLevel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -24,10 +24,14 @@ from baiduads.advice.model.accept_advice_request_wrapper import AcceptAdviceRequ
 from baiduads.advice.model.accept_advice_response_wrapper import AcceptAdviceResponseWrapper
 from baiduads.advice.model.accept_feed_advice_request_wrapper import AcceptFeedAdviceRequestWrapper
 from baiduads.advice.model.accept_feed_advice_response_wrapper import AcceptFeedAdviceResponseWrapper
+from baiduads.advice.model.download_advice_request_wrapper import DownloadAdviceRequestWrapper
+from baiduads.advice.model.download_advice_response_wrapper import DownloadAdviceResponseWrapper
 from baiduads.advice.model.query_detail_request_wrapper import QueryDetailRequestWrapper
 from baiduads.advice.model.query_detail_response_wrapper import QueryDetailResponseWrapper
 from baiduads.advice.model.query_feed_detail_request_wrapper import QueryFeedDetailRequestWrapper
 from baiduads.advice.model.query_feed_detail_response_wrapper import QueryFeedDetailResponseWrapper
+from baiduads.advice.model.query_feed_outline_request_wrapper import QueryFeedOutlineRequestWrapper
+from baiduads.advice.model.query_feed_outline_response_wrapper import QueryFeedOutlineResponseWrapper
 
 
 class AdviceService(object):
@@ -141,6 +145,56 @@ class AdviceService(object):
             },
             api_client=api_client
         )
+        self.download_advice_endpoint = _Endpoint(
+            settings={
+                'response_type': (DownloadAdviceResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/AdviceService/downloadAdvice',
+                'operation_id': 'download_advice',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'download_advice_request_wrapper',
+                ],
+                'required': [
+                    'download_advice_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'download_advice_request_wrapper':
+                        (DownloadAdviceRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'download_advice_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
         self.query_detail_endpoint = _Endpoint(
             settings={
                 'response_type': (QueryDetailResponseWrapper,),
@@ -227,6 +281,56 @@ class AdviceService(object):
                 },
                 'location_map': {
                     'query_feed_detail_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.query_feed_outline_endpoint = _Endpoint(
+            settings={
+                'response_type': (QueryFeedOutlineResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/AdviceService/queryFeedOutline',
+                'operation_id': 'query_feed_outline',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'query_feed_outline_request_wrapper',
+                ],
+                'required': [
+                    'query_feed_outline_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'query_feed_outline_request_wrapper':
+                        (QueryFeedOutlineRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'query_feed_outline_request_wrapper': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -388,6 +492,79 @@ class AdviceService(object):
             accept_feed_advice_request_wrapper
         return self.accept_feed_advice_endpoint.call_with_http_info(**kwargs)
 
+    def download_advice(
+        self,
+        download_advice_request_wrapper,
+        **kwargs
+    ):
+        """download_advice  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.download_advice(download_advice_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            download_advice_request_wrapper (DownloadAdviceRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DownloadAdviceResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['download_advice_request_wrapper'] = \
+            download_advice_request_wrapper
+        return self.download_advice_endpoint.call_with_http_info(**kwargs)
+
     def query_detail(
         self,
         query_detail_request_wrapper,
@@ -533,4 +710,77 @@ class AdviceService(object):
         kwargs['query_feed_detail_request_wrapper'] = \
             query_feed_detail_request_wrapper
         return self.query_feed_detail_endpoint.call_with_http_info(**kwargs)
+
+    def query_feed_outline(
+        self,
+        query_feed_outline_request_wrapper,
+        **kwargs
+    ):
+        """query_feed_outline  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.query_feed_outline(query_feed_outline_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            query_feed_outline_request_wrapper (QueryFeedOutlineRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            QueryFeedOutlineResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['query_feed_outline_request_wrapper'] = \
+            query_feed_outline_request_wrapper
+        return self.query_feed_outline_endpoint.call_with_http_info(**kwargs)
 

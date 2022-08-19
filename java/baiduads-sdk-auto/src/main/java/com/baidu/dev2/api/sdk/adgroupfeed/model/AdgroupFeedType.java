@@ -42,7 +42,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdgroupFeedType.JSON_PROPERTY_BIDTYPE,
   AdgroupFeedType.JSON_PROPERTY_OCPC,
   AdgroupFeedType.JSON_PROPERTY_ATP_FEED_ID,
-  AdgroupFeedType.JSON_PROPERTY_DELIVERY_TYPE
+  AdgroupFeedType.JSON_PROPERTY_DELIVERY_TYPE,
+  AdgroupFeedType.JSON_PROPERTY_UNIT_OCPX_STATUS,
+  AdgroupFeedType.JSON_PROPERTY_UNEFFICIENT_ADGROUP
 })
 @JsonTypeName("AdgroupFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -85,6 +87,12 @@ public class AdgroupFeedType {
 
   public static final String JSON_PROPERTY_DELIVERY_TYPE = "deliveryType";
   private List<Integer> deliveryType = null;
+
+  public static final String JSON_PROPERTY_UNIT_OCPX_STATUS = "unitOcpxStatus";
+  private Integer unitOcpxStatus;
+
+  public static final String JSON_PROPERTY_UNEFFICIENT_ADGROUP = "unefficientAdgroup";
+  private Integer unefficientAdgroup;
 
   public AdgroupFeedType() { 
   }
@@ -464,6 +472,60 @@ public class AdgroupFeedType {
   }
 
 
+  public AdgroupFeedType unitOcpxStatus(Integer unitOcpxStatus) {
+    
+    this.unitOcpxStatus = unitOcpxStatus;
+    return this;
+  }
+
+   /**
+   * Get unitOcpxStatus
+   * @return unitOcpxStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UNIT_OCPX_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUnitOcpxStatus() {
+    return unitOcpxStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UNIT_OCPX_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUnitOcpxStatus(Integer unitOcpxStatus) {
+    this.unitOcpxStatus = unitOcpxStatus;
+  }
+
+
+  public AdgroupFeedType unefficientAdgroup(Integer unefficientAdgroup) {
+    
+    this.unefficientAdgroup = unefficientAdgroup;
+    return this;
+  }
+
+   /**
+   * Get unefficientAdgroup
+   * @return unefficientAdgroup
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UNEFFICIENT_ADGROUP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUnefficientAdgroup() {
+    return unefficientAdgroup;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UNEFFICIENT_ADGROUP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUnefficientAdgroup(Integer unefficientAdgroup) {
+    this.unefficientAdgroup = unefficientAdgroup;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -485,12 +547,14 @@ public class AdgroupFeedType {
         Objects.equals(this.bidtype, adgroupFeedType.bidtype) &&
         Objects.equals(this.ocpc, adgroupFeedType.ocpc) &&
         Objects.equals(this.atpFeedId, adgroupFeedType.atpFeedId) &&
-        Objects.equals(this.deliveryType, adgroupFeedType.deliveryType);
+        Objects.equals(this.deliveryType, adgroupFeedType.deliveryType) &&
+        Objects.equals(this.unitOcpxStatus, adgroupFeedType.unitOcpxStatus) &&
+        Objects.equals(this.unefficientAdgroup, adgroupFeedType.unefficientAdgroup);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, producttypes, ftypes, bidtype, ocpc, atpFeedId, deliveryType);
+    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, producttypes, ftypes, bidtype, ocpc, atpFeedId, deliveryType, unitOcpxStatus, unefficientAdgroup);
   }
 
   @Override
@@ -510,6 +574,8 @@ public class AdgroupFeedType {
     sb.append("    ocpc: ").append(toIndentedString(ocpc)).append("\n");
     sb.append("    atpFeedId: ").append(toIndentedString(atpFeedId)).append("\n");
     sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");
+    sb.append("    unitOcpxStatus: ").append(toIndentedString(unitOcpxStatus)).append("\n");
+    sb.append("    unefficientAdgroup: ").append(toIndentedString(unefficientAdgroup)).append("\n");
     sb.append("}");
     return sb.toString();
   }

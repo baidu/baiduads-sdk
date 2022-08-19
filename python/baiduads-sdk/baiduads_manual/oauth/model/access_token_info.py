@@ -22,7 +22,7 @@ class AccessTokenInfo:
     def __init__(self,
                  accessToken, refreshToken, expiresTime,
                  refreshExpiresTime, expiresIn, refreshExpiresIn,
-                 scope, userId):
+                 scope, openId, userId):
         self.accessToken = accessToken
         self.refreshToken = refreshToken
         self.expiresTime = expiresTime
@@ -30,6 +30,7 @@ class AccessTokenInfo:
         self.expiresIn = expiresIn
         self.refreshExpiresIn = refreshExpiresIn
         self.scope = scope
+        self.openId = openId
         self.userId = userId
 
     @classmethod
@@ -44,5 +45,6 @@ class AccessTokenInfo:
             dict_data.get("expiresIn", None),
             dict_data.get("refreshExpiresIn", None),
             dict_data.get("scope", None),
+            dict_data.get("openId", None),
             dict_data.get("userId", None)
         )

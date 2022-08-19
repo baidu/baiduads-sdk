@@ -35,18 +35,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetTempCreativeFeedPreviewUrlResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";
-  private List<java.util.Map> data = null;
+  private List<Object> data = null;
 
   public GetTempCreativeFeedPreviewUrlResponseWrapperBody() { 
   }
 
-  public GetTempCreativeFeedPreviewUrlResponseWrapperBody data(List<java.util.Map> data) {
+  public GetTempCreativeFeedPreviewUrlResponseWrapperBody data(List<Object> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetTempCreativeFeedPreviewUrlResponseWrapperBody addDataItem(java.util.Map dataItem) {
+  public GetTempCreativeFeedPreviewUrlResponseWrapperBody addDataItem(Object dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -63,14 +63,14 @@ public class GetTempCreativeFeedPreviewUrlResponseWrapperBody {
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<java.util.Map> getData() {
+  public List<Object> getData() {
     return data;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(List<java.util.Map> data) {
+  public void setData(List<Object> data) {
     this.data = data;
   }
 

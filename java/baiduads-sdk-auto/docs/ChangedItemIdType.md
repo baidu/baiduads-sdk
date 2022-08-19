@@ -14,6 +14,9 @@ Name | Type | Description | Notes
 **campaignId** | **Long** |  |  [optional]
 **businessLabelId** | **Long** |  |  [optional]
 **autoExpansionId** | **Long** |  |  [optional]
+**campaignFeedId** | **Long** |  |  [optional]
+**adgroupFeedId** | **Long** |  |  [optional]
+**creativeFeedId** | **Long** |  |  [optional]
 
 
 

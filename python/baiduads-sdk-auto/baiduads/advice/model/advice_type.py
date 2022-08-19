@@ -29,9 +29,7 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.advice.model.advice_content import AdviceContent
     from baiduads.advice.model.predict_effect import PredictEffect
-    globals()['AdviceContent'] = AdviceContent
     globals()['PredictEffect'] = PredictEffect
 
 
@@ -95,12 +93,9 @@ class AdviceType(ModelNormal):
             'detail_logic_desc': (str,),  # noqa: E501
             'effect': (PredictEffect,),  # noqa: E501
             'have_detail_page': (bool,),  # noqa: E501
-            'content': (AdviceContent,),  # noqa: E501
             'operations': ([int],),  # noqa: E501
             'attributes': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'settings': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'data_source_type': (int,),  # noqa: E501
-            'advice_id': (int,),  # noqa: E501
             'advice_key': (str,),  # noqa: E501
         }
 
@@ -117,12 +112,9 @@ class AdviceType(ModelNormal):
         'detail_logic_desc': 'detailLogicDesc',  # noqa: E501
         'effect': 'effect',  # noqa: E501
         'have_detail_page': 'haveDetailPage',  # noqa: E501
-        'content': 'content',  # noqa: E501
         'operations': 'operations',  # noqa: E501
         'attributes': 'attributes',  # noqa: E501
         'settings': 'settings',  # noqa: E501
-        'data_source_type': 'dataSourceType',  # noqa: E501
-        'advice_id': 'adviceId',  # noqa: E501
         'advice_key': 'adviceKey',  # noqa: E501
     }
 
@@ -174,12 +166,9 @@ class AdviceType(ModelNormal):
             detail_logic_desc (str): [optional]  # noqa: E501
             effect (PredictEffect): [optional]  # noqa: E501
             have_detail_page (bool): [optional]  # noqa: E501
-            content (AdviceContent): [optional]  # noqa: E501
             operations ([int]): [optional]  # noqa: E501
             attributes (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             settings (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            data_source_type (int): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 
@@ -269,12 +258,9 @@ class AdviceType(ModelNormal):
             detail_logic_desc (str): [optional]  # noqa: E501
             effect (PredictEffect): [optional]  # noqa: E501
             have_detail_page (bool): [optional]  # noqa: E501
-            content (AdviceContent): [optional]  # noqa: E501
             operations ([int]): [optional]  # noqa: E501
             attributes (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             settings (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            data_source_type (int): [optional]  # noqa: E501
-            advice_id (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 

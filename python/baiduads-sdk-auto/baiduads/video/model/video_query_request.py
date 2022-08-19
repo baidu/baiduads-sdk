@@ -83,6 +83,12 @@ class VideoQueryRequest(ModelNormal):
             'ids': ([int],),  # noqa: E501
             'page_size': (int,),  # noqa: E501
             'page_no': (int,),  # noqa: E501
+            'video_name': (str,),  # noqa: E501
+            'channel': (str,),  # noqa: E501
+            'source': (str,),  # noqa: E501
+            'start_date': (str,),  # noqa: E501
+            'end_date': (str,),  # noqa: E501
+            'order': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -94,6 +100,12 @@ class VideoQueryRequest(ModelNormal):
         'ids': 'ids',  # noqa: E501
         'page_size': 'pageSize',  # noqa: E501
         'page_no': 'pageNo',  # noqa: E501
+        'video_name': 'videoName',  # noqa: E501
+        'channel': 'channel',  # noqa: E501
+        'source': 'source',  # noqa: E501
+        'start_date': 'startDate',  # noqa: E501
+        'end_date': 'endDate',  # noqa: E501
+        'order': 'order',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,6 +152,12 @@ class VideoQueryRequest(ModelNormal):
             ids ([int]): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_no (int): [optional]  # noqa: E501
+            video_name (str): [optional]  # noqa: E501
+            channel (str): [optional]  # noqa: E501
+            source (str): [optional]  # noqa: E501
+            start_date (str): [optional]  # noqa: E501
+            end_date (str): [optional]  # noqa: E501
+            order (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,6 +242,12 @@ class VideoQueryRequest(ModelNormal):
             ids ([int]): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_no (int): [optional]  # noqa: E501
+            video_name (str): [optional]  # noqa: E501
+            channel (str): [optional]  # noqa: E501
+            source (str): [optional]  # noqa: E501
+            start_date (str): [optional]  # noqa: E501
+            end_date (str): [optional]  # noqa: E501
+            order (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

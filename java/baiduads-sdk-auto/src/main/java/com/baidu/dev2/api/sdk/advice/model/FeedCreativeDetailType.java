@@ -56,8 +56,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedCreativeDetailType.JSON_PROPERTY_MATERIAL,
   FeedCreativeDetailType.JSON_PROPERTY_TEMPLATE,
   FeedCreativeDetailType.JSON_PROPERTY_PA_IDEA_JSON,
-  FeedCreativeDetailType.JSON_PROPERTY_NEW_CREATIVE_FEED_ID,
-  FeedCreativeDetailType.JSON_PROPERTY_MATERIAL_STYLE_WEB
+  FeedCreativeDetailType.JSON_PROPERTY_NEW_CREATIVE_FEED_ID
 })
 @JsonTypeName("FeedCreativeDetailType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -136,9 +135,6 @@ public class FeedCreativeDetailType {
 
   public static final String JSON_PROPERTY_NEW_CREATIVE_FEED_ID = "newCreativeFeedId";
   private Long newCreativeFeedId;
-
-  public static final String JSON_PROPERTY_MATERIAL_STYLE_WEB = "materialStyleWeb";
-  private Integer materialStyleWeb;
 
   public FeedCreativeDetailType() { 
   }
@@ -834,33 +830,6 @@ public class FeedCreativeDetailType {
   }
 
 
-  public FeedCreativeDetailType materialStyleWeb(Integer materialStyleWeb) {
-    
-    this.materialStyleWeb = materialStyleWeb;
-    return this;
-  }
-
-   /**
-   * Get materialStyleWeb
-   * @return materialStyleWeb
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MATERIAL_STYLE_WEB)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMaterialStyleWeb() {
-    return materialStyleWeb;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MATERIAL_STYLE_WEB)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaterialStyleWeb(Integer materialStyleWeb) {
-    this.materialStyleWeb = materialStyleWeb;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -894,13 +863,12 @@ public class FeedCreativeDetailType {
         Objects.equals(this.material, feedCreativeDetailType.material) &&
         Objects.equals(this.template, feedCreativeDetailType.template) &&
         Objects.equals(this.paIdeaJson, feedCreativeDetailType.paIdeaJson) &&
-        Objects.equals(this.newCreativeFeedId, feedCreativeDetailType.newCreativeFeedId) &&
-        Objects.equals(this.materialStyleWeb, feedCreativeDetailType.materialStyleWeb);
+        Objects.equals(this.newCreativeFeedId, feedCreativeDetailType.newCreativeFeedId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adviceCreativeFeedId, campaignFeedId, campaignFeedName, adgroupFeedId, adgroupFeedName, originalAdgroupFeedId, originalCreativeFeedId, title, subtitle, brand, pictures, elements, predictClick, predictConversion, status, creativeType, materialStyle, ftypes, bidType, bsType, creativeFeedName, material, template, paIdeaJson, newCreativeFeedId, materialStyleWeb);
+    return Objects.hash(adviceCreativeFeedId, campaignFeedId, campaignFeedName, adgroupFeedId, adgroupFeedName, originalAdgroupFeedId, originalCreativeFeedId, title, subtitle, brand, pictures, elements, predictClick, predictConversion, status, creativeType, materialStyle, ftypes, bidType, bsType, creativeFeedName, material, template, paIdeaJson, newCreativeFeedId);
   }
 
   @Override
@@ -932,7 +900,6 @@ public class FeedCreativeDetailType {
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    paIdeaJson: ").append(toIndentedString(paIdeaJson)).append("\n");
     sb.append("    newCreativeFeedId: ").append(toIndentedString(newCreativeFeedId)).append("\n");
-    sb.append("    materialStyleWeb: ").append(toIndentedString(materialStyleWeb)).append("\n");
     sb.append("}");
     return sb.toString();
   }

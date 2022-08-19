@@ -42,7 +42,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CrowdType.JSON_PROPERTY_ID_PACK,
   CrowdType.JSON_PROPERTY_CROWD_DIRECT_TYPE,
   CrowdType.JSON_PROPERTY_EFFECT_TYPE,
-  CrowdType.JSON_PROPERTY_CREATE_TIME
+  CrowdType.JSON_PROPERTY_CREATE_TIME,
+  CrowdType.JSON_PROPERTY_RECENT_DAYS
 })
 @JsonTypeName("CrowdType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -88,6 +89,9 @@ public class CrowdType {
 
   public static final String JSON_PROPERTY_CREATE_TIME = "createTime";
   private String createTime;
+
+  public static final String JSON_PROPERTY_RECENT_DAYS = "recentDays";
+  private Integer recentDays;
 
   public CrowdType() { 
   }
@@ -526,6 +530,33 @@ public class CrowdType {
   }
 
 
+  public CrowdType recentDays(Integer recentDays) {
+    
+    this.recentDays = recentDays;
+    return this;
+  }
+
+   /**
+   * Get recentDays
+   * @return recentDays
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_RECENT_DAYS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getRecentDays() {
+    return recentDays;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_RECENT_DAYS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRecentDays(Integer recentDays) {
+    this.recentDays = recentDays;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -548,12 +579,13 @@ public class CrowdType {
         Objects.equals(this.idPack, crowdType.idPack) &&
         Objects.equals(this.crowdDirectType, crowdType.crowdDirectType) &&
         Objects.equals(this.effectType, crowdType.effectType) &&
-        Objects.equals(this.createTime, crowdType.createTime);
+        Objects.equals(this.createTime, crowdType.createTime) &&
+        Objects.equals(this.recentDays, crowdType.recentDays);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(crowdId, userId, crowdName, age, sex, inPeople, searchWord, browseUrl, campaignIds, creativeIds, idPack, crowdDirectType, effectType, createTime);
+    return Objects.hash(crowdId, userId, crowdName, age, sex, inPeople, searchWord, browseUrl, campaignIds, creativeIds, idPack, crowdDirectType, effectType, createTime, recentDays);
   }
 
   @Override
@@ -574,6 +606,7 @@ public class CrowdType {
     sb.append("    crowdDirectType: ").append(toIndentedString(crowdDirectType)).append("\n");
     sb.append("    effectType: ").append(toIndentedString(effectType)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+    sb.append("    recentDays: ").append(toIndentedString(recentDays)).append("\n");
     sb.append("}");
     return sb.toString();
   }

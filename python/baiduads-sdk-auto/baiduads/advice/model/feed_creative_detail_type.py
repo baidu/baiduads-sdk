@@ -115,7 +115,6 @@ class FeedCreativeDetailType(ModelNormal):
             'template': (PaIdeaTemplateType,),  # noqa: E501
             'pa_idea_json': (str,),  # noqa: E501
             'new_creative_feed_id': (int,),  # noqa: E501
-            'material_style_web': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -149,7 +148,6 @@ class FeedCreativeDetailType(ModelNormal):
         'template': 'template',  # noqa: E501
         'pa_idea_json': 'paIdeaJson',  # noqa: E501
         'new_creative_feed_id': 'newCreativeFeedId',  # noqa: E501
-        'material_style_web': 'materialStyleWeb',  # noqa: E501
     }
 
     read_only_vars = {
@@ -218,7 +216,6 @@ class FeedCreativeDetailType(ModelNormal):
             template (PaIdeaTemplateType): [optional]  # noqa: E501
             pa_idea_json (str): [optional]  # noqa: E501
             new_creative_feed_id (int): [optional]  # noqa: E501
-            material_style_web (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -325,7 +322,6 @@ class FeedCreativeDetailType(ModelNormal):
             template (PaIdeaTemplateType): [optional]  # noqa: E501
             pa_idea_json (str): [optional]  # noqa: E501
             new_creative_feed_id (int): [optional]  # noqa: E501
-            material_style_web (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

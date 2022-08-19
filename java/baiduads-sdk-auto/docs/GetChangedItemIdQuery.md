@@ -17,6 +17,9 @@ Name | Type | Description | Notes
 **creativeLevel** | **Boolean** |  |  [optional]
 **businessLabelLevel** | **Boolean** |  |  [optional]
 **autoExpansionLevel** | **Boolean** |  |  [optional]
+**campaignFeedLevel** | **Boolean** |  |  [optional]
+**adgroupFeedLevel** | **Boolean** |  |  [optional]
+**creativeFeedLevel** | **Boolean** |  |  [optional]
 
 
 

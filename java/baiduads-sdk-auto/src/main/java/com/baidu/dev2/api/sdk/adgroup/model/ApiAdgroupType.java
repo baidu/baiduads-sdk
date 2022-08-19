@@ -45,7 +45,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiAdgroupType.JSON_PROPERTY_PA_PRICE,
   ApiAdgroupType.JSON_PROPERTY_MONITOR_URL,
   ApiAdgroupType.JSON_PROPERTY_CREATE_TIME,
-  ApiAdgroupType.JSON_PROPERTY_ADGROUP_AUTO_TARGETING_STATUS
+  ApiAdgroupType.JSON_PROPERTY_ADGROUP_AUTO_TARGETING_STATUS,
+  ApiAdgroupType.JSON_PROPERTY_PC_FINAL_URL,
+  ApiAdgroupType.JSON_PROPERTY_PC_TRACK_PARAM,
+  ApiAdgroupType.JSON_PROPERTY_PC_TRACK_TEMPLATE,
+  ApiAdgroupType.JSON_PROPERTY_MOBILE_FINAL_URL,
+  ApiAdgroupType.JSON_PROPERTY_MOBILE_TRACK_PARAM,
+  ApiAdgroupType.JSON_PROPERTY_MOBILE_TRACK_TEMPLATE
 })
 @JsonTypeName("ApiAdgroupType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -100,6 +106,24 @@ public class ApiAdgroupType {
 
   public static final String JSON_PROPERTY_ADGROUP_AUTO_TARGETING_STATUS = "adgroupAutoTargetingStatus";
   private Boolean adgroupAutoTargetingStatus;
+
+  public static final String JSON_PROPERTY_PC_FINAL_URL = "pcFinalUrl";
+  private String pcFinalUrl;
+
+  public static final String JSON_PROPERTY_PC_TRACK_PARAM = "pcTrackParam";
+  private String pcTrackParam;
+
+  public static final String JSON_PROPERTY_PC_TRACK_TEMPLATE = "pcTrackTemplate";
+  private String pcTrackTemplate;
+
+  public static final String JSON_PROPERTY_MOBILE_FINAL_URL = "mobileFinalUrl";
+  private String mobileFinalUrl;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_PARAM = "mobileTrackParam";
+  private String mobileTrackParam;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_TEMPLATE = "mobileTrackTemplate";
+  private String mobileTrackTemplate;
 
   public ApiAdgroupType() { 
   }
@@ -579,6 +603,168 @@ public class ApiAdgroupType {
   }
 
 
+  public ApiAdgroupType pcFinalUrl(String pcFinalUrl) {
+    
+    this.pcFinalUrl = pcFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get pcFinalUrl
+   * @return pcFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcFinalUrl() {
+    return pcFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcFinalUrl(String pcFinalUrl) {
+    this.pcFinalUrl = pcFinalUrl;
+  }
+
+
+  public ApiAdgroupType pcTrackParam(String pcTrackParam) {
+    
+    this.pcTrackParam = pcTrackParam;
+    return this;
+  }
+
+   /**
+   * Get pcTrackParam
+   * @return pcTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackParam() {
+    return pcTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackParam(String pcTrackParam) {
+    this.pcTrackParam = pcTrackParam;
+  }
+
+
+  public ApiAdgroupType pcTrackTemplate(String pcTrackTemplate) {
+    
+    this.pcTrackTemplate = pcTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get pcTrackTemplate
+   * @return pcTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackTemplate() {
+    return pcTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackTemplate(String pcTrackTemplate) {
+    this.pcTrackTemplate = pcTrackTemplate;
+  }
+
+
+  public ApiAdgroupType mobileFinalUrl(String mobileFinalUrl) {
+    
+    this.mobileFinalUrl = mobileFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get mobileFinalUrl
+   * @return mobileFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileFinalUrl() {
+    return mobileFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileFinalUrl(String mobileFinalUrl) {
+    this.mobileFinalUrl = mobileFinalUrl;
+  }
+
+
+  public ApiAdgroupType mobileTrackParam(String mobileTrackParam) {
+    
+    this.mobileTrackParam = mobileTrackParam;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackParam
+   * @return mobileTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackParam() {
+    return mobileTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackParam(String mobileTrackParam) {
+    this.mobileTrackParam = mobileTrackParam;
+  }
+
+
+  public ApiAdgroupType mobileTrackTemplate(String mobileTrackTemplate) {
+    
+    this.mobileTrackTemplate = mobileTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackTemplate
+   * @return mobileTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackTemplate() {
+    return mobileTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackTemplate(String mobileTrackTemplate) {
+    this.mobileTrackTemplate = mobileTrackTemplate;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -604,12 +790,18 @@ public class ApiAdgroupType {
         Objects.equals(this.paPrice, apiAdgroupType.paPrice) &&
         Objects.equals(this.monitorUrl, apiAdgroupType.monitorUrl) &&
         Objects.equals(this.createTime, apiAdgroupType.createTime) &&
-        Objects.equals(this.adgroupAutoTargetingStatus, apiAdgroupType.adgroupAutoTargetingStatus);
+        Objects.equals(this.adgroupAutoTargetingStatus, apiAdgroupType.adgroupAutoTargetingStatus) &&
+        Objects.equals(this.pcFinalUrl, apiAdgroupType.pcFinalUrl) &&
+        Objects.equals(this.pcTrackParam, apiAdgroupType.pcTrackParam) &&
+        Objects.equals(this.pcTrackTemplate, apiAdgroupType.pcTrackTemplate) &&
+        Objects.equals(this.mobileFinalUrl, apiAdgroupType.mobileFinalUrl) &&
+        Objects.equals(this.mobileTrackParam, apiAdgroupType.mobileTrackParam) &&
+        Objects.equals(this.mobileTrackTemplate, apiAdgroupType.mobileTrackTemplate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, campaignId, adgroupName, maxPrice, pause, negativeWords, exactNegativeWords, status, priceRatio, pcPriceRatio, adType, segmentRecommendStatus, productSetId, paPrice, monitorUrl, createTime, adgroupAutoTargetingStatus);
+    return Objects.hash(adgroupId, campaignId, adgroupName, maxPrice, pause, negativeWords, exactNegativeWords, status, priceRatio, pcPriceRatio, adType, segmentRecommendStatus, productSetId, paPrice, monitorUrl, createTime, adgroupAutoTargetingStatus, pcFinalUrl, pcTrackParam, pcTrackTemplate, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate);
   }
 
   @Override
@@ -633,6 +825,12 @@ public class ApiAdgroupType {
     sb.append("    monitorUrl: ").append(toIndentedString(monitorUrl)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
     sb.append("    adgroupAutoTargetingStatus: ").append(toIndentedString(adgroupAutoTargetingStatus)).append("\n");
+    sb.append("    pcFinalUrl: ").append(toIndentedString(pcFinalUrl)).append("\n");
+    sb.append("    pcTrackParam: ").append(toIndentedString(pcTrackParam)).append("\n");
+    sb.append("    pcTrackTemplate: ").append(toIndentedString(pcTrackTemplate)).append("\n");
+    sb.append("    mobileFinalUrl: ").append(toIndentedString(mobileFinalUrl)).append("\n");
+    sb.append("    mobileTrackParam: ").append(toIndentedString(mobileTrackParam)).append("\n");
+    sb.append("    mobileTrackTemplate: ").append(toIndentedString(mobileTrackTemplate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

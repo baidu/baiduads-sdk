@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **trade_list** | [**[TradeVo]**](TradeVo.md) |  | [optional] 
 **category_list** | [**[TradeVo]**](TradeVo.md) |  | [optional] 
 **material_types** | [**[DanubeMaterialType]**](DanubeMaterialType.md) |  | [optional] 
+**slogans** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**sub_accounts** | [**[SubAccountInfo]**](SubAccountInfo.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

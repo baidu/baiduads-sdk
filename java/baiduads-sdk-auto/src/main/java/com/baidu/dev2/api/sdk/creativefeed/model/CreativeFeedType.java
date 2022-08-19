@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.creativefeed.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.creativefeed.model.AuditTimeModel;
+import com.baidu.dev2.api.sdk.creativefeed.model.PaIdeaTemplate;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -21,6 +22,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -42,7 +45,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreativeFeedType.JSON_PROPERTY_ADDTIME,
   CreativeFeedType.JSON_PROPERTY_APPROVEMSGNEW,
   CreativeFeedType.JSON_PROPERTY_AUDIT_TIME_MODEL,
-  CreativeFeedType.JSON_PROPERTY_ATTRIBUTE_LIST
+  CreativeFeedType.JSON_PROPERTY_ATTRIBUTE_LIST,
+  CreativeFeedType.JSON_PROPERTY_TEMPLATE,
+  CreativeFeedType.JSON_PROPERTY_HUITUS
 })
 @JsonTypeName("CreativeFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -91,6 +96,12 @@ public class CreativeFeedType {
 
   public static final String JSON_PROPERTY_ATTRIBUTE_LIST = "attributeList";
   private Integer attributeList;
+
+  public static final String JSON_PROPERTY_TEMPLATE = "template";
+  private PaIdeaTemplate template;
+
+  public static final String JSON_PROPERTY_HUITUS = "huitus";
+  private List<Long> huitus = null;
 
   public CreativeFeedType() { 
   }
@@ -500,6 +511,68 @@ public class CreativeFeedType {
   }
 
 
+  public CreativeFeedType template(PaIdeaTemplate template) {
+    
+    this.template = template;
+    return this;
+  }
+
+   /**
+   * Get template
+   * @return template
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public PaIdeaTemplate getTemplate() {
+    return template;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTemplate(PaIdeaTemplate template) {
+    this.template = template;
+  }
+
+
+  public CreativeFeedType huitus(List<Long> huitus) {
+    
+    this.huitus = huitus;
+    return this;
+  }
+
+  public CreativeFeedType addHuitusItem(Long huitusItem) {
+    if (this.huitus == null) {
+      this.huitus = new ArrayList<>();
+    }
+    this.huitus.add(huitusItem);
+    return this;
+  }
+
+   /**
+   * Get huitus
+   * @return huitus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_HUITUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Long> getHuitus() {
+    return huitus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_HUITUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setHuitus(List<Long> huitus) {
+    this.huitus = huitus;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -523,12 +596,14 @@ public class CreativeFeedType {
         Objects.equals(this.addtime, creativeFeedType.addtime) &&
         Objects.equals(this.approvemsgnew, creativeFeedType.approvemsgnew) &&
         Objects.equals(this.auditTimeModel, creativeFeedType.auditTimeModel) &&
-        Objects.equals(this.attributeList, creativeFeedType.attributeList);
+        Objects.equals(this.attributeList, creativeFeedType.attributeList) &&
+        Objects.equals(this.template, creativeFeedType.template) &&
+        Objects.equals(this.huitus, creativeFeedType.huitus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(creativeFeedId, adgroupFeedId, materialstyle, creativeFeedName, pause, status, material, refusereason, playnum, ideaType, showMt, addtime, approvemsgnew, auditTimeModel, attributeList);
+    return Objects.hash(creativeFeedId, adgroupFeedId, materialstyle, creativeFeedName, pause, status, material, refusereason, playnum, ideaType, showMt, addtime, approvemsgnew, auditTimeModel, attributeList, template, huitus);
   }
 
   @Override
@@ -550,6 +625,8 @@ public class CreativeFeedType {
     sb.append("    approvemsgnew: ").append(toIndentedString(approvemsgnew)).append("\n");
     sb.append("    auditTimeModel: ").append(toIndentedString(auditTimeModel)).append("\n");
     sb.append("    attributeList: ").append(toIndentedString(attributeList)).append("\n");
+    sb.append("    template: ").append(toIndentedString(template)).append("\n");
+    sb.append("    huitus: ").append(toIndentedString(huitus)).append("\n");
     sb.append("}");
     return sb.toString();
   }
