@@ -70,4 +70,3 @@ src/main/java/com/baidu/dev2/api/sdk/invoke/auth/ApiKeyAuth.java
 src/main/java/com/baidu/dev2/api/sdk/invoke/auth/Authentication.java
 src/main/java/com/baidu/dev2/api/sdk/invoke/auth/HttpBasicAuth.java
 src/main/java/com/baidu/dev2/api/sdk/invoke/auth/HttpBearerAuth.java
-src/test/java/com/baidu/dev2/api/sdk/campaignfeed/model/AppInfoShadowTypeTest.java
