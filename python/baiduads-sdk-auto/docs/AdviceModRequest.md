@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **source** | **int** |  | [optional] 
 **batch_id** | **int** |  | [optional] 
 **process_stage** | **str** |  | [optional] 
-**advice_id** | **int** |  | [optional] 
 **advice_key** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -60,7 +60,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreativeRecommendType.JSON_PROPERTY_RECOMMEND_REASONS_NAME,
   CreativeRecommendType.JSON_PROPERTY_DYNAMIC_CREATIVE,
   CreativeRecommendType.JSON_PROPERTY_DYNAMIC_CREATIVE_NAME,
-  CreativeRecommendType.JSON_PROPERTY_CAMPAIGN_BID_TYPE
+  CreativeRecommendType.JSON_PROPERTY_CAMPAIGN_BID_TYPE,
+  CreativeRecommendType.JSON_PROPERTY_MOBILE_FINAL_URL,
+  CreativeRecommendType.JSON_PROPERTY_MOBILE_TRACK_PARAM,
+  CreativeRecommendType.JSON_PROPERTY_MOBILE_TRACK_TEMPLATE,
+  CreativeRecommendType.JSON_PROPERTY_PC_FINAL_URL,
+  CreativeRecommendType.JSON_PROPERTY_PC_TRACK_PARAM,
+  CreativeRecommendType.JSON_PROPERTY_PC_TRACK_TEMPLATE
 })
 @JsonTypeName("CreativeRecommendType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -160,6 +166,24 @@ public class CreativeRecommendType {
 
   public static final String JSON_PROPERTY_CAMPAIGN_BID_TYPE = "campaignBidType";
   private Integer campaignBidType;
+
+  public static final String JSON_PROPERTY_MOBILE_FINAL_URL = "mobileFinalUrl";
+  private String mobileFinalUrl;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_PARAM = "mobileTrackParam";
+  private String mobileTrackParam;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_TEMPLATE = "mobileTrackTemplate";
+  private String mobileTrackTemplate;
+
+  public static final String JSON_PROPERTY_PC_FINAL_URL = "pcFinalUrl";
+  private String pcFinalUrl;
+
+  public static final String JSON_PROPERTY_PC_TRACK_PARAM = "pcTrackParam";
+  private String pcTrackParam;
+
+  public static final String JSON_PROPERTY_PC_TRACK_TEMPLATE = "pcTrackTemplate";
+  private String pcTrackTemplate;
 
   public CreativeRecommendType() { 
   }
@@ -1036,6 +1060,168 @@ public class CreativeRecommendType {
   }
 
 
+  public CreativeRecommendType mobileFinalUrl(String mobileFinalUrl) {
+    
+    this.mobileFinalUrl = mobileFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get mobileFinalUrl
+   * @return mobileFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileFinalUrl() {
+    return mobileFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileFinalUrl(String mobileFinalUrl) {
+    this.mobileFinalUrl = mobileFinalUrl;
+  }
+
+
+  public CreativeRecommendType mobileTrackParam(String mobileTrackParam) {
+    
+    this.mobileTrackParam = mobileTrackParam;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackParam
+   * @return mobileTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackParam() {
+    return mobileTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackParam(String mobileTrackParam) {
+    this.mobileTrackParam = mobileTrackParam;
+  }
+
+
+  public CreativeRecommendType mobileTrackTemplate(String mobileTrackTemplate) {
+    
+    this.mobileTrackTemplate = mobileTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackTemplate
+   * @return mobileTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackTemplate() {
+    return mobileTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackTemplate(String mobileTrackTemplate) {
+    this.mobileTrackTemplate = mobileTrackTemplate;
+  }
+
+
+  public CreativeRecommendType pcFinalUrl(String pcFinalUrl) {
+    
+    this.pcFinalUrl = pcFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get pcFinalUrl
+   * @return pcFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcFinalUrl() {
+    return pcFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcFinalUrl(String pcFinalUrl) {
+    this.pcFinalUrl = pcFinalUrl;
+  }
+
+
+  public CreativeRecommendType pcTrackParam(String pcTrackParam) {
+    
+    this.pcTrackParam = pcTrackParam;
+    return this;
+  }
+
+   /**
+   * Get pcTrackParam
+   * @return pcTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackParam() {
+    return pcTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackParam(String pcTrackParam) {
+    this.pcTrackParam = pcTrackParam;
+  }
+
+
+  public CreativeRecommendType pcTrackTemplate(String pcTrackTemplate) {
+    
+    this.pcTrackTemplate = pcTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get pcTrackTemplate
+   * @return pcTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackTemplate() {
+    return pcTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackTemplate(String pcTrackTemplate) {
+    this.pcTrackTemplate = pcTrackTemplate;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1076,12 +1262,18 @@ public class CreativeRecommendType {
         Objects.equals(this.recommendReasonsName, creativeRecommendType.recommendReasonsName) &&
         Objects.equals(this.dynamicCreative, creativeRecommendType.dynamicCreative) &&
         Objects.equals(this.dynamicCreativeName, creativeRecommendType.dynamicCreativeName) &&
-        Objects.equals(this.campaignBidType, creativeRecommendType.campaignBidType);
+        Objects.equals(this.campaignBidType, creativeRecommendType.campaignBidType) &&
+        Objects.equals(this.mobileFinalUrl, creativeRecommendType.mobileFinalUrl) &&
+        Objects.equals(this.mobileTrackParam, creativeRecommendType.mobileTrackParam) &&
+        Objects.equals(this.mobileTrackTemplate, creativeRecommendType.mobileTrackTemplate) &&
+        Objects.equals(this.pcFinalUrl, creativeRecommendType.pcFinalUrl) &&
+        Objects.equals(this.pcTrackParam, creativeRecommendType.pcTrackParam) &&
+        Objects.equals(this.pcTrackTemplate, creativeRecommendType.pcTrackTemplate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(creativeId, title, oldTitle, description1, description2, campaignId, campaignName, adgroupId, adgroupName, pcDisplayUrl, pcDestinationUrl, mobileDisplayUrl, mobileDestinationUrl, creativePreference, crowdAttentionSellPoint, creativeMd5, click, ctr, mcId, originCreativeTitle, conversion, impression, topImpression, topClick, historicalImpression, historicalClick, historicalConversion, recommendReasons, recommendReasonsName, dynamicCreative, dynamicCreativeName, campaignBidType);
+    return Objects.hash(creativeId, title, oldTitle, description1, description2, campaignId, campaignName, adgroupId, adgroupName, pcDisplayUrl, pcDestinationUrl, mobileDisplayUrl, mobileDestinationUrl, creativePreference, crowdAttentionSellPoint, creativeMd5, click, ctr, mcId, originCreativeTitle, conversion, impression, topImpression, topClick, historicalImpression, historicalClick, historicalConversion, recommendReasons, recommendReasonsName, dynamicCreative, dynamicCreativeName, campaignBidType, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, pcFinalUrl, pcTrackParam, pcTrackTemplate);
   }
 
   @Override
@@ -1120,6 +1312,12 @@ public class CreativeRecommendType {
     sb.append("    dynamicCreative: ").append(toIndentedString(dynamicCreative)).append("\n");
     sb.append("    dynamicCreativeName: ").append(toIndentedString(dynamicCreativeName)).append("\n");
     sb.append("    campaignBidType: ").append(toIndentedString(campaignBidType)).append("\n");
+    sb.append("    mobileFinalUrl: ").append(toIndentedString(mobileFinalUrl)).append("\n");
+    sb.append("    mobileTrackParam: ").append(toIndentedString(mobileTrackParam)).append("\n");
+    sb.append("    mobileTrackTemplate: ").append(toIndentedString(mobileTrackTemplate)).append("\n");
+    sb.append("    pcFinalUrl: ").append(toIndentedString(pcFinalUrl)).append("\n");
+    sb.append("    pcTrackParam: ").append(toIndentedString(pcTrackParam)).append("\n");
+    sb.append("    pcTrackTemplate: ").append(toIndentedString(pcTrackTemplate)).append("\n");
     sb.append("}");
     return sb.toString();
   }

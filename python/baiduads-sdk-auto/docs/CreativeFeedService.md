@@ -67,6 +67,46 @@ with baiduads.ApiClient() as api_client:
                         complete_radio="complete_radio_example",
                     ),
                     attribute_list=1,
+                    template=PaIdeaTemplate(
+                        title="title_example",
+                        subtitle="subtitle_example",
+                        target_url="target_url_example",
+                        monitor_url="monitor_url_example",
+                        user_portrait="user_portrait_example",
+                        na_url="na_url_example",
+                        brand="brand_example",
+                        pictures=[
+                            PaPicture(
+                                url="url_example",
+                                target_url="target_url_example",
+                                na_url="na_url_example",
+                                desc1="desc1_example",
+                                desc2="desc2_example",
+                            ),
+                        ],
+                        extra_pictures=[
+                            PaExtraPicture(
+                                pictures=[
+                                    ExtraPictureItem(
+                                        image="image_example",
+                                    ),
+                                ],
+                                width=1,
+                                height=1,
+                            ),
+                        ],
+                        poster="poster_example",
+                        video_id=1,
+                        duration="duration_example",
+                        video_url="video_url_example",
+                        mini_program_schema="mini_program_schema_example",
+                        exposure_url="exposure_url_example",
+                        ulk_scheme="ulk_scheme_example",
+                        ulk_url="ulk_url_example",
+                    ),
+                    huitus=[
+                        1,
+                    ],
                 ),
             ],
         ),
@@ -616,6 +656,46 @@ with baiduads.ApiClient() as api_client:
                         complete_radio="complete_radio_example",
                     ),
                     attribute_list=1,
+                    template=PaIdeaTemplate(
+                        title="title_example",
+                        subtitle="subtitle_example",
+                        target_url="target_url_example",
+                        monitor_url="monitor_url_example",
+                        user_portrait="user_portrait_example",
+                        na_url="na_url_example",
+                        brand="brand_example",
+                        pictures=[
+                            PaPicture(
+                                url="url_example",
+                                target_url="target_url_example",
+                                na_url="na_url_example",
+                                desc1="desc1_example",
+                                desc2="desc2_example",
+                            ),
+                        ],
+                        extra_pictures=[
+                            PaExtraPicture(
+                                pictures=[
+                                    ExtraPictureItem(
+                                        image="image_example",
+                                    ),
+                                ],
+                                width=1,
+                                height=1,
+                            ),
+                        ],
+                        poster="poster_example",
+                        video_id=1,
+                        duration="duration_example",
+                        video_url="video_url_example",
+                        mini_program_schema="mini_program_schema_example",
+                        exposure_url="exposure_url_example",
+                        ulk_scheme="ulk_scheme_example",
+                        ulk_url="ulk_url_example",
+                    ),
+                    huitus=[
+                        1,
+                    ],
                 ),
             ],
         ),

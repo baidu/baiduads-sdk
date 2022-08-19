@@ -68,6 +68,13 @@ with baiduads.ApiClient() as api_client:
                     tags=[
                         1,
                     ],
+                    cate_gory_info=[
+                        TreeNode(
+                            id=1,
+                            name="name_example",
+                            children=[],
+                        ),
+                    ],
                 ),
             ],
             from_type=1,

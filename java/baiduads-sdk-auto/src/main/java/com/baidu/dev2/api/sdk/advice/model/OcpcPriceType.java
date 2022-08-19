@@ -48,7 +48,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OcpcPriceType.JSON_PROPERTY_IMPROVE_COST,
   OcpcPriceType.JSON_PROPERTY_IMPROVE_CLICK,
   OcpcPriceType.JSON_PROPERTY_IMPROVE_IMPRESSION,
-  OcpcPriceType.JSON_PROPERTY_IMPROVE_CONVERSION
+  OcpcPriceType.JSON_PROPERTY_IMPROVE_CONVERSION,
+  OcpcPriceType.JSON_PROPERTY_CAMPAIGN_IDS
 })
 @JsonTypeName("OcpcPriceType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -106,6 +107,9 @@ public class OcpcPriceType {
 
   public static final String JSON_PROPERTY_IMPROVE_CONVERSION = "improveConversion";
   private Long improveConversion;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  private List<Long> campaignIds = null;
 
   public OcpcPriceType() { 
   }
@@ -628,6 +632,41 @@ public class OcpcPriceType {
   }
 
 
+  public OcpcPriceType campaignIds(List<Long> campaignIds) {
+    
+    this.campaignIds = campaignIds;
+    return this;
+  }
+
+  public OcpcPriceType addCampaignIdsItem(Long campaignIdsItem) {
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
+    }
+    this.campaignIds.add(campaignIdsItem);
+    return this;
+  }
+
+   /**
+   * Get campaignIds
+   * @return campaignIds
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Long> getCampaignIds() {
+    return campaignIds;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignIds(List<Long> campaignIds) {
+    this.campaignIds = campaignIds;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -654,12 +693,13 @@ public class OcpcPriceType {
         Objects.equals(this.improveCost, ocpcPriceType.improveCost) &&
         Objects.equals(this.improveClick, ocpcPriceType.improveClick) &&
         Objects.equals(this.improveImpression, ocpcPriceType.improveImpression) &&
-        Objects.equals(this.improveConversion, ocpcPriceType.improveConversion);
+        Objects.equals(this.improveConversion, ocpcPriceType.improveConversion) &&
+        Objects.equals(this.campaignIds, ocpcPriceType.campaignIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ocpcBid, targetPackageId, targetPackageName, equipmentType, cvSource, transType, adviceEffect, ecpcMaxBidRatio, cost, click, impression, conversion, suggestions, recommendMaxBidRatio, improveCost, improveClick, improveImpression, improveConversion);
+    return Objects.hash(ocpcBid, targetPackageId, targetPackageName, equipmentType, cvSource, transType, adviceEffect, ecpcMaxBidRatio, cost, click, impression, conversion, suggestions, recommendMaxBidRatio, improveCost, improveClick, improveImpression, improveConversion, campaignIds);
   }
 
   @Override
@@ -684,6 +724,7 @@ public class OcpcPriceType {
     sb.append("    improveClick: ").append(toIndentedString(improveClick)).append("\n");
     sb.append("    improveImpression: ").append(toIndentedString(improveImpression)).append("\n");
     sb.append("    improveConversion: ").append(toIndentedString(improveConversion)).append("\n");
+    sb.append("    campaignIds: ").append(toIndentedString(campaignIds)).append("\n");
     sb.append("}");
     return sb.toString();
   }

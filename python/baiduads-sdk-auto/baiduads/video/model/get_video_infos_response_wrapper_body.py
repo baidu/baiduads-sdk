@@ -30,7 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.video.model.video_meta import VideoMeta
+    from baiduads.video.model.video_meta_info import VideoMetaInfo
     globals()['VideoMeta'] = VideoMeta
+    globals()['VideoMetaInfo'] = VideoMetaInfo
 
 
 class GetVideoInfosResponseWrapperBody(ModelNormal):
@@ -86,6 +88,7 @@ class GetVideoInfosResponseWrapperBody(ModelNormal):
         """
         lazy_import()
         return {
+            'expand': (VideoMetaInfo,),  # noqa: E501
             'data': ([VideoMeta],),  # noqa: E501
         }
 
@@ -95,6 +98,7 @@ class GetVideoInfosResponseWrapperBody(ModelNormal):
 
 
     attribute_map = {
+        'expand': 'expand',  # noqa: E501
         'data': 'data',  # noqa: E501
     }
 
@@ -139,6 +143,7 @@ class GetVideoInfosResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            expand (VideoMetaInfo): [optional]  # noqa: E501
             data ([VideoMeta]): [optional]  # noqa: E501
         """
 
@@ -221,6 +226,7 @@ class GetVideoInfosResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            expand (VideoMetaInfo): [optional]  # noqa: E501
             data ([VideoMeta]): [optional]  # noqa: E501
         """
 

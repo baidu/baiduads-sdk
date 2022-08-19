@@ -83,6 +83,7 @@ class ApiAdgroupQueryRequest(ModelNormal):
             'ids': ([int],),  # noqa: E501
             'adgroup_fields': ([str],),  # noqa: E501
             'id_type': (int,),  # noqa: E501
+            'get_temp': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -94,6 +95,7 @@ class ApiAdgroupQueryRequest(ModelNormal):
         'ids': 'ids',  # noqa: E501
         'adgroup_fields': 'adgroupFields',  # noqa: E501
         'id_type': 'idType',  # noqa: E501
+        'get_temp': 'getTemp',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,6 +142,7 @@ class ApiAdgroupQueryRequest(ModelNormal):
             ids ([int]): [optional]  # noqa: E501
             adgroup_fields ([str]): [optional]  # noqa: E501
             id_type (int): [optional]  # noqa: E501
+            get_temp (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -224,6 +227,7 @@ class ApiAdgroupQueryRequest(ModelNormal):
             ids ([int]): [optional]  # noqa: E501
             adgroup_fields ([str]): [optional]  # noqa: E501
             id_type (int): [optional]  # noqa: E501
+            get_temp (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.danubecreativegroup.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeMaterialType;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.SubAccountInfo;
 import com.baidu.dev2.api.sdk.danubecreativegroup.model.TradeVo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -34,7 +35,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConstantResponse.JSON_PROPERTY_NAV_LABEL_MAP_BY_TRADE,
   ConstantResponse.JSON_PROPERTY_TRADE_LIST,
   ConstantResponse.JSON_PROPERTY_CATEGORY_LIST,
-  ConstantResponse.JSON_PROPERTY_MATERIAL_TYPES
+  ConstantResponse.JSON_PROPERTY_MATERIAL_TYPES,
+  ConstantResponse.JSON_PROPERTY_SLOGANS,
+  ConstantResponse.JSON_PROPERTY_SUB_ACCOUNTS
 })
 @JsonTypeName("ConstantResponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -50,6 +53,12 @@ public class ConstantResponse {
 
   public static final String JSON_PROPERTY_MATERIAL_TYPES = "materialTypes";
   private List<DanubeMaterialType> materialTypes = null;
+
+  public static final String JSON_PROPERTY_SLOGANS = "slogans";
+  private java.util.Map slogans;
+
+  public static final String JSON_PROPERTY_SUB_ACCOUNTS = "subAccounts";
+  private List<SubAccountInfo> subAccounts = null;
 
   public ConstantResponse() { 
   }
@@ -186,6 +195,68 @@ public class ConstantResponse {
   }
 
 
+  public ConstantResponse slogans(java.util.Map slogans) {
+    
+    this.slogans = slogans;
+    return this;
+  }
+
+   /**
+   * Get slogans
+   * @return slogans
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SLOGANS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public java.util.Map getSlogans() {
+    return slogans;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SLOGANS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSlogans(java.util.Map slogans) {
+    this.slogans = slogans;
+  }
+
+
+  public ConstantResponse subAccounts(List<SubAccountInfo> subAccounts) {
+    
+    this.subAccounts = subAccounts;
+    return this;
+  }
+
+  public ConstantResponse addSubAccountsItem(SubAccountInfo subAccountsItem) {
+    if (this.subAccounts == null) {
+      this.subAccounts = new ArrayList<>();
+    }
+    this.subAccounts.add(subAccountsItem);
+    return this;
+  }
+
+   /**
+   * Get subAccounts
+   * @return subAccounts
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SUB_ACCOUNTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<SubAccountInfo> getSubAccounts() {
+    return subAccounts;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SUB_ACCOUNTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSubAccounts(List<SubAccountInfo> subAccounts) {
+    this.subAccounts = subAccounts;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -198,12 +269,14 @@ public class ConstantResponse {
     return Objects.equals(this.navLabelMapByTrade, constantResponse.navLabelMapByTrade) &&
         Objects.equals(this.tradeList, constantResponse.tradeList) &&
         Objects.equals(this.categoryList, constantResponse.categoryList) &&
-        Objects.equals(this.materialTypes, constantResponse.materialTypes);
+        Objects.equals(this.materialTypes, constantResponse.materialTypes) &&
+        Objects.equals(this.slogans, constantResponse.slogans) &&
+        Objects.equals(this.subAccounts, constantResponse.subAccounts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(navLabelMapByTrade, tradeList, categoryList, materialTypes);
+    return Objects.hash(navLabelMapByTrade, tradeList, categoryList, materialTypes, slogans, subAccounts);
   }
 
   @Override
@@ -214,6 +287,8 @@ public class ConstantResponse {
     sb.append("    tradeList: ").append(toIndentedString(tradeList)).append("\n");
     sb.append("    categoryList: ").append(toIndentedString(categoryList)).append("\n");
     sb.append("    materialTypes: ").append(toIndentedString(materialTypes)).append("\n");
+    sb.append("    slogans: ").append(toIndentedString(slogans)).append("\n");
+    sb.append("    subAccounts: ").append(toIndentedString(subAccounts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

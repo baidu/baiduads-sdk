@@ -60,6 +60,54 @@ with baiduads.ApiClient() as api_client:
                         1,
                     ],
                     creative_components=DanubeCreativeComponent(
+                        select_list=[
+                            DanubeSelectListCreative(
+                                content=[
+                                    SelectList(
+                                        key="key_example",
+                                        value="value_example",
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        plas=[
+                            DanubePlasCreative(
+                                content=[
+                                    Plas(
+                                        name="name_example",
+                                        desc="desc_example",
+                                        url="url_example",
+                                        swan_url="swan_url_example",
+                                        deep_link="deep_link_example",
+                                        image=[
+                                            Image(
+                                                url="url_example",
+                                                cut_top=3.14,
+                                                cut_left=3.14,
+                                                cut_width=3.14,
+                                                cut_height=3.14,
+                                                view_width=3.14,
+                                                view_height=3.14,
+                                                origin_width=3.14,
+                                                origin_height=3.14,
+                                                image_id=1,
+                                                id="id_example",
+                                            ),
+                                        ],
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
                         category=[
                             DanubeCategoryCreative(
                                 content=Category(
@@ -104,6 +152,48 @@ with baiduads.ApiClient() as api_client:
                                         id="id_example",
                                     ),
                                 ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        text_list=[
+                            DanubeTextListCreative(
+                                content=[
+                                    "content_example",
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        list=[
+                            DanubeListCreative(
+                                content=ListType(
+                                    industry="industry_example",
+                                    labels=[
+                                        "labels_example",
+                                    ],
+                                    slogan="slogan_example",
+                                    rows=[
+                                        ListRowType(
+                                            product_name="product_name_example",
+                                            product_url="product_url_example",
+                                            target_url="target_url_example",
+                                            labels=[
+                                                "labels_example",
+                                            ],
+                                            swan_url="swan_url_example",
+                                            deep_link="deep_link_example",
+                                            id="id_example",
+                                        ),
+                                    ],
+                                    max_char_num_by_column=[
+                                        1,
+                                    ],
+                                ),
                                 mt_id=1,
                                 cn_name="cn_name_example",
                                 en_name="en_name_example",
@@ -204,6 +294,54 @@ with baiduads.ApiClient() as api_client:
                         1,
                     ],
                     creative_components=DanubeCreativeComponent(
+                        select_list=[
+                            DanubeSelectListCreative(
+                                content=[
+                                    SelectList(
+                                        key="key_example",
+                                        value="value_example",
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        plas=[
+                            DanubePlasCreative(
+                                content=[
+                                    Plas(
+                                        name="name_example",
+                                        desc="desc_example",
+                                        url="url_example",
+                                        swan_url="swan_url_example",
+                                        deep_link="deep_link_example",
+                                        image=[
+                                            Image(
+                                                url="url_example",
+                                                cut_top=3.14,
+                                                cut_left=3.14,
+                                                cut_width=3.14,
+                                                cut_height=3.14,
+                                                view_width=3.14,
+                                                view_height=3.14,
+                                                origin_width=3.14,
+                                                origin_height=3.14,
+                                                image_id=1,
+                                                id="id_example",
+                                            ),
+                                        ],
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
                         category=[
                             DanubeCategoryCreative(
                                 content=Category(
@@ -248,6 +386,48 @@ with baiduads.ApiClient() as api_client:
                                         id="id_example",
                                     ),
                                 ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        text_list=[
+                            DanubeTextListCreative(
+                                content=[
+                                    "content_example",
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        list=[
+                            DanubeListCreative(
+                                content=ListType(
+                                    industry="industry_example",
+                                    labels=[
+                                        "labels_example",
+                                    ],
+                                    slogan="slogan_example",
+                                    rows=[
+                                        ListRowType(
+                                            product_name="product_name_example",
+                                            product_url="product_url_example",
+                                            target_url="target_url_example",
+                                            labels=[
+                                                "labels_example",
+                                            ],
+                                            swan_url="swan_url_example",
+                                            deep_link="deep_link_example",
+                                            id="id_example",
+                                        ),
+                                    ],
+                                    max_char_num_by_column=[
+                                        1,
+                                    ],
+                                ),
                                 mt_id=1,
                                 cn_name="cn_name_example",
                                 en_name="en_name_example",
@@ -569,6 +749,54 @@ with baiduads.ApiClient() as api_client:
                         1,
                     ],
                     creative_components=DanubeCreativeComponent(
+                        select_list=[
+                            DanubeSelectListCreative(
+                                content=[
+                                    SelectList(
+                                        key="key_example",
+                                        value="value_example",
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        plas=[
+                            DanubePlasCreative(
+                                content=[
+                                    Plas(
+                                        name="name_example",
+                                        desc="desc_example",
+                                        url="url_example",
+                                        swan_url="swan_url_example",
+                                        deep_link="deep_link_example",
+                                        image=[
+                                            Image(
+                                                url="url_example",
+                                                cut_top=3.14,
+                                                cut_left=3.14,
+                                                cut_width=3.14,
+                                                cut_height=3.14,
+                                                view_width=3.14,
+                                                view_height=3.14,
+                                                origin_width=3.14,
+                                                origin_height=3.14,
+                                                image_id=1,
+                                                id="id_example",
+                                            ),
+                                        ],
+                                        id="id_example",
+                                    ),
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
                         category=[
                             DanubeCategoryCreative(
                                 content=Category(
@@ -613,6 +841,48 @@ with baiduads.ApiClient() as api_client:
                                         id="id_example",
                                     ),
                                 ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        text_list=[
+                            DanubeTextListCreative(
+                                content=[
+                                    "content_example",
+                                ],
+                                mt_id=1,
+                                cn_name="cn_name_example",
+                                en_name="en_name_example",
+                                style="style_example",
+                            ),
+                        ],
+                        list=[
+                            DanubeListCreative(
+                                content=ListType(
+                                    industry="industry_example",
+                                    labels=[
+                                        "labels_example",
+                                    ],
+                                    slogan="slogan_example",
+                                    rows=[
+                                        ListRowType(
+                                            product_name="product_name_example",
+                                            product_url="product_url_example",
+                                            target_url="target_url_example",
+                                            labels=[
+                                                "labels_example",
+                                            ],
+                                            swan_url="swan_url_example",
+                                            deep_link="deep_link_example",
+                                            id="id_example",
+                                        ),
+                                    ],
+                                    max_char_num_by_column=[
+                                        1,
+                                    ],
+                                ),
                                 mt_id=1,
                                 cn_name="cn_name_example",
                                 en_name="en_name_example",

@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**add_creative**](CreativeService.md#add_creative) | **POST** /json/sms/service/CreativeService/addCreative | 
 [**delete_creative**](CreativeService.md#delete_creative) | **POST** /json/sms/service/CreativeService/deleteCreative | 
 [**get_creative**](CreativeService.md#get_creative) | **POST** /json/sms/service/CreativeService/getCreative | 
+[**get_creative_template**](CreativeService.md#get_creative_template) | **POST** /json/sms/service/CreativeService/getCreativeTemplate | 
 [**update_creative**](CreativeService.md#update_creative) | **POST** /json/sms/service/CreativeService/updateCreative | 
 
 
@@ -65,6 +66,12 @@ with baiduads.ApiClient() as api_client:
                     deeplink="deeplink_example",
                     mini_program_url="mini_program_url_example",
                     create_time="create_time_example",
+                    mobile_final_url="mobile_final_url_example",
+                    mobile_track_param="mobile_track_param_example",
+                    mobile_track_template="mobile_track_template_example",
+                    pc_final_url="pc_final_url_example",
+                    pc_track_param="pc_track_param_example",
+                    pc_track_template="pc_track_template_example",
                 ),
             ],
         ),
@@ -256,6 +263,82 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_creative_template**
+> GetCreativeTemplateResponseWrapper get_creative_template(get_creative_template_request_wrapper)
+
+
+
+### Example
+
+
+```python
+import time
+import baiduads
+from creative.api import creative_service
+from baiduads.creative.model.get_creative_template_request_wrapper import GetCreativeTemplateRequestWrapper
+from baiduads.creative.model.get_creative_template_response_wrapper import GetCreativeTemplateResponseWrapper
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.baidu.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = baiduads.Configuration(
+    host = "https://api.baidu.com"
+)
+
+
+# Enter a context with an instance of the API client
+with baiduads.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = creative_service.CreativeService(api_client)
+    get_creative_template_request_wrapper = GetCreativeTemplateRequestWrapper(
+        header=ApiRequestHeader(),
+        body=CreativeTemplateRequest(
+            creative_name="creative_name_example",
+            limit=[
+                1,
+            ],
+            desc=True,
+            order_by="order_by_example",
+            item={},
+        ),
+    ) # GetCreativeTemplateRequestWrapper | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_creative_template(get_creative_template_request_wrapper)
+        pprint(api_response)
+    except baiduads.ApiException as e:
+        print("Exception when calling CreativeService->get_creative_template: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **get_creative_template_request_wrapper** | [**GetCreativeTemplateRequestWrapper**](GetCreativeTemplateRequestWrapper.md)|  |
+
+### Return type
+
+[**GetCreativeTemplateResponseWrapper**](GetCreativeTemplateResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_creative**
 > UpdateCreativeResponseWrapper update_creative(update_creative_request_wrapper)
 
@@ -311,6 +394,12 @@ with baiduads.ApiClient() as api_client:
                     deeplink="deeplink_example",
                     mini_program_url="mini_program_url_example",
                     create_time="create_time_example",
+                    mobile_final_url="mobile_final_url_example",
+                    mobile_track_param="mobile_track_param_example",
+                    mobile_track_template="mobile_track_template_example",
+                    pc_final_url="pc_final_url_example",
+                    pc_track_param="pc_track_param_example",
+                    pc_track_template="pc_track_template_example",
                 ),
             ],
         ),

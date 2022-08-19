@@ -30,8 +30,10 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.danubecreativegroup.model.danube_material_type import DanubeMaterialType
+    from baiduads.danubecreativegroup.model.sub_account_info import SubAccountInfo
     from baiduads.danubecreativegroup.model.trade_vo import TradeVo
     globals()['DanubeMaterialType'] = DanubeMaterialType
+    globals()['SubAccountInfo'] = SubAccountInfo
     globals()['TradeVo'] = TradeVo
 
 
@@ -92,6 +94,8 @@ class ConstantResponse(ModelNormal):
             'trade_list': ([TradeVo],),  # noqa: E501
             'category_list': ([TradeVo],),  # noqa: E501
             'material_types': ([DanubeMaterialType],),  # noqa: E501
+            'slogans': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'sub_accounts': ([SubAccountInfo],),  # noqa: E501
         }
 
     @cached_property
@@ -104,6 +108,8 @@ class ConstantResponse(ModelNormal):
         'trade_list': 'tradeList',  # noqa: E501
         'category_list': 'categoryList',  # noqa: E501
         'material_types': 'materialTypes',  # noqa: E501
+        'slogans': 'slogans',  # noqa: E501
+        'sub_accounts': 'subAccounts',  # noqa: E501
     }
 
     read_only_vars = {
@@ -151,6 +157,8 @@ class ConstantResponse(ModelNormal):
             trade_list ([TradeVo]): [optional]  # noqa: E501
             category_list ([TradeVo]): [optional]  # noqa: E501
             material_types ([DanubeMaterialType]): [optional]  # noqa: E501
+            slogans (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            sub_accounts ([SubAccountInfo]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,6 +244,8 @@ class ConstantResponse(ModelNormal):
             trade_list ([TradeVo]): [optional]  # noqa: E501
             category_list ([TradeVo]): [optional]  # noqa: E501
             material_types ([DanubeMaterialType]): [optional]  # noqa: E501
+            slogans (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            sub_accounts ([SubAccountInfo]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

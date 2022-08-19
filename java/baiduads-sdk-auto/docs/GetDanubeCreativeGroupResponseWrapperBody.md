@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;PagedResponse&gt;**](PagedResponse.md) |  |  [optional]
+**data** | [**List&lt;DanubeCreativeGroupTypePagedResponse&gt;**](DanubeCreativeGroupTypePagedResponse.md) |  |  [optional]
 
 
 

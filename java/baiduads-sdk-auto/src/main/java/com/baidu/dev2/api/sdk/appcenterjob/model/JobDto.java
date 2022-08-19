@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.appcenterjob.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.appcenterjob.model.TreeNode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -49,7 +50,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   JobDto.JSON_PROPERTY_IS_COMMIT,
   JobDto.JSON_PROPERTY_AUTO_UPDATE,
   JobDto.JSON_PROPERTY_PRIVACY_PROTECTION_AGREEMENT,
-  JobDto.JSON_PROPERTY_TAGS
+  JobDto.JSON_PROPERTY_TAGS,
+  JobDto.JSON_PROPERTY_CATE_GORY_INFO
 })
 @JsonTypeName("JobDto")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -116,6 +118,9 @@ public class JobDto {
 
   public static final String JSON_PROPERTY_TAGS = "tags";
   private List<Integer> tags = null;
+
+  public static final String JSON_PROPERTY_CATE_GORY_INFO = "cateGoryInfo";
+  private List<TreeNode> cateGoryInfo = null;
 
   public JobDto() { 
   }
@@ -711,6 +716,41 @@ public class JobDto {
   }
 
 
+  public JobDto cateGoryInfo(List<TreeNode> cateGoryInfo) {
+    
+    this.cateGoryInfo = cateGoryInfo;
+    return this;
+  }
+
+  public JobDto addCateGoryInfoItem(TreeNode cateGoryInfoItem) {
+    if (this.cateGoryInfo == null) {
+      this.cateGoryInfo = new ArrayList<>();
+    }
+    this.cateGoryInfo.add(cateGoryInfoItem);
+    return this;
+  }
+
+   /**
+   * Get cateGoryInfo
+   * @return cateGoryInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CATE_GORY_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<TreeNode> getCateGoryInfo() {
+    return cateGoryInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CATE_GORY_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCateGoryInfo(List<TreeNode> cateGoryInfo) {
+    this.cateGoryInfo = cateGoryInfo;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -740,12 +780,13 @@ public class JobDto {
         Objects.equals(this.isCommit, jobDto.isCommit) &&
         Objects.equals(this.autoUpdate, jobDto.autoUpdate) &&
         Objects.equals(this.privacyProtectionAgreement, jobDto.privacyProtectionAgreement) &&
-        Objects.equals(this.tags, jobDto.tags);
+        Objects.equals(this.tags, jobDto.tags) &&
+        Objects.equals(this.cateGoryInfo, jobDto.cateGoryInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tpRefId, packageId, channelName, packageLink, appLogo, appScreenshots, appIntroduce, category, privateUrl, developerName, summary, copyright, licenceDesc, videoLink, videoPass, testAccount, testPwd, isCommit, autoUpdate, privacyProtectionAgreement, tags);
+    return Objects.hash(tpRefId, packageId, channelName, packageLink, appLogo, appScreenshots, appIntroduce, category, privateUrl, developerName, summary, copyright, licenceDesc, videoLink, videoPass, testAccount, testPwd, isCommit, autoUpdate, privacyProtectionAgreement, tags, cateGoryInfo);
   }
 
   @Override
@@ -773,6 +814,7 @@ public class JobDto {
     sb.append("    autoUpdate: ").append(toIndentedString(autoUpdate)).append("\n");
     sb.append("    privacyProtectionAgreement: ").append(toIndentedString(privacyProtectionAgreement)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
+    sb.append("    cateGoryInfo: ").append(toIndentedString(cateGoryInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

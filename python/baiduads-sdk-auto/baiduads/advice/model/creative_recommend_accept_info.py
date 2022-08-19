@@ -93,6 +93,12 @@ class CreativeRecommendAcceptInfo(ModelNormal):
             'filters': ([FieldFilter],),  # noqa: E501
             'pc_destination_url': (str,),  # noqa: E501
             'mobile_destination_url': (str,),  # noqa: E501
+            'mobile_final_url': (str,),  # noqa: E501
+            'mobile_track_param': (str,),  # noqa: E501
+            'mobile_track_template': (str,),  # noqa: E501
+            'pc_final_url': (str,),  # noqa: E501
+            'pc_track_param': (str,),  # noqa: E501
+            'pc_track_template': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +112,12 @@ class CreativeRecommendAcceptInfo(ModelNormal):
         'filters': 'filters',  # noqa: E501
         'pc_destination_url': 'pcDestinationUrl',  # noqa: E501
         'mobile_destination_url': 'mobileDestinationUrl',  # noqa: E501
+        'mobile_final_url': 'mobileFinalUrl',  # noqa: E501
+        'mobile_track_param': 'mobileTrackParam',  # noqa: E501
+        'mobile_track_template': 'mobileTrackTemplate',  # noqa: E501
+        'pc_final_url': 'pcFinalUrl',  # noqa: E501
+        'pc_track_param': 'pcTrackParam',  # noqa: E501
+        'pc_track_template': 'pcTrackTemplate',  # noqa: E501
     }
 
     read_only_vars = {
@@ -154,6 +166,12 @@ class CreativeRecommendAcceptInfo(ModelNormal):
             filters ([FieldFilter]): [optional]  # noqa: E501
             pc_destination_url (str): [optional]  # noqa: E501
             mobile_destination_url (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -240,6 +258,12 @@ class CreativeRecommendAcceptInfo(ModelNormal):
             filters ([FieldFilter]): [optional]  # noqa: E501
             pc_destination_url (str): [optional]  # noqa: E501
             mobile_destination_url (str): [optional]  # noqa: E501
+            mobile_final_url (str): [optional]  # noqa: E501
+            mobile_track_param (str): [optional]  # noqa: E501
+            mobile_track_template (str): [optional]  # noqa: E501
+            pc_final_url (str): [optional]  # noqa: E501
+            pc_track_param (str): [optional]  # noqa: E501
+            pc_track_template (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

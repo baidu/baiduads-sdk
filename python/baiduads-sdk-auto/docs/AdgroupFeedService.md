@@ -79,6 +79,8 @@ with baiduads.ApiClient() as api_client:
                     delivery_type=[
                         1,
                     ],
+                    unit_ocpx_status=1,
+                    unefficient_adgroup=1,
                 ),
             ],
         ),
@@ -338,6 +340,8 @@ with baiduads.ApiClient() as api_client:
                     delivery_type=[
                         1,
                     ],
+                    unit_ocpx_status=1,
+                    unefficient_adgroup=1,
                 ),
             ],
         ),

@@ -31,8 +31,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CrowdQueryRequest.JSON_PROPERTY_CROWD_FIELDS,
   CrowdQueryRequest.JSON_PROPERTY_CROWD_DIRECT_TYPE,
-  CrowdQueryRequest.JSON_PROPERTY_IDS,
-  CrowdQueryRequest.JSON_PROPERTY_ID_TYPE
+  CrowdQueryRequest.JSON_PROPERTY_LIMIT,
+  CrowdQueryRequest.JSON_PROPERTY_DESC
 })
 @JsonTypeName("CrowdQueryRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -43,11 +43,11 @@ public class CrowdQueryRequest {
   public static final String JSON_PROPERTY_CROWD_DIRECT_TYPE = "crowdDirectType";
   private List<Integer> crowdDirectType = null;
 
-  public static final String JSON_PROPERTY_IDS = "ids";
-  private List<Long> ids = null;
+  public static final String JSON_PROPERTY_LIMIT = "limit";
+  private List<Integer> limit = null;
 
-  public static final String JSON_PROPERTY_ID_TYPE = "idType";
-  private Integer idType;
+  public static final String JSON_PROPERTY_DESC = "desc";
+  private Boolean desc;
 
   public CrowdQueryRequest() { 
   }
@@ -122,65 +122,65 @@ public class CrowdQueryRequest {
   }
 
 
-  public CrowdQueryRequest ids(List<Long> ids) {
+  public CrowdQueryRequest limit(List<Integer> limit) {
     
-    this.ids = ids;
+    this.limit = limit;
     return this;
   }
 
-  public CrowdQueryRequest addIdsItem(Long idsItem) {
-    if (this.ids == null) {
-      this.ids = new ArrayList<>();
+  public CrowdQueryRequest addLimitItem(Integer limitItem) {
+    if (this.limit == null) {
+      this.limit = new ArrayList<>();
     }
-    this.ids.add(idsItem);
+    this.limit.add(limitItem);
     return this;
   }
 
    /**
-   * Get ids
-   * @return ids
+   * Get limit
+   * @return limit
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IDS)
+  @JsonProperty(JSON_PROPERTY_LIMIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<Long> getIds() {
-    return ids;
+  public List<Integer> getLimit() {
+    return limit;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IDS)
+  @JsonProperty(JSON_PROPERTY_LIMIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIds(List<Long> ids) {
-    this.ids = ids;
+  public void setLimit(List<Integer> limit) {
+    this.limit = limit;
   }
 
 
-  public CrowdQueryRequest idType(Integer idType) {
+  public CrowdQueryRequest desc(Boolean desc) {
     
-    this.idType = idType;
+    this.desc = desc;
     return this;
   }
 
    /**
-   * Get idType
-   * @return idType
+   * Get desc
+   * @return desc
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ID_TYPE)
+  @JsonProperty(JSON_PROPERTY_DESC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getIdType() {
-    return idType;
+  public Boolean getDesc() {
+    return desc;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ID_TYPE)
+  @JsonProperty(JSON_PROPERTY_DESC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIdType(Integer idType) {
-    this.idType = idType;
+  public void setDesc(Boolean desc) {
+    this.desc = desc;
   }
 
 
@@ -195,13 +195,13 @@ public class CrowdQueryRequest {
     CrowdQueryRequest crowdQueryRequest = (CrowdQueryRequest) o;
     return Objects.equals(this.crowdFields, crowdQueryRequest.crowdFields) &&
         Objects.equals(this.crowdDirectType, crowdQueryRequest.crowdDirectType) &&
-        Objects.equals(this.ids, crowdQueryRequest.ids) &&
-        Objects.equals(this.idType, crowdQueryRequest.idType);
+        Objects.equals(this.limit, crowdQueryRequest.limit) &&
+        Objects.equals(this.desc, crowdQueryRequest.desc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(crowdFields, crowdDirectType, ids, idType);
+    return Objects.hash(crowdFields, crowdDirectType, limit, desc);
   }
 
   @Override
@@ -210,8 +210,8 @@ public class CrowdQueryRequest {
     sb.append("class CrowdQueryRequest {\n");
     sb.append("    crowdFields: ").append(toIndentedString(crowdFields)).append("\n");
     sb.append("    crowdDirectType: ").append(toIndentedString(crowdDirectType)).append("\n");
-    sb.append("    ids: ").append(toIndentedString(ids)).append("\n");
-    sb.append("    idType: ").append(toIndentedString(idType)).append("\n");
+    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+    sb.append("    desc: ").append(toIndentedString(desc)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -19,8 +19,11 @@ Name | Type | Description | Notes
 **pause** | **Boolean** |  |  [optional]
 **status** | **Integer** |  |  [optional]
 **bstype** | **Integer** |  |  [optional]
+**campaignType** | **Integer** |  |  [optional]
 **addtime** | **String** |  |  [optional]
 **eshopType** | **String** |  |  [optional]
+**shadow** | [**AppInfoShadowType**](AppInfoShadowType.md) |  |  [optional]
+**rtaStatus** | **Integer** |  |  [optional]
 
 
 

@@ -33,8 +33,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PictureType.JSON_PROPERTY_DESC2,
   PictureType.JSON_PROPERTY_WIDTH,
   PictureType.JSON_PROPERTY_HEIGHT,
-  PictureType.JSON_PROPERTY_NA_URL,
-  PictureType.JSON_PROPERTY_PID,
   PictureType.JSON_PROPERTY_TARGET_URL
 })
 @JsonTypeName("PictureType")
@@ -57,12 +55,6 @@ public class PictureType {
 
   public static final String JSON_PROPERTY_HEIGHT = "height";
   private Integer height;
-
-  public static final String JSON_PROPERTY_NA_URL = "naUrl";
-  private String naUrl;
-
-  public static final String JSON_PROPERTY_PID = "pid";
-  private Long pid;
 
   public static final String JSON_PROPERTY_TARGET_URL = "targetUrl";
   private Long targetUrl;
@@ -232,60 +224,6 @@ public class PictureType {
   }
 
 
-  public PictureType naUrl(String naUrl) {
-    
-    this.naUrl = naUrl;
-    return this;
-  }
-
-   /**
-   * Get naUrl
-   * @return naUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_NA_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getNaUrl() {
-    return naUrl;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_NA_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNaUrl(String naUrl) {
-    this.naUrl = naUrl;
-  }
-
-
-  public PictureType pid(Long pid) {
-    
-    this.pid = pid;
-    return this;
-  }
-
-   /**
-   * Get pid
-   * @return pid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getPid() {
-    return pid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPid(Long pid) {
-    this.pid = pid;
-  }
-
-
   public PictureType targetUrl(Long targetUrl) {
     
     this.targetUrl = targetUrl;
@@ -328,14 +266,12 @@ public class PictureType {
         Objects.equals(this.desc2, pictureType.desc2) &&
         Objects.equals(this.width, pictureType.width) &&
         Objects.equals(this.height, pictureType.height) &&
-        Objects.equals(this.naUrl, pictureType.naUrl) &&
-        Objects.equals(this.pid, pictureType.pid) &&
         Objects.equals(this.targetUrl, pictureType.targetUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(image, url, desc1, desc2, width, height, naUrl, pid, targetUrl);
+    return Objects.hash(image, url, desc1, desc2, width, height, targetUrl);
   }
 
   @Override
@@ -348,8 +284,6 @@ public class PictureType {
     sb.append("    desc2: ").append(toIndentedString(desc2)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    naUrl: ").append(toIndentedString(naUrl)).append("\n");
-    sb.append("    pid: ").append(toIndentedString(pid)).append("\n");
     sb.append("    targetUrl: ").append(toIndentedString(targetUrl)).append("\n");
     sb.append("}");
     return sb.toString();

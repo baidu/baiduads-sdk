@@ -5,15 +5,15 @@
   <parent>
     <groupId>com.baidu.dev2</groupId>
     <artifactId>baiduads-sdk-parent</artifactId>
-    <version>2022.3.0</version>
+    <version>2022.4.0-SNAPSHOT</version>
   </parent>
   <artifactId>baiduads-sdk</artifactId>
-  <version>2022.3.0</version>
+  <version>2022.4.0-SNAPSHOT</version>
   <dependencies>
     <dependency>
       <groupId>com.baidu.dev2</groupId>
       <artifactId>baiduads-sdk-auto</artifactId>
-      <version>2022.3.0</version>
+      <version>2022.4.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

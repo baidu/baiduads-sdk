@@ -82,8 +82,8 @@ class CrowdQueryRequest(ModelNormal):
         return {
             'crowd_fields': ([str],),  # noqa: E501
             'crowd_direct_type': ([int],),  # noqa: E501
-            'ids': ([int],),  # noqa: E501
-            'id_type': (int,),  # noqa: E501
+            'limit': ([int],),  # noqa: E501
+            'desc': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -94,8 +94,8 @@ class CrowdQueryRequest(ModelNormal):
     attribute_map = {
         'crowd_fields': 'crowdFields',  # noqa: E501
         'crowd_direct_type': 'crowdDirectType',  # noqa: E501
-        'ids': 'ids',  # noqa: E501
-        'id_type': 'idType',  # noqa: E501
+        'limit': 'limit',  # noqa: E501
+        'desc': 'desc',  # noqa: E501
     }
 
     read_only_vars = {
@@ -141,8 +141,8 @@ class CrowdQueryRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             crowd_fields ([str]): [optional]  # noqa: E501
             crowd_direct_type ([int]): [optional]  # noqa: E501
-            ids ([int]): [optional]  # noqa: E501
-            id_type (int): [optional]  # noqa: E501
+            limit ([int]): [optional]  # noqa: E501
+            desc (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,8 +226,8 @@ class CrowdQueryRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             crowd_fields ([str]): [optional]  # noqa: E501
             crowd_direct_type ([int]): [optional]  # noqa: E501
-            ids ([int]): [optional]  # noqa: E501
-            id_type (int): [optional]  # noqa: E501
+            limit ([int]): [optional]  # noqa: E501
+            desc (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

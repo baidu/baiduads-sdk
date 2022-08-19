@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **approvemsgnew** | **String** |  |  [optional]
 **auditTimeModel** | [**AuditTimeModel**](AuditTimeModel.md) |  |  [optional]
 **attributeList** | **Integer** |  |  [optional]
+**template** | [**PaIdeaTemplate**](PaIdeaTemplate.md) |  |  [optional]
+**huitus** | **List&lt;Long&gt;** |  |  [optional]
 
 
 

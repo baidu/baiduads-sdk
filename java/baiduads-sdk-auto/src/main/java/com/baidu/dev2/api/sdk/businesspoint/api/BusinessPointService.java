@@ -20,6 +20,8 @@ import com.baidu.dev2.api.sdk.invoke.Pair;
 
 import com.baidu.dev2.api.sdk.businesspoint.model.GetAllBusinessPointRequestWrapper;
 import com.baidu.dev2.api.sdk.businesspoint.model.GetAllBusinessPointResponseWrapper;
+import com.baidu.dev2.api.sdk.businesspoint.model.GetBindBusinessPointListRequestWrapper;
+import com.baidu.dev2.api.sdk.businesspoint.model.GetBindBusinessPointListResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -89,6 +91,63 @@ public class BusinessPointService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetAllBusinessPointResponseWrapper> localVarReturnType = new TypeReference<GetAllBusinessPointResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param getBindBusinessPointListRequestWrapper  (required)
+   * @return GetBindBusinessPointListResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetBindBusinessPointListResponseWrapper getBindBusinessPointList(GetBindBusinessPointListRequestWrapper getBindBusinessPointListRequestWrapper) throws ApiException {
+    Object localVarPostBody = getBindBusinessPointListRequestWrapper;
+    
+    // verify the required parameter 'getBindBusinessPointListRequestWrapper' is set
+    if (getBindBusinessPointListRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getBindBusinessPointListRequestWrapper' when calling getBindBusinessPointList");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/BusinessPointService/getBindBusinessPointList";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetBindBusinessPointListResponseWrapper> localVarReturnType = new TypeReference<GetBindBusinessPointListResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

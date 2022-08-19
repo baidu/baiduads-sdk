@@ -31,8 +31,16 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.danubecreativegroup.model.danube_category_creative import DanubeCategoryCreative
     from baiduads.danubecreativegroup.model.danube_image_creative import DanubeImageCreative
+    from baiduads.danubecreativegroup.model.danube_list_creative import DanubeListCreative
+    from baiduads.danubecreativegroup.model.danube_plas_creative import DanubePlasCreative
+    from baiduads.danubecreativegroup.model.danube_select_list_creative import DanubeSelectListCreative
+    from baiduads.danubecreativegroup.model.danube_text_list_creative import DanubeTextListCreative
     globals()['DanubeCategoryCreative'] = DanubeCategoryCreative
     globals()['DanubeImageCreative'] = DanubeImageCreative
+    globals()['DanubeListCreative'] = DanubeListCreative
+    globals()['DanubePlasCreative'] = DanubePlasCreative
+    globals()['DanubeSelectListCreative'] = DanubeSelectListCreative
+    globals()['DanubeTextListCreative'] = DanubeTextListCreative
 
 
 class DanubeCreativeComponent(ModelNormal):
@@ -88,8 +96,12 @@ class DanubeCreativeComponent(ModelNormal):
         """
         lazy_import()
         return {
+            'select_list': ([DanubeSelectListCreative],),  # noqa: E501
+            'plas': ([DanubePlasCreative],),  # noqa: E501
             'category': ([DanubeCategoryCreative],),  # noqa: E501
             'image': ([DanubeImageCreative],),  # noqa: E501
+            'text_list': ([DanubeTextListCreative],),  # noqa: E501
+            'list': ([DanubeListCreative],),  # noqa: E501
         }
 
     @cached_property
@@ -98,8 +110,12 @@ class DanubeCreativeComponent(ModelNormal):
 
 
     attribute_map = {
+        'select_list': 'selectList',  # noqa: E501
+        'plas': 'plas',  # noqa: E501
         'category': 'category',  # noqa: E501
         'image': 'image',  # noqa: E501
+        'text_list': 'textList',  # noqa: E501
+        'list': 'list',  # noqa: E501
     }
 
     read_only_vars = {
@@ -143,8 +159,12 @@ class DanubeCreativeComponent(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            select_list ([DanubeSelectListCreative]): [optional]  # noqa: E501
+            plas ([DanubePlasCreative]): [optional]  # noqa: E501
             category ([DanubeCategoryCreative]): [optional]  # noqa: E501
             image ([DanubeImageCreative]): [optional]  # noqa: E501
+            text_list ([DanubeTextListCreative]): [optional]  # noqa: E501
+            list ([DanubeListCreative]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,8 +246,12 @@ class DanubeCreativeComponent(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            select_list ([DanubeSelectListCreative]): [optional]  # noqa: E501
+            plas ([DanubePlasCreative]): [optional]  # noqa: E501
             category ([DanubeCategoryCreative]): [optional]  # noqa: E501
             image ([DanubeImageCreative]): [optional]  # noqa: E501
+            text_list ([DanubeTextListCreative]): [optional]  # noqa: E501
+            list ([DanubeListCreative]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

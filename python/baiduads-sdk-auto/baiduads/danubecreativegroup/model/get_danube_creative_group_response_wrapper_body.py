@@ -29,8 +29,8 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.danubecreativegroup.model.paged_response import PagedResponse
-    globals()['PagedResponse'] = PagedResponse
+    from baiduads.danubecreativegroup.model.danube_creative_group_type_paged_response import DanubeCreativeGroupTypePagedResponse
+    globals()['DanubeCreativeGroupTypePagedResponse'] = DanubeCreativeGroupTypePagedResponse
 
 
 class GetDanubeCreativeGroupResponseWrapperBody(ModelNormal):
@@ -86,7 +86,7 @@ class GetDanubeCreativeGroupResponseWrapperBody(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([PagedResponse],),  # noqa: E501
+            'data': ([DanubeCreativeGroupTypePagedResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -139,7 +139,7 @@ class GetDanubeCreativeGroupResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([PagedResponse]): [optional]  # noqa: E501
+            data ([DanubeCreativeGroupTypePagedResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,7 +221,7 @@ class GetDanubeCreativeGroupResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([PagedResponse]): [optional]  # noqa: E501
+            data ([DanubeCreativeGroupTypePagedResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

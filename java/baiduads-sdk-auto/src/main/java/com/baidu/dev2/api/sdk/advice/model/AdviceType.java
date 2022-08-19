@@ -13,7 +13,6 @@ package com.baidu.dev2.api.sdk.advice.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advice.model.AdviceContent;
 import com.baidu.dev2.api.sdk.advice.model.PredictEffect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -38,12 +37,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdviceType.JSON_PROPERTY_DETAIL_LOGIC_DESC,
   AdviceType.JSON_PROPERTY_EFFECT,
   AdviceType.JSON_PROPERTY_HAVE_DETAIL_PAGE,
-  AdviceType.JSON_PROPERTY_CONTENT,
   AdviceType.JSON_PROPERTY_OPERATIONS,
   AdviceType.JSON_PROPERTY_ATTRIBUTES,
   AdviceType.JSON_PROPERTY_SETTINGS,
-  AdviceType.JSON_PROPERTY_DATA_SOURCE_TYPE,
-  AdviceType.JSON_PROPERTY_ADVICE_ID,
   AdviceType.JSON_PROPERTY_ADVICE_KEY
 })
 @JsonTypeName("AdviceType")
@@ -70,9 +66,6 @@ public class AdviceType {
   public static final String JSON_PROPERTY_HAVE_DETAIL_PAGE = "haveDetailPage";
   private Boolean haveDetailPage;
 
-  public static final String JSON_PROPERTY_CONTENT = "content";
-  private AdviceContent content;
-
   public static final String JSON_PROPERTY_OPERATIONS = "operations";
   private List<Integer> operations = null;
 
@@ -81,12 +74,6 @@ public class AdviceType {
 
   public static final String JSON_PROPERTY_SETTINGS = "settings";
   private java.util.HashMap settings;
-
-  public static final String JSON_PROPERTY_DATA_SOURCE_TYPE = "dataSourceType";
-  private Integer dataSourceType;
-
-  public static final String JSON_PROPERTY_ADVICE_ID = "adviceId";
-  private Long adviceId;
 
   public static final String JSON_PROPERTY_ADVICE_KEY = "adviceKey";
   private String adviceKey;
@@ -283,33 +270,6 @@ public class AdviceType {
   }
 
 
-  public AdviceType content(AdviceContent content) {
-    
-    this.content = content;
-    return this;
-  }
-
-   /**
-   * Get content
-   * @return content
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CONTENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public AdviceContent getContent() {
-    return content;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CONTENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContent(AdviceContent content) {
-    this.content = content;
-  }
-
-
   public AdviceType operations(List<Integer> operations) {
     
     this.operations = operations;
@@ -399,60 +359,6 @@ public class AdviceType {
   }
 
 
-  public AdviceType dataSourceType(Integer dataSourceType) {
-    
-    this.dataSourceType = dataSourceType;
-    return this;
-  }
-
-   /**
-   * Get dataSourceType
-   * @return dataSourceType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DATA_SOURCE_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDataSourceType() {
-    return dataSourceType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DATA_SOURCE_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataSourceType(Integer dataSourceType) {
-    this.dataSourceType = dataSourceType;
-  }
-
-
-  public AdviceType adviceId(Long adviceId) {
-    
-    this.adviceId = adviceId;
-    return this;
-  }
-
-   /**
-   * Get adviceId
-   * @return adviceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getAdviceId() {
-    return adviceId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdviceId(Long adviceId) {
-    this.adviceId = adviceId;
-  }
-
-
   public AdviceType adviceKey(String adviceKey) {
     
     this.adviceKey = adviceKey;
@@ -496,18 +402,15 @@ public class AdviceType {
         Objects.equals(this.detailLogicDesc, adviceType.detailLogicDesc) &&
         Objects.equals(this.effect, adviceType.effect) &&
         Objects.equals(this.haveDetailPage, adviceType.haveDetailPage) &&
-        Objects.equals(this.content, adviceType.content) &&
         Objects.equals(this.operations, adviceType.operations) &&
         Objects.equals(this.attributes, adviceType.attributes) &&
         Objects.equals(this.settings, adviceType.settings) &&
-        Objects.equals(this.dataSourceType, adviceType.dataSourceType) &&
-        Objects.equals(this.adviceId, adviceType.adviceId) &&
         Objects.equals(this.adviceKey, adviceType.adviceKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adviceType, adviceName, adviceOutline, logicDesc, detailLogicDesc, effect, haveDetailPage, content, operations, attributes, settings, dataSourceType, adviceId, adviceKey);
+    return Objects.hash(adviceType, adviceName, adviceOutline, logicDesc, detailLogicDesc, effect, haveDetailPage, operations, attributes, settings, adviceKey);
   }
 
   @Override
@@ -521,12 +424,9 @@ public class AdviceType {
     sb.append("    detailLogicDesc: ").append(toIndentedString(detailLogicDesc)).append("\n");
     sb.append("    effect: ").append(toIndentedString(effect)).append("\n");
     sb.append("    haveDetailPage: ").append(toIndentedString(haveDetailPage)).append("\n");
-    sb.append("    content: ").append(toIndentedString(content)).append("\n");
     sb.append("    operations: ").append(toIndentedString(operations)).append("\n");
     sb.append("    attributes: ").append(toIndentedString(attributes)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");
-    sb.append("    dataSourceType: ").append(toIndentedString(dataSourceType)).append("\n");
-    sb.append("    adviceId: ").append(toIndentedString(adviceId)).append("\n");
     sb.append("    adviceKey: ").append(toIndentedString(adviceKey)).append("\n");
     sb.append("}");
     return sb.toString();

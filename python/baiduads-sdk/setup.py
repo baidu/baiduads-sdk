@@ -4,8 +4,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "baiduads-sdk"
-VERSION = "2022.3.0"
+NAME = "baiduads-sdk-snapshot"
+VERSION = "2022.4.0"
 # To install the library, run the following
 #
 # python setup.py install

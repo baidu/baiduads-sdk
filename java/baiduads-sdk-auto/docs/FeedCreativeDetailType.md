@@ -32,7 +32,6 @@ Name | Type | Description | Notes
 **template** | [**PaIdeaTemplateType**](PaIdeaTemplateType.md) |  |  [optional]
 **paIdeaJson** | **String** |  |  [optional]
 **newCreativeFeedId** | **Long** |  |  [optional]
-**materialStyleWeb** | **Integer** |  |  [optional]
 
 
 

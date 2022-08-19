@@ -24,6 +24,12 @@ Name | Type | Description | Notes
 **monitorUrl** | **String** |  |  [optional]
 **createTime** | **String** |  |  [optional]
 **adgroupAutoTargetingStatus** | **Boolean** |  |  [optional]
+**pcFinalUrl** | **String** |  |  [optional]
+**pcTrackParam** | **String** |  |  [optional]
+**pcTrackTemplate** | **String** |  |  [optional]
+**mobileFinalUrl** | **String** |  |  [optional]
+**mobileTrackParam** | **String** |  |  [optional]
+**mobileTrackTemplate** | **String** |  |  [optional]
 
 
 

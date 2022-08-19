@@ -52,7 +52,14 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiKeywordType.JSON_PROPERTY_ESTIMATED_CLICK_RATE,
   ApiKeywordType.JSON_PROPERTY_BUSINESS_RELATIONSHIP,
   ApiKeywordType.JSON_PROPERTY_LAND_PAGE_EXPERIENCE,
-  ApiKeywordType.JSON_PROPERTY_CREATE_TIME
+  ApiKeywordType.JSON_PROPERTY_CREATE_TIME,
+  ApiKeywordType.JSON_PROPERTY_MOBILE_FINAL_URL,
+  ApiKeywordType.JSON_PROPERTY_MOBILE_TRACK_PARAM,
+  ApiKeywordType.JSON_PROPERTY_MOBILE_TRACK_TEMPLATE,
+  ApiKeywordType.JSON_PROPERTY_PC_FINAL_URL,
+  ApiKeywordType.JSON_PROPERTY_PC_TRACK_PARAM,
+  ApiKeywordType.JSON_PROPERTY_PC_TRACK_TEMPLATE,
+  ApiKeywordType.JSON_PROPERTY_ULINK
 })
 @JsonTypeName("ApiKeywordType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -125,6 +132,27 @@ public class ApiKeywordType {
 
   public static final String JSON_PROPERTY_CREATE_TIME = "createTime";
   private String createTime;
+
+  public static final String JSON_PROPERTY_MOBILE_FINAL_URL = "mobileFinalUrl";
+  private String mobileFinalUrl;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_PARAM = "mobileTrackParam";
+  private String mobileTrackParam;
+
+  public static final String JSON_PROPERTY_MOBILE_TRACK_TEMPLATE = "mobileTrackTemplate";
+  private String mobileTrackTemplate;
+
+  public static final String JSON_PROPERTY_PC_FINAL_URL = "pcFinalUrl";
+  private String pcFinalUrl;
+
+  public static final String JSON_PROPERTY_PC_TRACK_PARAM = "pcTrackParam";
+  private String pcTrackParam;
+
+  public static final String JSON_PROPERTY_PC_TRACK_TEMPLATE = "pcTrackTemplate";
+  private String pcTrackTemplate;
+
+  public static final String JSON_PROPERTY_ULINK = "ulink";
+  private String ulink;
 
   public ApiKeywordType() { 
   }
@@ -766,6 +794,195 @@ public class ApiKeywordType {
   }
 
 
+  public ApiKeywordType mobileFinalUrl(String mobileFinalUrl) {
+    
+    this.mobileFinalUrl = mobileFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get mobileFinalUrl
+   * @return mobileFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileFinalUrl() {
+    return mobileFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileFinalUrl(String mobileFinalUrl) {
+    this.mobileFinalUrl = mobileFinalUrl;
+  }
+
+
+  public ApiKeywordType mobileTrackParam(String mobileTrackParam) {
+    
+    this.mobileTrackParam = mobileTrackParam;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackParam
+   * @return mobileTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackParam() {
+    return mobileTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackParam(String mobileTrackParam) {
+    this.mobileTrackParam = mobileTrackParam;
+  }
+
+
+  public ApiKeywordType mobileTrackTemplate(String mobileTrackTemplate) {
+    
+    this.mobileTrackTemplate = mobileTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get mobileTrackTemplate
+   * @return mobileTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMobileTrackTemplate() {
+    return mobileTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MOBILE_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMobileTrackTemplate(String mobileTrackTemplate) {
+    this.mobileTrackTemplate = mobileTrackTemplate;
+  }
+
+
+  public ApiKeywordType pcFinalUrl(String pcFinalUrl) {
+    
+    this.pcFinalUrl = pcFinalUrl;
+    return this;
+  }
+
+   /**
+   * Get pcFinalUrl
+   * @return pcFinalUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcFinalUrl() {
+    return pcFinalUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_FINAL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcFinalUrl(String pcFinalUrl) {
+    this.pcFinalUrl = pcFinalUrl;
+  }
+
+
+  public ApiKeywordType pcTrackParam(String pcTrackParam) {
+    
+    this.pcTrackParam = pcTrackParam;
+    return this;
+  }
+
+   /**
+   * Get pcTrackParam
+   * @return pcTrackParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackParam() {
+    return pcTrackParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackParam(String pcTrackParam) {
+    this.pcTrackParam = pcTrackParam;
+  }
+
+
+  public ApiKeywordType pcTrackTemplate(String pcTrackTemplate) {
+    
+    this.pcTrackTemplate = pcTrackTemplate;
+    return this;
+  }
+
+   /**
+   * Get pcTrackTemplate
+   * @return pcTrackTemplate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPcTrackTemplate() {
+    return pcTrackTemplate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PC_TRACK_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPcTrackTemplate(String pcTrackTemplate) {
+    this.pcTrackTemplate = pcTrackTemplate;
+  }
+
+
+  public ApiKeywordType ulink(String ulink) {
+    
+    this.ulink = ulink;
+    return this;
+  }
+
+   /**
+   * Get ulink
+   * @return ulink
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ULINK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getUlink() {
+    return ulink;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ULINK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUlink(String ulink) {
+    this.ulink = ulink;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -797,12 +1014,19 @@ public class ApiKeywordType {
         Objects.equals(this.estimatedClickRate, apiKeywordType.estimatedClickRate) &&
         Objects.equals(this.businessRelationship, apiKeywordType.businessRelationship) &&
         Objects.equals(this.landPageExperience, apiKeywordType.landPageExperience) &&
-        Objects.equals(this.createTime, apiKeywordType.createTime);
+        Objects.equals(this.createTime, apiKeywordType.createTime) &&
+        Objects.equals(this.mobileFinalUrl, apiKeywordType.mobileFinalUrl) &&
+        Objects.equals(this.mobileTrackParam, apiKeywordType.mobileTrackParam) &&
+        Objects.equals(this.mobileTrackTemplate, apiKeywordType.mobileTrackTemplate) &&
+        Objects.equals(this.pcFinalUrl, apiKeywordType.pcFinalUrl) &&
+        Objects.equals(this.pcTrackParam, apiKeywordType.pcTrackParam) &&
+        Objects.equals(this.pcTrackTemplate, apiKeywordType.pcTrackTemplate) &&
+        Objects.equals(this.ulink, apiKeywordType.ulink);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, keywordId, adgroupId, keyword, price, matchType, pause, status, pcDestinationUrl, mobileDestinationUrl, phraseType, offlineReasons, tabs, leftPriceGuide, mPriceGuide, deeplink, miniProgramUrl, strategyId, quality, estimatedClickRate, businessRelationship, landPageExperience, createTime);
+    return Objects.hash(campaignId, keywordId, adgroupId, keyword, price, matchType, pause, status, pcDestinationUrl, mobileDestinationUrl, phraseType, offlineReasons, tabs, leftPriceGuide, mPriceGuide, deeplink, miniProgramUrl, strategyId, quality, estimatedClickRate, businessRelationship, landPageExperience, createTime, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, pcFinalUrl, pcTrackParam, pcTrackTemplate, ulink);
   }
 
   @Override
@@ -832,6 +1056,13 @@ public class ApiKeywordType {
     sb.append("    businessRelationship: ").append(toIndentedString(businessRelationship)).append("\n");
     sb.append("    landPageExperience: ").append(toIndentedString(landPageExperience)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+    sb.append("    mobileFinalUrl: ").append(toIndentedString(mobileFinalUrl)).append("\n");
+    sb.append("    mobileTrackParam: ").append(toIndentedString(mobileTrackParam)).append("\n");
+    sb.append("    mobileTrackTemplate: ").append(toIndentedString(mobileTrackTemplate)).append("\n");
+    sb.append("    pcFinalUrl: ").append(toIndentedString(pcFinalUrl)).append("\n");
+    sb.append("    pcTrackParam: ").append(toIndentedString(pcTrackParam)).append("\n");
+    sb.append("    pcTrackTemplate: ").append(toIndentedString(pcTrackTemplate)).append("\n");
+    sb.append("    ulink: ").append(toIndentedString(ulink)).append("\n");
     sb.append("}");
     return sb.toString();
   }

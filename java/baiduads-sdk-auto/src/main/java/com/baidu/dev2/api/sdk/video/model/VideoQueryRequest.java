@@ -31,7 +31,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   VideoQueryRequest.JSON_PROPERTY_IDS,
   VideoQueryRequest.JSON_PROPERTY_PAGE_SIZE,
-  VideoQueryRequest.JSON_PROPERTY_PAGE_NO
+  VideoQueryRequest.JSON_PROPERTY_PAGE_NO,
+  VideoQueryRequest.JSON_PROPERTY_VIDEO_NAME,
+  VideoQueryRequest.JSON_PROPERTY_CHANNEL,
+  VideoQueryRequest.JSON_PROPERTY_SOURCE,
+  VideoQueryRequest.JSON_PROPERTY_START_DATE,
+  VideoQueryRequest.JSON_PROPERTY_END_DATE,
+  VideoQueryRequest.JSON_PROPERTY_ORDER
 })
 @JsonTypeName("VideoQueryRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -44,6 +50,24 @@ public class VideoQueryRequest {
 
   public static final String JSON_PROPERTY_PAGE_NO = "pageNo";
   private Integer pageNo;
+
+  public static final String JSON_PROPERTY_VIDEO_NAME = "videoName";
+  private String videoName;
+
+  public static final String JSON_PROPERTY_CHANNEL = "channel";
+  private String channel;
+
+  public static final String JSON_PROPERTY_SOURCE = "source";
+  private String source;
+
+  public static final String JSON_PROPERTY_START_DATE = "startDate";
+  private String startDate;
+
+  public static final String JSON_PROPERTY_END_DATE = "endDate";
+  private String endDate;
+
+  public static final String JSON_PROPERTY_ORDER = "order";
+  private String order;
 
   public VideoQueryRequest() { 
   }
@@ -137,6 +161,168 @@ public class VideoQueryRequest {
   }
 
 
+  public VideoQueryRequest videoName(String videoName) {
+    
+    this.videoName = videoName;
+    return this;
+  }
+
+   /**
+   * Get videoName
+   * @return videoName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getVideoName() {
+    return videoName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setVideoName(String videoName) {
+    this.videoName = videoName;
+  }
+
+
+  public VideoQueryRequest channel(String channel) {
+    
+    this.channel = channel;
+    return this;
+  }
+
+   /**
+   * Get channel
+   * @return channel
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CHANNEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getChannel() {
+    return channel;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CHANNEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setChannel(String channel) {
+    this.channel = channel;
+  }
+
+
+  public VideoQueryRequest source(String source) {
+    
+    this.source = source;
+    return this;
+  }
+
+   /**
+   * Get source
+   * @return source
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getSource() {
+    return source;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+
+  public VideoQueryRequest startDate(String startDate) {
+    
+    this.startDate = startDate;
+    return this;
+  }
+
+   /**
+   * Get startDate
+   * @return startDate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getStartDate() {
+    return startDate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setStartDate(String startDate) {
+    this.startDate = startDate;
+  }
+
+
+  public VideoQueryRequest endDate(String endDate) {
+    
+    this.endDate = endDate;
+    return this;
+  }
+
+   /**
+   * Get endDate
+   * @return endDate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getEndDate() {
+    return endDate;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
+  }
+
+
+  public VideoQueryRequest order(String order) {
+    
+    this.order = order;
+    return this;
+  }
+
+   /**
+   * Get order
+   * @return order
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ORDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getOrder() {
+    return order;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ORDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOrder(String order) {
+    this.order = order;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -148,12 +334,18 @@ public class VideoQueryRequest {
     VideoQueryRequest videoQueryRequest = (VideoQueryRequest) o;
     return Objects.equals(this.ids, videoQueryRequest.ids) &&
         Objects.equals(this.pageSize, videoQueryRequest.pageSize) &&
-        Objects.equals(this.pageNo, videoQueryRequest.pageNo);
+        Objects.equals(this.pageNo, videoQueryRequest.pageNo) &&
+        Objects.equals(this.videoName, videoQueryRequest.videoName) &&
+        Objects.equals(this.channel, videoQueryRequest.channel) &&
+        Objects.equals(this.source, videoQueryRequest.source) &&
+        Objects.equals(this.startDate, videoQueryRequest.startDate) &&
+        Objects.equals(this.endDate, videoQueryRequest.endDate) &&
+        Objects.equals(this.order, videoQueryRequest.order);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ids, pageSize, pageNo);
+    return Objects.hash(ids, pageSize, pageNo, videoName, channel, source, startDate, endDate, order);
   }
 
   @Override
@@ -163,6 +355,12 @@ public class VideoQueryRequest {
     sb.append("    ids: ").append(toIndentedString(ids)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    pageNo: ").append(toIndentedString(pageNo)).append("\n");
+    sb.append("    videoName: ").append(toIndentedString(videoName)).append("\n");
+    sb.append("    channel: ").append(toIndentedString(channel)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
+    sb.append("    order: ").append(toIndentedString(order)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -33,7 +33,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ChangedItemIdType.JSON_PROPERTY_ADGROUP_ID,
   ChangedItemIdType.JSON_PROPERTY_CAMPAIGN_ID,
   ChangedItemIdType.JSON_PROPERTY_BUSINESS_LABEL_ID,
-  ChangedItemIdType.JSON_PROPERTY_AUTO_EXPANSION_ID
+  ChangedItemIdType.JSON_PROPERTY_AUTO_EXPANSION_ID,
+  ChangedItemIdType.JSON_PROPERTY_CAMPAIGN_FEED_ID,
+  ChangedItemIdType.JSON_PROPERTY_ADGROUP_FEED_ID,
+  ChangedItemIdType.JSON_PROPERTY_CREATIVE_FEED_ID
 })
 @JsonTypeName("ChangedItemIdType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -58,6 +61,15 @@ public class ChangedItemIdType {
 
   public static final String JSON_PROPERTY_AUTO_EXPANSION_ID = "autoExpansionId";
   private Long autoExpansionId;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_FEED_ID = "campaignFeedId";
+  private Long campaignFeedId;
+
+  public static final String JSON_PROPERTY_ADGROUP_FEED_ID = "adgroupFeedId";
+  private Long adgroupFeedId;
+
+  public static final String JSON_PROPERTY_CREATIVE_FEED_ID = "creativeFeedId";
+  private Long creativeFeedId;
 
   public ChangedItemIdType() { 
   }
@@ -251,6 +263,87 @@ public class ChangedItemIdType {
   }
 
 
+  public ChangedItemIdType campaignFeedId(Long campaignFeedId) {
+    
+    this.campaignFeedId = campaignFeedId;
+    return this;
+  }
+
+   /**
+   * Get campaignFeedId
+   * @return campaignFeedId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCampaignFeedId() {
+    return campaignFeedId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignFeedId(Long campaignFeedId) {
+    this.campaignFeedId = campaignFeedId;
+  }
+
+
+  public ChangedItemIdType adgroupFeedId(Long adgroupFeedId) {
+    
+    this.adgroupFeedId = adgroupFeedId;
+    return this;
+  }
+
+   /**
+   * Get adgroupFeedId
+   * @return adgroupFeedId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ADGROUP_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getAdgroupFeedId() {
+    return adgroupFeedId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ADGROUP_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAdgroupFeedId(Long adgroupFeedId) {
+    this.adgroupFeedId = adgroupFeedId;
+  }
+
+
+  public ChangedItemIdType creativeFeedId(Long creativeFeedId) {
+    
+    this.creativeFeedId = creativeFeedId;
+    return this;
+  }
+
+   /**
+   * Get creativeFeedId
+   * @return creativeFeedId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CREATIVE_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCreativeFeedId() {
+    return creativeFeedId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CREATIVE_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCreativeFeedId(Long creativeFeedId) {
+    this.creativeFeedId = creativeFeedId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -266,12 +359,15 @@ public class ChangedItemIdType {
         Objects.equals(this.adgroupId, changedItemIdType.adgroupId) &&
         Objects.equals(this.campaignId, changedItemIdType.campaignId) &&
         Objects.equals(this.businessLabelId, changedItemIdType.businessLabelId) &&
-        Objects.equals(this.autoExpansionId, changedItemIdType.autoExpansionId);
+        Objects.equals(this.autoExpansionId, changedItemIdType.autoExpansionId) &&
+        Objects.equals(this.campaignFeedId, changedItemIdType.campaignFeedId) &&
+        Objects.equals(this.adgroupFeedId, changedItemIdType.adgroupFeedId) &&
+        Objects.equals(this.creativeFeedId, changedItemIdType.creativeFeedId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(operator, creativeId, keywordId, adgroupId, campaignId, businessLabelId, autoExpansionId);
+    return Objects.hash(operator, creativeId, keywordId, adgroupId, campaignId, businessLabelId, autoExpansionId, campaignFeedId, adgroupFeedId, creativeFeedId);
   }
 
   @Override
@@ -285,6 +381,9 @@ public class ChangedItemIdType {
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    businessLabelId: ").append(toIndentedString(businessLabelId)).append("\n");
     sb.append("    autoExpansionId: ").append(toIndentedString(autoExpansionId)).append("\n");
+    sb.append("    campaignFeedId: ").append(toIndentedString(campaignFeedId)).append("\n");
+    sb.append("    adgroupFeedId: ").append(toIndentedString(adgroupFeedId)).append("\n");
+    sb.append("    creativeFeedId: ").append(toIndentedString(creativeFeedId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

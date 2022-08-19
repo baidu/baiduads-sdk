@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.danubecreativegroup.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.danubecreativegroup.model.PagedResponse;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeCreativeGroupTypePagedResponse;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -36,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetDanubeCreativeGroupResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";
-  private List<PagedResponse> data = null;
+  private List<DanubeCreativeGroupTypePagedResponse> data = null;
 
   public GetDanubeCreativeGroupResponseWrapperBody() { 
   }
 
-  public GetDanubeCreativeGroupResponseWrapperBody data(List<PagedResponse> data) {
+  public GetDanubeCreativeGroupResponseWrapperBody data(List<DanubeCreativeGroupTypePagedResponse> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetDanubeCreativeGroupResponseWrapperBody addDataItem(PagedResponse dataItem) {
+  public GetDanubeCreativeGroupResponseWrapperBody addDataItem(DanubeCreativeGroupTypePagedResponse dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -64,14 +64,14 @@ public class GetDanubeCreativeGroupResponseWrapperBody {
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<PagedResponse> getData() {
+  public List<DanubeCreativeGroupTypePagedResponse> getData() {
     return data;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(List<PagedResponse> data) {
+  public void setData(List<DanubeCreativeGroupTypePagedResponse> data) {
     this.data = data;
   }
 

@@ -21,4 +21,5 @@ from baiduads.video.model.get_video_infos_request_wrapper import GetVideoInfosRe
 from baiduads.video.model.get_video_infos_response_wrapper import GetVideoInfosResponseWrapper
 from baiduads.video.model.get_video_infos_response_wrapper_body import GetVideoInfosResponseWrapperBody
 from baiduads.video.model.video_meta import VideoMeta
+from baiduads.video.model.video_meta_info import VideoMetaInfo
 from baiduads.video.model.video_query_request import VideoQueryRequest

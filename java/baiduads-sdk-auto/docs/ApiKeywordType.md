@@ -30,6 +30,13 @@ Name | Type | Description | Notes
 **businessRelationship** | **Integer** |  |  [optional]
 **landPageExperience** | **Integer** |  |  [optional]
 **createTime** | **String** |  |  [optional]
+**mobileFinalUrl** | **String** |  |  [optional]
+**mobileTrackParam** | **String** |  |  [optional]
+**mobileTrackTemplate** | **String** |  |  [optional]
+**pcFinalUrl** | **String** |  |  [optional]
+**pcTrackParam** | **String** |  |  [optional]
+**pcTrackTemplate** | **String** |  |  [optional]
+**ulink** | **String** |  |  [optional]
 
 
 

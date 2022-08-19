@@ -28,6 +28,10 @@ from baiduads.indexapi.model.get_result_response_wrapper_body import GetResultRe
 from baiduads.indexapi.model.index_task_create_request import IndexTaskCreateRequest
 from baiduads.indexapi.model.index_task_create_response import IndexTaskCreateResponse
 from baiduads.indexapi.model.keyword_info import KeywordInfo
+from baiduads.indexapi.model.o_auth_refresh_token_response import OAuthRefreshTokenResponse
+from baiduads.indexapi.model.refresh_access_token_request_wrapper import RefreshAccessTokenRequestWrapper
+from baiduads.indexapi.model.refresh_access_token_response_wrapper import RefreshAccessTokenResponseWrapper
+from baiduads.indexapi.model.refresh_access_token_response_wrapper_body import RefreshAccessTokenResponseWrapperBody
 from baiduads.indexapi.model.region import Region
 from baiduads.indexapi.model.task_query_request import TaskQueryRequest
 from baiduads.indexapi.model.task_query_response import TaskQueryResponse

@@ -29,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   AdviceAcceptType.JSON_PROPERTY_ACCEPT_INFO,
-  AdviceAcceptType.JSON_PROPERTY_ADVICE_ID,
   AdviceAcceptType.JSON_PROPERTY_ADVICE_KEY
 })
 @JsonTypeName("AdviceAcceptType")
@@ -37,9 +36,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class AdviceAcceptType {
   public static final String JSON_PROPERTY_ACCEPT_INFO = "acceptInfo";
   private AcceptInfo acceptInfo;
-
-  public static final String JSON_PROPERTY_ADVICE_ID = "adviceId";
-  private Long adviceId;
 
   public static final String JSON_PROPERTY_ADVICE_KEY = "adviceKey";
   private String adviceKey;
@@ -71,33 +67,6 @@ public class AdviceAcceptType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAcceptInfo(AcceptInfo acceptInfo) {
     this.acceptInfo = acceptInfo;
-  }
-
-
-  public AdviceAcceptType adviceId(Long adviceId) {
-    
-    this.adviceId = adviceId;
-    return this;
-  }
-
-   /**
-   * Get adviceId
-   * @return adviceId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getAdviceId() {
-    return adviceId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADVICE_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdviceId(Long adviceId) {
-    this.adviceId = adviceId;
   }
 
 
@@ -138,13 +107,12 @@ public class AdviceAcceptType {
     }
     AdviceAcceptType adviceAcceptType = (AdviceAcceptType) o;
     return Objects.equals(this.acceptInfo, adviceAcceptType.acceptInfo) &&
-        Objects.equals(this.adviceId, adviceAcceptType.adviceId) &&
         Objects.equals(this.adviceKey, adviceAcceptType.adviceKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(acceptInfo, adviceId, adviceKey);
+    return Objects.hash(acceptInfo, adviceKey);
   }
 
   @Override
@@ -152,7 +120,6 @@ public class AdviceAcceptType {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdviceAcceptType {\n");
     sb.append("    acceptInfo: ").append(toIndentedString(acceptInfo)).append("\n");
-    sb.append("    adviceId: ").append(toIndentedString(adviceId)).append("\n");
     sb.append("    adviceKey: ").append(toIndentedString(adviceKey)).append("\n");
     sb.append("}");
     return sb.toString();

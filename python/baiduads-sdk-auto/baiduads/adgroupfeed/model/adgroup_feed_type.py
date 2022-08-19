@@ -99,6 +99,8 @@ class AdgroupFeedType(ModelNormal):
             'ocpc': (OcpcType,),  # noqa: E501
             'atp_feed_id': (int,),  # noqa: E501
             'delivery_type': ([int],),  # noqa: E501
+            'unit_ocpx_status': (int,),  # noqa: E501
+            'unefficient_adgroup': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -120,6 +122,8 @@ class AdgroupFeedType(ModelNormal):
         'ocpc': 'ocpc',  # noqa: E501
         'atp_feed_id': 'atpFeedId',  # noqa: E501
         'delivery_type': 'deliveryType',  # noqa: E501
+        'unit_ocpx_status': 'unitOcpxStatus',  # noqa: E501
+        'unefficient_adgroup': 'unefficientAdgroup',  # noqa: E501
     }
 
     read_only_vars = {
@@ -176,6 +180,8 @@ class AdgroupFeedType(ModelNormal):
             ocpc (OcpcType): [optional]  # noqa: E501
             atp_feed_id (int): [optional]  # noqa: E501
             delivery_type ([int]): [optional]  # noqa: E501
+            unit_ocpx_status (int): [optional]  # noqa: E501
+            unefficient_adgroup (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -270,6 +276,8 @@ class AdgroupFeedType(ModelNormal):
             ocpc (OcpcType): [optional]  # noqa: E501
             atp_feed_id (int): [optional]  # noqa: E501
             delivery_type ([int]): [optional]  # noqa: E501
+            unit_ocpx_status (int): [optional]  # noqa: E501
+            unefficient_adgroup (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

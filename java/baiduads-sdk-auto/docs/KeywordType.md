@@ -56,6 +56,7 @@ Name | Type | Description | Notes
 **topPageViews** | **Long** |  |  [optional]
 **topPClicks** | **Long** |  |  [optional]
 **campaignBidType** | **Integer** |  |  [optional]
+**esConversion** | **Double** |  |  [optional]
 
 
 

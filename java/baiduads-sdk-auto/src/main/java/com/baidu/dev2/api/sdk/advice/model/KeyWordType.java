@@ -78,7 +78,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeyWordType.JSON_PROPERTY_SUGGEST_REASON_CODE,
   KeyWordType.JSON_PROPERTY_TOP_PAGE_VIEWS,
   KeyWordType.JSON_PROPERTY_TOP_P_CLICKS,
-  KeyWordType.JSON_PROPERTY_CAMPAIGN_BID_TYPE
+  KeyWordType.JSON_PROPERTY_CAMPAIGN_BID_TYPE,
+  KeyWordType.JSON_PROPERTY_ES_CONVERSION
 })
 @JsonTypeName("KeyWordType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -229,6 +230,9 @@ public class KeyWordType {
 
   public static final String JSON_PROPERTY_CAMPAIGN_BID_TYPE = "campaignBidType";
   private Integer campaignBidType;
+
+  public static final String JSON_PROPERTY_ES_CONVERSION = "esConversion";
+  private Double esConversion;
 
   public KeyWordType() { 
   }
@@ -1572,6 +1576,33 @@ public class KeyWordType {
   }
 
 
+  public KeyWordType esConversion(Double esConversion) {
+    
+    this.esConversion = esConversion;
+    return this;
+  }
+
+   /**
+   * Get esConversion
+   * @return esConversion
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ES_CONVERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getEsConversion() {
+    return esConversion;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ES_CONVERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEsConversion(Double esConversion) {
+    this.esConversion = esConversion;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1629,12 +1660,13 @@ public class KeyWordType {
         Objects.equals(this.suggestReasonCode, keyWordType.suggestReasonCode) &&
         Objects.equals(this.topPageViews, keyWordType.topPageViews) &&
         Objects.equals(this.topPClicks, keyWordType.topPClicks) &&
-        Objects.equals(this.campaignBidType, keyWordType.campaignBidType);
+        Objects.equals(this.campaignBidType, keyWordType.campaignBidType) &&
+        Objects.equals(this.esConversion, keyWordType.esConversion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(keywordId, keyword, campaignId, campaignName, adgroupId, adgroupName, wmatchprefer, matchType, matchTypeName, phraseType, wordId, price, impression, click, cost, mixMatchType, reasons, reasonIds, strategyPrice, status, pcMinPrice, mobileMinPrice, minBid, guidePrice, matchPriceStatus, adgroupStatus, adgroupStatusName, esImpression, pcDestinationUrl, mobileDestinationUrl, offlineReasons, multiPrice, strategyAdgroupId, adgroupPrice, basisType, basisTypeName, businessPointId, adType, marketingTargetId, reasonCode, reasonText, priceStrategyId, pause, shopType, esClick, suggestReasonCode, topPageViews, topPClicks, campaignBidType);
+    return Objects.hash(keywordId, keyword, campaignId, campaignName, adgroupId, adgroupName, wmatchprefer, matchType, matchTypeName, phraseType, wordId, price, impression, click, cost, mixMatchType, reasons, reasonIds, strategyPrice, status, pcMinPrice, mobileMinPrice, minBid, guidePrice, matchPriceStatus, adgroupStatus, adgroupStatusName, esImpression, pcDestinationUrl, mobileDestinationUrl, offlineReasons, multiPrice, strategyAdgroupId, adgroupPrice, basisType, basisTypeName, businessPointId, adType, marketingTargetId, reasonCode, reasonText, priceStrategyId, pause, shopType, esClick, suggestReasonCode, topPageViews, topPClicks, campaignBidType, esConversion);
   }
 
   @Override
@@ -1690,6 +1722,7 @@ public class KeyWordType {
     sb.append("    topPageViews: ").append(toIndentedString(topPageViews)).append("\n");
     sb.append("    topPClicks: ").append(toIndentedString(topPClicks)).append("\n");
     sb.append("    campaignBidType: ").append(toIndentedString(campaignBidType)).append("\n");
+    sb.append("    esConversion: ").append(toIndentedString(esConversion)).append("\n");
     sb.append("}");
     return sb.toString();
   }

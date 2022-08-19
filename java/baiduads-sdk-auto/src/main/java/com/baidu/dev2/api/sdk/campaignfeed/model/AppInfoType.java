@@ -32,7 +32,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppInfoType.JSON_PROPERTY_APP_URL,
   AppInfoType.JSON_PROPERTY_DOC_ID,
   AppInfoType.JSON_PROPERTY_CHANNEL_ID,
-  AppInfoType.JSON_PROPERTY_OPENURL
+  AppInfoType.JSON_PROPERTY_OPENURL,
+  AppInfoType.JSON_PROPERTY_DOWNLOAD_TYPE
 })
 @JsonTypeName("AppInfoType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -54,6 +55,9 @@ public class AppInfoType {
 
   public static final String JSON_PROPERTY_OPENURL = "openurl";
   private String openurl;
+
+  public static final String JSON_PROPERTY_DOWNLOAD_TYPE = "downloadType";
+  private Integer downloadType;
 
   public AppInfoType() { 
   }
@@ -220,6 +224,33 @@ public class AppInfoType {
   }
 
 
+  public AppInfoType downloadType(Integer downloadType) {
+    
+    this.downloadType = downloadType;
+    return this;
+  }
+
+   /**
+   * Get downloadType
+   * @return downloadType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_DOWNLOAD_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getDownloadType() {
+    return downloadType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_DOWNLOAD_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setDownloadType(Integer downloadType) {
+    this.downloadType = downloadType;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -234,12 +265,13 @@ public class AppInfoType {
         Objects.equals(this.appUrl, appInfoType.appUrl) &&
         Objects.equals(this.docId, appInfoType.docId) &&
         Objects.equals(this.channelId, appInfoType.channelId) &&
-        Objects.equals(this.openurl, appInfoType.openurl);
+        Objects.equals(this.openurl, appInfoType.openurl) &&
+        Objects.equals(this.downloadType, appInfoType.downloadType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, apkName, appUrl, docId, channelId, openurl);
+    return Objects.hash(appName, apkName, appUrl, docId, channelId, openurl, downloadType);
   }
 
   @Override
@@ -252,6 +284,7 @@ public class AppInfoType {
     sb.append("    docId: ").append(toIndentedString(docId)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    openurl: ").append(toIndentedString(openurl)).append("\n");
+    sb.append("    downloadType: ").append(toIndentedString(downloadType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -15,6 +15,10 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeCategoryCreative;
 import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeImageCreative;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeListCreative;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubePlasCreative;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeSelectListCreative;
+import com.baidu.dev2.api.sdk.danubecreativegroup.model.DanubeTextListCreative;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -31,20 +35,106 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * DanubeCreativeComponent
  */
 @JsonPropertyOrder({
+  DanubeCreativeComponent.JSON_PROPERTY_SELECT_LIST,
+  DanubeCreativeComponent.JSON_PROPERTY_PLAS,
   DanubeCreativeComponent.JSON_PROPERTY_CATEGORY,
-  DanubeCreativeComponent.JSON_PROPERTY_IMAGE
+  DanubeCreativeComponent.JSON_PROPERTY_IMAGE,
+  DanubeCreativeComponent.JSON_PROPERTY_TEXT_LIST,
+  DanubeCreativeComponent.JSON_PROPERTY_LIST
 })
 @JsonTypeName("DanubeCreativeComponent")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DanubeCreativeComponent {
+  public static final String JSON_PROPERTY_SELECT_LIST = "selectList";
+  private List<DanubeSelectListCreative> selectList = null;
+
+  public static final String JSON_PROPERTY_PLAS = "plas";
+  private List<DanubePlasCreative> plas = null;
+
   public static final String JSON_PROPERTY_CATEGORY = "category";
   private List<DanubeCategoryCreative> category = null;
 
   public static final String JSON_PROPERTY_IMAGE = "image";
   private List<DanubeImageCreative> image = null;
 
+  public static final String JSON_PROPERTY_TEXT_LIST = "textList";
+  private List<DanubeTextListCreative> textList = null;
+
+  public static final String JSON_PROPERTY_LIST = "list";
+  private List<DanubeListCreative> list = null;
+
   public DanubeCreativeComponent() { 
   }
+
+  public DanubeCreativeComponent selectList(List<DanubeSelectListCreative> selectList) {
+    
+    this.selectList = selectList;
+    return this;
+  }
+
+  public DanubeCreativeComponent addSelectListItem(DanubeSelectListCreative selectListItem) {
+    if (this.selectList == null) {
+      this.selectList = new ArrayList<>();
+    }
+    this.selectList.add(selectListItem);
+    return this;
+  }
+
+   /**
+   * Get selectList
+   * @return selectList
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SELECT_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<DanubeSelectListCreative> getSelectList() {
+    return selectList;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SELECT_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSelectList(List<DanubeSelectListCreative> selectList) {
+    this.selectList = selectList;
+  }
+
+
+  public DanubeCreativeComponent plas(List<DanubePlasCreative> plas) {
+    
+    this.plas = plas;
+    return this;
+  }
+
+  public DanubeCreativeComponent addPlasItem(DanubePlasCreative plasItem) {
+    if (this.plas == null) {
+      this.plas = new ArrayList<>();
+    }
+    this.plas.add(plasItem);
+    return this;
+  }
+
+   /**
+   * Get plas
+   * @return plas
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PLAS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<DanubePlasCreative> getPlas() {
+    return plas;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PLAS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPlas(List<DanubePlasCreative> plas) {
+    this.plas = plas;
+  }
+
 
   public DanubeCreativeComponent category(List<DanubeCategoryCreative> category) {
     
@@ -116,6 +206,76 @@ public class DanubeCreativeComponent {
   }
 
 
+  public DanubeCreativeComponent textList(List<DanubeTextListCreative> textList) {
+    
+    this.textList = textList;
+    return this;
+  }
+
+  public DanubeCreativeComponent addTextListItem(DanubeTextListCreative textListItem) {
+    if (this.textList == null) {
+      this.textList = new ArrayList<>();
+    }
+    this.textList.add(textListItem);
+    return this;
+  }
+
+   /**
+   * Get textList
+   * @return textList
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TEXT_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<DanubeTextListCreative> getTextList() {
+    return textList;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TEXT_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTextList(List<DanubeTextListCreative> textList) {
+    this.textList = textList;
+  }
+
+
+  public DanubeCreativeComponent list(List<DanubeListCreative> list) {
+    
+    this.list = list;
+    return this;
+  }
+
+  public DanubeCreativeComponent addListItem(DanubeListCreative listItem) {
+    if (this.list == null) {
+      this.list = new ArrayList<>();
+    }
+    this.list.add(listItem);
+    return this;
+  }
+
+   /**
+   * Get list
+   * @return list
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<DanubeListCreative> getList() {
+    return list;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_LIST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setList(List<DanubeListCreative> list) {
+    this.list = list;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -125,21 +285,29 @@ public class DanubeCreativeComponent {
       return false;
     }
     DanubeCreativeComponent danubeCreativeComponent = (DanubeCreativeComponent) o;
-    return Objects.equals(this.category, danubeCreativeComponent.category) &&
-        Objects.equals(this.image, danubeCreativeComponent.image);
+    return Objects.equals(this.selectList, danubeCreativeComponent.selectList) &&
+        Objects.equals(this.plas, danubeCreativeComponent.plas) &&
+        Objects.equals(this.category, danubeCreativeComponent.category) &&
+        Objects.equals(this.image, danubeCreativeComponent.image) &&
+        Objects.equals(this.textList, danubeCreativeComponent.textList) &&
+        Objects.equals(this.list, danubeCreativeComponent.list);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(category, image);
+    return Objects.hash(selectList, plas, category, image, textList, list);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DanubeCreativeComponent {\n");
+    sb.append("    selectList: ").append(toIndentedString(selectList)).append("\n");
+    sb.append("    plas: ").append(toIndentedString(plas)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
+    sb.append("    textList: ").append(toIndentedString(textList)).append("\n");
+    sb.append("    list: ").append(toIndentedString(list)).append("\n");
     sb.append("}");
     return sb.toString();
   }

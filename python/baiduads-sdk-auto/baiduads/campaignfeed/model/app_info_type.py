@@ -86,6 +86,7 @@ class AppInfoType(ModelNormal):
             'doc_id': (int,),  # noqa: E501
             'channel_id': (int,),  # noqa: E501
             'openurl': (str,),  # noqa: E501
+            'download_type': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -100,6 +101,7 @@ class AppInfoType(ModelNormal):
         'doc_id': 'docId',  # noqa: E501
         'channel_id': 'channelId',  # noqa: E501
         'openurl': 'openurl',  # noqa: E501
+        'download_type': 'downloadType',  # noqa: E501
     }
 
     read_only_vars = {
@@ -149,6 +151,7 @@ class AppInfoType(ModelNormal):
             doc_id (int): [optional]  # noqa: E501
             channel_id (int): [optional]  # noqa: E501
             openurl (str): [optional]  # noqa: E501
+            download_type (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -236,6 +239,7 @@ class AppInfoType(ModelNormal):
             doc_id (int): [optional]  # noqa: E501
             channel_id (int): [optional]  # noqa: E501
             openurl (str): [optional]  # noqa: E501
+            download_type (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

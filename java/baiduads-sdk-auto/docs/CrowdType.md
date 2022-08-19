@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **crowdDirectType** | **Integer** |  |  [optional]
 **effectType** | **Integer** |  |  [optional]
 **createTime** | **String** |  |  [optional]
+**recentDays** | **Integer** |  |  [optional]
 
 
 

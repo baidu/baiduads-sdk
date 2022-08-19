@@ -29,8 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from baiduads.campaignfeed.model.app_info_shadow_type import AppInfoShadowType
     from baiduads.campaignfeed.model.app_info_type import AppInfoType
     from baiduads.campaignfeed.model.schedule_type import ScheduleType
+    globals()['AppInfoShadowType'] = AppInfoShadowType
     globals()['AppInfoType'] = AppInfoType
     globals()['ScheduleType'] = ScheduleType
 
@@ -100,8 +102,11 @@ class CampaignFeedType(ModelNormal):
             'pause': (bool,),  # noqa: E501
             'status': (int,),  # noqa: E501
             'bstype': (int,),  # noqa: E501
+            'campaign_type': (int,),  # noqa: E501
             'addtime': (str,),  # noqa: E501
             'eshop_type': (str,),  # noqa: E501
+            'shadow': (AppInfoShadowType,),  # noqa: E501
+            'rta_status': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -122,8 +127,11 @@ class CampaignFeedType(ModelNormal):
         'pause': 'pause',  # noqa: E501
         'status': 'status',  # noqa: E501
         'bstype': 'bstype',  # noqa: E501
+        'campaign_type': 'campaignType',  # noqa: E501
         'addtime': 'addtime',  # noqa: E501
         'eshop_type': 'eshopType',  # noqa: E501
+        'shadow': 'shadow',  # noqa: E501
+        'rta_status': 'rtaStatus',  # noqa: E501
     }
 
     read_only_vars = {
@@ -179,8 +187,11 @@ class CampaignFeedType(ModelNormal):
             pause (bool): [optional]  # noqa: E501
             status (int): [optional]  # noqa: E501
             bstype (int): [optional]  # noqa: E501
+            campaign_type (int): [optional]  # noqa: E501
             addtime (str): [optional]  # noqa: E501
             eshop_type (str): [optional]  # noqa: E501
+            shadow (AppInfoShadowType): [optional]  # noqa: E501
+            rta_status (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -274,8 +285,11 @@ class CampaignFeedType(ModelNormal):
             pause (bool): [optional]  # noqa: E501
             status (int): [optional]  # noqa: E501
             bstype (int): [optional]  # noqa: E501
+            campaign_type (int): [optional]  # noqa: E501
             addtime (str): [optional]  # noqa: E501
             eshop_type (str): [optional]  # noqa: E501
+            shadow (AppInfoShadowType): [optional]  # noqa: E501
+            rta_status (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

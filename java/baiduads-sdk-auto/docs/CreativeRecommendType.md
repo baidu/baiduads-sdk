@@ -39,6 +39,12 @@ Name | Type | Description | Notes
 **dynamicCreative** | **Integer** |  |  [optional]
 **dynamicCreativeName** | **String** |  |  [optional]
 **campaignBidType** | **Integer** |  |  [optional]
+**mobileFinalUrl** | **String** |  |  [optional]
+**mobileTrackParam** | **String** |  |  [optional]
+**mobileTrackTemplate** | **String** |  |  [optional]
+**pcFinalUrl** | **String** |  |  [optional]
+**pcTrackParam** | **String** |  |  [optional]
+**pcTrackTemplate** | **String** |  |  [optional]
 
 
 

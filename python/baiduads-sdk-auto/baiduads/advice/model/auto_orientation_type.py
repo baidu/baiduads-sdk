@@ -89,15 +89,11 @@ class AutoOrientationType(ModelNormal):
         lazy_import()
         return {
             'status': (int,),  # noqa: E501
-            'adgroup_status_name': (str,),  # noqa: E501
-            'cost': (float,),  # noqa: E501
-            'conversion': (float,),  # noqa: E501
             'keywords': (str,),  # noqa: E501
             'bid_type': (int,),  # noqa: E501
             'bid': (float,),  # noqa: E501
             'guide_price': (float,),  # noqa: E501
             'ocpc_info': (FeedOcpcType,),  # noqa: E501
-            'pay_mode_name': (str,),  # noqa: E501
             'estimated_conversion_rate': (float,),  # noqa: E501
             'estimated_cost_rate': (float,),  # noqa: E501
             'estimated_conversion': (float,),  # noqa: E501
@@ -116,15 +112,11 @@ class AutoOrientationType(ModelNormal):
 
     attribute_map = {
         'status': 'status',  # noqa: E501
-        'adgroup_status_name': 'adgroupStatusName',  # noqa: E501
-        'cost': 'cost',  # noqa: E501
-        'conversion': 'conversion',  # noqa: E501
         'keywords': 'keywords',  # noqa: E501
         'bid_type': 'bidType',  # noqa: E501
         'bid': 'bid',  # noqa: E501
         'guide_price': 'guidePrice',  # noqa: E501
         'ocpc_info': 'ocpcInfo',  # noqa: E501
-        'pay_mode_name': 'payModeName',  # noqa: E501
         'estimated_conversion_rate': 'estimatedConversionRate',  # noqa: E501
         'estimated_cost_rate': 'estimatedCostRate',  # noqa: E501
         'estimated_conversion': 'estimatedConversion',  # noqa: E501
@@ -178,15 +170,11 @@ class AutoOrientationType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             status (int): [optional]  # noqa: E501
-            adgroup_status_name (str): [optional]  # noqa: E501
-            cost (float): [optional]  # noqa: E501
-            conversion (float): [optional]  # noqa: E501
             keywords (str): [optional]  # noqa: E501
             bid_type (int): [optional]  # noqa: E501
             bid (float): [optional]  # noqa: E501
             guide_price (float): [optional]  # noqa: E501
             ocpc_info (FeedOcpcType): [optional]  # noqa: E501
-            pay_mode_name (str): [optional]  # noqa: E501
             estimated_conversion_rate (float): [optional]  # noqa: E501
             estimated_cost_rate (float): [optional]  # noqa: E501
             estimated_conversion (float): [optional]  # noqa: E501
@@ -278,15 +266,11 @@ class AutoOrientationType(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             status (int): [optional]  # noqa: E501
-            adgroup_status_name (str): [optional]  # noqa: E501
-            cost (float): [optional]  # noqa: E501
-            conversion (float): [optional]  # noqa: E501
             keywords (str): [optional]  # noqa: E501
             bid_type (int): [optional]  # noqa: E501
             bid (float): [optional]  # noqa: E501
             guide_price (float): [optional]  # noqa: E501
             ocpc_info (FeedOcpcType): [optional]  # noqa: E501
-            pay_mode_name (str): [optional]  # noqa: E501
             estimated_conversion_rate (float): [optional]  # noqa: E501
             estimated_cost_rate (float): [optional]  # noqa: E501
             estimated_conversion (float): [optional]  # noqa: E501

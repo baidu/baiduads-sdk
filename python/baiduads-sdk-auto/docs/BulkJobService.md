@@ -344,6 +344,9 @@ with baiduads.ApiClient() as api_client:
             creative_level=True,
             business_label_level=True,
             auto_expansion_level=True,
+            campaign_feed_level=True,
+            adgroup_feed_level=True,
+            creative_feed_level=True,
         ),
     ) # GetChangedItemIdRequestWrapper | 
 

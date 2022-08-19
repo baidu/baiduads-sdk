@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**check_keywords**](IndexApiService.md#check_keywords) | **POST** /json/sms/service/IndexApiService/checkKeywords | 
 [**create_task**](IndexApiService.md#create_task) | **POST** /json/sms/service/IndexApiService/createTask | 
 [**get_result**](IndexApiService.md#get_result) | **POST** /json/sms/service/IndexApiService/getResult | 
+[**refresh_access_token**](IndexApiService.md#refresh_access_token) | **POST** /json/sms/service/IndexApiService/refreshAccessToken | 
 
 
 # **check_keywords**
@@ -221,6 +222,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetResultResponseWrapper**](GetResultResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **refresh_access_token**
+> RefreshAccessTokenResponseWrapper refresh_access_token(refresh_access_token_request_wrapper)
+
+
+
+### Example
+
+
+```python
+import time
+import baiduads
+from indexapi.api import index_api_service
+from baiduads.indexapi.model.refresh_access_token_request_wrapper import RefreshAccessTokenRequestWrapper
+from baiduads.indexapi.model.refresh_access_token_response_wrapper import RefreshAccessTokenResponseWrapper
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.baidu.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = baiduads.Configuration(
+    host = "https://api.baidu.com"
+)
+
+
+# Enter a context with an instance of the API client
+with baiduads.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = index_api_service.IndexApiService(api_client)
+    refresh_access_token_request_wrapper = RefreshAccessTokenRequestWrapper(
+        header=ApiRequestHeader(),
+    ) # RefreshAccessTokenRequestWrapper | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.refresh_access_token(refresh_access_token_request_wrapper)
+        pprint(api_response)
+    except baiduads.ApiException as e:
+        print("Exception when calling IndexApiService->refresh_access_token: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **refresh_access_token_request_wrapper** | [**RefreshAccessTokenRequestWrapper**](RefreshAccessTokenRequestWrapper.md)|  |
+
+### Return type
+
+[**RefreshAccessTokenResponseWrapper**](RefreshAccessTokenResponseWrapper.md)
 
 ### Authorization
 

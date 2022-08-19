@@ -22,10 +22,14 @@ import com.baidu.dev2.api.sdk.advice.model.AcceptAdviceRequestWrapper;
 import com.baidu.dev2.api.sdk.advice.model.AcceptAdviceResponseWrapper;
 import com.baidu.dev2.api.sdk.advice.model.AcceptFeedAdviceRequestWrapper;
 import com.baidu.dev2.api.sdk.advice.model.AcceptFeedAdviceResponseWrapper;
+import com.baidu.dev2.api.sdk.advice.model.DownloadAdviceRequestWrapper;
+import com.baidu.dev2.api.sdk.advice.model.DownloadAdviceResponseWrapper;
 import com.baidu.dev2.api.sdk.advice.model.QueryDetailRequestWrapper;
 import com.baidu.dev2.api.sdk.advice.model.QueryDetailResponseWrapper;
 import com.baidu.dev2.api.sdk.advice.model.QueryFeedDetailRequestWrapper;
 import com.baidu.dev2.api.sdk.advice.model.QueryFeedDetailResponseWrapper;
+import com.baidu.dev2.api.sdk.advice.model.QueryFeedOutlineRequestWrapper;
+import com.baidu.dev2.api.sdk.advice.model.QueryFeedOutlineResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -170,6 +174,63 @@ public class AdviceService {
   /**
    * 
    * 
+   * @param downloadAdviceRequestWrapper  (required)
+   * @return DownloadAdviceResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public DownloadAdviceResponseWrapper downloadAdvice(DownloadAdviceRequestWrapper downloadAdviceRequestWrapper) throws ApiException {
+    Object localVarPostBody = downloadAdviceRequestWrapper;
+    
+    // verify the required parameter 'downloadAdviceRequestWrapper' is set
+    if (downloadAdviceRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'downloadAdviceRequestWrapper' when calling downloadAdvice");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/AdviceService/downloadAdvice";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<DownloadAdviceResponseWrapper> localVarReturnType = new TypeReference<DownloadAdviceResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
    * @param queryDetailRequestWrapper  (required)
    * @return QueryDetailResponseWrapper
    * @throws ApiException if fails to make API call
@@ -266,6 +327,63 @@ public class AdviceService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<QueryFeedDetailResponseWrapper> localVarReturnType = new TypeReference<QueryFeedDetailResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param queryFeedOutlineRequestWrapper  (required)
+   * @return QueryFeedOutlineResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public QueryFeedOutlineResponseWrapper queryFeedOutline(QueryFeedOutlineRequestWrapper queryFeedOutlineRequestWrapper) throws ApiException {
+    Object localVarPostBody = queryFeedOutlineRequestWrapper;
+    
+    // verify the required parameter 'queryFeedOutlineRequestWrapper' is set
+    if (queryFeedOutlineRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'queryFeedOutlineRequestWrapper' when calling queryFeedOutline");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/AdviceService/queryFeedOutline";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<QueryFeedOutlineResponseWrapper> localVarReturnType = new TypeReference<QueryFeedOutlineResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

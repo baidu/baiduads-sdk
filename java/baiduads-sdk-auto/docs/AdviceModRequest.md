@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **source** | **Integer** |  |  [optional]
 **batchId** | **Long** |  |  [optional]
 **processStage** | **String** |  |  [optional]
-**adviceId** | **Long** |  |  [optional]
 **adviceKey** | **String** |  |  [optional]
 
 
