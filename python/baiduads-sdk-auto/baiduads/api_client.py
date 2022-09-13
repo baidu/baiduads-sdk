@@ -75,7 +75,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'baiduads-sdk/2022.4.0/python'
+        self.user_agent = 'baiduads-sdk/2022.4.1/python'
 
     def __enter__(self):
         return self
@@ -772,11 +772,11 @@ class Endpoint(object):
         """ This method is invoked when endpoints are called
         Example:
 
-        api_instance = CampaignFeedService()
-        api_instance.add_campaign_feed  # this is an instance of the class Endpoint
-        api_instance.add_campaign_feed()  # this invokes api_instance.add_campaign_feed.__call__()
+        api_instance = PlatProductService()
+        api_instance.delete_product  # this is an instance of the class Endpoint
+        api_instance.delete_product()  # this invokes api_instance.delete_product.__call__()
         which then invokes the callable functions stored in that endpoint at
-        api_instance.add_campaign_feed.callable or self.callable in this class
+        api_instance.delete_product.callable or self.callable in this class
 
         """
         return self.callable(self, *args, **kwargs)
