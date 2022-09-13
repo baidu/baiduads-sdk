@@ -2,1390 +2,2428 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.4.0
+  version: 2022.4.1
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
 tags:
-- name: CampaignFeedService
+- name: PlatProductService
 paths:
-  json/feed/v1/CampaignFeedService/addCampaignFeed:
+  json/sms/service/PlatProductService/deleteProduct:
     post:
-      operationId: addCampaignFeed
+      operationId: deleteProduct
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/AddCampaignFeedRequestWrapper'
+              $ref: '#/components/schemas/DeleteProductRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/AddCampaignFeedResponseWrapper'
+                $ref: '#/components/schemas/DeleteProductResponseWrapper'
           description: response
       tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: AddCampaignFeedRequestWrapper
+      - PlatProductService
+      x-codegen-request-body-name: DeleteProductRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/updateCampaignFeed:
+  json/sms/service/PlatProductService/saveOrUpdateProduct:
     post:
-      operationId: updateCampaignFeed
+      operationId: saveOrUpdateProduct
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapper'
+              $ref: '#/components/schemas/SaveOrUpdateProductRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapper'
+                $ref: '#/components/schemas/SaveOrUpdateProductResponseWrapper'
           description: response
       tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: UpdateCampaignFeedRequestWrapper
+      - PlatProductService
+      x-codegen-request-body-name: SaveOrUpdateProductRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/deleteCampaignFeed:
+  json/sms/service/PlatProductService/modOnlineStatus:
     post:
-      operationId: deleteCampaignFeed
+      operationId: modOnlineStatus
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapper'
+              $ref: '#/components/schemas/ModOnlineStatusRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapper'
+                $ref: '#/components/schemas/ModOnlineStatusResponseWrapper'
           description: response
       tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: DeleteCampaignFeedRequestWrapper
+      - PlatProductService
+      x-codegen-request-body-name: ModOnlineStatusRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/feed/v1/CampaignFeedService/getCampaignFeed:
+  json/sms/service/PlatProductService/getProductDetail:
     post:
-      operationId: getCampaignFeed
+      operationId: getProductDetail
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/GetCampaignFeedRequestWrapper'
+              $ref: '#/components/schemas/GetProductDetailRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/GetCampaignFeedResponseWrapper'
+                $ref: '#/components/schemas/GetProductDetailResponseWrapper'
           description: response
       tags:
-      - CampaignFeedService
-      x-codegen-request-body-name: GetCampaignFeedRequestWrapper
+      - PlatProductService
+      x-codegen-request-body-name: GetProductDetailRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/sms/service/PlatProductService/getProductList:
+    post:
+      operationId: getProductList
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/GetProductListRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/GetProductListResponseWrapper'
+          description: response
+      tags:
+      - PlatProductService
+      x-codegen-request-body-name: GetProductListRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
 components:
   schemas:
-    ScheduleType:
+    ProductSpuSpecificationVo:
       example:
-        endHour: 3
-        startHour: 9
-        weekDay: 7
+        values:
+        - values
+        - values
+        name: name
       properties:
-        weekDay:
-          format: int32
-          type: integer
-        startHour:
-          format: int64
-          type: integer
-        endHour:
-          format: int64
-          type: integer
-      type: object
-    GetCampaignFeedRequestWrapper:
-      example:
-        body:
-          campaignFeedIds:
-          - 0
-          - 0
-          campaignFeedFilter:
-            bstype:
-            - 6
-            - 6
-          campaignFeedFields:
-          - campaignFeedFields
-          - campaignFeedFields
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/GetCampaignFeedRequest'
-      type: object
-    AppInfoShadowType:
-      example:
-        appinfo:
-          openurl: openurl
-          apkName: apkName
-          appName: appName
-          docId: 1
-          downloadType: 5
-          appUrl: appUrl
-          channelId: 5
-        status: 1
-      properties:
-        appinfo:
-          $ref: '#/components/schemas/AppInfoType'
-        status:
-          format: int32
-          type: integer
-      type: object
-    CampaignFeedType:
-      example:
-        rtaStatus: 1
-        campaignType: 1
-        shadow:
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          status: 1
-        subject: 6
-        endtime: endtime
-        starttime: starttime
-        bstype: 7
-        pause: true
-        campaignFeedId: 0
-        schedule:
-        - endHour: 3
-          startHour: 9
-          weekDay: 7
-        - endHour: 3
-          startHour: 9
-          weekDay: 7
-        addtime: addtime
-        bgtctltype: 2
-        appinfo:
-          openurl: openurl
-          apkName: apkName
-          appName: appName
-          docId: 1
-          downloadType: 5
-          appUrl: appUrl
-          channelId: 5
-        eshopType: eshopType
-        campaignFeedName: campaignFeedName
-        budget: 2.3021358869347655
-        status: 4
-      properties:
-        campaignFeedId:
-          format: int64
-          type: integer
-        campaignFeedName:
+        name:
           type: string
-        subject:
-          format: int32
-          type: integer
-        appinfo:
-          $ref: '#/components/schemas/AppInfoType'
-        budget:
-          format: double
-          type: number
-        starttime:
-          type: string
-        endtime:
-          type: string
-        schedule:
-          items:
-            $ref: '#/components/schemas/ScheduleType'
-          type: array
-        bgtctltype:
-          format: int32
-          type: integer
-        pause:
-          type: boolean
-        status:
-          format: int32
-          type: integer
-        bstype:
-          format: int32
-          type: integer
-        campaignType:
-          format: int32
-          type: integer
-        addtime:
-          type: string
-        eshopType:
-          type: string
-        shadow:
-          $ref: '#/components/schemas/AppInfoShadowType'
-        rtaStatus:
-          format: int32
-          type: integer
-      type: object
-    GetCampaignFeedRequest:
-      example:
-        campaignFeedIds:
-        - 0
-        - 0
-        campaignFeedFilter:
-          bstype:
-          - 6
-          - 6
-        campaignFeedFields:
-        - campaignFeedFields
-        - campaignFeedFields
-      properties:
-        campaignFeedFields:
+        values:
           items:
             type: string
           type: array
-        campaignFeedIds:
-          items:
-            format: int64
-            type: integer
-          type: array
-        campaignFeedFilter:
-          $ref: '#/components/schemas/CampaignFeedFilter'
       type: object
-    ApiErrorInfo:
-      type: object
-    DeleteCampaignFeedResponseWrapper:
+    PlatProductGetListRequest:
       example:
-        body:
-          data:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
+        appId: 0
+        pageSize: 5
+        shopId: 6
+        pageNum: 1
       properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/DeleteCampaignFeedResponseWrapperBody'
+        appId:
+          format: int32
+          type: integer
+        shopId:
+          format: int64
+          type: integer
+        pageNum:
+          format: int32
+          type: integer
+        pageSize:
+          format: int32
+          type: integer
       type: object
-    GetCampaignFeedResponseWrapper:
+    PlatProductDeliveryConfigVo:
       example:
-        body:
-          data:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
+        predictDeliveryDay: 1
+        switcher: true
       properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/GetCampaignFeedResponseWrapperBody'
+        switcher:
+          type: boolean
+        predictDeliveryDay:
+          format: int32
+          type: integer
+      type: object
+    ProductSpuAttributeVo:
+      example:
+        optionValue: optionValue
+        name: name
+      properties:
+        name:
+          type: string
+        optionValue:
+          type: string
       type: object
     ApiRequestHeader:
       type: object
-    UpdateCampaignFeedRequestWrapper:
+    GetProductListResponseWrapper:
       example:
         body:
-          campaignFeedTypes:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
+          data:
+          - totalNum: 0
+            list:
+            - onShelf: 5
+              applyShopList:
+              - name: name
+                shopId: 2
+              - name: name
+                shopId: 2
+              thumbnail: thumbnail
+              freightTemplateId: 3
+              pageOnlineUrl: pageOnlineUrl
+              updateTime: updateTime
+              type: 1
+              webAppUrl: webAppUrl
+              restStock: 2
+              sendExchangeCode: 4
+              spuState: 5
+              name: name
+              rank: 7
+              spuId: spuId
+              shopId: 6
+              category:
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              supportPayType: 9
+              realSale: 7
+            - onShelf: 5
+              applyShopList:
+              - name: name
+                shopId: 2
+              - name: name
+                shopId: 2
+              thumbnail: thumbnail
+              freightTemplateId: 3
+              pageOnlineUrl: pageOnlineUrl
+              updateTime: updateTime
+              type: 1
+              webAppUrl: webAppUrl
+              restStock: 2
+              sendExchangeCode: 4
+              spuState: 5
+              name: name
+              rank: 7
+              spuId: spuId
+              shopId: 6
+              category:
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              supportPayType: 9
+              realSale: 7
+          - totalNum: 0
+            list:
+            - onShelf: 5
+              applyShopList:
+              - name: name
+                shopId: 2
+              - name: name
+                shopId: 2
+              thumbnail: thumbnail
+              freightTemplateId: 3
+              pageOnlineUrl: pageOnlineUrl
+              updateTime: updateTime
+              type: 1
+              webAppUrl: webAppUrl
+              restStock: 2
+              sendExchangeCode: 4
+              spuState: 5
+              name: name
+              rank: 7
+              spuId: spuId
+              shopId: 6
+              category:
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              supportPayType: 9
+              realSale: 7
+            - onShelf: 5
+              applyShopList:
+              - name: name
+                shopId: 2
+              - name: name
+                shopId: 2
+              thumbnail: thumbnail
+              freightTemplateId: 3
+              pageOnlineUrl: pageOnlineUrl
+              updateTime: updateTime
+              type: 1
+              webAppUrl: webAppUrl
+              restStock: 2
+              sendExchangeCode: 4
+              spuState: 5
+              name: name
+              rank: 7
+              spuId: spuId
+              shopId: 6
+              category:
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              - commodityQualificationVo:
+                  isMustQualification: 3
+                  commodityQualification: commodityQualification
+                  commodityQualificationDesc: commodityQualificationDesc
+                level: 9
+                children:
+                - null
+                - null
+                hasChild: true
+                guaranteeLabelList:
+                - 2
+                - 2
+                name: name
+                id: 2
+                parentId: 7
+                unGuaranteeLabelList:
+                - 4
+                - 4
+              supportPayType: 9
+              realSale: 7
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/GetProductListResponseWrapperBody'
+      type: object
+    ProductPersonalizedLabelVo:
+      example:
+        name: name
+        desc: desc
+      properties:
+        name:
+          type: string
+        desc:
+          type: string
+      type: object
+    SaveOrUpdateProductRequestWrapper:
+      example:
+        body:
+          imageAlbum:
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          skuList:
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          description: description
+          type: 5
+          specifications:
+          - values:
+            - values
+            - values
+            name: name
+          - values:
+            - values
+            - values
+            name: name
+          lastCategoryId: 2
+          spuUniqueId: 0
+          sendExchangeCode: 7
+          appId: 6
+          shopId: 1
+          shopBrandId: 4
+          supportPayType: 7
+          virtualCodeEndTime: virtualCodeEndTime
+          serviceItem:
+          - name: name
+            serviceItemValue:
+              num: 1
+          - name: name
+            serviceItemValue:
+              num: 1
+          freightTemplateId: 1
+          serviceArea: serviceArea
+          virtualCodeStartTime: virtualCodeStartTime
+          subShopIds:
+          - 6
+          - 6
+          serviceProcess: serviceProcess
+          name: name
+          saveFlag: 5
+          personalizedLabels:
+          - name: name
+            desc: desc
+          - name: name
+            desc: desc
+          attributes:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          quotation: quotation
+          deliveryConfig:
+            predictDeliveryDay: 1
+            switcher: true
       properties:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/UpdateCampaignFeedRequestWrapperBody'
+          $ref: '#/components/schemas/PlatProductSaveRequest'
       type: object
-    AppInfoType:
+    PlatProductDeleteRequest:
       example:
-        openurl: openurl
-        apkName: apkName
-        appName: appName
-        docId: 1
-        downloadType: 5
-        appUrl: appUrl
-        channelId: 5
+        appId: 0
+        spuId: 1
+        shopId: 6
       properties:
-        appName:
-          type: string
-        apkName:
-          type: string
-        appUrl:
-          type: string
-        docId:
-          format: int64
-          type: integer
-        channelId:
-          format: int64
-          type: integer
-        openurl:
-          type: string
-        downloadType:
+        appId:
           format: int32
           type: integer
+        shopId:
+          format: int64
+          type: integer
+        spuId:
+          format: int64
+          type: integer
       type: object
-    CampaignFeedFilter:
+    CommodityQualificationVo:
       example:
-        bstype:
-        - 6
-        - 6
+        isMustQualification: 3
+        commodityQualification: commodityQualification
+        commodityQualificationDesc: commodityQualificationDesc
       properties:
-        bstype:
+        isMustQualification:
+          format: int32
+          type: integer
+        commodityQualification:
+          type: string
+        commodityQualificationDesc:
+          type: string
+      type: object
+    ProductSkuSpecificationVo:
+      example:
+        optionValue: optionValue
+        name: name
+      properties:
+        name:
+          type: string
+        optionValue:
+          type: string
+      type: object
+    ModOnlineStatusRequestWrapper:
+      example:
+        body:
+          appId: 0
+          opType: 5
+          spuId: 1
+          shopId: 6
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/PlatProductModOnlineRequest'
+      type: object
+    ApplyShopInfo:
+      example:
+        name: name
+        shopId: 2
+      properties:
+        shopId:
+          format: int64
+          type: integer
+        name:
+          type: string
+      type: object
+    PlatProductSkuVo:
+      example:
+        image: image
+        lockedStock: 2
+        skuExtImage: skuExtImage
+        specifications:
+        - optionValue: optionValue
+          name: name
+        - optionValue: optionValue
+          name: name
+        sales: 7
+        skuExtName: skuExtName
+        restStock: 4
+        stock: 3
+        skuId: 9
+        skuCode: skuCode
+        exchangeCode:
+          addCodeList:
+          - addCodeList
+          - addCodeList
+          deleteCodeList:
+          - deleteCodeList
+          - deleteCodeList
+          type: 1
+      properties:
+        skuId:
+          format: int64
+          type: integer
+        salePrice:
+          $ref: '#/components/schemas/BigDecimal'
+        estimatedPrice:
+          $ref: '#/components/schemas/BigDecimal'
+        weight:
+          $ref: '#/components/schemas/BigDecimal'
+        stock:
+          format: int64
+          type: integer
+        lockedStock:
+          format: int64
+          type: integer
+        restStock:
+          format: int64
+          type: integer
+        image:
+          type: string
+        skuExtImage:
+          type: string
+        sales:
+          format: int64
+          type: integer
+        specifications:
+          items:
+            $ref: '#/components/schemas/ProductSkuSpecificationVo'
+          type: array
+        skuCode:
+          type: string
+        skuExtName:
+          type: string
+        exchangeCode:
+          $ref: '#/components/schemas/ProductExchangeCodeVo'
+      type: object
+    ApiResponseHeader:
+      type: object
+    DeleteProductResponseWrapper:
+      example:
+        body:
+          data:
+          - null
+          - null
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeleteProductResponseWrapperBody'
+      type: object
+    ProductCategoryVo:
+      example:
+        commodityQualificationVo:
+          isMustQualification: 3
+          commodityQualification: commodityQualification
+          commodityQualificationDesc: commodityQualificationDesc
+        level: 9
+        children:
+        - null
+        - null
+        hasChild: true
+        guaranteeLabelList:
+        - 2
+        - 2
+        name: name
+        id: 2
+        parentId: 7
+        unGuaranteeLabelList:
+        - 4
+        - 4
+      properties:
+        id:
+          format: int64
+          type: integer
+        parentId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        level:
+          format: int32
+          type: integer
+        hasChild:
+          type: boolean
+        commodityQualificationVo:
+          $ref: '#/components/schemas/CommodityQualificationVo'
+        guaranteeLabelList:
           items:
             format: int32
             type: integer
           type: array
+        unGuaranteeLabelList:
+          items:
+            format: int32
+            type: integer
+          type: array
+        children:
+          items:
+            $ref: '#/components/schemas/ProductCategoryVo'
+          type: array
       type: object
-    ApiResponseHeader:
-      type: object
-    UpdateCampaignFeedResponseWrapper:
+    ModOnlineStatusResponseWrapper:
       example:
         body:
           data:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
+          - null
+          - null
       properties:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/UpdateCampaignFeedResponseWrapperBody'
+          $ref: '#/components/schemas/ModOnlineStatusResponseWrapperBody'
       type: object
-    AddCampaignFeedRequestWrapper:
-      example:
-        body:
-          campaignFeedTypes:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/AddCampaignFeedRequestWrapperBody'
+    Void:
       type: object
-    DeleteCampaignFeedRequestWrapper:
+    PlatProductGetDetailRequest:
       example:
-        body:
-          campaignFeedIds:
-          - 0
-          - 0
+        appId: 0
+        spuId: 1
+        shopId: 6
+        queryType: 5
       properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/DeleteCampaignFeedRequestWrapperBody'
+        appId:
+          format: int32
+          type: integer
+        shopId:
+          format: int64
+          type: integer
+        spuId:
+          format: int64
+          type: integer
+        queryType:
+          format: int32
+          type: integer
       type: object
-    AddCampaignFeedResponseWrapper:
+    ServiceItemValue:
       example:
-        body:
-          data:
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
-          - rtaStatus: 1
-            campaignType: 1
-            shadow:
-              appinfo:
-                openurl: openurl
-                apkName: apkName
-                appName: appName
-                docId: 1
-                downloadType: 5
-                appUrl: appUrl
-                channelId: 5
-              status: 1
-            subject: 6
-            endtime: endtime
-            starttime: starttime
-            bstype: 7
-            pause: true
-            campaignFeedId: 0
-            schedule:
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            - endHour: 3
-              startHour: 9
-              weekDay: 7
-            addtime: addtime
-            bgtctltype: 2
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            eshopType: eshopType
-            campaignFeedName: campaignFeedName
-            budget: 2.3021358869347655
-            status: 4
+        num: 1
       properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/AddCampaignFeedResponseWrapperBody'
+        price:
+          $ref: '#/components/schemas/BigDecimal'
+        num:
+          format: int32
+          type: integer
       type: object
-    DeleteCampaignFeedResponseWrapperBody:
+    PlatProductListVoPagingResponse:
       example:
-        data:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
+        totalNum: 0
+        list:
+        - onShelf: 5
+          applyShopList:
+          - name: name
+            shopId: 2
+          - name: name
+            shopId: 2
+          thumbnail: thumbnail
+          freightTemplateId: 3
+          pageOnlineUrl: pageOnlineUrl
+          updateTime: updateTime
+          type: 1
+          webAppUrl: webAppUrl
+          restStock: 2
+          sendExchangeCode: 4
+          spuState: 5
+          name: name
+          rank: 7
+          spuId: spuId
+          shopId: 6
+          category:
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          supportPayType: 9
+          realSale: 7
+        - onShelf: 5
+          applyShopList:
+          - name: name
+            shopId: 2
+          - name: name
+            shopId: 2
+          thumbnail: thumbnail
+          freightTemplateId: 3
+          pageOnlineUrl: pageOnlineUrl
+          updateTime: updateTime
+          type: 1
+          webAppUrl: webAppUrl
+          restStock: 2
+          sendExchangeCode: 4
+          spuState: 5
+          name: name
+          rank: 7
+          spuId: spuId
+          shopId: 6
+          category:
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          supportPayType: 9
+          realSale: 7
       properties:
-        data:
+        totalNum:
+          format: int32
+          type: integer
+        list:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/PlatProductListVo'
           type: array
-      title: DeleteCampaignFeedResponseWrapperBody
       type: object
-    GetCampaignFeedResponseWrapperBody:
+    PlatProductSaveRequest:
       example:
-        data:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
+        imageAlbum:
+        - urls:
+          - urls
+          - urls
+          scale: scale
+        - urls:
+          - urls
+          - urls
+          scale: scale
+        skuList:
+        - image: image
+          lockedStock: 2
+          skuExtImage: skuExtImage
+          specifications:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          sales: 7
+          skuExtName: skuExtName
+          restStock: 4
+          stock: 3
+          skuId: 9
+          skuCode: skuCode
+          exchangeCode:
+            addCodeList:
+            - addCodeList
+            - addCodeList
+            deleteCodeList:
+            - deleteCodeList
+            - deleteCodeList
+            type: 1
+        - image: image
+          lockedStock: 2
+          skuExtImage: skuExtImage
+          specifications:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          sales: 7
+          skuExtName: skuExtName
+          restStock: 4
+          stock: 3
+          skuId: 9
+          skuCode: skuCode
+          exchangeCode:
+            addCodeList:
+            - addCodeList
+            - addCodeList
+            deleteCodeList:
+            - deleteCodeList
+            - deleteCodeList
+            type: 1
+        description: description
+        type: 5
+        specifications:
+        - values:
+          - values
+          - values
+          name: name
+        - values:
+          - values
+          - values
+          name: name
+        lastCategoryId: 2
+        spuUniqueId: 0
+        sendExchangeCode: 7
+        appId: 6
+        shopId: 1
+        shopBrandId: 4
+        supportPayType: 7
+        virtualCodeEndTime: virtualCodeEndTime
+        serviceItem:
+        - name: name
+          serviceItemValue:
+            num: 1
+        - name: name
+          serviceItemValue:
+            num: 1
+        freightTemplateId: 1
+        serviceArea: serviceArea
+        virtualCodeStartTime: virtualCodeStartTime
+        subShopIds:
+        - 6
+        - 6
+        serviceProcess: serviceProcess
+        name: name
+        saveFlag: 5
+        personalizedLabels:
+        - name: name
+          desc: desc
+        - name: name
+          desc: desc
+        attributes:
+        - optionValue: optionValue
+          name: name
+        - optionValue: optionValue
+          name: name
+        quotation: quotation
+        deliveryConfig:
+          predictDeliveryDay: 1
+          switcher: true
       properties:
-        data:
+        spuUniqueId:
+          format: int64
+          type: integer
+        appId:
+          format: int32
+          type: integer
+        shopId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        type:
+          format: int32
+          type: integer
+        saveFlag:
+          format: int32
+          type: integer
+        lastCategoryId:
+          format: int64
+          type: integer
+        personalizedLabels:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/ProductPersonalizedLabelVo'
           type: array
-      title: GetCampaignFeedResponseWrapperBody
-      type: object
-    UpdateCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedTypes:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-      properties:
-        campaignFeedTypes:
+        attributes:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/ProductSpuAttributeVo'
           type: array
-      title: UpdateCampaignFeedRequestWrapperBody
-      type: object
-    UpdateCampaignFeedResponseWrapperBody:
-      example:
-        data:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-      properties:
-        data:
+        supportPayType:
+          format: int32
+          type: integer
+        specifications:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/ProductSpuSpecificationVo'
           type: array
-      title: UpdateCampaignFeedResponseWrapperBody
-      type: object
-    AddCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedTypes:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-      properties:
-        campaignFeedTypes:
+        skuList:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/PlatProductSkuVo'
           type: array
-      title: AddCampaignFeedRequestWrapperBody
-      type: object
-    DeleteCampaignFeedRequestWrapperBody:
-      example:
-        campaignFeedIds:
-        - 0
-        - 0
-      properties:
-        campaignFeedIds:
+        virtualCodeStartTime:
+          type: string
+        virtualCodeEndTime:
+          type: string
+        imageAlbum:
+          items:
+            $ref: '#/components/schemas/ProductImageVo'
+          type: array
+        description:
+          type: string
+        quotation:
+          type: string
+        serviceProcess:
+          type: string
+        serviceArea:
+          type: string
+        freightTemplateId:
+          format: int64
+          type: integer
+        deliveryConfig:
+          $ref: '#/components/schemas/PlatProductDeliveryConfigVo'
+        price:
+          $ref: '#/components/schemas/BigDecimal'
+        subShopIds:
           items:
             format: int64
             type: integer
           type: array
-      title: DeleteCampaignFeedRequestWrapperBody
+        sendExchangeCode:
+          format: int32
+          type: integer
+        serviceItem:
+          items:
+            $ref: '#/components/schemas/ServiceItem'
+          type: array
+        shopBrandId:
+          format: int64
+          type: integer
       type: object
-    AddCampaignFeedResponseWrapperBody:
+    GetProductDetailResponseWrapper:
+      example:
+        body:
+          data:
+          - imageAlbum:
+            - urls:
+              - urls
+              - urls
+              scale: scale
+            - urls:
+              - urls
+              - urls
+              scale: scale
+            skuList:
+            - image: image
+              lockedStock: 2
+              skuExtImage: skuExtImage
+              specifications:
+              - optionValue: optionValue
+                name: name
+              - optionValue: optionValue
+                name: name
+              sales: 7
+              skuExtName: skuExtName
+              restStock: 4
+              stock: 3
+              skuId: 9
+              skuCode: skuCode
+              exchangeCode:
+                addCodeList:
+                - addCodeList
+                - addCodeList
+                deleteCodeList:
+                - deleteCodeList
+                - deleteCodeList
+                type: 1
+            - image: image
+              lockedStock: 2
+              skuExtImage: skuExtImage
+              specifications:
+              - optionValue: optionValue
+                name: name
+              - optionValue: optionValue
+                name: name
+              sales: 7
+              skuExtName: skuExtName
+              restStock: 4
+              stock: 3
+              skuId: 9
+              skuCode: skuCode
+              exchangeCode:
+                addCodeList:
+                - addCodeList
+                - addCodeList
+                deleteCodeList:
+                - deleteCodeList
+                - deleteCodeList
+                type: 1
+            shopBrandName: shopBrandName
+            description: description
+            type: 5
+            specifications:
+            - values:
+              - values
+              - values
+              name: name
+            - values:
+              - values
+              - values
+              name: name
+            limitStock: 6
+            sendExchangeCode: 1
+            appId: 0
+            shopId: 1
+            shopBrandId: 7
+            supportPayType: 7
+            subAppId: 6
+            virtualCodeEndTime: virtualCodeEndTime
+            serviceItem:
+            - name: name
+              serviceItemValue:
+                num: 1
+            - name: name
+              serviceItemValue:
+                num: 1
+            freightTemplateId: 1
+            serviceArea: serviceArea
+            virtualCodeStartTime: virtualCodeStartTime
+            applyShopIds:
+            - 1
+            - 1
+            serviceProcess: serviceProcess
+            spuState: 5
+            subtitle: subtitle
+            name: name
+            spuId: spuId
+            attributes:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            exchangeCodeDesc: exchangeCodeDesc
+            quotation: quotation
+            deliveryConfig:
+              predictDeliveryDay: 1
+              switcher: true
+          - imageAlbum:
+            - urls:
+              - urls
+              - urls
+              scale: scale
+            - urls:
+              - urls
+              - urls
+              scale: scale
+            skuList:
+            - image: image
+              lockedStock: 2
+              skuExtImage: skuExtImage
+              specifications:
+              - optionValue: optionValue
+                name: name
+              - optionValue: optionValue
+                name: name
+              sales: 7
+              skuExtName: skuExtName
+              restStock: 4
+              stock: 3
+              skuId: 9
+              skuCode: skuCode
+              exchangeCode:
+                addCodeList:
+                - addCodeList
+                - addCodeList
+                deleteCodeList:
+                - deleteCodeList
+                - deleteCodeList
+                type: 1
+            - image: image
+              lockedStock: 2
+              skuExtImage: skuExtImage
+              specifications:
+              - optionValue: optionValue
+                name: name
+              - optionValue: optionValue
+                name: name
+              sales: 7
+              skuExtName: skuExtName
+              restStock: 4
+              stock: 3
+              skuId: 9
+              skuCode: skuCode
+              exchangeCode:
+                addCodeList:
+                - addCodeList
+                - addCodeList
+                deleteCodeList:
+                - deleteCodeList
+                - deleteCodeList
+                type: 1
+            shopBrandName: shopBrandName
+            description: description
+            type: 5
+            specifications:
+            - values:
+              - values
+              - values
+              name: name
+            - values:
+              - values
+              - values
+              name: name
+            limitStock: 6
+            sendExchangeCode: 1
+            appId: 0
+            shopId: 1
+            shopBrandId: 7
+            supportPayType: 7
+            subAppId: 6
+            virtualCodeEndTime: virtualCodeEndTime
+            serviceItem:
+            - name: name
+              serviceItemValue:
+                num: 1
+            - name: name
+              serviceItemValue:
+                num: 1
+            freightTemplateId: 1
+            serviceArea: serviceArea
+            virtualCodeStartTime: virtualCodeStartTime
+            applyShopIds:
+            - 1
+            - 1
+            serviceProcess: serviceProcess
+            spuState: 5
+            subtitle: subtitle
+            name: name
+            spuId: spuId
+            attributes:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            exchangeCodeDesc: exchangeCodeDesc
+            quotation: quotation
+            deliveryConfig:
+              predictDeliveryDay: 1
+              switcher: true
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/GetProductDetailResponseWrapperBody'
+      type: object
+    ProductSaveResponse:
+      example:
+        saveType: 6
+        spuId: 0
+      properties:
+        spuId:
+          format: int64
+          type: integer
+        saveType:
+          format: int32
+          type: integer
+      type: object
+    GetProductDetailRequestWrapper:
+      example:
+        body:
+          appId: 0
+          spuId: 1
+          shopId: 6
+          queryType: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/PlatProductGetDetailRequest'
+      type: object
+    ApiErrorInfo:
+      type: object
+    ProductImageVo:
+      example:
+        urls:
+        - urls
+        - urls
+        scale: scale
+      properties:
+        scale:
+          type: string
+        urls:
+          items:
+            type: string
+          type: array
+      type: object
+    SaveOrUpdateProductResponseWrapper:
+      example:
+        body:
+          data:
+          - saveType: 6
+            spuId: 0
+          - saveType: 6
+            spuId: 0
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/SaveOrUpdateProductResponseWrapperBody'
+      type: object
+    BigDecimal:
+      type: object
+    GetProductListRequestWrapper:
+      example:
+        body:
+          appId: 0
+          pageSize: 5
+          shopId: 6
+          pageNum: 1
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/PlatProductGetListRequest'
+      type: object
+    ProductExchangeCodeVo:
+      example:
+        addCodeList:
+        - addCodeList
+        - addCodeList
+        deleteCodeList:
+        - deleteCodeList
+        - deleteCodeList
+        type: 1
+      properties:
+        type:
+          format: int32
+          type: integer
+        addCodeList:
+          items:
+            type: string
+          type: array
+        deleteCodeList:
+          items:
+            type: string
+          type: array
+      type: object
+    PlatProductListVo:
+      example:
+        onShelf: 5
+        applyShopList:
+        - name: name
+          shopId: 2
+        - name: name
+          shopId: 2
+        thumbnail: thumbnail
+        freightTemplateId: 3
+        pageOnlineUrl: pageOnlineUrl
+        updateTime: updateTime
+        type: 1
+        webAppUrl: webAppUrl
+        restStock: 2
+        sendExchangeCode: 4
+        spuState: 5
+        name: name
+        rank: 7
+        spuId: spuId
+        shopId: 6
+        category:
+        - commodityQualificationVo:
+            isMustQualification: 3
+            commodityQualification: commodityQualification
+            commodityQualificationDesc: commodityQualificationDesc
+          level: 9
+          children:
+          - null
+          - null
+          hasChild: true
+          guaranteeLabelList:
+          - 2
+          - 2
+          name: name
+          id: 2
+          parentId: 7
+          unGuaranteeLabelList:
+          - 4
+          - 4
+        - commodityQualificationVo:
+            isMustQualification: 3
+            commodityQualification: commodityQualification
+            commodityQualificationDesc: commodityQualificationDesc
+          level: 9
+          children:
+          - null
+          - null
+          hasChild: true
+          guaranteeLabelList:
+          - 2
+          - 2
+          name: name
+          id: 2
+          parentId: 7
+          unGuaranteeLabelList:
+          - 4
+          - 4
+        supportPayType: 9
+        realSale: 7
+      properties:
+        spuId:
+          type: string
+        shopId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        type:
+          format: int32
+          type: integer
+        thumbnail:
+          type: string
+        spuState:
+          format: int32
+          type: integer
+        onShelf:
+          format: int32
+          type: integer
+        restStock:
+          format: int64
+          type: integer
+        realSale:
+          format: int64
+          type: integer
+        price:
+          $ref: '#/components/schemas/BigDecimal'
+        supportPayType:
+          format: int32
+          type: integer
+        updateTime:
+          type: string
+        category:
+          items:
+            $ref: '#/components/schemas/ProductCategoryVo'
+          type: array
+        freightTemplateId:
+          format: int64
+          type: integer
+        pageOnlineUrl:
+          type: string
+        applyShopList:
+          items:
+            $ref: '#/components/schemas/ApplyShopInfo'
+          type: array
+        sendExchangeCode:
+          format: int32
+          type: integer
+        webAppUrl:
+          type: string
+        rank:
+          format: int64
+          type: integer
+      type: object
+    PlatProductModOnlineRequest:
+      example:
+        appId: 0
+        opType: 5
+        spuId: 1
+        shopId: 6
+      properties:
+        appId:
+          format: int32
+          type: integer
+        shopId:
+          format: int64
+          type: integer
+        spuId:
+          format: int64
+          type: integer
+        opType:
+          format: int32
+          type: integer
+      type: object
+    DeleteProductRequestWrapper:
+      example:
+        body:
+          appId: 0
+          spuId: 1
+          shopId: 6
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/PlatProductDeleteRequest'
+      type: object
+    ServiceItem:
+      example:
+        name: name
+        serviceItemValue:
+          num: 1
+      properties:
+        name:
+          type: string
+        serviceItemValue:
+          $ref: '#/components/schemas/ServiceItemValue'
+      type: object
+    PlatProductDetailVo:
+      example:
+        imageAlbum:
+        - urls:
+          - urls
+          - urls
+          scale: scale
+        - urls:
+          - urls
+          - urls
+          scale: scale
+        skuList:
+        - image: image
+          lockedStock: 2
+          skuExtImage: skuExtImage
+          specifications:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          sales: 7
+          skuExtName: skuExtName
+          restStock: 4
+          stock: 3
+          skuId: 9
+          skuCode: skuCode
+          exchangeCode:
+            addCodeList:
+            - addCodeList
+            - addCodeList
+            deleteCodeList:
+            - deleteCodeList
+            - deleteCodeList
+            type: 1
+        - image: image
+          lockedStock: 2
+          skuExtImage: skuExtImage
+          specifications:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          sales: 7
+          skuExtName: skuExtName
+          restStock: 4
+          stock: 3
+          skuId: 9
+          skuCode: skuCode
+          exchangeCode:
+            addCodeList:
+            - addCodeList
+            - addCodeList
+            deleteCodeList:
+            - deleteCodeList
+            - deleteCodeList
+            type: 1
+        shopBrandName: shopBrandName
+        description: description
+        type: 5
+        specifications:
+        - values:
+          - values
+          - values
+          name: name
+        - values:
+          - values
+          - values
+          name: name
+        limitStock: 6
+        sendExchangeCode: 1
+        appId: 0
+        shopId: 1
+        shopBrandId: 7
+        supportPayType: 7
+        subAppId: 6
+        virtualCodeEndTime: virtualCodeEndTime
+        serviceItem:
+        - name: name
+          serviceItemValue:
+            num: 1
+        - name: name
+          serviceItemValue:
+            num: 1
+        freightTemplateId: 1
+        serviceArea: serviceArea
+        virtualCodeStartTime: virtualCodeStartTime
+        applyShopIds:
+        - 1
+        - 1
+        serviceProcess: serviceProcess
+        spuState: 5
+        subtitle: subtitle
+        name: name
+        spuId: spuId
+        attributes:
+        - optionValue: optionValue
+          name: name
+        - optionValue: optionValue
+          name: name
+        category:
+        - commodityQualificationVo:
+            isMustQualification: 3
+            commodityQualification: commodityQualification
+            commodityQualificationDesc: commodityQualificationDesc
+          level: 9
+          children:
+          - null
+          - null
+          hasChild: true
+          guaranteeLabelList:
+          - 2
+          - 2
+          name: name
+          id: 2
+          parentId: 7
+          unGuaranteeLabelList:
+          - 4
+          - 4
+        - commodityQualificationVo:
+            isMustQualification: 3
+            commodityQualification: commodityQualification
+            commodityQualificationDesc: commodityQualificationDesc
+          level: 9
+          children:
+          - null
+          - null
+          hasChild: true
+          guaranteeLabelList:
+          - 2
+          - 2
+          name: name
+          id: 2
+          parentId: 7
+          unGuaranteeLabelList:
+          - 4
+          - 4
+        exchangeCodeDesc: exchangeCodeDesc
+        quotation: quotation
+        deliveryConfig:
+          predictDeliveryDay: 1
+          switcher: true
+      properties:
+        spuId:
+          type: string
+        appId:
+          format: int32
+          type: integer
+        subAppId:
+          format: int32
+          type: integer
+        shopId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        subtitle:
+          type: string
+        type:
+          format: int32
+          type: integer
+        spuState:
+          format: int32
+          type: integer
+        category:
+          items:
+            $ref: '#/components/schemas/ProductCategoryVo'
+          type: array
+        attributes:
+          items:
+            $ref: '#/components/schemas/ProductSpuAttributeVo'
+          type: array
+        supportPayType:
+          format: int32
+          type: integer
+        specifications:
+          items:
+            $ref: '#/components/schemas/ProductSpuSpecificationVo'
+          type: array
+        skuList:
+          items:
+            $ref: '#/components/schemas/PlatProductSkuVo'
+          type: array
+        virtualCodeStartTime:
+          type: string
+        virtualCodeEndTime:
+          type: string
+        imageAlbum:
+          items:
+            $ref: '#/components/schemas/ProductImageVo'
+          type: array
+        description:
+          type: string
+        quotation:
+          type: string
+        serviceProcess:
+          type: string
+        serviceArea:
+          type: string
+        freightTemplateId:
+          format: int64
+          type: integer
+        deliveryConfig:
+          $ref: '#/components/schemas/PlatProductDeliveryConfigVo'
+        price:
+          $ref: '#/components/schemas/BigDecimal'
+        applyShopIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+        sendExchangeCode:
+          format: int32
+          type: integer
+        exchangeCodeDesc:
+          type: string
+        serviceItem:
+          items:
+            $ref: '#/components/schemas/ServiceItem'
+          type: array
+        limitStock:
+          format: int32
+          type: integer
+        shopBrandName:
+          type: string
+        shopBrandId:
+          format: int64
+          type: integer
+      type: object
+    GetProductListResponseWrapperBody:
       example:
         data:
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
-        - rtaStatus: 1
-          campaignType: 1
-          shadow:
-            appinfo:
-              openurl: openurl
-              apkName: apkName
-              appName: appName
-              docId: 1
-              downloadType: 5
-              appUrl: appUrl
-              channelId: 5
-            status: 1
-          subject: 6
-          endtime: endtime
-          starttime: starttime
-          bstype: 7
-          pause: true
-          campaignFeedId: 0
-          schedule:
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          - endHour: 3
-            startHour: 9
-            weekDay: 7
-          addtime: addtime
-          bgtctltype: 2
-          appinfo:
-            openurl: openurl
-            apkName: apkName
-            appName: appName
-            docId: 1
-            downloadType: 5
-            appUrl: appUrl
-            channelId: 5
-          eshopType: eshopType
-          campaignFeedName: campaignFeedName
-          budget: 2.3021358869347655
-          status: 4
+        - totalNum: 0
+          list:
+          - onShelf: 5
+            applyShopList:
+            - name: name
+              shopId: 2
+            - name: name
+              shopId: 2
+            thumbnail: thumbnail
+            freightTemplateId: 3
+            pageOnlineUrl: pageOnlineUrl
+            updateTime: updateTime
+            type: 1
+            webAppUrl: webAppUrl
+            restStock: 2
+            sendExchangeCode: 4
+            spuState: 5
+            name: name
+            rank: 7
+            spuId: spuId
+            shopId: 6
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            supportPayType: 9
+            realSale: 7
+          - onShelf: 5
+            applyShopList:
+            - name: name
+              shopId: 2
+            - name: name
+              shopId: 2
+            thumbnail: thumbnail
+            freightTemplateId: 3
+            pageOnlineUrl: pageOnlineUrl
+            updateTime: updateTime
+            type: 1
+            webAppUrl: webAppUrl
+            restStock: 2
+            sendExchangeCode: 4
+            spuState: 5
+            name: name
+            rank: 7
+            spuId: spuId
+            shopId: 6
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            supportPayType: 9
+            realSale: 7
+        - totalNum: 0
+          list:
+          - onShelf: 5
+            applyShopList:
+            - name: name
+              shopId: 2
+            - name: name
+              shopId: 2
+            thumbnail: thumbnail
+            freightTemplateId: 3
+            pageOnlineUrl: pageOnlineUrl
+            updateTime: updateTime
+            type: 1
+            webAppUrl: webAppUrl
+            restStock: 2
+            sendExchangeCode: 4
+            spuState: 5
+            name: name
+            rank: 7
+            spuId: spuId
+            shopId: 6
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            supportPayType: 9
+            realSale: 7
+          - onShelf: 5
+            applyShopList:
+            - name: name
+              shopId: 2
+            - name: name
+              shopId: 2
+            thumbnail: thumbnail
+            freightTemplateId: 3
+            pageOnlineUrl: pageOnlineUrl
+            updateTime: updateTime
+            type: 1
+            webAppUrl: webAppUrl
+            restStock: 2
+            sendExchangeCode: 4
+            spuState: 5
+            name: name
+            rank: 7
+            spuId: spuId
+            shopId: 6
+            category:
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            - commodityQualificationVo:
+                isMustQualification: 3
+                commodityQualification: commodityQualification
+                commodityQualificationDesc: commodityQualificationDesc
+              level: 9
+              children:
+              - null
+              - null
+              hasChild: true
+              guaranteeLabelList:
+              - 2
+              - 2
+              name: name
+              id: 2
+              parentId: 7
+              unGuaranteeLabelList:
+              - 4
+              - 4
+            supportPayType: 9
+            realSale: 7
       properties:
         data:
           items:
-            $ref: '#/components/schemas/CampaignFeedType'
+            $ref: '#/components/schemas/PlatProductListVoPagingResponse'
           type: array
-      title: AddCampaignFeedResponseWrapperBody
+      title: GetProductListResponseWrapperBody
+      type: object
+    DeleteProductResponseWrapperBody:
+      example:
+        data:
+        - null
+        - null
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/Void'
+          type: array
+      title: DeleteProductResponseWrapperBody
+      type: object
+    ModOnlineStatusResponseWrapperBody:
+      example:
+        data:
+        - null
+        - null
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/Void'
+          type: array
+      title: ModOnlineStatusResponseWrapperBody
+      type: object
+    GetProductDetailResponseWrapperBody:
+      example:
+        data:
+        - imageAlbum:
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          skuList:
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          shopBrandName: shopBrandName
+          description: description
+          type: 5
+          specifications:
+          - values:
+            - values
+            - values
+            name: name
+          - values:
+            - values
+            - values
+            name: name
+          limitStock: 6
+          sendExchangeCode: 1
+          appId: 0
+          shopId: 1
+          shopBrandId: 7
+          supportPayType: 7
+          subAppId: 6
+          virtualCodeEndTime: virtualCodeEndTime
+          serviceItem:
+          - name: name
+            serviceItemValue:
+              num: 1
+          - name: name
+            serviceItemValue:
+              num: 1
+          freightTemplateId: 1
+          serviceArea: serviceArea
+          virtualCodeStartTime: virtualCodeStartTime
+          applyShopIds:
+          - 1
+          - 1
+          serviceProcess: serviceProcess
+          spuState: 5
+          subtitle: subtitle
+          name: name
+          spuId: spuId
+          attributes:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          category:
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          exchangeCodeDesc: exchangeCodeDesc
+          quotation: quotation
+          deliveryConfig:
+            predictDeliveryDay: 1
+            switcher: true
+        - imageAlbum:
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          - urls:
+            - urls
+            - urls
+            scale: scale
+          skuList:
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          - image: image
+            lockedStock: 2
+            skuExtImage: skuExtImage
+            specifications:
+            - optionValue: optionValue
+              name: name
+            - optionValue: optionValue
+              name: name
+            sales: 7
+            skuExtName: skuExtName
+            restStock: 4
+            stock: 3
+            skuId: 9
+            skuCode: skuCode
+            exchangeCode:
+              addCodeList:
+              - addCodeList
+              - addCodeList
+              deleteCodeList:
+              - deleteCodeList
+              - deleteCodeList
+              type: 1
+          shopBrandName: shopBrandName
+          description: description
+          type: 5
+          specifications:
+          - values:
+            - values
+            - values
+            name: name
+          - values:
+            - values
+            - values
+            name: name
+          limitStock: 6
+          sendExchangeCode: 1
+          appId: 0
+          shopId: 1
+          shopBrandId: 7
+          supportPayType: 7
+          subAppId: 6
+          virtualCodeEndTime: virtualCodeEndTime
+          serviceItem:
+          - name: name
+            serviceItemValue:
+              num: 1
+          - name: name
+            serviceItemValue:
+              num: 1
+          freightTemplateId: 1
+          serviceArea: serviceArea
+          virtualCodeStartTime: virtualCodeStartTime
+          applyShopIds:
+          - 1
+          - 1
+          serviceProcess: serviceProcess
+          spuState: 5
+          subtitle: subtitle
+          name: name
+          spuId: spuId
+          attributes:
+          - optionValue: optionValue
+            name: name
+          - optionValue: optionValue
+            name: name
+          category:
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          - commodityQualificationVo:
+              isMustQualification: 3
+              commodityQualification: commodityQualification
+              commodityQualificationDesc: commodityQualificationDesc
+            level: 9
+            children:
+            - null
+            - null
+            hasChild: true
+            guaranteeLabelList:
+            - 2
+            - 2
+            name: name
+            id: 2
+            parentId: 7
+            unGuaranteeLabelList:
+            - 4
+            - 4
+          exchangeCodeDesc: exchangeCodeDesc
+          quotation: quotation
+          deliveryConfig:
+            predictDeliveryDay: 1
+            switcher: true
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/PlatProductDetailVo'
+          type: array
+      title: GetProductDetailResponseWrapperBody
+      type: object
+    SaveOrUpdateProductResponseWrapperBody:
+      example:
+        data:
+        - saveType: 6
+          spuId: 0
+        - saveType: 6
+          spuId: 0
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/ProductSaveResponse'
+          type: array
+      title: SaveOrUpdateProductResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 

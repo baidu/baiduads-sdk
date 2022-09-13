@@ -53,6 +53,7 @@ Name | Type | Description | Notes
 **top_page_views** | **int** |  | [optional] 
 **top_p_clicks** | **int** |  | [optional] 
 **campaign_bid_type** | **int** |  | [optional] 
+**es_conversion** | **float** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
