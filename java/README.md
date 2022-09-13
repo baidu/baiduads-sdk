@@ -29,7 +29,7 @@ mvn clean install
   <version>${version}</version>
 </dependency>
 ```
-<font color=red>备注：请在Maven仓库上找最新的版本。</font>
+最新版本![Maven](https://img.shields.io/maven-central/v/com.baidu.dev2/baiduads-sdk.svg)
 
 
 ## 使用方式
