@@ -21,9 +21,8 @@ public class BalanceServiceTest {
     public void before() {
         balanceService = new BalanceService();
         header = new ApiRequestHeader();
-        header.setUsername("xxxxx"); // 替换为自己的用户名
-        header.setPassword("xxxxx"); // 替换为自己的密码
-        header.setToken("xxxxx"); // 替换为自己的token
+        header.setAccessToken("xxxxx"); // 替换为授权生成的accessToken
+        header.setUserName("xxxxx"); // 替换为自己的用户名
     }
 
     @Test
