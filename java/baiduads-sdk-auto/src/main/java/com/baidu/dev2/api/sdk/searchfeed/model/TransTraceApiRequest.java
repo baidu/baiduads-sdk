@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.searchfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.searchfeed.model.JmyPageFilter;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -27,13 +28,17 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * TransTraceApiRequest
  */
 @JsonPropertyOrder({
-  TransTraceApiRequest.JSON_PROPERTY_TRANS_FROM
+  TransTraceApiRequest.JSON_PROPERTY_TRANS_FROM,
+  TransTraceApiRequest.JSON_PROPERTY_JMY_PAGE_FILTER
 })
 @JsonTypeName("TransTraceApiRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class TransTraceApiRequest {
   public static final String JSON_PROPERTY_TRANS_FROM = "transFrom";
   private Integer transFrom;
+
+  public static final String JSON_PROPERTY_JMY_PAGE_FILTER = "jmyPageFilter";
+  private JmyPageFilter jmyPageFilter;
 
   public TransTraceApiRequest() { 
   }
@@ -65,6 +70,33 @@ public class TransTraceApiRequest {
   }
 
 
+  public TransTraceApiRequest jmyPageFilter(JmyPageFilter jmyPageFilter) {
+    
+    this.jmyPageFilter = jmyPageFilter;
+    return this;
+  }
+
+   /**
+   * Get jmyPageFilter
+   * @return jmyPageFilter
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_JMY_PAGE_FILTER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public JmyPageFilter getJmyPageFilter() {
+    return jmyPageFilter;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_JMY_PAGE_FILTER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setJmyPageFilter(JmyPageFilter jmyPageFilter) {
+    this.jmyPageFilter = jmyPageFilter;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -74,12 +106,13 @@ public class TransTraceApiRequest {
       return false;
     }
     TransTraceApiRequest transTraceApiRequest = (TransTraceApiRequest) o;
-    return Objects.equals(this.transFrom, transTraceApiRequest.transFrom);
+    return Objects.equals(this.transFrom, transTraceApiRequest.transFrom) &&
+        Objects.equals(this.jmyPageFilter, transTraceApiRequest.jmyPageFilter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(transFrom);
+    return Objects.hash(transFrom, jmyPageFilter);
   }
 
   @Override
@@ -87,6 +120,7 @@ public class TransTraceApiRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class TransTraceApiRequest {\n");
     sb.append("    transFrom: ").append(toIndentedString(transFrom)).append("\n");
+    sb.append("    jmyPageFilter: ").append(toIndentedString(jmyPageFilter)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -32,8 +32,6 @@ import com.baidu.dev2.api.sdk.searchfeed.model.GetMediasRequestWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetMediasResponseWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetOcpcTransFeedRequestWrapper;
 import com.baidu.dev2.api.sdk.searchfeed.model.GetOcpcTransFeedResponseWrapper;
-import com.baidu.dev2.api.sdk.searchfeed.model.GetRecmWordPackagesFeedRequestWrapper;
-import com.baidu.dev2.api.sdk.searchfeed.model.GetRecmWordPackagesFeedResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -445,63 +443,6 @@ public class SearchFeedService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetOcpcTransFeedResponseWrapper> localVarReturnType = new TypeReference<GetOcpcTransFeedResponseWrapper>() {};
-    return apiClient.invokeAPI(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAccept,
-        localVarContentType,
-        localVarAuthNames,
-        localVarReturnType
-    );
-  }
-  /**
-   * 
-   * 
-   * @param getRecmWordPackagesFeedRequestWrapper  (required)
-   * @return GetRecmWordPackagesFeedResponseWrapper
-   * @throws ApiException if fails to make API call
-   */
-  public GetRecmWordPackagesFeedResponseWrapper getRecmWordPackagesFeed(GetRecmWordPackagesFeedRequestWrapper getRecmWordPackagesFeedRequestWrapper) throws ApiException {
-    Object localVarPostBody = getRecmWordPackagesFeedRequestWrapper;
-    
-    // verify the required parameter 'getRecmWordPackagesFeedRequestWrapper' is set
-    if (getRecmWordPackagesFeedRequestWrapper == null) {
-      throw new ApiException(400, "Missing the required parameter 'getRecmWordPackagesFeedRequestWrapper' when calling getRecmWordPackagesFeed");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/json/feed/v1/SearchFeedService/getRecmWordPackagesFeed";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    TypeReference<GetRecmWordPackagesFeedResponseWrapper> localVarReturnType = new TypeReference<GetRecmWordPackagesFeedResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

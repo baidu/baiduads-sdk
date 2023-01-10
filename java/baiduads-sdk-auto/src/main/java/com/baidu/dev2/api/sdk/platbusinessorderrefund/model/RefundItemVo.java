@@ -13,14 +13,8 @@ package com.baidu.dev2.api.sdk.platbusinessorderrefund.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.ComplaintFlowVo;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.ExpressInfoVo;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.OrderBussinessInfo;
 import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.OrderRefundExpressInfo;
 import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.RefundExpressVo;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.RefundSku;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.RefundStepVo;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.TagInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -41,43 +35,25 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RefundItemVo.JSON_PROPERTY_REFUND_ID,
   RefundItemVo.JSON_PROPERTY_REFUND_TYPE,
   RefundItemVo.JSON_PROPERTY_REFUND_STATUS,
-  RefundItemVo.JSON_PROPERTY_PRODUCT_TYPE,
   RefundItemVo.JSON_PROPERTY_PRODUCT_NAME,
   RefundItemVo.JSON_PROPERTY_REFUND_AMOUNT,
   RefundItemVo.JSON_PROPERTY_ORDER_PAYMENT,
-  RefundItemVo.JSON_PROPERTY_REFUND_REASON,
   RefundItemVo.JSON_PROPERTY_REFUND_DESC,
   RefundItemVo.JSON_PROPERTY_EXPRESS_PHONE,
   RefundItemVo.JSON_PROPERTY_CONTACT_NAME,
   RefundItemVo.JSON_PROPERTY_APPLY_TIME,
-  RefundItemVo.JSON_PROPERTY_RESPONSE_TIME,
   RefundItemVo.JSON_PROPERTY_REFUND_IMAGE,
-  RefundItemVo.JSON_PROPERTY_COMPLAINT_ID,
   RefundItemVo.JSON_PROPERTY_REFUND_STATUS_TEXT,
   RefundItemVo.JSON_PROPERTY_REFUND_TYPE_TEXT,
   RefundItemVo.JSON_PROPERTY_REFUND_REASON_TEXT,
   RefundItemVo.JSON_PROPERTY_EXPRESS_INFO,
-  RefundItemVo.JSON_PROPERTY_COMPLAINT_STATUS,
   RefundItemVo.JSON_PROPERTY_TIMEOUT_DATE,
-  RefundItemVo.JSON_PROPERTY_TIMEOUT_DATE_DESC,
   RefundItemVo.JSON_PROPERTY_AGG_RETURN_STATUS,
   RefundItemVo.JSON_PROPERTY_AGG_RETURN_STATUS_TEXT,
-  RefundItemVo.JSON_PROPERTY_AGG_REFUND_STATUS,
-  RefundItemVo.JSON_PROPERTY_AGG_REFUND_STATUS_TEXT,
-  RefundItemVo.JSON_PROPERTY_DELIVERY_STATUS,
   RefundItemVo.JSON_PROPERTY_DELIVERY_STATUS_TEXT,
   RefundItemVo.JSON_PROPERTY_ORDER_DETAIL_ID,
-  RefundItemVo.JSON_PROPERTY_LAST_OPERATOR_TYPE,
-  RefundItemVo.JSON_PROPERTY_START_TIME,
   RefundItemVo.JSON_PROPERTY_REJECT_REASON,
   RefundItemVo.JSON_PROPERTY_REJECT_PROOF,
-  RefundItemVo.JSON_PROPERTY_JUDGE_RESULT,
-  RefundItemVo.JSON_PROPERTY_JUDGE_RESULT_TEXT,
-  RefundItemVo.JSON_PROPERTY_JUDGE_DESC,
-  RefundItemVo.JSON_PROPERTY_JUDGE_IMAGES,
-  RefundItemVo.JSON_PROPERTY_EXCUTION_PLAN,
-  RefundItemVo.JSON_PROPERTY_REFUND_MERGE_STATUS,
-  RefundItemVo.JSON_PROPERTY_REFUND_MERGE_STATUS_TEXT,
   RefundItemVo.JSON_PROPERTY_SHOP_ID,
   RefundItemVo.JSON_PROPERTY_SKU_ID,
   RefundItemVo.JSON_PROPERTY_SKU_DESC,
@@ -85,38 +61,14 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RefundItemVo.JSON_PROPERTY_RETURN_TIME,
   RefundItemVo.JSON_PROPERTY_PRODUCT_IMAGE,
   RefundItemVo.JSON_PROPERTY_REFUND_NUM,
-  RefundItemVo.JSON_PROPERTY_REFUND_SKU,
-  RefundItemVo.JSON_PROPERTY_ORDER_REFUND_MARK,
-  RefundItemVo.JSON_PROPERTY_ORDER_REFUND_DETAIL,
   RefundItemVo.JSON_PROPERTY_UCID,
-  RefundItemVo.JSON_PROPERTY_USER_ID,
-  RefundItemVo.JSON_PROPERTY_PAY_TYPE,
-  RefundItemVo.JSON_PROPERTY_REFUND_DETAIL,
-  RefundItemVo.JSON_PROPERTY_UPDATE_TIME,
-  RefundItemVo.JSON_PROPERTY_SIGNED,
   RefundItemVo.JSON_PROPERTY_LAST_OPERATION_TIME,
-  RefundItemVo.JSON_PROPERTY_COMPLAINT_FLOW_LIST,
   RefundItemVo.JSON_PROPERTY_SELL_PRICE,
-  RefundItemVo.JSON_PROPERTY_EXPRESS_TRACKING_NUMBER,
   RefundItemVo.JSON_PROPERTY_CREATE_TIME,
-  RefundItemVo.JSON_PROPERTY_SEQUENCE,
   RefundItemVo.JSON_PROPERTY_SHOP_NAME,
-  RefundItemVo.JSON_PROPERTY_ORDER_INFO,
   RefundItemVo.JSON_PROPERTY_EXCHANGE_EXPRESS,
-  RefundItemVo.JSON_PROPERTY_BIZ_EXPRESS,
-  RefundItemVo.JSON_PROPERTY_PASSPORT_ID,
   RefundItemVo.JSON_PROPERTY_FINISH_TIME,
-  RefundItemVo.JSON_PROPERTY_REFUND_CHANNEL,
-  RefundItemVo.JSON_PROPERTY_CUSTOMER_STATUS,
-  RefundItemVo.JSON_PROPERTY_CUSTOMER_STATUS_TEXT,
-  RefundItemVo.JSON_PROPERTY_RETURN_GOODS_STATUS,
-  RefundItemVo.JSON_PROPERTY_RETURN_GOODS_STATUS_TEXT,
-  RefundItemVo.JSON_PROPERTY_TAG_LIST,
-  RefundItemVo.JSON_PROPERTY_REFUND_STEP_LIST,
-  RefundItemVo.JSON_PROPERTY_EXPRESS,
-  RefundItemVo.JSON_PROPERTY_DELIVERY_EXPRESS_STATUS,
-  RefundItemVo.JSON_PROPERTY_BUSSINESS_COMPLAINT_ENTER,
-  RefundItemVo.JSON_PROPERTY_BUSSINESS_COMPLAINT_TASK_LEFT_TIME
+  RefundItemVo.JSON_PROPERTY_ENCODE_PASS_ID
 })
 @JsonTypeName("RefundItemVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -133,9 +85,6 @@ public class RefundItemVo {
   public static final String JSON_PROPERTY_REFUND_STATUS = "refundStatus";
   private Integer refundStatus;
 
-  public static final String JSON_PROPERTY_PRODUCT_TYPE = "productType";
-  private Integer productType;
-
   public static final String JSON_PROPERTY_PRODUCT_NAME = "productName";
   private String productName;
 
@@ -144,9 +93,6 @@ public class RefundItemVo {
 
   public static final String JSON_PROPERTY_ORDER_PAYMENT = "orderPayment";
   private String orderPayment;
-
-  public static final String JSON_PROPERTY_REFUND_REASON = "refundReason";
-  private Integer refundReason;
 
   public static final String JSON_PROPERTY_REFUND_DESC = "refundDesc";
   private String refundDesc;
@@ -160,14 +106,8 @@ public class RefundItemVo {
   public static final String JSON_PROPERTY_APPLY_TIME = "applyTime";
   private String applyTime;
 
-  public static final String JSON_PROPERTY_RESPONSE_TIME = "responseTime";
-  private String responseTime;
-
   public static final String JSON_PROPERTY_REFUND_IMAGE = "refundImage";
   private List<String> refundImage = null;
-
-  public static final String JSON_PROPERTY_COMPLAINT_ID = "complaintId";
-  private Long complaintId;
 
   public static final String JSON_PROPERTY_REFUND_STATUS_TEXT = "refundStatusText";
   private String refundStatusText;
@@ -181,14 +121,8 @@ public class RefundItemVo {
   public static final String JSON_PROPERTY_EXPRESS_INFO = "expressInfo";
   private OrderRefundExpressInfo expressInfo;
 
-  public static final String JSON_PROPERTY_COMPLAINT_STATUS = "complaintStatus";
-  private Integer complaintStatus;
-
   public static final String JSON_PROPERTY_TIMEOUT_DATE = "timeoutDate";
   private String timeoutDate;
-
-  public static final String JSON_PROPERTY_TIMEOUT_DATE_DESC = "timeoutDateDesc";
-  private String timeoutDateDesc;
 
   public static final String JSON_PROPERTY_AGG_RETURN_STATUS = "aggReturnStatus";
   private Integer aggReturnStatus;
@@ -196,53 +130,17 @@ public class RefundItemVo {
   public static final String JSON_PROPERTY_AGG_RETURN_STATUS_TEXT = "aggReturnStatusText";
   private String aggReturnStatusText;
 
-  public static final String JSON_PROPERTY_AGG_REFUND_STATUS = "aggRefundStatus";
-  private Integer aggRefundStatus;
-
-  public static final String JSON_PROPERTY_AGG_REFUND_STATUS_TEXT = "aggRefundStatusText";
-  private String aggRefundStatusText;
-
-  public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
-  private Integer deliveryStatus;
-
   public static final String JSON_PROPERTY_DELIVERY_STATUS_TEXT = "deliveryStatusText";
   private String deliveryStatusText;
 
   public static final String JSON_PROPERTY_ORDER_DETAIL_ID = "orderDetailId";
   private String orderDetailId;
 
-  public static final String JSON_PROPERTY_LAST_OPERATOR_TYPE = "lastOperatorType";
-  private Integer lastOperatorType;
-
-  public static final String JSON_PROPERTY_START_TIME = "startTime";
-  private String startTime;
-
   public static final String JSON_PROPERTY_REJECT_REASON = "rejectReason";
   private String rejectReason;
 
   public static final String JSON_PROPERTY_REJECT_PROOF = "rejectProof";
   private List<String> rejectProof = null;
-
-  public static final String JSON_PROPERTY_JUDGE_RESULT = "judgeResult";
-  private Integer judgeResult;
-
-  public static final String JSON_PROPERTY_JUDGE_RESULT_TEXT = "judgeResultText";
-  private String judgeResultText;
-
-  public static final String JSON_PROPERTY_JUDGE_DESC = "judgeDesc";
-  private String judgeDesc;
-
-  public static final String JSON_PROPERTY_JUDGE_IMAGES = "judgeImages";
-  private List<String> judgeImages = null;
-
-  public static final String JSON_PROPERTY_EXCUTION_PLAN = "excutionPlan";
-  private String excutionPlan;
-
-  public static final String JSON_PROPERTY_REFUND_MERGE_STATUS = "refundMergeStatus";
-  private Integer refundMergeStatus;
-
-  public static final String JSON_PROPERTY_REFUND_MERGE_STATUS_TEXT = "refundMergeStatusText";
-  private String refundMergeStatusText;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -265,101 +163,29 @@ public class RefundItemVo {
   public static final String JSON_PROPERTY_REFUND_NUM = "refundNum";
   private Integer refundNum;
 
-  public static final String JSON_PROPERTY_REFUND_SKU = "refundSku";
-  private RefundSku refundSku;
-
-  public static final String JSON_PROPERTY_ORDER_REFUND_MARK = "orderRefundMark";
-  private Integer orderRefundMark;
-
-  public static final String JSON_PROPERTY_ORDER_REFUND_DETAIL = "orderRefundDetail";
-  private String orderRefundDetail;
-
   public static final String JSON_PROPERTY_UCID = "ucid";
   private Long ucid;
-
-  public static final String JSON_PROPERTY_USER_ID = "userId";
-  private Long userId;
-
-  public static final String JSON_PROPERTY_PAY_TYPE = "payType";
-  private Integer payType;
-
-  public static final String JSON_PROPERTY_REFUND_DETAIL = "refundDetail";
-  private String refundDetail;
-
-  public static final String JSON_PROPERTY_UPDATE_TIME = "updateTime";
-  private String updateTime;
-
-  public static final String JSON_PROPERTY_SIGNED = "signed";
-  private Integer signed;
 
   public static final String JSON_PROPERTY_LAST_OPERATION_TIME = "lastOperationTime";
   private String lastOperationTime;
 
-  public static final String JSON_PROPERTY_COMPLAINT_FLOW_LIST = "complaintFlowList";
-  private List<ComplaintFlowVo> complaintFlowList = null;
-
   public static final String JSON_PROPERTY_SELL_PRICE = "sellPrice";
   private Long sellPrice;
-
-  public static final String JSON_PROPERTY_EXPRESS_TRACKING_NUMBER = "expressTrackingNumber";
-  private String expressTrackingNumber;
 
   public static final String JSON_PROPERTY_CREATE_TIME = "createTime";
   private String createTime;
 
-  public static final String JSON_PROPERTY_SEQUENCE = "sequence";
-  private Integer sequence;
-
   public static final String JSON_PROPERTY_SHOP_NAME = "shopName";
   private String shopName;
-
-  public static final String JSON_PROPERTY_ORDER_INFO = "orderInfo";
-  private OrderBussinessInfo orderInfo;
 
   public static final String JSON_PROPERTY_EXCHANGE_EXPRESS = "exchangeExpress";
   private RefundExpressVo exchangeExpress;
 
-  public static final String JSON_PROPERTY_BIZ_EXPRESS = "bizExpress";
-  private RefundExpressVo bizExpress;
-
-  public static final String JSON_PROPERTY_PASSPORT_ID = "passportId";
-  private Long passportId;
-
   public static final String JSON_PROPERTY_FINISH_TIME = "finishTime";
   private String finishTime;
 
-  public static final String JSON_PROPERTY_REFUND_CHANNEL = "refundChannel";
-  private String refundChannel;
-
-  public static final String JSON_PROPERTY_CUSTOMER_STATUS = "customerStatus";
-  private Integer customerStatus;
-
-  public static final String JSON_PROPERTY_CUSTOMER_STATUS_TEXT = "customerStatusText";
-  private String customerStatusText;
-
-  public static final String JSON_PROPERTY_RETURN_GOODS_STATUS = "returnGoodsStatus";
-  private Integer returnGoodsStatus;
-
-  public static final String JSON_PROPERTY_RETURN_GOODS_STATUS_TEXT = "returnGoodsStatusText";
-  private String returnGoodsStatusText;
-
-  public static final String JSON_PROPERTY_TAG_LIST = "tagList";
-  private List<TagInfo> tagList = null;
-
-  public static final String JSON_PROPERTY_REFUND_STEP_LIST = "refundStepList";
-  private List<RefundStepVo> refundStepList = null;
-
-  public static final String JSON_PROPERTY_EXPRESS = "express";
-  private ExpressInfoVo express;
-
-  public static final String JSON_PROPERTY_DELIVERY_EXPRESS_STATUS = "deliveryExpressStatus";
-  private Integer deliveryExpressStatus;
-
-  public static final String JSON_PROPERTY_BUSSINESS_COMPLAINT_ENTER = "bussinessComplaintEnter";
-  private Integer bussinessComplaintEnter;
-
-  public static final String JSON_PROPERTY_BUSSINESS_COMPLAINT_TASK_LEFT_TIME = "bussinessComplaintTaskLeftTime";
-  private Long bussinessComplaintTaskLeftTime;
+  public static final String JSON_PROPERTY_ENCODE_PASS_ID = "encodePassId";
+  private String encodePassId;
 
   public RefundItemVo() { 
   }
@@ -472,33 +298,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo productType(Integer productType) {
-    
-    this.productType = productType;
-    return this;
-  }
-
-   /**
-   * Get productType
-   * @return productType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getProductType() {
-    return productType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProductType(Integer productType) {
-    this.productType = productType;
-  }
-
-
   public RefundItemVo productName(String productName) {
     
     this.productName = productName;
@@ -577,33 +376,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOrderPayment(String orderPayment) {
     this.orderPayment = orderPayment;
-  }
-
-
-  public RefundItemVo refundReason(Integer refundReason) {
-    
-    this.refundReason = refundReason;
-    return this;
-  }
-
-   /**
-   * Get refundReason
-   * @return refundReason
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_REASON)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getRefundReason() {
-    return refundReason;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_REASON)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundReason(Integer refundReason) {
-    this.refundReason = refundReason;
   }
 
 
@@ -715,33 +487,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo responseTime(String responseTime) {
-    
-    this.responseTime = responseTime;
-    return this;
-  }
-
-   /**
-   * Get responseTime
-   * @return responseTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RESPONSE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getResponseTime() {
-    return responseTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RESPONSE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResponseTime(String responseTime) {
-    this.responseTime = responseTime;
-  }
-
-
   public RefundItemVo refundImage(List<String> refundImage) {
     
     this.refundImage = refundImage;
@@ -774,33 +519,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRefundImage(List<String> refundImage) {
     this.refundImage = refundImage;
-  }
-
-
-  public RefundItemVo complaintId(Long complaintId) {
-    
-    this.complaintId = complaintId;
-    return this;
-  }
-
-   /**
-   * Get complaintId
-   * @return complaintId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getComplaintId() {
-    return complaintId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setComplaintId(Long complaintId) {
-    this.complaintId = complaintId;
   }
 
 
@@ -912,33 +630,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo complaintStatus(Integer complaintStatus) {
-    
-    this.complaintStatus = complaintStatus;
-    return this;
-  }
-
-   /**
-   * Get complaintStatus
-   * @return complaintStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getComplaintStatus() {
-    return complaintStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setComplaintStatus(Integer complaintStatus) {
-    this.complaintStatus = complaintStatus;
-  }
-
-
   public RefundItemVo timeoutDate(String timeoutDate) {
     
     this.timeoutDate = timeoutDate;
@@ -963,33 +654,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimeoutDate(String timeoutDate) {
     this.timeoutDate = timeoutDate;
-  }
-
-
-  public RefundItemVo timeoutDateDesc(String timeoutDateDesc) {
-    
-    this.timeoutDateDesc = timeoutDateDesc;
-    return this;
-  }
-
-   /**
-   * Get timeoutDateDesc
-   * @return timeoutDateDesc
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TIMEOUT_DATE_DESC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getTimeoutDateDesc() {
-    return timeoutDateDesc;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TIMEOUT_DATE_DESC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTimeoutDateDesc(String timeoutDateDesc) {
-    this.timeoutDateDesc = timeoutDateDesc;
   }
 
 
@@ -1047,87 +711,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo aggRefundStatus(Integer aggRefundStatus) {
-    
-    this.aggRefundStatus = aggRefundStatus;
-    return this;
-  }
-
-   /**
-   * Get aggRefundStatus
-   * @return aggRefundStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getAggRefundStatus() {
-    return aggRefundStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAggRefundStatus(Integer aggRefundStatus) {
-    this.aggRefundStatus = aggRefundStatus;
-  }
-
-
-  public RefundItemVo aggRefundStatusText(String aggRefundStatusText) {
-    
-    this.aggRefundStatusText = aggRefundStatusText;
-    return this;
-  }
-
-   /**
-   * Get aggRefundStatusText
-   * @return aggRefundStatusText
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getAggRefundStatusText() {
-    return aggRefundStatusText;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAggRefundStatusText(String aggRefundStatusText) {
-    this.aggRefundStatusText = aggRefundStatusText;
-  }
-
-
-  public RefundItemVo deliveryStatus(Integer deliveryStatus) {
-    
-    this.deliveryStatus = deliveryStatus;
-    return this;
-  }
-
-   /**
-   * Get deliveryStatus
-   * @return deliveryStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDeliveryStatus() {
-    return deliveryStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(Integer deliveryStatus) {
-    this.deliveryStatus = deliveryStatus;
-  }
-
-
   public RefundItemVo deliveryStatusText(String deliveryStatusText) {
     
     this.deliveryStatusText = deliveryStatusText;
@@ -1179,60 +762,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOrderDetailId(String orderDetailId) {
     this.orderDetailId = orderDetailId;
-  }
-
-
-  public RefundItemVo lastOperatorType(Integer lastOperatorType) {
-    
-    this.lastOperatorType = lastOperatorType;
-    return this;
-  }
-
-   /**
-   * Get lastOperatorType
-   * @return lastOperatorType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_LAST_OPERATOR_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getLastOperatorType() {
-    return lastOperatorType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_LAST_OPERATOR_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLastOperatorType(Integer lastOperatorType) {
-    this.lastOperatorType = lastOperatorType;
-  }
-
-
-  public RefundItemVo startTime(String startTime) {
-    
-    this.startTime = startTime;
-    return this;
-  }
-
-   /**
-   * Get startTime
-   * @return startTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_START_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getStartTime() {
-    return startTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_START_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartTime(String startTime) {
-    this.startTime = startTime;
   }
 
 
@@ -1295,203 +824,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRejectProof(List<String> rejectProof) {
     this.rejectProof = rejectProof;
-  }
-
-
-  public RefundItemVo judgeResult(Integer judgeResult) {
-    
-    this.judgeResult = judgeResult;
-    return this;
-  }
-
-   /**
-   * Get judgeResult
-   * @return judgeResult
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_JUDGE_RESULT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getJudgeResult() {
-    return judgeResult;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_JUDGE_RESULT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJudgeResult(Integer judgeResult) {
-    this.judgeResult = judgeResult;
-  }
-
-
-  public RefundItemVo judgeResultText(String judgeResultText) {
-    
-    this.judgeResultText = judgeResultText;
-    return this;
-  }
-
-   /**
-   * Get judgeResultText
-   * @return judgeResultText
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_JUDGE_RESULT_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getJudgeResultText() {
-    return judgeResultText;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_JUDGE_RESULT_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJudgeResultText(String judgeResultText) {
-    this.judgeResultText = judgeResultText;
-  }
-
-
-  public RefundItemVo judgeDesc(String judgeDesc) {
-    
-    this.judgeDesc = judgeDesc;
-    return this;
-  }
-
-   /**
-   * Get judgeDesc
-   * @return judgeDesc
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_JUDGE_DESC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getJudgeDesc() {
-    return judgeDesc;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_JUDGE_DESC)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJudgeDesc(String judgeDesc) {
-    this.judgeDesc = judgeDesc;
-  }
-
-
-  public RefundItemVo judgeImages(List<String> judgeImages) {
-    
-    this.judgeImages = judgeImages;
-    return this;
-  }
-
-  public RefundItemVo addJudgeImagesItem(String judgeImagesItem) {
-    if (this.judgeImages == null) {
-      this.judgeImages = new ArrayList<>();
-    }
-    this.judgeImages.add(judgeImagesItem);
-    return this;
-  }
-
-   /**
-   * Get judgeImages
-   * @return judgeImages
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_JUDGE_IMAGES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<String> getJudgeImages() {
-    return judgeImages;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_JUDGE_IMAGES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJudgeImages(List<String> judgeImages) {
-    this.judgeImages = judgeImages;
-  }
-
-
-  public RefundItemVo excutionPlan(String excutionPlan) {
-    
-    this.excutionPlan = excutionPlan;
-    return this;
-  }
-
-   /**
-   * Get excutionPlan
-   * @return excutionPlan
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_EXCUTION_PLAN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getExcutionPlan() {
-    return excutionPlan;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EXCUTION_PLAN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcutionPlan(String excutionPlan) {
-    this.excutionPlan = excutionPlan;
-  }
-
-
-  public RefundItemVo refundMergeStatus(Integer refundMergeStatus) {
-    
-    this.refundMergeStatus = refundMergeStatus;
-    return this;
-  }
-
-   /**
-   * Get refundMergeStatus
-   * @return refundMergeStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_MERGE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getRefundMergeStatus() {
-    return refundMergeStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_MERGE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundMergeStatus(Integer refundMergeStatus) {
-    this.refundMergeStatus = refundMergeStatus;
-  }
-
-
-  public RefundItemVo refundMergeStatusText(String refundMergeStatusText) {
-    
-    this.refundMergeStatusText = refundMergeStatusText;
-    return this;
-  }
-
-   /**
-   * Get refundMergeStatusText
-   * @return refundMergeStatusText
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_MERGE_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getRefundMergeStatusText() {
-    return refundMergeStatusText;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_MERGE_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundMergeStatusText(String refundMergeStatusText) {
-    this.refundMergeStatusText = refundMergeStatusText;
   }
 
 
@@ -1684,87 +1016,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo refundSku(RefundSku refundSku) {
-    
-    this.refundSku = refundSku;
-    return this;
-  }
-
-   /**
-   * Get refundSku
-   * @return refundSku
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_SKU)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public RefundSku getRefundSku() {
-    return refundSku;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_SKU)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundSku(RefundSku refundSku) {
-    this.refundSku = refundSku;
-  }
-
-
-  public RefundItemVo orderRefundMark(Integer orderRefundMark) {
-    
-    this.orderRefundMark = orderRefundMark;
-    return this;
-  }
-
-   /**
-   * Get orderRefundMark
-   * @return orderRefundMark
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_MARK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getOrderRefundMark() {
-    return orderRefundMark;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_MARK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderRefundMark(Integer orderRefundMark) {
-    this.orderRefundMark = orderRefundMark;
-  }
-
-
-  public RefundItemVo orderRefundDetail(String orderRefundDetail) {
-    
-    this.orderRefundDetail = orderRefundDetail;
-    return this;
-  }
-
-   /**
-   * Get orderRefundDetail
-   * @return orderRefundDetail
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getOrderRefundDetail() {
-    return orderRefundDetail;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderRefundDetail(String orderRefundDetail) {
-    this.orderRefundDetail = orderRefundDetail;
-  }
-
-
   public RefundItemVo ucid(Long ucid) {
     
     this.ucid = ucid;
@@ -1789,141 +1040,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUcid(Long ucid) {
     this.ucid = ucid;
-  }
-
-
-  public RefundItemVo userId(Long userId) {
-    
-    this.userId = userId;
-    return this;
-  }
-
-   /**
-   * Get userId
-   * @return userId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUserId() {
-    return userId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserId(Long userId) {
-    this.userId = userId;
-  }
-
-
-  public RefundItemVo payType(Integer payType) {
-    
-    this.payType = payType;
-    return this;
-  }
-
-   /**
-   * Get payType
-   * @return payType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PAY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getPayType() {
-    return payType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PAY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayType(Integer payType) {
-    this.payType = payType;
-  }
-
-
-  public RefundItemVo refundDetail(String refundDetail) {
-    
-    this.refundDetail = refundDetail;
-    return this;
-  }
-
-   /**
-   * Get refundDetail
-   * @return refundDetail
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getRefundDetail() {
-    return refundDetail;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundDetail(String refundDetail) {
-    this.refundDetail = refundDetail;
-  }
-
-
-  public RefundItemVo updateTime(String updateTime) {
-    
-    this.updateTime = updateTime;
-    return this;
-  }
-
-   /**
-   * Get updateTime
-   * @return updateTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UPDATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getUpdateTime() {
-    return updateTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UPDATE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpdateTime(String updateTime) {
-    this.updateTime = updateTime;
-  }
-
-
-  public RefundItemVo signed(Integer signed) {
-    
-    this.signed = signed;
-    return this;
-  }
-
-   /**
-   * Get signed
-   * @return signed
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SIGNED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getSigned() {
-    return signed;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SIGNED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSigned(Integer signed) {
-    this.signed = signed;
   }
 
 
@@ -1954,41 +1070,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo complaintFlowList(List<ComplaintFlowVo> complaintFlowList) {
-    
-    this.complaintFlowList = complaintFlowList;
-    return this;
-  }
-
-  public RefundItemVo addComplaintFlowListItem(ComplaintFlowVo complaintFlowListItem) {
-    if (this.complaintFlowList == null) {
-      this.complaintFlowList = new ArrayList<>();
-    }
-    this.complaintFlowList.add(complaintFlowListItem);
-    return this;
-  }
-
-   /**
-   * Get complaintFlowList
-   * @return complaintFlowList
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_FLOW_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<ComplaintFlowVo> getComplaintFlowList() {
-    return complaintFlowList;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_FLOW_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setComplaintFlowList(List<ComplaintFlowVo> complaintFlowList) {
-    this.complaintFlowList = complaintFlowList;
-  }
-
-
   public RefundItemVo sellPrice(Long sellPrice) {
     
     this.sellPrice = sellPrice;
@@ -2013,33 +1094,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSellPrice(Long sellPrice) {
     this.sellPrice = sellPrice;
-  }
-
-
-  public RefundItemVo expressTrackingNumber(String expressTrackingNumber) {
-    
-    this.expressTrackingNumber = expressTrackingNumber;
-    return this;
-  }
-
-   /**
-   * Get expressTrackingNumber
-   * @return expressTrackingNumber
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_EXPRESS_TRACKING_NUMBER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getExpressTrackingNumber() {
-    return expressTrackingNumber;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EXPRESS_TRACKING_NUMBER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExpressTrackingNumber(String expressTrackingNumber) {
-    this.expressTrackingNumber = expressTrackingNumber;
   }
 
 
@@ -2070,33 +1124,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo sequence(Integer sequence) {
-    
-    this.sequence = sequence;
-    return this;
-  }
-
-   /**
-   * Get sequence
-   * @return sequence
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SEQUENCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getSequence() {
-    return sequence;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SEQUENCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSequence(Integer sequence) {
-    this.sequence = sequence;
-  }
-
-
   public RefundItemVo shopName(String shopName) {
     
     this.shopName = shopName;
@@ -2121,33 +1148,6 @@ public class RefundItemVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setShopName(String shopName) {
     this.shopName = shopName;
-  }
-
-
-  public RefundItemVo orderInfo(OrderBussinessInfo orderInfo) {
-    
-    this.orderInfo = orderInfo;
-    return this;
-  }
-
-   /**
-   * Get orderInfo
-   * @return orderInfo
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_INFO)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public OrderBussinessInfo getOrderInfo() {
-    return orderInfo;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_INFO)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderInfo(OrderBussinessInfo orderInfo) {
-    this.orderInfo = orderInfo;
   }
 
 
@@ -2178,60 +1178,6 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo bizExpress(RefundExpressVo bizExpress) {
-    
-    this.bizExpress = bizExpress;
-    return this;
-  }
-
-   /**
-   * Get bizExpress
-   * @return bizExpress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BIZ_EXPRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public RefundExpressVo getBizExpress() {
-    return bizExpress;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BIZ_EXPRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBizExpress(RefundExpressVo bizExpress) {
-    this.bizExpress = bizExpress;
-  }
-
-
-  public RefundItemVo passportId(Long passportId) {
-    
-    this.passportId = passportId;
-    return this;
-  }
-
-   /**
-   * Get passportId
-   * @return passportId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PASSPORT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getPassportId() {
-    return passportId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PASSPORT_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPassportId(Long passportId) {
-    this.passportId = passportId;
-  }
-
-
   public RefundItemVo finishTime(String finishTime) {
     
     this.finishTime = finishTime;
@@ -2259,316 +1205,30 @@ public class RefundItemVo {
   }
 
 
-  public RefundItemVo refundChannel(String refundChannel) {
+  public RefundItemVo encodePassId(String encodePassId) {
     
-    this.refundChannel = refundChannel;
+    this.encodePassId = encodePassId;
     return this;
   }
 
    /**
-   * Get refundChannel
-   * @return refundChannel
+   * Get encodePassId
+   * @return encodePassId
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_CHANNEL)
+  @JsonProperty(JSON_PROPERTY_ENCODE_PASS_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public String getRefundChannel() {
-    return refundChannel;
+  public String getEncodePassId() {
+    return encodePassId;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REFUND_CHANNEL)
+  @JsonProperty(JSON_PROPERTY_ENCODE_PASS_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundChannel(String refundChannel) {
-    this.refundChannel = refundChannel;
-  }
-
-
-  public RefundItemVo customerStatus(Integer customerStatus) {
-    
-    this.customerStatus = customerStatus;
-    return this;
-  }
-
-   /**
-   * Get customerStatus
-   * @return customerStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getCustomerStatus() {
-    return customerStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomerStatus(Integer customerStatus) {
-    this.customerStatus = customerStatus;
-  }
-
-
-  public RefundItemVo customerStatusText(String customerStatusText) {
-    
-    this.customerStatusText = customerStatusText;
-    return this;
-  }
-
-   /**
-   * Get customerStatusText
-   * @return customerStatusText
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCustomerStatusText() {
-    return customerStatusText;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomerStatusText(String customerStatusText) {
-    this.customerStatusText = customerStatusText;
-  }
-
-
-  public RefundItemVo returnGoodsStatus(Integer returnGoodsStatus) {
-    
-    this.returnGoodsStatus = returnGoodsStatus;
-    return this;
-  }
-
-   /**
-   * Get returnGoodsStatus
-   * @return returnGoodsStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getReturnGoodsStatus() {
-    return returnGoodsStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReturnGoodsStatus(Integer returnGoodsStatus) {
-    this.returnGoodsStatus = returnGoodsStatus;
-  }
-
-
-  public RefundItemVo returnGoodsStatusText(String returnGoodsStatusText) {
-    
-    this.returnGoodsStatusText = returnGoodsStatusText;
-    return this;
-  }
-
-   /**
-   * Get returnGoodsStatusText
-   * @return returnGoodsStatusText
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getReturnGoodsStatusText() {
-    return returnGoodsStatusText;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS_TEXT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReturnGoodsStatusText(String returnGoodsStatusText) {
-    this.returnGoodsStatusText = returnGoodsStatusText;
-  }
-
-
-  public RefundItemVo tagList(List<TagInfo> tagList) {
-    
-    this.tagList = tagList;
-    return this;
-  }
-
-  public RefundItemVo addTagListItem(TagInfo tagListItem) {
-    if (this.tagList == null) {
-      this.tagList = new ArrayList<>();
-    }
-    this.tagList.add(tagListItem);
-    return this;
-  }
-
-   /**
-   * Get tagList
-   * @return tagList
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAG_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<TagInfo> getTagList() {
-    return tagList;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAG_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTagList(List<TagInfo> tagList) {
-    this.tagList = tagList;
-  }
-
-
-  public RefundItemVo refundStepList(List<RefundStepVo> refundStepList) {
-    
-    this.refundStepList = refundStepList;
-    return this;
-  }
-
-  public RefundItemVo addRefundStepListItem(RefundStepVo refundStepListItem) {
-    if (this.refundStepList == null) {
-      this.refundStepList = new ArrayList<>();
-    }
-    this.refundStepList.add(refundStepListItem);
-    return this;
-  }
-
-   /**
-   * Get refundStepList
-   * @return refundStepList
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_STEP_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<RefundStepVo> getRefundStepList() {
-    return refundStepList;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_STEP_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundStepList(List<RefundStepVo> refundStepList) {
-    this.refundStepList = refundStepList;
-  }
-
-
-  public RefundItemVo express(ExpressInfoVo express) {
-    
-    this.express = express;
-    return this;
-  }
-
-   /**
-   * Get express
-   * @return express
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_EXPRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public ExpressInfoVo getExpress() {
-    return express;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_EXPRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExpress(ExpressInfoVo express) {
-    this.express = express;
-  }
-
-
-  public RefundItemVo deliveryExpressStatus(Integer deliveryExpressStatus) {
-    
-    this.deliveryExpressStatus = deliveryExpressStatus;
-    return this;
-  }
-
-   /**
-   * Get deliveryExpressStatus
-   * @return deliveryExpressStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DELIVERY_EXPRESS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDeliveryExpressStatus() {
-    return deliveryExpressStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DELIVERY_EXPRESS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryExpressStatus(Integer deliveryExpressStatus) {
-    this.deliveryExpressStatus = deliveryExpressStatus;
-  }
-
-
-  public RefundItemVo bussinessComplaintEnter(Integer bussinessComplaintEnter) {
-    
-    this.bussinessComplaintEnter = bussinessComplaintEnter;
-    return this;
-  }
-
-   /**
-   * Get bussinessComplaintEnter
-   * @return bussinessComplaintEnter
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BUSSINESS_COMPLAINT_ENTER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getBussinessComplaintEnter() {
-    return bussinessComplaintEnter;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BUSSINESS_COMPLAINT_ENTER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBussinessComplaintEnter(Integer bussinessComplaintEnter) {
-    this.bussinessComplaintEnter = bussinessComplaintEnter;
-  }
-
-
-  public RefundItemVo bussinessComplaintTaskLeftTime(Long bussinessComplaintTaskLeftTime) {
-    
-    this.bussinessComplaintTaskLeftTime = bussinessComplaintTaskLeftTime;
-    return this;
-  }
-
-   /**
-   * Get bussinessComplaintTaskLeftTime
-   * @return bussinessComplaintTaskLeftTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BUSSINESS_COMPLAINT_TASK_LEFT_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getBussinessComplaintTaskLeftTime() {
-    return bussinessComplaintTaskLeftTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BUSSINESS_COMPLAINT_TASK_LEFT_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBussinessComplaintTaskLeftTime(Long bussinessComplaintTaskLeftTime) {
-    this.bussinessComplaintTaskLeftTime = bussinessComplaintTaskLeftTime;
+  public void setEncodePassId(String encodePassId) {
+    this.encodePassId = encodePassId;
   }
 
 
@@ -2585,43 +1245,25 @@ public class RefundItemVo {
         Objects.equals(this.refundId, refundItemVo.refundId) &&
         Objects.equals(this.refundType, refundItemVo.refundType) &&
         Objects.equals(this.refundStatus, refundItemVo.refundStatus) &&
-        Objects.equals(this.productType, refundItemVo.productType) &&
         Objects.equals(this.productName, refundItemVo.productName) &&
         Objects.equals(this.refundAmount, refundItemVo.refundAmount) &&
         Objects.equals(this.orderPayment, refundItemVo.orderPayment) &&
-        Objects.equals(this.refundReason, refundItemVo.refundReason) &&
         Objects.equals(this.refundDesc, refundItemVo.refundDesc) &&
         Objects.equals(this.expressPhone, refundItemVo.expressPhone) &&
         Objects.equals(this.contactName, refundItemVo.contactName) &&
         Objects.equals(this.applyTime, refundItemVo.applyTime) &&
-        Objects.equals(this.responseTime, refundItemVo.responseTime) &&
         Objects.equals(this.refundImage, refundItemVo.refundImage) &&
-        Objects.equals(this.complaintId, refundItemVo.complaintId) &&
         Objects.equals(this.refundStatusText, refundItemVo.refundStatusText) &&
         Objects.equals(this.refundTypeText, refundItemVo.refundTypeText) &&
         Objects.equals(this.refundReasonText, refundItemVo.refundReasonText) &&
         Objects.equals(this.expressInfo, refundItemVo.expressInfo) &&
-        Objects.equals(this.complaintStatus, refundItemVo.complaintStatus) &&
         Objects.equals(this.timeoutDate, refundItemVo.timeoutDate) &&
-        Objects.equals(this.timeoutDateDesc, refundItemVo.timeoutDateDesc) &&
         Objects.equals(this.aggReturnStatus, refundItemVo.aggReturnStatus) &&
         Objects.equals(this.aggReturnStatusText, refundItemVo.aggReturnStatusText) &&
-        Objects.equals(this.aggRefundStatus, refundItemVo.aggRefundStatus) &&
-        Objects.equals(this.aggRefundStatusText, refundItemVo.aggRefundStatusText) &&
-        Objects.equals(this.deliveryStatus, refundItemVo.deliveryStatus) &&
         Objects.equals(this.deliveryStatusText, refundItemVo.deliveryStatusText) &&
         Objects.equals(this.orderDetailId, refundItemVo.orderDetailId) &&
-        Objects.equals(this.lastOperatorType, refundItemVo.lastOperatorType) &&
-        Objects.equals(this.startTime, refundItemVo.startTime) &&
         Objects.equals(this.rejectReason, refundItemVo.rejectReason) &&
         Objects.equals(this.rejectProof, refundItemVo.rejectProof) &&
-        Objects.equals(this.judgeResult, refundItemVo.judgeResult) &&
-        Objects.equals(this.judgeResultText, refundItemVo.judgeResultText) &&
-        Objects.equals(this.judgeDesc, refundItemVo.judgeDesc) &&
-        Objects.equals(this.judgeImages, refundItemVo.judgeImages) &&
-        Objects.equals(this.excutionPlan, refundItemVo.excutionPlan) &&
-        Objects.equals(this.refundMergeStatus, refundItemVo.refundMergeStatus) &&
-        Objects.equals(this.refundMergeStatusText, refundItemVo.refundMergeStatusText) &&
         Objects.equals(this.shopId, refundItemVo.shopId) &&
         Objects.equals(this.skuId, refundItemVo.skuId) &&
         Objects.equals(this.skuDesc, refundItemVo.skuDesc) &&
@@ -2629,43 +1271,19 @@ public class RefundItemVo {
         Objects.equals(this.returnTime, refundItemVo.returnTime) &&
         Objects.equals(this.productImage, refundItemVo.productImage) &&
         Objects.equals(this.refundNum, refundItemVo.refundNum) &&
-        Objects.equals(this.refundSku, refundItemVo.refundSku) &&
-        Objects.equals(this.orderRefundMark, refundItemVo.orderRefundMark) &&
-        Objects.equals(this.orderRefundDetail, refundItemVo.orderRefundDetail) &&
         Objects.equals(this.ucid, refundItemVo.ucid) &&
-        Objects.equals(this.userId, refundItemVo.userId) &&
-        Objects.equals(this.payType, refundItemVo.payType) &&
-        Objects.equals(this.refundDetail, refundItemVo.refundDetail) &&
-        Objects.equals(this.updateTime, refundItemVo.updateTime) &&
-        Objects.equals(this.signed, refundItemVo.signed) &&
         Objects.equals(this.lastOperationTime, refundItemVo.lastOperationTime) &&
-        Objects.equals(this.complaintFlowList, refundItemVo.complaintFlowList) &&
         Objects.equals(this.sellPrice, refundItemVo.sellPrice) &&
-        Objects.equals(this.expressTrackingNumber, refundItemVo.expressTrackingNumber) &&
         Objects.equals(this.createTime, refundItemVo.createTime) &&
-        Objects.equals(this.sequence, refundItemVo.sequence) &&
         Objects.equals(this.shopName, refundItemVo.shopName) &&
-        Objects.equals(this.orderInfo, refundItemVo.orderInfo) &&
         Objects.equals(this.exchangeExpress, refundItemVo.exchangeExpress) &&
-        Objects.equals(this.bizExpress, refundItemVo.bizExpress) &&
-        Objects.equals(this.passportId, refundItemVo.passportId) &&
         Objects.equals(this.finishTime, refundItemVo.finishTime) &&
-        Objects.equals(this.refundChannel, refundItemVo.refundChannel) &&
-        Objects.equals(this.customerStatus, refundItemVo.customerStatus) &&
-        Objects.equals(this.customerStatusText, refundItemVo.customerStatusText) &&
-        Objects.equals(this.returnGoodsStatus, refundItemVo.returnGoodsStatus) &&
-        Objects.equals(this.returnGoodsStatusText, refundItemVo.returnGoodsStatusText) &&
-        Objects.equals(this.tagList, refundItemVo.tagList) &&
-        Objects.equals(this.refundStepList, refundItemVo.refundStepList) &&
-        Objects.equals(this.express, refundItemVo.express) &&
-        Objects.equals(this.deliveryExpressStatus, refundItemVo.deliveryExpressStatus) &&
-        Objects.equals(this.bussinessComplaintEnter, refundItemVo.bussinessComplaintEnter) &&
-        Objects.equals(this.bussinessComplaintTaskLeftTime, refundItemVo.bussinessComplaintTaskLeftTime);
+        Objects.equals(this.encodePassId, refundItemVo.encodePassId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, refundId, refundType, refundStatus, productType, productName, refundAmount, orderPayment, refundReason, refundDesc, expressPhone, contactName, applyTime, responseTime, refundImage, complaintId, refundStatusText, refundTypeText, refundReasonText, expressInfo, complaintStatus, timeoutDate, timeoutDateDesc, aggReturnStatus, aggReturnStatusText, aggRefundStatus, aggRefundStatusText, deliveryStatus, deliveryStatusText, orderDetailId, lastOperatorType, startTime, rejectReason, rejectProof, judgeResult, judgeResultText, judgeDesc, judgeImages, excutionPlan, refundMergeStatus, refundMergeStatusText, shopId, skuId, skuDesc, productId, returnTime, productImage, refundNum, refundSku, orderRefundMark, orderRefundDetail, ucid, userId, payType, refundDetail, updateTime, signed, lastOperationTime, complaintFlowList, sellPrice, expressTrackingNumber, createTime, sequence, shopName, orderInfo, exchangeExpress, bizExpress, passportId, finishTime, refundChannel, customerStatus, customerStatusText, returnGoodsStatus, returnGoodsStatusText, tagList, refundStepList, express, deliveryExpressStatus, bussinessComplaintEnter, bussinessComplaintTaskLeftTime);
+    return Objects.hash(orderId, refundId, refundType, refundStatus, productName, refundAmount, orderPayment, refundDesc, expressPhone, contactName, applyTime, refundImage, refundStatusText, refundTypeText, refundReasonText, expressInfo, timeoutDate, aggReturnStatus, aggReturnStatusText, deliveryStatusText, orderDetailId, rejectReason, rejectProof, shopId, skuId, skuDesc, productId, returnTime, productImage, refundNum, ucid, lastOperationTime, sellPrice, createTime, shopName, exchangeExpress, finishTime, encodePassId);
   }
 
   @Override
@@ -2676,43 +1294,25 @@ public class RefundItemVo {
     sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
     sb.append("    refundType: ").append(toIndentedString(refundType)).append("\n");
     sb.append("    refundStatus: ").append(toIndentedString(refundStatus)).append("\n");
-    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    productName: ").append(toIndentedString(productName)).append("\n");
     sb.append("    refundAmount: ").append(toIndentedString(refundAmount)).append("\n");
     sb.append("    orderPayment: ").append(toIndentedString(orderPayment)).append("\n");
-    sb.append("    refundReason: ").append(toIndentedString(refundReason)).append("\n");
     sb.append("    refundDesc: ").append(toIndentedString(refundDesc)).append("\n");
     sb.append("    expressPhone: ").append(toIndentedString(expressPhone)).append("\n");
     sb.append("    contactName: ").append(toIndentedString(contactName)).append("\n");
     sb.append("    applyTime: ").append(toIndentedString(applyTime)).append("\n");
-    sb.append("    responseTime: ").append(toIndentedString(responseTime)).append("\n");
     sb.append("    refundImage: ").append(toIndentedString(refundImage)).append("\n");
-    sb.append("    complaintId: ").append(toIndentedString(complaintId)).append("\n");
     sb.append("    refundStatusText: ").append(toIndentedString(refundStatusText)).append("\n");
     sb.append("    refundTypeText: ").append(toIndentedString(refundTypeText)).append("\n");
     sb.append("    refundReasonText: ").append(toIndentedString(refundReasonText)).append("\n");
     sb.append("    expressInfo: ").append(toIndentedString(expressInfo)).append("\n");
-    sb.append("    complaintStatus: ").append(toIndentedString(complaintStatus)).append("\n");
     sb.append("    timeoutDate: ").append(toIndentedString(timeoutDate)).append("\n");
-    sb.append("    timeoutDateDesc: ").append(toIndentedString(timeoutDateDesc)).append("\n");
     sb.append("    aggReturnStatus: ").append(toIndentedString(aggReturnStatus)).append("\n");
     sb.append("    aggReturnStatusText: ").append(toIndentedString(aggReturnStatusText)).append("\n");
-    sb.append("    aggRefundStatus: ").append(toIndentedString(aggRefundStatus)).append("\n");
-    sb.append("    aggRefundStatusText: ").append(toIndentedString(aggRefundStatusText)).append("\n");
-    sb.append("    deliveryStatus: ").append(toIndentedString(deliveryStatus)).append("\n");
     sb.append("    deliveryStatusText: ").append(toIndentedString(deliveryStatusText)).append("\n");
     sb.append("    orderDetailId: ").append(toIndentedString(orderDetailId)).append("\n");
-    sb.append("    lastOperatorType: ").append(toIndentedString(lastOperatorType)).append("\n");
-    sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    rejectReason: ").append(toIndentedString(rejectReason)).append("\n");
     sb.append("    rejectProof: ").append(toIndentedString(rejectProof)).append("\n");
-    sb.append("    judgeResult: ").append(toIndentedString(judgeResult)).append("\n");
-    sb.append("    judgeResultText: ").append(toIndentedString(judgeResultText)).append("\n");
-    sb.append("    judgeDesc: ").append(toIndentedString(judgeDesc)).append("\n");
-    sb.append("    judgeImages: ").append(toIndentedString(judgeImages)).append("\n");
-    sb.append("    excutionPlan: ").append(toIndentedString(excutionPlan)).append("\n");
-    sb.append("    refundMergeStatus: ").append(toIndentedString(refundMergeStatus)).append("\n");
-    sb.append("    refundMergeStatusText: ").append(toIndentedString(refundMergeStatusText)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
     sb.append("    skuDesc: ").append(toIndentedString(skuDesc)).append("\n");
@@ -2720,38 +1320,14 @@ public class RefundItemVo {
     sb.append("    returnTime: ").append(toIndentedString(returnTime)).append("\n");
     sb.append("    productImage: ").append(toIndentedString(productImage)).append("\n");
     sb.append("    refundNum: ").append(toIndentedString(refundNum)).append("\n");
-    sb.append("    refundSku: ").append(toIndentedString(refundSku)).append("\n");
-    sb.append("    orderRefundMark: ").append(toIndentedString(orderRefundMark)).append("\n");
-    sb.append("    orderRefundDetail: ").append(toIndentedString(orderRefundDetail)).append("\n");
     sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
-    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
-    sb.append("    payType: ").append(toIndentedString(payType)).append("\n");
-    sb.append("    refundDetail: ").append(toIndentedString(refundDetail)).append("\n");
-    sb.append("    updateTime: ").append(toIndentedString(updateTime)).append("\n");
-    sb.append("    signed: ").append(toIndentedString(signed)).append("\n");
     sb.append("    lastOperationTime: ").append(toIndentedString(lastOperationTime)).append("\n");
-    sb.append("    complaintFlowList: ").append(toIndentedString(complaintFlowList)).append("\n");
     sb.append("    sellPrice: ").append(toIndentedString(sellPrice)).append("\n");
-    sb.append("    expressTrackingNumber: ").append(toIndentedString(expressTrackingNumber)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
-    sb.append("    sequence: ").append(toIndentedString(sequence)).append("\n");
     sb.append("    shopName: ").append(toIndentedString(shopName)).append("\n");
-    sb.append("    orderInfo: ").append(toIndentedString(orderInfo)).append("\n");
     sb.append("    exchangeExpress: ").append(toIndentedString(exchangeExpress)).append("\n");
-    sb.append("    bizExpress: ").append(toIndentedString(bizExpress)).append("\n");
-    sb.append("    passportId: ").append(toIndentedString(passportId)).append("\n");
     sb.append("    finishTime: ").append(toIndentedString(finishTime)).append("\n");
-    sb.append("    refundChannel: ").append(toIndentedString(refundChannel)).append("\n");
-    sb.append("    customerStatus: ").append(toIndentedString(customerStatus)).append("\n");
-    sb.append("    customerStatusText: ").append(toIndentedString(customerStatusText)).append("\n");
-    sb.append("    returnGoodsStatus: ").append(toIndentedString(returnGoodsStatus)).append("\n");
-    sb.append("    returnGoodsStatusText: ").append(toIndentedString(returnGoodsStatusText)).append("\n");
-    sb.append("    tagList: ").append(toIndentedString(tagList)).append("\n");
-    sb.append("    refundStepList: ").append(toIndentedString(refundStepList)).append("\n");
-    sb.append("    express: ").append(toIndentedString(express)).append("\n");
-    sb.append("    deliveryExpressStatus: ").append(toIndentedString(deliveryExpressStatus)).append("\n");
-    sb.append("    bussinessComplaintEnter: ").append(toIndentedString(bussinessComplaintEnter)).append("\n");
-    sb.append("    bussinessComplaintTaskLeftTime: ").append(toIndentedString(bussinessComplaintTaskLeftTime)).append("\n");
+    sb.append("    encodePassId: ").append(toIndentedString(encodePassId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

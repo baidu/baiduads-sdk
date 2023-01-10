@@ -18,6 +18,8 @@ import com.baidu.dev2.api.sdk.invoke.Configuration;
 import com.baidu.dev2.api.sdk.bulkjobfeed.model.*;
 import com.baidu.dev2.api.sdk.invoke.Pair;
 
+import com.baidu.dev2.api.sdk.bulkjobfeed.model.CancelDownloadRequestWrapper;
+import com.baidu.dev2.api.sdk.bulkjobfeed.model.CancelDownloadResponseWrapper;
 import com.baidu.dev2.api.sdk.bulkjobfeed.model.GetAllFeedObjectsRequestWrapper;
 import com.baidu.dev2.api.sdk.bulkjobfeed.model.GetAllFeedObjectsResponseWrapper;
 import com.baidu.dev2.api.sdk.bulkjobfeed.model.GetFilePathRequestWrapper;
@@ -51,6 +53,63 @@ public class BulkJobFeedService {
     this.apiClient = apiClient;
   }
 
+  /**
+   * 
+   * 
+   * @param cancelDownloadRequestWrapper  (required)
+   * @return CancelDownloadResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public CancelDownloadResponseWrapper cancelDownload(CancelDownloadRequestWrapper cancelDownloadRequestWrapper) throws ApiException {
+    Object localVarPostBody = cancelDownloadRequestWrapper;
+    
+    // verify the required parameter 'cancelDownloadRequestWrapper' is set
+    if (cancelDownloadRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'cancelDownloadRequestWrapper' when calling cancelDownload");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/BulkJobFeedService/cancelDownload";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<CancelDownloadResponseWrapper> localVarReturnType = new TypeReference<CancelDownloadResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
   /**
    * 
    * 

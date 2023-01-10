@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **action** | **str** |  | [optional] 
 **user_name** | **str** |  | [optional] 
 **access_token** | **str** |  | [optional] 
+**userid** | **int** |  | [optional] 
 **username** | **str** |  | [optional] 
 **target** | **str** |  | [optional] 
 **token** | **str** |  | [optional] 

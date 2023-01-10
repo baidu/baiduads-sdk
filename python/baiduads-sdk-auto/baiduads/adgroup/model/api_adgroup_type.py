@@ -103,6 +103,9 @@ class ApiAdgroupType(ModelNormal):
             'mobile_final_url': (str,),  # noqa: E501
             'mobile_track_param': (str,),  # noqa: E501
             'mobile_track_template': (str,),  # noqa: E501
+            'creative_text_optimization_status': (bool,),  # noqa: E501
+            'knowledge_text_status': (bool,),  # noqa: E501
+            'jimuyu_content_status': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -134,6 +137,9 @@ class ApiAdgroupType(ModelNormal):
         'mobile_final_url': 'mobileFinalUrl',  # noqa: E501
         'mobile_track_param': 'mobileTrackParam',  # noqa: E501
         'mobile_track_template': 'mobileTrackTemplate',  # noqa: E501
+        'creative_text_optimization_status': 'creativeTextOptimizationStatus',  # noqa: E501
+        'knowledge_text_status': 'knowledgeTextStatus',  # noqa: E501
+        'jimuyu_content_status': 'jimuyuContentStatus',  # noqa: E501
     }
 
     read_only_vars = {
@@ -200,6 +206,9 @@ class ApiAdgroupType(ModelNormal):
             mobile_final_url (str): [optional]  # noqa: E501
             mobile_track_param (str): [optional]  # noqa: E501
             mobile_track_template (str): [optional]  # noqa: E501
+            creative_text_optimization_status (bool): [optional]  # noqa: E501
+            knowledge_text_status (bool): [optional]  # noqa: E501
+            jimuyu_content_status (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -304,6 +313,9 @@ class ApiAdgroupType(ModelNormal):
             mobile_final_url (str): [optional]  # noqa: E501
             mobile_track_param (str): [optional]  # noqa: E501
             mobile_track_template (str): [optional]  # noqa: E501
+            creative_text_optimization_status (bool): [optional]  # noqa: E501
+            knowledge_text_status (bool): [optional]  # noqa: E501
+            jimuyu_content_status (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

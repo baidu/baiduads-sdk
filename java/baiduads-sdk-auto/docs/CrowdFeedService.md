@@ -5,8 +5,8 @@ All URIs are relative to *https://api.baidu.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getBindAdgroup**](CrowdFeedService.md#getBindAdgroup) | **POST** /json/feed/v1/CrowdFeedService/getBindAdgroup | 
-[**getEshopEldsCrowds**](CrowdFeedService.md#getEshopEldsCrowds) | **POST** /json/sms/service/CrowdFeedService/getEshopEldsCrowds | 
-[**getEshopTradeCrowds**](CrowdFeedService.md#getEshopTradeCrowds) | **POST** /json/sms/service/CrowdFeedService/getEshopTradeCrowds | 
+[**getEshopEldsCrowds**](CrowdFeedService.md#getEshopEldsCrowds) | **POST** /json/feed/v1/CrowdFeedService/getEshopEldsCrowds | 
+[**getEshopTradeCrowds**](CrowdFeedService.md#getEshopTradeCrowds) | **POST** /json/feed/v1/CrowdFeedService/getEshopTradeCrowds | 
 
 
 

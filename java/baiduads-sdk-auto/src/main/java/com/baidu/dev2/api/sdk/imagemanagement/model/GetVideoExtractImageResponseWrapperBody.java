@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.imagemanagement.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.imagemanagement.model.PageData;
+import com.baidu.dev2.api.sdk.imagemanagement.model.DPageData;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -36,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetVideoExtractImageResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";
-  private List<PageData> data = null;
+  private List<DPageData> data = null;
 
   public GetVideoExtractImageResponseWrapperBody() { 
   }
 
-  public GetVideoExtractImageResponseWrapperBody data(List<PageData> data) {
+  public GetVideoExtractImageResponseWrapperBody data(List<DPageData> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetVideoExtractImageResponseWrapperBody addDataItem(PageData dataItem) {
+  public GetVideoExtractImageResponseWrapperBody addDataItem(DPageData dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -64,14 +64,14 @@ public class GetVideoExtractImageResponseWrapperBody {
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<PageData> getData() {
+  public List<DPageData> getData() {
     return data;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(List<PageData> data) {
+  public void setData(List<DPageData> data) {
     this.data = data;
   }
 

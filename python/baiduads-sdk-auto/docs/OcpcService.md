@@ -87,6 +87,15 @@ with baiduads.ApiClient() as api_client:
                         1,
                     ],
                     ocpc_deep_bid=3.14,
+                    shared_budget=3.14,
+                    unbind_shared_budget_info=[
+                        UnbindSharedBudgetInfo(
+                            campaign_id=1,
+                            budget=3.14,
+                        ),
+                    ],
+                    shared_budget_id=1,
+                    use_shared_budget=1,
                 ),
             ],
         ),
@@ -436,6 +445,15 @@ with baiduads.ApiClient() as api_client:
                         1,
                     ],
                     ocpc_deep_bid=3.14,
+                    shared_budget=3.14,
+                    unbind_shared_budget_info=[
+                        UnbindSharedBudgetInfo(
+                            campaign_id=1,
+                            budget=3.14,
+                        ),
+                    ],
+                    shared_budget_id=1,
+                    use_shared_budget=1,
                 ),
             ],
         ),

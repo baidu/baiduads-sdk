@@ -32,6 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiRequestHeader.JSON_PROPERTY_ACTION,
   ApiRequestHeader.JSON_PROPERTY_USER_NAME,
   ApiRequestHeader.JSON_PROPERTY_ACCESS_TOKEN,
+  ApiRequestHeader.JSON_PROPERTY_USERID,
   ApiRequestHeader.JSON_PROPERTY_USERNAME,
   ApiRequestHeader.JSON_PROPERTY_TARGET,
   ApiRequestHeader.JSON_PROPERTY_TOKEN
@@ -53,6 +54,9 @@ public class ApiRequestHeader {
 
   public static final String JSON_PROPERTY_ACCESS_TOKEN = "accessToken";
   private String accessToken;
+
+  public static final String JSON_PROPERTY_USERID = "userid";
+  private Long userid;
 
   public static final String JSON_PROPERTY_USERNAME = "username";
   private String username;
@@ -201,6 +205,33 @@ public class ApiRequestHeader {
   }
 
 
+  public ApiRequestHeader userid(Long userid) {
+    
+    this.userid = userid;
+    return this;
+  }
+
+   /**
+   * Get userid
+   * @return userid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_USERID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getUserid() {
+    return userid;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_USERID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUserid(Long userid) {
+    this.userid = userid;
+  }
+
+
   public ApiRequestHeader username(String username) {
     
     this.username = username;
@@ -296,6 +327,7 @@ public class ApiRequestHeader {
         Objects.equals(this.action, apiRequestHeader.action) &&
         Objects.equals(this.userName, apiRequestHeader.userName) &&
         Objects.equals(this.accessToken, apiRequestHeader.accessToken) &&
+        Objects.equals(this.userid, apiRequestHeader.userid) &&
         Objects.equals(this.username, apiRequestHeader.username) &&
         Objects.equals(this.target, apiRequestHeader.target) &&
         Objects.equals(this.token, apiRequestHeader.token);
@@ -303,7 +335,7 @@ public class ApiRequestHeader {
 
   @Override
   public int hashCode() {
-    return Objects.hash(password, passType, action, userName, accessToken, username, target, token);
+    return Objects.hash(password, passType, action, userName, accessToken, userid, username, target, token);
   }
 
   @Override
@@ -315,6 +347,7 @@ public class ApiRequestHeader {
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
     sb.append("    userName: ").append(toIndentedString(userName)).append("\n");
     sb.append("    accessToken: ").append(toIndentedString(accessToken)).append("\n");
+    sb.append("    userid: ").append(toIndentedString(userid)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");
     sb.append("    target: ").append(toIndentedString(target)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");

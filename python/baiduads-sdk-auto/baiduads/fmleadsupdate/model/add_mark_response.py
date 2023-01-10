@@ -87,6 +87,8 @@ class AddMarkResponse(ModelNormal):
         lazy_import()
         return {
             'mark_result': ([UpdateMarkTypeResult],),  # noqa: E501
+            'success_count': (int,),  # noqa: E501
+            'error_count': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -96,6 +98,8 @@ class AddMarkResponse(ModelNormal):
 
     attribute_map = {
         'mark_result': 'markResult',  # noqa: E501
+        'success_count': 'successCount',  # noqa: E501
+        'error_count': 'errorCount',  # noqa: E501
     }
 
     read_only_vars = {
@@ -140,6 +144,8 @@ class AddMarkResponse(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             mark_result ([UpdateMarkTypeResult]): [optional]  # noqa: E501
+            success_count (int): [optional]  # noqa: E501
+            error_count (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -222,6 +228,8 @@ class AddMarkResponse(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             mark_result ([UpdateMarkTypeResult]): [optional]  # noqa: E501
+            success_count (int): [optional]  # noqa: E501
+            error_count (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

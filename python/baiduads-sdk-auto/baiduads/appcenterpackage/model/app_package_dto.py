@@ -137,6 +137,12 @@ class AppPackageDTO(ModelNormal):
             'app_id': (int,),  # noqa: E501
             'versions': ([VersionInfo],),  # noqa: E501
             'audit_info': (AuditInfo,),  # noqa: E501
+            'update_info': (str,),  # noqa: E501
+            'cate_gory_state': (int,),  # noqa: E501
+            'bind_marking_plan_number': (int,),  # noqa: E501
+            'from_wandoujia': (bool,),  # noqa: E501
+            'package_id': (int,),  # noqa: E501
+            'marking_plan_active': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -190,6 +196,12 @@ class AppPackageDTO(ModelNormal):
         'app_id': 'appId',  # noqa: E501
         'versions': 'versions',  # noqa: E501
         'audit_info': 'auditInfo',  # noqa: E501
+        'update_info': 'updateInfo',  # noqa: E501
+        'cate_gory_state': 'cateGoryState',  # noqa: E501
+        'bind_marking_plan_number': 'bindMarkingPlanNumber',  # noqa: E501
+        'from_wandoujia': 'fromWandoujia',  # noqa: E501
+        'package_id': 'packageId',  # noqa: E501
+        'marking_plan_active': 'markingPlanActive',  # noqa: E501
     }
 
     read_only_vars = {
@@ -278,6 +290,12 @@ class AppPackageDTO(ModelNormal):
             app_id (int): [optional]  # noqa: E501
             versions ([VersionInfo]): [optional]  # noqa: E501
             audit_info (AuditInfo): [optional]  # noqa: E501
+            update_info (str): [optional]  # noqa: E501
+            cate_gory_state (int): [optional]  # noqa: E501
+            bind_marking_plan_number (int): [optional]  # noqa: E501
+            from_wandoujia (bool): [optional]  # noqa: E501
+            package_id (int): [optional]  # noqa: E501
+            marking_plan_active (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -404,6 +422,12 @@ class AppPackageDTO(ModelNormal):
             app_id (int): [optional]  # noqa: E501
             versions ([VersionInfo]): [optional]  # noqa: E501
             audit_info (AuditInfo): [optional]  # noqa: E501
+            update_info (str): [optional]  # noqa: E501
+            cate_gory_state (int): [optional]  # noqa: E501
+            bind_marking_plan_number (int): [optional]  # noqa: E501
+            from_wandoujia (bool): [optional]  # noqa: E501
+            package_id (int): [optional]  # noqa: E501
+            marking_plan_active (bool): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

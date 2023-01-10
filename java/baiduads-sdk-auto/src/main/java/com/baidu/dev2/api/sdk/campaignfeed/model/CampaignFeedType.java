@@ -48,7 +48,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedType.JSON_PROPERTY_ADDTIME,
   CampaignFeedType.JSON_PROPERTY_ESHOP_TYPE,
   CampaignFeedType.JSON_PROPERTY_SHADOW,
-  CampaignFeedType.JSON_PROPERTY_RTA_STATUS
+  CampaignFeedType.JSON_PROPERTY_RTA_STATUS,
+  CampaignFeedType.JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE,
+  CampaignFeedType.JSON_PROPERTY_INHERIT_USERIDS,
+  CampaignFeedType.JSON_PROPERTY_MANDATORY_OPERATION,
+  CampaignFeedType.JSON_PROPERTY_AD_SOURCE,
+  CampaignFeedType.JSON_PROPERTY_NID
 })
 @JsonTypeName("CampaignFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -103,6 +108,21 @@ public class CampaignFeedType {
 
   public static final String JSON_PROPERTY_RTA_STATUS = "rtaStatus";
   private Integer rtaStatus;
+
+  public static final String JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE = "inheritAscriptionType";
+  private Integer inheritAscriptionType;
+
+  public static final String JSON_PROPERTY_INHERIT_USERIDS = "inheritUserids";
+  private List<Long> inheritUserids = null;
+
+  public static final String JSON_PROPERTY_MANDATORY_OPERATION = "mandatoryOperation";
+  private Integer mandatoryOperation;
+
+  public static final String JSON_PROPERTY_AD_SOURCE = "adSource";
+  private Integer adSource;
+
+  public static final String JSON_PROPERTY_NID = "nid";
+  private String nid;
 
   public CampaignFeedType() { 
   }
@@ -574,6 +594,149 @@ public class CampaignFeedType {
   }
 
 
+  public CampaignFeedType inheritAscriptionType(Integer inheritAscriptionType) {
+    
+    this.inheritAscriptionType = inheritAscriptionType;
+    return this;
+  }
+
+   /**
+   * Get inheritAscriptionType
+   * @return inheritAscriptionType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getInheritAscriptionType() {
+    return inheritAscriptionType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setInheritAscriptionType(Integer inheritAscriptionType) {
+    this.inheritAscriptionType = inheritAscriptionType;
+  }
+
+
+  public CampaignFeedType inheritUserids(List<Long> inheritUserids) {
+    
+    this.inheritUserids = inheritUserids;
+    return this;
+  }
+
+  public CampaignFeedType addInheritUseridsItem(Long inheritUseridsItem) {
+    if (this.inheritUserids == null) {
+      this.inheritUserids = new ArrayList<>();
+    }
+    this.inheritUserids.add(inheritUseridsItem);
+    return this;
+  }
+
+   /**
+   * Get inheritUserids
+   * @return inheritUserids
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_INHERIT_USERIDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Long> getInheritUserids() {
+    return inheritUserids;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_INHERIT_USERIDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setInheritUserids(List<Long> inheritUserids) {
+    this.inheritUserids = inheritUserids;
+  }
+
+
+  public CampaignFeedType mandatoryOperation(Integer mandatoryOperation) {
+    
+    this.mandatoryOperation = mandatoryOperation;
+    return this;
+  }
+
+   /**
+   * Get mandatoryOperation
+   * @return mandatoryOperation
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MANDATORY_OPERATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getMandatoryOperation() {
+    return mandatoryOperation;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MANDATORY_OPERATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMandatoryOperation(Integer mandatoryOperation) {
+    this.mandatoryOperation = mandatoryOperation;
+  }
+
+
+  public CampaignFeedType adSource(Integer adSource) {
+    
+    this.adSource = adSource;
+    return this;
+  }
+
+   /**
+   * Get adSource
+   * @return adSource
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_AD_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getAdSource() {
+    return adSource;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_AD_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAdSource(Integer adSource) {
+    this.adSource = adSource;
+  }
+
+
+  public CampaignFeedType nid(String nid) {
+    
+    this.nid = nid;
+    return this;
+  }
+
+   /**
+   * Get nid
+   * @return nid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_NID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getNid() {
+    return nid;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_NID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setNid(String nid) {
+    this.nid = nid;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -599,12 +762,17 @@ public class CampaignFeedType {
         Objects.equals(this.addtime, campaignFeedType.addtime) &&
         Objects.equals(this.eshopType, campaignFeedType.eshopType) &&
         Objects.equals(this.shadow, campaignFeedType.shadow) &&
-        Objects.equals(this.rtaStatus, campaignFeedType.rtaStatus);
+        Objects.equals(this.rtaStatus, campaignFeedType.rtaStatus) &&
+        Objects.equals(this.inheritAscriptionType, campaignFeedType.inheritAscriptionType) &&
+        Objects.equals(this.inheritUserids, campaignFeedType.inheritUserids) &&
+        Objects.equals(this.mandatoryOperation, campaignFeedType.mandatoryOperation) &&
+        Objects.equals(this.adSource, campaignFeedType.adSource) &&
+        Objects.equals(this.nid, campaignFeedType.nid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, bgtctltype, pause, status, bstype, campaignType, addtime, eshopType, shadow, rtaStatus);
+    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, bgtctltype, pause, status, bstype, campaignType, addtime, eshopType, shadow, rtaStatus, inheritAscriptionType, inheritUserids, mandatoryOperation, adSource, nid);
   }
 
   @Override
@@ -628,6 +796,11 @@ public class CampaignFeedType {
     sb.append("    eshopType: ").append(toIndentedString(eshopType)).append("\n");
     sb.append("    shadow: ").append(toIndentedString(shadow)).append("\n");
     sb.append("    rtaStatus: ").append(toIndentedString(rtaStatus)).append("\n");
+    sb.append("    inheritAscriptionType: ").append(toIndentedString(inheritAscriptionType)).append("\n");
+    sb.append("    inheritUserids: ").append(toIndentedString(inheritUserids)).append("\n");
+    sb.append("    mandatoryOperation: ").append(toIndentedString(mandatoryOperation)).append("\n");
+    sb.append("    adSource: ").append(toIndentedString(adSource)).append("\n");
+    sb.append("    nid: ").append(toIndentedString(nid)).append("\n");
     sb.append("}");
     return sb.toString();
   }

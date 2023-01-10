@@ -107,6 +107,11 @@ class CampaignFeedType(ModelNormal):
             'eshop_type': (str,),  # noqa: E501
             'shadow': (AppInfoShadowType,),  # noqa: E501
             'rta_status': (int,),  # noqa: E501
+            'inherit_ascription_type': (int,),  # noqa: E501
+            'inherit_userids': ([int],),  # noqa: E501
+            'mandatory_operation': (int,),  # noqa: E501
+            'ad_source': (int,),  # noqa: E501
+            'nid': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -132,6 +137,11 @@ class CampaignFeedType(ModelNormal):
         'eshop_type': 'eshopType',  # noqa: E501
         'shadow': 'shadow',  # noqa: E501
         'rta_status': 'rtaStatus',  # noqa: E501
+        'inherit_ascription_type': 'inheritAscriptionType',  # noqa: E501
+        'inherit_userids': 'inheritUserids',  # noqa: E501
+        'mandatory_operation': 'mandatoryOperation',  # noqa: E501
+        'ad_source': 'adSource',  # noqa: E501
+        'nid': 'nid',  # noqa: E501
     }
 
     read_only_vars = {
@@ -192,6 +202,11 @@ class CampaignFeedType(ModelNormal):
             eshop_type (str): [optional]  # noqa: E501
             shadow (AppInfoShadowType): [optional]  # noqa: E501
             rta_status (int): [optional]  # noqa: E501
+            inherit_ascription_type (int): [optional]  # noqa: E501
+            inherit_userids ([int]): [optional]  # noqa: E501
+            mandatory_operation (int): [optional]  # noqa: E501
+            ad_source (int): [optional]  # noqa: E501
+            nid (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -290,6 +305,11 @@ class CampaignFeedType(ModelNormal):
             eshop_type (str): [optional]  # noqa: E501
             shadow (AppInfoShadowType): [optional]  # noqa: E501
             rta_status (int): [optional]  # noqa: E501
+            inherit_ascription_type (int): [optional]  # noqa: E501
+            inherit_userids ([int]): [optional]  # noqa: E501
+            mandatory_operation (int): [optional]  # noqa: E501
+            ad_source (int): [optional]  # noqa: E501
+            nid (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

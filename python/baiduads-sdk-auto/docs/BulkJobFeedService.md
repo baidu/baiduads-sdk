@@ -4,10 +4,81 @@ All URIs are relative to *https://api.baidu.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancel_download**](BulkJobFeedService.md#cancel_download) | **POST** /json/sms/service/BulkJobFeedService/cancelDownload | 
 [**get_all_feed_objects**](BulkJobFeedService.md#get_all_feed_objects) | **POST** /json/feed/v1/BulkJobFeedService/getAllFeedObjects | 
 [**get_file_path**](BulkJobFeedService.md#get_file_path) | **POST** /json/feed/v1/BulkJobFeedService/getFilePath | 
 [**get_file_status**](BulkJobFeedService.md#get_file_status) | **POST** /json/feed/v1/BulkJobFeedService/getFileStatus | 
 
+
+# **cancel_download**
+> CancelDownloadResponseWrapper cancel_download(cancel_download_request_wrapper)
+
+
+
+### Example
+
+
+```python
+import time
+import baiduads
+from bulkjobfeed.api import bulk_job_feed_service
+from baiduads.bulkjobfeed.model.cancel_download_response_wrapper import CancelDownloadResponseWrapper
+from baiduads.bulkjobfeed.model.cancel_download_request_wrapper import CancelDownloadRequestWrapper
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.baidu.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = baiduads.Configuration(
+    host = "https://api.baidu.com"
+)
+
+
+# Enter a context with an instance of the API client
+with baiduads.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = bulk_job_feed_service.BulkJobFeedService(api_client)
+    cancel_download_request_wrapper = CancelDownloadRequestWrapper(
+        header=ApiRequestHeader(),
+        body=CancelDownloadCmd(
+            file_id="file_id_example",
+        ),
+    ) # CancelDownloadRequestWrapper | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.cancel_download(cancel_download_request_wrapper)
+        pprint(api_response)
+    except baiduads.ApiException as e:
+        print("Exception when calling BulkJobFeedService->cancel_download: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cancel_download_request_wrapper** | [**CancelDownloadRequestWrapper**](CancelDownloadRequestWrapper.md)|  |
+
+### Return type
+
+[**CancelDownloadResponseWrapper**](CancelDownloadResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_feed_objects**
 > GetAllFeedObjectsResponseWrapper get_all_feed_objects(get_all_feed_objects_request_wrapper)

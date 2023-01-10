@@ -21,6 +21,11 @@ Name | Type | Description | Notes
 **eshop_type** | **str** |  | [optional] 
 **shadow** | [**AppInfoShadowType**](AppInfoShadowType.md) |  | [optional] 
 **rta_status** | **int** |  | [optional] 
+**inherit_ascription_type** | **int** |  | [optional] 
+**inherit_userids** | **[int]** |  | [optional] 
+**mandatory_operation** | **int** |  | [optional] 
+**ad_source** | **int** |  | [optional] 
+**nid** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

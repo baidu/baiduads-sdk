@@ -85,6 +85,8 @@ class ApiStorePageInfoType(ModelNormal):
             'url': (str,),  # noqa: E501
             'page_type': (int,),  # noqa: E501
             'monitor_code': (str,),  # noqa: E501
+            'store_shop_type': (int,),  # noqa: E501
+            'user_id': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -98,6 +100,8 @@ class ApiStorePageInfoType(ModelNormal):
         'url': 'url',  # noqa: E501
         'page_type': 'pageType',  # noqa: E501
         'monitor_code': 'monitorCode',  # noqa: E501
+        'store_shop_type': 'storeShopType',  # noqa: E501
+        'user_id': 'userId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -146,6 +150,8 @@ class ApiStorePageInfoType(ModelNormal):
             url (str): [optional]  # noqa: E501
             page_type (int): [optional]  # noqa: E501
             monitor_code (str): [optional]  # noqa: E501
+            store_shop_type (int): [optional]  # noqa: E501
+            user_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -232,6 +238,8 @@ class ApiStorePageInfoType(ModelNormal):
             url (str): [optional]  # noqa: E501
             page_type (int): [optional]  # noqa: E501
             monitor_code (str): [optional]  # noqa: E501
+            store_shop_type (int): [optional]  # noqa: E501
+            user_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

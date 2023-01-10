@@ -74,13 +74,24 @@ with baiduads.ApiClient() as api_client:
                         is_manual_deep_bid_for_max_mode=1,
                         broad_cast_mode=1,
                         anchor_id=1,
+                        trans_type_attribute=1,
                     ),
                     atp_feed_id=1,
                     delivery_type=[
                         1,
                     ],
-                    unit_ocpx_status=1,
                     unefficient_adgroup=1,
+                    product_set_id=1,
+                    unit_products=UnitProducts(
+                        catalog_id=1,
+                        rule_products=[
+                            ProductSetRule(
+                                field="field_example",
+                                operation="operation_example",
+                                value="value_example",
+                            ),
+                        ],
+                    ),
                 ),
             ],
         ),
@@ -335,13 +346,24 @@ with baiduads.ApiClient() as api_client:
                         is_manual_deep_bid_for_max_mode=1,
                         broad_cast_mode=1,
                         anchor_id=1,
+                        trans_type_attribute=1,
                     ),
                     atp_feed_id=1,
                     delivery_type=[
                         1,
                     ],
-                    unit_ocpx_status=1,
                     unefficient_adgroup=1,
+                    product_set_id=1,
+                    unit_products=UnitProducts(
+                        catalog_id=1,
+                        rule_products=[
+                            ProductSetRule(
+                                field="field_example",
+                                operation="operation_example",
+                                value="value_example",
+                            ),
+                        ],
+                    ),
                 ),
             ],
         ),
