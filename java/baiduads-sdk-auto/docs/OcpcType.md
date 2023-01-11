@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **isManualDeepBidForMaxMode** | **Integer** |  |  [optional]
 **broadCastMode** | **Integer** |  |  [optional]
 **anchorId** | **Long** |  |  [optional]
+**transTypeAttribute** | **Integer** |  |  [optional]
 
 
 

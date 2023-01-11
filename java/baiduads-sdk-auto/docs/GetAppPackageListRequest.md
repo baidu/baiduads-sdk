@@ -20,6 +20,8 @@ Name | Type | Description | Notes
 **type** | **Integer** |  |  [optional]
 **targetUserId** | **Long** |  |  [optional]
 **filters** | [**List&lt;FilterCondition&gt;**](FilterCondition.md) |  |  [optional]
+**queryAll** | **Boolean** |  |  [optional]
+**forAppMarketingSelect** | **Boolean** |  |  [optional]
 **pageSize** | **Integer** |  |  [optional]
 **pageNo** | **Integer** |  |  [optional]
 

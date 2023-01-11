@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**get_media_packages**](SearchFeedService.md#get_media_packages) | **POST** /json/feed/v1/SearchFeedService/getMediaPackages | 
 [**get_medias**](SearchFeedService.md#get_medias) | **POST** /json/feed/v1/SearchFeedService/getMedias | 
 [**get_ocpc_trans_feed**](SearchFeedService.md#get_ocpc_trans_feed) | **POST** /json/feed/v1/SearchFeedService/getOcpcTransFeed | 
-[**get_recm_word_packages_feed**](SearchFeedService.md#get_recm_word_packages_feed) | **POST** /json/feed/v1/SearchFeedService/getRecmWordPackagesFeed | 
 
 
 # **get_app_id_name_feed**
@@ -517,6 +516,17 @@ with baiduads.ApiClient() as api_client:
         header=ApiRequestHeader(),
         body=TransTraceApiRequest(
             trans_from=1,
+            jmy_page_filter=JmyPageFilter(
+                show_type=1,
+                platform_ids=[
+                    1,
+                ],
+                search_fields=SearchField(
+                    page_name="page_name_example",
+                    id=1,
+                    search_key="search_key_example",
+                ),
+            ),
         ),
     ) # GetOcpcTransFeedRequestWrapper | 
 
@@ -538,78 +548,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOcpcTransFeedResponseWrapper**](GetOcpcTransFeedResponseWrapper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json;charset=UTF-8
- - **Accept**: application/json;charset=UTF-8
-
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | response |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_recm_word_packages_feed**
-> GetRecmWordPackagesFeedResponseWrapper get_recm_word_packages_feed(get_recm_word_packages_feed_request_wrapper)
-
-
-
-### Example
-
-
-```python
-import time
-import baiduads
-from searchfeed.api import search_feed_service
-from baiduads.searchfeed.model.get_recm_word_packages_feed_request_wrapper import GetRecmWordPackagesFeedRequestWrapper
-from baiduads.searchfeed.model.get_recm_word_packages_feed_response_wrapper import GetRecmWordPackagesFeedResponseWrapper
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.baidu.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = baiduads.Configuration(
-    host = "https://api.baidu.com"
-)
-
-
-# Enter a context with an instance of the API client
-with baiduads.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = search_feed_service.SearchFeedService(api_client)
-    get_recm_word_packages_feed_request_wrapper = GetRecmWordPackagesFeedRequestWrapper(
-        header=ApiRequestHeader(),
-        body=RecmWordsFeedRequest(
-            query="query_example",
-            planid=1,
-            unitid=1,
-        ),
-    ) # GetRecmWordPackagesFeedRequestWrapper | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_response = api_instance.get_recm_word_packages_feed(get_recm_word_packages_feed_request_wrapper)
-        pprint(api_response)
-    except baiduads.ApiException as e:
-        print("Exception when calling SearchFeedService->get_recm_word_packages_feed: %s\n" % e)
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **get_recm_word_packages_feed_request_wrapper** | [**GetRecmWordPackagesFeedRequestWrapper**](GetRecmWordPackagesFeedRequestWrapper.md)|  |
-
-### Return type
-
-[**GetRecmWordPackagesFeedResponseWrapper**](GetRecmWordPackagesFeedResponseWrapper.md)
 
 ### Authorization
 

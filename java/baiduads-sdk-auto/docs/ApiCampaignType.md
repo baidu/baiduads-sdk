@@ -31,11 +31,18 @@ Name | Type | Description | Notes
 **storePageInfos** | [**List&lt;ApiStorePageInfoType&gt;**](ApiStorePageInfoType.md) |  |  [optional]
 **marketingTargetId** | **Integer** |  |  [optional]
 **shopType** | **Integer** |  |  [optional]
-**queryRegionStatus** | **Boolean** |  |  [optional]
-**prSearchIntentionStatus** | **Boolean** |  |  [optional]
-**excludeQueryRegionStatus** | **Boolean** |  |  [optional]
-**campaignExcludeQueryRegionStatus** | **Boolean** |  |  [optional]
-**createTime** | **String** |  |  [optional]
+**equipmentType** | **Integer** |  |  [optional]
+**campaignBidType** | **Integer** |  |  [optional]
+**campaignBid** | **Double** |  |  [optional]
+**campaignOcpcBidType** | **Integer** |  |  [optional]
+**campaignOcpcBid** | **Double** |  |  [optional]
+**campaignTransTypes** | **List&lt;Integer&gt;** |  |  [optional]
+**campaignDeepTransTypes** | **List&lt;Integer&gt;** |  |  [optional]
+**campaignCvSources** | **List&lt;Integer&gt;** |  |  [optional]
+**sharedBudgetId** | **Long** |  |  [optional]
+**sharedBudgetName** | **String** |  |  [optional]
+**sharedBudget** | **Double** |  |  [optional]
+**budgetType** | **Integer** |  |  [optional]
 
 
 

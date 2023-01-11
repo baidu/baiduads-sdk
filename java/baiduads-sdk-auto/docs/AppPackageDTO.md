@@ -43,7 +43,7 @@ Name | Type | Description | Notes
 **lastParseTime** | **String** |  |  [optional]
 **isForceCommited** | **Boolean** |  |  [optional]
 **gatherState** | **Integer** |  |  [optional]
-**docid** | **Integer** |  |  [optional]
+**docid** | **Long** |  |  [optional]
 **packageType** | **Integer** |  |  [optional]
 **onlineState** | **Integer** |  |  [optional]
 **type** | **Integer** |  |  [optional]
@@ -52,6 +52,12 @@ Name | Type | Description | Notes
 **appId** | **Long** |  |  [optional]
 **versions** | [**List&lt;VersionInfo&gt;**](VersionInfo.md) |  |  [optional]
 **auditInfo** | [**AuditInfo**](AuditInfo.md) |  |  [optional]
+**updateInfo** | **String** |  |  [optional]
+**cateGoryState** | **Integer** |  |  [optional]
+**bindMarkingPlanNumber** | **Integer** |  |  [optional]
+**fromWandoujia** | **Boolean** |  |  [optional]
+**packageId** | **Long** |  |  [optional]
+**markingPlanActive** | **Boolean** |  |  [optional]
 
 
 

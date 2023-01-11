@@ -43,6 +43,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetAppPackageListRequest.JSON_PROPERTY_TYPE,
   GetAppPackageListRequest.JSON_PROPERTY_TARGET_USER_ID,
   GetAppPackageListRequest.JSON_PROPERTY_FILTERS,
+  GetAppPackageListRequest.JSON_PROPERTY_QUERY_ALL,
+  GetAppPackageListRequest.JSON_PROPERTY_FOR_APP_MARKETING_SELECT,
   GetAppPackageListRequest.JSON_PROPERTY_PAGE_SIZE,
   GetAppPackageListRequest.JSON_PROPERTY_PAGE_NO
 })
@@ -87,6 +89,12 @@ public class GetAppPackageListRequest {
 
   public static final String JSON_PROPERTY_FILTERS = "filters";
   private List<FilterCondition> filters = null;
+
+  public static final String JSON_PROPERTY_QUERY_ALL = "queryAll";
+  private Boolean queryAll;
+
+  public static final String JSON_PROPERTY_FOR_APP_MARKETING_SELECT = "forAppMarketingSelect";
+  private Boolean forAppMarketingSelect;
 
   public static final String JSON_PROPERTY_PAGE_SIZE = "pageSize";
   private Integer pageSize;
@@ -464,6 +472,60 @@ public class GetAppPackageListRequest {
   }
 
 
+  public GetAppPackageListRequest queryAll(Boolean queryAll) {
+    
+    this.queryAll = queryAll;
+    return this;
+  }
+
+   /**
+   * Get queryAll
+   * @return queryAll
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_QUERY_ALL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getQueryAll() {
+    return queryAll;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_QUERY_ALL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setQueryAll(Boolean queryAll) {
+    this.queryAll = queryAll;
+  }
+
+
+  public GetAppPackageListRequest forAppMarketingSelect(Boolean forAppMarketingSelect) {
+    
+    this.forAppMarketingSelect = forAppMarketingSelect;
+    return this;
+  }
+
+   /**
+   * Get forAppMarketingSelect
+   * @return forAppMarketingSelect
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_FOR_APP_MARKETING_SELECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getForAppMarketingSelect() {
+    return forAppMarketingSelect;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FOR_APP_MARKETING_SELECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setForAppMarketingSelect(Boolean forAppMarketingSelect) {
+    this.forAppMarketingSelect = forAppMarketingSelect;
+  }
+
+
   public GetAppPackageListRequest pageSize(Integer pageSize) {
     
     this.pageSize = pageSize;
@@ -540,13 +602,15 @@ public class GetAppPackageListRequest {
         Objects.equals(this.type, getAppPackageListRequest.type) &&
         Objects.equals(this.targetUserId, getAppPackageListRequest.targetUserId) &&
         Objects.equals(this.filters, getAppPackageListRequest.filters) &&
+        Objects.equals(this.queryAll, getAppPackageListRequest.queryAll) &&
+        Objects.equals(this.forAppMarketingSelect, getAppPackageListRequest.forAppMarketingSelect) &&
         Objects.equals(this.pageSize, getAppPackageListRequest.pageSize) &&
         Objects.equals(this.pageNo, getAppPackageListRequest.pageNo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(state, searchQuery, isDesc, sortField, searchType, startTime, endTime, states, judgeLogin, isGather, type, targetUserId, filters, pageSize, pageNo);
+    return Objects.hash(state, searchQuery, isDesc, sortField, searchType, startTime, endTime, states, judgeLogin, isGather, type, targetUserId, filters, queryAll, forAppMarketingSelect, pageSize, pageNo);
   }
 
   @Override
@@ -566,6 +630,8 @@ public class GetAppPackageListRequest {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    targetUserId: ").append(toIndentedString(targetUserId)).append("\n");
     sb.append("    filters: ").append(toIndentedString(filters)).append("\n");
+    sb.append("    queryAll: ").append(toIndentedString(queryAll)).append("\n");
+    sb.append("    forAppMarketingSelect: ").append(toIndentedString(forAppMarketingSelect)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    pageNo: ").append(toIndentedString(pageNo)).append("\n");
     sb.append("}");

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **action** | **String** |  |  [optional]
 **userName** | **String** |  |  [optional]
 **accessToken** | **String** |  |  [optional]
+**userid** | **Long** |  |  [optional]
 **username** | **String** |  |  [optional]
 **target** | **String** |  |  [optional]
 **token** | **String** |  |  [optional]

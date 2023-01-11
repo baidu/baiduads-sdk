@@ -77,7 +77,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppPackageDTO.JSON_PROPERTY_TARGET_USER_ID,
   AppPackageDTO.JSON_PROPERTY_APP_ID,
   AppPackageDTO.JSON_PROPERTY_VERSIONS,
-  AppPackageDTO.JSON_PROPERTY_AUDIT_INFO
+  AppPackageDTO.JSON_PROPERTY_AUDIT_INFO,
+  AppPackageDTO.JSON_PROPERTY_UPDATE_INFO,
+  AppPackageDTO.JSON_PROPERTY_CATE_GORY_STATE,
+  AppPackageDTO.JSON_PROPERTY_BIND_MARKING_PLAN_NUMBER,
+  AppPackageDTO.JSON_PROPERTY_FROM_WANDOUJIA,
+  AppPackageDTO.JSON_PROPERTY_PACKAGE_ID,
+  AppPackageDTO.JSON_PROPERTY_MARKING_PLAN_ACTIVE
 })
 @JsonTypeName("AppPackageDTO")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -191,7 +197,7 @@ public class AppPackageDTO {
   private Integer gatherState;
 
   public static final String JSON_PROPERTY_DOCID = "docid";
-  private Integer docid;
+  private Long docid;
 
   public static final String JSON_PROPERTY_PACKAGE_TYPE = "packageType";
   private Integer packageType;
@@ -216,6 +222,24 @@ public class AppPackageDTO {
 
   public static final String JSON_PROPERTY_AUDIT_INFO = "auditInfo";
   private AuditInfo auditInfo;
+
+  public static final String JSON_PROPERTY_UPDATE_INFO = "updateInfo";
+  private String updateInfo;
+
+  public static final String JSON_PROPERTY_CATE_GORY_STATE = "cateGoryState";
+  private Integer cateGoryState;
+
+  public static final String JSON_PROPERTY_BIND_MARKING_PLAN_NUMBER = "bindMarkingPlanNumber";
+  private Integer bindMarkingPlanNumber;
+
+  public static final String JSON_PROPERTY_FROM_WANDOUJIA = "fromWandoujia";
+  private Boolean fromWandoujia;
+
+  public static final String JSON_PROPERTY_PACKAGE_ID = "packageId";
+  private Long packageId;
+
+  public static final String JSON_PROPERTY_MARKING_PLAN_ACTIVE = "markingPlanActive";
+  private Boolean markingPlanActive;
 
   public AppPackageDTO() { 
   }
@@ -1224,7 +1248,7 @@ public class AppPackageDTO {
   }
 
 
-  public AppPackageDTO docid(Integer docid) {
+  public AppPackageDTO docid(Long docid) {
     
     this.docid = docid;
     return this;
@@ -1239,14 +1263,14 @@ public class AppPackageDTO {
   @JsonProperty(JSON_PROPERTY_DOCID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getDocid() {
+  public Long getDocid() {
     return docid;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DOCID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDocid(Integer docid) {
+  public void setDocid(Long docid) {
     this.docid = docid;
   }
 
@@ -1483,6 +1507,168 @@ public class AppPackageDTO {
   }
 
 
+  public AppPackageDTO updateInfo(String updateInfo) {
+    
+    this.updateInfo = updateInfo;
+    return this;
+  }
+
+   /**
+   * Get updateInfo
+   * @return updateInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UPDATE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getUpdateInfo() {
+    return updateInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UPDATE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUpdateInfo(String updateInfo) {
+    this.updateInfo = updateInfo;
+  }
+
+
+  public AppPackageDTO cateGoryState(Integer cateGoryState) {
+    
+    this.cateGoryState = cateGoryState;
+    return this;
+  }
+
+   /**
+   * Get cateGoryState
+   * @return cateGoryState
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CATE_GORY_STATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getCateGoryState() {
+    return cateGoryState;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CATE_GORY_STATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCateGoryState(Integer cateGoryState) {
+    this.cateGoryState = cateGoryState;
+  }
+
+
+  public AppPackageDTO bindMarkingPlanNumber(Integer bindMarkingPlanNumber) {
+    
+    this.bindMarkingPlanNumber = bindMarkingPlanNumber;
+    return this;
+  }
+
+   /**
+   * Get bindMarkingPlanNumber
+   * @return bindMarkingPlanNumber
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BIND_MARKING_PLAN_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getBindMarkingPlanNumber() {
+    return bindMarkingPlanNumber;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BIND_MARKING_PLAN_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBindMarkingPlanNumber(Integer bindMarkingPlanNumber) {
+    this.bindMarkingPlanNumber = bindMarkingPlanNumber;
+  }
+
+
+  public AppPackageDTO fromWandoujia(Boolean fromWandoujia) {
+    
+    this.fromWandoujia = fromWandoujia;
+    return this;
+  }
+
+   /**
+   * Get fromWandoujia
+   * @return fromWandoujia
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_FROM_WANDOUJIA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getFromWandoujia() {
+    return fromWandoujia;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FROM_WANDOUJIA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFromWandoujia(Boolean fromWandoujia) {
+    this.fromWandoujia = fromWandoujia;
+  }
+
+
+  public AppPackageDTO packageId(Long packageId) {
+    
+    this.packageId = packageId;
+    return this;
+  }
+
+   /**
+   * Get packageId
+   * @return packageId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PACKAGE_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getPackageId() {
+    return packageId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PACKAGE_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPackageId(Long packageId) {
+    this.packageId = packageId;
+  }
+
+
+  public AppPackageDTO markingPlanActive(Boolean markingPlanActive) {
+    
+    this.markingPlanActive = markingPlanActive;
+    return this;
+  }
+
+   /**
+   * Get markingPlanActive
+   * @return markingPlanActive
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MARKING_PLAN_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getMarkingPlanActive() {
+    return markingPlanActive;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MARKING_PLAN_ACTIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMarkingPlanActive(Boolean markingPlanActive) {
+    this.markingPlanActive = markingPlanActive;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1536,12 +1722,18 @@ public class AppPackageDTO {
         Objects.equals(this.targetUserId, appPackageDTO.targetUserId) &&
         Objects.equals(this.appId, appPackageDTO.appId) &&
         Objects.equals(this.versions, appPackageDTO.versions) &&
-        Objects.equals(this.auditInfo, appPackageDTO.auditInfo);
+        Objects.equals(this.auditInfo, appPackageDTO.auditInfo) &&
+        Objects.equals(this.updateInfo, appPackageDTO.updateInfo) &&
+        Objects.equals(this.cateGoryState, appPackageDTO.cateGoryState) &&
+        Objects.equals(this.bindMarkingPlanNumber, appPackageDTO.bindMarkingPlanNumber) &&
+        Objects.equals(this.fromWandoujia, appPackageDTO.fromWandoujia) &&
+        Objects.equals(this.packageId, appPackageDTO.packageId) &&
+        Objects.equals(this.markingPlanActive, appPackageDTO.markingPlanActive);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, channelName, pkgUploadType, uploadId, selectedIcon, appScreenshots, appIntroduce, category, privateUrl, developerName, summary, isCommit, autoUpdate, copyright, licenceDesc, videoLink, videoPass, testAccount, packageLink, appName, packageName, packageVersion, renewTime, packageUrl, packageImg, state, rejectReason, packageSize, tags, icons, updateTime, userKey, versionCode, lastParseTime, isForceCommited, gatherState, docid, packageType, onlineState, type, categoryInfo, targetUserId, appId, versions, auditInfo);
+    return Objects.hash(id, channelName, pkgUploadType, uploadId, selectedIcon, appScreenshots, appIntroduce, category, privateUrl, developerName, summary, isCommit, autoUpdate, copyright, licenceDesc, videoLink, videoPass, testAccount, packageLink, appName, packageName, packageVersion, renewTime, packageUrl, packageImg, state, rejectReason, packageSize, tags, icons, updateTime, userKey, versionCode, lastParseTime, isForceCommited, gatherState, docid, packageType, onlineState, type, categoryInfo, targetUserId, appId, versions, auditInfo, updateInfo, cateGoryState, bindMarkingPlanNumber, fromWandoujia, packageId, markingPlanActive);
   }
 
   @Override
@@ -1593,6 +1785,12 @@ public class AppPackageDTO {
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("    versions: ").append(toIndentedString(versions)).append("\n");
     sb.append("    auditInfo: ").append(toIndentedString(auditInfo)).append("\n");
+    sb.append("    updateInfo: ").append(toIndentedString(updateInfo)).append("\n");
+    sb.append("    cateGoryState: ").append(toIndentedString(cateGoryState)).append("\n");
+    sb.append("    bindMarkingPlanNumber: ").append(toIndentedString(bindMarkingPlanNumber)).append("\n");
+    sb.append("    fromWandoujia: ").append(toIndentedString(fromWandoujia)).append("\n");
+    sb.append("    packageId: ").append(toIndentedString(packageId)).append("\n");
+    sb.append("    markingPlanActive: ").append(toIndentedString(markingPlanActive)).append("\n");
     sb.append("}");
     return sb.toString();
   }

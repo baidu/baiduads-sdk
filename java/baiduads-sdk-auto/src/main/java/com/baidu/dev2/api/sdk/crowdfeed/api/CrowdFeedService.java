@@ -124,7 +124,7 @@ public class CrowdFeedService {
     }
     
     // create path and map variables
-    String localVarPath = "/json/sms/service/CrowdFeedService/getEshopEldsCrowds";
+    String localVarPath = "/json/feed/v1/CrowdFeedService/getEshopEldsCrowds";
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -181,7 +181,7 @@ public class CrowdFeedService {
     }
     
     // create path and map variables
-    String localVarPath = "/json/sms/service/CrowdFeedService/getEshopTradeCrowds";
+    String localVarPath = "/json/feed/v1/CrowdFeedService/getEshopTradeCrowds";
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

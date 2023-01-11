@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.ocpc.model.TargetPackageBindInfo;
 import com.baidu.dev2.api.sdk.ocpc.model.TargetPackageDataflowInfo;
+import com.baidu.dev2.api.sdk.ocpc.model.UnbindSharedBudgetInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -53,7 +54,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TargetPackageType.JSON_PROPERTY_TRANS_TYPES,
   TargetPackageType.JSON_PROPERTY_CV_SOURCES_SHADOW,
   TargetPackageType.JSON_PROPERTY_TRANS_TYPES_SHADOW,
-  TargetPackageType.JSON_PROPERTY_OCPC_DEEP_BID
+  TargetPackageType.JSON_PROPERTY_OCPC_DEEP_BID,
+  TargetPackageType.JSON_PROPERTY_SHARED_BUDGET,
+  TargetPackageType.JSON_PROPERTY_UNBIND_SHARED_BUDGET_INFO,
+  TargetPackageType.JSON_PROPERTY_SHARED_BUDGET_ID,
+  TargetPackageType.JSON_PROPERTY_USE_SHARED_BUDGET
 })
 @JsonTypeName("TargetPackageType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -126,6 +131,18 @@ public class TargetPackageType {
 
   public static final String JSON_PROPERTY_OCPC_DEEP_BID = "ocpcDeepBid";
   private Double ocpcDeepBid;
+
+  public static final String JSON_PROPERTY_SHARED_BUDGET = "sharedBudget";
+  private Double sharedBudget;
+
+  public static final String JSON_PROPERTY_UNBIND_SHARED_BUDGET_INFO = "unbindSharedBudgetInfo";
+  private List<UnbindSharedBudgetInfo> unbindSharedBudgetInfo = null;
+
+  public static final String JSON_PROPERTY_SHARED_BUDGET_ID = "sharedBudgetId";
+  private Long sharedBudgetId;
+
+  public static final String JSON_PROPERTY_USE_SHARED_BUDGET = "useSharedBudget";
+  private Integer useSharedBudget;
 
   public TargetPackageType() { 
   }
@@ -807,6 +824,122 @@ public class TargetPackageType {
   }
 
 
+  public TargetPackageType sharedBudget(Double sharedBudget) {
+    
+    this.sharedBudget = sharedBudget;
+    return this;
+  }
+
+   /**
+   * Get sharedBudget
+   * @return sharedBudget
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getSharedBudget() {
+    return sharedBudget;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSharedBudget(Double sharedBudget) {
+    this.sharedBudget = sharedBudget;
+  }
+
+
+  public TargetPackageType unbindSharedBudgetInfo(List<UnbindSharedBudgetInfo> unbindSharedBudgetInfo) {
+    
+    this.unbindSharedBudgetInfo = unbindSharedBudgetInfo;
+    return this;
+  }
+
+  public TargetPackageType addUnbindSharedBudgetInfoItem(UnbindSharedBudgetInfo unbindSharedBudgetInfoItem) {
+    if (this.unbindSharedBudgetInfo == null) {
+      this.unbindSharedBudgetInfo = new ArrayList<>();
+    }
+    this.unbindSharedBudgetInfo.add(unbindSharedBudgetInfoItem);
+    return this;
+  }
+
+   /**
+   * Get unbindSharedBudgetInfo
+   * @return unbindSharedBudgetInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UNBIND_SHARED_BUDGET_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<UnbindSharedBudgetInfo> getUnbindSharedBudgetInfo() {
+    return unbindSharedBudgetInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UNBIND_SHARED_BUDGET_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUnbindSharedBudgetInfo(List<UnbindSharedBudgetInfo> unbindSharedBudgetInfo) {
+    this.unbindSharedBudgetInfo = unbindSharedBudgetInfo;
+  }
+
+
+  public TargetPackageType sharedBudgetId(Long sharedBudgetId) {
+    
+    this.sharedBudgetId = sharedBudgetId;
+    return this;
+  }
+
+   /**
+   * Get sharedBudgetId
+   * @return sharedBudgetId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getSharedBudgetId() {
+    return sharedBudgetId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSharedBudgetId(Long sharedBudgetId) {
+    this.sharedBudgetId = sharedBudgetId;
+  }
+
+
+  public TargetPackageType useSharedBudget(Integer useSharedBudget) {
+    
+    this.useSharedBudget = useSharedBudget;
+    return this;
+  }
+
+   /**
+   * Get useSharedBudget
+   * @return useSharedBudget
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_USE_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUseSharedBudget() {
+    return useSharedBudget;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_USE_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUseSharedBudget(Integer useSharedBudget) {
+    this.useSharedBudget = useSharedBudget;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -838,12 +971,16 @@ public class TargetPackageType {
         Objects.equals(this.transTypes, targetPackageType.transTypes) &&
         Objects.equals(this.cvSourcesShadow, targetPackageType.cvSourcesShadow) &&
         Objects.equals(this.transTypesShadow, targetPackageType.transTypesShadow) &&
-        Objects.equals(this.ocpcDeepBid, targetPackageType.ocpcDeepBid);
+        Objects.equals(this.ocpcDeepBid, targetPackageType.ocpcDeepBid) &&
+        Objects.equals(this.sharedBudget, targetPackageType.sharedBudget) &&
+        Objects.equals(this.unbindSharedBudgetInfo, targetPackageType.unbindSharedBudgetInfo) &&
+        Objects.equals(this.sharedBudgetId, targetPackageType.sharedBudgetId) &&
+        Objects.equals(this.useSharedBudget, targetPackageType.useSharedBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(targetPackageId, targetPackageName, ocpcBidType, equipmentType, ocpcBid, ecpcMaxBidRatio, scope, dataFlowData, ocpcStage, adoptNoThreshold, astat, adoptOcpcBid, wiseAuditTime, assistTransTypes, packageStatus, ocpcDeepCpa, deepTypeStat, deepTransTypeMode, cvSources, transTypes, cvSourcesShadow, transTypesShadow, ocpcDeepBid);
+    return Objects.hash(targetPackageId, targetPackageName, ocpcBidType, equipmentType, ocpcBid, ecpcMaxBidRatio, scope, dataFlowData, ocpcStage, adoptNoThreshold, astat, adoptOcpcBid, wiseAuditTime, assistTransTypes, packageStatus, ocpcDeepCpa, deepTypeStat, deepTransTypeMode, cvSources, transTypes, cvSourcesShadow, transTypesShadow, ocpcDeepBid, sharedBudget, unbindSharedBudgetInfo, sharedBudgetId, useSharedBudget);
   }
 
   @Override
@@ -873,6 +1010,10 @@ public class TargetPackageType {
     sb.append("    cvSourcesShadow: ").append(toIndentedString(cvSourcesShadow)).append("\n");
     sb.append("    transTypesShadow: ").append(toIndentedString(transTypesShadow)).append("\n");
     sb.append("    ocpcDeepBid: ").append(toIndentedString(ocpcDeepBid)).append("\n");
+    sb.append("    sharedBudget: ").append(toIndentedString(sharedBudget)).append("\n");
+    sb.append("    unbindSharedBudgetInfo: ").append(toIndentedString(unbindSharedBudgetInfo)).append("\n");
+    sb.append("    sharedBudgetId: ").append(toIndentedString(sharedBudgetId)).append("\n");
+    sb.append("    useSharedBudget: ").append(toIndentedString(useSharedBudget)).append("\n");
     sb.append("}");
     return sb.toString();
   }

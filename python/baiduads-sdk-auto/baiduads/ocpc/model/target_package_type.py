@@ -31,8 +31,10 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.ocpc.model.target_package_bind_info import TargetPackageBindInfo
     from baiduads.ocpc.model.target_package_dataflow_info import TargetPackageDataflowInfo
+    from baiduads.ocpc.model.unbind_shared_budget_info import UnbindSharedBudgetInfo
     globals()['TargetPackageBindInfo'] = TargetPackageBindInfo
     globals()['TargetPackageDataflowInfo'] = TargetPackageDataflowInfo
+    globals()['UnbindSharedBudgetInfo'] = UnbindSharedBudgetInfo
 
 
 class TargetPackageType(ModelNormal):
@@ -111,6 +113,10 @@ class TargetPackageType(ModelNormal):
             'cv_sources_shadow': ([int],),  # noqa: E501
             'trans_types_shadow': ([int],),  # noqa: E501
             'ocpc_deep_bid': (float,),  # noqa: E501
+            'shared_budget': (float,),  # noqa: E501
+            'unbind_shared_budget_info': ([UnbindSharedBudgetInfo],),  # noqa: E501
+            'shared_budget_id': (int,),  # noqa: E501
+            'use_shared_budget': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -142,6 +148,10 @@ class TargetPackageType(ModelNormal):
         'cv_sources_shadow': 'cvSourcesShadow',  # noqa: E501
         'trans_types_shadow': 'transTypesShadow',  # noqa: E501
         'ocpc_deep_bid': 'ocpcDeepBid',  # noqa: E501
+        'shared_budget': 'sharedBudget',  # noqa: E501
+        'unbind_shared_budget_info': 'unbindSharedBudgetInfo',  # noqa: E501
+        'shared_budget_id': 'sharedBudgetId',  # noqa: E501
+        'use_shared_budget': 'useSharedBudget',  # noqa: E501
     }
 
     read_only_vars = {
@@ -208,6 +218,10 @@ class TargetPackageType(ModelNormal):
             cv_sources_shadow ([int]): [optional]  # noqa: E501
             trans_types_shadow ([int]): [optional]  # noqa: E501
             ocpc_deep_bid (float): [optional]  # noqa: E501
+            shared_budget (float): [optional]  # noqa: E501
+            unbind_shared_budget_info ([UnbindSharedBudgetInfo]): [optional]  # noqa: E501
+            shared_budget_id (int): [optional]  # noqa: E501
+            use_shared_budget (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -312,6 +326,10 @@ class TargetPackageType(ModelNormal):
             cv_sources_shadow ([int]): [optional]  # noqa: E501
             trans_types_shadow ([int]): [optional]  # noqa: E501
             ocpc_deep_bid (float): [optional]  # noqa: E501
+            shared_budget (float): [optional]  # noqa: E501
+            unbind_shared_budget_info ([UnbindSharedBudgetInfo]): [optional]  # noqa: E501
+            shared_budget_id (int): [optional]  # noqa: E501
+            use_shared_budget (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -27,6 +27,7 @@ from baiduads.atpfeed.model.del_atp_feed_request import DelAtpFeedRequest
 from baiduads.atpfeed.model.delete_atp_feed_request_wrapper import DeleteAtpFeedRequestWrapper
 from baiduads.atpfeed.model.delete_atp_feed_response_wrapper import DeleteAtpFeedResponseWrapper
 from baiduads.atpfeed.model.delete_atp_feed_response_wrapper_body import DeleteAtpFeedResponseWrapperBody
+from baiduads.atpfeed.model.expand_page_info import ExpandPageInfo
 from baiduads.atpfeed.model.get_atp_feed_request import GetAtpFeedRequest
 from baiduads.atpfeed.model.get_atp_feed_request_wrapper import GetAtpFeedRequestWrapper
 from baiduads.atpfeed.model.get_atp_feed_response_wrapper import GetAtpFeedResponseWrapper

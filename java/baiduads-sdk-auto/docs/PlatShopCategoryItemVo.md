@@ -17,6 +17,9 @@ Name | Type | Description | Notes
 **needQualify** | **Integer** |  |  [optional]
 **qualifyDesc** | **String** |  |  [optional]
 **childList** | [**List&lt;PlatShopCategoryItemVo&gt;**](PlatShopCategoryItemVo.md) |  |  [optional]
+**bigCategoryName** | **String** |  |  [optional]
+**homeCategory** | **Integer** |  |  [optional]
+**isHighRiskCategory** | **Integer** |  |  [optional]
 
 
 

@@ -33,7 +33,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppInfoType.JSON_PROPERTY_DOC_ID,
   AppInfoType.JSON_PROPERTY_CHANNEL_ID,
   AppInfoType.JSON_PROPERTY_OPENURL,
-  AppInfoType.JSON_PROPERTY_DOWNLOAD_TYPE
+  AppInfoType.JSON_PROPERTY_DOWNLOAD_TYPE,
+  AppInfoType.JSON_PROPERTY_APP_ID
 })
 @JsonTypeName("AppInfoType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -58,6 +59,9 @@ public class AppInfoType {
 
   public static final String JSON_PROPERTY_DOWNLOAD_TYPE = "downloadType";
   private Integer downloadType;
+
+  public static final String JSON_PROPERTY_APP_ID = "appId";
+  private Long appId;
 
   public AppInfoType() { 
   }
@@ -251,6 +255,33 @@ public class AppInfoType {
   }
 
 
+  public AppInfoType appId(Long appId) {
+    
+    this.appId = appId;
+    return this;
+  }
+
+   /**
+   * Get appId
+   * @return appId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getAppId() {
+    return appId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAppId(Long appId) {
+    this.appId = appId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -266,12 +297,13 @@ public class AppInfoType {
         Objects.equals(this.docId, appInfoType.docId) &&
         Objects.equals(this.channelId, appInfoType.channelId) &&
         Objects.equals(this.openurl, appInfoType.openurl) &&
-        Objects.equals(this.downloadType, appInfoType.downloadType);
+        Objects.equals(this.downloadType, appInfoType.downloadType) &&
+        Objects.equals(this.appId, appInfoType.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appName, apkName, appUrl, docId, channelId, openurl, downloadType);
+    return Objects.hash(appName, apkName, appUrl, docId, channelId, openurl, downloadType, appId);
   }
 
   @Override
@@ -285,6 +317,7 @@ public class AppInfoType {
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
     sb.append("    openurl: ").append(toIndentedString(openurl)).append("\n");
     sb.append("    downloadType: ").append(toIndentedString(downloadType)).append("\n");
+    sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

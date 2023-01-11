@@ -58,11 +58,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiCampaignType.JSON_PROPERTY_STORE_PAGE_INFOS,
   ApiCampaignType.JSON_PROPERTY_MARKETING_TARGET_ID,
   ApiCampaignType.JSON_PROPERTY_SHOP_TYPE,
-  ApiCampaignType.JSON_PROPERTY_QUERY_REGION_STATUS,
-  ApiCampaignType.JSON_PROPERTY_PR_SEARCH_INTENTION_STATUS,
-  ApiCampaignType.JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS,
-  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_EXCLUDE_QUERY_REGION_STATUS,
-  ApiCampaignType.JSON_PROPERTY_CREATE_TIME
+  ApiCampaignType.JSON_PROPERTY_EQUIPMENT_TYPE,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_BID_TYPE,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_BID,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_OCPC_BID_TYPE,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_OCPC_BID,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_TRANS_TYPES,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_DEEP_TRANS_TYPES,
+  ApiCampaignType.JSON_PROPERTY_CAMPAIGN_CV_SOURCES,
+  ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET_ID,
+  ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET_NAME,
+  ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET,
+  ApiCampaignType.JSON_PROPERTY_BUDGET_TYPE
 })
 @JsonTypeName("ApiCampaignType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -139,20 +146,41 @@ public class ApiCampaignType {
   public static final String JSON_PROPERTY_SHOP_TYPE = "shopType";
   private Integer shopType;
 
-  public static final String JSON_PROPERTY_QUERY_REGION_STATUS = "queryRegionStatus";
-  private Boolean queryRegionStatus;
+  public static final String JSON_PROPERTY_EQUIPMENT_TYPE = "equipmentType";
+  private Integer equipmentType;
 
-  public static final String JSON_PROPERTY_PR_SEARCH_INTENTION_STATUS = "prSearchIntentionStatus";
-  private Boolean prSearchIntentionStatus;
+  public static final String JSON_PROPERTY_CAMPAIGN_BID_TYPE = "campaignBidType";
+  private Integer campaignBidType;
 
-  public static final String JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS = "excludeQueryRegionStatus";
-  private Boolean excludeQueryRegionStatus;
+  public static final String JSON_PROPERTY_CAMPAIGN_BID = "campaignBid";
+  private Double campaignBid;
 
-  public static final String JSON_PROPERTY_CAMPAIGN_EXCLUDE_QUERY_REGION_STATUS = "campaignExcludeQueryRegionStatus";
-  private Boolean campaignExcludeQueryRegionStatus;
+  public static final String JSON_PROPERTY_CAMPAIGN_OCPC_BID_TYPE = "campaignOcpcBidType";
+  private Integer campaignOcpcBidType;
 
-  public static final String JSON_PROPERTY_CREATE_TIME = "createTime";
-  private String createTime;
+  public static final String JSON_PROPERTY_CAMPAIGN_OCPC_BID = "campaignOcpcBid";
+  private Double campaignOcpcBid;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_TRANS_TYPES = "campaignTransTypes";
+  private List<Integer> campaignTransTypes = null;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_DEEP_TRANS_TYPES = "campaignDeepTransTypes";
+  private List<Integer> campaignDeepTransTypes = null;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_CV_SOURCES = "campaignCvSources";
+  private List<Integer> campaignCvSources = null;
+
+  public static final String JSON_PROPERTY_SHARED_BUDGET_ID = "sharedBudgetId";
+  private Long sharedBudgetId;
+
+  public static final String JSON_PROPERTY_SHARED_BUDGET_NAME = "sharedBudgetName";
+  private String sharedBudgetName;
+
+  public static final String JSON_PROPERTY_SHARED_BUDGET = "sharedBudget";
+  private Double sharedBudget;
+
+  public static final String JSON_PROPERTY_BUDGET_TYPE = "budgetType";
+  private Integer budgetType;
 
   public ApiCampaignType() { 
   }
@@ -877,138 +905,351 @@ public class ApiCampaignType {
   }
 
 
-  public ApiCampaignType queryRegionStatus(Boolean queryRegionStatus) {
+  public ApiCampaignType equipmentType(Integer equipmentType) {
     
-    this.queryRegionStatus = queryRegionStatus;
+    this.equipmentType = equipmentType;
     return this;
   }
 
    /**
-   * Get queryRegionStatus
-   * @return queryRegionStatus
+   * Get equipmentType
+   * @return equipmentType
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_EQUIPMENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Boolean getQueryRegionStatus() {
-    return queryRegionStatus;
+  public Integer getEquipmentType() {
+    return equipmentType;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_EQUIPMENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQueryRegionStatus(Boolean queryRegionStatus) {
-    this.queryRegionStatus = queryRegionStatus;
+  public void setEquipmentType(Integer equipmentType) {
+    this.equipmentType = equipmentType;
   }
 
 
-  public ApiCampaignType prSearchIntentionStatus(Boolean prSearchIntentionStatus) {
+  public ApiCampaignType campaignBidType(Integer campaignBidType) {
     
-    this.prSearchIntentionStatus = prSearchIntentionStatus;
+    this.campaignBidType = campaignBidType;
     return this;
   }
 
    /**
-   * Get prSearchIntentionStatus
-   * @return prSearchIntentionStatus
+   * Get campaignBidType
+   * @return campaignBidType
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PR_SEARCH_INTENTION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BID_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Boolean getPrSearchIntentionStatus() {
-    return prSearchIntentionStatus;
+  public Integer getCampaignBidType() {
+    return campaignBidType;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PR_SEARCH_INTENTION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BID_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrSearchIntentionStatus(Boolean prSearchIntentionStatus) {
-    this.prSearchIntentionStatus = prSearchIntentionStatus;
+  public void setCampaignBidType(Integer campaignBidType) {
+    this.campaignBidType = campaignBidType;
   }
 
 
-  public ApiCampaignType excludeQueryRegionStatus(Boolean excludeQueryRegionStatus) {
+  public ApiCampaignType campaignBid(Double campaignBid) {
     
-    this.excludeQueryRegionStatus = excludeQueryRegionStatus;
+    this.campaignBid = campaignBid;
     return this;
   }
 
    /**
-   * Get excludeQueryRegionStatus
-   * @return excludeQueryRegionStatus
+   * Get campaignBid
+   * @return campaignBid
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Boolean getExcludeQueryRegionStatus() {
-    return excludeQueryRegionStatus;
+  public Double getCampaignBid() {
+    return campaignBid;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludeQueryRegionStatus(Boolean excludeQueryRegionStatus) {
-    this.excludeQueryRegionStatus = excludeQueryRegionStatus;
+  public void setCampaignBid(Double campaignBid) {
+    this.campaignBid = campaignBid;
   }
 
 
-  public ApiCampaignType campaignExcludeQueryRegionStatus(Boolean campaignExcludeQueryRegionStatus) {
+  public ApiCampaignType campaignOcpcBidType(Integer campaignOcpcBidType) {
     
-    this.campaignExcludeQueryRegionStatus = campaignExcludeQueryRegionStatus;
+    this.campaignOcpcBidType = campaignOcpcBidType;
     return this;
   }
 
    /**
-   * Get campaignExcludeQueryRegionStatus
-   * @return campaignExcludeQueryRegionStatus
+   * Get campaignOcpcBidType
+   * @return campaignOcpcBidType
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EXCLUDE_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_OCPC_BID_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Boolean getCampaignExcludeQueryRegionStatus() {
-    return campaignExcludeQueryRegionStatus;
+  public Integer getCampaignOcpcBidType() {
+    return campaignOcpcBidType;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EXCLUDE_QUERY_REGION_STATUS)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_OCPC_BID_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignExcludeQueryRegionStatus(Boolean campaignExcludeQueryRegionStatus) {
-    this.campaignExcludeQueryRegionStatus = campaignExcludeQueryRegionStatus;
+  public void setCampaignOcpcBidType(Integer campaignOcpcBidType) {
+    this.campaignOcpcBidType = campaignOcpcBidType;
   }
 
 
-  public ApiCampaignType createTime(String createTime) {
+  public ApiCampaignType campaignOcpcBid(Double campaignOcpcBid) {
     
-    this.createTime = createTime;
+    this.campaignOcpcBid = campaignOcpcBid;
     return this;
   }
 
    /**
-   * Get createTime
-   * @return createTime
+   * Get campaignOcpcBid
+   * @return campaignOcpcBid
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CREATE_TIME)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_OCPC_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public String getCreateTime() {
-    return createTime;
+  public Double getCampaignOcpcBid() {
+    return campaignOcpcBid;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATE_TIME)
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_OCPC_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreateTime(String createTime) {
-    this.createTime = createTime;
+  public void setCampaignOcpcBid(Double campaignOcpcBid) {
+    this.campaignOcpcBid = campaignOcpcBid;
+  }
+
+
+  public ApiCampaignType campaignTransTypes(List<Integer> campaignTransTypes) {
+    
+    this.campaignTransTypes = campaignTransTypes;
+    return this;
+  }
+
+  public ApiCampaignType addCampaignTransTypesItem(Integer campaignTransTypesItem) {
+    if (this.campaignTransTypes == null) {
+      this.campaignTransTypes = new ArrayList<>();
+    }
+    this.campaignTransTypes.add(campaignTransTypesItem);
+    return this;
+  }
+
+   /**
+   * Get campaignTransTypes
+   * @return campaignTransTypes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TRANS_TYPES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Integer> getCampaignTransTypes() {
+    return campaignTransTypes;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TRANS_TYPES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignTransTypes(List<Integer> campaignTransTypes) {
+    this.campaignTransTypes = campaignTransTypes;
+  }
+
+
+  public ApiCampaignType campaignDeepTransTypes(List<Integer> campaignDeepTransTypes) {
+    
+    this.campaignDeepTransTypes = campaignDeepTransTypes;
+    return this;
+  }
+
+  public ApiCampaignType addCampaignDeepTransTypesItem(Integer campaignDeepTransTypesItem) {
+    if (this.campaignDeepTransTypes == null) {
+      this.campaignDeepTransTypes = new ArrayList<>();
+    }
+    this.campaignDeepTransTypes.add(campaignDeepTransTypesItem);
+    return this;
+  }
+
+   /**
+   * Get campaignDeepTransTypes
+   * @return campaignDeepTransTypes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_DEEP_TRANS_TYPES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Integer> getCampaignDeepTransTypes() {
+    return campaignDeepTransTypes;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_DEEP_TRANS_TYPES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignDeepTransTypes(List<Integer> campaignDeepTransTypes) {
+    this.campaignDeepTransTypes = campaignDeepTransTypes;
+  }
+
+
+  public ApiCampaignType campaignCvSources(List<Integer> campaignCvSources) {
+    
+    this.campaignCvSources = campaignCvSources;
+    return this;
+  }
+
+  public ApiCampaignType addCampaignCvSourcesItem(Integer campaignCvSourcesItem) {
+    if (this.campaignCvSources == null) {
+      this.campaignCvSources = new ArrayList<>();
+    }
+    this.campaignCvSources.add(campaignCvSourcesItem);
+    return this;
+  }
+
+   /**
+   * Get campaignCvSources
+   * @return campaignCvSources
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CV_SOURCES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Integer> getCampaignCvSources() {
+    return campaignCvSources;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CV_SOURCES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignCvSources(List<Integer> campaignCvSources) {
+    this.campaignCvSources = campaignCvSources;
+  }
+
+
+  public ApiCampaignType sharedBudgetId(Long sharedBudgetId) {
+    
+    this.sharedBudgetId = sharedBudgetId;
+    return this;
+  }
+
+   /**
+   * Get sharedBudgetId
+   * @return sharedBudgetId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getSharedBudgetId() {
+    return sharedBudgetId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSharedBudgetId(Long sharedBudgetId) {
+    this.sharedBudgetId = sharedBudgetId;
+  }
+
+
+  public ApiCampaignType sharedBudgetName(String sharedBudgetName) {
+    
+    this.sharedBudgetName = sharedBudgetName;
+    return this;
+  }
+
+   /**
+   * Get sharedBudgetName
+   * @return sharedBudgetName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getSharedBudgetName() {
+    return sharedBudgetName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSharedBudgetName(String sharedBudgetName) {
+    this.sharedBudgetName = sharedBudgetName;
+  }
+
+
+  public ApiCampaignType sharedBudget(Double sharedBudget) {
+    
+    this.sharedBudget = sharedBudget;
+    return this;
+  }
+
+   /**
+   * Get sharedBudget
+   * @return sharedBudget
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getSharedBudget() {
+    return sharedBudget;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SHARED_BUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSharedBudget(Double sharedBudget) {
+    this.sharedBudget = sharedBudget;
+  }
+
+
+  public ApiCampaignType budgetType(Integer budgetType) {
+    
+    this.budgetType = budgetType;
+    return this;
+  }
+
+   /**
+   * Get budgetType
+   * @return budgetType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BUDGET_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getBudgetType() {
+    return budgetType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BUDGET_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBudgetType(Integer budgetType) {
+    this.budgetType = budgetType;
   }
 
 
@@ -1045,16 +1286,23 @@ public class ApiCampaignType {
         Objects.equals(this.storePageInfos, apiCampaignType.storePageInfos) &&
         Objects.equals(this.marketingTargetId, apiCampaignType.marketingTargetId) &&
         Objects.equals(this.shopType, apiCampaignType.shopType) &&
-        Objects.equals(this.queryRegionStatus, apiCampaignType.queryRegionStatus) &&
-        Objects.equals(this.prSearchIntentionStatus, apiCampaignType.prSearchIntentionStatus) &&
-        Objects.equals(this.excludeQueryRegionStatus, apiCampaignType.excludeQueryRegionStatus) &&
-        Objects.equals(this.campaignExcludeQueryRegionStatus, apiCampaignType.campaignExcludeQueryRegionStatus) &&
-        Objects.equals(this.createTime, apiCampaignType.createTime);
+        Objects.equals(this.equipmentType, apiCampaignType.equipmentType) &&
+        Objects.equals(this.campaignBidType, apiCampaignType.campaignBidType) &&
+        Objects.equals(this.campaignBid, apiCampaignType.campaignBid) &&
+        Objects.equals(this.campaignOcpcBidType, apiCampaignType.campaignOcpcBidType) &&
+        Objects.equals(this.campaignOcpcBid, apiCampaignType.campaignOcpcBid) &&
+        Objects.equals(this.campaignTransTypes, apiCampaignType.campaignTransTypes) &&
+        Objects.equals(this.campaignDeepTransTypes, apiCampaignType.campaignDeepTransTypes) &&
+        Objects.equals(this.campaignCvSources, apiCampaignType.campaignCvSources) &&
+        Objects.equals(this.sharedBudgetId, apiCampaignType.sharedBudgetId) &&
+        Objects.equals(this.sharedBudgetName, apiCampaignType.sharedBudgetName) &&
+        Objects.equals(this.sharedBudget, apiCampaignType.sharedBudget) &&
+        Objects.equals(this.budgetType, apiCampaignType.budgetType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, campaignName, budget, regionTarget, negativeWords, exactNegativeWords, schedule, budgetOfflineTime, pause, status, priceRatio, pcPriceRatio, bidPrefer, adType, businessPointId, businessPointName, smartRegion, paDevice, os, regionPriceFactor, schedulePriceFactors, storePageInfos, marketingTargetId, shopType, queryRegionStatus, prSearchIntentionStatus, excludeQueryRegionStatus, campaignExcludeQueryRegionStatus, createTime);
+    return Objects.hash(campaignId, campaignName, budget, regionTarget, negativeWords, exactNegativeWords, schedule, budgetOfflineTime, pause, status, priceRatio, pcPriceRatio, bidPrefer, adType, businessPointId, businessPointName, smartRegion, paDevice, os, regionPriceFactor, schedulePriceFactors, storePageInfos, marketingTargetId, shopType, equipmentType, campaignBidType, campaignBid, campaignOcpcBidType, campaignOcpcBid, campaignTransTypes, campaignDeepTransTypes, campaignCvSources, sharedBudgetId, sharedBudgetName, sharedBudget, budgetType);
   }
 
   @Override
@@ -1085,11 +1333,18 @@ public class ApiCampaignType {
     sb.append("    storePageInfos: ").append(toIndentedString(storePageInfos)).append("\n");
     sb.append("    marketingTargetId: ").append(toIndentedString(marketingTargetId)).append("\n");
     sb.append("    shopType: ").append(toIndentedString(shopType)).append("\n");
-    sb.append("    queryRegionStatus: ").append(toIndentedString(queryRegionStatus)).append("\n");
-    sb.append("    prSearchIntentionStatus: ").append(toIndentedString(prSearchIntentionStatus)).append("\n");
-    sb.append("    excludeQueryRegionStatus: ").append(toIndentedString(excludeQueryRegionStatus)).append("\n");
-    sb.append("    campaignExcludeQueryRegionStatus: ").append(toIndentedString(campaignExcludeQueryRegionStatus)).append("\n");
-    sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
+    sb.append("    equipmentType: ").append(toIndentedString(equipmentType)).append("\n");
+    sb.append("    campaignBidType: ").append(toIndentedString(campaignBidType)).append("\n");
+    sb.append("    campaignBid: ").append(toIndentedString(campaignBid)).append("\n");
+    sb.append("    campaignOcpcBidType: ").append(toIndentedString(campaignOcpcBidType)).append("\n");
+    sb.append("    campaignOcpcBid: ").append(toIndentedString(campaignOcpcBid)).append("\n");
+    sb.append("    campaignTransTypes: ").append(toIndentedString(campaignTransTypes)).append("\n");
+    sb.append("    campaignDeepTransTypes: ").append(toIndentedString(campaignDeepTransTypes)).append("\n");
+    sb.append("    campaignCvSources: ").append(toIndentedString(campaignCvSources)).append("\n");
+    sb.append("    sharedBudgetId: ").append(toIndentedString(sharedBudgetId)).append("\n");
+    sb.append("    sharedBudgetName: ").append(toIndentedString(sharedBudgetName)).append("\n");
+    sb.append("    sharedBudget: ").append(toIndentedString(sharedBudget)).append("\n");
+    sb.append("    budgetType: ").append(toIndentedString(budgetType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

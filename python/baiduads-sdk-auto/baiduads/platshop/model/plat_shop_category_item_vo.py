@@ -90,6 +90,9 @@ class PlatShopCategoryItemVo(ModelNormal):
             'need_qualify': (int,),  # noqa: E501
             'qualify_desc': (str,),  # noqa: E501
             'child_list': ([PlatShopCategoryItemVo],),  # noqa: E501
+            'big_category_name': (str,),  # noqa: E501
+            'home_category': (int,),  # noqa: E501
+            'is_high_risk_category': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -108,6 +111,9 @@ class PlatShopCategoryItemVo(ModelNormal):
         'need_qualify': 'needQualify',  # noqa: E501
         'qualify_desc': 'qualifyDesc',  # noqa: E501
         'child_list': 'childList',  # noqa: E501
+        'big_category_name': 'bigCategoryName',  # noqa: E501
+        'home_category': 'homeCategory',  # noqa: E501
+        'is_high_risk_category': 'isHighRiskCategory',  # noqa: E501
     }
 
     read_only_vars = {
@@ -161,6 +167,9 @@ class PlatShopCategoryItemVo(ModelNormal):
             need_qualify (int): [optional]  # noqa: E501
             qualify_desc (str): [optional]  # noqa: E501
             child_list ([PlatShopCategoryItemVo]): [optional]  # noqa: E501
+            big_category_name (str): [optional]  # noqa: E501
+            home_category (int): [optional]  # noqa: E501
+            is_high_risk_category (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,6 +261,9 @@ class PlatShopCategoryItemVo(ModelNormal):
             need_qualify (int): [optional]  # noqa: E501
             qualify_desc (str): [optional]  # noqa: E501
             child_list ([PlatShopCategoryItemVo]): [optional]  # noqa: E501
+            big_category_name (str): [optional]  # noqa: E501
+            home_category (int): [optional]  # noqa: E501
+            is_high_risk_category (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

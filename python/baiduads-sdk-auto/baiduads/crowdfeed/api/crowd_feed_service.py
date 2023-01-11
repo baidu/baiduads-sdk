@@ -93,7 +93,7 @@ class CrowdFeedService(object):
             settings={
                 'response_type': (GetEshopEldsCrowdsResponseWrapper,),
                 'auth': [],
-                'endpoint_path': '/json/sms/service/CrowdFeedService/getEshopEldsCrowds',
+                'endpoint_path': '/json/feed/v1/CrowdFeedService/getEshopEldsCrowds',
                 'operation_id': 'get_eshop_elds_crowds',
                 'http_method': 'POST',
                 'servers': None,
@@ -143,7 +143,7 @@ class CrowdFeedService(object):
             settings={
                 'response_type': (GetEshopTradeCrowdsResponseWrapper,),
                 'auth': [],
-                'endpoint_path': '/json/sms/service/CrowdFeedService/getEshopTradeCrowds',
+                'endpoint_path': '/json/feed/v1/CrowdFeedService/getEshopTradeCrowds',
                 'operation_id': 'get_eshop_trade_crowds',
                 'http_method': 'POST',
                 'servers': None,

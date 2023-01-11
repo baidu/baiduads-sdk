@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.atpfeed.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.atpfeed.model.AtpFeedType;
+import com.baidu.dev2.api.sdk.atpfeed.model.ExpandPageInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -30,16 +31,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * GetAtpFeedResponseWrapperBody
  */
 @JsonPropertyOrder({
+  GetAtpFeedResponseWrapperBody.JSON_PROPERTY_EXPAND,
   GetAtpFeedResponseWrapperBody.JSON_PROPERTY_DATA
 })
 @JsonTypeName("GetAtpFeedResponseWrapperBody")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetAtpFeedResponseWrapperBody {
+  public static final String JSON_PROPERTY_EXPAND = "expand";
+  private ExpandPageInfo expand;
+
   public static final String JSON_PROPERTY_DATA = "data";
   private List<AtpFeedType> data = null;
 
   public GetAtpFeedResponseWrapperBody() { 
   }
+
+  public GetAtpFeedResponseWrapperBody expand(ExpandPageInfo expand) {
+    
+    this.expand = expand;
+    return this;
+  }
+
+   /**
+   * Get expand
+   * @return expand
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_EXPAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public ExpandPageInfo getExpand() {
+    return expand;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_EXPAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setExpand(ExpandPageInfo expand) {
+    this.expand = expand;
+  }
+
 
   public GetAtpFeedResponseWrapperBody data(List<AtpFeedType> data) {
     
@@ -85,18 +117,20 @@ public class GetAtpFeedResponseWrapperBody {
       return false;
     }
     GetAtpFeedResponseWrapperBody getAtpFeedResponseWrapperBody = (GetAtpFeedResponseWrapperBody) o;
-    return Objects.equals(this.data, getAtpFeedResponseWrapperBody.data);
+    return Objects.equals(this.expand, getAtpFeedResponseWrapperBody.expand) &&
+        Objects.equals(this.data, getAtpFeedResponseWrapperBody.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data);
+    return Objects.hash(expand, data);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetAtpFeedResponseWrapperBody {\n");
+    sb.append("    expand: ").append(toIndentedString(expand)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();

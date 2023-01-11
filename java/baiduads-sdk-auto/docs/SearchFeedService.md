@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**getMediaPackages**](SearchFeedService.md#getMediaPackages) | **POST** /json/feed/v1/SearchFeedService/getMediaPackages | 
 [**getMedias**](SearchFeedService.md#getMedias) | **POST** /json/feed/v1/SearchFeedService/getMedias | 
 [**getOcpcTransFeed**](SearchFeedService.md#getOcpcTransFeed) | **POST** /json/feed/v1/SearchFeedService/getOcpcTransFeed | 
-[**getRecmWordPackagesFeed**](SearchFeedService.md#getRecmWordPackagesFeed) | **POST** /json/feed/v1/SearchFeedService/getRecmWordPackagesFeed | 
 
 
 
@@ -446,70 +445,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOcpcTransFeedResponseWrapper**](GetOcpcTransFeedResponseWrapper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json;charset=UTF-8
-- **Accept**: application/json;charset=UTF-8
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | response |  -  |
-
-
-## getRecmWordPackagesFeed
-
-> GetRecmWordPackagesFeedResponseWrapper getRecmWordPackagesFeed(getRecmWordPackagesFeedRequestWrapper)
-
-
-
-### Example
-
-```java
-// Import classes:
-import com.baidu.dev2.api.sdk.invoke.ApiClient;
-import com.baidu.dev2.api.sdk.invoke.ApiException;
-import com.baidu.dev2.api.sdk.invoke.Configuration;
-import com.baidu.dev2.api.sdk.invoke.models.*;
-import com.baidu.dev2.api.sdk.searchfeed.api.SearchFeedService;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.baidu.com");
-
-        SearchFeedService apiInstance = new SearchFeedService(defaultClient);
-        GetRecmWordPackagesFeedRequestWrapper getRecmWordPackagesFeedRequestWrapper = new GetRecmWordPackagesFeedRequestWrapper(); // GetRecmWordPackagesFeedRequestWrapper | 
-        try {
-            GetRecmWordPackagesFeedResponseWrapper result = apiInstance.getRecmWordPackagesFeed(getRecmWordPackagesFeedRequestWrapper);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SearchFeedService#getRecmWordPackagesFeed");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **getRecmWordPackagesFeedRequestWrapper** | [**GetRecmWordPackagesFeedRequestWrapper**](GetRecmWordPackagesFeedRequestWrapper.md)|  |
-
-### Return type
-
-[**GetRecmWordPackagesFeedResponseWrapper**](GetRecmWordPackagesFeedResponseWrapper.md)
 
 ### Authorization
 

@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **type** | **int** |  | [optional] 
 **target_user_id** | **int** |  | [optional] 
 **filters** | [**[FilterCondition]**](FilterCondition.md) |  | [optional] 
+**query_all** | **bool** |  | [optional] 
+**for_app_marketing_select** | **bool** |  | [optional] 
 **page_size** | **int** |  | [optional] 
 **page_no** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

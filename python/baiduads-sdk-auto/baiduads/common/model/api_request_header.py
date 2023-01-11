@@ -85,6 +85,7 @@ class ApiRequestHeader(ModelNormal):
             'action': (str,),  # noqa: E501
             'user_name': (str,),  # noqa: E501
             'access_token': (str,),  # noqa: E501
+            'userid': (int,),  # noqa: E501
             'username': (str,),  # noqa: E501
             'target': (str,),  # noqa: E501
             'token': (str,),  # noqa: E501
@@ -101,6 +102,7 @@ class ApiRequestHeader(ModelNormal):
         'action': 'action',  # noqa: E501
         'user_name': 'userName',  # noqa: E501
         'access_token': 'accessToken',  # noqa: E501
+        'userid': 'userid',  # noqa: E501
         'username': 'username',  # noqa: E501
         'target': 'target',  # noqa: E501
         'token': 'token',  # noqa: E501
@@ -152,6 +154,7 @@ class ApiRequestHeader(ModelNormal):
             action (str): [optional]  # noqa: E501
             user_name (str): [optional]  # noqa: E501
             access_token (str): [optional]  # noqa: E501
+            userid (int): [optional]  # noqa: E501
             username (str): [optional]  # noqa: E501
             target (str): [optional]  # noqa: E501
             token (str): [optional]  # noqa: E501
@@ -241,6 +244,7 @@ class ApiRequestHeader(ModelNormal):
             action (str): [optional]  # noqa: E501
             user_name (str): [optional]  # noqa: E501
             access_token (str): [optional]  # noqa: E501
+            userid (int): [optional]  # noqa: E501
             username (str): [optional]  # noqa: E501
             target (str): [optional]  # noqa: E501
             token (str): [optional]  # noqa: E501

@@ -59,6 +59,8 @@ with baiduads.ApiClient() as api_client:
                     ],
                 ),
             ],
+            query_all=True,
+            for_app_marketing_select=True,
             page_size=1,
             page_no=1,
         ),

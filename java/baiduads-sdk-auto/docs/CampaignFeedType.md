@@ -24,6 +24,11 @@ Name | Type | Description | Notes
 **eshopType** | **String** |  |  [optional]
 **shadow** | [**AppInfoShadowType**](AppInfoShadowType.md) |  |  [optional]
 **rtaStatus** | **Integer** |  |  [optional]
+**inheritAscriptionType** | **Integer** |  |  [optional]
+**inheritUserids** | **List&lt;Long&gt;** |  |  [optional]
+**mandatoryOperation** | **Integer** |  |  [optional]
+**adSource** | **Integer** |  |  [optional]
+**nid** | **String** |  |  [optional]
 
 
 
