@@ -15,7 +15,7 @@
 ### 源码构建
 
 ```shell
-mvn clean install
+sh build.sh
 ```
 
 ### maven使用
@@ -42,8 +42,14 @@ mvn clean install
  * API tests for AccountService
  */
 public class AccountServiceTest {
-
-    private final AccountService api = new AccountService();
+    
+    private static String appId = "{appId}";
+    
+    private static Long userId = 0L; // {userId}
+    
+    private static String authCode = "{authCode}";
+    
+    private static String secretKey = "{secretKey}";
 
     /**
      * @throws ApiException
@@ -51,27 +57,39 @@ public class AccountServiceTest {
      */
     @Test
     public void getAccountInfoTest() throws ApiException {
-        // init header
+        // get accessToken
+        OAuthService oAuthService = new OAuthService();
+        GetAccessTokenRequest request = new GetAccessTokenRequest();
+        request.setAppId(appId);
+        request.setUserId(userId);
+        request.setAuthCode(authCode);
+        request.setSecretKey(secretKey);
+        GetAccessTokenResponse response = oAuthService.getAccessToken(request);
+        String accessToken = response.getData().getAccessToken();
+
+        // init service
+        AccountService accountService = new AccountService();
+        // init request header
         ApiRequestHeader requestHeader = new ApiRequestHeader();
-        requestHeader.setUsername("********");
-        requestHeader.setPassword("********");
-        requestHeader.setToken("****************");
+        // set oauth info
+        requestHeader.setUserName("{userName}");
+        requestHeader.setAccessToken(accessToken);
 
-        // init request body
-        ApiAccountQueryRequest request = new ApiAccountQueryRequest();
-        List<String> accountFields = new ArrayList<>();
-        accountFields.add("pictureOptimizeSegmentStatus");
-        request.setAccountFields(accountFields);
+        // init request
+        ApiAccountQueryRequest queryRequest = new ApiAccountQueryRequest();
+        ArrayList<String> fields = new ArrayList<>();
+        fields.add("pictureOptimizeSegmentStatus");
+        fields.add("balance");
+        fields.add("userLevel");
+        queryRequest.setAccountFields(fields);
 
-        // init request wrapper
+        // init requster wrapper
         GetAccountInfoRequestWrapper requestWrapper = new GetAccountInfoRequestWrapper();
         requestWrapper.setHeader(requestHeader);
-        requestWrapper.setBody(request);
+        requestWrapper.setBody(queryRequest);
 
-
-        GetAccountInfoResponseWrapper response = api.getAccountInfo(requestWrapper);
-
-        Assert.assertTrue(response.getHeader().getStatus() == 0);
+        GetAccountInfoResponseWrapper responseWrapper = accountService.getAccountInfo(requestWrapper);
+        Assert.assertTrue(responseWrapper.getHeader().getStatus() == 0);
 
     }
 }
@@ -86,10 +104,10 @@ public class AccountServiceTest {
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CampaignFeedService* | [**addCampaignFeed**](docs/CampaignFeedService.md#addCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/addCampaignFeed | 
-*CampaignFeedService* | [**deleteCampaignFeed**](docs/CampaignFeedService.md#deleteCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/deleteCampaignFeed | 
-*CampaignFeedService* | [**getCampaignFeed**](docs/CampaignFeedService.md#getCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/getCampaignFeed | 
-*CampaignFeedService* | [**updateCampaignFeed**](docs/CampaignFeedService.md#updateCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/updateCampaignFeed | 
+*CampaignFeedService* | [**addCampaignFeed**](docs/CampaignFeedService.md#addCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/addCampaignFeed |
+*CampaignFeedService* | [**deleteCampaignFeed**](docs/CampaignFeedService.md#deleteCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/deleteCampaignFeed |
+*CampaignFeedService* | [**getCampaignFeed**](docs/CampaignFeedService.md#getCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/getCampaignFeed |
+*CampaignFeedService* | [**updateCampaignFeed**](docs/CampaignFeedService.md#updateCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/updateCampaignFeed |
 
 
 ## 讨论
