@@ -36,9 +36,8 @@ public class CreateFeedAd {
 
     static {
         header = new ApiRequestHeader();
-        header.setPassword("xxxxx");
-        header.setUsername("xxxxx");
-        header.setToken("xxxxx");
+        header.setAccessToken("xxxxx"); // accessToken需要通过授权环节生成
+        header.setUserName("xxxxx"); // 替换成自己的用户名
     }
 
     /**

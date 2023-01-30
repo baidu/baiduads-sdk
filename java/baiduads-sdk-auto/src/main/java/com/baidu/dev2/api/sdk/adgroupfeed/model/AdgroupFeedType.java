@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.adgroupfeed.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.adgroupfeed.model.OcpcType;
+import com.baidu.dev2.api.sdk.adgroupfeed.model.UnitProducts;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -43,8 +44,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdgroupFeedType.JSON_PROPERTY_OCPC,
   AdgroupFeedType.JSON_PROPERTY_ATP_FEED_ID,
   AdgroupFeedType.JSON_PROPERTY_DELIVERY_TYPE,
-  AdgroupFeedType.JSON_PROPERTY_UNIT_OCPX_STATUS,
-  AdgroupFeedType.JSON_PROPERTY_UNEFFICIENT_ADGROUP
+  AdgroupFeedType.JSON_PROPERTY_UNEFFICIENT_ADGROUP,
+  AdgroupFeedType.JSON_PROPERTY_PRODUCT_SET_ID,
+  AdgroupFeedType.JSON_PROPERTY_UNIT_PRODUCTS
 })
 @JsonTypeName("AdgroupFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -88,11 +90,14 @@ public class AdgroupFeedType {
   public static final String JSON_PROPERTY_DELIVERY_TYPE = "deliveryType";
   private List<Integer> deliveryType = null;
 
-  public static final String JSON_PROPERTY_UNIT_OCPX_STATUS = "unitOcpxStatus";
-  private Integer unitOcpxStatus;
-
   public static final String JSON_PROPERTY_UNEFFICIENT_ADGROUP = "unefficientAdgroup";
   private Integer unefficientAdgroup;
+
+  public static final String JSON_PROPERTY_PRODUCT_SET_ID = "productSetId";
+  private Long productSetId;
+
+  public static final String JSON_PROPERTY_UNIT_PRODUCTS = "unitProducts";
+  private UnitProducts unitProducts;
 
   public AdgroupFeedType() { 
   }
@@ -472,33 +477,6 @@ public class AdgroupFeedType {
   }
 
 
-  public AdgroupFeedType unitOcpxStatus(Integer unitOcpxStatus) {
-    
-    this.unitOcpxStatus = unitOcpxStatus;
-    return this;
-  }
-
-   /**
-   * Get unitOcpxStatus
-   * @return unitOcpxStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UNIT_OCPX_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getUnitOcpxStatus() {
-    return unitOcpxStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UNIT_OCPX_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnitOcpxStatus(Integer unitOcpxStatus) {
-    this.unitOcpxStatus = unitOcpxStatus;
-  }
-
-
   public AdgroupFeedType unefficientAdgroup(Integer unefficientAdgroup) {
     
     this.unefficientAdgroup = unefficientAdgroup;
@@ -526,6 +504,60 @@ public class AdgroupFeedType {
   }
 
 
+  public AdgroupFeedType productSetId(Long productSetId) {
+    
+    this.productSetId = productSetId;
+    return this;
+  }
+
+   /**
+   * Get productSetId
+   * @return productSetId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PRODUCT_SET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getProductSetId() {
+    return productSetId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PRODUCT_SET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setProductSetId(Long productSetId) {
+    this.productSetId = productSetId;
+  }
+
+
+  public AdgroupFeedType unitProducts(UnitProducts unitProducts) {
+    
+    this.unitProducts = unitProducts;
+    return this;
+  }
+
+   /**
+   * Get unitProducts
+   * @return unitProducts
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UNIT_PRODUCTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public UnitProducts getUnitProducts() {
+    return unitProducts;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UNIT_PRODUCTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUnitProducts(UnitProducts unitProducts) {
+    this.unitProducts = unitProducts;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -548,13 +580,14 @@ public class AdgroupFeedType {
         Objects.equals(this.ocpc, adgroupFeedType.ocpc) &&
         Objects.equals(this.atpFeedId, adgroupFeedType.atpFeedId) &&
         Objects.equals(this.deliveryType, adgroupFeedType.deliveryType) &&
-        Objects.equals(this.unitOcpxStatus, adgroupFeedType.unitOcpxStatus) &&
-        Objects.equals(this.unefficientAdgroup, adgroupFeedType.unefficientAdgroup);
+        Objects.equals(this.unefficientAdgroup, adgroupFeedType.unefficientAdgroup) &&
+        Objects.equals(this.productSetId, adgroupFeedType.productSetId) &&
+        Objects.equals(this.unitProducts, adgroupFeedType.unitProducts);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, producttypes, ftypes, bidtype, ocpc, atpFeedId, deliveryType, unitOcpxStatus, unefficientAdgroup);
+    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, producttypes, ftypes, bidtype, ocpc, atpFeedId, deliveryType, unefficientAdgroup, productSetId, unitProducts);
   }
 
   @Override
@@ -574,8 +607,9 @@ public class AdgroupFeedType {
     sb.append("    ocpc: ").append(toIndentedString(ocpc)).append("\n");
     sb.append("    atpFeedId: ").append(toIndentedString(atpFeedId)).append("\n");
     sb.append("    deliveryType: ").append(toIndentedString(deliveryType)).append("\n");
-    sb.append("    unitOcpxStatus: ").append(toIndentedString(unitOcpxStatus)).append("\n");
     sb.append("    unefficientAdgroup: ").append(toIndentedString(unefficientAdgroup)).append("\n");
+    sb.append("    productSetId: ").append(toIndentedString(productSetId)).append("\n");
+    sb.append("    unitProducts: ").append(toIndentedString(unitProducts)).append("\n");
     sb.append("}");
     return sb.toString();
   }

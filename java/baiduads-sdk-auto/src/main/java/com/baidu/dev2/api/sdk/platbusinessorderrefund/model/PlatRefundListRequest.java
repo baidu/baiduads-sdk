@@ -13,7 +13,6 @@ package com.baidu.dev2.api.sdk.platbusinessorderrefund.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.platbusinessorderrefund.model.StatusUnionCase;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -21,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -45,21 +42,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatRefundListRequest.JSON_PROPERTY_PRODUCT_TYPE,
   PlatRefundListRequest.JSON_PROPERTY_START_TIME,
   PlatRefundListRequest.JSON_PROPERTY_END_TIME,
-  PlatRefundListRequest.JSON_PROPERTY_ORDER_REFUND_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_PAY_TYPE,
-  PlatRefundListRequest.JSON_PROPERTY_COMPLAINT_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_CUSTOMER_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_RETURN_STATUS,
   PlatRefundListRequest.JSON_PROPERTY_PRODUCT_NAME,
-  PlatRefundListRequest.JSON_PROPERTY_EXPRESS_INFO,
-  PlatRefundListRequest.JSON_PROPERTY_STATUS_LIST,
-  PlatRefundListRequest.JSON_PROPERTY_DELIVERY_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_AGG_REFUND_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_TAB_REFUND_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_TIMEOUT_SORT_TYPE,
-  PlatRefundListRequest.JSON_PROPERTY_RETURN_GOODS_STATUS,
-  PlatRefundListRequest.JSON_PROPERTY_REFUND_BASE_REASON,
-  PlatRefundListRequest.JSON_PROPERTY_COMPLAINT_JUDGE_RESULT
+  PlatRefundListRequest.JSON_PROPERTY_EXPRESS_INFO
 })
 @JsonTypeName("PlatRefundListRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -109,50 +93,11 @@ public class PlatRefundListRequest {
   public static final String JSON_PROPERTY_END_TIME = "endTime";
   private String endTime;
 
-  public static final String JSON_PROPERTY_ORDER_REFUND_STATUS = "orderRefundStatus";
-  private List<Integer> orderRefundStatus = null;
-
-  public static final String JSON_PROPERTY_PAY_TYPE = "payType";
-  private Integer payType;
-
-  public static final String JSON_PROPERTY_COMPLAINT_STATUS = "complaintStatus";
-  private List<Integer> complaintStatus = null;
-
-  public static final String JSON_PROPERTY_CUSTOMER_STATUS = "customerStatus";
-  private List<Integer> customerStatus = null;
-
-  public static final String JSON_PROPERTY_RETURN_STATUS = "returnStatus";
-  private Integer returnStatus;
-
   public static final String JSON_PROPERTY_PRODUCT_NAME = "productName";
   private String productName;
 
   public static final String JSON_PROPERTY_EXPRESS_INFO = "expressInfo";
   private String expressInfo;
-
-  public static final String JSON_PROPERTY_STATUS_LIST = "statusList";
-  private List<StatusUnionCase> statusList = null;
-
-  public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
-  private Integer deliveryStatus;
-
-  public static final String JSON_PROPERTY_AGG_REFUND_STATUS = "aggRefundStatus";
-  private List<Integer> aggRefundStatus = null;
-
-  public static final String JSON_PROPERTY_TAB_REFUND_STATUS = "tabRefundStatus";
-  private List<Integer> tabRefundStatus = null;
-
-  public static final String JSON_PROPERTY_TIMEOUT_SORT_TYPE = "timeoutSortType";
-  private Integer timeoutSortType;
-
-  public static final String JSON_PROPERTY_RETURN_GOODS_STATUS = "returnGoodsStatus";
-  private Integer returnGoodsStatus;
-
-  public static final String JSON_PROPERTY_REFUND_BASE_REASON = "refundBaseReason";
-  private Integer refundBaseReason;
-
-  public static final String JSON_PROPERTY_COMPLAINT_JUDGE_RESULT = "complaintJudgeResult";
-  private Integer complaintJudgeResult;
 
   public PlatRefundListRequest() { 
   }
@@ -562,165 +507,6 @@ public class PlatRefundListRequest {
   }
 
 
-  public PlatRefundListRequest orderRefundStatus(List<Integer> orderRefundStatus) {
-    
-    this.orderRefundStatus = orderRefundStatus;
-    return this;
-  }
-
-  public PlatRefundListRequest addOrderRefundStatusItem(Integer orderRefundStatusItem) {
-    if (this.orderRefundStatus == null) {
-      this.orderRefundStatus = new ArrayList<>();
-    }
-    this.orderRefundStatus.add(orderRefundStatusItem);
-    return this;
-  }
-
-   /**
-   * Get orderRefundStatus
-   * @return orderRefundStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getOrderRefundStatus() {
-    return orderRefundStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderRefundStatus(List<Integer> orderRefundStatus) {
-    this.orderRefundStatus = orderRefundStatus;
-  }
-
-
-  public PlatRefundListRequest payType(Integer payType) {
-    
-    this.payType = payType;
-    return this;
-  }
-
-   /**
-   * Get payType
-   * @return payType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PAY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getPayType() {
-    return payType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PAY_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayType(Integer payType) {
-    this.payType = payType;
-  }
-
-
-  public PlatRefundListRequest complaintStatus(List<Integer> complaintStatus) {
-    
-    this.complaintStatus = complaintStatus;
-    return this;
-  }
-
-  public PlatRefundListRequest addComplaintStatusItem(Integer complaintStatusItem) {
-    if (this.complaintStatus == null) {
-      this.complaintStatus = new ArrayList<>();
-    }
-    this.complaintStatus.add(complaintStatusItem);
-    return this;
-  }
-
-   /**
-   * Get complaintStatus
-   * @return complaintStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getComplaintStatus() {
-    return complaintStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setComplaintStatus(List<Integer> complaintStatus) {
-    this.complaintStatus = complaintStatus;
-  }
-
-
-  public PlatRefundListRequest customerStatus(List<Integer> customerStatus) {
-    
-    this.customerStatus = customerStatus;
-    return this;
-  }
-
-  public PlatRefundListRequest addCustomerStatusItem(Integer customerStatusItem) {
-    if (this.customerStatus == null) {
-      this.customerStatus = new ArrayList<>();
-    }
-    this.customerStatus.add(customerStatusItem);
-    return this;
-  }
-
-   /**
-   * Get customerStatus
-   * @return customerStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getCustomerStatus() {
-    return customerStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomerStatus(List<Integer> customerStatus) {
-    this.customerStatus = customerStatus;
-  }
-
-
-  public PlatRefundListRequest returnStatus(Integer returnStatus) {
-    
-    this.returnStatus = returnStatus;
-    return this;
-  }
-
-   /**
-   * Get returnStatus
-   * @return returnStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RETURN_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getReturnStatus() {
-    return returnStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RETURN_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReturnStatus(Integer returnStatus) {
-    this.returnStatus = returnStatus;
-  }
-
-
   public PlatRefundListRequest productName(String productName) {
     
     this.productName = productName;
@@ -775,246 +561,6 @@ public class PlatRefundListRequest {
   }
 
 
-  public PlatRefundListRequest statusList(List<StatusUnionCase> statusList) {
-    
-    this.statusList = statusList;
-    return this;
-  }
-
-  public PlatRefundListRequest addStatusListItem(StatusUnionCase statusListItem) {
-    if (this.statusList == null) {
-      this.statusList = new ArrayList<>();
-    }
-    this.statusList.add(statusListItem);
-    return this;
-  }
-
-   /**
-   * Get statusList
-   * @return statusList
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_STATUS_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<StatusUnionCase> getStatusList() {
-    return statusList;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STATUS_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatusList(List<StatusUnionCase> statusList) {
-    this.statusList = statusList;
-  }
-
-
-  public PlatRefundListRequest deliveryStatus(Integer deliveryStatus) {
-    
-    this.deliveryStatus = deliveryStatus;
-    return this;
-  }
-
-   /**
-   * Get deliveryStatus
-   * @return deliveryStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDeliveryStatus() {
-    return deliveryStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(Integer deliveryStatus) {
-    this.deliveryStatus = deliveryStatus;
-  }
-
-
-  public PlatRefundListRequest aggRefundStatus(List<Integer> aggRefundStatus) {
-    
-    this.aggRefundStatus = aggRefundStatus;
-    return this;
-  }
-
-  public PlatRefundListRequest addAggRefundStatusItem(Integer aggRefundStatusItem) {
-    if (this.aggRefundStatus == null) {
-      this.aggRefundStatus = new ArrayList<>();
-    }
-    this.aggRefundStatus.add(aggRefundStatusItem);
-    return this;
-  }
-
-   /**
-   * Get aggRefundStatus
-   * @return aggRefundStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getAggRefundStatus() {
-    return aggRefundStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_AGG_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAggRefundStatus(List<Integer> aggRefundStatus) {
-    this.aggRefundStatus = aggRefundStatus;
-  }
-
-
-  public PlatRefundListRequest tabRefundStatus(List<Integer> tabRefundStatus) {
-    
-    this.tabRefundStatus = tabRefundStatus;
-    return this;
-  }
-
-  public PlatRefundListRequest addTabRefundStatusItem(Integer tabRefundStatusItem) {
-    if (this.tabRefundStatus == null) {
-      this.tabRefundStatus = new ArrayList<>();
-    }
-    this.tabRefundStatus.add(tabRefundStatusItem);
-    return this;
-  }
-
-   /**
-   * Get tabRefundStatus
-   * @return tabRefundStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAB_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getTabRefundStatus() {
-    return tabRefundStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAB_REFUND_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTabRefundStatus(List<Integer> tabRefundStatus) {
-    this.tabRefundStatus = tabRefundStatus;
-  }
-
-
-  public PlatRefundListRequest timeoutSortType(Integer timeoutSortType) {
-    
-    this.timeoutSortType = timeoutSortType;
-    return this;
-  }
-
-   /**
-   * Get timeoutSortType
-   * @return timeoutSortType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TIMEOUT_SORT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getTimeoutSortType() {
-    return timeoutSortType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TIMEOUT_SORT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTimeoutSortType(Integer timeoutSortType) {
-    this.timeoutSortType = timeoutSortType;
-  }
-
-
-  public PlatRefundListRequest returnGoodsStatus(Integer returnGoodsStatus) {
-    
-    this.returnGoodsStatus = returnGoodsStatus;
-    return this;
-  }
-
-   /**
-   * Get returnGoodsStatus
-   * @return returnGoodsStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getReturnGoodsStatus() {
-    return returnGoodsStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RETURN_GOODS_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReturnGoodsStatus(Integer returnGoodsStatus) {
-    this.returnGoodsStatus = returnGoodsStatus;
-  }
-
-
-  public PlatRefundListRequest refundBaseReason(Integer refundBaseReason) {
-    
-    this.refundBaseReason = refundBaseReason;
-    return this;
-  }
-
-   /**
-   * Get refundBaseReason
-   * @return refundBaseReason
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_BASE_REASON)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getRefundBaseReason() {
-    return refundBaseReason;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_BASE_REASON)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundBaseReason(Integer refundBaseReason) {
-    this.refundBaseReason = refundBaseReason;
-  }
-
-
-  public PlatRefundListRequest complaintJudgeResult(Integer complaintJudgeResult) {
-    
-    this.complaintJudgeResult = complaintJudgeResult;
-    return this;
-  }
-
-   /**
-   * Get complaintJudgeResult
-   * @return complaintJudgeResult
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_JUDGE_RESULT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getComplaintJudgeResult() {
-    return complaintJudgeResult;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COMPLAINT_JUDGE_RESULT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setComplaintJudgeResult(Integer complaintJudgeResult) {
-    this.complaintJudgeResult = complaintJudgeResult;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1039,26 +585,13 @@ public class PlatRefundListRequest {
         Objects.equals(this.productType, platRefundListRequest.productType) &&
         Objects.equals(this.startTime, platRefundListRequest.startTime) &&
         Objects.equals(this.endTime, platRefundListRequest.endTime) &&
-        Objects.equals(this.orderRefundStatus, platRefundListRequest.orderRefundStatus) &&
-        Objects.equals(this.payType, platRefundListRequest.payType) &&
-        Objects.equals(this.complaintStatus, platRefundListRequest.complaintStatus) &&
-        Objects.equals(this.customerStatus, platRefundListRequest.customerStatus) &&
-        Objects.equals(this.returnStatus, platRefundListRequest.returnStatus) &&
         Objects.equals(this.productName, platRefundListRequest.productName) &&
-        Objects.equals(this.expressInfo, platRefundListRequest.expressInfo) &&
-        Objects.equals(this.statusList, platRefundListRequest.statusList) &&
-        Objects.equals(this.deliveryStatus, platRefundListRequest.deliveryStatus) &&
-        Objects.equals(this.aggRefundStatus, platRefundListRequest.aggRefundStatus) &&
-        Objects.equals(this.tabRefundStatus, platRefundListRequest.tabRefundStatus) &&
-        Objects.equals(this.timeoutSortType, platRefundListRequest.timeoutSortType) &&
-        Objects.equals(this.returnGoodsStatus, platRefundListRequest.returnGoodsStatus) &&
-        Objects.equals(this.refundBaseReason, platRefundListRequest.refundBaseReason) &&
-        Objects.equals(this.complaintJudgeResult, platRefundListRequest.complaintJudgeResult);
+        Objects.equals(this.expressInfo, platRefundListRequest.expressInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ucid, appId, orderId, shopId, passportId, refundId, refundType, refundStatus, refundReason, expressPhone, pageNum, pageCount, productType, startTime, endTime, orderRefundStatus, payType, complaintStatus, customerStatus, returnStatus, productName, expressInfo, statusList, deliveryStatus, aggRefundStatus, tabRefundStatus, timeoutSortType, returnGoodsStatus, refundBaseReason, complaintJudgeResult);
+    return Objects.hash(ucid, appId, orderId, shopId, passportId, refundId, refundType, refundStatus, refundReason, expressPhone, pageNum, pageCount, productType, startTime, endTime, productName, expressInfo);
   }
 
   @Override
@@ -1080,21 +613,8 @@ public class PlatRefundListRequest {
     sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
-    sb.append("    orderRefundStatus: ").append(toIndentedString(orderRefundStatus)).append("\n");
-    sb.append("    payType: ").append(toIndentedString(payType)).append("\n");
-    sb.append("    complaintStatus: ").append(toIndentedString(complaintStatus)).append("\n");
-    sb.append("    customerStatus: ").append(toIndentedString(customerStatus)).append("\n");
-    sb.append("    returnStatus: ").append(toIndentedString(returnStatus)).append("\n");
     sb.append("    productName: ").append(toIndentedString(productName)).append("\n");
     sb.append("    expressInfo: ").append(toIndentedString(expressInfo)).append("\n");
-    sb.append("    statusList: ").append(toIndentedString(statusList)).append("\n");
-    sb.append("    deliveryStatus: ").append(toIndentedString(deliveryStatus)).append("\n");
-    sb.append("    aggRefundStatus: ").append(toIndentedString(aggRefundStatus)).append("\n");
-    sb.append("    tabRefundStatus: ").append(toIndentedString(tabRefundStatus)).append("\n");
-    sb.append("    timeoutSortType: ").append(toIndentedString(timeoutSortType)).append("\n");
-    sb.append("    returnGoodsStatus: ").append(toIndentedString(returnGoodsStatus)).append("\n");
-    sb.append("    refundBaseReason: ").append(toIndentedString(refundBaseReason)).append("\n");
-    sb.append("    complaintJudgeResult: ").append(toIndentedString(complaintJudgeResult)).append("\n");
     sb.append("}");
     return sb.toString();
   }

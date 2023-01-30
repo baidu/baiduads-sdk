@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;PageData&gt;**](PageData.md) |  |  [optional]
+**data** | [**List&lt;DPageData&gt;**](DPageData.md) |  |  [optional]
 
 
 

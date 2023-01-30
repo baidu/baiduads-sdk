@@ -31,7 +31,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiStorePageInfoType.JSON_PROPERTY_PAGE_ID,
   ApiStorePageInfoType.JSON_PROPERTY_URL,
   ApiStorePageInfoType.JSON_PROPERTY_PAGE_TYPE,
-  ApiStorePageInfoType.JSON_PROPERTY_MONITOR_CODE
+  ApiStorePageInfoType.JSON_PROPERTY_MONITOR_CODE,
+  ApiStorePageInfoType.JSON_PROPERTY_STORE_SHOP_TYPE,
+  ApiStorePageInfoType.JSON_PROPERTY_USER_ID
 })
 @JsonTypeName("ApiStorePageInfoType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -50,6 +52,12 @@ public class ApiStorePageInfoType {
 
   public static final String JSON_PROPERTY_MONITOR_CODE = "monitorCode";
   private String monitorCode;
+
+  public static final String JSON_PROPERTY_STORE_SHOP_TYPE = "storeShopType";
+  private Integer storeShopType;
+
+  public static final String JSON_PROPERTY_USER_ID = "userId";
+  private Long userId;
 
   public ApiStorePageInfoType() { 
   }
@@ -189,6 +197,60 @@ public class ApiStorePageInfoType {
   }
 
 
+  public ApiStorePageInfoType storeShopType(Integer storeShopType) {
+    
+    this.storeShopType = storeShopType;
+    return this;
+  }
+
+   /**
+   * Get storeShopType
+   * @return storeShopType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_STORE_SHOP_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getStoreShopType() {
+    return storeShopType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_STORE_SHOP_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setStoreShopType(Integer storeShopType) {
+    this.storeShopType = storeShopType;
+  }
+
+
+  public ApiStorePageInfoType userId(Long userId) {
+    
+    this.userId = userId;
+    return this;
+  }
+
+   /**
+   * Get userId
+   * @return userId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getUserId() {
+    return userId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -202,12 +264,14 @@ public class ApiStorePageInfoType {
         Objects.equals(this.pageId, apiStorePageInfoType.pageId) &&
         Objects.equals(this.url, apiStorePageInfoType.url) &&
         Objects.equals(this.pageType, apiStorePageInfoType.pageType) &&
-        Objects.equals(this.monitorCode, apiStorePageInfoType.monitorCode);
+        Objects.equals(this.monitorCode, apiStorePageInfoType.monitorCode) &&
+        Objects.equals(this.storeShopType, apiStorePageInfoType.storeShopType) &&
+        Objects.equals(this.userId, apiStorePageInfoType.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(storeId, pageId, url, pageType, monitorCode);
+    return Objects.hash(storeId, pageId, url, pageType, monitorCode, storeShopType, userId);
   }
 
   @Override
@@ -219,6 +283,8 @@ public class ApiStorePageInfoType {
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("    pageType: ").append(toIndentedString(pageType)).append("\n");
     sb.append("    monitorCode: ").append(toIndentedString(monitorCode)).append("\n");
+    sb.append("    storeShopType: ").append(toIndentedString(storeShopType)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

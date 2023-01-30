@@ -30,7 +30,9 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.atpfeed.model.atp_feed_type import AtpFeedType
+    from baiduads.atpfeed.model.expand_page_info import ExpandPageInfo
     globals()['AtpFeedType'] = AtpFeedType
+    globals()['ExpandPageInfo'] = ExpandPageInfo
 
 
 class GetAtpFeedResponseWrapperBody(ModelNormal):
@@ -86,6 +88,7 @@ class GetAtpFeedResponseWrapperBody(ModelNormal):
         """
         lazy_import()
         return {
+            'expand': (ExpandPageInfo,),  # noqa: E501
             'data': ([AtpFeedType],),  # noqa: E501
         }
 
@@ -95,6 +98,7 @@ class GetAtpFeedResponseWrapperBody(ModelNormal):
 
 
     attribute_map = {
+        'expand': 'expand',  # noqa: E501
         'data': 'data',  # noqa: E501
     }
 
@@ -139,6 +143,7 @@ class GetAtpFeedResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            expand (ExpandPageInfo): [optional]  # noqa: E501
             data ([AtpFeedType]): [optional]  # noqa: E501
         """
 
@@ -221,6 +226,7 @@ class GetAtpFeedResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            expand (ExpandPageInfo): [optional]  # noqa: E501
             data ([AtpFeedType]): [optional]  # noqa: E501
         """
 

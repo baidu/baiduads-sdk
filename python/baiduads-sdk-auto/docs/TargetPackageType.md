@@ -27,6 +27,10 @@ Name | Type | Description | Notes
 **cv_sources_shadow** | **[int]** |  | [optional] 
 **trans_types_shadow** | **[int]** |  | [optional] 
 **ocpc_deep_bid** | **float** |  | [optional] 
+**shared_budget** | **float** |  | [optional] 
+**unbind_shared_budget_info** | [**[UnbindSharedBudgetInfo]**](UnbindSharedBudgetInfo.md) |  | [optional] 
+**shared_budget_id** | **int** |  | [optional] 
+**use_shared_budget** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

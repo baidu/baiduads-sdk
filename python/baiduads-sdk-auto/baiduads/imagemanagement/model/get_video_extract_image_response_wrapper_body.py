@@ -29,8 +29,8 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.imagemanagement.model.page_data import PageData
-    globals()['PageData'] = PageData
+    from baiduads.imagemanagement.model.d_page_data import DPageData
+    globals()['DPageData'] = DPageData
 
 
 class GetVideoExtractImageResponseWrapperBody(ModelNormal):
@@ -86,7 +86,7 @@ class GetVideoExtractImageResponseWrapperBody(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([PageData],),  # noqa: E501
+            'data': ([DPageData],),  # noqa: E501
         }
 
     @cached_property
@@ -139,7 +139,7 @@ class GetVideoExtractImageResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([PageData]): [optional]  # noqa: E501
+            data ([DPageData]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,7 +221,7 @@ class GetVideoExtractImageResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([PageData]): [optional]  # noqa: E501
+            data ([DPageData]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

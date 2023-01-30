@@ -30,13 +30,21 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * AddMarkResponse
  */
 @JsonPropertyOrder({
-  AddMarkResponse.JSON_PROPERTY_MARK_RESULT
+  AddMarkResponse.JSON_PROPERTY_MARK_RESULT,
+  AddMarkResponse.JSON_PROPERTY_SUCCESS_COUNT,
+  AddMarkResponse.JSON_PROPERTY_ERROR_COUNT
 })
 @JsonTypeName("AddMarkResponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AddMarkResponse {
   public static final String JSON_PROPERTY_MARK_RESULT = "markResult";
   private List<UpdateMarkTypeResult> markResult = null;
+
+  public static final String JSON_PROPERTY_SUCCESS_COUNT = "successCount";
+  private Integer successCount;
+
+  public static final String JSON_PROPERTY_ERROR_COUNT = "errorCount";
+  private Integer errorCount;
 
   public AddMarkResponse() { 
   }
@@ -76,6 +84,60 @@ public class AddMarkResponse {
   }
 
 
+  public AddMarkResponse successCount(Integer successCount) {
+    
+    this.successCount = successCount;
+    return this;
+  }
+
+   /**
+   * Get successCount
+   * @return successCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SUCCESS_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSuccessCount() {
+    return successCount;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SUCCESS_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSuccessCount(Integer successCount) {
+    this.successCount = successCount;
+  }
+
+
+  public AddMarkResponse errorCount(Integer errorCount) {
+    
+    this.errorCount = errorCount;
+    return this;
+  }
+
+   /**
+   * Get errorCount
+   * @return errorCount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getErrorCount() {
+    return errorCount;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setErrorCount(Integer errorCount) {
+    this.errorCount = errorCount;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -85,12 +147,14 @@ public class AddMarkResponse {
       return false;
     }
     AddMarkResponse addMarkResponse = (AddMarkResponse) o;
-    return Objects.equals(this.markResult, addMarkResponse.markResult);
+    return Objects.equals(this.markResult, addMarkResponse.markResult) &&
+        Objects.equals(this.successCount, addMarkResponse.successCount) &&
+        Objects.equals(this.errorCount, addMarkResponse.errorCount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(markResult);
+    return Objects.hash(markResult, successCount, errorCount);
   }
 
   @Override
@@ -98,6 +162,8 @@ public class AddMarkResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class AddMarkResponse {\n");
     sb.append("    markResult: ").append(toIndentedString(markResult)).append("\n");
+    sb.append("    successCount: ").append(toIndentedString(successCount)).append("\n");
+    sb.append("    errorCount: ").append(toIndentedString(errorCount)).append("\n");
     sb.append("}");
     return sb.toString();
   }

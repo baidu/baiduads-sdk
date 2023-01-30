@@ -27,6 +27,9 @@ Name | Type | Description | Notes
 **mobile_final_url** | **str** |  | [optional] 
 **mobile_track_param** | **str** |  | [optional] 
 **mobile_track_template** | **str** |  | [optional] 
+**creative_text_optimization_status** | **bool** |  | [optional] 
+**knowledge_text_status** | **bool** |  | [optional] 
+**jimuyu_content_status** | **bool** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

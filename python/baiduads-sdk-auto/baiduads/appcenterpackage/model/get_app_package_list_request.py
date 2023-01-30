@@ -99,6 +99,8 @@ class GetAppPackageListRequest(ModelNormal):
             'type': (int,),  # noqa: E501
             'target_user_id': (int,),  # noqa: E501
             'filters': ([FilterCondition],),  # noqa: E501
+            'query_all': (bool,),  # noqa: E501
+            'for_app_marketing_select': (bool,),  # noqa: E501
             'page_size': (int,),  # noqa: E501
             'page_no': (int,),  # noqa: E501
         }
@@ -122,6 +124,8 @@ class GetAppPackageListRequest(ModelNormal):
         'type': 'type',  # noqa: E501
         'target_user_id': 'targetUserId',  # noqa: E501
         'filters': 'filters',  # noqa: E501
+        'query_all': 'queryAll',  # noqa: E501
+        'for_app_marketing_select': 'forAppMarketingSelect',  # noqa: E501
         'page_size': 'pageSize',  # noqa: E501
         'page_no': 'pageNo',  # noqa: E501
     }
@@ -180,6 +184,8 @@ class GetAppPackageListRequest(ModelNormal):
             type (int): [optional]  # noqa: E501
             target_user_id (int): [optional]  # noqa: E501
             filters ([FilterCondition]): [optional]  # noqa: E501
+            query_all (bool): [optional]  # noqa: E501
+            for_app_marketing_select (bool): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_no (int): [optional]  # noqa: E501
         """
@@ -276,6 +282,8 @@ class GetAppPackageListRequest(ModelNormal):
             type (int): [optional]  # noqa: E501
             target_user_id (int): [optional]  # noqa: E501
             filters ([FilterCondition]): [optional]  # noqa: E501
+            query_all (bool): [optional]  # noqa: E501
+            for_app_marketing_select (bool): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_no (int): [optional]  # noqa: E501
         """

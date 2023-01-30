@@ -2,2428 +2,1065 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2022.4.1
+  version: 2023.0.0
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
 tags:
-- name: PlatProductService
+- name: MaterialPersonModService
 paths:
-  json/sms/service/PlatProductService/deleteProduct:
+  json/sms/service/MaterialPersonModService/updateRank:
     post:
-      operationId: deleteProduct
+      operationId: updateRank
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/DeleteProductRequestWrapper'
+              $ref: '#/components/schemas/UpdateRankRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/DeleteProductResponseWrapper'
+                $ref: '#/components/schemas/UpdateRankResponseWrapper'
           description: response
       tags:
-      - PlatProductService
-      x-codegen-request-body-name: DeleteProductRequestWrapper
+      - MaterialPersonModService
+      x-codegen-request-body-name: UpdateRankRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/sms/service/PlatProductService/saveOrUpdateProduct:
+  json/sms/service/MaterialPersonModService/addPerson:
     post:
-      operationId: saveOrUpdateProduct
+      operationId: addPerson
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/SaveOrUpdateProductRequestWrapper'
+              $ref: '#/components/schemas/AddPersonRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/SaveOrUpdateProductResponseWrapper'
+                $ref: '#/components/schemas/AddPersonResponseWrapper'
           description: response
       tags:
-      - PlatProductService
-      x-codegen-request-body-name: SaveOrUpdateProductRequestWrapper
+      - MaterialPersonModService
+      x-codegen-request-body-name: AddPersonRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/sms/service/PlatProductService/modOnlineStatus:
+  json/sms/service/MaterialPersonModService/updateCategory:
     post:
-      operationId: modOnlineStatus
+      operationId: updateCategory
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/ModOnlineStatusRequestWrapper'
+              $ref: '#/components/schemas/UpdateCategoryRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/ModOnlineStatusResponseWrapper'
+                $ref: '#/components/schemas/UpdateCategoryResponseWrapper'
           description: response
       tags:
-      - PlatProductService
-      x-codegen-request-body-name: ModOnlineStatusRequestWrapper
+      - MaterialPersonModService
+      x-codegen-request-body-name: UpdateCategoryRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/sms/service/PlatProductService/getProductDetail:
+  json/sms/service/MaterialPersonModService/updatePutaway:
     post:
-      operationId: getProductDetail
+      operationId: updatePutaway
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/GetProductDetailRequestWrapper'
+              $ref: '#/components/schemas/UpdatePutawayRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/GetProductDetailResponseWrapper'
+                $ref: '#/components/schemas/UpdatePutawayResponseWrapper'
           description: response
       tags:
-      - PlatProductService
-      x-codegen-request-body-name: GetProductDetailRequestWrapper
+      - MaterialPersonModService
+      x-codegen-request-body-name: UpdatePutawayRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
-  json/sms/service/PlatProductService/getProductList:
+  json/sms/service/MaterialPersonModService/updatePerson:
     post:
-      operationId: getProductList
+      operationId: updatePerson
       requestBody:
         content:
           application/json;charset=UTF-8:
             schema:
-              $ref: '#/components/schemas/GetProductListRequestWrapper'
+              $ref: '#/components/schemas/UpdatePersonRequestWrapper'
         required: true
       responses:
         "200":
           content:
             application/json;charset=UTF-8:
               schema:
-                $ref: '#/components/schemas/GetProductListResponseWrapper'
+                $ref: '#/components/schemas/UpdatePersonResponseWrapper'
           description: response
       tags:
-      - PlatProductService
-      x-codegen-request-body-name: GetProductListRequestWrapper
+      - MaterialPersonModService
+      x-codegen-request-body-name: UpdatePersonRequestWrapper
+      x-contentType: application/json;charset=UTF-8
+      x-accepts: application/json;charset=UTF-8
+  json/sms/service/MaterialPersonModService/deletePerson:
+    post:
+      operationId: deletePerson
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              $ref: '#/components/schemas/DeletePersonRequestWrapper'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json;charset=UTF-8:
+              schema:
+                $ref: '#/components/schemas/DeletePersonResponseWrapper'
+          description: response
+      tags:
+      - MaterialPersonModService
+      x-codegen-request-body-name: DeletePersonRequestWrapper
       x-contentType: application/json;charset=UTF-8
       x-accepts: application/json;charset=UTF-8
 components:
   schemas:
-    ProductSpuSpecificationVo:
-      example:
-        values:
-        - values
-        - values
-        name: name
-      properties:
-        name:
-          type: string
-        values:
-          items:
-            type: string
-          type: array
-      type: object
-    PlatProductGetListRequest:
-      example:
-        appId: 0
-        pageSize: 5
-        shopId: 6
-        pageNum: 1
-      properties:
-        appId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        pageNum:
-          format: int32
-          type: integer
-        pageSize:
-          format: int32
-          type: integer
-      type: object
-    PlatProductDeliveryConfigVo:
-      example:
-        predictDeliveryDay: 1
-        switcher: true
-      properties:
-        switcher:
-          type: boolean
-        predictDeliveryDay:
-          format: int32
-          type: integer
-      type: object
-    ProductSpuAttributeVo:
-      example:
-        optionValue: optionValue
-        name: name
-      properties:
-        name:
-          type: string
-        optionValue:
-          type: string
-      type: object
-    ApiRequestHeader:
-      type: object
-    GetProductListResponseWrapper:
+    UpdatePutawayRequestWrapper:
       example:
         body:
-          data:
-          - totalNum: 0
-            list:
-            - onShelf: 5
-              applyShopList:
-              - name: name
-                shopId: 2
-              - name: name
-                shopId: 2
-              thumbnail: thumbnail
-              freightTemplateId: 3
-              pageOnlineUrl: pageOnlineUrl
-              updateTime: updateTime
-              type: 1
-              webAppUrl: webAppUrl
-              restStock: 2
-              sendExchangeCode: 4
-              spuState: 5
-              name: name
-              rank: 7
-              spuId: spuId
-              shopId: 6
-              category:
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              supportPayType: 9
-              realSale: 7
-            - onShelf: 5
-              applyShopList:
-              - name: name
-                shopId: 2
-              - name: name
-                shopId: 2
-              thumbnail: thumbnail
-              freightTemplateId: 3
-              pageOnlineUrl: pageOnlineUrl
-              updateTime: updateTime
-              type: 1
-              webAppUrl: webAppUrl
-              restStock: 2
-              sendExchangeCode: 4
-              spuState: 5
-              name: name
-              rank: 7
-              spuId: spuId
-              shopId: 6
-              category:
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              supportPayType: 9
-              realSale: 7
-          - totalNum: 0
-            list:
-            - onShelf: 5
-              applyShopList:
-              - name: name
-                shopId: 2
-              - name: name
-                shopId: 2
-              thumbnail: thumbnail
-              freightTemplateId: 3
-              pageOnlineUrl: pageOnlineUrl
-              updateTime: updateTime
-              type: 1
-              webAppUrl: webAppUrl
-              restStock: 2
-              sendExchangeCode: 4
-              spuState: 5
-              name: name
-              rank: 7
-              spuId: spuId
-              shopId: 6
-              category:
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              supportPayType: 9
-              realSale: 7
-            - onShelf: 5
-              applyShopList:
-              - name: name
-                shopId: 2
-              - name: name
-                shopId: 2
-              thumbnail: thumbnail
-              freightTemplateId: 3
-              pageOnlineUrl: pageOnlineUrl
-              updateTime: updateTime
-              type: 1
-              webAppUrl: webAppUrl
-              restStock: 2
-              sendExchangeCode: 4
-              spuState: 5
-              name: name
-              rank: 7
-              spuId: spuId
-              shopId: 6
-              category:
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              - commodityQualificationVo:
-                  isMustQualification: 3
-                  commodityQualification: commodityQualification
-                  commodityQualificationDesc: commodityQualificationDesc
-                level: 9
-                children:
-                - null
-                - null
-                hasChild: true
-                guaranteeLabelList:
-                - 2
-                - 2
-                name: name
-                id: 2
-                parentId: 7
-                unGuaranteeLabelList:
-                - 4
-                - 4
-              supportPayType: 9
-              realSale: 7
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/GetProductListResponseWrapperBody'
-      type: object
-    ProductPersonalizedLabelVo:
-      example:
-        name: name
-        desc: desc
-      properties:
-        name:
-          type: string
-        desc:
-          type: string
-      type: object
-    SaveOrUpdateProductRequestWrapper:
-      example:
-        body:
-          imageAlbum:
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          skuList:
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          description: description
-          type: 5
-          specifications:
-          - values:
-            - values
-            - values
-            name: name
-          - values:
-            - values
-            - values
-            name: name
-          lastCategoryId: 2
-          spuUniqueId: 0
-          sendExchangeCode: 7
-          appId: 6
-          shopId: 1
-          shopBrandId: 4
-          supportPayType: 7
-          virtualCodeEndTime: virtualCodeEndTime
-          serviceItem:
-          - name: name
-            serviceItemValue:
-              num: 1
-          - name: name
-            serviceItemValue:
-              num: 1
-          freightTemplateId: 1
-          serviceArea: serviceArea
-          virtualCodeStartTime: virtualCodeStartTime
-          subShopIds:
+          personIds:
           - 6
           - 6
-          serviceProcess: serviceProcess
-          name: name
-          saveFlag: 5
-          personalizedLabels:
-          - name: name
-            desc: desc
-          - name: name
-            desc: desc
-          attributes:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          quotation: quotation
-          deliveryConfig:
-            predictDeliveryDay: 1
-            switcher: true
+          status: 0
       properties:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/PlatProductSaveRequest'
-      type: object
-    PlatProductDeleteRequest:
-      example:
-        appId: 0
-        spuId: 1
-        shopId: 6
-      properties:
-        appId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        spuId:
-          format: int64
-          type: integer
-      type: object
-    CommodityQualificationVo:
-      example:
-        isMustQualification: 3
-        commodityQualification: commodityQualification
-        commodityQualificationDesc: commodityQualificationDesc
-      properties:
-        isMustQualification:
-          format: int32
-          type: integer
-        commodityQualification:
-          type: string
-        commodityQualificationDesc:
-          type: string
-      type: object
-    ProductSkuSpecificationVo:
-      example:
-        optionValue: optionValue
-        name: name
-      properties:
-        name:
-          type: string
-        optionValue:
-          type: string
-      type: object
-    ModOnlineStatusRequestWrapper:
-      example:
-        body:
-          appId: 0
-          opType: 5
-          spuId: 1
-          shopId: 6
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/PlatProductModOnlineRequest'
-      type: object
-    ApplyShopInfo:
-      example:
-        name: name
-        shopId: 2
-      properties:
-        shopId:
-          format: int64
-          type: integer
-        name:
-          type: string
-      type: object
-    PlatProductSkuVo:
-      example:
-        image: image
-        lockedStock: 2
-        skuExtImage: skuExtImage
-        specifications:
-        - optionValue: optionValue
-          name: name
-        - optionValue: optionValue
-          name: name
-        sales: 7
-        skuExtName: skuExtName
-        restStock: 4
-        stock: 3
-        skuId: 9
-        skuCode: skuCode
-        exchangeCode:
-          addCodeList:
-          - addCodeList
-          - addCodeList
-          deleteCodeList:
-          - deleteCodeList
-          - deleteCodeList
-          type: 1
-      properties:
-        skuId:
-          format: int64
-          type: integer
-        salePrice:
-          $ref: '#/components/schemas/BigDecimal'
-        estimatedPrice:
-          $ref: '#/components/schemas/BigDecimal'
-        weight:
-          $ref: '#/components/schemas/BigDecimal'
-        stock:
-          format: int64
-          type: integer
-        lockedStock:
-          format: int64
-          type: integer
-        restStock:
-          format: int64
-          type: integer
-        image:
-          type: string
-        skuExtImage:
-          type: string
-        sales:
-          format: int64
-          type: integer
-        specifications:
-          items:
-            $ref: '#/components/schemas/ProductSkuSpecificationVo'
-          type: array
-        skuCode:
-          type: string
-        skuExtName:
-          type: string
-        exchangeCode:
-          $ref: '#/components/schemas/ProductExchangeCodeVo'
-      type: object
-    ApiResponseHeader:
-      type: object
-    DeleteProductResponseWrapper:
-      example:
-        body:
-          data:
-          - null
-          - null
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/DeleteProductResponseWrapperBody'
-      type: object
-    ProductCategoryVo:
-      example:
-        commodityQualificationVo:
-          isMustQualification: 3
-          commodityQualification: commodityQualification
-          commodityQualificationDesc: commodityQualificationDesc
-        level: 9
-        children:
-        - null
-        - null
-        hasChild: true
-        guaranteeLabelList:
-        - 2
-        - 2
-        name: name
-        id: 2
-        parentId: 7
-        unGuaranteeLabelList:
-        - 4
-        - 4
-      properties:
-        id:
-          format: int64
-          type: integer
-        parentId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        level:
-          format: int32
-          type: integer
-        hasChild:
-          type: boolean
-        commodityQualificationVo:
-          $ref: '#/components/schemas/CommodityQualificationVo'
-        guaranteeLabelList:
-          items:
-            format: int32
-            type: integer
-          type: array
-        unGuaranteeLabelList:
-          items:
-            format: int32
-            type: integer
-          type: array
-        children:
-          items:
-            $ref: '#/components/schemas/ProductCategoryVo'
-          type: array
-      type: object
-    ModOnlineStatusResponseWrapper:
-      example:
-        body:
-          data:
-          - null
-          - null
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/ModOnlineStatusResponseWrapperBody'
-      type: object
-    Void:
-      type: object
-    PlatProductGetDetailRequest:
-      example:
-        appId: 0
-        spuId: 1
-        shopId: 6
-        queryType: 5
-      properties:
-        appId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        spuId:
-          format: int64
-          type: integer
-        queryType:
-          format: int32
-          type: integer
-      type: object
-    ServiceItemValue:
-      example:
-        num: 1
-      properties:
-        price:
-          $ref: '#/components/schemas/BigDecimal'
-        num:
-          format: int32
-          type: integer
-      type: object
-    PlatProductListVoPagingResponse:
-      example:
-        totalNum: 0
-        list:
-        - onShelf: 5
-          applyShopList:
-          - name: name
-            shopId: 2
-          - name: name
-            shopId: 2
-          thumbnail: thumbnail
-          freightTemplateId: 3
-          pageOnlineUrl: pageOnlineUrl
-          updateTime: updateTime
-          type: 1
-          webAppUrl: webAppUrl
-          restStock: 2
-          sendExchangeCode: 4
-          spuState: 5
-          name: name
-          rank: 7
-          spuId: spuId
-          shopId: 6
-          category:
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          supportPayType: 9
-          realSale: 7
-        - onShelf: 5
-          applyShopList:
-          - name: name
-            shopId: 2
-          - name: name
-            shopId: 2
-          thumbnail: thumbnail
-          freightTemplateId: 3
-          pageOnlineUrl: pageOnlineUrl
-          updateTime: updateTime
-          type: 1
-          webAppUrl: webAppUrl
-          restStock: 2
-          sendExchangeCode: 4
-          spuState: 5
-          name: name
-          rank: 7
-          spuId: spuId
-          shopId: 6
-          category:
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          supportPayType: 9
-          realSale: 7
-      properties:
-        totalNum:
-          format: int32
-          type: integer
-        list:
-          items:
-            $ref: '#/components/schemas/PlatProductListVo'
-          type: array
-      type: object
-    PlatProductSaveRequest:
-      example:
-        imageAlbum:
-        - urls:
-          - urls
-          - urls
-          scale: scale
-        - urls:
-          - urls
-          - urls
-          scale: scale
-        skuList:
-        - image: image
-          lockedStock: 2
-          skuExtImage: skuExtImage
-          specifications:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          sales: 7
-          skuExtName: skuExtName
-          restStock: 4
-          stock: 3
-          skuId: 9
-          skuCode: skuCode
-          exchangeCode:
-            addCodeList:
-            - addCodeList
-            - addCodeList
-            deleteCodeList:
-            - deleteCodeList
-            - deleteCodeList
-            type: 1
-        - image: image
-          lockedStock: 2
-          skuExtImage: skuExtImage
-          specifications:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          sales: 7
-          skuExtName: skuExtName
-          restStock: 4
-          stock: 3
-          skuId: 9
-          skuCode: skuCode
-          exchangeCode:
-            addCodeList:
-            - addCodeList
-            - addCodeList
-            deleteCodeList:
-            - deleteCodeList
-            - deleteCodeList
-            type: 1
-        description: description
-        type: 5
-        specifications:
-        - values:
-          - values
-          - values
-          name: name
-        - values:
-          - values
-          - values
-          name: name
-        lastCategoryId: 2
-        spuUniqueId: 0
-        sendExchangeCode: 7
-        appId: 6
-        shopId: 1
-        shopBrandId: 4
-        supportPayType: 7
-        virtualCodeEndTime: virtualCodeEndTime
-        serviceItem:
-        - name: name
-          serviceItemValue:
-            num: 1
-        - name: name
-          serviceItemValue:
-            num: 1
-        freightTemplateId: 1
-        serviceArea: serviceArea
-        virtualCodeStartTime: virtualCodeStartTime
-        subShopIds:
-        - 6
-        - 6
-        serviceProcess: serviceProcess
-        name: name
-        saveFlag: 5
-        personalizedLabels:
-        - name: name
-          desc: desc
-        - name: name
-          desc: desc
-        attributes:
-        - optionValue: optionValue
-          name: name
-        - optionValue: optionValue
-          name: name
-        quotation: quotation
-        deliveryConfig:
-          predictDeliveryDay: 1
-          switcher: true
-      properties:
-        spuUniqueId:
-          format: int64
-          type: integer
-        appId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        type:
-          format: int32
-          type: integer
-        saveFlag:
-          format: int32
-          type: integer
-        lastCategoryId:
-          format: int64
-          type: integer
-        personalizedLabels:
-          items:
-            $ref: '#/components/schemas/ProductPersonalizedLabelVo'
-          type: array
-        attributes:
-          items:
-            $ref: '#/components/schemas/ProductSpuAttributeVo'
-          type: array
-        supportPayType:
-          format: int32
-          type: integer
-        specifications:
-          items:
-            $ref: '#/components/schemas/ProductSpuSpecificationVo'
-          type: array
-        skuList:
-          items:
-            $ref: '#/components/schemas/PlatProductSkuVo'
-          type: array
-        virtualCodeStartTime:
-          type: string
-        virtualCodeEndTime:
-          type: string
-        imageAlbum:
-          items:
-            $ref: '#/components/schemas/ProductImageVo'
-          type: array
-        description:
-          type: string
-        quotation:
-          type: string
-        serviceProcess:
-          type: string
-        serviceArea:
-          type: string
-        freightTemplateId:
-          format: int64
-          type: integer
-        deliveryConfig:
-          $ref: '#/components/schemas/PlatProductDeliveryConfigVo'
-        price:
-          $ref: '#/components/schemas/BigDecimal'
-        subShopIds:
-          items:
-            format: int64
-            type: integer
-          type: array
-        sendExchangeCode:
-          format: int32
-          type: integer
-        serviceItem:
-          items:
-            $ref: '#/components/schemas/ServiceItem'
-          type: array
-        shopBrandId:
-          format: int64
-          type: integer
-      type: object
-    GetProductDetailResponseWrapper:
-      example:
-        body:
-          data:
-          - imageAlbum:
-            - urls:
-              - urls
-              - urls
-              scale: scale
-            - urls:
-              - urls
-              - urls
-              scale: scale
-            skuList:
-            - image: image
-              lockedStock: 2
-              skuExtImage: skuExtImage
-              specifications:
-              - optionValue: optionValue
-                name: name
-              - optionValue: optionValue
-                name: name
-              sales: 7
-              skuExtName: skuExtName
-              restStock: 4
-              stock: 3
-              skuId: 9
-              skuCode: skuCode
-              exchangeCode:
-                addCodeList:
-                - addCodeList
-                - addCodeList
-                deleteCodeList:
-                - deleteCodeList
-                - deleteCodeList
-                type: 1
-            - image: image
-              lockedStock: 2
-              skuExtImage: skuExtImage
-              specifications:
-              - optionValue: optionValue
-                name: name
-              - optionValue: optionValue
-                name: name
-              sales: 7
-              skuExtName: skuExtName
-              restStock: 4
-              stock: 3
-              skuId: 9
-              skuCode: skuCode
-              exchangeCode:
-                addCodeList:
-                - addCodeList
-                - addCodeList
-                deleteCodeList:
-                - deleteCodeList
-                - deleteCodeList
-                type: 1
-            shopBrandName: shopBrandName
-            description: description
-            type: 5
-            specifications:
-            - values:
-              - values
-              - values
-              name: name
-            - values:
-              - values
-              - values
-              name: name
-            limitStock: 6
-            sendExchangeCode: 1
-            appId: 0
-            shopId: 1
-            shopBrandId: 7
-            supportPayType: 7
-            subAppId: 6
-            virtualCodeEndTime: virtualCodeEndTime
-            serviceItem:
-            - name: name
-              serviceItemValue:
-                num: 1
-            - name: name
-              serviceItemValue:
-                num: 1
-            freightTemplateId: 1
-            serviceArea: serviceArea
-            virtualCodeStartTime: virtualCodeStartTime
-            applyShopIds:
-            - 1
-            - 1
-            serviceProcess: serviceProcess
-            spuState: 5
-            subtitle: subtitle
-            name: name
-            spuId: spuId
-            attributes:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            exchangeCodeDesc: exchangeCodeDesc
-            quotation: quotation
-            deliveryConfig:
-              predictDeliveryDay: 1
-              switcher: true
-          - imageAlbum:
-            - urls:
-              - urls
-              - urls
-              scale: scale
-            - urls:
-              - urls
-              - urls
-              scale: scale
-            skuList:
-            - image: image
-              lockedStock: 2
-              skuExtImage: skuExtImage
-              specifications:
-              - optionValue: optionValue
-                name: name
-              - optionValue: optionValue
-                name: name
-              sales: 7
-              skuExtName: skuExtName
-              restStock: 4
-              stock: 3
-              skuId: 9
-              skuCode: skuCode
-              exchangeCode:
-                addCodeList:
-                - addCodeList
-                - addCodeList
-                deleteCodeList:
-                - deleteCodeList
-                - deleteCodeList
-                type: 1
-            - image: image
-              lockedStock: 2
-              skuExtImage: skuExtImage
-              specifications:
-              - optionValue: optionValue
-                name: name
-              - optionValue: optionValue
-                name: name
-              sales: 7
-              skuExtName: skuExtName
-              restStock: 4
-              stock: 3
-              skuId: 9
-              skuCode: skuCode
-              exchangeCode:
-                addCodeList:
-                - addCodeList
-                - addCodeList
-                deleteCodeList:
-                - deleteCodeList
-                - deleteCodeList
-                type: 1
-            shopBrandName: shopBrandName
-            description: description
-            type: 5
-            specifications:
-            - values:
-              - values
-              - values
-              name: name
-            - values:
-              - values
-              - values
-              name: name
-            limitStock: 6
-            sendExchangeCode: 1
-            appId: 0
-            shopId: 1
-            shopBrandId: 7
-            supportPayType: 7
-            subAppId: 6
-            virtualCodeEndTime: virtualCodeEndTime
-            serviceItem:
-            - name: name
-              serviceItemValue:
-                num: 1
-            - name: name
-              serviceItemValue:
-                num: 1
-            freightTemplateId: 1
-            serviceArea: serviceArea
-            virtualCodeStartTime: virtualCodeStartTime
-            applyShopIds:
-            - 1
-            - 1
-            serviceProcess: serviceProcess
-            spuState: 5
-            subtitle: subtitle
-            name: name
-            spuId: spuId
-            attributes:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            exchangeCodeDesc: exchangeCodeDesc
-            quotation: quotation
-            deliveryConfig:
-              predictDeliveryDay: 1
-              switcher: true
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/GetProductDetailResponseWrapperBody'
-      type: object
-    ProductSaveResponse:
-      example:
-        saveType: 6
-        spuId: 0
-      properties:
-        spuId:
-          format: int64
-          type: integer
-        saveType:
-          format: int32
-          type: integer
-      type: object
-    GetProductDetailRequestWrapper:
-      example:
-        body:
-          appId: 0
-          spuId: 1
-          shopId: 6
-          queryType: 5
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiRequestHeader'
-        body:
-          $ref: '#/components/schemas/PlatProductGetDetailRequest'
+          $ref: '#/components/schemas/TeslaPersonBatchUpdatePutawayRequest'
       type: object
     ApiErrorInfo:
       type: object
-    ProductImageVo:
-      example:
-        urls:
-        - urls
-        - urls
-        scale: scale
-      properties:
-        scale:
-          type: string
-        urls:
-          items:
-            type: string
-          type: array
-      type: object
-    SaveOrUpdateProductResponseWrapper:
+    UpdateCategoryResponseWrapper:
       example:
         body:
           data:
-          - saveType: 6
-            spuId: 0
-          - saveType: 6
-            spuId: 0
+          - 0
+          - 0
       properties:
         header:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
-          $ref: '#/components/schemas/SaveOrUpdateProductResponseWrapperBody'
+          $ref: '#/components/schemas/UpdateCategoryResponseWrapperBody'
       type: object
-    BigDecimal:
+    ApiRequestHeader:
       type: object
-    GetProductListRequestWrapper:
+    UpdateRankResponseWrapper:
       example:
         body:
-          appId: 0
-          pageSize: 5
-          shopId: 6
-          pageNum: 1
+          data:
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/UpdateRankResponseWrapperBody'
+      type: object
+    DeletePersonResponseWrapper:
+      example:
+        body:
+          data:
+          - 0
+          - 0
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/DeletePersonResponseWrapperBody'
+      type: object
+    DeletePersonRequestWrapper:
+      example:
+        body:
+          personIds:
+          - 0
+          - 0
       properties:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/PlatProductGetListRequest'
+          $ref: '#/components/schemas/TeslaPersonBatchIdRequest'
       type: object
-    ProductExchangeCodeVo:
-      example:
-        addCodeList:
-        - addCodeList
-        - addCodeList
-        deleteCodeList:
-        - deleteCodeList
-        - deleteCodeList
-        type: 1
-      properties:
-        type:
-          format: int32
-          type: integer
-        addCodeList:
-          items:
-            type: string
-          type: array
-        deleteCodeList:
-          items:
-            type: string
-          type: array
-      type: object
-    PlatProductListVo:
-      example:
-        onShelf: 5
-        applyShopList:
-        - name: name
-          shopId: 2
-        - name: name
-          shopId: 2
-        thumbnail: thumbnail
-        freightTemplateId: 3
-        pageOnlineUrl: pageOnlineUrl
-        updateTime: updateTime
-        type: 1
-        webAppUrl: webAppUrl
-        restStock: 2
-        sendExchangeCode: 4
-        spuState: 5
-        name: name
-        rank: 7
-        spuId: spuId
-        shopId: 6
-        category:
-        - commodityQualificationVo:
-            isMustQualification: 3
-            commodityQualification: commodityQualification
-            commodityQualificationDesc: commodityQualificationDesc
-          level: 9
-          children:
-          - null
-          - null
-          hasChild: true
-          guaranteeLabelList:
-          - 2
-          - 2
-          name: name
-          id: 2
-          parentId: 7
-          unGuaranteeLabelList:
-          - 4
-          - 4
-        - commodityQualificationVo:
-            isMustQualification: 3
-            commodityQualification: commodityQualification
-            commodityQualificationDesc: commodityQualificationDesc
-          level: 9
-          children:
-          - null
-          - null
-          hasChild: true
-          guaranteeLabelList:
-          - 2
-          - 2
-          name: name
-          id: 2
-          parentId: 7
-          unGuaranteeLabelList:
-          - 4
-          - 4
-        supportPayType: 9
-        realSale: 7
-      properties:
-        spuId:
-          type: string
-        shopId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        type:
-          format: int32
-          type: integer
-        thumbnail:
-          type: string
-        spuState:
-          format: int32
-          type: integer
-        onShelf:
-          format: int32
-          type: integer
-        restStock:
-          format: int64
-          type: integer
-        realSale:
-          format: int64
-          type: integer
-        price:
-          $ref: '#/components/schemas/BigDecimal'
-        supportPayType:
-          format: int32
-          type: integer
-        updateTime:
-          type: string
-        category:
-          items:
-            $ref: '#/components/schemas/ProductCategoryVo'
-          type: array
-        freightTemplateId:
-          format: int64
-          type: integer
-        pageOnlineUrl:
-          type: string
-        applyShopList:
-          items:
-            $ref: '#/components/schemas/ApplyShopInfo'
-          type: array
-        sendExchangeCode:
-          format: int32
-          type: integer
-        webAppUrl:
-          type: string
-        rank:
-          format: int64
-          type: integer
-      type: object
-    PlatProductModOnlineRequest:
-      example:
-        appId: 0
-        opType: 5
-        spuId: 1
-        shopId: 6
-      properties:
-        appId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        spuId:
-          format: int64
-          type: integer
-        opType:
-          format: int32
-          type: integer
-      type: object
-    DeleteProductRequestWrapper:
+    AddPersonRequestWrapper:
       example:
         body:
-          appId: 0
-          spuId: 1
-          shopId: 6
+          educationBackground: educationBackground
+          honour: honour
+          goodAt: goodAt
+          education: education
+          gender: 2
+          workingYears: 0
+          profileImage: profileImage
+          roleType: 5
+          idNumber: idNumber
+          qualification: qualification
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          name: name
+          location: location
+          job: job
+          introduction: introduction
+          categoryId: 6
+          tradeId: 5
+          status: 1
       properties:
         header:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
-          $ref: '#/components/schemas/PlatProductDeleteRequest'
+          $ref: '#/components/schemas/TeslaPersonAddRequest'
       type: object
-    ServiceItem:
+    UpdateCategoryRequestWrapper:
       example:
-        name: name
-        serviceItemValue:
-          num: 1
+        body:
+          personIds:
+          - 6
+          - 6
+          categoryId: 0
       properties:
-        name:
-          type: string
-        serviceItemValue:
-          $ref: '#/components/schemas/ServiceItemValue'
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/TeslaPersonBatchUpdateCategoryRequest'
       type: object
-    PlatProductDetailVo:
+    TeslaPersonBatchUpdatePutawayRequest:
       example:
-        imageAlbum:
-        - urls:
-          - urls
-          - urls
-          scale: scale
-        - urls:
-          - urls
-          - urls
-          scale: scale
-        skuList:
-        - image: image
-          lockedStock: 2
-          skuExtImage: skuExtImage
-          specifications:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          sales: 7
-          skuExtName: skuExtName
-          restStock: 4
-          stock: 3
-          skuId: 9
-          skuCode: skuCode
-          exchangeCode:
-            addCodeList:
-            - addCodeList
-            - addCodeList
-            deleteCodeList:
-            - deleteCodeList
-            - deleteCodeList
-            type: 1
-        - image: image
-          lockedStock: 2
-          skuExtImage: skuExtImage
-          specifications:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          sales: 7
-          skuExtName: skuExtName
-          restStock: 4
-          stock: 3
-          skuId: 9
-          skuCode: skuCode
-          exchangeCode:
-            addCodeList:
-            - addCodeList
-            - addCodeList
-            deleteCodeList:
-            - deleteCodeList
-            - deleteCodeList
-            type: 1
-        shopBrandName: shopBrandName
-        description: description
-        type: 5
-        specifications:
-        - values:
-          - values
-          - values
-          name: name
-        - values:
-          - values
-          - values
-          name: name
-        limitStock: 6
-        sendExchangeCode: 1
-        appId: 0
-        shopId: 1
-        shopBrandId: 7
-        supportPayType: 7
-        subAppId: 6
-        virtualCodeEndTime: virtualCodeEndTime
-        serviceItem:
-        - name: name
-          serviceItemValue:
-            num: 1
-        - name: name
-          serviceItemValue:
-            num: 1
-        freightTemplateId: 1
-        serviceArea: serviceArea
-        virtualCodeStartTime: virtualCodeStartTime
-        applyShopIds:
-        - 1
-        - 1
-        serviceProcess: serviceProcess
-        spuState: 5
-        subtitle: subtitle
-        name: name
-        spuId: spuId
-        attributes:
-        - optionValue: optionValue
-          name: name
-        - optionValue: optionValue
-          name: name
-        category:
-        - commodityQualificationVo:
-            isMustQualification: 3
-            commodityQualification: commodityQualification
-            commodityQualificationDesc: commodityQualificationDesc
-          level: 9
-          children:
-          - null
-          - null
-          hasChild: true
-          guaranteeLabelList:
-          - 2
-          - 2
-          name: name
-          id: 2
-          parentId: 7
-          unGuaranteeLabelList:
-          - 4
-          - 4
-        - commodityQualificationVo:
-            isMustQualification: 3
-            commodityQualification: commodityQualification
-            commodityQualificationDesc: commodityQualificationDesc
-          level: 9
-          children:
-          - null
-          - null
-          hasChild: true
-          guaranteeLabelList:
-          - 2
-          - 2
-          name: name
-          id: 2
-          parentId: 7
-          unGuaranteeLabelList:
-          - 4
-          - 4
-        exchangeCodeDesc: exchangeCodeDesc
-        quotation: quotation
-        deliveryConfig:
-          predictDeliveryDay: 1
-          switcher: true
+        personIds:
+        - 6
+        - 6
+        status: 0
       properties:
-        spuId:
-          type: string
-        appId:
+        status:
           format: int32
           type: integer
-        subAppId:
-          format: int32
-          type: integer
-        shopId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        subtitle:
-          type: string
-        type:
-          format: int32
-          type: integer
-        spuState:
-          format: int32
-          type: integer
-        category:
-          items:
-            $ref: '#/components/schemas/ProductCategoryVo'
-          type: array
-        attributes:
-          items:
-            $ref: '#/components/schemas/ProductSpuAttributeVo'
-          type: array
-        supportPayType:
-          format: int32
-          type: integer
-        specifications:
-          items:
-            $ref: '#/components/schemas/ProductSpuSpecificationVo'
-          type: array
-        skuList:
-          items:
-            $ref: '#/components/schemas/PlatProductSkuVo'
-          type: array
-        virtualCodeStartTime:
-          type: string
-        virtualCodeEndTime:
-          type: string
-        imageAlbum:
-          items:
-            $ref: '#/components/schemas/ProductImageVo'
-          type: array
-        description:
-          type: string
-        quotation:
-          type: string
-        serviceProcess:
-          type: string
-        serviceArea:
-          type: string
-        freightTemplateId:
-          format: int64
-          type: integer
-        deliveryConfig:
-          $ref: '#/components/schemas/PlatProductDeliveryConfigVo'
-        price:
-          $ref: '#/components/schemas/BigDecimal'
-        applyShopIds:
+        personIds:
           items:
             format: int64
             type: integer
           type: array
-        sendExchangeCode:
+      type: object
+    TeslaPersonUpdateRankRequest:
+      example:
+        rank: 0
+        personId: 6
+      properties:
+        rank:
           format: int32
           type: integer
-        exchangeCodeDesc:
-          type: string
-        serviceItem:
-          items:
-            $ref: '#/components/schemas/ServiceItem'
-          type: array
-        limitStock:
-          format: int32
-          type: integer
-        shopBrandName:
-          type: string
-        shopBrandId:
+        personId:
           format: int64
           type: integer
       type: object
-    GetProductListResponseWrapperBody:
-      example:
-        data:
-        - totalNum: 0
-          list:
-          - onShelf: 5
-            applyShopList:
-            - name: name
-              shopId: 2
-            - name: name
-              shopId: 2
-            thumbnail: thumbnail
-            freightTemplateId: 3
-            pageOnlineUrl: pageOnlineUrl
-            updateTime: updateTime
-            type: 1
-            webAppUrl: webAppUrl
-            restStock: 2
-            sendExchangeCode: 4
-            spuState: 5
-            name: name
-            rank: 7
-            spuId: spuId
-            shopId: 6
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            supportPayType: 9
-            realSale: 7
-          - onShelf: 5
-            applyShopList:
-            - name: name
-              shopId: 2
-            - name: name
-              shopId: 2
-            thumbnail: thumbnail
-            freightTemplateId: 3
-            pageOnlineUrl: pageOnlineUrl
-            updateTime: updateTime
-            type: 1
-            webAppUrl: webAppUrl
-            restStock: 2
-            sendExchangeCode: 4
-            spuState: 5
-            name: name
-            rank: 7
-            spuId: spuId
-            shopId: 6
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            supportPayType: 9
-            realSale: 7
-        - totalNum: 0
-          list:
-          - onShelf: 5
-            applyShopList:
-            - name: name
-              shopId: 2
-            - name: name
-              shopId: 2
-            thumbnail: thumbnail
-            freightTemplateId: 3
-            pageOnlineUrl: pageOnlineUrl
-            updateTime: updateTime
-            type: 1
-            webAppUrl: webAppUrl
-            restStock: 2
-            sendExchangeCode: 4
-            spuState: 5
-            name: name
-            rank: 7
-            spuId: spuId
-            shopId: 6
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            supportPayType: 9
-            realSale: 7
-          - onShelf: 5
-            applyShopList:
-            - name: name
-              shopId: 2
-            - name: name
-              shopId: 2
-            thumbnail: thumbnail
-            freightTemplateId: 3
-            pageOnlineUrl: pageOnlineUrl
-            updateTime: updateTime
-            type: 1
-            webAppUrl: webAppUrl
-            restStock: 2
-            sendExchangeCode: 4
-            spuState: 5
-            name: name
-            rank: 7
-            spuId: spuId
-            shopId: 6
-            category:
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            - commodityQualificationVo:
-                isMustQualification: 3
-                commodityQualification: commodityQualification
-                commodityQualificationDesc: commodityQualificationDesc
-              level: 9
-              children:
-              - null
-              - null
-              hasChild: true
-              guaranteeLabelList:
-              - 2
-              - 2
-              name: name
-              id: 2
-              parentId: 7
-              unGuaranteeLabelList:
-              - 4
-              - 4
-            supportPayType: 9
-            realSale: 7
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/PlatProductListVoPagingResponse'
-          type: array
-      title: GetProductListResponseWrapperBody
+    ApiResponseHeader:
       type: object
-    DeleteProductResponseWrapperBody:
+    UpdateRankRequestWrapper:
       example:
-        data:
-        - null
-        - null
+        body:
+          rank: 0
+          personId: 6
       properties:
-        data:
-          items:
-            $ref: '#/components/schemas/Void'
-          type: array
-      title: DeleteProductResponseWrapperBody
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/TeslaPersonUpdateRankRequest'
       type: object
-    ModOnlineStatusResponseWrapperBody:
+    TeslaPersonUpdateRequest:
       example:
-        data:
-        - null
-        - null
+        educationBackground: educationBackground
+        honour: honour
+        goodAt: goodAt
+        education: education
+        gender: 7
+        workingYears: 6
+        profileImage: profileImage
+        roleType: 2
+        idNumber: idNumber
+        qualification: qualification
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        name: name
+        personId: 0
+        location: location
+        job: job
+        introduction: introduction
+        categoryId: 1
+        tradeId: 5
+        status: 5
       properties:
-        data:
-          items:
-            $ref: '#/components/schemas/Void'
-          type: array
-      title: ModOnlineStatusResponseWrapperBody
+        personId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        status:
+          format: int32
+          type: integer
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
       type: object
-    GetProductDetailResponseWrapperBody:
+    TeslaPersonBatchIdRequest:
       example:
-        data:
-        - imageAlbum:
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          skuList:
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          shopBrandName: shopBrandName
-          description: description
-          type: 5
-          specifications:
-          - values:
-            - values
-            - values
-            name: name
-          - values:
-            - values
-            - values
-            name: name
-          limitStock: 6
-          sendExchangeCode: 1
-          appId: 0
-          shopId: 1
-          shopBrandId: 7
-          supportPayType: 7
-          subAppId: 6
-          virtualCodeEndTime: virtualCodeEndTime
-          serviceItem:
-          - name: name
-            serviceItemValue:
-              num: 1
-          - name: name
-            serviceItemValue:
-              num: 1
-          freightTemplateId: 1
-          serviceArea: serviceArea
-          virtualCodeStartTime: virtualCodeStartTime
-          applyShopIds:
-          - 1
-          - 1
-          serviceProcess: serviceProcess
-          spuState: 5
-          subtitle: subtitle
+        personIds:
+        - 0
+        - 0
+      properties:
+        personIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+      type: object
+    UpdatePutawayResponseWrapper:
+      example:
+        body:
+          data:
+          - 0
+          - 0
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/UpdatePutawayResponseWrapperBody'
+      type: object
+    TeslaPersonAddRequest:
+      example:
+        educationBackground: educationBackground
+        honour: honour
+        goodAt: goodAt
+        education: education
+        gender: 2
+        workingYears: 0
+        profileImage: profileImage
+        roleType: 5
+        idNumber: idNumber
+        qualification: qualification
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        name: name
+        location: location
+        job: job
+        introduction: introduction
+        categoryId: 6
+        tradeId: 5
+        status: 1
+      properties:
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        status:
+          format: int32
+          type: integer
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
+      type: object
+    TeslaPersonBatchUpdateCategoryRequest:
+      example:
+        personIds:
+        - 6
+        - 6
+        categoryId: 0
+      properties:
+        categoryId:
+          format: int64
+          type: integer
+        personIds:
+          items:
+            format: int64
+            type: integer
+          type: array
+      type: object
+    UpdatePersonRequestWrapper:
+      example:
+        body:
+          educationBackground: educationBackground
+          honour: honour
+          goodAt: goodAt
+          education: education
+          gender: 7
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 2
+          idNumber: idNumber
+          qualification: qualification
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
           name: name
-          spuId: spuId
-          attributes:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          category:
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          exchangeCodeDesc: exchangeCodeDesc
-          quotation: quotation
-          deliveryConfig:
-            predictDeliveryDay: 1
-            switcher: true
-        - imageAlbum:
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          - urls:
-            - urls
-            - urls
-            scale: scale
-          skuList:
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          - image: image
-            lockedStock: 2
-            skuExtImage: skuExtImage
-            specifications:
-            - optionValue: optionValue
-              name: name
-            - optionValue: optionValue
-              name: name
-            sales: 7
-            skuExtName: skuExtName
-            restStock: 4
-            stock: 3
-            skuId: 9
-            skuCode: skuCode
-            exchangeCode:
-              addCodeList:
-              - addCodeList
-              - addCodeList
-              deleteCodeList:
-              - deleteCodeList
-              - deleteCodeList
-              type: 1
-          shopBrandName: shopBrandName
-          description: description
-          type: 5
-          specifications:
-          - values:
-            - values
-            - values
-            name: name
-          - values:
-            - values
-            - values
-            name: name
-          limitStock: 6
-          sendExchangeCode: 1
-          appId: 0
-          shopId: 1
-          shopBrandId: 7
-          supportPayType: 7
-          subAppId: 6
-          virtualCodeEndTime: virtualCodeEndTime
-          serviceItem:
-          - name: name
-            serviceItemValue:
-              num: 1
-          - name: name
-            serviceItemValue:
-              num: 1
-          freightTemplateId: 1
-          serviceArea: serviceArea
-          virtualCodeStartTime: virtualCodeStartTime
-          applyShopIds:
-          - 1
-          - 1
-          serviceProcess: serviceProcess
-          spuState: 5
-          subtitle: subtitle
-          name: name
-          spuId: spuId
-          attributes:
-          - optionValue: optionValue
-            name: name
-          - optionValue: optionValue
-            name: name
-          category:
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          - commodityQualificationVo:
-              isMustQualification: 3
-              commodityQualification: commodityQualification
-              commodityQualificationDesc: commodityQualificationDesc
-            level: 9
-            children:
-            - null
-            - null
-            hasChild: true
-            guaranteeLabelList:
-            - 2
-            - 2
-            name: name
-            id: 2
-            parentId: 7
-            unGuaranteeLabelList:
-            - 4
-            - 4
-          exchangeCodeDesc: exchangeCodeDesc
-          quotation: quotation
-          deliveryConfig:
-            predictDeliveryDay: 1
-            switcher: true
+          personId: 0
+          location: location
+          job: job
+          introduction: introduction
+          categoryId: 1
+          tradeId: 5
+          status: 5
       properties:
-        data:
-          items:
-            $ref: '#/components/schemas/PlatProductDetailVo'
-          type: array
-      title: GetProductDetailResponseWrapperBody
+        header:
+          $ref: '#/components/schemas/ApiRequestHeader'
+        body:
+          $ref: '#/components/schemas/TeslaPersonUpdateRequest'
       type: object
-    SaveOrUpdateProductResponseWrapperBody:
+    UpdatePersonResponseWrapper:
+      example:
+        body:
+          data:
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/UpdatePersonResponseWrapperBody'
+      type: object
+    PersonExtDto:
+      example:
+        pracHospital: pracHospital
+        representWork: representWork
+        designConcept: designConcept
+        constructionExperience: constructionExperience
+        department: department
+      properties:
+        representWork:
+          type: string
+        designConcept:
+          type: string
+        constructionExperience:
+          type: string
+        pracHospital:
+          type: string
+        department:
+          type: string
+      type: object
+    AddPersonResponseWrapper:
+      example:
+        body:
+          data:
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+          - goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/AddPersonResponseWrapperBody'
+      type: object
+    PersonDetailDto:
+      example:
+        goodAt: goodAt
+        education: education
+        gender: 9
+        workingYears: 6
+        profileImage: profileImage
+        roleType: 7
+        idNumber: idNumber
+        categoryName: categoryName
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        rank: 5
+        reauditStatus: 3
+        introduction: introduction
+        educationBackground: educationBackground
+        honour: honour
+        auditRemark: auditRemark
+        updateTime: updateTime
+        qualification: qualification
+        createTime: createTime
+        name: name
+        personId: 0
+        location: location
+        job: job
+        categoryId: 1
+        tradeId: 2
+        status: 5
+      properties:
+        personId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        categoryName:
+          type: string
+        status:
+          format: int32
+          type: integer
+        auditRemark:
+          type: string
+        rank:
+          format: int32
+          type: integer
+        createTime:
+          type: string
+        updateTime:
+          type: string
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
+        reauditStatus:
+          format: int32
+          type: integer
+      type: object
+    UpdateCategoryResponseWrapperBody:
       example:
         data:
-        - saveType: 6
-          spuId: 0
-        - saveType: 6
-          spuId: 0
+        - 0
+        - 0
       properties:
         data:
           items:
-            $ref: '#/components/schemas/ProductSaveResponse'
+            format: int64
+            type: integer
           type: array
-      title: SaveOrUpdateProductResponseWrapperBody
+      title: UpdateCategoryResponseWrapperBody
+      type: object
+    UpdateRankResponseWrapperBody:
+      example:
+        data:
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/PersonDetailDto'
+          type: array
+      title: UpdateRankResponseWrapperBody
+      type: object
+    DeletePersonResponseWrapperBody:
+      example:
+        data:
+        - 0
+        - 0
+      properties:
+        data:
+          items:
+            format: int64
+            type: integer
+          type: array
+      title: DeletePersonResponseWrapperBody
+      type: object
+    UpdatePutawayResponseWrapperBody:
+      example:
+        data:
+        - 0
+        - 0
+      properties:
+        data:
+          items:
+            format: int64
+            type: integer
+          type: array
+      title: UpdatePutawayResponseWrapperBody
+      type: object
+    UpdatePersonResponseWrapperBody:
+      example:
+        data:
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/PersonDetailDto'
+          type: array
+      title: UpdatePersonResponseWrapperBody
+      type: object
+    AddPersonResponseWrapperBody:
+      example:
+        data:
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+        - goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+      properties:
+        data:
+          items:
+            $ref: '#/components/schemas/PersonDetailDto'
+          type: array
+      title: AddPersonResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 

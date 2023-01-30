@@ -29,22 +29,10 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.platbusinessorderrefund.model.complaint_flow_vo import ComplaintFlowVo
-    from baiduads.platbusinessorderrefund.model.express_info_vo import ExpressInfoVo
-    from baiduads.platbusinessorderrefund.model.order_bussiness_info import OrderBussinessInfo
     from baiduads.platbusinessorderrefund.model.order_refund_express_info import OrderRefundExpressInfo
     from baiduads.platbusinessorderrefund.model.refund_express_vo import RefundExpressVo
-    from baiduads.platbusinessorderrefund.model.refund_sku import RefundSku
-    from baiduads.platbusinessorderrefund.model.refund_step_vo import RefundStepVo
-    from baiduads.platbusinessorderrefund.model.tag_info import TagInfo
-    globals()['ComplaintFlowVo'] = ComplaintFlowVo
-    globals()['ExpressInfoVo'] = ExpressInfoVo
-    globals()['OrderBussinessInfo'] = OrderBussinessInfo
     globals()['OrderRefundExpressInfo'] = OrderRefundExpressInfo
     globals()['RefundExpressVo'] = RefundExpressVo
-    globals()['RefundSku'] = RefundSku
-    globals()['RefundStepVo'] = RefundStepVo
-    globals()['TagInfo'] = TagInfo
 
 
 class RefundItemVo(ModelNormal):
@@ -104,43 +92,25 @@ class RefundItemVo(ModelNormal):
             'refund_id': (str,),  # noqa: E501
             'refund_type': (int,),  # noqa: E501
             'refund_status': (int,),  # noqa: E501
-            'product_type': (int,),  # noqa: E501
             'product_name': (str,),  # noqa: E501
             'refund_amount': (str,),  # noqa: E501
             'order_payment': (str,),  # noqa: E501
-            'refund_reason': (int,),  # noqa: E501
             'refund_desc': (str,),  # noqa: E501
             'express_phone': (str,),  # noqa: E501
             'contact_name': (str,),  # noqa: E501
             'apply_time': (str,),  # noqa: E501
-            'response_time': (str,),  # noqa: E501
             'refund_image': ([str],),  # noqa: E501
-            'complaint_id': (int,),  # noqa: E501
             'refund_status_text': (str,),  # noqa: E501
             'refund_type_text': (str,),  # noqa: E501
             'refund_reason_text': (str,),  # noqa: E501
             'express_info': (OrderRefundExpressInfo,),  # noqa: E501
-            'complaint_status': (int,),  # noqa: E501
             'timeout_date': (str,),  # noqa: E501
-            'timeout_date_desc': (str,),  # noqa: E501
             'agg_return_status': (int,),  # noqa: E501
             'agg_return_status_text': (str,),  # noqa: E501
-            'agg_refund_status': (int,),  # noqa: E501
-            'agg_refund_status_text': (str,),  # noqa: E501
-            'delivery_status': (int,),  # noqa: E501
             'delivery_status_text': (str,),  # noqa: E501
             'order_detail_id': (str,),  # noqa: E501
-            'last_operator_type': (int,),  # noqa: E501
-            'start_time': (str,),  # noqa: E501
             'reject_reason': (str,),  # noqa: E501
             'reject_proof': ([str],),  # noqa: E501
-            'judge_result': (int,),  # noqa: E501
-            'judge_result_text': (str,),  # noqa: E501
-            'judge_desc': (str,),  # noqa: E501
-            'judge_images': ([str],),  # noqa: E501
-            'excution_plan': (str,),  # noqa: E501
-            'refund_merge_status': (int,),  # noqa: E501
-            'refund_merge_status_text': (str,),  # noqa: E501
             'shop_id': (int,),  # noqa: E501
             'sku_id': (str,),  # noqa: E501
             'sku_desc': (str,),  # noqa: E501
@@ -148,38 +118,14 @@ class RefundItemVo(ModelNormal):
             'return_time': (str,),  # noqa: E501
             'product_image': (str,),  # noqa: E501
             'refund_num': (int,),  # noqa: E501
-            'refund_sku': (RefundSku,),  # noqa: E501
-            'order_refund_mark': (int,),  # noqa: E501
-            'order_refund_detail': (str,),  # noqa: E501
             'ucid': (int,),  # noqa: E501
-            'user_id': (int,),  # noqa: E501
-            'pay_type': (int,),  # noqa: E501
-            'refund_detail': (str,),  # noqa: E501
-            'update_time': (str,),  # noqa: E501
-            'signed': (int,),  # noqa: E501
             'last_operation_time': (str,),  # noqa: E501
-            'complaint_flow_list': ([ComplaintFlowVo],),  # noqa: E501
             'sell_price': (int,),  # noqa: E501
-            'express_tracking_number': (str,),  # noqa: E501
             'create_time': (str,),  # noqa: E501
-            'sequence': (int,),  # noqa: E501
             'shop_name': (str,),  # noqa: E501
-            'order_info': (OrderBussinessInfo,),  # noqa: E501
             'exchange_express': (RefundExpressVo,),  # noqa: E501
-            'biz_express': (RefundExpressVo,),  # noqa: E501
-            'passport_id': (int,),  # noqa: E501
             'finish_time': (str,),  # noqa: E501
-            'refund_channel': (str,),  # noqa: E501
-            'customer_status': (int,),  # noqa: E501
-            'customer_status_text': (str,),  # noqa: E501
-            'return_goods_status': (int,),  # noqa: E501
-            'return_goods_status_text': (str,),  # noqa: E501
-            'tag_list': ([TagInfo],),  # noqa: E501
-            'refund_step_list': ([RefundStepVo],),  # noqa: E501
-            'express': (ExpressInfoVo,),  # noqa: E501
-            'delivery_express_status': (int,),  # noqa: E501
-            'bussiness_complaint_enter': (int,),  # noqa: E501
-            'bussiness_complaint_task_left_time': (int,),  # noqa: E501
+            'encode_pass_id': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -192,43 +138,25 @@ class RefundItemVo(ModelNormal):
         'refund_id': 'refundId',  # noqa: E501
         'refund_type': 'refundType',  # noqa: E501
         'refund_status': 'refundStatus',  # noqa: E501
-        'product_type': 'productType',  # noqa: E501
         'product_name': 'productName',  # noqa: E501
         'refund_amount': 'refundAmount',  # noqa: E501
         'order_payment': 'orderPayment',  # noqa: E501
-        'refund_reason': 'refundReason',  # noqa: E501
         'refund_desc': 'refundDesc',  # noqa: E501
         'express_phone': 'expressPhone',  # noqa: E501
         'contact_name': 'contactName',  # noqa: E501
         'apply_time': 'applyTime',  # noqa: E501
-        'response_time': 'responseTime',  # noqa: E501
         'refund_image': 'refundImage',  # noqa: E501
-        'complaint_id': 'complaintId',  # noqa: E501
         'refund_status_text': 'refundStatusText',  # noqa: E501
         'refund_type_text': 'refundTypeText',  # noqa: E501
         'refund_reason_text': 'refundReasonText',  # noqa: E501
         'express_info': 'expressInfo',  # noqa: E501
-        'complaint_status': 'complaintStatus',  # noqa: E501
         'timeout_date': 'timeoutDate',  # noqa: E501
-        'timeout_date_desc': 'timeoutDateDesc',  # noqa: E501
         'agg_return_status': 'aggReturnStatus',  # noqa: E501
         'agg_return_status_text': 'aggReturnStatusText',  # noqa: E501
-        'agg_refund_status': 'aggRefundStatus',  # noqa: E501
-        'agg_refund_status_text': 'aggRefundStatusText',  # noqa: E501
-        'delivery_status': 'deliveryStatus',  # noqa: E501
         'delivery_status_text': 'deliveryStatusText',  # noqa: E501
         'order_detail_id': 'orderDetailId',  # noqa: E501
-        'last_operator_type': 'lastOperatorType',  # noqa: E501
-        'start_time': 'startTime',  # noqa: E501
         'reject_reason': 'rejectReason',  # noqa: E501
         'reject_proof': 'rejectProof',  # noqa: E501
-        'judge_result': 'judgeResult',  # noqa: E501
-        'judge_result_text': 'judgeResultText',  # noqa: E501
-        'judge_desc': 'judgeDesc',  # noqa: E501
-        'judge_images': 'judgeImages',  # noqa: E501
-        'excution_plan': 'excutionPlan',  # noqa: E501
-        'refund_merge_status': 'refundMergeStatus',  # noqa: E501
-        'refund_merge_status_text': 'refundMergeStatusText',  # noqa: E501
         'shop_id': 'shopId',  # noqa: E501
         'sku_id': 'skuId',  # noqa: E501
         'sku_desc': 'skuDesc',  # noqa: E501
@@ -236,38 +164,14 @@ class RefundItemVo(ModelNormal):
         'return_time': 'returnTime',  # noqa: E501
         'product_image': 'productImage',  # noqa: E501
         'refund_num': 'refundNum',  # noqa: E501
-        'refund_sku': 'refundSku',  # noqa: E501
-        'order_refund_mark': 'orderRefundMark',  # noqa: E501
-        'order_refund_detail': 'orderRefundDetail',  # noqa: E501
         'ucid': 'ucid',  # noqa: E501
-        'user_id': 'userId',  # noqa: E501
-        'pay_type': 'payType',  # noqa: E501
-        'refund_detail': 'refundDetail',  # noqa: E501
-        'update_time': 'updateTime',  # noqa: E501
-        'signed': 'signed',  # noqa: E501
         'last_operation_time': 'lastOperationTime',  # noqa: E501
-        'complaint_flow_list': 'complaintFlowList',  # noqa: E501
         'sell_price': 'sellPrice',  # noqa: E501
-        'express_tracking_number': 'expressTrackingNumber',  # noqa: E501
         'create_time': 'createTime',  # noqa: E501
-        'sequence': 'sequence',  # noqa: E501
         'shop_name': 'shopName',  # noqa: E501
-        'order_info': 'orderInfo',  # noqa: E501
         'exchange_express': 'exchangeExpress',  # noqa: E501
-        'biz_express': 'bizExpress',  # noqa: E501
-        'passport_id': 'passportId',  # noqa: E501
         'finish_time': 'finishTime',  # noqa: E501
-        'refund_channel': 'refundChannel',  # noqa: E501
-        'customer_status': 'customerStatus',  # noqa: E501
-        'customer_status_text': 'customerStatusText',  # noqa: E501
-        'return_goods_status': 'returnGoodsStatus',  # noqa: E501
-        'return_goods_status_text': 'returnGoodsStatusText',  # noqa: E501
-        'tag_list': 'tagList',  # noqa: E501
-        'refund_step_list': 'refundStepList',  # noqa: E501
-        'express': 'express',  # noqa: E501
-        'delivery_express_status': 'deliveryExpressStatus',  # noqa: E501
-        'bussiness_complaint_enter': 'bussinessComplaintEnter',  # noqa: E501
-        'bussiness_complaint_task_left_time': 'bussinessComplaintTaskLeftTime',  # noqa: E501
+        'encode_pass_id': 'encodePassId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -315,43 +219,25 @@ class RefundItemVo(ModelNormal):
             refund_id (str): [optional]  # noqa: E501
             refund_type (int): [optional]  # noqa: E501
             refund_status (int): [optional]  # noqa: E501
-            product_type (int): [optional]  # noqa: E501
             product_name (str): [optional]  # noqa: E501
             refund_amount (str): [optional]  # noqa: E501
             order_payment (str): [optional]  # noqa: E501
-            refund_reason (int): [optional]  # noqa: E501
             refund_desc (str): [optional]  # noqa: E501
             express_phone (str): [optional]  # noqa: E501
             contact_name (str): [optional]  # noqa: E501
             apply_time (str): [optional]  # noqa: E501
-            response_time (str): [optional]  # noqa: E501
             refund_image ([str]): [optional]  # noqa: E501
-            complaint_id (int): [optional]  # noqa: E501
             refund_status_text (str): [optional]  # noqa: E501
             refund_type_text (str): [optional]  # noqa: E501
             refund_reason_text (str): [optional]  # noqa: E501
             express_info (OrderRefundExpressInfo): [optional]  # noqa: E501
-            complaint_status (int): [optional]  # noqa: E501
             timeout_date (str): [optional]  # noqa: E501
-            timeout_date_desc (str): [optional]  # noqa: E501
             agg_return_status (int): [optional]  # noqa: E501
             agg_return_status_text (str): [optional]  # noqa: E501
-            agg_refund_status (int): [optional]  # noqa: E501
-            agg_refund_status_text (str): [optional]  # noqa: E501
-            delivery_status (int): [optional]  # noqa: E501
             delivery_status_text (str): [optional]  # noqa: E501
             order_detail_id (str): [optional]  # noqa: E501
-            last_operator_type (int): [optional]  # noqa: E501
-            start_time (str): [optional]  # noqa: E501
             reject_reason (str): [optional]  # noqa: E501
             reject_proof ([str]): [optional]  # noqa: E501
-            judge_result (int): [optional]  # noqa: E501
-            judge_result_text (str): [optional]  # noqa: E501
-            judge_desc (str): [optional]  # noqa: E501
-            judge_images ([str]): [optional]  # noqa: E501
-            excution_plan (str): [optional]  # noqa: E501
-            refund_merge_status (int): [optional]  # noqa: E501
-            refund_merge_status_text (str): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             sku_id (str): [optional]  # noqa: E501
             sku_desc (str): [optional]  # noqa: E501
@@ -359,38 +245,14 @@ class RefundItemVo(ModelNormal):
             return_time (str): [optional]  # noqa: E501
             product_image (str): [optional]  # noqa: E501
             refund_num (int): [optional]  # noqa: E501
-            refund_sku (RefundSku): [optional]  # noqa: E501
-            order_refund_mark (int): [optional]  # noqa: E501
-            order_refund_detail (str): [optional]  # noqa: E501
             ucid (int): [optional]  # noqa: E501
-            user_id (int): [optional]  # noqa: E501
-            pay_type (int): [optional]  # noqa: E501
-            refund_detail (str): [optional]  # noqa: E501
-            update_time (str): [optional]  # noqa: E501
-            signed (int): [optional]  # noqa: E501
             last_operation_time (str): [optional]  # noqa: E501
-            complaint_flow_list ([ComplaintFlowVo]): [optional]  # noqa: E501
             sell_price (int): [optional]  # noqa: E501
-            express_tracking_number (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
-            sequence (int): [optional]  # noqa: E501
             shop_name (str): [optional]  # noqa: E501
-            order_info (OrderBussinessInfo): [optional]  # noqa: E501
             exchange_express (RefundExpressVo): [optional]  # noqa: E501
-            biz_express (RefundExpressVo): [optional]  # noqa: E501
-            passport_id (int): [optional]  # noqa: E501
             finish_time (str): [optional]  # noqa: E501
-            refund_channel (str): [optional]  # noqa: E501
-            customer_status (int): [optional]  # noqa: E501
-            customer_status_text (str): [optional]  # noqa: E501
-            return_goods_status (int): [optional]  # noqa: E501
-            return_goods_status_text (str): [optional]  # noqa: E501
-            tag_list ([TagInfo]): [optional]  # noqa: E501
-            refund_step_list ([RefundStepVo]): [optional]  # noqa: E501
-            express (ExpressInfoVo): [optional]  # noqa: E501
-            delivery_express_status (int): [optional]  # noqa: E501
-            bussiness_complaint_enter (int): [optional]  # noqa: E501
-            bussiness_complaint_task_left_time (int): [optional]  # noqa: E501
+            encode_pass_id (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -476,43 +338,25 @@ class RefundItemVo(ModelNormal):
             refund_id (str): [optional]  # noqa: E501
             refund_type (int): [optional]  # noqa: E501
             refund_status (int): [optional]  # noqa: E501
-            product_type (int): [optional]  # noqa: E501
             product_name (str): [optional]  # noqa: E501
             refund_amount (str): [optional]  # noqa: E501
             order_payment (str): [optional]  # noqa: E501
-            refund_reason (int): [optional]  # noqa: E501
             refund_desc (str): [optional]  # noqa: E501
             express_phone (str): [optional]  # noqa: E501
             contact_name (str): [optional]  # noqa: E501
             apply_time (str): [optional]  # noqa: E501
-            response_time (str): [optional]  # noqa: E501
             refund_image ([str]): [optional]  # noqa: E501
-            complaint_id (int): [optional]  # noqa: E501
             refund_status_text (str): [optional]  # noqa: E501
             refund_type_text (str): [optional]  # noqa: E501
             refund_reason_text (str): [optional]  # noqa: E501
             express_info (OrderRefundExpressInfo): [optional]  # noqa: E501
-            complaint_status (int): [optional]  # noqa: E501
             timeout_date (str): [optional]  # noqa: E501
-            timeout_date_desc (str): [optional]  # noqa: E501
             agg_return_status (int): [optional]  # noqa: E501
             agg_return_status_text (str): [optional]  # noqa: E501
-            agg_refund_status (int): [optional]  # noqa: E501
-            agg_refund_status_text (str): [optional]  # noqa: E501
-            delivery_status (int): [optional]  # noqa: E501
             delivery_status_text (str): [optional]  # noqa: E501
             order_detail_id (str): [optional]  # noqa: E501
-            last_operator_type (int): [optional]  # noqa: E501
-            start_time (str): [optional]  # noqa: E501
             reject_reason (str): [optional]  # noqa: E501
             reject_proof ([str]): [optional]  # noqa: E501
-            judge_result (int): [optional]  # noqa: E501
-            judge_result_text (str): [optional]  # noqa: E501
-            judge_desc (str): [optional]  # noqa: E501
-            judge_images ([str]): [optional]  # noqa: E501
-            excution_plan (str): [optional]  # noqa: E501
-            refund_merge_status (int): [optional]  # noqa: E501
-            refund_merge_status_text (str): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             sku_id (str): [optional]  # noqa: E501
             sku_desc (str): [optional]  # noqa: E501
@@ -520,38 +364,14 @@ class RefundItemVo(ModelNormal):
             return_time (str): [optional]  # noqa: E501
             product_image (str): [optional]  # noqa: E501
             refund_num (int): [optional]  # noqa: E501
-            refund_sku (RefundSku): [optional]  # noqa: E501
-            order_refund_mark (int): [optional]  # noqa: E501
-            order_refund_detail (str): [optional]  # noqa: E501
             ucid (int): [optional]  # noqa: E501
-            user_id (int): [optional]  # noqa: E501
-            pay_type (int): [optional]  # noqa: E501
-            refund_detail (str): [optional]  # noqa: E501
-            update_time (str): [optional]  # noqa: E501
-            signed (int): [optional]  # noqa: E501
             last_operation_time (str): [optional]  # noqa: E501
-            complaint_flow_list ([ComplaintFlowVo]): [optional]  # noqa: E501
             sell_price (int): [optional]  # noqa: E501
-            express_tracking_number (str): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
-            sequence (int): [optional]  # noqa: E501
             shop_name (str): [optional]  # noqa: E501
-            order_info (OrderBussinessInfo): [optional]  # noqa: E501
             exchange_express (RefundExpressVo): [optional]  # noqa: E501
-            biz_express (RefundExpressVo): [optional]  # noqa: E501
-            passport_id (int): [optional]  # noqa: E501
             finish_time (str): [optional]  # noqa: E501
-            refund_channel (str): [optional]  # noqa: E501
-            customer_status (int): [optional]  # noqa: E501
-            customer_status_text (str): [optional]  # noqa: E501
-            return_goods_status (int): [optional]  # noqa: E501
-            return_goods_status_text (str): [optional]  # noqa: E501
-            tag_list ([TagInfo]): [optional]  # noqa: E501
-            refund_step_list ([RefundStepVo]): [optional]  # noqa: E501
-            express (ExpressInfoVo): [optional]  # noqa: E501
-            delivery_express_status (int): [optional]  # noqa: E501
-            bussiness_complaint_enter (int): [optional]  # noqa: E501
-            bussiness_complaint_task_left_time (int): [optional]  # noqa: E501
+            encode_pass_id (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

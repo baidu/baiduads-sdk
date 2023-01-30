@@ -20,8 +20,9 @@ Name | Type | Description | Notes
 **ocpc** | [**OcpcType**](OcpcType.md) |  |  [optional]
 **atpFeedId** | **Long** |  |  [optional]
 **deliveryType** | **List&lt;Integer&gt;** |  |  [optional]
-**unitOcpxStatus** | **Integer** |  |  [optional]
 **unefficientAdgroup** | **Integer** |  |  [optional]
+**productSetId** | **Long** |  |  [optional]
+**unitProducts** | [**UnitProducts**](UnitProducts.md) |  |  [optional]
 
 
 

@@ -38,7 +38,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatShopCategoryItemVo.JSON_PROPERTY_PAID_GUARANTEE_PRICE,
   PlatShopCategoryItemVo.JSON_PROPERTY_NEED_QUALIFY,
   PlatShopCategoryItemVo.JSON_PROPERTY_QUALIFY_DESC,
-  PlatShopCategoryItemVo.JSON_PROPERTY_CHILD_LIST
+  PlatShopCategoryItemVo.JSON_PROPERTY_CHILD_LIST,
+  PlatShopCategoryItemVo.JSON_PROPERTY_BIG_CATEGORY_NAME,
+  PlatShopCategoryItemVo.JSON_PROPERTY_HOME_CATEGORY,
+  PlatShopCategoryItemVo.JSON_PROPERTY_IS_HIGH_RISK_CATEGORY
 })
 @JsonTypeName("PlatShopCategoryItemVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -72,6 +75,15 @@ public class PlatShopCategoryItemVo {
 
   public static final String JSON_PROPERTY_CHILD_LIST = "childList";
   private List<PlatShopCategoryItemVo> childList = null;
+
+  public static final String JSON_PROPERTY_BIG_CATEGORY_NAME = "bigCategoryName";
+  private String bigCategoryName;
+
+  public static final String JSON_PROPERTY_HOME_CATEGORY = "homeCategory";
+  private Integer homeCategory;
+
+  public static final String JSON_PROPERTY_IS_HIGH_RISK_CATEGORY = "isHighRiskCategory";
+  private Integer isHighRiskCategory;
 
   public PlatShopCategoryItemVo() { 
   }
@@ -354,6 +366,87 @@ public class PlatShopCategoryItemVo {
   }
 
 
+  public PlatShopCategoryItemVo bigCategoryName(String bigCategoryName) {
+    
+    this.bigCategoryName = bigCategoryName;
+    return this;
+  }
+
+   /**
+   * Get bigCategoryName
+   * @return bigCategoryName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BIG_CATEGORY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getBigCategoryName() {
+    return bigCategoryName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BIG_CATEGORY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBigCategoryName(String bigCategoryName) {
+    this.bigCategoryName = bigCategoryName;
+  }
+
+
+  public PlatShopCategoryItemVo homeCategory(Integer homeCategory) {
+    
+    this.homeCategory = homeCategory;
+    return this;
+  }
+
+   /**
+   * Get homeCategory
+   * @return homeCategory
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_HOME_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getHomeCategory() {
+    return homeCategory;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_HOME_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setHomeCategory(Integer homeCategory) {
+    this.homeCategory = homeCategory;
+  }
+
+
+  public PlatShopCategoryItemVo isHighRiskCategory(Integer isHighRiskCategory) {
+    
+    this.isHighRiskCategory = isHighRiskCategory;
+    return this;
+  }
+
+   /**
+   * Get isHighRiskCategory
+   * @return isHighRiskCategory
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_IS_HIGH_RISK_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getIsHighRiskCategory() {
+    return isHighRiskCategory;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_IS_HIGH_RISK_CATEGORY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setIsHighRiskCategory(Integer isHighRiskCategory) {
+    this.isHighRiskCategory = isHighRiskCategory;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -372,12 +465,15 @@ public class PlatShopCategoryItemVo {
         Objects.equals(this.paidGuaranteePrice, platShopCategoryItemVo.paidGuaranteePrice) &&
         Objects.equals(this.needQualify, platShopCategoryItemVo.needQualify) &&
         Objects.equals(this.qualifyDesc, platShopCategoryItemVo.qualifyDesc) &&
-        Objects.equals(this.childList, platShopCategoryItemVo.childList);
+        Objects.equals(this.childList, platShopCategoryItemVo.childList) &&
+        Objects.equals(this.bigCategoryName, platShopCategoryItemVo.bigCategoryName) &&
+        Objects.equals(this.homeCategory, platShopCategoryItemVo.homeCategory) &&
+        Objects.equals(this.isHighRiskCategory, platShopCategoryItemVo.isHighRiskCategory);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(categoryId, categoryName, parentId, level, hasChild, guaranteePrice, paidGuaranteePrice, needQualify, qualifyDesc, childList);
+    return Objects.hash(categoryId, categoryName, parentId, level, hasChild, guaranteePrice, paidGuaranteePrice, needQualify, qualifyDesc, childList, bigCategoryName, homeCategory, isHighRiskCategory);
   }
 
   @Override
@@ -394,6 +490,9 @@ public class PlatShopCategoryItemVo {
     sb.append("    needQualify: ").append(toIndentedString(needQualify)).append("\n");
     sb.append("    qualifyDesc: ").append(toIndentedString(qualifyDesc)).append("\n");
     sb.append("    childList: ").append(toIndentedString(childList)).append("\n");
+    sb.append("    bigCategoryName: ").append(toIndentedString(bigCategoryName)).append("\n");
+    sb.append("    homeCategory: ").append(toIndentedString(homeCategory)).append("\n");
+    sb.append("    isHighRiskCategory: ").append(toIndentedString(isHighRiskCategory)).append("\n");
     sb.append("}");
     return sb.toString();
   }

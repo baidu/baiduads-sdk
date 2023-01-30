@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **url** | **String** |  |  [optional]
 **pageType** | **Integer** |  |  [optional]
 **monitorCode** | **String** |  |  [optional]
+**storeShopType** | **Integer** |  |  [optional]
+**userId** | **Long** |  |  [optional]
 
 
 

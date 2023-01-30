@@ -14,12 +14,12 @@ from __future__ import absolute_import
 
 # import models into model package
 from baiduads.imagemanagement.model.compression_conf import CompressionConf
+from baiduads.imagemanagement.model.d_page_data import DPageData
 from baiduads.imagemanagement.model.filter_condition import FilterCondition
 from baiduads.imagemanagement.model.get_video_extract_image_request_wrapper import GetVideoExtractImageRequestWrapper
 from baiduads.imagemanagement.model.get_video_extract_image_response_wrapper import GetVideoExtractImageResponseWrapper
 from baiduads.imagemanagement.model.get_video_extract_image_response_wrapper_body import GetVideoExtractImageResponseWrapperBody
 from baiduads.imagemanagement.model.logo_pic_type import LogoPicType
-from baiduads.imagemanagement.model.page_data import PageData
 from baiduads.imagemanagement.model.upload_image_item import UploadImageItem
 from baiduads.imagemanagement.model.upload_image_request import UploadImageRequest
 from baiduads.imagemanagement.model.upload_image_request_wrapper import UploadImageRequestWrapper

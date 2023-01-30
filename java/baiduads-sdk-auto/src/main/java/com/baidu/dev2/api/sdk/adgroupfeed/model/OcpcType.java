@@ -44,7 +44,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OcpcType.JSON_PROPERTY_IS_MANUAL_BID_FOR_MAX_MODE,
   OcpcType.JSON_PROPERTY_IS_MANUAL_DEEP_BID_FOR_MAX_MODE,
   OcpcType.JSON_PROPERTY_BROAD_CAST_MODE,
-  OcpcType.JSON_PROPERTY_ANCHOR_ID
+  OcpcType.JSON_PROPERTY_ANCHOR_ID,
+  OcpcType.JSON_PROPERTY_TRANS_TYPE_ATTRIBUTE
 })
 @JsonTypeName("OcpcType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -102,6 +103,9 @@ public class OcpcType {
 
   public static final String JSON_PROPERTY_ANCHOR_ID = "anchorId";
   private Long anchorId;
+
+  public static final String JSON_PROPERTY_TRANS_TYPE_ATTRIBUTE = "transTypeAttribute";
+  private Integer transTypeAttribute;
 
   public OcpcType() { 
   }
@@ -592,6 +596,33 @@ public class OcpcType {
   }
 
 
+  public OcpcType transTypeAttribute(Integer transTypeAttribute) {
+    
+    this.transTypeAttribute = transTypeAttribute;
+    return this;
+  }
+
+   /**
+   * Get transTypeAttribute
+   * @return transTypeAttribute
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_TYPE_ATTRIBUTE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getTransTypeAttribute() {
+    return transTypeAttribute;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_TYPE_ATTRIBUTE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransTypeAttribute(Integer transTypeAttribute) {
+    this.transTypeAttribute = transTypeAttribute;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -618,12 +649,13 @@ public class OcpcType {
         Objects.equals(this.isManualBidForMaxMode, ocpcType.isManualBidForMaxMode) &&
         Objects.equals(this.isManualDeepBidForMaxMode, ocpcType.isManualDeepBidForMaxMode) &&
         Objects.equals(this.broadCastMode, ocpcType.broadCastMode) &&
-        Objects.equals(this.anchorId, ocpcType.anchorId);
+        Objects.equals(this.anchorId, ocpcType.anchorId) &&
+        Objects.equals(this.transTypeAttribute, ocpcType.transTypeAttribute);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appTransId, transFrom, ocpcBid, lpUrl, transType, ocpcLevel, isSkipStageOne, isOpenOcpcLab, payMode, optimizeDeepTrans, deepOcpcBid, deepTransType, useRoi, roiRatio, isManualBidForMaxMode, isManualDeepBidForMaxMode, broadCastMode, anchorId);
+    return Objects.hash(appTransId, transFrom, ocpcBid, lpUrl, transType, ocpcLevel, isSkipStageOne, isOpenOcpcLab, payMode, optimizeDeepTrans, deepOcpcBid, deepTransType, useRoi, roiRatio, isManualBidForMaxMode, isManualDeepBidForMaxMode, broadCastMode, anchorId, transTypeAttribute);
   }
 
   @Override
@@ -648,6 +680,7 @@ public class OcpcType {
     sb.append("    isManualDeepBidForMaxMode: ").append(toIndentedString(isManualDeepBidForMaxMode)).append("\n");
     sb.append("    broadCastMode: ").append(toIndentedString(broadCastMode)).append("\n");
     sb.append("    anchorId: ").append(toIndentedString(anchorId)).append("\n");
+    sb.append("    transTypeAttribute: ").append(toIndentedString(transTypeAttribute)).append("\n");
     sb.append("}");
     return sb.toString();
   }

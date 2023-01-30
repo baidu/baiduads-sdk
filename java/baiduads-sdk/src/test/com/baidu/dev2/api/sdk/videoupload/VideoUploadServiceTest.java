@@ -24,10 +24,8 @@ public class VideoUploadServiceTest {
         service = new VideoUploadService();
         header = new ApiRequestHeader();
         // 请填写自己的信息
-        header.setToken("xxxxx");
-        header.setUsername("xxxxx");
-        header.setPassword("xxxxx");
-        header.setTarget("xxxxx");
+        header.setAccessToken("xxxxx"); // 替换为授权生成的accessToken
+        header.setUserName("xxxxx"); // 替换为自己的用户名
     }
 
     @Test

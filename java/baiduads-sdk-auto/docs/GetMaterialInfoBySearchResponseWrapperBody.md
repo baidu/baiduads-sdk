@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;GetMaterialInfoResultType&gt;**](GetMaterialInfoResultType.md) |  |  [optional]
+**data** | [**List&lt;FeedMaterialSearchType&gt;**](FeedMaterialSearchType.md) |  |  [optional]
 
 
 

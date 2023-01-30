@@ -98,6 +98,7 @@ class OcpcType(ModelNormal):
             'is_manual_deep_bid_for_max_mode': (int,),  # noqa: E501
             'broad_cast_mode': (int,),  # noqa: E501
             'anchor_id': (int,),  # noqa: E501
+            'trans_type_attribute': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -124,6 +125,7 @@ class OcpcType(ModelNormal):
         'is_manual_deep_bid_for_max_mode': 'isManualDeepBidForMaxMode',  # noqa: E501
         'broad_cast_mode': 'broadCastMode',  # noqa: E501
         'anchor_id': 'anchorId',  # noqa: E501
+        'trans_type_attribute': 'transTypeAttribute',  # noqa: E501
     }
 
     read_only_vars = {
@@ -185,6 +187,7 @@ class OcpcType(ModelNormal):
             is_manual_deep_bid_for_max_mode (int): [optional]  # noqa: E501
             broad_cast_mode (int): [optional]  # noqa: E501
             anchor_id (int): [optional]  # noqa: E501
+            trans_type_attribute (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -284,6 +287,7 @@ class OcpcType(ModelNormal):
             is_manual_deep_bid_for_max_mode (int): [optional]  # noqa: E501
             broad_cast_mode (int): [optional]  # noqa: E501
             anchor_id (int): [optional]  # noqa: E501
+            trans_type_attribute (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

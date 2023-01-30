@@ -30,6 +30,10 @@ Name | Type | Description | Notes
 **cvSourcesShadow** | **List&lt;Integer&gt;** |  |  [optional]
 **transTypesShadow** | **List&lt;Integer&gt;** |  |  [optional]
 **ocpcDeepBid** | **Double** |  |  [optional]
+**sharedBudget** | **Double** |  |  [optional]
+**unbindSharedBudgetInfo** | [**List&lt;UnbindSharedBudgetInfo&gt;**](UnbindSharedBudgetInfo.md) |  |  [optional]
+**sharedBudgetId** | **Long** |  |  [optional]
+**useSharedBudget** | **Integer** |  |  [optional]
 
 
 

@@ -26,9 +26,8 @@ public class GetAccountInfo {
 
             // init requset header
             ApiRequestHeader requestHeader = new ApiRequestHeader();
-            requestHeader.setToken("xxxxx"); // 替换为自己的token
-            requestHeader.setUsername("xxxxx"); // 替换为自己的用户名
-            requestHeader.setPassword("xxxxx"); // 替换为自己的密码
+            requestHeader.setAccessToken("xxxxx"); // 替换为授权生成的accessToken
+            requestHeader.setUserName("xxxxx"); // 替换为自己的用户名
 
             // init requset
             ApiAccountQueryRequest request = new ApiAccountQueryRequest();

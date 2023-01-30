@@ -118,11 +118,18 @@ class ApiCampaignType(ModelNormal):
             'store_page_infos': ([ApiStorePageInfoType],),  # noqa: E501
             'marketing_target_id': (int,),  # noqa: E501
             'shop_type': (int,),  # noqa: E501
-            'query_region_status': (bool,),  # noqa: E501
-            'pr_search_intention_status': (bool,),  # noqa: E501
-            'exclude_query_region_status': (bool,),  # noqa: E501
-            'campaign_exclude_query_region_status': (bool,),  # noqa: E501
-            'create_time': (str,),  # noqa: E501
+            'equipment_type': (int,),  # noqa: E501
+            'campaign_bid_type': (int,),  # noqa: E501
+            'campaign_bid': (float,),  # noqa: E501
+            'campaign_ocpc_bid_type': (int,),  # noqa: E501
+            'campaign_ocpc_bid': (float,),  # noqa: E501
+            'campaign_trans_types': ([int],),  # noqa: E501
+            'campaign_deep_trans_types': ([int],),  # noqa: E501
+            'campaign_cv_sources': ([int],),  # noqa: E501
+            'shared_budget_id': (int,),  # noqa: E501
+            'shared_budget_name': (str,),  # noqa: E501
+            'shared_budget': (float,),  # noqa: E501
+            'budget_type': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -155,11 +162,18 @@ class ApiCampaignType(ModelNormal):
         'store_page_infos': 'storePageInfos',  # noqa: E501
         'marketing_target_id': 'marketingTargetId',  # noqa: E501
         'shop_type': 'shopType',  # noqa: E501
-        'query_region_status': 'queryRegionStatus',  # noqa: E501
-        'pr_search_intention_status': 'prSearchIntentionStatus',  # noqa: E501
-        'exclude_query_region_status': 'excludeQueryRegionStatus',  # noqa: E501
-        'campaign_exclude_query_region_status': 'campaignExcludeQueryRegionStatus',  # noqa: E501
-        'create_time': 'createTime',  # noqa: E501
+        'equipment_type': 'equipmentType',  # noqa: E501
+        'campaign_bid_type': 'campaignBidType',  # noqa: E501
+        'campaign_bid': 'campaignBid',  # noqa: E501
+        'campaign_ocpc_bid_type': 'campaignOcpcBidType',  # noqa: E501
+        'campaign_ocpc_bid': 'campaignOcpcBid',  # noqa: E501
+        'campaign_trans_types': 'campaignTransTypes',  # noqa: E501
+        'campaign_deep_trans_types': 'campaignDeepTransTypes',  # noqa: E501
+        'campaign_cv_sources': 'campaignCvSources',  # noqa: E501
+        'shared_budget_id': 'sharedBudgetId',  # noqa: E501
+        'shared_budget_name': 'sharedBudgetName',  # noqa: E501
+        'shared_budget': 'sharedBudget',  # noqa: E501
+        'budget_type': 'budgetType',  # noqa: E501
     }
 
     read_only_vars = {
@@ -227,11 +241,18 @@ class ApiCampaignType(ModelNormal):
             store_page_infos ([ApiStorePageInfoType]): [optional]  # noqa: E501
             marketing_target_id (int): [optional]  # noqa: E501
             shop_type (int): [optional]  # noqa: E501
-            query_region_status (bool): [optional]  # noqa: E501
-            pr_search_intention_status (bool): [optional]  # noqa: E501
-            exclude_query_region_status (bool): [optional]  # noqa: E501
-            campaign_exclude_query_region_status (bool): [optional]  # noqa: E501
-            create_time (str): [optional]  # noqa: E501
+            equipment_type (int): [optional]  # noqa: E501
+            campaign_bid_type (int): [optional]  # noqa: E501
+            campaign_bid (float): [optional]  # noqa: E501
+            campaign_ocpc_bid_type (int): [optional]  # noqa: E501
+            campaign_ocpc_bid (float): [optional]  # noqa: E501
+            campaign_trans_types ([int]): [optional]  # noqa: E501
+            campaign_deep_trans_types ([int]): [optional]  # noqa: E501
+            campaign_cv_sources ([int]): [optional]  # noqa: E501
+            shared_budget_id (int): [optional]  # noqa: E501
+            shared_budget_name (str): [optional]  # noqa: E501
+            shared_budget (float): [optional]  # noqa: E501
+            budget_type (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -337,11 +358,18 @@ class ApiCampaignType(ModelNormal):
             store_page_infos ([ApiStorePageInfoType]): [optional]  # noqa: E501
             marketing_target_id (int): [optional]  # noqa: E501
             shop_type (int): [optional]  # noqa: E501
-            query_region_status (bool): [optional]  # noqa: E501
-            pr_search_intention_status (bool): [optional]  # noqa: E501
-            exclude_query_region_status (bool): [optional]  # noqa: E501
-            campaign_exclude_query_region_status (bool): [optional]  # noqa: E501
-            create_time (str): [optional]  # noqa: E501
+            equipment_type (int): [optional]  # noqa: E501
+            campaign_bid_type (int): [optional]  # noqa: E501
+            campaign_bid (float): [optional]  # noqa: E501
+            campaign_ocpc_bid_type (int): [optional]  # noqa: E501
+            campaign_ocpc_bid (float): [optional]  # noqa: E501
+            campaign_trans_types ([int]): [optional]  # noqa: E501
+            campaign_deep_trans_types ([int]): [optional]  # noqa: E501
+            campaign_cv_sources ([int]): [optional]  # noqa: E501
+            shared_budget_id (int): [optional]  # noqa: E501
+            shared_budget_name (str): [optional]  # noqa: E501
+            shared_budget (float): [optional]  # noqa: E501
+            budget_type (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

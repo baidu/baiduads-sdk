@@ -1,1 +1,1 @@
-baiduads-sdk-auto >= 2022.4.1
+baiduads-sdk-auto >= 2023.0.0

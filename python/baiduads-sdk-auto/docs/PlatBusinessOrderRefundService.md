@@ -300,46 +300,8 @@ with baiduads.ApiClient() as api_client:
             product_type=1,
             start_time="start_time_example",
             end_time="end_time_example",
-            order_refund_status=[
-                1,
-            ],
-            pay_type=1,
-            complaint_status=[
-                1,
-            ],
-            customer_status=[
-                1,
-            ],
-            return_status=1,
             product_name="product_name_example",
             express_info="express_info_example",
-            status_list=[
-                StatusUnionCase(
-                    refund_status_list=[
-                        1,
-                    ],
-                    complaint_status_list=[
-                        1,
-                    ],
-                    refund_type_list=[
-                        1,
-                    ],
-                    operator_type_list=[
-                        1,
-                    ],
-                ),
-            ],
-            delivery_status=1,
-            agg_refund_status=[
-                1,
-            ],
-            tab_refund_status=[
-                1,
-            ],
-            timeout_sort_type=1,
-            return_goods_status=1,
-            refund_base_reason=1,
-            complaint_judge_result=1,
         ),
     ) # QueryOrderRefundListRequestWrapper | 
 

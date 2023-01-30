@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **channelId** | **Long** |  |  [optional]
 **openurl** | **String** |  |  [optional]
 **downloadType** | **Integer** |  |  [optional]
+**appId** | **Long** |  |  [optional]
 
 
 

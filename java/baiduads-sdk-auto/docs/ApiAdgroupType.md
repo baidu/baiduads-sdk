@@ -30,6 +30,9 @@ Name | Type | Description | Notes
 **mobileFinalUrl** | **String** |  |  [optional]
 **mobileTrackParam** | **String** |  |  [optional]
 **mobileTrackTemplate** | **String** |  |  [optional]
+**creativeTextOptimizationStatus** | **Boolean** |  |  [optional]
+**knowledgeTextStatus** | **Boolean** |  |  [optional]
+**jimuyuContentStatus** | **Boolean** |  |  [optional]
 
 
 
