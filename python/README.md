@@ -43,9 +43,8 @@ class TestAccountService(unittest.TestCase):
 
     def test_get_account_info(self):
         # init header
-        api_header = ApiRequestHeader(username="********",
-                                      password="********",
-                                      token="****************",
+        api_header = ApiRequestHeader(userName="********",
+                                      accessToken="****************",
                                       _spec_property_naming=True)
         # init request
         get_account_req = ApiAccountQueryRequest(accountFields=["pictureOptimizeSegmentStatus"],
@@ -69,13 +68,12 @@ class TestAccountService(unittest.TestCase):
 
 ### API 示例
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*CampaignFeedService* | [**addCampaignFeed**](docs/CampaignFeedService.md#addCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/addCampaignFeed | 
-*CampaignFeedService* | [**deleteCampaignFeed**](docs/CampaignFeedService.md#deleteCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/deleteCampaignFeed | 
-*CampaignFeedService* | [**getCampaignFeed**](docs/CampaignFeedService.md#getCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/getCampaignFeed | 
-*CampaignFeedService* | [**updateCampaignFeed**](docs/CampaignFeedService.md#updateCampaignFeed) | **POST** /json/feed/v1/CampaignFeedService/updateCampaignFeed | 
-
+| Class                 | Method                                                                                       | HTTP request                                                  | Description |
+|-----------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------|-------------|
+| *CampaignFeedService* | [**addCampaignFeed**](baiduads-sdk-auto/docs/CampaignFeedService.md#add_campaign_feed)       | **POST** /json/feed/v1/CampaignFeedService/addCampaignFeed    |             |
+| *CampaignFeedService* | [**deleteCampaignFeed**](baiduads-sdk-auto/docs/CampaignFeedService.md#delete_campaign_feed) | **POST** /json/feed/v1/CampaignFeedService/deleteCampaignFeed |             |
+| *CampaignFeedService* | [**getCampaignFeed**](baiduads-sdk-auto/docs/CampaignFeedService.md#get_campaign_feed)       | **POST** /json/feed/v1/CampaignFeedService/getCampaignFeed    |             |
+| *CampaignFeedService* | [**updateCampaignFeed**](baiduads-sdk-auto/docs/CampaignFeedService.md#update_campaign_feed) | **POST** /json/feed/v1/CampaignFeedService/updateCampaignFeed |             |
 
 ## 讨论
 
