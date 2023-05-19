@@ -32,9 +32,11 @@ def lazy_import():
     from baiduads.materialarticle.model.article_ext_dto import ArticleExtDto
     from baiduads.materialarticle.model.article_image import ArticleImage
     from baiduads.materialarticle.model.bind_material_dto import BindMaterialDto
+    from baiduads.materialarticle.model.content_quality_detail import ContentQualityDetail
     globals()['ArticleExtDto'] = ArticleExtDto
     globals()['ArticleImage'] = ArticleImage
     globals()['BindMaterialDto'] = BindMaterialDto
+    globals()['ContentQualityDetail'] = ContentQualityDetail
 
 
 class TeslaArticleQueryResponse(ModelNormal):
@@ -111,6 +113,9 @@ class TeslaArticleQueryResponse(ModelNormal):
             'ext': (ArticleExtDto,),  # noqa: E501
             'bind_material': ([BindMaterialDto],),  # noqa: E501
             'reaudit_status': (int,),  # noqa: E501
+            'content_quality_status': (int,),  # noqa: E501
+            'content_quality_detail': (ContentQualityDetail,),  # noqa: E501
+            'human_audit': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -140,6 +145,9 @@ class TeslaArticleQueryResponse(ModelNormal):
         'ext': 'ext',  # noqa: E501
         'bind_material': 'bindMaterial',  # noqa: E501
         'reaudit_status': 'reauditStatus',  # noqa: E501
+        'content_quality_status': 'contentQualityStatus',  # noqa: E501
+        'content_quality_detail': 'contentQualityDetail',  # noqa: E501
+        'human_audit': 'humanAudit',  # noqa: E501
     }
 
     read_only_vars = {
@@ -204,6 +212,9 @@ class TeslaArticleQueryResponse(ModelNormal):
             ext (ArticleExtDto): [optional]  # noqa: E501
             bind_material ([BindMaterialDto]): [optional]  # noqa: E501
             reaudit_status (int): [optional]  # noqa: E501
+            content_quality_status (int): [optional]  # noqa: E501
+            content_quality_detail (ContentQualityDetail): [optional]  # noqa: E501
+            human_audit (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -306,6 +317,9 @@ class TeslaArticleQueryResponse(ModelNormal):
             ext (ArticleExtDto): [optional]  # noqa: E501
             bind_material ([BindMaterialDto]): [optional]  # noqa: E501
             reaudit_status (int): [optional]  # noqa: E501
+            content_quality_status (int): [optional]  # noqa: E501
+            content_quality_detail (ContentQualityDetail): [optional]  # noqa: E501
+            human_audit (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

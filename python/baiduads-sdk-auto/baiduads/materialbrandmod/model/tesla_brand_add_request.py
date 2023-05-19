@@ -30,8 +30,10 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.materialbrandmod.model.brand_image import BrandImage
+    from baiduads.materialbrandmod.model.brand_tags import BrandTags
     from baiduads.materialbrandmod.model.brand_video import BrandVideo
     globals()['BrandImage'] = BrandImage
+    globals()['BrandTags'] = BrandTags
     globals()['BrandVideo'] = BrandVideo
 
 
@@ -98,6 +100,8 @@ class TeslaBrandAddRequest(ModelNormal):
             'video': ([BrandVideo],),  # noqa: E501
             'qualification': ([BrandImage],),  # noqa: E501
             'image': ([BrandImage],),  # noqa: E501
+            'tags': ([BrandTags],),  # noqa: E501
+            'trade_id': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -116,6 +120,8 @@ class TeslaBrandAddRequest(ModelNormal):
         'video': 'video',  # noqa: E501
         'qualification': 'qualification',  # noqa: E501
         'image': 'image',  # noqa: E501
+        'tags': 'tags',  # noqa: E501
+        'trade_id': 'tradeId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -169,6 +175,8 @@ class TeslaBrandAddRequest(ModelNormal):
             video ([BrandVideo]): [optional]  # noqa: E501
             qualification ([BrandImage]): [optional]  # noqa: E501
             image ([BrandImage]): [optional]  # noqa: E501
+            tags ([BrandTags]): [optional]  # noqa: E501
+            trade_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -260,6 +268,8 @@ class TeslaBrandAddRequest(ModelNormal):
             video ([BrandVideo]): [optional]  # noqa: E501
             qualification ([BrandImage]): [optional]  # noqa: E501
             image ([BrandImage]): [optional]  # noqa: E501
+            tags ([BrandTags]): [optional]  # noqa: E501
+            trade_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -384,6 +384,7 @@ with baiduads.ApiClient() as api_client:
             ],
             shop_name="shop_name_example",
             shop_logo_url="shop_logo_url_example",
+            reject_marks="reject_marks_example",
         ),
     ) # RejectOrderRefundRequestWrapper | 
 

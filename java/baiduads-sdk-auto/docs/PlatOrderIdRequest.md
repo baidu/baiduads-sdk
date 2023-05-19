@@ -8,7 +8,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **orderId** | **Long** |  |  [optional]
-**ucid** | **Long** |  |  [optional]
 **shopId** | **Long** |  |  [optional]
 **appId** | **Integer** |  |  [optional]
 

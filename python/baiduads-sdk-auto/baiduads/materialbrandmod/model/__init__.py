@@ -17,6 +17,7 @@ from baiduads.materialbrandmod.model.add_brand_request_wrapper import AddBrandRe
 from baiduads.materialbrandmod.model.add_brand_response_wrapper import AddBrandResponseWrapper
 from baiduads.materialbrandmod.model.add_brand_response_wrapper_body import AddBrandResponseWrapperBody
 from baiduads.materialbrandmod.model.brand_image import BrandImage
+from baiduads.materialbrandmod.model.brand_tags import BrandTags
 from baiduads.materialbrandmod.model.brand_video import BrandVideo
 from baiduads.materialbrandmod.model.delete_brand_request_wrapper import DeleteBrandRequestWrapper
 from baiduads.materialbrandmod.model.delete_brand_response_wrapper import DeleteBrandResponseWrapper

@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **updateEndTime** | **String** |  |  [optional]
 **articleIdListNotIn** | **List&lt;Long&gt;** |  |  [optional]
 **contentType** | **Integer** |  |  [optional]
+**contentQualityStatus** | **List&lt;Integer&gt;** |  |  [optional]
 
 
 

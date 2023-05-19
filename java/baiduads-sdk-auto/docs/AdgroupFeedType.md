@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **status** | **Integer** |  |  [optional]
 **audience** | [**java.util.Map**](java.util.Map.md) |  |  [optional]
 **bid** | **Double** |  |  [optional]
-**producttypes** | **List&lt;Integer&gt;** |  |  [optional]
 **ftypes** | **List&lt;Integer&gt;** |  |  [optional]
 **bidtype** | **Integer** |  |  [optional]
 **ocpc** | [**OcpcType**](OcpcType.md) |  |  [optional]
@@ -23,6 +22,12 @@ Name | Type | Description | Notes
 **unefficientAdgroup** | **Integer** |  |  [optional]
 **productSetId** | **Long** |  |  [optional]
 **unitProducts** | [**UnitProducts**](UnitProducts.md) |  |  [optional]
+**ftypeSelection** | **Integer** |  |  [optional]
+**bidSource** | **Integer** |  |  [optional]
+**urlType** | **Integer** |  |  [optional]
+**miniProgram** | **String** |  |  [optional]
+**broadCastInfo** | **String** |  |  [optional]
+**url** | **String** |  |  [optional]
 
 
 

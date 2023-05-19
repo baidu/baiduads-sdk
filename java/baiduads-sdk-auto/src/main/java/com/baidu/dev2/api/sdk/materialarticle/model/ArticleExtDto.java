@@ -16,7 +16,6 @@ import java.util.Arrays;
 import com.baidu.dev2.api.sdk.materialarticle.model.AuthorInfo;
 import com.baidu.dev2.api.sdk.materialarticle.model.CaseFee;
 import com.baidu.dev2.api.sdk.materialarticle.model.DetailCategoryDto;
-import com.baidu.dev2.api.sdk.materialarticle.model.TpInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -44,7 +43,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ArticleExtDto.JSON_PROPERTY_CONSTRUCTION_FEE,
   ArticleExtDto.JSON_PROPERTY_AUTHOR,
   ArticleExtDto.JSON_PROPERTY_DETAIL_CATEGORY,
-  ArticleExtDto.JSON_PROPERTY_TP_INFO
+  ArticleExtDto.JSON_PROPERTY_ARTICLE_SOURCE,
+  ArticleExtDto.JSON_PROPERTY_ARTICLE_LINK
 })
 @JsonTypeName("ArticleExtDto")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -82,8 +82,11 @@ public class ArticleExtDto {
   public static final String JSON_PROPERTY_DETAIL_CATEGORY = "detailCategory";
   private List<DetailCategoryDto> detailCategory = null;
 
-  public static final String JSON_PROPERTY_TP_INFO = "tpInfo";
-  private TpInfo tpInfo;
+  public static final String JSON_PROPERTY_ARTICLE_SOURCE = "articleSource";
+  private String articleSource;
+
+  public static final String JSON_PROPERTY_ARTICLE_LINK = "articleLink";
+  private String articleLink;
 
   public ArticleExtDto() { 
   }
@@ -393,30 +396,57 @@ public class ArticleExtDto {
   }
 
 
-  public ArticleExtDto tpInfo(TpInfo tpInfo) {
+  public ArticleExtDto articleSource(String articleSource) {
     
-    this.tpInfo = tpInfo;
+    this.articleSource = articleSource;
     return this;
   }
 
    /**
-   * Get tpInfo
-   * @return tpInfo
+   * Get articleSource
+   * @return articleSource
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TP_INFO)
+  @JsonProperty(JSON_PROPERTY_ARTICLE_SOURCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public TpInfo getTpInfo() {
-    return tpInfo;
+  public String getArticleSource() {
+    return articleSource;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TP_INFO)
+  @JsonProperty(JSON_PROPERTY_ARTICLE_SOURCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTpInfo(TpInfo tpInfo) {
-    this.tpInfo = tpInfo;
+  public void setArticleSource(String articleSource) {
+    this.articleSource = articleSource;
+  }
+
+
+  public ArticleExtDto articleLink(String articleLink) {
+    
+    this.articleLink = articleLink;
+    return this;
+  }
+
+   /**
+   * Get articleLink
+   * @return articleLink
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ARTICLE_LINK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getArticleLink() {
+    return articleLink;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ARTICLE_LINK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setArticleLink(String articleLink) {
+    this.articleLink = articleLink;
   }
 
 
@@ -440,12 +470,13 @@ public class ArticleExtDto {
         Objects.equals(this.constructionFee, articleExtDto.constructionFee) &&
         Objects.equals(this.author, articleExtDto.author) &&
         Objects.equals(this.detailCategory, articleExtDto.detailCategory) &&
-        Objects.equals(this.tpInfo, articleExtDto.tpInfo);
+        Objects.equals(this.articleSource, articleExtDto.articleSource) &&
+        Objects.equals(this.articleLink, articleExtDto.articleLink);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(apartmentLayout, size, decorationType, communityName, decorationMethod, designType, designFee, materialFee, constructionFee, author, detailCategory, tpInfo);
+    return Objects.hash(apartmentLayout, size, decorationType, communityName, decorationMethod, designType, designFee, materialFee, constructionFee, author, detailCategory, articleSource, articleLink);
   }
 
   @Override
@@ -463,7 +494,8 @@ public class ArticleExtDto {
     sb.append("    constructionFee: ").append(toIndentedString(constructionFee)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    detailCategory: ").append(toIndentedString(detailCategory)).append("\n");
-    sb.append("    tpInfo: ").append(toIndentedString(tpInfo)).append("\n");
+    sb.append("    articleSource: ").append(toIndentedString(articleSource)).append("\n");
+    sb.append("    articleLink: ").append(toIndentedString(articleLink)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -24,10 +24,14 @@ import com.baidu.dev2.api.sdk.platproduct.model.GetProductDetailRequestWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.GetProductDetailResponseWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.GetProductListRequestWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.GetProductListResponseWrapper;
+import com.baidu.dev2.api.sdk.platproduct.model.GetProductSkusRequestWrapper;
+import com.baidu.dev2.api.sdk.platproduct.model.GetProductSkusResponseWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.ModOnlineStatusRequestWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.ModOnlineStatusResponseWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.SaveOrUpdateProductRequestWrapper;
 import com.baidu.dev2.api.sdk.platproduct.model.SaveOrUpdateProductResponseWrapper;
+import com.baidu.dev2.api.sdk.platproduct.model.UpdateStockRequestWrapper;
+import com.baidu.dev2.api.sdk.platproduct.model.UpdateStockResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -229,6 +233,63 @@ public class PlatProductService {
   /**
    * 
    * 
+   * @param getProductSkusRequestWrapper  (required)
+   * @return GetProductSkusResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetProductSkusResponseWrapper getProductSkus(GetProductSkusRequestWrapper getProductSkusRequestWrapper) throws ApiException {
+    Object localVarPostBody = getProductSkusRequestWrapper;
+    
+    // verify the required parameter 'getProductSkusRequestWrapper' is set
+    if (getProductSkusRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getProductSkusRequestWrapper' when calling getProductSkus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/PlatProductService/getProductSkus";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetProductSkusResponseWrapper> localVarReturnType = new TypeReference<GetProductSkusResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
    * @param modOnlineStatusRequestWrapper  (required)
    * @return ModOnlineStatusResponseWrapper
    * @throws ApiException if fails to make API call
@@ -325,6 +386,63 @@ public class PlatProductService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<SaveOrUpdateProductResponseWrapper> localVarReturnType = new TypeReference<SaveOrUpdateProductResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param updateStockRequestWrapper  (required)
+   * @return UpdateStockResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public UpdateStockResponseWrapper updateStock(UpdateStockRequestWrapper updateStockRequestWrapper) throws ApiException {
+    Object localVarPostBody = updateStockRequestWrapper;
+    
+    // verify the required parameter 'updateStockRequestWrapper' is set
+    if (updateStockRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'updateStockRequestWrapper' when calling updateStock");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/PlatProductService/updateStock";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<UpdateStockResponseWrapper> localVarReturnType = new TypeReference<UpdateStockResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

@@ -89,6 +89,7 @@ class AccountFeedType(ModelNormal):
             'valid_flows': ([int],),  # noqa: E501
             'cid': (int,),  # noqa: E501
             'budget_offline_time': ([dict],),  # noqa: E501
+            'lice_name': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +107,7 @@ class AccountFeedType(ModelNormal):
         'valid_flows': 'validFlows',  # noqa: E501
         'cid': 'cid',  # noqa: E501
         'budget_offline_time': 'budgetOfflineTime',  # noqa: E501
+        'lice_name': 'liceName',  # noqa: E501
     }
 
     read_only_vars = {
@@ -158,6 +160,7 @@ class AccountFeedType(ModelNormal):
             valid_flows ([int]): [optional]  # noqa: E501
             cid (int): [optional]  # noqa: E501
             budget_offline_time ([dict]): [optional]  # noqa: E501
+            lice_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -248,6 +251,7 @@ class AccountFeedType(ModelNormal):
             valid_flows ([int]): [optional]  # noqa: E501
             cid (int): [optional]  # noqa: E501
             budget_offline_time ([dict]): [optional]  # noqa: E501
+            lice_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

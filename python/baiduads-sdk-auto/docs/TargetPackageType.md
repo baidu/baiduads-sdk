@@ -31,6 +31,12 @@ Name | Type | Description | Notes
 **unbind_shared_budget_info** | [**[UnbindSharedBudgetInfo]**](UnbindSharedBudgetInfo.md) |  | [optional] 
 **shared_budget_id** | **int** |  | [optional] 
 **use_shared_budget** | **int** |  | [optional] 
+**trans_id** | **int** |  | [optional] 
+**target_roi_ratio** | **float** |  | [optional] 
+**trans_asset** | **int** |  | [optional] 
+**asset_type** | **[int]** |  | [optional] 
+**trans_asset_id** | **int** |  | [optional] 
+**trans_asset_info** | [**TransAssetInfo**](TransAssetInfo.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

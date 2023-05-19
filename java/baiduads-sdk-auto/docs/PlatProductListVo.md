@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **thumbnail** | **String** |  |  [optional]
 **spuState** | **Integer** |  |  [optional]
 **onShelf** | **Integer** |  |  [optional]
+**auditReason** | [**PlatAuditReasonVo**](PlatAuditReasonVo.md) |  |  [optional]
 **restStock** | **Long** |  |  [optional]
 **realSale** | **Long** |  |  [optional]
 **price** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
@@ -26,6 +27,10 @@ Name | Type | Description | Notes
 **sendExchangeCode** | **Integer** |  |  [optional]
 **webAppUrl** | **String** |  |  [optional]
 **rank** | **Long** |  |  [optional]
+**onlineSpuState** | **Integer** |  |  [optional]
+**onShelfAuditFlag** | **Boolean** |  |  [optional]
+**sendTime** | **String** |  |  [optional]
+**refuseTime** | **String** |  |  [optional]
 
 
 

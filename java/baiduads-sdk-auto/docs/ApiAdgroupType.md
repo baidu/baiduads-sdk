@@ -31,8 +31,6 @@ Name | Type | Description | Notes
 **mobileTrackParam** | **String** |  |  [optional]
 **mobileTrackTemplate** | **String** |  |  [optional]
 **creativeTextOptimizationStatus** | **Boolean** |  |  [optional]
-**knowledgeTextStatus** | **Boolean** |  |  [optional]
-**jimuyuContentStatus** | **Boolean** |  |  [optional]
 
 
 

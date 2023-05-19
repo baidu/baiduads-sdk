@@ -130,6 +130,9 @@ class ApiCampaignType(ModelNormal):
             'shared_budget_name': (str,),  # noqa: E501
             'shared_budget': (float,),  # noqa: E501
             'budget_type': (int,),  # noqa: E501
+            'catalog_id': (int,),  # noqa: E501
+            'trans_asset': (int,),  # noqa: E501
+            'trans_asset_id': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -174,6 +177,9 @@ class ApiCampaignType(ModelNormal):
         'shared_budget_name': 'sharedBudgetName',  # noqa: E501
         'shared_budget': 'sharedBudget',  # noqa: E501
         'budget_type': 'budgetType',  # noqa: E501
+        'catalog_id': 'catalogId',  # noqa: E501
+        'trans_asset': 'transAsset',  # noqa: E501
+        'trans_asset_id': 'transAssetId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -253,6 +259,9 @@ class ApiCampaignType(ModelNormal):
             shared_budget_name (str): [optional]  # noqa: E501
             shared_budget (float): [optional]  # noqa: E501
             budget_type (int): [optional]  # noqa: E501
+            catalog_id (int): [optional]  # noqa: E501
+            trans_asset (int): [optional]  # noqa: E501
+            trans_asset_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -370,6 +379,9 @@ class ApiCampaignType(ModelNormal):
             shared_budget_name (str): [optional]  # noqa: E501
             shared_budget (float): [optional]  # noqa: E501
             budget_type (int): [optional]  # noqa: E501
+            catalog_id (int): [optional]  # noqa: E501
+            trans_asset (int): [optional]  # noqa: E501
+            trans_asset_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

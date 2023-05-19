@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **validFlows** | **List&lt;Integer&gt;** |  |  [optional]
 **cid** | **Long** |  |  [optional]
 **budgetOfflineTime** | [**List&lt;java.util.Map&gt;**](java.util.Map.md) |  |  [optional]
+**liceName** | **String** |  |  [optional]
 
 
 

@@ -90,7 +90,6 @@ class PlatProductSkuVo(ModelNormal):
         return {
             'sku_id': (int,),  # noqa: E501
             'sale_price': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'estimated_price': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'weight': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'stock': (int,),  # noqa: E501
             'locked_stock': (int,),  # noqa: E501
@@ -102,6 +101,7 @@ class PlatProductSkuVo(ModelNormal):
             'sku_code': (str,),  # noqa: E501
             'sku_ext_name': (str,),  # noqa: E501
             'exchange_code': (ProductExchangeCodeVo,),  # noqa: E501
+            'outer_price': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -112,7 +112,6 @@ class PlatProductSkuVo(ModelNormal):
     attribute_map = {
         'sku_id': 'skuId',  # noqa: E501
         'sale_price': 'salePrice',  # noqa: E501
-        'estimated_price': 'estimatedPrice',  # noqa: E501
         'weight': 'weight',  # noqa: E501
         'stock': 'stock',  # noqa: E501
         'locked_stock': 'lockedStock',  # noqa: E501
@@ -124,6 +123,7 @@ class PlatProductSkuVo(ModelNormal):
         'sku_code': 'skuCode',  # noqa: E501
         'sku_ext_name': 'skuExtName',  # noqa: E501
         'exchange_code': 'exchangeCode',  # noqa: E501
+        'outer_price': 'outerPrice',  # noqa: E501
     }
 
     read_only_vars = {
@@ -169,7 +169,6 @@ class PlatProductSkuVo(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             sku_id (int): [optional]  # noqa: E501
             sale_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            estimated_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             weight (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             stock (int): [optional]  # noqa: E501
             locked_stock (int): [optional]  # noqa: E501
@@ -181,6 +180,7 @@ class PlatProductSkuVo(ModelNormal):
             sku_code (str): [optional]  # noqa: E501
             sku_ext_name (str): [optional]  # noqa: E501
             exchange_code (ProductExchangeCodeVo): [optional]  # noqa: E501
+            outer_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -264,7 +264,6 @@ class PlatProductSkuVo(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             sku_id (int): [optional]  # noqa: E501
             sale_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            estimated_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             weight (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             stock (int): [optional]  # noqa: E501
             locked_stock (int): [optional]  # noqa: E501
@@ -276,6 +275,7 @@ class PlatProductSkuVo(ModelNormal):
             sku_code (str): [optional]  # noqa: E501
             sku_ext_name (str): [optional]  # noqa: E501
             exchange_code (ProductExchangeCodeVo): [optional]  # noqa: E501
+            outer_price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

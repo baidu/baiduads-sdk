@@ -34,6 +34,7 @@ from baiduads.ocpc.model.package_query_request import PackageQueryRequest
 from baiduads.ocpc.model.target_package_bind_info import TargetPackageBindInfo
 from baiduads.ocpc.model.target_package_dataflow_info import TargetPackageDataflowInfo
 from baiduads.ocpc.model.target_package_type import TargetPackageType
+from baiduads.ocpc.model.trans_asset_info import TransAssetInfo
 from baiduads.ocpc.model.unbind_shared_budget_info import UnbindSharedBudgetInfo
 from baiduads.ocpc.model.update_target_package_request_wrapper import UpdateTargetPackageRequestWrapper
 from baiduads.ocpc.model.update_target_package_response_wrapper import UpdateTargetPackageResponseWrapper

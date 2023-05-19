@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.platproduct.model.PlatProductDeliveryConfigVo;
 import com.baidu.dev2.api.sdk.platproduct.model.PlatProductSkuVo;
+import com.baidu.dev2.api.sdk.platproduct.model.ProductBookPriceVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductCategoryVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductImageVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductSpuAttributeVo;
@@ -46,6 +47,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductDetailVo.JSON_PROPERTY_SPU_STATE,
   PlatProductDetailVo.JSON_PROPERTY_CATEGORY,
   PlatProductDetailVo.JSON_PROPERTY_ATTRIBUTES,
+  PlatProductDetailVo.JSON_PROPERTY_SPECIFICATION_TYPE,
   PlatProductDetailVo.JSON_PROPERTY_SUPPORT_PAY_TYPE,
   PlatProductDetailVo.JSON_PROPERTY_SPECIFICATIONS,
   PlatProductDetailVo.JSON_PROPERTY_SKU_LIST,
@@ -65,7 +67,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductDetailVo.JSON_PROPERTY_SERVICE_ITEM,
   PlatProductDetailVo.JSON_PROPERTY_LIMIT_STOCK,
   PlatProductDetailVo.JSON_PROPERTY_SHOP_BRAND_NAME,
-  PlatProductDetailVo.JSON_PROPERTY_SHOP_BRAND_ID
+  PlatProductDetailVo.JSON_PROPERTY_SHOP_BRAND_ID,
+  PlatProductDetailVo.JSON_PROPERTY_SPU_SETTLE_TYPE,
+  PlatProductDetailVo.JSON_PROPERTY_IS_USE_PRODUCT_BRAND,
+  PlatProductDetailVo.JSON_PROPERTY_DOOR_TIME,
+  PlatProductDetailVo.JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO
 })
 @JsonTypeName("PlatProductDetailVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -99,6 +105,9 @@ public class PlatProductDetailVo {
 
   public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
   private List<ProductSpuAttributeVo> attributes = null;
+
+  public static final String JSON_PROPERTY_SPECIFICATION_TYPE = "specificationType";
+  private Integer specificationType;
 
   public static final String JSON_PROPERTY_SUPPORT_PAY_TYPE = "supportPayType";
   private Integer supportPayType;
@@ -159,6 +168,18 @@ public class PlatProductDetailVo {
 
   public static final String JSON_PROPERTY_SHOP_BRAND_ID = "shopBrandId";
   private Long shopBrandId;
+
+  public static final String JSON_PROPERTY_SPU_SETTLE_TYPE = "spuSettleType";
+  private Integer spuSettleType;
+
+  public static final String JSON_PROPERTY_IS_USE_PRODUCT_BRAND = "isUseProductBrand";
+  private Boolean isUseProductBrand;
+
+  public static final String JSON_PROPERTY_DOOR_TIME = "doorTime";
+  private Integer doorTime;
+
+  public static final String JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO = "productBookPriceVo";
+  private ProductBookPriceVo productBookPriceVo;
 
   public PlatProductDetailVo() { 
   }
@@ -446,6 +467,33 @@ public class PlatProductDetailVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAttributes(List<ProductSpuAttributeVo> attributes) {
     this.attributes = attributes;
+  }
+
+
+  public PlatProductDetailVo specificationType(Integer specificationType) {
+    
+    this.specificationType = specificationType;
+    return this;
+  }
+
+   /**
+   * Get specificationType
+   * @return specificationType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SPECIFICATION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSpecificationType() {
+    return specificationType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SPECIFICATION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSpecificationType(Integer specificationType) {
+    this.specificationType = specificationType;
   }
 
 
@@ -1029,6 +1077,114 @@ public class PlatProductDetailVo {
   }
 
 
+  public PlatProductDetailVo spuSettleType(Integer spuSettleType) {
+    
+    this.spuSettleType = spuSettleType;
+    return this;
+  }
+
+   /**
+   * Get spuSettleType
+   * @return spuSettleType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SPU_SETTLE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSpuSettleType() {
+    return spuSettleType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SPU_SETTLE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSpuSettleType(Integer spuSettleType) {
+    this.spuSettleType = spuSettleType;
+  }
+
+
+  public PlatProductDetailVo isUseProductBrand(Boolean isUseProductBrand) {
+    
+    this.isUseProductBrand = isUseProductBrand;
+    return this;
+  }
+
+   /**
+   * Get isUseProductBrand
+   * @return isUseProductBrand
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_IS_USE_PRODUCT_BRAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getIsUseProductBrand() {
+    return isUseProductBrand;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_IS_USE_PRODUCT_BRAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setIsUseProductBrand(Boolean isUseProductBrand) {
+    this.isUseProductBrand = isUseProductBrand;
+  }
+
+
+  public PlatProductDetailVo doorTime(Integer doorTime) {
+    
+    this.doorTime = doorTime;
+    return this;
+  }
+
+   /**
+   * Get doorTime
+   * @return doorTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_DOOR_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getDoorTime() {
+    return doorTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_DOOR_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setDoorTime(Integer doorTime) {
+    this.doorTime = doorTime;
+  }
+
+
+  public PlatProductDetailVo productBookPriceVo(ProductBookPriceVo productBookPriceVo) {
+    
+    this.productBookPriceVo = productBookPriceVo;
+    return this;
+  }
+
+   /**
+   * Get productBookPriceVo
+   * @return productBookPriceVo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public ProductBookPriceVo getProductBookPriceVo() {
+    return productBookPriceVo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setProductBookPriceVo(ProductBookPriceVo productBookPriceVo) {
+    this.productBookPriceVo = productBookPriceVo;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1048,6 +1204,7 @@ public class PlatProductDetailVo {
         Objects.equals(this.spuState, platProductDetailVo.spuState) &&
         Objects.equals(this.category, platProductDetailVo.category) &&
         Objects.equals(this.attributes, platProductDetailVo.attributes) &&
+        Objects.equals(this.specificationType, platProductDetailVo.specificationType) &&
         Objects.equals(this.supportPayType, platProductDetailVo.supportPayType) &&
         Objects.equals(this.specifications, platProductDetailVo.specifications) &&
         Objects.equals(this.skuList, platProductDetailVo.skuList) &&
@@ -1067,12 +1224,16 @@ public class PlatProductDetailVo {
         Objects.equals(this.serviceItem, platProductDetailVo.serviceItem) &&
         Objects.equals(this.limitStock, platProductDetailVo.limitStock) &&
         Objects.equals(this.shopBrandName, platProductDetailVo.shopBrandName) &&
-        Objects.equals(this.shopBrandId, platProductDetailVo.shopBrandId);
+        Objects.equals(this.shopBrandId, platProductDetailVo.shopBrandId) &&
+        Objects.equals(this.spuSettleType, platProductDetailVo.spuSettleType) &&
+        Objects.equals(this.isUseProductBrand, platProductDetailVo.isUseProductBrand) &&
+        Objects.equals(this.doorTime, platProductDetailVo.doorTime) &&
+        Objects.equals(this.productBookPriceVo, platProductDetailVo.productBookPriceVo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(spuId, appId, subAppId, shopId, name, subtitle, type, spuState, category, attributes, supportPayType, specifications, skuList, virtualCodeStartTime, virtualCodeEndTime, imageAlbum, description, quotation, serviceProcess, serviceArea, freightTemplateId, deliveryConfig, price, applyShopIds, sendExchangeCode, exchangeCodeDesc, serviceItem, limitStock, shopBrandName, shopBrandId);
+    return Objects.hash(spuId, appId, subAppId, shopId, name, subtitle, type, spuState, category, attributes, specificationType, supportPayType, specifications, skuList, virtualCodeStartTime, virtualCodeEndTime, imageAlbum, description, quotation, serviceProcess, serviceArea, freightTemplateId, deliveryConfig, price, applyShopIds, sendExchangeCode, exchangeCodeDesc, serviceItem, limitStock, shopBrandName, shopBrandId, spuSettleType, isUseProductBrand, doorTime, productBookPriceVo);
   }
 
   @Override
@@ -1089,6 +1250,7 @@ public class PlatProductDetailVo {
     sb.append("    spuState: ").append(toIndentedString(spuState)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    attributes: ").append(toIndentedString(attributes)).append("\n");
+    sb.append("    specificationType: ").append(toIndentedString(specificationType)).append("\n");
     sb.append("    supportPayType: ").append(toIndentedString(supportPayType)).append("\n");
     sb.append("    specifications: ").append(toIndentedString(specifications)).append("\n");
     sb.append("    skuList: ").append(toIndentedString(skuList)).append("\n");
@@ -1109,6 +1271,10 @@ public class PlatProductDetailVo {
     sb.append("    limitStock: ").append(toIndentedString(limitStock)).append("\n");
     sb.append("    shopBrandName: ").append(toIndentedString(shopBrandName)).append("\n");
     sb.append("    shopBrandId: ").append(toIndentedString(shopBrandId)).append("\n");
+    sb.append("    spuSettleType: ").append(toIndentedString(spuSettleType)).append("\n");
+    sb.append("    isUseProductBrand: ").append(toIndentedString(isUseProductBrand)).append("\n");
+    sb.append("    doorTime: ").append(toIndentedString(doorTime)).append("\n");
+    sb.append("    productBookPriceVo: ").append(toIndentedString(productBookPriceVo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

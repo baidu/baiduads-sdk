@@ -33,6 +33,8 @@ from baiduads.advice.model.budget_adjust_time_type import BudgetAdjustTimeType
 from baiduads.advice.model.business_label_accept_info import BusinessLabelAcceptInfo
 from baiduads.advice.model.business_label_type import BusinessLabelType
 from baiduads.advice.model.campaign_budget_type import CampaignBudgetType
+from baiduads.advice.model.campaign_equipment_accept_info import CampaignEquipmentAcceptInfo
+from baiduads.advice.model.campaign_equipment_type import CampaignEquipmentType
 from baiduads.advice.model.campaign_est_budget_accept_info import CampaignEstBudgetAcceptInfo
 from baiduads.advice.model.campaign_est_budget_type import CampaignEstBudgetType
 from baiduads.advice.model.campaign_info import CampaignInfo
@@ -59,6 +61,7 @@ from baiduads.advice.model.feed_plugin_type import FeedPluginType
 from baiduads.advice.model.field_filter import FieldFilter
 from baiduads.advice.model.industry_url_accept_info import IndustryUrlAcceptInfo
 from baiduads.advice.model.industry_url_type import IndustryUrlType
+from baiduads.advice.model.issue_suggestion import IssueSuggestion
 from baiduads.advice.model.key_word_type import KeyWordType
 from baiduads.advice.model.keyword_accept_info import KeywordAcceptInfo
 from baiduads.advice.model.keyword_uncorrelated_accept_info import KeywordUncorrelatedAcceptInfo
@@ -66,7 +69,6 @@ from baiduads.advice.model.land_page_quality_api_type import LandPageQualityApiT
 from baiduads.advice.model.landing_page_correlation_info import LandingPageCorrelationInfo
 from baiduads.advice.model.landing_page_info import LandingPageInfo
 from baiduads.advice.model.landing_page_type import LandingPageType
-from baiduads.advice.model.material_offline_reason import MaterialOfflineReason
 from baiduads.advice.model.ngt_word_accept_info import NgtWordAcceptInfo
 from baiduads.advice.model.ngt_word_type import NgtWordType
 from baiduads.advice.model.ocpc_bid_advice_effect import OcpcBidAdviceEffect

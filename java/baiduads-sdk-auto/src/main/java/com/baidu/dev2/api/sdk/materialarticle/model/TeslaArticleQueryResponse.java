@@ -16,6 +16,7 @@ import java.util.Arrays;
 import com.baidu.dev2.api.sdk.materialarticle.model.ArticleExtDto;
 import com.baidu.dev2.api.sdk.materialarticle.model.ArticleImage;
 import com.baidu.dev2.api.sdk.materialarticle.model.BindMaterialDto;
+import com.baidu.dev2.api.sdk.materialarticle.model.ContentQualityDetail;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -52,7 +53,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TeslaArticleQueryResponse.JSON_PROPERTY_MATERIAL_TYPE,
   TeslaArticleQueryResponse.JSON_PROPERTY_EXT,
   TeslaArticleQueryResponse.JSON_PROPERTY_BIND_MATERIAL,
-  TeslaArticleQueryResponse.JSON_PROPERTY_REAUDIT_STATUS
+  TeslaArticleQueryResponse.JSON_PROPERTY_REAUDIT_STATUS,
+  TeslaArticleQueryResponse.JSON_PROPERTY_CONTENT_QUALITY_STATUS,
+  TeslaArticleQueryResponse.JSON_PROPERTY_CONTENT_QUALITY_DETAIL,
+  TeslaArticleQueryResponse.JSON_PROPERTY_HUMAN_AUDIT
 })
 @JsonTypeName("TeslaArticleQueryResponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -119,6 +123,15 @@ public class TeslaArticleQueryResponse {
 
   public static final String JSON_PROPERTY_REAUDIT_STATUS = "reauditStatus";
   private Integer reauditStatus;
+
+  public static final String JSON_PROPERTY_CONTENT_QUALITY_STATUS = "contentQualityStatus";
+  private Integer contentQualityStatus;
+
+  public static final String JSON_PROPERTY_CONTENT_QUALITY_DETAIL = "contentQualityDetail";
+  private ContentQualityDetail contentQualityDetail;
+
+  public static final String JSON_PROPERTY_HUMAN_AUDIT = "humanAudit";
+  private Integer humanAudit;
 
   public TeslaArticleQueryResponse() { 
   }
@@ -714,6 +727,87 @@ public class TeslaArticleQueryResponse {
   }
 
 
+  public TeslaArticleQueryResponse contentQualityStatus(Integer contentQualityStatus) {
+    
+    this.contentQualityStatus = contentQualityStatus;
+    return this;
+  }
+
+   /**
+   * Get contentQualityStatus
+   * @return contentQualityStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getContentQualityStatus() {
+    return contentQualityStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContentQualityStatus(Integer contentQualityStatus) {
+    this.contentQualityStatus = contentQualityStatus;
+  }
+
+
+  public TeslaArticleQueryResponse contentQualityDetail(ContentQualityDetail contentQualityDetail) {
+    
+    this.contentQualityDetail = contentQualityDetail;
+    return this;
+  }
+
+   /**
+   * Get contentQualityDetail
+   * @return contentQualityDetail
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public ContentQualityDetail getContentQualityDetail() {
+    return contentQualityDetail;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContentQualityDetail(ContentQualityDetail contentQualityDetail) {
+    this.contentQualityDetail = contentQualityDetail;
+  }
+
+
+  public TeslaArticleQueryResponse humanAudit(Integer humanAudit) {
+    
+    this.humanAudit = humanAudit;
+    return this;
+  }
+
+   /**
+   * Get humanAudit
+   * @return humanAudit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_HUMAN_AUDIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getHumanAudit() {
+    return humanAudit;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_HUMAN_AUDIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setHumanAudit(Integer humanAudit) {
+    this.humanAudit = humanAudit;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -743,12 +837,15 @@ public class TeslaArticleQueryResponse {
         Objects.equals(this.materialType, teslaArticleQueryResponse.materialType) &&
         Objects.equals(this.ext, teslaArticleQueryResponse.ext) &&
         Objects.equals(this.bindMaterial, teslaArticleQueryResponse.bindMaterial) &&
-        Objects.equals(this.reauditStatus, teslaArticleQueryResponse.reauditStatus);
+        Objects.equals(this.reauditStatus, teslaArticleQueryResponse.reauditStatus) &&
+        Objects.equals(this.contentQualityStatus, teslaArticleQueryResponse.contentQualityStatus) &&
+        Objects.equals(this.contentQualityDetail, teslaArticleQueryResponse.contentQualityDetail) &&
+        Objects.equals(this.humanAudit, teslaArticleQueryResponse.humanAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(articleId, categoryId, title, image, summary, status, auditVersion, auditPerson, auditRemark, auditTime, createTime, updateTime, categoryName, content, tags, rank, tradeId, materialType, ext, bindMaterial, reauditStatus);
+    return Objects.hash(articleId, categoryId, title, image, summary, status, auditVersion, auditPerson, auditRemark, auditTime, createTime, updateTime, categoryName, content, tags, rank, tradeId, materialType, ext, bindMaterial, reauditStatus, contentQualityStatus, contentQualityDetail, humanAudit);
   }
 
   @Override
@@ -776,6 +873,9 @@ public class TeslaArticleQueryResponse {
     sb.append("    ext: ").append(toIndentedString(ext)).append("\n");
     sb.append("    bindMaterial: ").append(toIndentedString(bindMaterial)).append("\n");
     sb.append("    reauditStatus: ").append(toIndentedString(reauditStatus)).append("\n");
+    sb.append("    contentQualityStatus: ").append(toIndentedString(contentQualityStatus)).append("\n");
+    sb.append("    contentQualityDetail: ").append(toIndentedString(contentQualityDetail)).append("\n");
+    sb.append("    humanAudit: ").append(toIndentedString(humanAudit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

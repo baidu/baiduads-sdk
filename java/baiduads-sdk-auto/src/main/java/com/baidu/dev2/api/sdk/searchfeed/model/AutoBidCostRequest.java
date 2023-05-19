@@ -45,7 +45,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AutoBidCostRequest.JSON_PROPERTY_NEW_INTERESTS,
   AutoBidCostRequest.JSON_PROPERTY_CAMPAIGN_FEED_ID,
   AutoBidCostRequest.JSON_PROPERTY_FTYPES,
-  AutoBidCostRequest.JSON_PROPERTY_KEYWORDS_EXTEND
+  AutoBidCostRequest.JSON_PROPERTY_KEYWORDS_EXTEND,
+  AutoBidCostRequest.JSON_PROPERTY_LEVEL_TYPE,
+  AutoBidCostRequest.JSON_PROPERTY_WBUDGET,
+  AutoBidCostRequest.JSON_PROPERTY_APK_NAME
 })
 @JsonTypeName("AutoBidCostRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -97,6 +100,15 @@ public class AutoBidCostRequest {
 
   public static final String JSON_PROPERTY_KEYWORDS_EXTEND = "keywordsExtend";
   private Boolean keywordsExtend;
+
+  public static final String JSON_PROPERTY_LEVEL_TYPE = "levelType";
+  private Integer levelType;
+
+  public static final String JSON_PROPERTY_WBUDGET = "wbudget";
+  private Double wbudget;
+
+  public static final String JSON_PROPERTY_APK_NAME = "apkName";
+  private String apkName;
 
   public AutoBidCostRequest() { 
   }
@@ -541,6 +553,87 @@ public class AutoBidCostRequest {
   }
 
 
+  public AutoBidCostRequest levelType(Integer levelType) {
+    
+    this.levelType = levelType;
+    return this;
+  }
+
+   /**
+   * Get levelType
+   * @return levelType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_LEVEL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getLevelType() {
+    return levelType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_LEVEL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setLevelType(Integer levelType) {
+    this.levelType = levelType;
+  }
+
+
+  public AutoBidCostRequest wbudget(Double wbudget) {
+    
+    this.wbudget = wbudget;
+    return this;
+  }
+
+   /**
+   * Get wbudget
+   * @return wbudget
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_WBUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getWbudget() {
+    return wbudget;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_WBUDGET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setWbudget(Double wbudget) {
+    this.wbudget = wbudget;
+  }
+
+
+  public AutoBidCostRequest apkName(String apkName) {
+    
+    this.apkName = apkName;
+    return this;
+  }
+
+   /**
+   * Get apkName
+   * @return apkName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_APK_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getApkName() {
+    return apkName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_APK_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setApkName(String apkName) {
+    this.apkName = apkName;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -565,12 +658,15 @@ public class AutoBidCostRequest {
         Objects.equals(this.newInterests, autoBidCostRequest.newInterests) &&
         Objects.equals(this.campaignFeedId, autoBidCostRequest.campaignFeedId) &&
         Objects.equals(this.ftypes, autoBidCostRequest.ftypes) &&
-        Objects.equals(this.keywordsExtend, autoBidCostRequest.keywordsExtend);
+        Objects.equals(this.keywordsExtend, autoBidCostRequest.keywordsExtend) &&
+        Objects.equals(this.levelType, autoBidCostRequest.levelType) &&
+        Objects.equals(this.wbudget, autoBidCostRequest.wbudget) &&
+        Objects.equals(this.apkName, autoBidCostRequest.apkName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(age, sex, education, region, device, bidtype, lifeStage, keywords, crowd, ocpc, mediaCategoriesBindType, mediaidsBindType, newInterests, campaignFeedId, ftypes, keywordsExtend);
+    return Objects.hash(age, sex, education, region, device, bidtype, lifeStage, keywords, crowd, ocpc, mediaCategoriesBindType, mediaidsBindType, newInterests, campaignFeedId, ftypes, keywordsExtend, levelType, wbudget, apkName);
   }
 
   @Override
@@ -593,6 +689,9 @@ public class AutoBidCostRequest {
     sb.append("    campaignFeedId: ").append(toIndentedString(campaignFeedId)).append("\n");
     sb.append("    ftypes: ").append(toIndentedString(ftypes)).append("\n");
     sb.append("    keywordsExtend: ").append(toIndentedString(keywordsExtend)).append("\n");
+    sb.append("    levelType: ").append(toIndentedString(levelType)).append("\n");
+    sb.append("    wbudget: ").append(toIndentedString(wbudget)).append("\n");
+    sb.append("    apkName: ").append(toIndentedString(apkName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

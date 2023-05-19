@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.platproduct.model.PlatProductDeliveryConfigVo;
 import com.baidu.dev2.api.sdk.platproduct.model.PlatProductSkuVo;
+import com.baidu.dev2.api.sdk.platproduct.model.ProductBookPriceVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductImageVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductPersonalizedLabelVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductSpuAttributeVo;
@@ -61,7 +62,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductSaveRequest.JSON_PROPERTY_SUB_SHOP_IDS,
   PlatProductSaveRequest.JSON_PROPERTY_SEND_EXCHANGE_CODE,
   PlatProductSaveRequest.JSON_PROPERTY_SERVICE_ITEM,
-  PlatProductSaveRequest.JSON_PROPERTY_SHOP_BRAND_ID
+  PlatProductSaveRequest.JSON_PROPERTY_SHOP_BRAND_ID,
+  PlatProductSaveRequest.JSON_PROPERTY_SPU_SETTLE_TYPE,
+  PlatProductSaveRequest.JSON_PROPERTY_IS_USE_PRODUCT_BRAND,
+  PlatProductSaveRequest.JSON_PROPERTY_USE_RECOMMEND_NAME,
+  PlatProductSaveRequest.JSON_PROPERTY_DOOR_TIME,
+  PlatProductSaveRequest.JSON_PROPERTY_SAVE_TYPE,
+  PlatProductSaveRequest.JSON_PROPERTY_SUBMIT_VERSION,
+  PlatProductSaveRequest.JSON_PROPERTY_SPECIFICATION_TYPE,
+  PlatProductSaveRequest.JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO
 })
 @JsonTypeName("PlatProductSaveRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -143,6 +152,30 @@ public class PlatProductSaveRequest {
 
   public static final String JSON_PROPERTY_SHOP_BRAND_ID = "shopBrandId";
   private Long shopBrandId;
+
+  public static final String JSON_PROPERTY_SPU_SETTLE_TYPE = "spuSettleType";
+  private Integer spuSettleType;
+
+  public static final String JSON_PROPERTY_IS_USE_PRODUCT_BRAND = "isUseProductBrand";
+  private Boolean isUseProductBrand;
+
+  public static final String JSON_PROPERTY_USE_RECOMMEND_NAME = "useRecommendName";
+  private Integer useRecommendName;
+
+  public static final String JSON_PROPERTY_DOOR_TIME = "doorTime";
+  private Integer doorTime;
+
+  public static final String JSON_PROPERTY_SAVE_TYPE = "saveType";
+  private Integer saveType;
+
+  public static final String JSON_PROPERTY_SUBMIT_VERSION = "submitVersion";
+  private Integer submitVersion;
+
+  public static final String JSON_PROPERTY_SPECIFICATION_TYPE = "specificationType";
+  private Integer specificationType;
+
+  public static final String JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO = "productBookPriceVo";
+  private ProductBookPriceVo productBookPriceVo;
 
   public PlatProductSaveRequest() { 
   }
@@ -905,6 +938,222 @@ public class PlatProductSaveRequest {
   }
 
 
+  public PlatProductSaveRequest spuSettleType(Integer spuSettleType) {
+    
+    this.spuSettleType = spuSettleType;
+    return this;
+  }
+
+   /**
+   * Get spuSettleType
+   * @return spuSettleType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SPU_SETTLE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSpuSettleType() {
+    return spuSettleType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SPU_SETTLE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSpuSettleType(Integer spuSettleType) {
+    this.spuSettleType = spuSettleType;
+  }
+
+
+  public PlatProductSaveRequest isUseProductBrand(Boolean isUseProductBrand) {
+    
+    this.isUseProductBrand = isUseProductBrand;
+    return this;
+  }
+
+   /**
+   * Get isUseProductBrand
+   * @return isUseProductBrand
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_IS_USE_PRODUCT_BRAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getIsUseProductBrand() {
+    return isUseProductBrand;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_IS_USE_PRODUCT_BRAND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setIsUseProductBrand(Boolean isUseProductBrand) {
+    this.isUseProductBrand = isUseProductBrand;
+  }
+
+
+  public PlatProductSaveRequest useRecommendName(Integer useRecommendName) {
+    
+    this.useRecommendName = useRecommendName;
+    return this;
+  }
+
+   /**
+   * Get useRecommendName
+   * @return useRecommendName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_USE_RECOMMEND_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUseRecommendName() {
+    return useRecommendName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_USE_RECOMMEND_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUseRecommendName(Integer useRecommendName) {
+    this.useRecommendName = useRecommendName;
+  }
+
+
+  public PlatProductSaveRequest doorTime(Integer doorTime) {
+    
+    this.doorTime = doorTime;
+    return this;
+  }
+
+   /**
+   * Get doorTime
+   * @return doorTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_DOOR_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getDoorTime() {
+    return doorTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_DOOR_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setDoorTime(Integer doorTime) {
+    this.doorTime = doorTime;
+  }
+
+
+  public PlatProductSaveRequest saveType(Integer saveType) {
+    
+    this.saveType = saveType;
+    return this;
+  }
+
+   /**
+   * Get saveType
+   * @return saveType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SAVE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSaveType() {
+    return saveType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SAVE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSaveType(Integer saveType) {
+    this.saveType = saveType;
+  }
+
+
+  public PlatProductSaveRequest submitVersion(Integer submitVersion) {
+    
+    this.submitVersion = submitVersion;
+    return this;
+  }
+
+   /**
+   * Get submitVersion
+   * @return submitVersion
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SUBMIT_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSubmitVersion() {
+    return submitVersion;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SUBMIT_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSubmitVersion(Integer submitVersion) {
+    this.submitVersion = submitVersion;
+  }
+
+
+  public PlatProductSaveRequest specificationType(Integer specificationType) {
+    
+    this.specificationType = specificationType;
+    return this;
+  }
+
+   /**
+   * Get specificationType
+   * @return specificationType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SPECIFICATION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getSpecificationType() {
+    return specificationType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SPECIFICATION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSpecificationType(Integer specificationType) {
+    this.specificationType = specificationType;
+  }
+
+
+  public PlatProductSaveRequest productBookPriceVo(ProductBookPriceVo productBookPriceVo) {
+    
+    this.productBookPriceVo = productBookPriceVo;
+    return this;
+  }
+
+   /**
+   * Get productBookPriceVo
+   * @return productBookPriceVo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public ProductBookPriceVo getProductBookPriceVo() {
+    return productBookPriceVo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PRODUCT_BOOK_PRICE_VO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setProductBookPriceVo(ProductBookPriceVo productBookPriceVo) {
+    this.productBookPriceVo = productBookPriceVo;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -939,12 +1188,20 @@ public class PlatProductSaveRequest {
         Objects.equals(this.subShopIds, platProductSaveRequest.subShopIds) &&
         Objects.equals(this.sendExchangeCode, platProductSaveRequest.sendExchangeCode) &&
         Objects.equals(this.serviceItem, platProductSaveRequest.serviceItem) &&
-        Objects.equals(this.shopBrandId, platProductSaveRequest.shopBrandId);
+        Objects.equals(this.shopBrandId, platProductSaveRequest.shopBrandId) &&
+        Objects.equals(this.spuSettleType, platProductSaveRequest.spuSettleType) &&
+        Objects.equals(this.isUseProductBrand, platProductSaveRequest.isUseProductBrand) &&
+        Objects.equals(this.useRecommendName, platProductSaveRequest.useRecommendName) &&
+        Objects.equals(this.doorTime, platProductSaveRequest.doorTime) &&
+        Objects.equals(this.saveType, platProductSaveRequest.saveType) &&
+        Objects.equals(this.submitVersion, platProductSaveRequest.submitVersion) &&
+        Objects.equals(this.specificationType, platProductSaveRequest.specificationType) &&
+        Objects.equals(this.productBookPriceVo, platProductSaveRequest.productBookPriceVo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(spuUniqueId, appId, shopId, name, type, saveFlag, lastCategoryId, personalizedLabels, attributes, supportPayType, specifications, skuList, virtualCodeStartTime, virtualCodeEndTime, imageAlbum, description, quotation, serviceProcess, serviceArea, freightTemplateId, deliveryConfig, price, subShopIds, sendExchangeCode, serviceItem, shopBrandId);
+    return Objects.hash(spuUniqueId, appId, shopId, name, type, saveFlag, lastCategoryId, personalizedLabels, attributes, supportPayType, specifications, skuList, virtualCodeStartTime, virtualCodeEndTime, imageAlbum, description, quotation, serviceProcess, serviceArea, freightTemplateId, deliveryConfig, price, subShopIds, sendExchangeCode, serviceItem, shopBrandId, spuSettleType, isUseProductBrand, useRecommendName, doorTime, saveType, submitVersion, specificationType, productBookPriceVo);
   }
 
   @Override
@@ -977,6 +1234,14 @@ public class PlatProductSaveRequest {
     sb.append("    sendExchangeCode: ").append(toIndentedString(sendExchangeCode)).append("\n");
     sb.append("    serviceItem: ").append(toIndentedString(serviceItem)).append("\n");
     sb.append("    shopBrandId: ").append(toIndentedString(shopBrandId)).append("\n");
+    sb.append("    spuSettleType: ").append(toIndentedString(spuSettleType)).append("\n");
+    sb.append("    isUseProductBrand: ").append(toIndentedString(isUseProductBrand)).append("\n");
+    sb.append("    useRecommendName: ").append(toIndentedString(useRecommendName)).append("\n");
+    sb.append("    doorTime: ").append(toIndentedString(doorTime)).append("\n");
+    sb.append("    saveType: ").append(toIndentedString(saveType)).append("\n");
+    sb.append("    submitVersion: ").append(toIndentedString(submitVersion)).append("\n");
+    sb.append("    specificationType: ").append(toIndentedString(specificationType)).append("\n");
+    sb.append("    productBookPriceVo: ").append(toIndentedString(productBookPriceVo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

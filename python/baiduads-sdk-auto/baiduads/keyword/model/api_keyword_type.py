@@ -116,6 +116,7 @@ class ApiKeywordType(ModelNormal):
             'pc_track_param': (str,),  # noqa: E501
             'pc_track_template': (str,),  # noqa: E501
             'ulink': (str,),  # noqa: E501
+            'api_inefficient': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -154,6 +155,7 @@ class ApiKeywordType(ModelNormal):
         'pc_track_param': 'pcTrackParam',  # noqa: E501
         'pc_track_template': 'pcTrackTemplate',  # noqa: E501
         'ulink': 'ulink',  # noqa: E501
+        'api_inefficient': 'apiInefficient',  # noqa: E501
     }
 
     read_only_vars = {
@@ -227,6 +229,7 @@ class ApiKeywordType(ModelNormal):
             pc_track_param (str): [optional]  # noqa: E501
             pc_track_template (str): [optional]  # noqa: E501
             ulink (str): [optional]  # noqa: E501
+            api_inefficient (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -338,6 +341,7 @@ class ApiKeywordType(ModelNormal):
             pc_track_param (str): [optional]  # noqa: E501
             pc_track_template (str): [optional]  # noqa: E501
             ulink (str): [optional]  # noqa: E501
+            api_inefficient (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

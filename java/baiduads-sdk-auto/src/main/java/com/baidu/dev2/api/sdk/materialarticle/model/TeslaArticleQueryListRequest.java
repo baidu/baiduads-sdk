@@ -42,7 +42,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TeslaArticleQueryListRequest.JSON_PROPERTY_UPDATE_START_TIME,
   TeslaArticleQueryListRequest.JSON_PROPERTY_UPDATE_END_TIME,
   TeslaArticleQueryListRequest.JSON_PROPERTY_ARTICLE_ID_LIST_NOT_IN,
-  TeslaArticleQueryListRequest.JSON_PROPERTY_CONTENT_TYPE
+  TeslaArticleQueryListRequest.JSON_PROPERTY_CONTENT_TYPE,
+  TeslaArticleQueryListRequest.JSON_PROPERTY_CONTENT_QUALITY_STATUS
 })
 @JsonTypeName("TeslaArticleQueryListRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -85,6 +86,9 @@ public class TeslaArticleQueryListRequest {
 
   public static final String JSON_PROPERTY_CONTENT_TYPE = "contentType";
   private Integer contentType;
+
+  public static final String JSON_PROPERTY_CONTENT_QUALITY_STATUS = "contentQualityStatus";
+  private List<Integer> contentQualityStatus = null;
 
   public TeslaArticleQueryListRequest() { 
   }
@@ -480,6 +484,41 @@ public class TeslaArticleQueryListRequest {
   }
 
 
+  public TeslaArticleQueryListRequest contentQualityStatus(List<Integer> contentQualityStatus) {
+    
+    this.contentQualityStatus = contentQualityStatus;
+    return this;
+  }
+
+  public TeslaArticleQueryListRequest addContentQualityStatusItem(Integer contentQualityStatusItem) {
+    if (this.contentQualityStatus == null) {
+      this.contentQualityStatus = new ArrayList<>();
+    }
+    this.contentQualityStatus.add(contentQualityStatusItem);
+    return this;
+  }
+
+   /**
+   * Get contentQualityStatus
+   * @return contentQualityStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Integer> getContentQualityStatus() {
+    return contentQualityStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContentQualityStatus(List<Integer> contentQualityStatus) {
+    this.contentQualityStatus = contentQualityStatus;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -501,12 +540,13 @@ public class TeslaArticleQueryListRequest {
         Objects.equals(this.updateStartTime, teslaArticleQueryListRequest.updateStartTime) &&
         Objects.equals(this.updateEndTime, teslaArticleQueryListRequest.updateEndTime) &&
         Objects.equals(this.articleIdListNotIn, teslaArticleQueryListRequest.articleIdListNotIn) &&
-        Objects.equals(this.contentType, teslaArticleQueryListRequest.contentType);
+        Objects.equals(this.contentType, teslaArticleQueryListRequest.contentType) &&
+        Objects.equals(this.contentQualityStatus, teslaArticleQueryListRequest.contentQualityStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(articleIdList, categoryIdList, title, statusList, pageNum, pageSize, sortList, materialType, tradeId, updateStartTime, updateEndTime, articleIdListNotIn, contentType);
+    return Objects.hash(articleIdList, categoryIdList, title, statusList, pageNum, pageSize, sortList, materialType, tradeId, updateStartTime, updateEndTime, articleIdListNotIn, contentType, contentQualityStatus);
   }
 
   @Override
@@ -526,6 +566,7 @@ public class TeslaArticleQueryListRequest {
     sb.append("    updateEndTime: ").append(toIndentedString(updateEndTime)).append("\n");
     sb.append("    articleIdListNotIn: ").append(toIndentedString(articleIdListNotIn)).append("\n");
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+    sb.append("    contentQualityStatus: ").append(toIndentedString(contentQualityStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

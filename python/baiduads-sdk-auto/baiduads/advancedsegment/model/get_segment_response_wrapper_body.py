@@ -29,8 +29,8 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.advancedsegment.model.advanced_query_response import AdvancedQueryResponse
-    globals()['AdvancedQueryResponse'] = AdvancedQueryResponse
+    from baiduads.advancedsegment.model.segment_type_advanced_query_response import SegmentTypeAdvancedQueryResponse
+    globals()['SegmentTypeAdvancedQueryResponse'] = SegmentTypeAdvancedQueryResponse
 
 
 class GetSegmentResponseWrapperBody(ModelNormal):
@@ -86,7 +86,7 @@ class GetSegmentResponseWrapperBody(ModelNormal):
         """
         lazy_import()
         return {
-            'data': ([AdvancedQueryResponse],),  # noqa: E501
+            'data': ([SegmentTypeAdvancedQueryResponse],),  # noqa: E501
         }
 
     @cached_property
@@ -139,7 +139,7 @@ class GetSegmentResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([AdvancedQueryResponse]): [optional]  # noqa: E501
+            data ([SegmentTypeAdvancedQueryResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,7 +221,7 @@ class GetSegmentResponseWrapperBody(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            data ([AdvancedQueryResponse]): [optional]  # noqa: E501
+            data ([SegmentTypeAdvancedQueryResponse]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

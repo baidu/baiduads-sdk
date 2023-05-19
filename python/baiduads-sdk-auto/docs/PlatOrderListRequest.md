@@ -36,6 +36,8 @@ Name | Type | Description | Notes
 **click_ucid** | **str** |  | [optional] 
 **download_options** | **int** |  | [optional] 
 **pay_order_id** | **int** |  | [optional] 
+**start_update_time** | **str** |  | [optional] 
+**end_update_time** | **str** |  | [optional] 
 **page_size** | **int** |  | [optional] 
 **page_num** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

@@ -65,7 +65,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   NoticeReponse.JSON_PROPERTY_ADGROUP_NAME,
   NoticeReponse.JSON_PROPERTY_SITE_NAME,
   NoticeReponse.JSON_PROPERTY_SITE_URL,
-  NoticeReponse.JSON_PROPERTY_PAGE_NAME
+  NoticeReponse.JSON_PROPERTY_PAGE_NAME,
+  NoticeReponse.JSON_PROPERTY_RETURN_CALL_URL,
+  NoticeReponse.JSON_PROPERTY_REFUND_SUPPORTIVE,
+  NoticeReponse.JSON_PROPERTY_REFUND_VIEW_URL
 })
 @JsonTypeName("NoticeReponse")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -186,6 +189,15 @@ public class NoticeReponse {
 
   public static final String JSON_PROPERTY_PAGE_NAME = "pageName";
   private String pageName;
+
+  public static final String JSON_PROPERTY_RETURN_CALL_URL = "returnCallUrl";
+  private String returnCallUrl;
+
+  public static final String JSON_PROPERTY_REFUND_SUPPORTIVE = "refundSupportive";
+  private String refundSupportive;
+
+  public static final String JSON_PROPERTY_REFUND_VIEW_URL = "refundViewUrl";
+  private String refundViewUrl;
 
   public NoticeReponse() { 
   }
@@ -1243,6 +1255,87 @@ public class NoticeReponse {
   }
 
 
+  public NoticeReponse returnCallUrl(String returnCallUrl) {
+    
+    this.returnCallUrl = returnCallUrl;
+    return this;
+  }
+
+   /**
+   * Get returnCallUrl
+   * @return returnCallUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_RETURN_CALL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getReturnCallUrl() {
+    return returnCallUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_RETURN_CALL_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setReturnCallUrl(String returnCallUrl) {
+    this.returnCallUrl = returnCallUrl;
+  }
+
+
+  public NoticeReponse refundSupportive(String refundSupportive) {
+    
+    this.refundSupportive = refundSupportive;
+    return this;
+  }
+
+   /**
+   * Get refundSupportive
+   * @return refundSupportive
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_REFUND_SUPPORTIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getRefundSupportive() {
+    return refundSupportive;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_REFUND_SUPPORTIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRefundSupportive(String refundSupportive) {
+    this.refundSupportive = refundSupportive;
+  }
+
+
+  public NoticeReponse refundViewUrl(String refundViewUrl) {
+    
+    this.refundViewUrl = refundViewUrl;
+    return this;
+  }
+
+   /**
+   * Get refundViewUrl
+   * @return refundViewUrl
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_REFUND_VIEW_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getRefundViewUrl() {
+    return refundViewUrl;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_REFUND_VIEW_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRefundViewUrl(String refundViewUrl) {
+    this.refundViewUrl = refundViewUrl;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1290,12 +1383,15 @@ public class NoticeReponse {
         Objects.equals(this.adgroupName, noticeReponse.adgroupName) &&
         Objects.equals(this.siteName, noticeReponse.siteName) &&
         Objects.equals(this.siteUrl, noticeReponse.siteUrl) &&
-        Objects.equals(this.pageName, noticeReponse.pageName);
+        Objects.equals(this.pageName, noticeReponse.pageName) &&
+        Objects.equals(this.returnCallUrl, noticeReponse.returnCallUrl) &&
+        Objects.equals(this.refundSupportive, noticeReponse.refundSupportive) &&
+        Objects.equals(this.refundViewUrl, noticeReponse.refundViewUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, solutionType, cluePhoneNumber, commitTime, clueId, flowChannelName, area, connect, formDetail, imName, clueUserMsgCount, humanServiceMsgCount, aiServiceMessageNum, ip, campaignId, adgroupId, creativeId, keywordId, searchWord, siteId, pageId, url, bdVid, solutionId, solutionName, consultUrl, callDuration, userName, solutionRefTypeName, accountName, creativeName, userAgent, showTypeName, keyword, campaignName, adgroupName, siteName, siteUrl, pageName);
+    return Objects.hash(userId, solutionType, cluePhoneNumber, commitTime, clueId, flowChannelName, area, connect, formDetail, imName, clueUserMsgCount, humanServiceMsgCount, aiServiceMessageNum, ip, campaignId, adgroupId, creativeId, keywordId, searchWord, siteId, pageId, url, bdVid, solutionId, solutionName, consultUrl, callDuration, userName, solutionRefTypeName, accountName, creativeName, userAgent, showTypeName, keyword, campaignName, adgroupName, siteName, siteUrl, pageName, returnCallUrl, refundSupportive, refundViewUrl);
   }
 
   @Override
@@ -1341,6 +1437,9 @@ public class NoticeReponse {
     sb.append("    siteName: ").append(toIndentedString(siteName)).append("\n");
     sb.append("    siteUrl: ").append(toIndentedString(siteUrl)).append("\n");
     sb.append("    pageName: ").append(toIndentedString(pageName)).append("\n");
+    sb.append("    returnCallUrl: ").append(toIndentedString(returnCallUrl)).append("\n");
+    sb.append("    refundSupportive: ").append(toIndentedString(refundSupportive)).append("\n");
+    sb.append("    refundViewUrl: ").append(toIndentedString(refundViewUrl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

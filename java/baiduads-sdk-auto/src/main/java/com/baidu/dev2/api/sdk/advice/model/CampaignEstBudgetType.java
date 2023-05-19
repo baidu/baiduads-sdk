@@ -45,7 +45,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignEstBudgetType.JSON_PROPERTY_IMPROVE_COST_MIN,
   CampaignEstBudgetType.JSON_PROPERTY_IMPROVE_TRANS_PRICE_T_MAX,
   CampaignEstBudgetType.JSON_PROPERTY_IMPROVE_TRANS_PRICE_T_MIN,
-  CampaignEstBudgetType.JSON_PROPERTY_OLD_BUDGET
+  CampaignEstBudgetType.JSON_PROPERTY_OLD_BUDGET,
+  CampaignEstBudgetType.JSON_PROPERTY_CONVERSION_MAX,
+  CampaignEstBudgetType.JSON_PROPERTY_CONVERSION_MIN,
+  CampaignEstBudgetType.JSON_PROPERTY_COST_MAX,
+  CampaignEstBudgetType.JSON_PROPERTY_COST_MIN
 })
 @JsonTypeName("CampaignEstBudgetType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -100,6 +104,18 @@ public class CampaignEstBudgetType {
 
   public static final String JSON_PROPERTY_OLD_BUDGET = "oldBudget";
   private Double oldBudget;
+
+  public static final String JSON_PROPERTY_CONVERSION_MAX = "conversionMax";
+  private Long conversionMax;
+
+  public static final String JSON_PROPERTY_CONVERSION_MIN = "conversionMin";
+  private Long conversionMin;
+
+  public static final String JSON_PROPERTY_COST_MAX = "costMax";
+  private Long costMax;
+
+  public static final String JSON_PROPERTY_COST_MIN = "costMin";
+  private Long costMin;
 
   public CampaignEstBudgetType() { 
   }
@@ -571,6 +587,114 @@ public class CampaignEstBudgetType {
   }
 
 
+  public CampaignEstBudgetType conversionMax(Long conversionMax) {
+    
+    this.conversionMax = conversionMax;
+    return this;
+  }
+
+   /**
+   * Get conversionMax
+   * @return conversionMax
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONVERSION_MAX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getConversionMax() {
+    return conversionMax;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONVERSION_MAX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setConversionMax(Long conversionMax) {
+    this.conversionMax = conversionMax;
+  }
+
+
+  public CampaignEstBudgetType conversionMin(Long conversionMin) {
+    
+    this.conversionMin = conversionMin;
+    return this;
+  }
+
+   /**
+   * Get conversionMin
+   * @return conversionMin
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONVERSION_MIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getConversionMin() {
+    return conversionMin;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONVERSION_MIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setConversionMin(Long conversionMin) {
+    this.conversionMin = conversionMin;
+  }
+
+
+  public CampaignEstBudgetType costMax(Long costMax) {
+    
+    this.costMax = costMax;
+    return this;
+  }
+
+   /**
+   * Get costMax
+   * @return costMax
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_COST_MAX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCostMax() {
+    return costMax;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_COST_MAX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCostMax(Long costMax) {
+    this.costMax = costMax;
+  }
+
+
+  public CampaignEstBudgetType costMin(Long costMin) {
+    
+    this.costMin = costMin;
+    return this;
+  }
+
+   /**
+   * Get costMin
+   * @return costMin
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_COST_MIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCostMin() {
+    return costMin;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_COST_MIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCostMin(Long costMin) {
+    this.costMin = costMin;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -596,12 +720,16 @@ public class CampaignEstBudgetType {
         Objects.equals(this.improveCostMin, campaignEstBudgetType.improveCostMin) &&
         Objects.equals(this.improveTransPriceTMax, campaignEstBudgetType.improveTransPriceTMax) &&
         Objects.equals(this.improveTransPriceTMin, campaignEstBudgetType.improveTransPriceTMin) &&
-        Objects.equals(this.oldBudget, campaignEstBudgetType.oldBudget);
+        Objects.equals(this.oldBudget, campaignEstBudgetType.oldBudget) &&
+        Objects.equals(this.conversionMax, campaignEstBudgetType.conversionMax) &&
+        Objects.equals(this.conversionMin, campaignEstBudgetType.conversionMin) &&
+        Objects.equals(this.costMax, campaignEstBudgetType.costMax) &&
+        Objects.equals(this.costMin, campaignEstBudgetType.costMin);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, campaignName, budget, campaignOcpcBidType, campaignTransTypes, budgetOfflineCount, recommendBudget, conversion, transPrice, cost, improveConversionMax, improveConversionMin, improveCostMax, improveCostMin, improveTransPriceTMax, improveTransPriceTMin, oldBudget);
+    return Objects.hash(campaignId, campaignName, budget, campaignOcpcBidType, campaignTransTypes, budgetOfflineCount, recommendBudget, conversion, transPrice, cost, improveConversionMax, improveConversionMin, improveCostMax, improveCostMin, improveTransPriceTMax, improveTransPriceTMin, oldBudget, conversionMax, conversionMin, costMax, costMin);
   }
 
   @Override
@@ -625,6 +753,10 @@ public class CampaignEstBudgetType {
     sb.append("    improveTransPriceTMax: ").append(toIndentedString(improveTransPriceTMax)).append("\n");
     sb.append("    improveTransPriceTMin: ").append(toIndentedString(improveTransPriceTMin)).append("\n");
     sb.append("    oldBudget: ").append(toIndentedString(oldBudget)).append("\n");
+    sb.append("    conversionMax: ").append(toIndentedString(conversionMax)).append("\n");
+    sb.append("    conversionMin: ").append(toIndentedString(conversionMin)).append("\n");
+    sb.append("    costMax: ").append(toIndentedString(costMax)).append("\n");
+    sb.append("    costMin: ").append(toIndentedString(costMin)).append("\n");
     sb.append("}");
     return sb.toString();
   }

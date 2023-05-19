@@ -95,7 +95,6 @@ class AdgroupFeedType(ModelNormal):
             'status': (int,),  # noqa: E501
             'audience': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'bid': (float,),  # noqa: E501
-            'producttypes': ([int],),  # noqa: E501
             'ftypes': ([int],),  # noqa: E501
             'bidtype': (int,),  # noqa: E501
             'ocpc': (OcpcType,),  # noqa: E501
@@ -104,6 +103,12 @@ class AdgroupFeedType(ModelNormal):
             'unefficient_adgroup': (int,),  # noqa: E501
             'product_set_id': (int,),  # noqa: E501
             'unit_products': (UnitProducts,),  # noqa: E501
+            'ftype_selection': (int,),  # noqa: E501
+            'bid_source': (int,),  # noqa: E501
+            'url_type': (int,),  # noqa: E501
+            'mini_program': (str,),  # noqa: E501
+            'broad_cast_info': (str,),  # noqa: E501
+            'url': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -119,7 +124,6 @@ class AdgroupFeedType(ModelNormal):
         'status': 'status',  # noqa: E501
         'audience': 'audience',  # noqa: E501
         'bid': 'bid',  # noqa: E501
-        'producttypes': 'producttypes',  # noqa: E501
         'ftypes': 'ftypes',  # noqa: E501
         'bidtype': 'bidtype',  # noqa: E501
         'ocpc': 'ocpc',  # noqa: E501
@@ -128,6 +132,12 @@ class AdgroupFeedType(ModelNormal):
         'unefficient_adgroup': 'unefficientAdgroup',  # noqa: E501
         'product_set_id': 'productSetId',  # noqa: E501
         'unit_products': 'unitProducts',  # noqa: E501
+        'ftype_selection': 'ftypeSelection',  # noqa: E501
+        'bid_source': 'bidSource',  # noqa: E501
+        'url_type': 'urlType',  # noqa: E501
+        'mini_program': 'miniProgram',  # noqa: E501
+        'broad_cast_info': 'broadCastInfo',  # noqa: E501
+        'url': 'url',  # noqa: E501
     }
 
     read_only_vars = {
@@ -178,7 +188,6 @@ class AdgroupFeedType(ModelNormal):
             status (int): [optional]  # noqa: E501
             audience (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             bid (float): [optional]  # noqa: E501
-            producttypes ([int]): [optional]  # noqa: E501
             ftypes ([int]): [optional]  # noqa: E501
             bidtype (int): [optional]  # noqa: E501
             ocpc (OcpcType): [optional]  # noqa: E501
@@ -187,6 +196,12 @@ class AdgroupFeedType(ModelNormal):
             unefficient_adgroup (int): [optional]  # noqa: E501
             product_set_id (int): [optional]  # noqa: E501
             unit_products (UnitProducts): [optional]  # noqa: E501
+            ftype_selection (int): [optional]  # noqa: E501
+            bid_source (int): [optional]  # noqa: E501
+            url_type (int): [optional]  # noqa: E501
+            mini_program (str): [optional]  # noqa: E501
+            broad_cast_info (str): [optional]  # noqa: E501
+            url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -275,7 +290,6 @@ class AdgroupFeedType(ModelNormal):
             status (int): [optional]  # noqa: E501
             audience (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             bid (float): [optional]  # noqa: E501
-            producttypes ([int]): [optional]  # noqa: E501
             ftypes ([int]): [optional]  # noqa: E501
             bidtype (int): [optional]  # noqa: E501
             ocpc (OcpcType): [optional]  # noqa: E501
@@ -284,6 +298,12 @@ class AdgroupFeedType(ModelNormal):
             unefficient_adgroup (int): [optional]  # noqa: E501
             product_set_id (int): [optional]  # noqa: E501
             unit_products (UnitProducts): [optional]  # noqa: E501
+            ftype_selection (int): [optional]  # noqa: E501
+            bid_source (int): [optional]  # noqa: E501
+            url_type (int): [optional]  # noqa: E501
+            mini_program (str): [optional]  # noqa: E501
+            broad_cast_info (str): [optional]  # noqa: E501
+            url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

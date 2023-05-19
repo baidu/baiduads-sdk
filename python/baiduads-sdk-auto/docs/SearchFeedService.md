@@ -164,6 +164,9 @@ with baiduads.ApiClient() as api_client:
                 1,
             ],
             keywords_extend=True,
+            level_type=1,
+            wbudget=3.14,
+            apk_name="apk_name_example",
         ),
     ) # GetAutoBidCostRequestWrapper | 
 

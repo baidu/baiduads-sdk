@@ -28,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   ExpressNameReq.JSON_PROPERTY_EXPRESS_NAME,
-  ExpressNameReq.JSON_PROPERTY_UCID,
   ExpressNameReq.JSON_PROPERTY_SHOP_ID,
   ExpressNameReq.JSON_PROPERTY_APP_ID
 })
@@ -37,9 +36,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class ExpressNameReq {
   public static final String JSON_PROPERTY_EXPRESS_NAME = "expressName";
   private String expressName;
-
-  public static final String JSON_PROPERTY_UCID = "ucid";
-  private Long ucid;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -74,33 +70,6 @@ public class ExpressNameReq {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExpressName(String expressName) {
     this.expressName = expressName;
-  }
-
-
-  public ExpressNameReq ucid(Long ucid) {
-    
-    this.ucid = ucid;
-    return this;
-  }
-
-   /**
-   * Get ucid
-   * @return ucid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUcid() {
-    return ucid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcid(Long ucid) {
-    this.ucid = ucid;
   }
 
 
@@ -168,14 +137,13 @@ public class ExpressNameReq {
     }
     ExpressNameReq expressNameReq = (ExpressNameReq) o;
     return Objects.equals(this.expressName, expressNameReq.expressName) &&
-        Objects.equals(this.ucid, expressNameReq.ucid) &&
         Objects.equals(this.shopId, expressNameReq.shopId) &&
         Objects.equals(this.appId, expressNameReq.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(expressName, ucid, shopId, appId);
+    return Objects.hash(expressName, shopId, appId);
   }
 
   @Override
@@ -183,7 +151,6 @@ public class ExpressNameReq {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExpressNameReq {\n");
     sb.append("    expressName: ").append(toIndentedString(expressName)).append("\n");
-    sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");

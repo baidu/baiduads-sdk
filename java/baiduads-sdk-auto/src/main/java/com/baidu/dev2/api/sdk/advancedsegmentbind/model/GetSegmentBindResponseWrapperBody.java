@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.advancedsegmentbind.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advancedsegmentbind.model.AdvancedQueryResponse;
+import com.baidu.dev2.api.sdk.advancedsegmentbind.model.SegmentBindTypeAdvancedQueryResponse;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -36,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetSegmentBindResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";
-  private List<AdvancedQueryResponse> data = null;
+  private List<SegmentBindTypeAdvancedQueryResponse> data = null;
 
   public GetSegmentBindResponseWrapperBody() { 
   }
 
-  public GetSegmentBindResponseWrapperBody data(List<AdvancedQueryResponse> data) {
+  public GetSegmentBindResponseWrapperBody data(List<SegmentBindTypeAdvancedQueryResponse> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetSegmentBindResponseWrapperBody addDataItem(AdvancedQueryResponse dataItem) {
+  public GetSegmentBindResponseWrapperBody addDataItem(SegmentBindTypeAdvancedQueryResponse dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -64,14 +64,14 @@ public class GetSegmentBindResponseWrapperBody {
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<AdvancedQueryResponse> getData() {
+  public List<SegmentBindTypeAdvancedQueryResponse> getData() {
     return data;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(List<AdvancedQueryResponse> data) {
+  public void setData(List<SegmentBindTypeAdvancedQueryResponse> data) {
     this.data = data;
   }
 

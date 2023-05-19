@@ -81,7 +81,6 @@ class ExpressNameReq(ModelNormal):
         """
         return {
             'express_name': (str,),  # noqa: E501
-            'ucid': (int,),  # noqa: E501
             'shop_id': (int,),  # noqa: E501
             'app_id': (int,),  # noqa: E501
         }
@@ -93,7 +92,6 @@ class ExpressNameReq(ModelNormal):
 
     attribute_map = {
         'express_name': 'expressName',  # noqa: E501
-        'ucid': 'ucid',  # noqa: E501
         'shop_id': 'shopId',  # noqa: E501
         'app_id': 'appId',  # noqa: E501
     }
@@ -140,7 +138,6 @@ class ExpressNameReq(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             express_name (str): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """
@@ -225,7 +222,6 @@ class ExpressNameReq(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             express_name (str): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """
