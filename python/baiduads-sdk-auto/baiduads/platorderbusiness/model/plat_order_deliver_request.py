@@ -92,7 +92,6 @@ class PlatOrderDeliverRequest(ModelNormal):
             'memo': (str,),  # noqa: E501
             'order_package_infos': ([PlatExpressPackageRequest],),  # noqa: E501
             'additional_deliver_tag': (int,),  # noqa: E501
-            'ucid': (int,),  # noqa: E501
             'shop_id': (int,),  # noqa: E501
             'app_id': (int,),  # noqa: E501
         }
@@ -109,7 +108,6 @@ class PlatOrderDeliverRequest(ModelNormal):
         'memo': 'memo',  # noqa: E501
         'order_package_infos': 'orderPackageInfos',  # noqa: E501
         'additional_deliver_tag': 'additionalDeliverTag',  # noqa: E501
-        'ucid': 'ucid',  # noqa: E501
         'shop_id': 'shopId',  # noqa: E501
         'app_id': 'appId',  # noqa: E501
     }
@@ -161,7 +159,6 @@ class PlatOrderDeliverRequest(ModelNormal):
             memo (str): [optional]  # noqa: E501
             order_package_infos ([PlatExpressPackageRequest]): [optional]  # noqa: E501
             additional_deliver_tag (int): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """
@@ -251,7 +248,6 @@ class PlatOrderDeliverRequest(ModelNormal):
             memo (str): [optional]  # noqa: E501
             order_package_infos ([PlatExpressPackageRequest]): [optional]  # noqa: E501
             additional_deliver_tag (int): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """

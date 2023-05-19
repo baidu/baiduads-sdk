@@ -31,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   PlatOrderPartConsignInfoVoPlatOrderListCommonVo.JSON_PROPERTY_TOTAL,
-  PlatOrderPartConsignInfoVoPlatOrderListCommonVo.JSON_PROPERTY_SHOW_OPEN_API_BTN,
   PlatOrderPartConsignInfoVoPlatOrderListCommonVo.JSON_PROPERTY_LIST
 })
 @JsonTypeName("PlatOrderPartConsignInfoVoPlatOrderListCommonVo")
@@ -39,9 +38,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PlatOrderPartConsignInfoVoPlatOrderListCommonVo {
   public static final String JSON_PROPERTY_TOTAL = "total";
   private Integer total;
-
-  public static final String JSON_PROPERTY_SHOW_OPEN_API_BTN = "showOpenApiBtn";
-  private Boolean showOpenApiBtn;
 
   public static final String JSON_PROPERTY_LIST = "list";
   private List<PlatOrderPartConsignInfoVo> list = null;
@@ -73,33 +69,6 @@ public class PlatOrderPartConsignInfoVoPlatOrderListCommonVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTotal(Integer total) {
     this.total = total;
-  }
-
-
-  public PlatOrderPartConsignInfoVoPlatOrderListCommonVo showOpenApiBtn(Boolean showOpenApiBtn) {
-    
-    this.showOpenApiBtn = showOpenApiBtn;
-    return this;
-  }
-
-   /**
-   * Get showOpenApiBtn
-   * @return showOpenApiBtn
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SHOW_OPEN_API_BTN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getShowOpenApiBtn() {
-    return showOpenApiBtn;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SHOW_OPEN_API_BTN)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setShowOpenApiBtn(Boolean showOpenApiBtn) {
-    this.showOpenApiBtn = showOpenApiBtn;
   }
 
 
@@ -148,13 +117,12 @@ public class PlatOrderPartConsignInfoVoPlatOrderListCommonVo {
     }
     PlatOrderPartConsignInfoVoPlatOrderListCommonVo platOrderPartConsignInfoVoPlatOrderListCommonVo = (PlatOrderPartConsignInfoVoPlatOrderListCommonVo) o;
     return Objects.equals(this.total, platOrderPartConsignInfoVoPlatOrderListCommonVo.total) &&
-        Objects.equals(this.showOpenApiBtn, platOrderPartConsignInfoVoPlatOrderListCommonVo.showOpenApiBtn) &&
         Objects.equals(this.list, platOrderPartConsignInfoVoPlatOrderListCommonVo.list);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(total, showOpenApiBtn, list);
+    return Objects.hash(total, list);
   }
 
   @Override
@@ -162,7 +130,6 @@ public class PlatOrderPartConsignInfoVoPlatOrderListCommonVo {
     StringBuilder sb = new StringBuilder();
     sb.append("class PlatOrderPartConsignInfoVoPlatOrderListCommonVo {\n");
     sb.append("    total: ").append(toIndentedString(total)).append("\n");
-    sb.append("    showOpenApiBtn: ").append(toIndentedString(showOpenApiBtn)).append("\n");
     sb.append("    list: ").append(toIndentedString(list)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -40,6 +40,9 @@ Name | Type | Description | Notes
 **shared_budget_name** | **str** |  | [optional] 
 **shared_budget** | **float** |  | [optional] 
 **budget_type** | **int** |  | [optional] 
+**catalog_id** | **int** |  | [optional] 
+**trans_asset** | **int** |  | [optional] 
+**trans_asset_id** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

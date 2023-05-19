@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;AdvancedQueryResponse&gt;**](AdvancedQueryResponse.md) |  |  [optional]
+**data** | [**List&lt;SegmentTypeAdvancedQueryResponse&gt;**](SegmentTypeAdvancedQueryResponse.md) |  |  [optional]
 
 
 

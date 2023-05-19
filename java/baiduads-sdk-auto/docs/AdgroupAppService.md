@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**addAdgroupAppBind**](AdgroupAppService.md#addAdgroupAppBind) | **POST** /json/sms/service/AdgroupAppService/addAdgroupAppBind | 
 [**deleteAdgroupAppBind**](AdgroupAppService.md#deleteAdgroupAppBind) | **POST** /json/sms/service/AdgroupAppService/deleteAdgroupAppBind | 
 [**getAdgroupAppBind**](AdgroupAppService.md#getAdgroupAppBind) | **POST** /json/sms/service/AdgroupAppService/getAdgroupAppBind | 
-[**updateAdgroupAppBind**](AdgroupAppService.md#updateAdgroupAppBind) | **POST** /json/sms/service/AdgroupAppService/updateAdgroupAppBind | 
 
 
 
@@ -186,70 +185,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetAdgroupAppBindResponseWrapper**](GetAdgroupAppBindResponseWrapper.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json;charset=UTF-8
-- **Accept**: application/json;charset=UTF-8
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | response |  -  |
-
-
-## updateAdgroupAppBind
-
-> UpdateAdgroupAppBindResponseWrapper updateAdgroupAppBind(updateAdgroupAppBindRequestWrapper)
-
-
-
-### Example
-
-```java
-// Import classes:
-import com.baidu.dev2.api.sdk.invoke.ApiClient;
-import com.baidu.dev2.api.sdk.invoke.ApiException;
-import com.baidu.dev2.api.sdk.invoke.Configuration;
-import com.baidu.dev2.api.sdk.invoke.models.*;
-import com.baidu.dev2.api.sdk.adgroupapp.api.AdgroupAppService;
-
-public class Example {
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://api.baidu.com");
-
-        AdgroupAppService apiInstance = new AdgroupAppService(defaultClient);
-        UpdateAdgroupAppBindRequestWrapper updateAdgroupAppBindRequestWrapper = new UpdateAdgroupAppBindRequestWrapper(); // UpdateAdgroupAppBindRequestWrapper | 
-        try {
-            UpdateAdgroupAppBindResponseWrapper result = apiInstance.updateAdgroupAppBind(updateAdgroupAppBindRequestWrapper);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling AdgroupAppService#updateAdgroupAppBind");
-            System.err.println("Status code: " + e.getCode());
-            System.err.println("Reason: " + e.getResponseBody());
-            System.err.println("Response headers: " + e.getResponseHeaders());
-            e.printStackTrace();
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateAdgroupAppBindRequestWrapper** | [**UpdateAdgroupAppBindRequestWrapper**](UpdateAdgroupAppBindRequestWrapper.md)|  |
-
-### Return type
-
-[**UpdateAdgroupAppBindResponseWrapper**](UpdateAdgroupAppBindResponseWrapper.md)
 
 ### Authorization
 

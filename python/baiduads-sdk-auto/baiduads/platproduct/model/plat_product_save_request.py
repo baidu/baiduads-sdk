@@ -31,6 +31,7 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.platproduct.model.plat_product_delivery_config_vo import PlatProductDeliveryConfigVo
     from baiduads.platproduct.model.plat_product_sku_vo import PlatProductSkuVo
+    from baiduads.platproduct.model.product_book_price_vo import ProductBookPriceVo
     from baiduads.platproduct.model.product_image_vo import ProductImageVo
     from baiduads.platproduct.model.product_personalized_label_vo import ProductPersonalizedLabelVo
     from baiduads.platproduct.model.product_spu_attribute_vo import ProductSpuAttributeVo
@@ -38,6 +39,7 @@ def lazy_import():
     from baiduads.platproduct.model.service_item import ServiceItem
     globals()['PlatProductDeliveryConfigVo'] = PlatProductDeliveryConfigVo
     globals()['PlatProductSkuVo'] = PlatProductSkuVo
+    globals()['ProductBookPriceVo'] = ProductBookPriceVo
     globals()['ProductImageVo'] = ProductImageVo
     globals()['ProductPersonalizedLabelVo'] = ProductPersonalizedLabelVo
     globals()['ProductSpuAttributeVo'] = ProductSpuAttributeVo
@@ -124,6 +126,14 @@ class PlatProductSaveRequest(ModelNormal):
             'send_exchange_code': (int,),  # noqa: E501
             'service_item': ([ServiceItem],),  # noqa: E501
             'shop_brand_id': (int,),  # noqa: E501
+            'spu_settle_type': (int,),  # noqa: E501
+            'is_use_product_brand': (bool,),  # noqa: E501
+            'use_recommend_name': (int,),  # noqa: E501
+            'door_time': (int,),  # noqa: E501
+            'save_type': (int,),  # noqa: E501
+            'submit_version': (int,),  # noqa: E501
+            'specification_type': (int,),  # noqa: E501
+            'product_book_price_vo': (ProductBookPriceVo,),  # noqa: E501
         }
 
     @cached_property
@@ -158,6 +168,14 @@ class PlatProductSaveRequest(ModelNormal):
         'send_exchange_code': 'sendExchangeCode',  # noqa: E501
         'service_item': 'serviceItem',  # noqa: E501
         'shop_brand_id': 'shopBrandId',  # noqa: E501
+        'spu_settle_type': 'spuSettleType',  # noqa: E501
+        'is_use_product_brand': 'isUseProductBrand',  # noqa: E501
+        'use_recommend_name': 'useRecommendName',  # noqa: E501
+        'door_time': 'doorTime',  # noqa: E501
+        'save_type': 'saveType',  # noqa: E501
+        'submit_version': 'submitVersion',  # noqa: E501
+        'specification_type': 'specificationType',  # noqa: E501
+        'product_book_price_vo': 'productBookPriceVo',  # noqa: E501
     }
 
     read_only_vars = {
@@ -227,6 +245,14 @@ class PlatProductSaveRequest(ModelNormal):
             send_exchange_code (int): [optional]  # noqa: E501
             service_item ([ServiceItem]): [optional]  # noqa: E501
             shop_brand_id (int): [optional]  # noqa: E501
+            spu_settle_type (int): [optional]  # noqa: E501
+            is_use_product_brand (bool): [optional]  # noqa: E501
+            use_recommend_name (int): [optional]  # noqa: E501
+            door_time (int): [optional]  # noqa: E501
+            save_type (int): [optional]  # noqa: E501
+            submit_version (int): [optional]  # noqa: E501
+            specification_type (int): [optional]  # noqa: E501
+            product_book_price_vo (ProductBookPriceVo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -334,6 +360,14 @@ class PlatProductSaveRequest(ModelNormal):
             send_exchange_code (int): [optional]  # noqa: E501
             service_item ([ServiceItem]): [optional]  # noqa: E501
             shop_brand_id (int): [optional]  # noqa: E501
+            spu_settle_type (int): [optional]  # noqa: E501
+            is_use_product_brand (bool): [optional]  # noqa: E501
+            use_recommend_name (int): [optional]  # noqa: E501
+            door_time (int): [optional]  # noqa: E501
+            save_type (int): [optional]  # noqa: E501
+            submit_version (int): [optional]  # noqa: E501
+            specification_type (int): [optional]  # noqa: E501
+            product_book_price_vo (ProductBookPriceVo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

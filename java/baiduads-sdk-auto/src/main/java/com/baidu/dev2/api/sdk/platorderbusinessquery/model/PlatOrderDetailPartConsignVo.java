@@ -13,8 +13,6 @@ package com.baidu.dev2.api.sdk.platorderbusinessquery.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatOrderTagVo;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.TagInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -37,15 +35,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_SUB_CONSIGN_TIME,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_SUB_EXPRESS_STATUS,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_SUB_EXPRESS_STATUS_TEXT,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_REFUND_TAG,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_FREIGHT_AMOUNT_STR,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PLAT_COUPON_DISCOUNT_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_BIZ_COUPON_DISCOUNT_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PLAT_PROMOTION_DISCOUNT_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_BIZ_PROMOTION_DISCOUNT_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PAYMENT_AMOUNT,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_TAG_VOS,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PLAT_RED_PACKET_DISCOUNT_AMOUNT,
+  PlatOrderDetailPartConsignVo.JSON_PROPERTY_SKU_ID,
+  PlatOrderDetailPartConsignVo.JSON_PROPERTY_ADJUST_PRICE_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_COMMODITY_DESC,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_COMMODITY_IMAGE,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PAGE_ONLINE_URL,
@@ -54,7 +52,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_TOTAL_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PLAN_NAME,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_UNIT_NAME,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_PRODUCT_TYPE,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_DISCOUNT_AMOUNT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_COMMISSION,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_COMMISSION_RATE,
@@ -80,9 +77,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_IDEA_TEXT,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_PLAN_ID,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_UNIT_ID,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_FLOW_CPS_TYPE,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_FLOW_SCH,
-  PlatOrderDetailPartConsignVo.JSON_PROPERTY_TAG_LIST,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_DELIVER_TIMEOUT_DATE,
   PlatOrderDetailPartConsignVo.JSON_PROPERTY_REFUND_ID
 })
@@ -107,9 +101,6 @@ public class PlatOrderDetailPartConsignVo {
   public static final String JSON_PROPERTY_SUB_EXPRESS_STATUS_TEXT = "subExpressStatusText";
   private String subExpressStatusText;
 
-  public static final String JSON_PROPERTY_REFUND_TAG = "refundTag";
-  private Boolean refundTag;
-
   public static final String JSON_PROPERTY_FREIGHT_AMOUNT_STR = "freightAmountStr";
   private String freightAmountStr;
 
@@ -128,11 +119,14 @@ public class PlatOrderDetailPartConsignVo {
   public static final String JSON_PROPERTY_PAYMENT_AMOUNT = "paymentAmount";
   private String paymentAmount;
 
-  public static final String JSON_PROPERTY_TAG_VOS = "tagVos";
-  private List<PlatOrderTagVo> tagVos = null;
-
   public static final String JSON_PROPERTY_PLAT_RED_PACKET_DISCOUNT_AMOUNT = "platRedPacketDiscountAmount";
   private String platRedPacketDiscountAmount;
+
+  public static final String JSON_PROPERTY_SKU_ID = "skuId";
+  private Long skuId;
+
+  public static final String JSON_PROPERTY_ADJUST_PRICE_AMOUNT = "adjustPriceAmount";
+  private String adjustPriceAmount;
 
   public static final String JSON_PROPERTY_COMMODITY_DESC = "commodityDesc";
   private String commodityDesc;
@@ -157,9 +151,6 @@ public class PlatOrderDetailPartConsignVo {
 
   public static final String JSON_PROPERTY_UNIT_NAME = "unitName";
   private String unitName;
-
-  public static final String JSON_PROPERTY_PRODUCT_TYPE = "productType";
-  private Integer productType;
 
   public static final String JSON_PROPERTY_DISCOUNT_AMOUNT = "discountAmount";
   private String discountAmount;
@@ -235,15 +226,6 @@ public class PlatOrderDetailPartConsignVo {
 
   public static final String JSON_PROPERTY_UNIT_ID = "unitId";
   private Long unitId;
-
-  public static final String JSON_PROPERTY_FLOW_CPS_TYPE = "flowCpsType";
-  private String flowCpsType;
-
-  public static final String JSON_PROPERTY_FLOW_SCH = "flowSch";
-  private String flowSch;
-
-  public static final String JSON_PROPERTY_TAG_LIST = "tagList";
-  private List<TagInfo> tagList = null;
 
   public static final String JSON_PROPERTY_DELIVER_TIMEOUT_DATE = "deliverTimeoutDate";
   private String deliverTimeoutDate;
@@ -416,33 +398,6 @@ public class PlatOrderDetailPartConsignVo {
   }
 
 
-  public PlatOrderDetailPartConsignVo refundTag(Boolean refundTag) {
-    
-    this.refundTag = refundTag;
-    return this;
-  }
-
-   /**
-   * Get refundTag
-   * @return refundTag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REFUND_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getRefundTag() {
-    return refundTag;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REFUND_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRefundTag(Boolean refundTag) {
-    this.refundTag = refundTag;
-  }
-
-
   public PlatOrderDetailPartConsignVo freightAmountStr(String freightAmountStr) {
     
     this.freightAmountStr = freightAmountStr;
@@ -605,41 +560,6 @@ public class PlatOrderDetailPartConsignVo {
   }
 
 
-  public PlatOrderDetailPartConsignVo tagVos(List<PlatOrderTagVo> tagVos) {
-    
-    this.tagVos = tagVos;
-    return this;
-  }
-
-  public PlatOrderDetailPartConsignVo addTagVosItem(PlatOrderTagVo tagVosItem) {
-    if (this.tagVos == null) {
-      this.tagVos = new ArrayList<>();
-    }
-    this.tagVos.add(tagVosItem);
-    return this;
-  }
-
-   /**
-   * Get tagVos
-   * @return tagVos
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAG_VOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<PlatOrderTagVo> getTagVos() {
-    return tagVos;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAG_VOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTagVos(List<PlatOrderTagVo> tagVos) {
-    this.tagVos = tagVos;
-  }
-
-
   public PlatOrderDetailPartConsignVo platRedPacketDiscountAmount(String platRedPacketDiscountAmount) {
     
     this.platRedPacketDiscountAmount = platRedPacketDiscountAmount;
@@ -664,6 +584,60 @@ public class PlatOrderDetailPartConsignVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPlatRedPacketDiscountAmount(String platRedPacketDiscountAmount) {
     this.platRedPacketDiscountAmount = platRedPacketDiscountAmount;
+  }
+
+
+  public PlatOrderDetailPartConsignVo skuId(Long skuId) {
+    
+    this.skuId = skuId;
+    return this;
+  }
+
+   /**
+   * Get skuId
+   * @return skuId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SKU_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getSkuId() {
+    return skuId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SKU_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSkuId(Long skuId) {
+    this.skuId = skuId;
+  }
+
+
+  public PlatOrderDetailPartConsignVo adjustPriceAmount(String adjustPriceAmount) {
+    
+    this.adjustPriceAmount = adjustPriceAmount;
+    return this;
+  }
+
+   /**
+   * Get adjustPriceAmount
+   * @return adjustPriceAmount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ADJUST_PRICE_AMOUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getAdjustPriceAmount() {
+    return adjustPriceAmount;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ADJUST_PRICE_AMOUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAdjustPriceAmount(String adjustPriceAmount) {
+    this.adjustPriceAmount = adjustPriceAmount;
   }
 
 
@@ -888,33 +862,6 @@ public class PlatOrderDetailPartConsignVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUnitName(String unitName) {
     this.unitName = unitName;
-  }
-
-
-  public PlatOrderDetailPartConsignVo productType(Integer productType) {
-    
-    this.productType = productType;
-    return this;
-  }
-
-   /**
-   * Get productType
-   * @return productType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getProductType() {
-    return productType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProductType(Integer productType) {
-    this.productType = productType;
   }
 
 
@@ -1593,95 +1540,6 @@ public class PlatOrderDetailPartConsignVo {
   }
 
 
-  public PlatOrderDetailPartConsignVo flowCpsType(String flowCpsType) {
-    
-    this.flowCpsType = flowCpsType;
-    return this;
-  }
-
-   /**
-   * Get flowCpsType
-   * @return flowCpsType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_FLOW_CPS_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getFlowCpsType() {
-    return flowCpsType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_FLOW_CPS_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFlowCpsType(String flowCpsType) {
-    this.flowCpsType = flowCpsType;
-  }
-
-
-  public PlatOrderDetailPartConsignVo flowSch(String flowSch) {
-    
-    this.flowSch = flowSch;
-    return this;
-  }
-
-   /**
-   * Get flowSch
-   * @return flowSch
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_FLOW_SCH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getFlowSch() {
-    return flowSch;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_FLOW_SCH)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFlowSch(String flowSch) {
-    this.flowSch = flowSch;
-  }
-
-
-  public PlatOrderDetailPartConsignVo tagList(List<TagInfo> tagList) {
-    
-    this.tagList = tagList;
-    return this;
-  }
-
-  public PlatOrderDetailPartConsignVo addTagListItem(TagInfo tagListItem) {
-    if (this.tagList == null) {
-      this.tagList = new ArrayList<>();
-    }
-    this.tagList.add(tagListItem);
-    return this;
-  }
-
-   /**
-   * Get tagList
-   * @return tagList
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAG_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<TagInfo> getTagList() {
-    return tagList;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAG_LIST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTagList(List<TagInfo> tagList) {
-    this.tagList = tagList;
-  }
-
-
   public PlatOrderDetailPartConsignVo deliverTimeoutDate(String deliverTimeoutDate) {
     
     this.deliverTimeoutDate = deliverTimeoutDate;
@@ -1751,15 +1609,15 @@ public class PlatOrderDetailPartConsignVo {
         Objects.equals(this.subConsignTime, platOrderDetailPartConsignVo.subConsignTime) &&
         Objects.equals(this.subExpressStatus, platOrderDetailPartConsignVo.subExpressStatus) &&
         Objects.equals(this.subExpressStatusText, platOrderDetailPartConsignVo.subExpressStatusText) &&
-        Objects.equals(this.refundTag, platOrderDetailPartConsignVo.refundTag) &&
         Objects.equals(this.freightAmountStr, platOrderDetailPartConsignVo.freightAmountStr) &&
         Objects.equals(this.platCouponDiscountAmount, platOrderDetailPartConsignVo.platCouponDiscountAmount) &&
         Objects.equals(this.bizCouponDiscountAmount, platOrderDetailPartConsignVo.bizCouponDiscountAmount) &&
         Objects.equals(this.platPromotionDiscountAmount, platOrderDetailPartConsignVo.platPromotionDiscountAmount) &&
         Objects.equals(this.bizPromotionDiscountAmount, platOrderDetailPartConsignVo.bizPromotionDiscountAmount) &&
         Objects.equals(this.paymentAmount, platOrderDetailPartConsignVo.paymentAmount) &&
-        Objects.equals(this.tagVos, platOrderDetailPartConsignVo.tagVos) &&
         Objects.equals(this.platRedPacketDiscountAmount, platOrderDetailPartConsignVo.platRedPacketDiscountAmount) &&
+        Objects.equals(this.skuId, platOrderDetailPartConsignVo.skuId) &&
+        Objects.equals(this.adjustPriceAmount, platOrderDetailPartConsignVo.adjustPriceAmount) &&
         Objects.equals(this.commodityDesc, platOrderDetailPartConsignVo.commodityDesc) &&
         Objects.equals(this.commodityImage, platOrderDetailPartConsignVo.commodityImage) &&
         Objects.equals(this.pageOnlineUrl, platOrderDetailPartConsignVo.pageOnlineUrl) &&
@@ -1768,7 +1626,6 @@ public class PlatOrderDetailPartConsignVo {
         Objects.equals(this.totalAmount, platOrderDetailPartConsignVo.totalAmount) &&
         Objects.equals(this.planName, platOrderDetailPartConsignVo.planName) &&
         Objects.equals(this.unitName, platOrderDetailPartConsignVo.unitName) &&
-        Objects.equals(this.productType, platOrderDetailPartConsignVo.productType) &&
         Objects.equals(this.discountAmount, platOrderDetailPartConsignVo.discountAmount) &&
         Objects.equals(this.commission, platOrderDetailPartConsignVo.commission) &&
         Objects.equals(this.commissionRate, platOrderDetailPartConsignVo.commissionRate) &&
@@ -1794,16 +1651,13 @@ public class PlatOrderDetailPartConsignVo {
         Objects.equals(this.ideaText, platOrderDetailPartConsignVo.ideaText) &&
         Objects.equals(this.planId, platOrderDetailPartConsignVo.planId) &&
         Objects.equals(this.unitId, platOrderDetailPartConsignVo.unitId) &&
-        Objects.equals(this.flowCpsType, platOrderDetailPartConsignVo.flowCpsType) &&
-        Objects.equals(this.flowSch, platOrderDetailPartConsignVo.flowSch) &&
-        Objects.equals(this.tagList, platOrderDetailPartConsignVo.tagList) &&
         Objects.equals(this.deliverTimeoutDate, platOrderDetailPartConsignVo.deliverTimeoutDate) &&
         Objects.equals(this.refundId, platOrderDetailPartConsignVo.refundId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(packageId, subTrackingNumber, subExpressName, subConsignTime, subExpressStatus, subExpressStatusText, refundTag, freightAmountStr, platCouponDiscountAmount, bizCouponDiscountAmount, platPromotionDiscountAmount, bizPromotionDiscountAmount, paymentAmount, tagVos, platRedPacketDiscountAmount, commodityDesc, commodityImage, pageOnlineUrl, specNumList, buyNum, totalAmount, planName, unitName, productType, discountAmount, commission, commissionRate, refundStatus, refundStatusText, ucName, clickType, clickTypeText, skuCode, authorId, authorName, payOrderId, subOrderId, deliverTag, productName, packageDesc, skuDesc, freightAmount, sellPrice, productId, duePrice, ideaId, ideaText, planId, unitId, flowCpsType, flowSch, tagList, deliverTimeoutDate, refundId);
+    return Objects.hash(packageId, subTrackingNumber, subExpressName, subConsignTime, subExpressStatus, subExpressStatusText, freightAmountStr, platCouponDiscountAmount, bizCouponDiscountAmount, platPromotionDiscountAmount, bizPromotionDiscountAmount, paymentAmount, platRedPacketDiscountAmount, skuId, adjustPriceAmount, commodityDesc, commodityImage, pageOnlineUrl, specNumList, buyNum, totalAmount, planName, unitName, discountAmount, commission, commissionRate, refundStatus, refundStatusText, ucName, clickType, clickTypeText, skuCode, authorId, authorName, payOrderId, subOrderId, deliverTag, productName, packageDesc, skuDesc, freightAmount, sellPrice, productId, duePrice, ideaId, ideaText, planId, unitId, deliverTimeoutDate, refundId);
   }
 
   @Override
@@ -1816,15 +1670,15 @@ public class PlatOrderDetailPartConsignVo {
     sb.append("    subConsignTime: ").append(toIndentedString(subConsignTime)).append("\n");
     sb.append("    subExpressStatus: ").append(toIndentedString(subExpressStatus)).append("\n");
     sb.append("    subExpressStatusText: ").append(toIndentedString(subExpressStatusText)).append("\n");
-    sb.append("    refundTag: ").append(toIndentedString(refundTag)).append("\n");
     sb.append("    freightAmountStr: ").append(toIndentedString(freightAmountStr)).append("\n");
     sb.append("    platCouponDiscountAmount: ").append(toIndentedString(platCouponDiscountAmount)).append("\n");
     sb.append("    bizCouponDiscountAmount: ").append(toIndentedString(bizCouponDiscountAmount)).append("\n");
     sb.append("    platPromotionDiscountAmount: ").append(toIndentedString(platPromotionDiscountAmount)).append("\n");
     sb.append("    bizPromotionDiscountAmount: ").append(toIndentedString(bizPromotionDiscountAmount)).append("\n");
     sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
-    sb.append("    tagVos: ").append(toIndentedString(tagVos)).append("\n");
     sb.append("    platRedPacketDiscountAmount: ").append(toIndentedString(platRedPacketDiscountAmount)).append("\n");
+    sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
+    sb.append("    adjustPriceAmount: ").append(toIndentedString(adjustPriceAmount)).append("\n");
     sb.append("    commodityDesc: ").append(toIndentedString(commodityDesc)).append("\n");
     sb.append("    commodityImage: ").append(toIndentedString(commodityImage)).append("\n");
     sb.append("    pageOnlineUrl: ").append(toIndentedString(pageOnlineUrl)).append("\n");
@@ -1833,7 +1687,6 @@ public class PlatOrderDetailPartConsignVo {
     sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
     sb.append("    planName: ").append(toIndentedString(planName)).append("\n");
     sb.append("    unitName: ").append(toIndentedString(unitName)).append("\n");
-    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    discountAmount: ").append(toIndentedString(discountAmount)).append("\n");
     sb.append("    commission: ").append(toIndentedString(commission)).append("\n");
     sb.append("    commissionRate: ").append(toIndentedString(commissionRate)).append("\n");
@@ -1859,9 +1712,6 @@ public class PlatOrderDetailPartConsignVo {
     sb.append("    ideaText: ").append(toIndentedString(ideaText)).append("\n");
     sb.append("    planId: ").append(toIndentedString(planId)).append("\n");
     sb.append("    unitId: ").append(toIndentedString(unitId)).append("\n");
-    sb.append("    flowCpsType: ").append(toIndentedString(flowCpsType)).append("\n");
-    sb.append("    flowSch: ").append(toIndentedString(flowSch)).append("\n");
-    sb.append("    tagList: ").append(toIndentedString(tagList)).append("\n");
     sb.append("    deliverTimeoutDate: ").append(toIndentedString(deliverTimeoutDate)).append("\n");
     sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
     sb.append("}");

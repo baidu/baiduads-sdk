@@ -107,6 +107,7 @@ with baiduads.ApiClient() as api_client:
                     huitus=[
                         1,
                     ],
+                    eshop_type="eshop_type_example",
                 ),
             ],
         ),
@@ -696,6 +697,7 @@ with baiduads.ApiClient() as api_client:
                     huitus=[
                         1,
                     ],
+                    eshop_type="eshop_type_example",
                 ),
             ],
         ),

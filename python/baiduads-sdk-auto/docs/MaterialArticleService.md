@@ -91,10 +91,8 @@ with baiduads.ApiClient() as api_client:
                         name="name_example",
                     ),
                 ],
-                tp_info=TpInfo(
-                    tp_id=1,
-                    tp_name="tp_name_example",
-                ),
+                article_source="article_source_example",
+                article_link="article_link_example",
             ),
         ),
     ) # AddArticleRequestWrapper | 
@@ -263,6 +261,9 @@ with baiduads.ApiClient() as api_client:
                 1,
             ],
             content_type=1,
+            content_quality_status=[
+                1,
+            ],
         ),
     ) # GetArticleListRequestWrapper | 
 
@@ -382,10 +383,8 @@ with baiduads.ApiClient() as api_client:
                         name="name_example",
                     ),
                 ],
-                tp_info=TpInfo(
-                    tp_id=1,
-                    tp_name="tp_name_example",
-                ),
+                article_source="article_source_example",
+                article_link="article_link_example",
             ),
         ),
     ) # UpdateArticleRequestWrapper | 

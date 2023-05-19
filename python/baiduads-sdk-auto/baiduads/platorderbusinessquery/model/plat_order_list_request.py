@@ -112,6 +112,8 @@ class PlatOrderListRequest(ModelNormal):
             'click_ucid': (str,),  # noqa: E501
             'download_options': (int,),  # noqa: E501
             'pay_order_id': (int,),  # noqa: E501
+            'start_update_time': (str,),  # noqa: E501
+            'end_update_time': (str,),  # noqa: E501
             'page_size': (int,),  # noqa: E501
             'page_num': (int,),  # noqa: E501
         }
@@ -154,6 +156,8 @@ class PlatOrderListRequest(ModelNormal):
         'click_ucid': 'clickUcid',  # noqa: E501
         'download_options': 'downloadOptions',  # noqa: E501
         'pay_order_id': 'payOrderId',  # noqa: E501
+        'start_update_time': 'startUpdateTime',  # noqa: E501
+        'end_update_time': 'endUpdateTime',  # noqa: E501
         'page_size': 'pageSize',  # noqa: E501
         'page_num': 'pageNum',  # noqa: E501
     }
@@ -231,6 +235,8 @@ class PlatOrderListRequest(ModelNormal):
             click_ucid (str): [optional]  # noqa: E501
             download_options (int): [optional]  # noqa: E501
             pay_order_id (int): [optional]  # noqa: E501
+            start_update_time (str): [optional]  # noqa: E501
+            end_update_time (str): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_num (int): [optional]  # noqa: E501
         """
@@ -346,6 +352,8 @@ class PlatOrderListRequest(ModelNormal):
             click_ucid (str): [optional]  # noqa: E501
             download_options (int): [optional]  # noqa: E501
             pay_order_id (int): [optional]  # noqa: E501
+            start_update_time (str): [optional]  # noqa: E501
+            end_update_time (str): [optional]  # noqa: E501
             page_size (int): [optional]  # noqa: E501
             page_num (int): [optional]  # noqa: E501
         """

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **spu_state** | **int** |  | [optional] 
 **category** | [**[ProductCategoryVo]**](ProductCategoryVo.md) |  | [optional] 
 **attributes** | [**[ProductSpuAttributeVo]**](ProductSpuAttributeVo.md) |  | [optional] 
+**specification_type** | **int** |  | [optional] 
 **support_pay_type** | **int** |  | [optional] 
 **specifications** | [**[ProductSpuSpecificationVo]**](ProductSpuSpecificationVo.md) |  | [optional] 
 **sku_list** | [**[PlatProductSkuVo]**](PlatProductSkuVo.md) |  | [optional] 
@@ -34,6 +35,10 @@ Name | Type | Description | Notes
 **limit_stock** | **int** |  | [optional] 
 **shop_brand_name** | **str** |  | [optional] 
 **shop_brand_id** | **int** |  | [optional] 
+**spu_settle_type** | **int** |  | [optional] 
+**is_use_product_brand** | **bool** |  | [optional] 
+**door_time** | **int** |  | [optional] 
+**product_book_price_vo** | [**ProductBookPriceVo**](ProductBookPriceVo.md) |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

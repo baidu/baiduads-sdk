@@ -97,6 +97,10 @@ class CampaignEstBudgetType(ModelNormal):
             'improve_trans_price_t_max': (int,),  # noqa: E501
             'improve_trans_price_t_min': (int,),  # noqa: E501
             'old_budget': (float,),  # noqa: E501
+            'conversion_max': (int,),  # noqa: E501
+            'conversion_min': (int,),  # noqa: E501
+            'cost_max': (int,),  # noqa: E501
+            'cost_min': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -122,6 +126,10 @@ class CampaignEstBudgetType(ModelNormal):
         'improve_trans_price_t_max': 'improveTransPriceTMax',  # noqa: E501
         'improve_trans_price_t_min': 'improveTransPriceTMin',  # noqa: E501
         'old_budget': 'oldBudget',  # noqa: E501
+        'conversion_max': 'conversionMax',  # noqa: E501
+        'conversion_min': 'conversionMin',  # noqa: E501
+        'cost_max': 'costMax',  # noqa: E501
+        'cost_min': 'costMin',  # noqa: E501
     }
 
     read_only_vars = {
@@ -182,6 +190,10 @@ class CampaignEstBudgetType(ModelNormal):
             improve_trans_price_t_max (int): [optional]  # noqa: E501
             improve_trans_price_t_min (int): [optional]  # noqa: E501
             old_budget (float): [optional]  # noqa: E501
+            conversion_max (int): [optional]  # noqa: E501
+            conversion_min (int): [optional]  # noqa: E501
+            cost_max (int): [optional]  # noqa: E501
+            cost_min (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -280,6 +292,10 @@ class CampaignEstBudgetType(ModelNormal):
             improve_trans_price_t_max (int): [optional]  # noqa: E501
             improve_trans_price_t_min (int): [optional]  # noqa: E501
             old_budget (float): [optional]  # noqa: E501
+            conversion_max (int): [optional]  # noqa: E501
+            conversion_min (int): [optional]  # noqa: E501
+            cost_max (int): [optional]  # noqa: E501
+            cost_min (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

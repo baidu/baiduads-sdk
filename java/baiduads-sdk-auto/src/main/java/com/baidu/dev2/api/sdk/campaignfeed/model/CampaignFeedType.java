@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.campaignfeed.model.AppInfoShadowType;
 import com.baidu.dev2.api.sdk.campaignfeed.model.AppInfoType;
+import com.baidu.dev2.api.sdk.campaignfeed.model.OcpcModel;
 import com.baidu.dev2.api.sdk.campaignfeed.model.ScheduleType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -40,7 +41,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedType.JSON_PROPERTY_STARTTIME,
   CampaignFeedType.JSON_PROPERTY_ENDTIME,
   CampaignFeedType.JSON_PROPERTY_SCHEDULE,
-  CampaignFeedType.JSON_PROPERTY_BGTCTLTYPE,
   CampaignFeedType.JSON_PROPERTY_PAUSE,
   CampaignFeedType.JSON_PROPERTY_STATUS,
   CampaignFeedType.JSON_PROPERTY_BSTYPE,
@@ -49,11 +49,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignFeedType.JSON_PROPERTY_ESHOP_TYPE,
   CampaignFeedType.JSON_PROPERTY_SHADOW,
   CampaignFeedType.JSON_PROPERTY_RTA_STATUS,
-  CampaignFeedType.JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE,
-  CampaignFeedType.JSON_PROPERTY_INHERIT_USERIDS,
-  CampaignFeedType.JSON_PROPERTY_MANDATORY_OPERATION,
-  CampaignFeedType.JSON_PROPERTY_AD_SOURCE,
-  CampaignFeedType.JSON_PROPERTY_NID
+  CampaignFeedType.JSON_PROPERTY_FTYPES,
+  CampaignFeedType.JSON_PROPERTY_BIDTYPE,
+  CampaignFeedType.JSON_PROPERTY_BID,
+  CampaignFeedType.JSON_PROPERTY_OCPC,
+  CampaignFeedType.JSON_PROPERTY_UNEFFICIENT_CAMPAIGN,
+  CampaignFeedType.JSON_PROPERTY_BMC_USER_ID,
+  CampaignFeedType.JSON_PROPERTY_CATALOG_ID
 })
 @JsonTypeName("CampaignFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -82,9 +84,6 @@ public class CampaignFeedType {
   public static final String JSON_PROPERTY_SCHEDULE = "schedule";
   private List<ScheduleType> schedule = null;
 
-  public static final String JSON_PROPERTY_BGTCTLTYPE = "bgtctltype";
-  private Integer bgtctltype;
-
   public static final String JSON_PROPERTY_PAUSE = "pause";
   private Boolean pause;
 
@@ -109,20 +108,26 @@ public class CampaignFeedType {
   public static final String JSON_PROPERTY_RTA_STATUS = "rtaStatus";
   private Integer rtaStatus;
 
-  public static final String JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE = "inheritAscriptionType";
-  private Integer inheritAscriptionType;
+  public static final String JSON_PROPERTY_FTYPES = "ftypes";
+  private List<Integer> ftypes = null;
 
-  public static final String JSON_PROPERTY_INHERIT_USERIDS = "inheritUserids";
-  private List<Long> inheritUserids = null;
+  public static final String JSON_PROPERTY_BIDTYPE = "bidtype";
+  private Integer bidtype;
 
-  public static final String JSON_PROPERTY_MANDATORY_OPERATION = "mandatoryOperation";
-  private Integer mandatoryOperation;
+  public static final String JSON_PROPERTY_BID = "bid";
+  private Double bid;
 
-  public static final String JSON_PROPERTY_AD_SOURCE = "adSource";
-  private Integer adSource;
+  public static final String JSON_PROPERTY_OCPC = "ocpc";
+  private OcpcModel ocpc;
 
-  public static final String JSON_PROPERTY_NID = "nid";
-  private String nid;
+  public static final String JSON_PROPERTY_UNEFFICIENT_CAMPAIGN = "unefficientCampaign";
+  private Integer unefficientCampaign;
+
+  public static final String JSON_PROPERTY_BMC_USER_ID = "bmcUserId";
+  private Long bmcUserId;
+
+  public static final String JSON_PROPERTY_CATALOG_ID = "catalogId";
+  private Long catalogId;
 
   public CampaignFeedType() { 
   }
@@ -351,33 +356,6 @@ public class CampaignFeedType {
   }
 
 
-  public CampaignFeedType bgtctltype(Integer bgtctltype) {
-    
-    this.bgtctltype = bgtctltype;
-    return this;
-  }
-
-   /**
-   * Get bgtctltype
-   * @return bgtctltype
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BGTCTLTYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getBgtctltype() {
-    return bgtctltype;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BGTCTLTYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBgtctltype(Integer bgtctltype) {
-    this.bgtctltype = bgtctltype;
-  }
-
-
   public CampaignFeedType pause(Boolean pause) {
     
     this.pause = pause;
@@ -594,146 +572,200 @@ public class CampaignFeedType {
   }
 
 
-  public CampaignFeedType inheritAscriptionType(Integer inheritAscriptionType) {
+  public CampaignFeedType ftypes(List<Integer> ftypes) {
     
-    this.inheritAscriptionType = inheritAscriptionType;
+    this.ftypes = ftypes;
     return this;
   }
 
-   /**
-   * Get inheritAscriptionType
-   * @return inheritAscriptionType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getInheritAscriptionType() {
-    return inheritAscriptionType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_INHERIT_ASCRIPTION_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInheritAscriptionType(Integer inheritAscriptionType) {
-    this.inheritAscriptionType = inheritAscriptionType;
-  }
-
-
-  public CampaignFeedType inheritUserids(List<Long> inheritUserids) {
-    
-    this.inheritUserids = inheritUserids;
-    return this;
-  }
-
-  public CampaignFeedType addInheritUseridsItem(Long inheritUseridsItem) {
-    if (this.inheritUserids == null) {
-      this.inheritUserids = new ArrayList<>();
+  public CampaignFeedType addFtypesItem(Integer ftypesItem) {
+    if (this.ftypes == null) {
+      this.ftypes = new ArrayList<>();
     }
-    this.inheritUserids.add(inheritUseridsItem);
+    this.ftypes.add(ftypesItem);
     return this;
   }
 
    /**
-   * Get inheritUserids
-   * @return inheritUserids
+   * Get ftypes
+   * @return ftypes
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_INHERIT_USERIDS)
+  @JsonProperty(JSON_PROPERTY_FTYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<Long> getInheritUserids() {
-    return inheritUserids;
+  public List<Integer> getFtypes() {
+    return ftypes;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INHERIT_USERIDS)
+  @JsonProperty(JSON_PROPERTY_FTYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInheritUserids(List<Long> inheritUserids) {
-    this.inheritUserids = inheritUserids;
+  public void setFtypes(List<Integer> ftypes) {
+    this.ftypes = ftypes;
   }
 
 
-  public CampaignFeedType mandatoryOperation(Integer mandatoryOperation) {
+  public CampaignFeedType bidtype(Integer bidtype) {
     
-    this.mandatoryOperation = mandatoryOperation;
+    this.bidtype = bidtype;
     return this;
   }
 
    /**
-   * Get mandatoryOperation
-   * @return mandatoryOperation
+   * Get bidtype
+   * @return bidtype
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MANDATORY_OPERATION)
+  @JsonProperty(JSON_PROPERTY_BIDTYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getMandatoryOperation() {
-    return mandatoryOperation;
+  public Integer getBidtype() {
+    return bidtype;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MANDATORY_OPERATION)
+  @JsonProperty(JSON_PROPERTY_BIDTYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMandatoryOperation(Integer mandatoryOperation) {
-    this.mandatoryOperation = mandatoryOperation;
+  public void setBidtype(Integer bidtype) {
+    this.bidtype = bidtype;
   }
 
 
-  public CampaignFeedType adSource(Integer adSource) {
+  public CampaignFeedType bid(Double bid) {
     
-    this.adSource = adSource;
+    this.bid = bid;
     return this;
   }
 
    /**
-   * Get adSource
-   * @return adSource
+   * Get bid
+   * @return bid
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_AD_SOURCE)
+  @JsonProperty(JSON_PROPERTY_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getAdSource() {
-    return adSource;
+  public Double getBid() {
+    return bid;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_SOURCE)
+  @JsonProperty(JSON_PROPERTY_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdSource(Integer adSource) {
-    this.adSource = adSource;
+  public void setBid(Double bid) {
+    this.bid = bid;
   }
 
 
-  public CampaignFeedType nid(String nid) {
+  public CampaignFeedType ocpc(OcpcModel ocpc) {
     
-    this.nid = nid;
+    this.ocpc = ocpc;
     return this;
   }
 
    /**
-   * Get nid
-   * @return nid
+   * Get ocpc
+   * @return ocpc
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_NID)
+  @JsonProperty(JSON_PROPERTY_OCPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public String getNid() {
-    return nid;
+  public OcpcModel getOcpc() {
+    return ocpc;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NID)
+  @JsonProperty(JSON_PROPERTY_OCPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNid(String nid) {
-    this.nid = nid;
+  public void setOcpc(OcpcModel ocpc) {
+    this.ocpc = ocpc;
+  }
+
+
+  public CampaignFeedType unefficientCampaign(Integer unefficientCampaign) {
+    
+    this.unefficientCampaign = unefficientCampaign;
+    return this;
+  }
+
+   /**
+   * Get unefficientCampaign
+   * @return unefficientCampaign
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_UNEFFICIENT_CAMPAIGN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUnefficientCampaign() {
+    return unefficientCampaign;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_UNEFFICIENT_CAMPAIGN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUnefficientCampaign(Integer unefficientCampaign) {
+    this.unefficientCampaign = unefficientCampaign;
+  }
+
+
+  public CampaignFeedType bmcUserId(Long bmcUserId) {
+    
+    this.bmcUserId = bmcUserId;
+    return this;
+  }
+
+   /**
+   * Get bmcUserId
+   * @return bmcUserId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BMC_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getBmcUserId() {
+    return bmcUserId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BMC_USER_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBmcUserId(Long bmcUserId) {
+    this.bmcUserId = bmcUserId;
+  }
+
+
+  public CampaignFeedType catalogId(Long catalogId) {
+    
+    this.catalogId = catalogId;
+    return this;
+  }
+
+   /**
+   * Get catalogId
+   * @return catalogId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CATALOG_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCatalogId() {
+    return catalogId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CATALOG_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCatalogId(Long catalogId) {
+    this.catalogId = catalogId;
   }
 
 
@@ -754,7 +786,6 @@ public class CampaignFeedType {
         Objects.equals(this.starttime, campaignFeedType.starttime) &&
         Objects.equals(this.endtime, campaignFeedType.endtime) &&
         Objects.equals(this.schedule, campaignFeedType.schedule) &&
-        Objects.equals(this.bgtctltype, campaignFeedType.bgtctltype) &&
         Objects.equals(this.pause, campaignFeedType.pause) &&
         Objects.equals(this.status, campaignFeedType.status) &&
         Objects.equals(this.bstype, campaignFeedType.bstype) &&
@@ -763,16 +794,18 @@ public class CampaignFeedType {
         Objects.equals(this.eshopType, campaignFeedType.eshopType) &&
         Objects.equals(this.shadow, campaignFeedType.shadow) &&
         Objects.equals(this.rtaStatus, campaignFeedType.rtaStatus) &&
-        Objects.equals(this.inheritAscriptionType, campaignFeedType.inheritAscriptionType) &&
-        Objects.equals(this.inheritUserids, campaignFeedType.inheritUserids) &&
-        Objects.equals(this.mandatoryOperation, campaignFeedType.mandatoryOperation) &&
-        Objects.equals(this.adSource, campaignFeedType.adSource) &&
-        Objects.equals(this.nid, campaignFeedType.nid);
+        Objects.equals(this.ftypes, campaignFeedType.ftypes) &&
+        Objects.equals(this.bidtype, campaignFeedType.bidtype) &&
+        Objects.equals(this.bid, campaignFeedType.bid) &&
+        Objects.equals(this.ocpc, campaignFeedType.ocpc) &&
+        Objects.equals(this.unefficientCampaign, campaignFeedType.unefficientCampaign) &&
+        Objects.equals(this.bmcUserId, campaignFeedType.bmcUserId) &&
+        Objects.equals(this.catalogId, campaignFeedType.catalogId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, bgtctltype, pause, status, bstype, campaignType, addtime, eshopType, shadow, rtaStatus, inheritAscriptionType, inheritUserids, mandatoryOperation, adSource, nid);
+    return Objects.hash(campaignFeedId, campaignFeedName, subject, appinfo, budget, starttime, endtime, schedule, pause, status, bstype, campaignType, addtime, eshopType, shadow, rtaStatus, ftypes, bidtype, bid, ocpc, unefficientCampaign, bmcUserId, catalogId);
   }
 
   @Override
@@ -787,7 +820,6 @@ public class CampaignFeedType {
     sb.append("    starttime: ").append(toIndentedString(starttime)).append("\n");
     sb.append("    endtime: ").append(toIndentedString(endtime)).append("\n");
     sb.append("    schedule: ").append(toIndentedString(schedule)).append("\n");
-    sb.append("    bgtctltype: ").append(toIndentedString(bgtctltype)).append("\n");
     sb.append("    pause: ").append(toIndentedString(pause)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    bstype: ").append(toIndentedString(bstype)).append("\n");
@@ -796,11 +828,13 @@ public class CampaignFeedType {
     sb.append("    eshopType: ").append(toIndentedString(eshopType)).append("\n");
     sb.append("    shadow: ").append(toIndentedString(shadow)).append("\n");
     sb.append("    rtaStatus: ").append(toIndentedString(rtaStatus)).append("\n");
-    sb.append("    inheritAscriptionType: ").append(toIndentedString(inheritAscriptionType)).append("\n");
-    sb.append("    inheritUserids: ").append(toIndentedString(inheritUserids)).append("\n");
-    sb.append("    mandatoryOperation: ").append(toIndentedString(mandatoryOperation)).append("\n");
-    sb.append("    adSource: ").append(toIndentedString(adSource)).append("\n");
-    sb.append("    nid: ").append(toIndentedString(nid)).append("\n");
+    sb.append("    ftypes: ").append(toIndentedString(ftypes)).append("\n");
+    sb.append("    bidtype: ").append(toIndentedString(bidtype)).append("\n");
+    sb.append("    bid: ").append(toIndentedString(bid)).append("\n");
+    sb.append("    ocpc: ").append(toIndentedString(ocpc)).append("\n");
+    sb.append("    unefficientCampaign: ").append(toIndentedString(unefficientCampaign)).append("\n");
+    sb.append("    bmcUserId: ").append(toIndentedString(bmcUserId)).append("\n");
+    sb.append("    catalogId: ").append(toIndentedString(catalogId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

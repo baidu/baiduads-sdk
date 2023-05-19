@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **sdkAppId** | **Long** |  |  [optional]
 **sdkSecretKey** | **String** |  |  [optional]
 **channelId** | **Long** |  |  [optional]
+**pageInfo** | [**List&lt;PageMiniInfo&gt;**](PageMiniInfo.md) |  |  [optional]
 
 
 

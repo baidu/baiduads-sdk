@@ -81,7 +81,6 @@ class PlatOrderIdRequest(ModelNormal):
         """
         return {
             'order_id': (int,),  # noqa: E501
-            'ucid': (int,),  # noqa: E501
             'shop_id': (int,),  # noqa: E501
             'app_id': (int,),  # noqa: E501
         }
@@ -93,7 +92,6 @@ class PlatOrderIdRequest(ModelNormal):
 
     attribute_map = {
         'order_id': 'orderId',  # noqa: E501
-        'ucid': 'ucid',  # noqa: E501
         'shop_id': 'shopId',  # noqa: E501
         'app_id': 'appId',  # noqa: E501
     }
@@ -140,7 +138,6 @@ class PlatOrderIdRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             order_id (int): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """
@@ -225,7 +222,6 @@ class PlatOrderIdRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             order_id (int): [optional]  # noqa: E501
-            ucid (int): [optional]  # noqa: E501
             shop_id (int): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
         """

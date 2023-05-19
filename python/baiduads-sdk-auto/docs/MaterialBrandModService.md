@@ -76,6 +76,13 @@ with baiduads.ApiClient() as api_client:
                     name="name_example",
                 ),
             ],
+            tags=[
+                BrandTags(
+                    tag_name="tag_name_example",
+                    tag_desc="tag_desc_example",
+                ),
+            ],
+            trade_id=1,
         ),
     ) # AddBrandRequestWrapper | 
 
@@ -255,6 +262,13 @@ with baiduads.ApiClient() as api_client:
                     name="name_example",
                 ),
             ],
+            tags=[
+                BrandTags(
+                    tag_name="tag_name_example",
+                    tag_desc="tag_desc_example",
+                ),
+            ],
+            trade_id=1,
         ),
     ) # UpdateBrandRequestWrapper | 
 

@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **skuId** | **Long** |  |  [optional]
 **salePrice** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
-**estimatedPrice** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
 **weight** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
 **stock** | **Long** |  |  [optional]
 **lockedStock** | **Long** |  |  [optional]
@@ -21,6 +20,7 @@ Name | Type | Description | Notes
 **skuCode** | **String** |  |  [optional]
 **skuExtName** | **String** |  |  [optional]
 **exchangeCode** | [**ProductExchangeCodeVo**](ProductExchangeCodeVo.md) |  |  [optional]
+**outerPrice** | [**java.math.BigDecimal**](java.math.BigDecimal.md) |  |  [optional]
 
 
 

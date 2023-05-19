@@ -90,12 +90,6 @@ class DetailQueryCondition(ModelNormal):
             'sort_field': (str,),  # noqa: E501
             'desc': (bool,),  # noqa: E501
             'filters': ([FieldFilter],),  # noqa: E501
-            'id_type': (int,),  # noqa: E501
-            'ids': ([int],),  # noqa: E501
-            'part_type': (int,),  # noqa: E501
-            'start_time': (str,),  # noqa: E501
-            'end_time': (str,),  # noqa: E501
-            'fields': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -108,12 +102,6 @@ class DetailQueryCondition(ModelNormal):
         'sort_field': 'sortField',  # noqa: E501
         'desc': 'desc',  # noqa: E501
         'filters': 'filters',  # noqa: E501
-        'id_type': 'idType',  # noqa: E501
-        'ids': 'ids',  # noqa: E501
-        'part_type': 'partType',  # noqa: E501
-        'start_time': 'startTime',  # noqa: E501
-        'end_time': 'endTime',  # noqa: E501
-        'fields': 'fields',  # noqa: E501
     }
 
     read_only_vars = {
@@ -161,12 +149,6 @@ class DetailQueryCondition(ModelNormal):
             sort_field (str): [optional]  # noqa: E501
             desc (bool): [optional]  # noqa: E501
             filters ([FieldFilter]): [optional]  # noqa: E501
-            id_type (int): [optional]  # noqa: E501
-            ids ([int]): [optional]  # noqa: E501
-            part_type (int): [optional]  # noqa: E501
-            start_time (str): [optional]  # noqa: E501
-            end_time (str): [optional]  # noqa: E501
-            fields ([str]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -252,12 +234,6 @@ class DetailQueryCondition(ModelNormal):
             sort_field (str): [optional]  # noqa: E501
             desc (bool): [optional]  # noqa: E501
             filters ([FieldFilter]): [optional]  # noqa: E501
-            id_type (int): [optional]  # noqa: E501
-            ids ([int]): [optional]  # noqa: E501
-            part_type (int): [optional]  # noqa: E501
-            start_time (str): [optional]  # noqa: E501
-            end_time (str): [optional]  # noqa: E501
-            fields ([str]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

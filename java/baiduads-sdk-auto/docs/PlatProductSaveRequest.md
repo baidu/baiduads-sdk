@@ -33,6 +33,14 @@ Name | Type | Description | Notes
 **sendExchangeCode** | **Integer** |  |  [optional]
 **serviceItem** | [**List&lt;ServiceItem&gt;**](ServiceItem.md) |  |  [optional]
 **shopBrandId** | **Long** |  |  [optional]
+**spuSettleType** | **Integer** |  |  [optional]
+**isUseProductBrand** | **Boolean** |  |  [optional]
+**useRecommendName** | **Integer** |  |  [optional]
+**doorTime** | **Integer** |  |  [optional]
+**saveType** | **Integer** |  |  [optional]
+**submitVersion** | **Integer** |  |  [optional]
+**specificationType** | **Integer** |  |  [optional]
+**productBookPriceVo** | [**ProductBookPriceVo**](ProductBookPriceVo.md) |  |  [optional]
 
 
 

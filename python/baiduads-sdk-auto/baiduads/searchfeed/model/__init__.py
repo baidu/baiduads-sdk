@@ -47,6 +47,7 @@ from baiduads.searchfeed.model.jmy_page_filter import JmyPageFilter
 from baiduads.searchfeed.model.media_feed_type import MediaFeedType
 from baiduads.searchfeed.model.media_package_feed_type import MediaPackageFeedType
 from baiduads.searchfeed.model.ocpc_trans_api_type import OcpcTransApiType
+from baiduads.searchfeed.model.page_mini_info import PageMiniInfo
 from baiduads.searchfeed.model.search_field import SearchField
 from baiduads.searchfeed.model.search_media_feed_request import SearchMediaFeedRequest
 from baiduads.searchfeed.model.trans_trace_api_request import TransTraceApiRequest

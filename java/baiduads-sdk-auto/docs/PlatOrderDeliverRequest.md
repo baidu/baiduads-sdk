@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **memo** | **String** |  |  [optional]
 **orderPackageInfos** | [**List&lt;PlatExpressPackageRequest&gt;**](PlatExpressPackageRequest.md) |  |  [optional]
 **additionalDeliverTag** | **Integer** |  |  [optional]
-**ucid** | **Long** |  |  [optional]
 **shopId** | **Long** |  |  [optional]
 **appId** | **Integer** |  |  [optional]
 

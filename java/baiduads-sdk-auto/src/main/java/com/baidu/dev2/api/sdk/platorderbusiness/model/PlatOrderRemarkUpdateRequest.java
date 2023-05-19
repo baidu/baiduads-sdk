@@ -29,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   PlatOrderRemarkUpdateRequest.JSON_PROPERTY_ORDER_ID,
   PlatOrderRemarkUpdateRequest.JSON_PROPERTY_REMARK,
-  PlatOrderRemarkUpdateRequest.JSON_PROPERTY_UCID,
   PlatOrderRemarkUpdateRequest.JSON_PROPERTY_SHOP_ID,
   PlatOrderRemarkUpdateRequest.JSON_PROPERTY_APP_ID
 })
@@ -41,9 +40,6 @@ public class PlatOrderRemarkUpdateRequest {
 
   public static final String JSON_PROPERTY_REMARK = "remark";
   private String remark;
-
-  public static final String JSON_PROPERTY_UCID = "ucid";
-  private Long ucid;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -105,33 +101,6 @@ public class PlatOrderRemarkUpdateRequest {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRemark(String remark) {
     this.remark = remark;
-  }
-
-
-  public PlatOrderRemarkUpdateRequest ucid(Long ucid) {
-    
-    this.ucid = ucid;
-    return this;
-  }
-
-   /**
-   * Get ucid
-   * @return ucid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUcid() {
-    return ucid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcid(Long ucid) {
-    this.ucid = ucid;
   }
 
 
@@ -200,14 +169,13 @@ public class PlatOrderRemarkUpdateRequest {
     PlatOrderRemarkUpdateRequest platOrderRemarkUpdateRequest = (PlatOrderRemarkUpdateRequest) o;
     return Objects.equals(this.orderId, platOrderRemarkUpdateRequest.orderId) &&
         Objects.equals(this.remark, platOrderRemarkUpdateRequest.remark) &&
-        Objects.equals(this.ucid, platOrderRemarkUpdateRequest.ucid) &&
         Objects.equals(this.shopId, platOrderRemarkUpdateRequest.shopId) &&
         Objects.equals(this.appId, platOrderRemarkUpdateRequest.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, remark, ucid, shopId, appId);
+    return Objects.hash(orderId, remark, shopId, appId);
   }
 
   @Override
@@ -216,7 +184,6 @@ public class PlatOrderRemarkUpdateRequest {
     sb.append("class PlatOrderRemarkUpdateRequest {\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    remark: ").append(toIndentedString(remark)).append("\n");
-    sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");

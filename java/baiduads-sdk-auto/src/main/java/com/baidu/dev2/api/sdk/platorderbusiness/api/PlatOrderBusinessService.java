@@ -22,6 +22,10 @@ import com.baidu.dev2.api.sdk.platorderbusiness.model.ConfirmOrCancelOrderReques
 import com.baidu.dev2.api.sdk.platorderbusiness.model.ConfirmOrCancelOrderResponseWrapper;
 import com.baidu.dev2.api.sdk.platorderbusiness.model.DeliverOrderRequestWrapper;
 import com.baidu.dev2.api.sdk.platorderbusiness.model.DeliverOrderResponseWrapper;
+import com.baidu.dev2.api.sdk.platorderbusiness.model.RejectOrderRequestWrapper;
+import com.baidu.dev2.api.sdk.platorderbusiness.model.RejectOrderResponseWrapper;
+import com.baidu.dev2.api.sdk.platorderbusiness.model.TakeOrderRequestWrapper;
+import com.baidu.dev2.api.sdk.platorderbusiness.model.TakeOrderResponseWrapper;
 import com.baidu.dev2.api.sdk.platorderbusiness.model.UpdateRemarkRequestWrapper;
 import com.baidu.dev2.api.sdk.platorderbusiness.model.UpdateRemarkResponseWrapper;
 
@@ -150,6 +154,120 @@ public class PlatOrderBusinessService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<DeliverOrderResponseWrapper> localVarReturnType = new TypeReference<DeliverOrderResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param rejectOrderRequestWrapper  (required)
+   * @return RejectOrderResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public RejectOrderResponseWrapper rejectOrder(RejectOrderRequestWrapper rejectOrderRequestWrapper) throws ApiException {
+    Object localVarPostBody = rejectOrderRequestWrapper;
+    
+    // verify the required parameter 'rejectOrderRequestWrapper' is set
+    if (rejectOrderRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'rejectOrderRequestWrapper' when calling rejectOrder");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/PlatOrderBusinessService/rejectOrder";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<RejectOrderResponseWrapper> localVarReturnType = new TypeReference<RejectOrderResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param takeOrderRequestWrapper  (required)
+   * @return TakeOrderResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public TakeOrderResponseWrapper takeOrder(TakeOrderRequestWrapper takeOrderRequestWrapper) throws ApiException {
+    Object localVarPostBody = takeOrderRequestWrapper;
+    
+    // verify the required parameter 'takeOrderRequestWrapper' is set
+    if (takeOrderRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'takeOrderRequestWrapper' when calling takeOrder");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/PlatOrderBusinessService/takeOrder";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<TakeOrderResponseWrapper> localVarReturnType = new TypeReference<TakeOrderResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

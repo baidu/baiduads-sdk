@@ -85,17 +85,15 @@ class OcpcType(ModelNormal):
             'ocpc_bid': (float,),  # noqa: E501
             'lp_url': (str,),  # noqa: E501
             'trans_type': (int,),  # noqa: E501
-            'ocpc_level': (int,),  # noqa: E501
-            'is_skip_stage_one': (bool,),  # noqa: E501
-            'is_open_ocpc_lab': (bool,),  # noqa: E501
-            'pay_mode': (int,),  # noqa: E501
             'optimize_deep_trans': (bool,),  # noqa: E501
             'deep_ocpc_bid': (float,),  # noqa: E501
             'deep_trans_type': (int,),  # noqa: E501
+            'url_type': (int,),  # noqa: E501
             'use_roi': (bool,),  # noqa: E501
             'roi_ratio': (float,),  # noqa: E501
-            'is_manual_bid_for_max_mode': (int,),  # noqa: E501
-            'is_manual_deep_bid_for_max_mode': (int,),  # noqa: E501
+            'mini_program_type': (int,),  # noqa: E501
+            'app_key': (str,),  # noqa: E501
+            'page_path': (str,),  # noqa: E501
             'broad_cast_mode': (int,),  # noqa: E501
             'anchor_id': (int,),  # noqa: E501
             'trans_type_attribute': (int,),  # noqa: E501
@@ -112,17 +110,15 @@ class OcpcType(ModelNormal):
         'ocpc_bid': 'ocpcBid',  # noqa: E501
         'lp_url': 'lpUrl',  # noqa: E501
         'trans_type': 'transType',  # noqa: E501
-        'ocpc_level': 'ocpcLevel',  # noqa: E501
-        'is_skip_stage_one': 'isSkipStageOne',  # noqa: E501
-        'is_open_ocpc_lab': 'isOpenOcpcLab',  # noqa: E501
-        'pay_mode': 'payMode',  # noqa: E501
         'optimize_deep_trans': 'optimizeDeepTrans',  # noqa: E501
         'deep_ocpc_bid': 'deepOcpcBid',  # noqa: E501
         'deep_trans_type': 'deepTransType',  # noqa: E501
+        'url_type': 'urlType',  # noqa: E501
         'use_roi': 'useRoi',  # noqa: E501
         'roi_ratio': 'roiRatio',  # noqa: E501
-        'is_manual_bid_for_max_mode': 'isManualBidForMaxMode',  # noqa: E501
-        'is_manual_deep_bid_for_max_mode': 'isManualDeepBidForMaxMode',  # noqa: E501
+        'mini_program_type': 'miniProgramType',  # noqa: E501
+        'app_key': 'appKey',  # noqa: E501
+        'page_path': 'pagePath',  # noqa: E501
         'broad_cast_mode': 'broadCastMode',  # noqa: E501
         'anchor_id': 'anchorId',  # noqa: E501
         'trans_type_attribute': 'transTypeAttribute',  # noqa: E501
@@ -174,17 +170,15 @@ class OcpcType(ModelNormal):
             ocpc_bid (float): [optional]  # noqa: E501
             lp_url (str): [optional]  # noqa: E501
             trans_type (int): [optional]  # noqa: E501
-            ocpc_level (int): [optional]  # noqa: E501
-            is_skip_stage_one (bool): [optional]  # noqa: E501
-            is_open_ocpc_lab (bool): [optional]  # noqa: E501
-            pay_mode (int): [optional]  # noqa: E501
             optimize_deep_trans (bool): [optional]  # noqa: E501
             deep_ocpc_bid (float): [optional]  # noqa: E501
             deep_trans_type (int): [optional]  # noqa: E501
+            url_type (int): [optional]  # noqa: E501
             use_roi (bool): [optional]  # noqa: E501
             roi_ratio (float): [optional]  # noqa: E501
-            is_manual_bid_for_max_mode (int): [optional]  # noqa: E501
-            is_manual_deep_bid_for_max_mode (int): [optional]  # noqa: E501
+            mini_program_type (int): [optional]  # noqa: E501
+            app_key (str): [optional]  # noqa: E501
+            page_path (str): [optional]  # noqa: E501
             broad_cast_mode (int): [optional]  # noqa: E501
             anchor_id (int): [optional]  # noqa: E501
             trans_type_attribute (int): [optional]  # noqa: E501
@@ -274,17 +268,15 @@ class OcpcType(ModelNormal):
             ocpc_bid (float): [optional]  # noqa: E501
             lp_url (str): [optional]  # noqa: E501
             trans_type (int): [optional]  # noqa: E501
-            ocpc_level (int): [optional]  # noqa: E501
-            is_skip_stage_one (bool): [optional]  # noqa: E501
-            is_open_ocpc_lab (bool): [optional]  # noqa: E501
-            pay_mode (int): [optional]  # noqa: E501
             optimize_deep_trans (bool): [optional]  # noqa: E501
             deep_ocpc_bid (float): [optional]  # noqa: E501
             deep_trans_type (int): [optional]  # noqa: E501
+            url_type (int): [optional]  # noqa: E501
             use_roi (bool): [optional]  # noqa: E501
             roi_ratio (float): [optional]  # noqa: E501
-            is_manual_bid_for_max_mode (int): [optional]  # noqa: E501
-            is_manual_deep_bid_for_max_mode (int): [optional]  # noqa: E501
+            mini_program_type (int): [optional]  # noqa: E501
+            app_key (str): [optional]  # noqa: E501
+            page_path (str): [optional]  # noqa: E501
             broad_cast_mode (int): [optional]  # noqa: E501
             anchor_id (int): [optional]  # noqa: E501
             trans_type_attribute (int): [optional]  # noqa: E501

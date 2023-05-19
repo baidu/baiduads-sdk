@@ -46,6 +46,9 @@ Name | Type | Description | Notes
 **siteName** | **String** |  |  [optional]
 **siteUrl** | **String** |  |  [optional]
 **pageName** | **String** |  |  [optional]
+**returnCallUrl** | **String** |  |  [optional]
+**refundSupportive** | **String** |  |  [optional]
+**refundViewUrl** | **String** |  |  [optional]
 
 
 

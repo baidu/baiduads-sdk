@@ -30,7 +30,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductModOnlineRequest.JSON_PROPERTY_APP_ID,
   PlatProductModOnlineRequest.JSON_PROPERTY_SHOP_ID,
   PlatProductModOnlineRequest.JSON_PROPERTY_SPU_ID,
-  PlatProductModOnlineRequest.JSON_PROPERTY_OP_TYPE
+  PlatProductModOnlineRequest.JSON_PROPERTY_OP_TYPE,
+  PlatProductModOnlineRequest.JSON_PROPERTY_AMIS_USER
 })
 @JsonTypeName("PlatProductModOnlineRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -46,6 +47,9 @@ public class PlatProductModOnlineRequest {
 
   public static final String JSON_PROPERTY_OP_TYPE = "opType";
   private Integer opType;
+
+  public static final String JSON_PROPERTY_AMIS_USER = "amisUser";
+  private String amisUser;
 
   public PlatProductModOnlineRequest() { 
   }
@@ -158,6 +162,33 @@ public class PlatProductModOnlineRequest {
   }
 
 
+  public PlatProductModOnlineRequest amisUser(String amisUser) {
+    
+    this.amisUser = amisUser;
+    return this;
+  }
+
+   /**
+   * Get amisUser
+   * @return amisUser
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_AMIS_USER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getAmisUser() {
+    return amisUser;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_AMIS_USER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAmisUser(String amisUser) {
+    this.amisUser = amisUser;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -170,12 +201,13 @@ public class PlatProductModOnlineRequest {
     return Objects.equals(this.appId, platProductModOnlineRequest.appId) &&
         Objects.equals(this.shopId, platProductModOnlineRequest.shopId) &&
         Objects.equals(this.spuId, platProductModOnlineRequest.spuId) &&
-        Objects.equals(this.opType, platProductModOnlineRequest.opType);
+        Objects.equals(this.opType, platProductModOnlineRequest.opType) &&
+        Objects.equals(this.amisUser, platProductModOnlineRequest.amisUser);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appId, shopId, spuId, opType);
+    return Objects.hash(appId, shopId, spuId, opType, amisUser);
   }
 
   @Override
@@ -186,6 +218,7 @@ public class PlatProductModOnlineRequest {
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    spuId: ").append(toIndentedString(spuId)).append("\n");
     sb.append("    opType: ").append(toIndentedString(opType)).append("\n");
+    sb.append("    amisUser: ").append(toIndentedString(amisUser)).append("\n");
     sb.append("}");
     return sb.toString();
   }

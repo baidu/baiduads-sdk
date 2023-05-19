@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 **campaignFeedId** | **Long** |  |  [optional]
 **ftypes** | **List&lt;Integer&gt;** |  |  [optional]
 **keywordsExtend** | **Boolean** |  |  [optional]
+**levelType** | **Integer** |  |  [optional]
+**wbudget** | **Double** |  |  [optional]
+**apkName** | **String** |  |  [optional]
 
 
 

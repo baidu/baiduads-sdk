@@ -30,8 +30,10 @@ from baiduads.exceptions import ApiAttributeError
 
 def lazy_import():
     from baiduads.platproduct.model.apply_shop_info import ApplyShopInfo
+    from baiduads.platproduct.model.plat_audit_reason_vo import PlatAuditReasonVo
     from baiduads.platproduct.model.product_category_vo import ProductCategoryVo
     globals()['ApplyShopInfo'] = ApplyShopInfo
+    globals()['PlatAuditReasonVo'] = PlatAuditReasonVo
     globals()['ProductCategoryVo'] = ProductCategoryVo
 
 
@@ -95,6 +97,7 @@ class PlatProductListVo(ModelNormal):
             'thumbnail': (str,),  # noqa: E501
             'spu_state': (int,),  # noqa: E501
             'on_shelf': (int,),  # noqa: E501
+            'audit_reason': (PlatAuditReasonVo,),  # noqa: E501
             'rest_stock': (int,),  # noqa: E501
             'real_sale': (int,),  # noqa: E501
             'price': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
@@ -107,6 +110,10 @@ class PlatProductListVo(ModelNormal):
             'send_exchange_code': (int,),  # noqa: E501
             'web_app_url': (str,),  # noqa: E501
             'rank': (int,),  # noqa: E501
+            'online_spu_state': (int,),  # noqa: E501
+            'on_shelf_audit_flag': (bool,),  # noqa: E501
+            'send_time': (str,),  # noqa: E501
+            'refuse_time': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -122,6 +129,7 @@ class PlatProductListVo(ModelNormal):
         'thumbnail': 'thumbnail',  # noqa: E501
         'spu_state': 'spuState',  # noqa: E501
         'on_shelf': 'onShelf',  # noqa: E501
+        'audit_reason': 'auditReason',  # noqa: E501
         'rest_stock': 'restStock',  # noqa: E501
         'real_sale': 'realSale',  # noqa: E501
         'price': 'price',  # noqa: E501
@@ -134,6 +142,10 @@ class PlatProductListVo(ModelNormal):
         'send_exchange_code': 'sendExchangeCode',  # noqa: E501
         'web_app_url': 'webAppUrl',  # noqa: E501
         'rank': 'rank',  # noqa: E501
+        'online_spu_state': 'onlineSpuState',  # noqa: E501
+        'on_shelf_audit_flag': 'onShelfAuditFlag',  # noqa: E501
+        'send_time': 'sendTime',  # noqa: E501
+        'refuse_time': 'refuseTime',  # noqa: E501
     }
 
     read_only_vars = {
@@ -184,6 +196,7 @@ class PlatProductListVo(ModelNormal):
             thumbnail (str): [optional]  # noqa: E501
             spu_state (int): [optional]  # noqa: E501
             on_shelf (int): [optional]  # noqa: E501
+            audit_reason (PlatAuditReasonVo): [optional]  # noqa: E501
             rest_stock (int): [optional]  # noqa: E501
             real_sale (int): [optional]  # noqa: E501
             price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
@@ -196,6 +209,10 @@ class PlatProductListVo(ModelNormal):
             send_exchange_code (int): [optional]  # noqa: E501
             web_app_url (str): [optional]  # noqa: E501
             rank (int): [optional]  # noqa: E501
+            online_spu_state (int): [optional]  # noqa: E501
+            on_shelf_audit_flag (bool): [optional]  # noqa: E501
+            send_time (str): [optional]  # noqa: E501
+            refuse_time (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -284,6 +301,7 @@ class PlatProductListVo(ModelNormal):
             thumbnail (str): [optional]  # noqa: E501
             spu_state (int): [optional]  # noqa: E501
             on_shelf (int): [optional]  # noqa: E501
+            audit_reason (PlatAuditReasonVo): [optional]  # noqa: E501
             rest_stock (int): [optional]  # noqa: E501
             real_sale (int): [optional]  # noqa: E501
             price (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
@@ -296,6 +314,10 @@ class PlatProductListVo(ModelNormal):
             send_exchange_code (int): [optional]  # noqa: E501
             web_app_url (str): [optional]  # noqa: E501
             rank (int): [optional]  # noqa: E501
+            online_spu_state (int): [optional]  # noqa: E501
+            on_shelf_audit_flag (bool): [optional]  # noqa: E501
+            send_time (str): [optional]  # noqa: E501
+            refuse_time (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

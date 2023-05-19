@@ -22,8 +22,20 @@ from baiduads.model_utils import (  # noqa: F401
 )
 from baiduads.videosynthetise.model.clip_video_request_wrapper import ClipVideoRequestWrapper
 from baiduads.videosynthetise.model.clip_video_response_wrapper import ClipVideoResponseWrapper
+from baiduads.videosynthetise.model.get_smart_audio_status_request_wrapper import GetSmartAudioStatusRequestWrapper
+from baiduads.videosynthetise.model.get_smart_audio_status_response_wrapper import GetSmartAudioStatusResponseWrapper
+from baiduads.videosynthetise.model.get_task_videos_request_wrapper import GetTaskVideosRequestWrapper
+from baiduads.videosynthetise.model.get_task_videos_response_wrapper import GetTaskVideosResponseWrapper
+from baiduads.videosynthetise.model.push_smart_video_request_wrapper import PushSmartVideoRequestWrapper
+from baiduads.videosynthetise.model.push_smart_video_response_wrapper import PushSmartVideoResponseWrapper
+from baiduads.videosynthetise.model.push_video_request_wrapper import PushVideoRequestWrapper
+from baiduads.videosynthetise.model.push_video_response_wrapper import PushVideoResponseWrapper
 from baiduads.videosynthetise.model.query_video_clip_status_request_wrapper import QueryVideoClipStatusRequestWrapper
 from baiduads.videosynthetise.model.query_video_clip_status_response_wrapper import QueryVideoClipStatusResponseWrapper
+from baiduads.videosynthetise.model.smart_synthetise_request_wrapper import SmartSynthetiseRequestWrapper
+from baiduads.videosynthetise.model.smart_synthetise_response_wrapper import SmartSynthetiseResponseWrapper
+from baiduads.videosynthetise.model.synthetise_status_request_wrapper import SynthetiseStatusRequestWrapper
+from baiduads.videosynthetise.model.synthetise_status_response_wrapper import SynthetiseStatusResponseWrapper
 
 
 class VideoSynthetiseService(object):
@@ -87,6 +99,206 @@ class VideoSynthetiseService(object):
             },
             api_client=api_client
         )
+        self.get_smart_audio_status_endpoint = _Endpoint(
+            settings={
+                'response_type': (GetSmartAudioStatusResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/getSmartAudioStatus',
+                'operation_id': 'get_smart_audio_status',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'get_smart_audio_status_request_wrapper',
+                ],
+                'required': [
+                    'get_smart_audio_status_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'get_smart_audio_status_request_wrapper':
+                        (GetSmartAudioStatusRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'get_smart_audio_status_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.get_task_videos_endpoint = _Endpoint(
+            settings={
+                'response_type': (GetTaskVideosResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/getTaskVideos',
+                'operation_id': 'get_task_videos',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'get_task_videos_request_wrapper',
+                ],
+                'required': [
+                    'get_task_videos_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'get_task_videos_request_wrapper':
+                        (GetTaskVideosRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'get_task_videos_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.push_smart_video_endpoint = _Endpoint(
+            settings={
+                'response_type': (PushSmartVideoResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/pushSmartVideo',
+                'operation_id': 'push_smart_video',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'push_smart_video_request_wrapper',
+                ],
+                'required': [
+                    'push_smart_video_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'push_smart_video_request_wrapper':
+                        (PushSmartVideoRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'push_smart_video_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.push_video_endpoint = _Endpoint(
+            settings={
+                'response_type': (PushVideoResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/pushVideo',
+                'operation_id': 'push_video',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'push_video_request_wrapper',
+                ],
+                'required': [
+                    'push_video_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'push_video_request_wrapper':
+                        (PushVideoRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'push_video_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
         self.query_video_clip_status_endpoint = _Endpoint(
             settings={
                 'response_type': (QueryVideoClipStatusResponseWrapper,),
@@ -123,6 +335,106 @@ class VideoSynthetiseService(object):
                 },
                 'location_map': {
                     'query_video_clip_status_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.smart_synthetise_endpoint = _Endpoint(
+            settings={
+                'response_type': (SmartSynthetiseResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/smartSynthetise',
+                'operation_id': 'smart_synthetise',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'smart_synthetise_request_wrapper',
+                ],
+                'required': [
+                    'smart_synthetise_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'smart_synthetise_request_wrapper':
+                        (SmartSynthetiseRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'smart_synthetise_request_wrapper': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json;charset=UTF-8'
+                ],
+                'content_type': [
+                    'application/json;charset=UTF-8'
+                ]
+            },
+            api_client=api_client
+        )
+        self.synthetise_status_endpoint = _Endpoint(
+            settings={
+                'response_type': (SynthetiseStatusResponseWrapper,),
+                'auth': [],
+                'endpoint_path': '/json/sms/service/VideoSynthetiseService/synthetiseStatus',
+                'operation_id': 'synthetise_status',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'synthetise_status_request_wrapper',
+                ],
+                'required': [
+                    'synthetise_status_request_wrapper',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'synthetise_status_request_wrapper':
+                        (SynthetiseStatusRequestWrapper,),
+                },
+                'attribute_map': {
+                },
+                'location_map': {
+                    'synthetise_status_request_wrapper': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -211,6 +523,298 @@ class VideoSynthetiseService(object):
             clip_video_request_wrapper
         return self.clip_video_endpoint.call_with_http_info(**kwargs)
 
+    def get_smart_audio_status(
+        self,
+        get_smart_audio_status_request_wrapper,
+        **kwargs
+    ):
+        """get_smart_audio_status  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_smart_audio_status(get_smart_audio_status_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            get_smart_audio_status_request_wrapper (GetSmartAudioStatusRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            GetSmartAudioStatusResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['get_smart_audio_status_request_wrapper'] = \
+            get_smart_audio_status_request_wrapper
+        return self.get_smart_audio_status_endpoint.call_with_http_info(**kwargs)
+
+    def get_task_videos(
+        self,
+        get_task_videos_request_wrapper,
+        **kwargs
+    ):
+        """get_task_videos  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_task_videos(get_task_videos_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            get_task_videos_request_wrapper (GetTaskVideosRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            GetTaskVideosResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['get_task_videos_request_wrapper'] = \
+            get_task_videos_request_wrapper
+        return self.get_task_videos_endpoint.call_with_http_info(**kwargs)
+
+    def push_smart_video(
+        self,
+        push_smart_video_request_wrapper,
+        **kwargs
+    ):
+        """push_smart_video  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.push_smart_video(push_smart_video_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            push_smart_video_request_wrapper (PushSmartVideoRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            PushSmartVideoResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['push_smart_video_request_wrapper'] = \
+            push_smart_video_request_wrapper
+        return self.push_smart_video_endpoint.call_with_http_info(**kwargs)
+
+    def push_video(
+        self,
+        push_video_request_wrapper,
+        **kwargs
+    ):
+        """push_video  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.push_video(push_video_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            push_video_request_wrapper (PushVideoRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            PushVideoResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['push_video_request_wrapper'] = \
+            push_video_request_wrapper
+        return self.push_video_endpoint.call_with_http_info(**kwargs)
+
     def query_video_clip_status(
         self,
         query_video_clip_status_request_wrapper,
@@ -283,4 +887,150 @@ class VideoSynthetiseService(object):
         kwargs['query_video_clip_status_request_wrapper'] = \
             query_video_clip_status_request_wrapper
         return self.query_video_clip_status_endpoint.call_with_http_info(**kwargs)
+
+    def smart_synthetise(
+        self,
+        smart_synthetise_request_wrapper,
+        **kwargs
+    ):
+        """smart_synthetise  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.smart_synthetise(smart_synthetise_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            smart_synthetise_request_wrapper (SmartSynthetiseRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            SmartSynthetiseResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['smart_synthetise_request_wrapper'] = \
+            smart_synthetise_request_wrapper
+        return self.smart_synthetise_endpoint.call_with_http_info(**kwargs)
+
+    def synthetise_status(
+        self,
+        synthetise_status_request_wrapper,
+        **kwargs
+    ):
+        """synthetise_status  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.synthetise_status(synthetise_status_request_wrapper, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            synthetise_status_request_wrapper (SynthetiseStatusRequestWrapper):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            SynthetiseStatusResponseWrapper
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['synthetise_status_request_wrapper'] = \
+            synthetise_status_request_wrapper
+        return self.synthetise_status_endpoint.call_with_http_info(**kwargs)
 

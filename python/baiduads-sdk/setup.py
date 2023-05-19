@@ -5,7 +5,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "baiduads-sdk"
-VERSION = "2023.0.0"
+VERSION = "2023.1.0"
 # To install the library, run the following
 #
 # python setup.py install

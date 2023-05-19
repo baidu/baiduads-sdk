@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **attributeList** | **Integer** |  |  [optional]
 **template** | [**PaIdeaTemplate**](PaIdeaTemplate.md) |  |  [optional]
 **huitus** | **List&lt;Long&gt;** |  |  [optional]
+**eshopType** | **String** |  |  [optional]
 
 
 

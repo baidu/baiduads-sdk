@@ -23,17 +23,13 @@ Name | Type | Description | Notes
 **userLevel** | **Integer** |  |  [optional]
 **regionPriceFactor** | [**List&lt;RegionPriceFactor&gt;**](RegionPriceFactor.md) |  |  [optional]
 **cid** | **Long** |  |  [optional]
-**storeShow** | **Integer** |  |  [optional]
 **queryRegionStatus** | **Boolean** |  |  [optional]
 **excludeQueryRegionStatus** | **Boolean** |  |  [optional]
-**dynamicCreativeTitleStatus** | **Boolean** |  |  [optional]
-**textTitleStatus** | **Boolean** |  |  [optional]
-**pictureOptimizeCreativeStatus** | **Boolean** |  |  [optional]
-**pictureOptimizeSegmentStatus** | **Boolean** |  |  [optional]
 **textOptimizeSegmentStatus** | **Boolean** |  |  [optional]
 **sysLongLinkSegmentStatus** | **Boolean** |  |  [optional]
 **longMonitorSublink** | **String** |  |  [optional]
-**crowdParamStatus** | **Boolean** |  |  [optional]
+**accountMonitorUrl** | **String** |  |  [optional]
+**liceName** | **String** |  |  [optional]
 
 
 

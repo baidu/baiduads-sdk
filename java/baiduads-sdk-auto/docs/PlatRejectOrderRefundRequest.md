@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **rejectProof** | **List&lt;String&gt;** |  |  [optional]
 **shopName** | **String** |  |  [optional]
 **shopLogoUrl** | **String** |  |  [optional]
+**rejectMarks** | **String** |  |  [optional]
 
 
 

@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.advice.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.advice.model.IssueSuggestion;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -32,6 +33,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   LandPageQualityApiType.JSON_PROPERTY_ID,
   LandPageQualityApiType.JSON_PROPERTY_KEYWORD_ID,
   LandPageQualityApiType.JSON_PROPERTY_CREATIVE_ID,
+  LandPageQualityApiType.JSON_PROPERTY_ISSUE_TYPE_DESCS,
+  LandPageQualityApiType.JSON_PROPERTY_SUGGESTION,
+  LandPageQualityApiType.JSON_PROPERTY_PRODUCT,
   LandPageQualityApiType.JSON_PROPERTY_CAMPAIGN_ID,
   LandPageQualityApiType.JSON_PROPERTY_CAMPAIGN_NAME,
   LandPageQualityApiType.JSON_PROPERTY_ADGROUP_ID,
@@ -73,6 +77,15 @@ public class LandPageQualityApiType {
 
   public static final String JSON_PROPERTY_CREATIVE_ID = "creativeId";
   private Long creativeId;
+
+  public static final String JSON_PROPERTY_ISSUE_TYPE_DESCS = "issueTypeDescs";
+  private List<String> issueTypeDescs = null;
+
+  public static final String JSON_PROPERTY_SUGGESTION = "suggestion";
+  private IssueSuggestion suggestion;
+
+  public static final String JSON_PROPERTY_PRODUCT = "product";
+  private Integer product;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
   private Long campaignId;
@@ -242,6 +255,95 @@ public class LandPageQualityApiType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCreativeId(Long creativeId) {
     this.creativeId = creativeId;
+  }
+
+
+  public LandPageQualityApiType issueTypeDescs(List<String> issueTypeDescs) {
+    
+    this.issueTypeDescs = issueTypeDescs;
+    return this;
+  }
+
+  public LandPageQualityApiType addIssueTypeDescsItem(String issueTypeDescsItem) {
+    if (this.issueTypeDescs == null) {
+      this.issueTypeDescs = new ArrayList<>();
+    }
+    this.issueTypeDescs.add(issueTypeDescsItem);
+    return this;
+  }
+
+   /**
+   * Get issueTypeDescs
+   * @return issueTypeDescs
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ISSUE_TYPE_DESCS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<String> getIssueTypeDescs() {
+    return issueTypeDescs;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ISSUE_TYPE_DESCS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setIssueTypeDescs(List<String> issueTypeDescs) {
+    this.issueTypeDescs = issueTypeDescs;
+  }
+
+
+  public LandPageQualityApiType suggestion(IssueSuggestion suggestion) {
+    
+    this.suggestion = suggestion;
+    return this;
+  }
+
+   /**
+   * Get suggestion
+   * @return suggestion
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SUGGESTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public IssueSuggestion getSuggestion() {
+    return suggestion;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SUGGESTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSuggestion(IssueSuggestion suggestion) {
+    this.suggestion = suggestion;
+  }
+
+
+  public LandPageQualityApiType product(Integer product) {
+    
+    this.product = product;
+    return this;
+  }
+
+   /**
+   * Get product
+   * @return product
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PRODUCT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getProduct() {
+    return product;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PRODUCT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setProduct(Integer product) {
+    this.product = product;
   }
 
 
@@ -1048,6 +1150,9 @@ public class LandPageQualityApiType {
     return Objects.equals(this.id, landPageQualityApiType.id) &&
         Objects.equals(this.keywordId, landPageQualityApiType.keywordId) &&
         Objects.equals(this.creativeId, landPageQualityApiType.creativeId) &&
+        Objects.equals(this.issueTypeDescs, landPageQualityApiType.issueTypeDescs) &&
+        Objects.equals(this.suggestion, landPageQualityApiType.suggestion) &&
+        Objects.equals(this.product, landPageQualityApiType.product) &&
         Objects.equals(this.campaignId, landPageQualityApiType.campaignId) &&
         Objects.equals(this.campaignName, landPageQualityApiType.campaignName) &&
         Objects.equals(this.adgroupId, landPageQualityApiType.adgroupId) &&
@@ -1081,7 +1186,7 @@ public class LandPageQualityApiType {
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, keywordId, creativeId, campaignId, campaignName, adgroupId, adgroupName, impressionIncMin, impressionIncMax, impression, click, cost, businessPointId, adType, marketingTargetId, modTime, status, issueTypes, landPageUrl, keyword, keywordCount, campaignCount, adgroupCount, creativeTitle, creativeCount, contentSign, description1, description2, pcDestinationUrl, pcDisplayUrl, mobileDisplayUrl, mobileDestinationUrl);
+    return Objects.hash(id, keywordId, creativeId, issueTypeDescs, suggestion, product, campaignId, campaignName, adgroupId, adgroupName, impressionIncMin, impressionIncMax, impression, click, cost, businessPointId, adType, marketingTargetId, modTime, status, issueTypes, landPageUrl, keyword, keywordCount, campaignCount, adgroupCount, creativeTitle, creativeCount, contentSign, description1, description2, pcDestinationUrl, pcDisplayUrl, mobileDisplayUrl, mobileDestinationUrl);
   }
 
   @Override
@@ -1091,6 +1196,9 @@ public class LandPageQualityApiType {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    keywordId: ").append(toIndentedString(keywordId)).append("\n");
     sb.append("    creativeId: ").append(toIndentedString(creativeId)).append("\n");
+    sb.append("    issueTypeDescs: ").append(toIndentedString(issueTypeDescs)).append("\n");
+    sb.append("    suggestion: ").append(toIndentedString(suggestion)).append("\n");
+    sb.append("    product: ").append(toIndentedString(product)).append("\n");
     sb.append("    campaignId: ").append(toIndentedString(campaignId)).append("\n");
     sb.append("    campaignName: ").append(toIndentedString(campaignName)).append("\n");
     sb.append("    adgroupId: ").append(toIndentedString(adgroupId)).append("\n");

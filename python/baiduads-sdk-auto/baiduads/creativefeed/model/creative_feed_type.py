@@ -105,6 +105,7 @@ class CreativeFeedType(ModelNormal):
             'attribute_list': (int,),  # noqa: E501
             'template': (PaIdeaTemplate,),  # noqa: E501
             'huitus': ([int],),  # noqa: E501
+            'eshop_type': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -130,6 +131,7 @@ class CreativeFeedType(ModelNormal):
         'attribute_list': 'attributeList',  # noqa: E501
         'template': 'template',  # noqa: E501
         'huitus': 'huitus',  # noqa: E501
+        'eshop_type': 'eshopType',  # noqa: E501
     }
 
     read_only_vars = {
@@ -190,6 +192,7 @@ class CreativeFeedType(ModelNormal):
             attribute_list (int): [optional]  # noqa: E501
             template (PaIdeaTemplate): [optional]  # noqa: E501
             huitus ([int]): [optional]  # noqa: E501
+            eshop_type (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -288,6 +291,7 @@ class CreativeFeedType(ModelNormal):
             attribute_list (int): [optional]  # noqa: E501
             template (PaIdeaTemplate): [optional]  # noqa: E501
             huitus ([int]): [optional]  # noqa: E501
+            eshop_type (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

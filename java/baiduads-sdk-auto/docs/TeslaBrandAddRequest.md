@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **video** | [**List&lt;BrandVideo&gt;**](BrandVideo.md) |  |  [optional]
 **qualification** | [**List&lt;BrandImage&gt;**](BrandImage.md) |  |  [optional]
 **image** | [**List&lt;BrandImage&gt;**](BrandImage.md) |  |  [optional]
+**tags** | [**List&lt;BrandTags&gt;**](BrandTags.md) |  |  [optional]
+**tradeId** | **Long** |  |  [optional]
 
 
 
