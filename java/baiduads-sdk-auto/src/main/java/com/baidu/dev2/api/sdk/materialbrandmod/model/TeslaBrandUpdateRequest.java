@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.materialbrandmod.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.materialbrandmod.model.BrandImage;
+import com.baidu.dev2.api.sdk.materialbrandmod.model.BrandTags;
 import com.baidu.dev2.api.sdk.materialbrandmod.model.BrandVideo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -41,7 +42,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TeslaBrandUpdateRequest.JSON_PROPERTY_BRAND_STORY,
   TeslaBrandUpdateRequest.JSON_PROPERTY_VIDEO,
   TeslaBrandUpdateRequest.JSON_PROPERTY_QUALIFICATION,
-  TeslaBrandUpdateRequest.JSON_PROPERTY_IMAGE
+  TeslaBrandUpdateRequest.JSON_PROPERTY_IMAGE,
+  TeslaBrandUpdateRequest.JSON_PROPERTY_TAGS,
+  TeslaBrandUpdateRequest.JSON_PROPERTY_TRADE_ID
 })
 @JsonTypeName("TeslaBrandUpdateRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -78,6 +81,12 @@ public class TeslaBrandUpdateRequest {
 
   public static final String JSON_PROPERTY_IMAGE = "image";
   private List<BrandImage> image = null;
+
+  public static final String JSON_PROPERTY_TAGS = "tags";
+  private List<BrandTags> tags = null;
+
+  public static final String JSON_PROPERTY_TRADE_ID = "tradeId";
+  private Long tradeId;
 
   public TeslaBrandUpdateRequest() { 
   }
@@ -419,6 +428,68 @@ public class TeslaBrandUpdateRequest {
   }
 
 
+  public TeslaBrandUpdateRequest tags(List<BrandTags> tags) {
+    
+    this.tags = tags;
+    return this;
+  }
+
+  public TeslaBrandUpdateRequest addTagsItem(BrandTags tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<>();
+    }
+    this.tags.add(tagsItem);
+    return this;
+  }
+
+   /**
+   * Get tags
+   * @return tags
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<BrandTags> getTags() {
+    return tags;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TAGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTags(List<BrandTags> tags) {
+    this.tags = tags;
+  }
+
+
+  public TeslaBrandUpdateRequest tradeId(Long tradeId) {
+    
+    this.tradeId = tradeId;
+    return this;
+  }
+
+   /**
+   * Get tradeId
+   * @return tradeId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRADE_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getTradeId() {
+    return tradeId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRADE_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTradeId(Long tradeId) {
+    this.tradeId = tradeId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -438,12 +509,14 @@ public class TeslaBrandUpdateRequest {
         Objects.equals(this.brandStory, teslaBrandUpdateRequest.brandStory) &&
         Objects.equals(this.video, teslaBrandUpdateRequest.video) &&
         Objects.equals(this.qualification, teslaBrandUpdateRequest.qualification) &&
-        Objects.equals(this.image, teslaBrandUpdateRequest.image);
+        Objects.equals(this.image, teslaBrandUpdateRequest.image) &&
+        Objects.equals(this.tags, teslaBrandUpdateRequest.tags) &&
+        Objects.equals(this.tradeId, teslaBrandUpdateRequest.tradeId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandId, status, name, logo, slogan, serviceScope, advantage, brandStory, video, qualification, image);
+    return Objects.hash(brandId, status, name, logo, slogan, serviceScope, advantage, brandStory, video, qualification, image, tags, tradeId);
   }
 
   @Override
@@ -461,6 +534,8 @@ public class TeslaBrandUpdateRequest {
     sb.append("    video: ").append(toIndentedString(video)).append("\n");
     sb.append("    qualification: ").append(toIndentedString(qualification)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
+    sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
+    sb.append("    tradeId: ").append(toIndentedString(tradeId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;BulkJobResultType&gt;**](BulkJobResultType.md) |  |  [optional]
+**data** | [**List&lt;GetKRFilePath&gt;**](GetKRFilePath.md) |  |  [optional]
 
 
 

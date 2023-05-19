@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;BulkJobStatusType&gt;**](BulkJobStatusType.md) |  |  [optional]
+**data** | [**List&lt;GetKRFileStatus&gt;**](GetKRFileStatus.md) |  |  [optional]
 
 
 

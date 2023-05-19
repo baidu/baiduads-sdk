@@ -29,18 +29,8 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from baiduads.platorderbusinessquery.model.appointment_info_mod_info import AppointmentInfoModInfo
-    from baiduads.platorderbusinessquery.model.plat_address_record_vo import PlatAddressRecordVo
-    from baiduads.platorderbusinessquery.model.plat_appointment_vo import PlatAppointmentVo
     from baiduads.platorderbusinessquery.model.plat_order_detail_part_consign_vo import PlatOrderDetailPartConsignVo
-    from baiduads.platorderbusinessquery.model.plat_order_detail_vo import PlatOrderDetailVo
-    from baiduads.platorderbusinessquery.model.plat_order_tag_vo import PlatOrderTagVo
-    globals()['AppointmentInfoModInfo'] = AppointmentInfoModInfo
-    globals()['PlatAddressRecordVo'] = PlatAddressRecordVo
-    globals()['PlatAppointmentVo'] = PlatAppointmentVo
     globals()['PlatOrderDetailPartConsignVo'] = PlatOrderDetailPartConsignVo
-    globals()['PlatOrderDetailVo'] = PlatOrderDetailVo
-    globals()['PlatOrderTagVo'] = PlatOrderTagVo
 
 
 class PlatOrderPartConsignInfoVo(ModelNormal):
@@ -96,7 +86,6 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
         """
         lazy_import()
         return {
-            'order_package_infos': ([[PlatOrderDetailPartConsignVo]],),  # noqa: E501
             'order_total_amount': (str,),  # noqa: E501
             'payment_amount': (str,),  # noqa: E501
             'freight_amount': (str,),  # noqa: E501
@@ -104,12 +93,13 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             'biz_coupon_discount_amount': (str,),  # noqa: E501
             'plat_promotion_discount_amount': (str,),  # noqa: E501
             'biz_promotion_discount_amount': (str,),  # noqa: E501
-            'address_record': ([PlatAddressRecordVo],),  # noqa: E501
             'order_detail_new': ([PlatOrderDetailPartConsignVo],),  # noqa: E501
             'part_consign': (int,),  # noqa: E501
             'product_total_amount': (str,),  # noqa: E501
             'plat_red_packet_discount_amount': (str,),  # noqa: E501
-            'appointment_info_mod_info': (AppointmentInfoModInfo,),  # noqa: E501
+            'due_pay_time': (str,),  # noqa: E501
+            'adjust_price_amount': (str,),  # noqa: E501
+            'order_pay_time': (str,),  # noqa: E501
             'order_id': (str,),  # noqa: E501
             'refund_id': (str,),  # noqa: E501
             'order_type': (int,),  # noqa: E501
@@ -126,40 +116,16 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             'express_name': (str,),  # noqa: E501
             'consign_time': (str,),  # noqa: E501
             'uc_id': (str,),  # noqa: E501
-            'uc_name': (str,),  # noqa: E501
-            'click_type': (int,),  # noqa: E501
-            'anti_user_id': (int,),  # noqa: E501
-            'pass_id': (int,),  # noqa: E501
-            'cuid': (str,),  # noqa: E501
-            'order_complete_time': (str,),  # noqa: E501
             'express_status': (int,),  # noqa: E501
             'express_status_text': (str,),  # noqa: E501
-            'blacked': (int,),  # noqa: E501
-            'order_tag_vos': ([PlatOrderTagVo],),  # noqa: E501
             'order_type_text': (str,),  # noqa: E501
             'click_type_text': (str,),  # noqa: E501
-            'business_code': (int,),  # noqa: E501
-            'order_detail': ([PlatOrderDetailVo],),  # noqa: E501
-            'province_code': (str,),  # noqa: E501
             'province_name': (str,),  # noqa: E501
-            'city_code': (str,),  # noqa: E501
             'city_name': (str,),  # noqa: E501
-            'area_code': (str,),  # noqa: E501
             'area_name': (str,),  # noqa: E501
-            'town_code': (str,),  # noqa: E501
             'town_name': (str,),  # noqa: E501
             'address': (str,),  # noqa: E501
-            'group_purchase_order': (bool,),  # noqa: E501
-            'batch_id': (int,),  # noqa: E501
-            'submit_type': (int,),  # noqa: E501
-            'pass_nick_name': (str,),  # noqa: E501
-            'pay_gate': (str,),  # noqa: E501
-            'appointment': (PlatAppointmentVo,),  # noqa: E501
             'app_id': (int,),  # noqa: E501
-            'product_type': (int,),  # noqa: E501
-            'additional_deliver_tag': (int,),  # noqa: E501
-            'db_product_type': (int,),  # noqa: E501
-            'transaction_mode': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -168,7 +134,6 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
 
 
     attribute_map = {
-        'order_package_infos': 'orderPackageInfos',  # noqa: E501
         'order_total_amount': 'orderTotalAmount',  # noqa: E501
         'payment_amount': 'paymentAmount',  # noqa: E501
         'freight_amount': 'freightAmount',  # noqa: E501
@@ -176,12 +141,13 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
         'biz_coupon_discount_amount': 'bizCouponDiscountAmount',  # noqa: E501
         'plat_promotion_discount_amount': 'platPromotionDiscountAmount',  # noqa: E501
         'biz_promotion_discount_amount': 'bizPromotionDiscountAmount',  # noqa: E501
-        'address_record': 'addressRecord',  # noqa: E501
         'order_detail_new': 'orderDetailNew',  # noqa: E501
         'part_consign': 'partConsign',  # noqa: E501
         'product_total_amount': 'productTotalAmount',  # noqa: E501
         'plat_red_packet_discount_amount': 'platRedPacketDiscountAmount',  # noqa: E501
-        'appointment_info_mod_info': 'appointmentInfoModInfo',  # noqa: E501
+        'due_pay_time': 'duePayTime',  # noqa: E501
+        'adjust_price_amount': 'adjustPriceAmount',  # noqa: E501
+        'order_pay_time': 'orderPayTime',  # noqa: E501
         'order_id': 'orderId',  # noqa: E501
         'refund_id': 'refundId',  # noqa: E501
         'order_type': 'orderType',  # noqa: E501
@@ -198,40 +164,16 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
         'express_name': 'expressName',  # noqa: E501
         'consign_time': 'consignTime',  # noqa: E501
         'uc_id': 'ucId',  # noqa: E501
-        'uc_name': 'ucName',  # noqa: E501
-        'click_type': 'clickType',  # noqa: E501
-        'anti_user_id': 'antiUserId',  # noqa: E501
-        'pass_id': 'passId',  # noqa: E501
-        'cuid': 'cuid',  # noqa: E501
-        'order_complete_time': 'orderCompleteTime',  # noqa: E501
         'express_status': 'expressStatus',  # noqa: E501
         'express_status_text': 'expressStatusText',  # noqa: E501
-        'blacked': 'blacked',  # noqa: E501
-        'order_tag_vos': 'orderTagVos',  # noqa: E501
         'order_type_text': 'orderTypeText',  # noqa: E501
         'click_type_text': 'clickTypeText',  # noqa: E501
-        'business_code': 'businessCode',  # noqa: E501
-        'order_detail': 'orderDetail',  # noqa: E501
-        'province_code': 'provinceCode',  # noqa: E501
         'province_name': 'provinceName',  # noqa: E501
-        'city_code': 'cityCode',  # noqa: E501
         'city_name': 'cityName',  # noqa: E501
-        'area_code': 'areaCode',  # noqa: E501
         'area_name': 'areaName',  # noqa: E501
-        'town_code': 'townCode',  # noqa: E501
         'town_name': 'townName',  # noqa: E501
         'address': 'address',  # noqa: E501
-        'group_purchase_order': 'groupPurchaseOrder',  # noqa: E501
-        'batch_id': 'batchId',  # noqa: E501
-        'submit_type': 'submitType',  # noqa: E501
-        'pass_nick_name': 'passNickName',  # noqa: E501
-        'pay_gate': 'payGate',  # noqa: E501
-        'appointment': 'appointment',  # noqa: E501
         'app_id': 'appId',  # noqa: E501
-        'product_type': 'productType',  # noqa: E501
-        'additional_deliver_tag': 'additionalDeliverTag',  # noqa: E501
-        'db_product_type': 'dbProductType',  # noqa: E501
-        'transaction_mode': 'transactionMode',  # noqa: E501
     }
 
     read_only_vars = {
@@ -275,7 +217,6 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            order_package_infos ([[PlatOrderDetailPartConsignVo]]): [optional]  # noqa: E501
             order_total_amount (str): [optional]  # noqa: E501
             payment_amount (str): [optional]  # noqa: E501
             freight_amount (str): [optional]  # noqa: E501
@@ -283,12 +224,13 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             biz_coupon_discount_amount (str): [optional]  # noqa: E501
             plat_promotion_discount_amount (str): [optional]  # noqa: E501
             biz_promotion_discount_amount (str): [optional]  # noqa: E501
-            address_record ([PlatAddressRecordVo]): [optional]  # noqa: E501
             order_detail_new ([PlatOrderDetailPartConsignVo]): [optional]  # noqa: E501
             part_consign (int): [optional]  # noqa: E501
             product_total_amount (str): [optional]  # noqa: E501
             plat_red_packet_discount_amount (str): [optional]  # noqa: E501
-            appointment_info_mod_info (AppointmentInfoModInfo): [optional]  # noqa: E501
+            due_pay_time (str): [optional]  # noqa: E501
+            adjust_price_amount (str): [optional]  # noqa: E501
+            order_pay_time (str): [optional]  # noqa: E501
             order_id (str): [optional]  # noqa: E501
             refund_id (str): [optional]  # noqa: E501
             order_type (int): [optional]  # noqa: E501
@@ -305,40 +247,16 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             express_name (str): [optional]  # noqa: E501
             consign_time (str): [optional]  # noqa: E501
             uc_id (str): [optional]  # noqa: E501
-            uc_name (str): [optional]  # noqa: E501
-            click_type (int): [optional]  # noqa: E501
-            anti_user_id (int): [optional]  # noqa: E501
-            pass_id (int): [optional]  # noqa: E501
-            cuid (str): [optional]  # noqa: E501
-            order_complete_time (str): [optional]  # noqa: E501
             express_status (int): [optional]  # noqa: E501
             express_status_text (str): [optional]  # noqa: E501
-            blacked (int): [optional]  # noqa: E501
-            order_tag_vos ([PlatOrderTagVo]): [optional]  # noqa: E501
             order_type_text (str): [optional]  # noqa: E501
             click_type_text (str): [optional]  # noqa: E501
-            business_code (int): [optional]  # noqa: E501
-            order_detail ([PlatOrderDetailVo]): [optional]  # noqa: E501
-            province_code (str): [optional]  # noqa: E501
             province_name (str): [optional]  # noqa: E501
-            city_code (str): [optional]  # noqa: E501
             city_name (str): [optional]  # noqa: E501
-            area_code (str): [optional]  # noqa: E501
             area_name (str): [optional]  # noqa: E501
-            town_code (str): [optional]  # noqa: E501
             town_name (str): [optional]  # noqa: E501
             address (str): [optional]  # noqa: E501
-            group_purchase_order (bool): [optional]  # noqa: E501
-            batch_id (int): [optional]  # noqa: E501
-            submit_type (int): [optional]  # noqa: E501
-            pass_nick_name (str): [optional]  # noqa: E501
-            pay_gate (str): [optional]  # noqa: E501
-            appointment (PlatAppointmentVo): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
-            product_type (int): [optional]  # noqa: E501
-            additional_deliver_tag (int): [optional]  # noqa: E501
-            db_product_type (int): [optional]  # noqa: E501
-            transaction_mode (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -420,7 +338,6 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            order_package_infos ([[PlatOrderDetailPartConsignVo]]): [optional]  # noqa: E501
             order_total_amount (str): [optional]  # noqa: E501
             payment_amount (str): [optional]  # noqa: E501
             freight_amount (str): [optional]  # noqa: E501
@@ -428,12 +345,13 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             biz_coupon_discount_amount (str): [optional]  # noqa: E501
             plat_promotion_discount_amount (str): [optional]  # noqa: E501
             biz_promotion_discount_amount (str): [optional]  # noqa: E501
-            address_record ([PlatAddressRecordVo]): [optional]  # noqa: E501
             order_detail_new ([PlatOrderDetailPartConsignVo]): [optional]  # noqa: E501
             part_consign (int): [optional]  # noqa: E501
             product_total_amount (str): [optional]  # noqa: E501
             plat_red_packet_discount_amount (str): [optional]  # noqa: E501
-            appointment_info_mod_info (AppointmentInfoModInfo): [optional]  # noqa: E501
+            due_pay_time (str): [optional]  # noqa: E501
+            adjust_price_amount (str): [optional]  # noqa: E501
+            order_pay_time (str): [optional]  # noqa: E501
             order_id (str): [optional]  # noqa: E501
             refund_id (str): [optional]  # noqa: E501
             order_type (int): [optional]  # noqa: E501
@@ -450,40 +368,16 @@ class PlatOrderPartConsignInfoVo(ModelNormal):
             express_name (str): [optional]  # noqa: E501
             consign_time (str): [optional]  # noqa: E501
             uc_id (str): [optional]  # noqa: E501
-            uc_name (str): [optional]  # noqa: E501
-            click_type (int): [optional]  # noqa: E501
-            anti_user_id (int): [optional]  # noqa: E501
-            pass_id (int): [optional]  # noqa: E501
-            cuid (str): [optional]  # noqa: E501
-            order_complete_time (str): [optional]  # noqa: E501
             express_status (int): [optional]  # noqa: E501
             express_status_text (str): [optional]  # noqa: E501
-            blacked (int): [optional]  # noqa: E501
-            order_tag_vos ([PlatOrderTagVo]): [optional]  # noqa: E501
             order_type_text (str): [optional]  # noqa: E501
             click_type_text (str): [optional]  # noqa: E501
-            business_code (int): [optional]  # noqa: E501
-            order_detail ([PlatOrderDetailVo]): [optional]  # noqa: E501
-            province_code (str): [optional]  # noqa: E501
             province_name (str): [optional]  # noqa: E501
-            city_code (str): [optional]  # noqa: E501
             city_name (str): [optional]  # noqa: E501
-            area_code (str): [optional]  # noqa: E501
             area_name (str): [optional]  # noqa: E501
-            town_code (str): [optional]  # noqa: E501
             town_name (str): [optional]  # noqa: E501
             address (str): [optional]  # noqa: E501
-            group_purchase_order (bool): [optional]  # noqa: E501
-            batch_id (int): [optional]  # noqa: E501
-            submit_type (int): [optional]  # noqa: E501
-            pass_nick_name (str): [optional]  # noqa: E501
-            pay_gate (str): [optional]  # noqa: E501
-            appointment (PlatAppointmentVo): [optional]  # noqa: E501
             app_id (int): [optional]  # noqa: E501
-            product_type (int): [optional]  # noqa: E501
-            additional_deliver_tag (int): [optional]  # noqa: E501
-            db_product_type (int): [optional]  # noqa: E501
-            transaction_mode (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

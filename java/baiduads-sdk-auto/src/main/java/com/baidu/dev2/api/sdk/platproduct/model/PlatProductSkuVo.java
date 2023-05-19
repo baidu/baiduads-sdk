@@ -33,7 +33,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   PlatProductSkuVo.JSON_PROPERTY_SKU_ID,
   PlatProductSkuVo.JSON_PROPERTY_SALE_PRICE,
-  PlatProductSkuVo.JSON_PROPERTY_ESTIMATED_PRICE,
   PlatProductSkuVo.JSON_PROPERTY_WEIGHT,
   PlatProductSkuVo.JSON_PROPERTY_STOCK,
   PlatProductSkuVo.JSON_PROPERTY_LOCKED_STOCK,
@@ -44,7 +43,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductSkuVo.JSON_PROPERTY_SPECIFICATIONS,
   PlatProductSkuVo.JSON_PROPERTY_SKU_CODE,
   PlatProductSkuVo.JSON_PROPERTY_SKU_EXT_NAME,
-  PlatProductSkuVo.JSON_PROPERTY_EXCHANGE_CODE
+  PlatProductSkuVo.JSON_PROPERTY_EXCHANGE_CODE,
+  PlatProductSkuVo.JSON_PROPERTY_OUTER_PRICE
 })
 @JsonTypeName("PlatProductSkuVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -54,9 +54,6 @@ public class PlatProductSkuVo {
 
   public static final String JSON_PROPERTY_SALE_PRICE = "salePrice";
   private java.math.BigDecimal salePrice;
-
-  public static final String JSON_PROPERTY_ESTIMATED_PRICE = "estimatedPrice";
-  private java.math.BigDecimal estimatedPrice;
 
   public static final String JSON_PROPERTY_WEIGHT = "weight";
   private java.math.BigDecimal weight;
@@ -90,6 +87,9 @@ public class PlatProductSkuVo {
 
   public static final String JSON_PROPERTY_EXCHANGE_CODE = "exchangeCode";
   private ProductExchangeCodeVo exchangeCode;
+
+  public static final String JSON_PROPERTY_OUTER_PRICE = "outerPrice";
+  private java.math.BigDecimal outerPrice;
 
   public PlatProductSkuVo() { 
   }
@@ -145,33 +145,6 @@ public class PlatProductSkuVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSalePrice(java.math.BigDecimal salePrice) {
     this.salePrice = salePrice;
-  }
-
-
-  public PlatProductSkuVo estimatedPrice(java.math.BigDecimal estimatedPrice) {
-    
-    this.estimatedPrice = estimatedPrice;
-    return this;
-  }
-
-   /**
-   * Get estimatedPrice
-   * @return estimatedPrice
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ESTIMATED_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public java.math.BigDecimal getEstimatedPrice() {
-    return estimatedPrice;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ESTIMATED_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEstimatedPrice(java.math.BigDecimal estimatedPrice) {
-    this.estimatedPrice = estimatedPrice;
   }
 
 
@@ -480,6 +453,33 @@ public class PlatProductSkuVo {
   }
 
 
+  public PlatProductSkuVo outerPrice(java.math.BigDecimal outerPrice) {
+    
+    this.outerPrice = outerPrice;
+    return this;
+  }
+
+   /**
+   * Get outerPrice
+   * @return outerPrice
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_OUTER_PRICE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public java.math.BigDecimal getOuterPrice() {
+    return outerPrice;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_OUTER_PRICE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOuterPrice(java.math.BigDecimal outerPrice) {
+    this.outerPrice = outerPrice;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -491,7 +491,6 @@ public class PlatProductSkuVo {
     PlatProductSkuVo platProductSkuVo = (PlatProductSkuVo) o;
     return Objects.equals(this.skuId, platProductSkuVo.skuId) &&
         Objects.equals(this.salePrice, platProductSkuVo.salePrice) &&
-        Objects.equals(this.estimatedPrice, platProductSkuVo.estimatedPrice) &&
         Objects.equals(this.weight, platProductSkuVo.weight) &&
         Objects.equals(this.stock, platProductSkuVo.stock) &&
         Objects.equals(this.lockedStock, platProductSkuVo.lockedStock) &&
@@ -502,12 +501,13 @@ public class PlatProductSkuVo {
         Objects.equals(this.specifications, platProductSkuVo.specifications) &&
         Objects.equals(this.skuCode, platProductSkuVo.skuCode) &&
         Objects.equals(this.skuExtName, platProductSkuVo.skuExtName) &&
-        Objects.equals(this.exchangeCode, platProductSkuVo.exchangeCode);
+        Objects.equals(this.exchangeCode, platProductSkuVo.exchangeCode) &&
+        Objects.equals(this.outerPrice, platProductSkuVo.outerPrice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(skuId, salePrice, estimatedPrice, weight, stock, lockedStock, restStock, image, skuExtImage, sales, specifications, skuCode, skuExtName, exchangeCode);
+    return Objects.hash(skuId, salePrice, weight, stock, lockedStock, restStock, image, skuExtImage, sales, specifications, skuCode, skuExtName, exchangeCode, outerPrice);
   }
 
   @Override
@@ -516,7 +516,6 @@ public class PlatProductSkuVo {
     sb.append("class PlatProductSkuVo {\n");
     sb.append("    skuId: ").append(toIndentedString(skuId)).append("\n");
     sb.append("    salePrice: ").append(toIndentedString(salePrice)).append("\n");
-    sb.append("    estimatedPrice: ").append(toIndentedString(estimatedPrice)).append("\n");
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
     sb.append("    stock: ").append(toIndentedString(stock)).append("\n");
     sb.append("    lockedStock: ").append(toIndentedString(lockedStock)).append("\n");
@@ -528,6 +527,7 @@ public class PlatProductSkuVo {
     sb.append("    skuCode: ").append(toIndentedString(skuCode)).append("\n");
     sb.append("    skuExtName: ").append(toIndentedString(skuExtName)).append("\n");
     sb.append("    exchangeCode: ").append(toIndentedString(exchangeCode)).append("\n");
+    sb.append("    outerPrice: ").append(toIndentedString(outerPrice)).append("\n");
     sb.append("}");
     return sb.toString();
   }

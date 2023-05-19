@@ -86,19 +86,15 @@ class VideoInfoType(ModelNormal):
             'video_url': (str,),  # noqa: E501
             'errors': (str,),  # noqa: E501
             'video_name': (str,),  # noqa: E501
-            'source': (int,),  # noqa: E501
-            'progress': (int,),  # noqa: E501
             'create_time': (str,),  # noqa: E501
-            'tags': (str,),  # noqa: E501
             'id': (int,),  # noqa: E501
             'thumbnail': (str,),  # noqa: E501
             'duration': (int,),  # noqa: E501
             'width': (int,),  # noqa: E501
             'height': (int,),  # noqa: E501
-            'render_type': (int,),  # noqa: E501
             'md5': (str,),  # noqa: E501
-            'batch_task_id': (int,),  # noqa: E501
-            'ext': (str,),  # noqa: E501
+            'texts': (str,),  # noqa: E501
+            'material': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -113,19 +109,15 @@ class VideoInfoType(ModelNormal):
         'video_url': 'videoUrl',  # noqa: E501
         'errors': 'errors',  # noqa: E501
         'video_name': 'videoName',  # noqa: E501
-        'source': 'source',  # noqa: E501
-        'progress': 'progress',  # noqa: E501
         'create_time': 'createTime',  # noqa: E501
-        'tags': 'tags',  # noqa: E501
         'id': 'id',  # noqa: E501
         'thumbnail': 'thumbnail',  # noqa: E501
         'duration': 'duration',  # noqa: E501
         'width': 'width',  # noqa: E501
         'height': 'height',  # noqa: E501
-        'render_type': 'renderType',  # noqa: E501
         'md5': 'md5',  # noqa: E501
-        'batch_task_id': 'batchTaskId',  # noqa: E501
-        'ext': 'ext',  # noqa: E501
+        'texts': 'texts',  # noqa: E501
+        'material': 'material',  # noqa: E501
     }
 
     read_only_vars = {
@@ -175,19 +167,15 @@ class VideoInfoType(ModelNormal):
             video_url (str): [optional]  # noqa: E501
             errors (str): [optional]  # noqa: E501
             video_name (str): [optional]  # noqa: E501
-            source (int): [optional]  # noqa: E501
-            progress (int): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
-            tags (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             thumbnail (str): [optional]  # noqa: E501
             duration (int): [optional]  # noqa: E501
             width (int): [optional]  # noqa: E501
             height (int): [optional]  # noqa: E501
-            render_type (int): [optional]  # noqa: E501
             md5 (str): [optional]  # noqa: E501
-            batch_task_id (int): [optional]  # noqa: E501
-            ext (str): [optional]  # noqa: E501
+            texts (str): [optional]  # noqa: E501
+            material (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -275,19 +263,15 @@ class VideoInfoType(ModelNormal):
             video_url (str): [optional]  # noqa: E501
             errors (str): [optional]  # noqa: E501
             video_name (str): [optional]  # noqa: E501
-            source (int): [optional]  # noqa: E501
-            progress (int): [optional]  # noqa: E501
             create_time (str): [optional]  # noqa: E501
-            tags (str): [optional]  # noqa: E501
             id (int): [optional]  # noqa: E501
             thumbnail (str): [optional]  # noqa: E501
             duration (int): [optional]  # noqa: E501
             width (int): [optional]  # noqa: E501
             height (int): [optional]  # noqa: E501
-            render_type (int): [optional]  # noqa: E501
             md5 (str): [optional]  # noqa: E501
-            batch_task_id (int): [optional]  # noqa: E501
-            ext (str): [optional]  # noqa: E501
+            texts (str): [optional]  # noqa: E501
+            material (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

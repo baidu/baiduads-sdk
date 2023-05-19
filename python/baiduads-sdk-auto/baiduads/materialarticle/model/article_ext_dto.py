@@ -32,11 +32,9 @@ def lazy_import():
     from baiduads.materialarticle.model.author_info import AuthorInfo
     from baiduads.materialarticle.model.case_fee import CaseFee
     from baiduads.materialarticle.model.detail_category_dto import DetailCategoryDto
-    from baiduads.materialarticle.model.tp_info import TpInfo
     globals()['AuthorInfo'] = AuthorInfo
     globals()['CaseFee'] = CaseFee
     globals()['DetailCategoryDto'] = DetailCategoryDto
-    globals()['TpInfo'] = TpInfo
 
 
 class ArticleExtDto(ModelNormal):
@@ -103,7 +101,8 @@ class ArticleExtDto(ModelNormal):
             'construction_fee': (CaseFee,),  # noqa: E501
             'author': (AuthorInfo,),  # noqa: E501
             'detail_category': ([DetailCategoryDto],),  # noqa: E501
-            'tp_info': (TpInfo,),  # noqa: E501
+            'article_source': (str,),  # noqa: E501
+            'article_link': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -123,7 +122,8 @@ class ArticleExtDto(ModelNormal):
         'construction_fee': 'constructionFee',  # noqa: E501
         'author': 'author',  # noqa: E501
         'detail_category': 'detailCategory',  # noqa: E501
-        'tp_info': 'tpInfo',  # noqa: E501
+        'article_source': 'articleSource',  # noqa: E501
+        'article_link': 'articleLink',  # noqa: E501
     }
 
     read_only_vars = {
@@ -178,7 +178,8 @@ class ArticleExtDto(ModelNormal):
             construction_fee (CaseFee): [optional]  # noqa: E501
             author (AuthorInfo): [optional]  # noqa: E501
             detail_category ([DetailCategoryDto]): [optional]  # noqa: E501
-            tp_info (TpInfo): [optional]  # noqa: E501
+            article_source (str): [optional]  # noqa: E501
+            article_link (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -271,7 +272,8 @@ class ArticleExtDto(ModelNormal):
             construction_fee (CaseFee): [optional]  # noqa: E501
             author (AuthorInfo): [optional]  # noqa: E501
             detail_category ([DetailCategoryDto]): [optional]  # noqa: E501
-            tp_info (TpInfo): [optional]  # noqa: E501
+            article_source (str): [optional]  # noqa: E501
+            article_link (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   description: '''dev2.baidu.com'' api schema'
   title: dev2 api schema
-  version: 2023.0.0
+  version: 2023.1.0
 servers:
 - url: https://api.baidu.com/
 - url: http://api.baidu.com/
@@ -137,6 +137,979 @@ paths:
       x-accepts: application/json;charset=UTF-8
 components:
   schemas:
+    ApiRequestHeader:
+      type: object
+    ApiResponseHeader:
+      type: object
+    TeslaPersonUpdateRequest:
+      example:
+        educationBackground: educationBackground
+        honour: honour
+        goodAt: goodAt
+        education: education
+        gender: 7
+        workingYears: 6
+        profileImage: profileImage
+        roleType: 2
+        idNumber: idNumber
+        qualification: qualification
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        name: name
+        personId: 0
+        location: location
+        job: job
+        introduction: introduction
+        categoryId: 1
+        tradeId: 5
+        status: 5
+      properties:
+        personId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        status:
+          format: int32
+          type: integer
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
+      type: object
+    TeslaPersonAddRequest:
+      example:
+        educationBackground: educationBackground
+        honour: honour
+        goodAt: goodAt
+        education: education
+        gender: 2
+        workingYears: 0
+        profileImage: profileImage
+        roleType: 5
+        idNumber: idNumber
+        qualification: qualification
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        name: name
+        location: location
+        job: job
+        introduction: introduction
+        categoryId: 6
+        tradeId: 5
+        status: 1
+      properties:
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        status:
+          format: int32
+          type: integer
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
+      type: object
+    UpdatePutawayResponseWrapper:
+      example:
+        body:
+          data:
+          - 0
+          - 0
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/UpdatePutawayResponseWrapperBody'
+      type: object
+    UpdatePersonResponseWrapper:
+      example:
+        body:
+          data:
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            humanAudit: 1
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            humanAudit: 1
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/UpdatePersonResponseWrapperBody'
+      type: object
+    PersonExtDto:
+      example:
+        pracHospital: pracHospital
+        representWork: representWork
+        designConcept: designConcept
+        constructionExperience: constructionExperience
+        department: department
+      properties:
+        representWork:
+          type: string
+        designConcept:
+          type: string
+        constructionExperience:
+          type: string
+        pracHospital:
+          type: string
+        department:
+          type: string
+      type: object
+    AddPersonResponseWrapper:
+      example:
+        body:
+          data:
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            humanAudit: 1
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
+            education: education
+            gender: 9
+            workingYears: 6
+            profileImage: profileImage
+            roleType: 7
+            idNumber: idNumber
+            categoryName: categoryName
+            personExt:
+              pracHospital: pracHospital
+              representWork: representWork
+              designConcept: designConcept
+              constructionExperience: constructionExperience
+              department: department
+            humanAudit: 1
+            rank: 5
+            reauditStatus: 3
+            introduction: introduction
+            educationBackground: educationBackground
+            honour: honour
+            auditRemark: auditRemark
+            updateTime: updateTime
+            qualification: qualification
+            createTime: createTime
+            name: name
+            personId: 0
+            location: location
+            job: job
+            categoryId: 1
+            tradeId: 2
+            status: 5
+      properties:
+        header:
+          $ref: '#/components/schemas/ApiResponseHeader'
+        body:
+          $ref: '#/components/schemas/AddPersonResponseWrapperBody'
+      type: object
+    PersonDetailDto:
+      example:
+        contentQualityStatus: 2
+        contentQualityDetail:
+          textQuality:
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          fieldRepeat:
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          pictureVision:
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          fieldFill:
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+          - reference:
+            - rate: rate
+              materialId: 1
+              content: content
+            - rate: rate
+              materialId: 1
+              content: content
+            score: 4
+            problem: problem
+            field: field
+            solution: solution
+            type: 7
+            fieldType: 1
+        goodAt: goodAt
+        education: education
+        gender: 9
+        workingYears: 6
+        profileImage: profileImage
+        roleType: 7
+        idNumber: idNumber
+        categoryName: categoryName
+        personExt:
+          pracHospital: pracHospital
+          representWork: representWork
+          designConcept: designConcept
+          constructionExperience: constructionExperience
+          department: department
+        humanAudit: 1
+        rank: 5
+        reauditStatus: 3
+        introduction: introduction
+        educationBackground: educationBackground
+        honour: honour
+        auditRemark: auditRemark
+        updateTime: updateTime
+        qualification: qualification
+        createTime: createTime
+        name: name
+        personId: 0
+        location: location
+        job: job
+        categoryId: 1
+        tradeId: 2
+        status: 5
+      properties:
+        personId:
+          format: int64
+          type: integer
+        name:
+          type: string
+        profileImage:
+          type: string
+        job:
+          type: string
+        workingYears:
+          format: int32
+          type: integer
+        goodAt:
+          type: string
+        education:
+          type: string
+        educationBackground:
+          type: string
+        introduction:
+          type: string
+        qualification:
+          type: string
+        categoryId:
+          format: int64
+          type: integer
+        categoryName:
+          type: string
+        status:
+          format: int32
+          type: integer
+        auditRemark:
+          type: string
+        rank:
+          format: int32
+          type: integer
+        createTime:
+          type: string
+        updateTime:
+          type: string
+        tradeId:
+          format: int64
+          type: integer
+        roleType:
+          format: int32
+          type: integer
+        personExt:
+          $ref: '#/components/schemas/PersonExtDto'
+        honour:
+          type: string
+        gender:
+          format: int32
+          type: integer
+        idNumber:
+          type: string
+        location:
+          type: string
+        reauditStatus:
+          format: int32
+          type: integer
+        contentQualityStatus:
+          format: int32
+          type: integer
+        contentQualityDetail:
+          $ref: '#/components/schemas/ContentQualityDetail'
+        humanAudit:
+          format: int32
+          type: integer
+      type: object
     UpdatePutawayRequestWrapper:
       example:
         body:
@@ -164,13 +1137,121 @@ components:
         body:
           $ref: '#/components/schemas/UpdateCategoryResponseWrapperBody'
       type: object
-    ApiRequestHeader:
-      type: object
     UpdateRankResponseWrapper:
       example:
         body:
           data:
-          - goodAt: goodAt
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
             education: education
             gender: 9
             workingYears: 6
@@ -184,6 +1265,7 @@ components:
               designConcept: designConcept
               constructionExperience: constructionExperience
               department: department
+            humanAudit: 1
             rank: 5
             reauditStatus: 3
             introduction: introduction
@@ -200,7 +1282,117 @@ components:
             categoryId: 1
             tradeId: 2
             status: 5
-          - goodAt: goodAt
+          - contentQualityStatus: 2
+            contentQualityDetail:
+              textQuality:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldRepeat:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              pictureVision:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              fieldFill:
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+              - reference:
+                - rate: rate
+                  materialId: 1
+                  content: content
+                - rate: rate
+                  materialId: 1
+                  content: content
+                score: 4
+                problem: problem
+                field: field
+                solution: solution
+                type: 7
+                fieldType: 1
+            goodAt: goodAt
             education: education
             gender: 9
             workingYears: 6
@@ -214,6 +1406,7 @@ components:
               designConcept: designConcept
               constructionExperience: constructionExperience
               department: department
+            humanAudit: 1
             rank: 5
             reauditStatus: 3
             introduction: introduction
@@ -236,6 +1429,20 @@ components:
         body:
           $ref: '#/components/schemas/UpdateRankResponseWrapperBody'
       type: object
+    QualityReference:
+      example:
+        rate: rate
+        materialId: 1
+        content: content
+      properties:
+        materialId:
+          format: int64
+          type: integer
+        content:
+          type: string
+        rate:
+          type: string
+      type: object
     DeletePersonResponseWrapper:
       example:
         body:
@@ -247,6 +1454,134 @@ components:
           $ref: '#/components/schemas/ApiResponseHeader'
         body:
           $ref: '#/components/schemas/DeletePersonResponseWrapperBody'
+      type: object
+    ContentQualityDetail:
+      example:
+        textQuality:
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        fieldRepeat:
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        pictureVision:
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        fieldFill:
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+        - reference:
+          - rate: rate
+            materialId: 1
+            content: content
+          - rate: rate
+            materialId: 1
+            content: content
+          score: 4
+          problem: problem
+          field: field
+          solution: solution
+          type: 7
+          fieldType: 1
+      properties:
+        fieldFill:
+          items:
+            $ref: '#/components/schemas/QualityResult'
+          type: array
+        fieldRepeat:
+          items:
+            $ref: '#/components/schemas/QualityResult'
+          type: array
+        pictureVision:
+          items:
+            $ref: '#/components/schemas/QualityResult'
+          type: array
+        textQuality:
+          items:
+            $ref: '#/components/schemas/QualityResult'
+          type: array
       type: object
     DeletePersonRequestWrapper:
       example:
@@ -333,8 +1668,6 @@ components:
           format: int64
           type: integer
       type: object
-    ApiResponseHeader:
-      type: object
     UpdateRankRequestWrapper:
       example:
         body:
@@ -345,79 +1678,6 @@ components:
           $ref: '#/components/schemas/ApiRequestHeader'
         body:
           $ref: '#/components/schemas/TeslaPersonUpdateRankRequest'
-      type: object
-    TeslaPersonUpdateRequest:
-      example:
-        educationBackground: educationBackground
-        honour: honour
-        goodAt: goodAt
-        education: education
-        gender: 7
-        workingYears: 6
-        profileImage: profileImage
-        roleType: 2
-        idNumber: idNumber
-        qualification: qualification
-        personExt:
-          pracHospital: pracHospital
-          representWork: representWork
-          designConcept: designConcept
-          constructionExperience: constructionExperience
-          department: department
-        name: name
-        personId: 0
-        location: location
-        job: job
-        introduction: introduction
-        categoryId: 1
-        tradeId: 5
-        status: 5
-      properties:
-        personId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        profileImage:
-          type: string
-        job:
-          type: string
-        workingYears:
-          format: int32
-          type: integer
-        goodAt:
-          type: string
-        education:
-          type: string
-        educationBackground:
-          type: string
-        introduction:
-          type: string
-        qualification:
-          type: string
-        categoryId:
-          format: int64
-          type: integer
-        status:
-          format: int32
-          type: integer
-        tradeId:
-          format: int64
-          type: integer
-        roleType:
-          format: int32
-          type: integer
-        personExt:
-          $ref: '#/components/schemas/PersonExtDto'
-        honour:
-          type: string
-        gender:
-          format: int32
-          type: integer
-        idNumber:
-          type: string
-        location:
-          type: string
       type: object
     TeslaPersonBatchIdRequest:
       example:
@@ -430,87 +1690,6 @@ components:
             format: int64
             type: integer
           type: array
-      type: object
-    UpdatePutawayResponseWrapper:
-      example:
-        body:
-          data:
-          - 0
-          - 0
-      properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/UpdatePutawayResponseWrapperBody'
-      type: object
-    TeslaPersonAddRequest:
-      example:
-        educationBackground: educationBackground
-        honour: honour
-        goodAt: goodAt
-        education: education
-        gender: 2
-        workingYears: 0
-        profileImage: profileImage
-        roleType: 5
-        idNumber: idNumber
-        qualification: qualification
-        personExt:
-          pracHospital: pracHospital
-          representWork: representWork
-          designConcept: designConcept
-          constructionExperience: constructionExperience
-          department: department
-        name: name
-        location: location
-        job: job
-        introduction: introduction
-        categoryId: 6
-        tradeId: 5
-        status: 1
-      properties:
-        name:
-          type: string
-        profileImage:
-          type: string
-        job:
-          type: string
-        workingYears:
-          format: int32
-          type: integer
-        goodAt:
-          type: string
-        education:
-          type: string
-        educationBackground:
-          type: string
-        introduction:
-          type: string
-        qualification:
-          type: string
-        categoryId:
-          format: int64
-          type: integer
-        status:
-          format: int32
-          type: integer
-        tradeId:
-          format: int64
-          type: integer
-        roleType:
-          format: int32
-          type: integer
-        personExt:
-          $ref: '#/components/schemas/PersonExtDto'
-        honour:
-          type: string
-        gender:
-          format: int32
-          type: integer
-        idNumber:
-          type: string
-        location:
-          type: string
       type: object
     TeslaPersonBatchUpdateCategoryRequest:
       example:
@@ -561,257 +1740,638 @@ components:
         body:
           $ref: '#/components/schemas/TeslaPersonUpdateRequest'
       type: object
-    UpdatePersonResponseWrapper:
+    QualityResult:
       example:
-        body:
-          data:
-          - goodAt: goodAt
-            education: education
-            gender: 9
-            workingYears: 6
-            profileImage: profileImage
-            roleType: 7
-            idNumber: idNumber
-            categoryName: categoryName
-            personExt:
-              pracHospital: pracHospital
-              representWork: representWork
-              designConcept: designConcept
-              constructionExperience: constructionExperience
-              department: department
-            rank: 5
-            reauditStatus: 3
-            introduction: introduction
-            educationBackground: educationBackground
-            honour: honour
-            auditRemark: auditRemark
-            updateTime: updateTime
-            qualification: qualification
-            createTime: createTime
-            name: name
-            personId: 0
-            location: location
-            job: job
-            categoryId: 1
-            tradeId: 2
-            status: 5
-          - goodAt: goodAt
-            education: education
-            gender: 9
-            workingYears: 6
-            profileImage: profileImage
-            roleType: 7
-            idNumber: idNumber
-            categoryName: categoryName
-            personExt:
-              pracHospital: pracHospital
-              representWork: representWork
-              designConcept: designConcept
-              constructionExperience: constructionExperience
-              department: department
-            rank: 5
-            reauditStatus: 3
-            introduction: introduction
-            educationBackground: educationBackground
-            honour: honour
-            auditRemark: auditRemark
-            updateTime: updateTime
-            qualification: qualification
-            createTime: createTime
-            name: name
-            personId: 0
-            location: location
-            job: job
-            categoryId: 1
-            tradeId: 2
-            status: 5
+        reference:
+        - rate: rate
+          materialId: 1
+          content: content
+        - rate: rate
+          materialId: 1
+          content: content
+        score: 4
+        problem: problem
+        field: field
+        solution: solution
+        type: 7
+        fieldType: 1
       properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/UpdatePersonResponseWrapperBody'
+        field:
+          type: string
+        score:
+          format: int32
+          type: integer
+        problem:
+          type: string
+        solution:
+          type: string
+        type:
+          format: int32
+          type: integer
+        reference:
+          items:
+            $ref: '#/components/schemas/QualityReference'
+          type: array
+        fieldType:
+          format: int32
+          type: integer
       type: object
-    PersonExtDto:
+    UpdatePutawayResponseWrapperBody:
       example:
-        pracHospital: pracHospital
-        representWork: representWork
-        designConcept: designConcept
-        constructionExperience: constructionExperience
-        department: department
+        data:
+        - 0
+        - 0
       properties:
-        representWork:
-          type: string
-        designConcept:
-          type: string
-        constructionExperience:
-          type: string
-        pracHospital:
-          type: string
-        department:
-          type: string
+        data:
+          items:
+            format: int64
+            type: integer
+          type: array
+      title: UpdatePutawayResponseWrapperBody
       type: object
-    AddPersonResponseWrapper:
+    UpdatePersonResponseWrapperBody:
       example:
-        body:
-          data:
-          - goodAt: goodAt
-            education: education
-            gender: 9
-            workingYears: 6
-            profileImage: profileImage
-            roleType: 7
-            idNumber: idNumber
-            categoryName: categoryName
-            personExt:
-              pracHospital: pracHospital
-              representWork: representWork
-              designConcept: designConcept
-              constructionExperience: constructionExperience
-              department: department
-            rank: 5
-            reauditStatus: 3
-            introduction: introduction
-            educationBackground: educationBackground
-            honour: honour
-            auditRemark: auditRemark
-            updateTime: updateTime
-            qualification: qualification
-            createTime: createTime
-            name: name
-            personId: 0
-            location: location
-            job: job
-            categoryId: 1
-            tradeId: 2
-            status: 5
-          - goodAt: goodAt
-            education: education
-            gender: 9
-            workingYears: 6
-            profileImage: profileImage
-            roleType: 7
-            idNumber: idNumber
-            categoryName: categoryName
-            personExt:
-              pracHospital: pracHospital
-              representWork: representWork
-              designConcept: designConcept
-              constructionExperience: constructionExperience
-              department: department
-            rank: 5
-            reauditStatus: 3
-            introduction: introduction
-            educationBackground: educationBackground
-            honour: honour
-            auditRemark: auditRemark
-            updateTime: updateTime
-            qualification: qualification
-            createTime: createTime
-            name: name
-            personId: 0
-            location: location
-            job: job
-            categoryId: 1
-            tradeId: 2
-            status: 5
+        data:
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          humanAudit: 1
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          humanAudit: 1
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
       properties:
-        header:
-          $ref: '#/components/schemas/ApiResponseHeader'
-        body:
-          $ref: '#/components/schemas/AddPersonResponseWrapperBody'
+        data:
+          items:
+            $ref: '#/components/schemas/PersonDetailDto'
+          type: array
+      title: UpdatePersonResponseWrapperBody
       type: object
-    PersonDetailDto:
+    AddPersonResponseWrapperBody:
       example:
-        goodAt: goodAt
-        education: education
-        gender: 9
-        workingYears: 6
-        profileImage: profileImage
-        roleType: 7
-        idNumber: idNumber
-        categoryName: categoryName
-        personExt:
-          pracHospital: pracHospital
-          representWork: representWork
-          designConcept: designConcept
-          constructionExperience: constructionExperience
-          department: department
-        rank: 5
-        reauditStatus: 3
-        introduction: introduction
-        educationBackground: educationBackground
-        honour: honour
-        auditRemark: auditRemark
-        updateTime: updateTime
-        qualification: qualification
-        createTime: createTime
-        name: name
-        personId: 0
-        location: location
-        job: job
-        categoryId: 1
-        tradeId: 2
-        status: 5
+        data:
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          humanAudit: 1
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
+          education: education
+          gender: 9
+          workingYears: 6
+          profileImage: profileImage
+          roleType: 7
+          idNumber: idNumber
+          categoryName: categoryName
+          personExt:
+            pracHospital: pracHospital
+            representWork: representWork
+            designConcept: designConcept
+            constructionExperience: constructionExperience
+            department: department
+          humanAudit: 1
+          rank: 5
+          reauditStatus: 3
+          introduction: introduction
+          educationBackground: educationBackground
+          honour: honour
+          auditRemark: auditRemark
+          updateTime: updateTime
+          qualification: qualification
+          createTime: createTime
+          name: name
+          personId: 0
+          location: location
+          job: job
+          categoryId: 1
+          tradeId: 2
+          status: 5
       properties:
-        personId:
-          format: int64
-          type: integer
-        name:
-          type: string
-        profileImage:
-          type: string
-        job:
-          type: string
-        workingYears:
-          format: int32
-          type: integer
-        goodAt:
-          type: string
-        education:
-          type: string
-        educationBackground:
-          type: string
-        introduction:
-          type: string
-        qualification:
-          type: string
-        categoryId:
-          format: int64
-          type: integer
-        categoryName:
-          type: string
-        status:
-          format: int32
-          type: integer
-        auditRemark:
-          type: string
-        rank:
-          format: int32
-          type: integer
-        createTime:
-          type: string
-        updateTime:
-          type: string
-        tradeId:
-          format: int64
-          type: integer
-        roleType:
-          format: int32
-          type: integer
-        personExt:
-          $ref: '#/components/schemas/PersonExtDto'
-        honour:
-          type: string
-        gender:
-          format: int32
-          type: integer
-        idNumber:
-          type: string
-        location:
-          type: string
-        reauditStatus:
-          format: int32
-          type: integer
+        data:
+          items:
+            $ref: '#/components/schemas/PersonDetailDto'
+          type: array
+      title: AddPersonResponseWrapperBody
       type: object
     UpdateCategoryResponseWrapperBody:
       example:
@@ -829,7 +2389,117 @@ components:
     UpdateRankResponseWrapperBody:
       example:
         data:
-        - goodAt: goodAt
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
           education: education
           gender: 9
           workingYears: 6
@@ -843,6 +2513,7 @@ components:
             designConcept: designConcept
             constructionExperience: constructionExperience
             department: department
+          humanAudit: 1
           rank: 5
           reauditStatus: 3
           introduction: introduction
@@ -859,7 +2530,117 @@ components:
           categoryId: 1
           tradeId: 2
           status: 5
-        - goodAt: goodAt
+        - contentQualityStatus: 2
+          contentQualityDetail:
+            textQuality:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldRepeat:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            pictureVision:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            fieldFill:
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+            - reference:
+              - rate: rate
+                materialId: 1
+                content: content
+              - rate: rate
+                materialId: 1
+                content: content
+              score: 4
+              problem: problem
+              field: field
+              solution: solution
+              type: 7
+              fieldType: 1
+          goodAt: goodAt
           education: education
           gender: 9
           workingYears: 6
@@ -873,6 +2654,7 @@ components:
             designConcept: designConcept
             constructionExperience: constructionExperience
             department: department
+          humanAudit: 1
           rank: 5
           reauditStatus: 3
           introduction: introduction
@@ -908,159 +2690,6 @@ components:
             type: integer
           type: array
       title: DeletePersonResponseWrapperBody
-      type: object
-    UpdatePutawayResponseWrapperBody:
-      example:
-        data:
-        - 0
-        - 0
-      properties:
-        data:
-          items:
-            format: int64
-            type: integer
-          type: array
-      title: UpdatePutawayResponseWrapperBody
-      type: object
-    UpdatePersonResponseWrapperBody:
-      example:
-        data:
-        - goodAt: goodAt
-          education: education
-          gender: 9
-          workingYears: 6
-          profileImage: profileImage
-          roleType: 7
-          idNumber: idNumber
-          categoryName: categoryName
-          personExt:
-            pracHospital: pracHospital
-            representWork: representWork
-            designConcept: designConcept
-            constructionExperience: constructionExperience
-            department: department
-          rank: 5
-          reauditStatus: 3
-          introduction: introduction
-          educationBackground: educationBackground
-          honour: honour
-          auditRemark: auditRemark
-          updateTime: updateTime
-          qualification: qualification
-          createTime: createTime
-          name: name
-          personId: 0
-          location: location
-          job: job
-          categoryId: 1
-          tradeId: 2
-          status: 5
-        - goodAt: goodAt
-          education: education
-          gender: 9
-          workingYears: 6
-          profileImage: profileImage
-          roleType: 7
-          idNumber: idNumber
-          categoryName: categoryName
-          personExt:
-            pracHospital: pracHospital
-            representWork: representWork
-            designConcept: designConcept
-            constructionExperience: constructionExperience
-            department: department
-          rank: 5
-          reauditStatus: 3
-          introduction: introduction
-          educationBackground: educationBackground
-          honour: honour
-          auditRemark: auditRemark
-          updateTime: updateTime
-          qualification: qualification
-          createTime: createTime
-          name: name
-          personId: 0
-          location: location
-          job: job
-          categoryId: 1
-          tradeId: 2
-          status: 5
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/PersonDetailDto'
-          type: array
-      title: UpdatePersonResponseWrapperBody
-      type: object
-    AddPersonResponseWrapperBody:
-      example:
-        data:
-        - goodAt: goodAt
-          education: education
-          gender: 9
-          workingYears: 6
-          profileImage: profileImage
-          roleType: 7
-          idNumber: idNumber
-          categoryName: categoryName
-          personExt:
-            pracHospital: pracHospital
-            representWork: representWork
-            designConcept: designConcept
-            constructionExperience: constructionExperience
-            department: department
-          rank: 5
-          reauditStatus: 3
-          introduction: introduction
-          educationBackground: educationBackground
-          honour: honour
-          auditRemark: auditRemark
-          updateTime: updateTime
-          qualification: qualification
-          createTime: createTime
-          name: name
-          personId: 0
-          location: location
-          job: job
-          categoryId: 1
-          tradeId: 2
-          status: 5
-        - goodAt: goodAt
-          education: education
-          gender: 9
-          workingYears: 6
-          profileImage: profileImage
-          roleType: 7
-          idNumber: idNumber
-          categoryName: categoryName
-          personExt:
-            pracHospital: pracHospital
-            representWork: representWork
-            designConcept: designConcept
-            constructionExperience: constructionExperience
-            department: department
-          rank: 5
-          reauditStatus: 3
-          introduction: introduction
-          educationBackground: educationBackground
-          honour: honour
-          auditRemark: auditRemark
-          updateTime: updateTime
-          qualification: qualification
-          createTime: createTime
-          name: name
-          personId: 0
-          location: location
-          job: job
-          categoryId: 1
-          tradeId: 2
-          status: 5
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/PersonDetailDto'
-          type: array
-      title: AddPersonResponseWrapperBody
       type: object
 x-original-swagger-version: "2.0"
 

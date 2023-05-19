@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.ocpc.model.TargetPackageBindInfo;
 import com.baidu.dev2.api.sdk.ocpc.model.TargetPackageDataflowInfo;
+import com.baidu.dev2.api.sdk.ocpc.model.TransAssetInfo;
 import com.baidu.dev2.api.sdk.ocpc.model.UnbindSharedBudgetInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -58,7 +59,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TargetPackageType.JSON_PROPERTY_SHARED_BUDGET,
   TargetPackageType.JSON_PROPERTY_UNBIND_SHARED_BUDGET_INFO,
   TargetPackageType.JSON_PROPERTY_SHARED_BUDGET_ID,
-  TargetPackageType.JSON_PROPERTY_USE_SHARED_BUDGET
+  TargetPackageType.JSON_PROPERTY_USE_SHARED_BUDGET,
+  TargetPackageType.JSON_PROPERTY_TRANS_ID,
+  TargetPackageType.JSON_PROPERTY_TARGET_ROI_RATIO,
+  TargetPackageType.JSON_PROPERTY_TRANS_ASSET,
+  TargetPackageType.JSON_PROPERTY_ASSET_TYPE,
+  TargetPackageType.JSON_PROPERTY_TRANS_ASSET_ID,
+  TargetPackageType.JSON_PROPERTY_TRANS_ASSET_INFO
 })
 @JsonTypeName("TargetPackageType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -143,6 +150,24 @@ public class TargetPackageType {
 
   public static final String JSON_PROPERTY_USE_SHARED_BUDGET = "useSharedBudget";
   private Integer useSharedBudget;
+
+  public static final String JSON_PROPERTY_TRANS_ID = "transId";
+  private Long transId;
+
+  public static final String JSON_PROPERTY_TARGET_ROI_RATIO = "targetRoiRatio";
+  private Double targetRoiRatio;
+
+  public static final String JSON_PROPERTY_TRANS_ASSET = "transAsset";
+  private Integer transAsset;
+
+  public static final String JSON_PROPERTY_ASSET_TYPE = "assetType";
+  private List<Integer> assetType = null;
+
+  public static final String JSON_PROPERTY_TRANS_ASSET_ID = "transAssetId";
+  private Long transAssetId;
+
+  public static final String JSON_PROPERTY_TRANS_ASSET_INFO = "transAssetInfo";
+  private TransAssetInfo transAssetInfo;
 
   public TargetPackageType() { 
   }
@@ -940,6 +965,176 @@ public class TargetPackageType {
   }
 
 
+  public TargetPackageType transId(Long transId) {
+    
+    this.transId = transId;
+    return this;
+  }
+
+   /**
+   * Get transId
+   * @return transId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getTransId() {
+    return transId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransId(Long transId) {
+    this.transId = transId;
+  }
+
+
+  public TargetPackageType targetRoiRatio(Double targetRoiRatio) {
+    
+    this.targetRoiRatio = targetRoiRatio;
+    return this;
+  }
+
+   /**
+   * Get targetRoiRatio
+   * @return targetRoiRatio
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TARGET_ROI_RATIO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getTargetRoiRatio() {
+    return targetRoiRatio;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TARGET_ROI_RATIO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTargetRoiRatio(Double targetRoiRatio) {
+    this.targetRoiRatio = targetRoiRatio;
+  }
+
+
+  public TargetPackageType transAsset(Integer transAsset) {
+    
+    this.transAsset = transAsset;
+    return this;
+  }
+
+   /**
+   * Get transAsset
+   * @return transAsset
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getTransAsset() {
+    return transAsset;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransAsset(Integer transAsset) {
+    this.transAsset = transAsset;
+  }
+
+
+  public TargetPackageType assetType(List<Integer> assetType) {
+    
+    this.assetType = assetType;
+    return this;
+  }
+
+  public TargetPackageType addAssetTypeItem(Integer assetTypeItem) {
+    if (this.assetType == null) {
+      this.assetType = new ArrayList<>();
+    }
+    this.assetType.add(assetTypeItem);
+    return this;
+  }
+
+   /**
+   * Get assetType
+   * @return assetType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ASSET_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Integer> getAssetType() {
+    return assetType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ASSET_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAssetType(List<Integer> assetType) {
+    this.assetType = assetType;
+  }
+
+
+  public TargetPackageType transAssetId(Long transAssetId) {
+    
+    this.transAssetId = transAssetId;
+    return this;
+  }
+
+   /**
+   * Get transAssetId
+   * @return transAssetId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getTransAssetId() {
+    return transAssetId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransAssetId(Long transAssetId) {
+    this.transAssetId = transAssetId;
+  }
+
+
+  public TargetPackageType transAssetInfo(TransAssetInfo transAssetInfo) {
+    
+    this.transAssetInfo = transAssetInfo;
+    return this;
+  }
+
+   /**
+   * Get transAssetInfo
+   * @return transAssetInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public TransAssetInfo getTransAssetInfo() {
+    return transAssetInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransAssetInfo(TransAssetInfo transAssetInfo) {
+    this.transAssetInfo = transAssetInfo;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -975,12 +1170,18 @@ public class TargetPackageType {
         Objects.equals(this.sharedBudget, targetPackageType.sharedBudget) &&
         Objects.equals(this.unbindSharedBudgetInfo, targetPackageType.unbindSharedBudgetInfo) &&
         Objects.equals(this.sharedBudgetId, targetPackageType.sharedBudgetId) &&
-        Objects.equals(this.useSharedBudget, targetPackageType.useSharedBudget);
+        Objects.equals(this.useSharedBudget, targetPackageType.useSharedBudget) &&
+        Objects.equals(this.transId, targetPackageType.transId) &&
+        Objects.equals(this.targetRoiRatio, targetPackageType.targetRoiRatio) &&
+        Objects.equals(this.transAsset, targetPackageType.transAsset) &&
+        Objects.equals(this.assetType, targetPackageType.assetType) &&
+        Objects.equals(this.transAssetId, targetPackageType.transAssetId) &&
+        Objects.equals(this.transAssetInfo, targetPackageType.transAssetInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(targetPackageId, targetPackageName, ocpcBidType, equipmentType, ocpcBid, ecpcMaxBidRatio, scope, dataFlowData, ocpcStage, adoptNoThreshold, astat, adoptOcpcBid, wiseAuditTime, assistTransTypes, packageStatus, ocpcDeepCpa, deepTypeStat, deepTransTypeMode, cvSources, transTypes, cvSourcesShadow, transTypesShadow, ocpcDeepBid, sharedBudget, unbindSharedBudgetInfo, sharedBudgetId, useSharedBudget);
+    return Objects.hash(targetPackageId, targetPackageName, ocpcBidType, equipmentType, ocpcBid, ecpcMaxBidRatio, scope, dataFlowData, ocpcStage, adoptNoThreshold, astat, adoptOcpcBid, wiseAuditTime, assistTransTypes, packageStatus, ocpcDeepCpa, deepTypeStat, deepTransTypeMode, cvSources, transTypes, cvSourcesShadow, transTypesShadow, ocpcDeepBid, sharedBudget, unbindSharedBudgetInfo, sharedBudgetId, useSharedBudget, transId, targetRoiRatio, transAsset, assetType, transAssetId, transAssetInfo);
   }
 
   @Override
@@ -1014,6 +1215,12 @@ public class TargetPackageType {
     sb.append("    unbindSharedBudgetInfo: ").append(toIndentedString(unbindSharedBudgetInfo)).append("\n");
     sb.append("    sharedBudgetId: ").append(toIndentedString(sharedBudgetId)).append("\n");
     sb.append("    useSharedBudget: ").append(toIndentedString(useSharedBudget)).append("\n");
+    sb.append("    transId: ").append(toIndentedString(transId)).append("\n");
+    sb.append("    targetRoiRatio: ").append(toIndentedString(targetRoiRatio)).append("\n");
+    sb.append("    transAsset: ").append(toIndentedString(transAsset)).append("\n");
+    sb.append("    assetType: ").append(toIndentedString(assetType)).append("\n");
+    sb.append("    transAssetId: ").append(toIndentedString(transAssetId)).append("\n");
+    sb.append("    transAssetInfo: ").append(toIndentedString(transAssetInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

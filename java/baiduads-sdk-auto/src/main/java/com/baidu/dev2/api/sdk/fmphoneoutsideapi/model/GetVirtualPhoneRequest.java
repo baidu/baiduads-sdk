@@ -28,7 +28,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   GetVirtualPhoneRequest.JSON_PROPERTY_REF_CLUE_ID,
-  GetVirtualPhoneRequest.JSON_PROPERTY_CALLEE
+  GetVirtualPhoneRequest.JSON_PROPERTY_CALLEE,
+  GetVirtualPhoneRequest.JSON_PROPERTY_CUSTOM_PARAM,
+  GetVirtualPhoneRequest.JSON_PROPERTY_MODE,
+  GetVirtualPhoneRequest.JSON_PROPERTY_CALLER
 })
 @JsonTypeName("GetVirtualPhoneRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -38,6 +41,15 @@ public class GetVirtualPhoneRequest {
 
   public static final String JSON_PROPERTY_CALLEE = "callee";
   private String callee;
+
+  public static final String JSON_PROPERTY_CUSTOM_PARAM = "customParam";
+  private String customParam;
+
+  public static final String JSON_PROPERTY_MODE = "mode";
+  private Integer mode;
+
+  public static final String JSON_PROPERTY_CALLER = "caller";
+  private String caller;
 
   public GetVirtualPhoneRequest() { 
   }
@@ -96,6 +108,87 @@ public class GetVirtualPhoneRequest {
   }
 
 
+  public GetVirtualPhoneRequest customParam(String customParam) {
+    
+    this.customParam = customParam;
+    return this;
+  }
+
+   /**
+   * Get customParam
+   * @return customParam
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getCustomParam() {
+    return customParam;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCustomParam(String customParam) {
+    this.customParam = customParam;
+  }
+
+
+  public GetVirtualPhoneRequest mode(Integer mode) {
+    
+    this.mode = mode;
+    return this;
+  }
+
+   /**
+   * Get mode
+   * @return mode
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getMode() {
+    return mode;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMode(Integer mode) {
+    this.mode = mode;
+  }
+
+
+  public GetVirtualPhoneRequest caller(String caller) {
+    
+    this.caller = caller;
+    return this;
+  }
+
+   /**
+   * Get caller
+   * @return caller
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CALLER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getCaller() {
+    return caller;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CALLER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCaller(String caller) {
+    this.caller = caller;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -106,12 +199,15 @@ public class GetVirtualPhoneRequest {
     }
     GetVirtualPhoneRequest getVirtualPhoneRequest = (GetVirtualPhoneRequest) o;
     return Objects.equals(this.refClueId, getVirtualPhoneRequest.refClueId) &&
-        Objects.equals(this.callee, getVirtualPhoneRequest.callee);
+        Objects.equals(this.callee, getVirtualPhoneRequest.callee) &&
+        Objects.equals(this.customParam, getVirtualPhoneRequest.customParam) &&
+        Objects.equals(this.mode, getVirtualPhoneRequest.mode) &&
+        Objects.equals(this.caller, getVirtualPhoneRequest.caller);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(refClueId, callee);
+    return Objects.hash(refClueId, callee, customParam, mode, caller);
   }
 
   @Override
@@ -120,6 +216,9 @@ public class GetVirtualPhoneRequest {
     sb.append("class GetVirtualPhoneRequest {\n");
     sb.append("    refClueId: ").append(toIndentedString(refClueId)).append("\n");
     sb.append("    callee: ").append(toIndentedString(callee)).append("\n");
+    sb.append("    customParam: ").append(toIndentedString(customParam)).append("\n");
+    sb.append("    mode: ").append(toIndentedString(mode)).append("\n");
+    sb.append("    caller: ").append(toIndentedString(caller)).append("\n");
     sb.append("}");
     return sb.toString();
   }

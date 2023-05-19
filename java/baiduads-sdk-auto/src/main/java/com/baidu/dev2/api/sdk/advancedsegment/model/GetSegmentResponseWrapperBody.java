@@ -13,7 +13,7 @@ package com.baidu.dev2.api.sdk.advancedsegment.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advancedsegment.model.AdvancedQueryResponse;
+import com.baidu.dev2.api.sdk.advancedsegment.model.SegmentTypeAdvancedQueryResponse;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -36,18 +36,18 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GetSegmentResponseWrapperBody {
   public static final String JSON_PROPERTY_DATA = "data";
-  private List<AdvancedQueryResponse> data = null;
+  private List<SegmentTypeAdvancedQueryResponse> data = null;
 
   public GetSegmentResponseWrapperBody() { 
   }
 
-  public GetSegmentResponseWrapperBody data(List<AdvancedQueryResponse> data) {
+  public GetSegmentResponseWrapperBody data(List<SegmentTypeAdvancedQueryResponse> data) {
     
     this.data = data;
     return this;
   }
 
-  public GetSegmentResponseWrapperBody addDataItem(AdvancedQueryResponse dataItem) {
+  public GetSegmentResponseWrapperBody addDataItem(SegmentTypeAdvancedQueryResponse dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<>();
     }
@@ -64,14 +64,14 @@ public class GetSegmentResponseWrapperBody {
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public List<AdvancedQueryResponse> getData() {
+  public List<SegmentTypeAdvancedQueryResponse> getData() {
     return data;
   }
 
 
   @JsonProperty(JSON_PROPERTY_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(List<AdvancedQueryResponse> data) {
+  public void setData(List<SegmentTypeAdvancedQueryResponse> data) {
     this.data = data;
   }
 

@@ -59,7 +59,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiKeywordType.JSON_PROPERTY_PC_FINAL_URL,
   ApiKeywordType.JSON_PROPERTY_PC_TRACK_PARAM,
   ApiKeywordType.JSON_PROPERTY_PC_TRACK_TEMPLATE,
-  ApiKeywordType.JSON_PROPERTY_ULINK
+  ApiKeywordType.JSON_PROPERTY_ULINK,
+  ApiKeywordType.JSON_PROPERTY_API_INEFFICIENT
 })
 @JsonTypeName("ApiKeywordType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -153,6 +154,9 @@ public class ApiKeywordType {
 
   public static final String JSON_PROPERTY_ULINK = "ulink";
   private String ulink;
+
+  public static final String JSON_PROPERTY_API_INEFFICIENT = "apiInefficient";
+  private Integer apiInefficient;
 
   public ApiKeywordType() { 
   }
@@ -983,6 +987,33 @@ public class ApiKeywordType {
   }
 
 
+  public ApiKeywordType apiInefficient(Integer apiInefficient) {
+    
+    this.apiInefficient = apiInefficient;
+    return this;
+  }
+
+   /**
+   * Get apiInefficient
+   * @return apiInefficient
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_API_INEFFICIENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getApiInefficient() {
+    return apiInefficient;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_API_INEFFICIENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setApiInefficient(Integer apiInefficient) {
+    this.apiInefficient = apiInefficient;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1021,12 +1052,13 @@ public class ApiKeywordType {
         Objects.equals(this.pcFinalUrl, apiKeywordType.pcFinalUrl) &&
         Objects.equals(this.pcTrackParam, apiKeywordType.pcTrackParam) &&
         Objects.equals(this.pcTrackTemplate, apiKeywordType.pcTrackTemplate) &&
-        Objects.equals(this.ulink, apiKeywordType.ulink);
+        Objects.equals(this.ulink, apiKeywordType.ulink) &&
+        Objects.equals(this.apiInefficient, apiKeywordType.apiInefficient);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, keywordId, adgroupId, keyword, price, matchType, pause, status, pcDestinationUrl, mobileDestinationUrl, phraseType, offlineReasons, tabs, leftPriceGuide, mPriceGuide, deeplink, miniProgramUrl, strategyId, quality, estimatedClickRate, businessRelationship, landPageExperience, createTime, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, pcFinalUrl, pcTrackParam, pcTrackTemplate, ulink);
+    return Objects.hash(campaignId, keywordId, adgroupId, keyword, price, matchType, pause, status, pcDestinationUrl, mobileDestinationUrl, phraseType, offlineReasons, tabs, leftPriceGuide, mPriceGuide, deeplink, miniProgramUrl, strategyId, quality, estimatedClickRate, businessRelationship, landPageExperience, createTime, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, pcFinalUrl, pcTrackParam, pcTrackTemplate, ulink, apiInefficient);
   }
 
   @Override
@@ -1063,6 +1095,7 @@ public class ApiKeywordType {
     sb.append("    pcTrackParam: ").append(toIndentedString(pcTrackParam)).append("\n");
     sb.append("    pcTrackTemplate: ").append(toIndentedString(pcTrackTemplate)).append("\n");
     sb.append("    ulink: ").append(toIndentedString(ulink)).append("\n");
+    sb.append("    apiInefficient: ").append(toIndentedString(apiInefficient)).append("\n");
     sb.append("}");
     return sb.toString();
   }

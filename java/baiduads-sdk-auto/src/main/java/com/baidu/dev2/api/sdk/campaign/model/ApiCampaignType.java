@@ -69,7 +69,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET_ID,
   ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET_NAME,
   ApiCampaignType.JSON_PROPERTY_SHARED_BUDGET,
-  ApiCampaignType.JSON_PROPERTY_BUDGET_TYPE
+  ApiCampaignType.JSON_PROPERTY_BUDGET_TYPE,
+  ApiCampaignType.JSON_PROPERTY_CATALOG_ID,
+  ApiCampaignType.JSON_PROPERTY_TRANS_ASSET,
+  ApiCampaignType.JSON_PROPERTY_TRANS_ASSET_ID
 })
 @JsonTypeName("ApiCampaignType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -181,6 +184,15 @@ public class ApiCampaignType {
 
   public static final String JSON_PROPERTY_BUDGET_TYPE = "budgetType";
   private Integer budgetType;
+
+  public static final String JSON_PROPERTY_CATALOG_ID = "catalogId";
+  private Long catalogId;
+
+  public static final String JSON_PROPERTY_TRANS_ASSET = "transAsset";
+  private Integer transAsset;
+
+  public static final String JSON_PROPERTY_TRANS_ASSET_ID = "transAssetId";
+  private Long transAssetId;
 
   public ApiCampaignType() { 
   }
@@ -1253,6 +1265,87 @@ public class ApiCampaignType {
   }
 
 
+  public ApiCampaignType catalogId(Long catalogId) {
+    
+    this.catalogId = catalogId;
+    return this;
+  }
+
+   /**
+   * Get catalogId
+   * @return catalogId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CATALOG_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getCatalogId() {
+    return catalogId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CATALOG_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCatalogId(Long catalogId) {
+    this.catalogId = catalogId;
+  }
+
+
+  public ApiCampaignType transAsset(Integer transAsset) {
+    
+    this.transAsset = transAsset;
+    return this;
+  }
+
+   /**
+   * Get transAsset
+   * @return transAsset
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getTransAsset() {
+    return transAsset;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransAsset(Integer transAsset) {
+    this.transAsset = transAsset;
+  }
+
+
+  public ApiCampaignType transAssetId(Long transAssetId) {
+    
+    this.transAssetId = transAssetId;
+    return this;
+  }
+
+   /**
+   * Get transAssetId
+   * @return transAssetId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getTransAssetId() {
+    return transAssetId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TRANS_ASSET_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTransAssetId(Long transAssetId) {
+    this.transAssetId = transAssetId;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1297,12 +1390,15 @@ public class ApiCampaignType {
         Objects.equals(this.sharedBudgetId, apiCampaignType.sharedBudgetId) &&
         Objects.equals(this.sharedBudgetName, apiCampaignType.sharedBudgetName) &&
         Objects.equals(this.sharedBudget, apiCampaignType.sharedBudget) &&
-        Objects.equals(this.budgetType, apiCampaignType.budgetType);
+        Objects.equals(this.budgetType, apiCampaignType.budgetType) &&
+        Objects.equals(this.catalogId, apiCampaignType.catalogId) &&
+        Objects.equals(this.transAsset, apiCampaignType.transAsset) &&
+        Objects.equals(this.transAssetId, apiCampaignType.transAssetId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(campaignId, campaignName, budget, regionTarget, negativeWords, exactNegativeWords, schedule, budgetOfflineTime, pause, status, priceRatio, pcPriceRatio, bidPrefer, adType, businessPointId, businessPointName, smartRegion, paDevice, os, regionPriceFactor, schedulePriceFactors, storePageInfos, marketingTargetId, shopType, equipmentType, campaignBidType, campaignBid, campaignOcpcBidType, campaignOcpcBid, campaignTransTypes, campaignDeepTransTypes, campaignCvSources, sharedBudgetId, sharedBudgetName, sharedBudget, budgetType);
+    return Objects.hash(campaignId, campaignName, budget, regionTarget, negativeWords, exactNegativeWords, schedule, budgetOfflineTime, pause, status, priceRatio, pcPriceRatio, bidPrefer, adType, businessPointId, businessPointName, smartRegion, paDevice, os, regionPriceFactor, schedulePriceFactors, storePageInfos, marketingTargetId, shopType, equipmentType, campaignBidType, campaignBid, campaignOcpcBidType, campaignOcpcBid, campaignTransTypes, campaignDeepTransTypes, campaignCvSources, sharedBudgetId, sharedBudgetName, sharedBudget, budgetType, catalogId, transAsset, transAssetId);
   }
 
   @Override
@@ -1345,6 +1441,9 @@ public class ApiCampaignType {
     sb.append("    sharedBudgetName: ").append(toIndentedString(sharedBudgetName)).append("\n");
     sb.append("    sharedBudget: ").append(toIndentedString(sharedBudget)).append("\n");
     sb.append("    budgetType: ").append(toIndentedString(budgetType)).append("\n");
+    sb.append("    catalogId: ").append(toIndentedString(catalogId)).append("\n");
+    sb.append("    transAsset: ").append(toIndentedString(transAsset)).append("\n");
+    sb.append("    transAssetId: ").append(toIndentedString(transAssetId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

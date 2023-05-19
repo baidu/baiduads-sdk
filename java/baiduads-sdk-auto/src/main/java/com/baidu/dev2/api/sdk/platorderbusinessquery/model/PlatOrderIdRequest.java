@@ -28,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   PlatOrderIdRequest.JSON_PROPERTY_ORDER_ID,
-  PlatOrderIdRequest.JSON_PROPERTY_UCID,
   PlatOrderIdRequest.JSON_PROPERTY_SHOP_ID,
   PlatOrderIdRequest.JSON_PROPERTY_APP_ID
 })
@@ -37,9 +36,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PlatOrderIdRequest {
   public static final String JSON_PROPERTY_ORDER_ID = "orderId";
   private Long orderId;
-
-  public static final String JSON_PROPERTY_UCID = "ucid";
-  private Long ucid;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -74,33 +70,6 @@ public class PlatOrderIdRequest {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOrderId(Long orderId) {
     this.orderId = orderId;
-  }
-
-
-  public PlatOrderIdRequest ucid(Long ucid) {
-    
-    this.ucid = ucid;
-    return this;
-  }
-
-   /**
-   * Get ucid
-   * @return ucid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUcid() {
-    return ucid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcid(Long ucid) {
-    this.ucid = ucid;
   }
 
 
@@ -168,14 +137,13 @@ public class PlatOrderIdRequest {
     }
     PlatOrderIdRequest platOrderIdRequest = (PlatOrderIdRequest) o;
     return Objects.equals(this.orderId, platOrderIdRequest.orderId) &&
-        Objects.equals(this.ucid, platOrderIdRequest.ucid) &&
         Objects.equals(this.shopId, platOrderIdRequest.shopId) &&
         Objects.equals(this.appId, platOrderIdRequest.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, ucid, shopId, appId);
+    return Objects.hash(orderId, shopId, appId);
   }
 
   @Override
@@ -183,7 +151,6 @@ public class PlatOrderIdRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class PlatOrderIdRequest {\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
-    sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");

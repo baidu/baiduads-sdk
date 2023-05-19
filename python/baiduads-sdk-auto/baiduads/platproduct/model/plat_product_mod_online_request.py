@@ -84,6 +84,7 @@ class PlatProductModOnlineRequest(ModelNormal):
             'shop_id': (int,),  # noqa: E501
             'spu_id': (int,),  # noqa: E501
             'op_type': (int,),  # noqa: E501
+            'amis_user': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -96,6 +97,7 @@ class PlatProductModOnlineRequest(ModelNormal):
         'shop_id': 'shopId',  # noqa: E501
         'spu_id': 'spuId',  # noqa: E501
         'op_type': 'opType',  # noqa: E501
+        'amis_user': 'amisUser',  # noqa: E501
     }
 
     read_only_vars = {
@@ -143,6 +145,7 @@ class PlatProductModOnlineRequest(ModelNormal):
             shop_id (int): [optional]  # noqa: E501
             spu_id (int): [optional]  # noqa: E501
             op_type (int): [optional]  # noqa: E501
+            amis_user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -228,6 +231,7 @@ class PlatProductModOnlineRequest(ModelNormal):
             shop_id (int): [optional]  # noqa: E501
             spu_id (int): [optional]  # noqa: E501
             op_type (int): [optional]  # noqa: E501
+            amis_user (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

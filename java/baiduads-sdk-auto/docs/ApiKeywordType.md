@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **pcTrackParam** | **String** |  |  [optional]
 **pcTrackTemplate** | **String** |  |  [optional]
 **ulink** | **String** |  |  [optional]
+**apiInefficient** | **Integer** |  |  [optional]
 
 
 

@@ -99,6 +99,7 @@ class TeslaArticleQueryListRequest(ModelNormal):
             'update_end_time': (str,),  # noqa: E501
             'article_id_list_not_in': ([int],),  # noqa: E501
             'content_type': (int,),  # noqa: E501
+            'content_quality_status': ([int],),  # noqa: E501
         }
 
     @cached_property
@@ -120,6 +121,7 @@ class TeslaArticleQueryListRequest(ModelNormal):
         'update_end_time': 'updateEndTime',  # noqa: E501
         'article_id_list_not_in': 'articleIdListNotIn',  # noqa: E501
         'content_type': 'contentType',  # noqa: E501
+        'content_quality_status': 'contentQualityStatus',  # noqa: E501
     }
 
     read_only_vars = {
@@ -176,6 +178,7 @@ class TeslaArticleQueryListRequest(ModelNormal):
             update_end_time (str): [optional]  # noqa: E501
             article_id_list_not_in ([int]): [optional]  # noqa: E501
             content_type (int): [optional]  # noqa: E501
+            content_quality_status ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -270,6 +273,7 @@ class TeslaArticleQueryListRequest(ModelNormal):
             update_end_time (str): [optional]  # noqa: E501
             article_id_list_not_in ([int]): [optional]  # noqa: E501
             content_type (int): [optional]  # noqa: E501
+            content_quality_status ([int]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -1,0 +1,17 @@
+# TransAssetInfo
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**asset_type** | **int** |  | [optional] 
+**trans_asset_id** | **int** |  | [optional] 
+**cv_source** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**trans_name** | **str** |  | [optional] 
+**trans_type** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**trace_type_config** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

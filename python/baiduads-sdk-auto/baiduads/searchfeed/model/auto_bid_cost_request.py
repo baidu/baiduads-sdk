@@ -102,6 +102,9 @@ class AutoBidCostRequest(ModelNormal):
             'campaign_feed_id': (int,),  # noqa: E501
             'ftypes': ([int],),  # noqa: E501
             'keywords_extend': (bool,),  # noqa: E501
+            'level_type': (int,),  # noqa: E501
+            'wbudget': (float,),  # noqa: E501
+            'apk_name': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -126,6 +129,9 @@ class AutoBidCostRequest(ModelNormal):
         'campaign_feed_id': 'campaignFeedId',  # noqa: E501
         'ftypes': 'ftypes',  # noqa: E501
         'keywords_extend': 'keywordsExtend',  # noqa: E501
+        'level_type': 'levelType',  # noqa: E501
+        'wbudget': 'wbudget',  # noqa: E501
+        'apk_name': 'apkName',  # noqa: E501
     }
 
     read_only_vars = {
@@ -185,6 +191,9 @@ class AutoBidCostRequest(ModelNormal):
             campaign_feed_id (int): [optional]  # noqa: E501
             ftypes ([int]): [optional]  # noqa: E501
             keywords_extend (bool): [optional]  # noqa: E501
+            level_type (int): [optional]  # noqa: E501
+            wbudget (float): [optional]  # noqa: E501
+            apk_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -282,6 +291,9 @@ class AutoBidCostRequest(ModelNormal):
             campaign_feed_id (int): [optional]  # noqa: E501
             ftypes ([int]): [optional]  # noqa: E501
             keywords_extend (bool): [optional]  # noqa: E501
+            level_type (int): [optional]  # noqa: E501
+            wbudget (float): [optional]  # noqa: E501
+            apk_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

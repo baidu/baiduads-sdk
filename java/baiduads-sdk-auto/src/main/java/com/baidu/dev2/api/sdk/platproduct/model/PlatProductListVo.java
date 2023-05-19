@@ -14,6 +14,7 @@ package com.baidu.dev2.api.sdk.platproduct.model;
 import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.platproduct.model.ApplyShopInfo;
+import com.baidu.dev2.api.sdk.platproduct.model.PlatAuditReasonVo;
 import com.baidu.dev2.api.sdk.platproduct.model.ProductCategoryVo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -38,6 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductListVo.JSON_PROPERTY_THUMBNAIL,
   PlatProductListVo.JSON_PROPERTY_SPU_STATE,
   PlatProductListVo.JSON_PROPERTY_ON_SHELF,
+  PlatProductListVo.JSON_PROPERTY_AUDIT_REASON,
   PlatProductListVo.JSON_PROPERTY_REST_STOCK,
   PlatProductListVo.JSON_PROPERTY_REAL_SALE,
   PlatProductListVo.JSON_PROPERTY_PRICE,
@@ -49,7 +51,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatProductListVo.JSON_PROPERTY_APPLY_SHOP_LIST,
   PlatProductListVo.JSON_PROPERTY_SEND_EXCHANGE_CODE,
   PlatProductListVo.JSON_PROPERTY_WEB_APP_URL,
-  PlatProductListVo.JSON_PROPERTY_RANK
+  PlatProductListVo.JSON_PROPERTY_RANK,
+  PlatProductListVo.JSON_PROPERTY_ONLINE_SPU_STATE,
+  PlatProductListVo.JSON_PROPERTY_ON_SHELF_AUDIT_FLAG,
+  PlatProductListVo.JSON_PROPERTY_SEND_TIME,
+  PlatProductListVo.JSON_PROPERTY_REFUSE_TIME
 })
 @JsonTypeName("PlatProductListVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -74,6 +80,9 @@ public class PlatProductListVo {
 
   public static final String JSON_PROPERTY_ON_SHELF = "onShelf";
   private Integer onShelf;
+
+  public static final String JSON_PROPERTY_AUDIT_REASON = "auditReason";
+  private PlatAuditReasonVo auditReason;
 
   public static final String JSON_PROPERTY_REST_STOCK = "restStock";
   private Long restStock;
@@ -110,6 +119,18 @@ public class PlatProductListVo {
 
   public static final String JSON_PROPERTY_RANK = "rank";
   private Long rank;
+
+  public static final String JSON_PROPERTY_ONLINE_SPU_STATE = "onlineSpuState";
+  private Integer onlineSpuState;
+
+  public static final String JSON_PROPERTY_ON_SHELF_AUDIT_FLAG = "onShelfAuditFlag";
+  private Boolean onShelfAuditFlag;
+
+  public static final String JSON_PROPERTY_SEND_TIME = "sendTime";
+  private String sendTime;
+
+  public static final String JSON_PROPERTY_REFUSE_TIME = "refuseTime";
+  private String refuseTime;
 
   public PlatProductListVo() { 
   }
@@ -300,6 +321,33 @@ public class PlatProductListVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOnShelf(Integer onShelf) {
     this.onShelf = onShelf;
+  }
+
+
+  public PlatProductListVo auditReason(PlatAuditReasonVo auditReason) {
+    
+    this.auditReason = auditReason;
+    return this;
+  }
+
+   /**
+   * Get auditReason
+   * @return auditReason
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_AUDIT_REASON)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public PlatAuditReasonVo getAuditReason() {
+    return auditReason;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_AUDIT_REASON)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAuditReason(PlatAuditReasonVo auditReason) {
+    this.auditReason = auditReason;
   }
 
 
@@ -643,6 +691,114 @@ public class PlatProductListVo {
   }
 
 
+  public PlatProductListVo onlineSpuState(Integer onlineSpuState) {
+    
+    this.onlineSpuState = onlineSpuState;
+    return this;
+  }
+
+   /**
+   * Get onlineSpuState
+   * @return onlineSpuState
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ONLINE_SPU_STATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getOnlineSpuState() {
+    return onlineSpuState;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ONLINE_SPU_STATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOnlineSpuState(Integer onlineSpuState) {
+    this.onlineSpuState = onlineSpuState;
+  }
+
+
+  public PlatProductListVo onShelfAuditFlag(Boolean onShelfAuditFlag) {
+    
+    this.onShelfAuditFlag = onShelfAuditFlag;
+    return this;
+  }
+
+   /**
+   * Get onShelfAuditFlag
+   * @return onShelfAuditFlag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ON_SHELF_AUDIT_FLAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getOnShelfAuditFlag() {
+    return onShelfAuditFlag;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ON_SHELF_AUDIT_FLAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOnShelfAuditFlag(Boolean onShelfAuditFlag) {
+    this.onShelfAuditFlag = onShelfAuditFlag;
+  }
+
+
+  public PlatProductListVo sendTime(String sendTime) {
+    
+    this.sendTime = sendTime;
+    return this;
+  }
+
+   /**
+   * Get sendTime
+   * @return sendTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_SEND_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getSendTime() {
+    return sendTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_SEND_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setSendTime(String sendTime) {
+    this.sendTime = sendTime;
+  }
+
+
+  public PlatProductListVo refuseTime(String refuseTime) {
+    
+    this.refuseTime = refuseTime;
+    return this;
+  }
+
+   /**
+   * Get refuseTime
+   * @return refuseTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_REFUSE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getRefuseTime() {
+    return refuseTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_REFUSE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRefuseTime(String refuseTime) {
+    this.refuseTime = refuseTime;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -659,6 +815,7 @@ public class PlatProductListVo {
         Objects.equals(this.thumbnail, platProductListVo.thumbnail) &&
         Objects.equals(this.spuState, platProductListVo.spuState) &&
         Objects.equals(this.onShelf, platProductListVo.onShelf) &&
+        Objects.equals(this.auditReason, platProductListVo.auditReason) &&
         Objects.equals(this.restStock, platProductListVo.restStock) &&
         Objects.equals(this.realSale, platProductListVo.realSale) &&
         Objects.equals(this.price, platProductListVo.price) &&
@@ -670,12 +827,16 @@ public class PlatProductListVo {
         Objects.equals(this.applyShopList, platProductListVo.applyShopList) &&
         Objects.equals(this.sendExchangeCode, platProductListVo.sendExchangeCode) &&
         Objects.equals(this.webAppUrl, platProductListVo.webAppUrl) &&
-        Objects.equals(this.rank, platProductListVo.rank);
+        Objects.equals(this.rank, platProductListVo.rank) &&
+        Objects.equals(this.onlineSpuState, platProductListVo.onlineSpuState) &&
+        Objects.equals(this.onShelfAuditFlag, platProductListVo.onShelfAuditFlag) &&
+        Objects.equals(this.sendTime, platProductListVo.sendTime) &&
+        Objects.equals(this.refuseTime, platProductListVo.refuseTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(spuId, shopId, name, type, thumbnail, spuState, onShelf, restStock, realSale, price, supportPayType, updateTime, category, freightTemplateId, pageOnlineUrl, applyShopList, sendExchangeCode, webAppUrl, rank);
+    return Objects.hash(spuId, shopId, name, type, thumbnail, spuState, onShelf, auditReason, restStock, realSale, price, supportPayType, updateTime, category, freightTemplateId, pageOnlineUrl, applyShopList, sendExchangeCode, webAppUrl, rank, onlineSpuState, onShelfAuditFlag, sendTime, refuseTime);
   }
 
   @Override
@@ -689,6 +850,7 @@ public class PlatProductListVo {
     sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
     sb.append("    spuState: ").append(toIndentedString(spuState)).append("\n");
     sb.append("    onShelf: ").append(toIndentedString(onShelf)).append("\n");
+    sb.append("    auditReason: ").append(toIndentedString(auditReason)).append("\n");
     sb.append("    restStock: ").append(toIndentedString(restStock)).append("\n");
     sb.append("    realSale: ").append(toIndentedString(realSale)).append("\n");
     sb.append("    price: ").append(toIndentedString(price)).append("\n");
@@ -701,6 +863,10 @@ public class PlatProductListVo {
     sb.append("    sendExchangeCode: ").append(toIndentedString(sendExchangeCode)).append("\n");
     sb.append("    webAppUrl: ").append(toIndentedString(webAppUrl)).append("\n");
     sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
+    sb.append("    onlineSpuState: ").append(toIndentedString(onlineSpuState)).append("\n");
+    sb.append("    onShelfAuditFlag: ").append(toIndentedString(onShelfAuditFlag)).append("\n");
+    sb.append("    sendTime: ").append(toIndentedString(sendTime)).append("\n");
+    sb.append("    refuseTime: ").append(toIndentedString(refuseTime)).append("\n");
     sb.append("}");
     return sb.toString();
   }

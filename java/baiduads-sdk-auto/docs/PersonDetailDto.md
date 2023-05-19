@@ -32,6 +32,9 @@ Name | Type | Description | Notes
 **idNumber** | **String** |  |  [optional]
 **location** | **String** |  |  [optional]
 **reauditStatus** | **Integer** |  |  [optional]
+**contentQualityStatus** | **Integer** |  |  [optional]
+**contentQualityDetail** | [**ContentQualityDetail**](ContentQualityDetail.md) |  |  [optional]
+**humanAudit** | **Integer** |  |  [optional]
 
 
 

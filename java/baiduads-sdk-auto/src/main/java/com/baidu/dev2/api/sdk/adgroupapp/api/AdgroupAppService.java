@@ -24,8 +24,6 @@ import com.baidu.dev2.api.sdk.adgroupapp.model.DeleteAdgroupAppBindRequestWrappe
 import com.baidu.dev2.api.sdk.adgroupapp.model.DeleteAdgroupAppBindResponseWrapper;
 import com.baidu.dev2.api.sdk.adgroupapp.model.GetAdgroupAppBindRequestWrapper;
 import com.baidu.dev2.api.sdk.adgroupapp.model.GetAdgroupAppBindResponseWrapper;
-import com.baidu.dev2.api.sdk.adgroupapp.model.UpdateAdgroupAppBindRequestWrapper;
-import com.baidu.dev2.api.sdk.adgroupapp.model.UpdateAdgroupAppBindResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -209,63 +207,6 @@ public class AdgroupAppService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetAdgroupAppBindResponseWrapper> localVarReturnType = new TypeReference<GetAdgroupAppBindResponseWrapper>() {};
-    return apiClient.invokeAPI(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarCookieParams,
-        localVarFormParams,
-        localVarAccept,
-        localVarContentType,
-        localVarAuthNames,
-        localVarReturnType
-    );
-  }
-  /**
-   * 
-   * 
-   * @param updateAdgroupAppBindRequestWrapper  (required)
-   * @return UpdateAdgroupAppBindResponseWrapper
-   * @throws ApiException if fails to make API call
-   */
-  public UpdateAdgroupAppBindResponseWrapper updateAdgroupAppBind(UpdateAdgroupAppBindRequestWrapper updateAdgroupAppBindRequestWrapper) throws ApiException {
-    Object localVarPostBody = updateAdgroupAppBindRequestWrapper;
-    
-    // verify the required parameter 'updateAdgroupAppBindRequestWrapper' is set
-    if (updateAdgroupAppBindRequestWrapper == null) {
-      throw new ApiException(400, "Missing the required parameter 'updateAdgroupAppBindRequestWrapper' when calling updateAdgroupAppBind");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/json/sms/service/AdgroupAppService/updateAdgroupAppBind";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, String> localVarCookieParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    
-    final String[] localVarAccepts = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json;charset=UTF-8"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    TypeReference<UpdateAdgroupAppBindResponseWrapper> localVarReturnType = new TypeReference<UpdateAdgroupAppBindResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

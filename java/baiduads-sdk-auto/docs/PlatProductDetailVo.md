@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **spuState** | **Integer** |  |  [optional]
 **category** | [**List&lt;ProductCategoryVo&gt;**](ProductCategoryVo.md) |  |  [optional]
 **attributes** | [**List&lt;ProductSpuAttributeVo&gt;**](ProductSpuAttributeVo.md) |  |  [optional]
+**specificationType** | **Integer** |  |  [optional]
 **supportPayType** | **Integer** |  |  [optional]
 **specifications** | [**List&lt;ProductSpuSpecificationVo&gt;**](ProductSpuSpecificationVo.md) |  |  [optional]
 **skuList** | [**List&lt;PlatProductSkuVo&gt;**](PlatProductSkuVo.md) |  |  [optional]
@@ -37,6 +38,10 @@ Name | Type | Description | Notes
 **limitStock** | **Integer** |  |  [optional]
 **shopBrandName** | **String** |  |  [optional]
 **shopBrandId** | **Long** |  |  [optional]
+**spuSettleType** | **Integer** |  |  [optional]
+**isUseProductBrand** | **Boolean** |  |  [optional]
+**doorTime** | **Integer** |  |  [optional]
+**productBookPriceVo** | [**ProductBookPriceVo**](ProductBookPriceVo.md) |  |  [optional]
 
 
 

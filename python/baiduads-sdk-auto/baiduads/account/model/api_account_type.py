@@ -104,17 +104,13 @@ class ApiAccountType(ModelNormal):
             'user_level': (int,),  # noqa: E501
             'region_price_factor': ([RegionPriceFactor],),  # noqa: E501
             'cid': (int,),  # noqa: E501
-            'store_show': (int,),  # noqa: E501
             'query_region_status': (bool,),  # noqa: E501
             'exclude_query_region_status': (bool,),  # noqa: E501
-            'dynamic_creative_title_status': (bool,),  # noqa: E501
-            'text_title_status': (bool,),  # noqa: E501
-            'picture_optimize_creative_status': (bool,),  # noqa: E501
-            'picture_optimize_segment_status': (bool,),  # noqa: E501
             'text_optimize_segment_status': (bool,),  # noqa: E501
             'sys_long_link_segment_status': (bool,),  # noqa: E501
             'long_monitor_sublink': (str,),  # noqa: E501
-            'crowd_param_status': (bool,),  # noqa: E501
+            'account_monitor_url': (str,),  # noqa: E501
+            'lice_name': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -139,17 +135,13 @@ class ApiAccountType(ModelNormal):
         'user_level': 'userLevel',  # noqa: E501
         'region_price_factor': 'regionPriceFactor',  # noqa: E501
         'cid': 'cid',  # noqa: E501
-        'store_show': 'storeShow',  # noqa: E501
         'query_region_status': 'queryRegionStatus',  # noqa: E501
         'exclude_query_region_status': 'excludeQueryRegionStatus',  # noqa: E501
-        'dynamic_creative_title_status': 'dynamicCreativeTitleStatus',  # noqa: E501
-        'text_title_status': 'textTitleStatus',  # noqa: E501
-        'picture_optimize_creative_status': 'pictureOptimizeCreativeStatus',  # noqa: E501
-        'picture_optimize_segment_status': 'pictureOptimizeSegmentStatus',  # noqa: E501
         'text_optimize_segment_status': 'textOptimizeSegmentStatus',  # noqa: E501
         'sys_long_link_segment_status': 'sysLongLinkSegmentStatus',  # noqa: E501
         'long_monitor_sublink': 'longMonitorSublink',  # noqa: E501
-        'crowd_param_status': 'crowdParamStatus',  # noqa: E501
+        'account_monitor_url': 'accountMonitorUrl',  # noqa: E501
+        'lice_name': 'liceName',  # noqa: E501
     }
 
     read_only_vars = {
@@ -209,17 +201,13 @@ class ApiAccountType(ModelNormal):
             user_level (int): [optional]  # noqa: E501
             region_price_factor ([RegionPriceFactor]): [optional]  # noqa: E501
             cid (int): [optional]  # noqa: E501
-            store_show (int): [optional]  # noqa: E501
             query_region_status (bool): [optional]  # noqa: E501
             exclude_query_region_status (bool): [optional]  # noqa: E501
-            dynamic_creative_title_status (bool): [optional]  # noqa: E501
-            text_title_status (bool): [optional]  # noqa: E501
-            picture_optimize_creative_status (bool): [optional]  # noqa: E501
-            picture_optimize_segment_status (bool): [optional]  # noqa: E501
             text_optimize_segment_status (bool): [optional]  # noqa: E501
             sys_long_link_segment_status (bool): [optional]  # noqa: E501
             long_monitor_sublink (str): [optional]  # noqa: E501
-            crowd_param_status (bool): [optional]  # noqa: E501
+            account_monitor_url (str): [optional]  # noqa: E501
+            lice_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -317,17 +305,13 @@ class ApiAccountType(ModelNormal):
             user_level (int): [optional]  # noqa: E501
             region_price_factor ([RegionPriceFactor]): [optional]  # noqa: E501
             cid (int): [optional]  # noqa: E501
-            store_show (int): [optional]  # noqa: E501
             query_region_status (bool): [optional]  # noqa: E501
             exclude_query_region_status (bool): [optional]  # noqa: E501
-            dynamic_creative_title_status (bool): [optional]  # noqa: E501
-            text_title_status (bool): [optional]  # noqa: E501
-            picture_optimize_creative_status (bool): [optional]  # noqa: E501
-            picture_optimize_segment_status (bool): [optional]  # noqa: E501
             text_optimize_segment_status (bool): [optional]  # noqa: E501
             sys_long_link_segment_status (bool): [optional]  # noqa: E501
             long_monitor_sublink (str): [optional]  # noqa: E501
-            crowd_param_status (bool): [optional]  # noqa: E501
+            account_monitor_url (str): [optional]  # noqa: E501
+            lice_name (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

@@ -38,6 +38,9 @@ with baiduads.ApiClient() as api_client:
         body=GetVirtualPhoneRequest(
             ref_clue_id="ref_clue_id_example",
             callee="callee_example",
+            custom_param="custom_param_example",
+            mode=1,
+            caller="caller_example",
         ),
     ) # GetVirtualPhoneRequestWrapper | 
 

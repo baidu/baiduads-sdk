@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;TeslaProductQueryResponsePaging&gt;**](TeslaProductQueryResponsePaging.md) |  |  [optional]
+**data** | [**List&lt;PlatProductListVoPagingResponse&gt;**](PlatProductListVoPagingResponse.md) |  |  [optional]
 
 
 

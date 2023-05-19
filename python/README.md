@@ -43,8 +43,9 @@ class TestAccountService(unittest.TestCase):
 
     def test_get_account_info(self):
         # init header
-        api_header = ApiRequestHeader(userName="********",
-                                      accessToken="****************",
+        api_header = ApiRequestHeader(username="********",
+                                      password="********",
+                                      token="****************",
                                       _spec_property_naming=True)
         # init request
         get_account_req = ApiAccountQueryRequest(accountFields=["pictureOptimizeSegmentStatus"],
@@ -67,7 +68,6 @@ class TestAccountService(unittest.TestCase):
 [权限认证](https://dev2.baidu.com/content?sceneType=0&pageId=100141&nodeId=254&subhead=%E8%AF%B7%E6%B1%82%E6%A0%BC%E5%BC%8F)
 
 ### API 示例
-
 | Class                 | Method                                                                                       | HTTP request                                                  | Description |
 |-----------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------|-------------|
 | *CampaignFeedService* | [**addCampaignFeed**](baiduads-sdk-auto/docs/CampaignFeedService.md#add_campaign_feed)       | **POST** /json/feed/v1/CampaignFeedService/addCampaignFeed    |             |

@@ -31,6 +31,7 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.advice.model.adgroup_auto_targeting_info import AdgroupAutoTargetingInfo
     from baiduads.advice.model.business_label_accept_info import BusinessLabelAcceptInfo
+    from baiduads.advice.model.campaign_equipment_accept_info import CampaignEquipmentAcceptInfo
     from baiduads.advice.model.campaign_est_budget_accept_info import CampaignEstBudgetAcceptInfo
     from baiduads.advice.model.campaign_rec_budget_accept_info import CampaignRecBudgetAcceptInfo
     from baiduads.advice.model.creative_recommend_accept_info import CreativeRecommendAcceptInfo
@@ -51,6 +52,7 @@ def lazy_import():
     from baiduads.advice.model.target_package_accept_campaign import TargetPackageAcceptCampaign
     globals()['AdgroupAutoTargetingInfo'] = AdgroupAutoTargetingInfo
     globals()['BusinessLabelAcceptInfo'] = BusinessLabelAcceptInfo
+    globals()['CampaignEquipmentAcceptInfo'] = CampaignEquipmentAcceptInfo
     globals()['CampaignEstBudgetAcceptInfo'] = CampaignEstBudgetAcceptInfo
     globals()['CampaignRecBudgetAcceptInfo'] = CampaignRecBudgetAcceptInfo
     globals()['CreativeRecommendAcceptInfo'] = CreativeRecommendAcceptInfo
@@ -144,6 +146,7 @@ class AdviceAcceptParam(ModelNormal):
             'ecpc_campaign_effect': (TargetPackageAcceptCampaign,),  # noqa: E501
             'ocpc_trans_type_info': (OcpcTransTypeAcceptInfo,),  # noqa: E501
             'campaign_est_budget': (CampaignEstBudgetAcceptInfo,),  # noqa: E501
+            'campaign_equipment': (CampaignEquipmentAcceptInfo,),  # noqa: E501
         }
 
     @cached_property
@@ -172,6 +175,7 @@ class AdviceAcceptParam(ModelNormal):
         'ecpc_campaign_effect': 'ecpcCampaignEffect',  # noqa: E501
         'ocpc_trans_type_info': 'ocpcTransTypeInfo',  # noqa: E501
         'campaign_est_budget': 'campaignEstBudget',  # noqa: E501
+        'campaign_equipment': 'campaignEquipment',  # noqa: E501
     }
 
     read_only_vars = {
@@ -235,6 +239,7 @@ class AdviceAcceptParam(ModelNormal):
             ecpc_campaign_effect (TargetPackageAcceptCampaign): [optional]  # noqa: E501
             ocpc_trans_type_info (OcpcTransTypeAcceptInfo): [optional]  # noqa: E501
             campaign_est_budget (CampaignEstBudgetAcceptInfo): [optional]  # noqa: E501
+            campaign_equipment (CampaignEquipmentAcceptInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -336,6 +341,7 @@ class AdviceAcceptParam(ModelNormal):
             ecpc_campaign_effect (TargetPackageAcceptCampaign): [optional]  # noqa: E501
             ocpc_trans_type_info (OcpcTransTypeAcceptInfo): [optional]  # noqa: E501
             campaign_est_budget (CampaignEstBudgetAcceptInfo): [optional]  # noqa: E501
+            campaign_equipment (CampaignEquipmentAcceptInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

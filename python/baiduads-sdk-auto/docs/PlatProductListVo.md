@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **thumbnail** | **str** |  | [optional] 
 **spu_state** | **int** |  | [optional] 
 **on_shelf** | **int** |  | [optional] 
+**audit_reason** | [**PlatAuditReasonVo**](PlatAuditReasonVo.md) |  | [optional] 
 **rest_stock** | **int** |  | [optional] 
 **real_sale** | **int** |  | [optional] 
 **price** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
@@ -23,6 +24,10 @@ Name | Type | Description | Notes
 **send_exchange_code** | **int** |  | [optional] 
 **web_app_url** | **str** |  | [optional] 
 **rank** | **int** |  | [optional] 
+**online_spu_state** | **int** |  | [optional] 
+**on_shelf_audit_flag** | **bool** |  | [optional] 
+**send_time** | **str** |  | [optional] 
+**refuse_time** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

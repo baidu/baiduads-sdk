@@ -81,7 +81,6 @@ class VideoPreviewRequest(ModelNormal):
         """
         return {
             'task_ids': ([int],),  # noqa: E501
-            'tag': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -91,7 +90,6 @@ class VideoPreviewRequest(ModelNormal):
 
     attribute_map = {
         'task_ids': 'taskIds',  # noqa: E501
-        'tag': 'tag',  # noqa: E501
     }
 
     read_only_vars = {
@@ -136,7 +134,6 @@ class VideoPreviewRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             task_ids ([int]): [optional]  # noqa: E501
-            tag (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -219,7 +216,6 @@ class VideoPreviewRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             task_ids ([int]): [optional]  # noqa: E501
-            tag (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

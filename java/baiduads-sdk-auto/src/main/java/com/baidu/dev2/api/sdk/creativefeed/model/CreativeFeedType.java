@@ -47,7 +47,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreativeFeedType.JSON_PROPERTY_AUDIT_TIME_MODEL,
   CreativeFeedType.JSON_PROPERTY_ATTRIBUTE_LIST,
   CreativeFeedType.JSON_PROPERTY_TEMPLATE,
-  CreativeFeedType.JSON_PROPERTY_HUITUS
+  CreativeFeedType.JSON_PROPERTY_HUITUS,
+  CreativeFeedType.JSON_PROPERTY_ESHOP_TYPE
 })
 @JsonTypeName("CreativeFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -102,6 +103,9 @@ public class CreativeFeedType {
 
   public static final String JSON_PROPERTY_HUITUS = "huitus";
   private List<Long> huitus = null;
+
+  public static final String JSON_PROPERTY_ESHOP_TYPE = "eshopType";
+  private String eshopType;
 
   public CreativeFeedType() { 
   }
@@ -573,6 +577,33 @@ public class CreativeFeedType {
   }
 
 
+  public CreativeFeedType eshopType(String eshopType) {
+    
+    this.eshopType = eshopType;
+    return this;
+  }
+
+   /**
+   * Get eshopType
+   * @return eshopType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ESHOP_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getEshopType() {
+    return eshopType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ESHOP_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEshopType(String eshopType) {
+    this.eshopType = eshopType;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -598,12 +629,13 @@ public class CreativeFeedType {
         Objects.equals(this.auditTimeModel, creativeFeedType.auditTimeModel) &&
         Objects.equals(this.attributeList, creativeFeedType.attributeList) &&
         Objects.equals(this.template, creativeFeedType.template) &&
-        Objects.equals(this.huitus, creativeFeedType.huitus);
+        Objects.equals(this.huitus, creativeFeedType.huitus) &&
+        Objects.equals(this.eshopType, creativeFeedType.eshopType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(creativeFeedId, adgroupFeedId, materialstyle, creativeFeedName, pause, status, material, refusereason, playnum, ideaType, showMt, addtime, approvemsgnew, auditTimeModel, attributeList, template, huitus);
+    return Objects.hash(creativeFeedId, adgroupFeedId, materialstyle, creativeFeedName, pause, status, material, refusereason, playnum, ideaType, showMt, addtime, approvemsgnew, auditTimeModel, attributeList, template, huitus, eshopType);
   }
 
   @Override
@@ -627,6 +659,7 @@ public class CreativeFeedType {
     sb.append("    attributeList: ").append(toIndentedString(attributeList)).append("\n");
     sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    huitus: ").append(toIndentedString(huitus)).append("\n");
+    sb.append("    eshopType: ").append(toIndentedString(eshopType)).append("\n");
     sb.append("}");
     return sb.toString();
   }

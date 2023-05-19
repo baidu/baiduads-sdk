@@ -52,9 +52,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiAdgroupType.JSON_PROPERTY_MOBILE_FINAL_URL,
   ApiAdgroupType.JSON_PROPERTY_MOBILE_TRACK_PARAM,
   ApiAdgroupType.JSON_PROPERTY_MOBILE_TRACK_TEMPLATE,
-  ApiAdgroupType.JSON_PROPERTY_CREATIVE_TEXT_OPTIMIZATION_STATUS,
-  ApiAdgroupType.JSON_PROPERTY_KNOWLEDGE_TEXT_STATUS,
-  ApiAdgroupType.JSON_PROPERTY_JIMUYU_CONTENT_STATUS
+  ApiAdgroupType.JSON_PROPERTY_CREATIVE_TEXT_OPTIMIZATION_STATUS
 })
 @JsonTypeName("ApiAdgroupType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -130,12 +128,6 @@ public class ApiAdgroupType {
 
   public static final String JSON_PROPERTY_CREATIVE_TEXT_OPTIMIZATION_STATUS = "creativeTextOptimizationStatus";
   private Boolean creativeTextOptimizationStatus;
-
-  public static final String JSON_PROPERTY_KNOWLEDGE_TEXT_STATUS = "knowledgeTextStatus";
-  private Boolean knowledgeTextStatus;
-
-  public static final String JSON_PROPERTY_JIMUYU_CONTENT_STATUS = "jimuyuContentStatus";
-  private Boolean jimuyuContentStatus;
 
   public ApiAdgroupType() { 
   }
@@ -804,60 +796,6 @@ public class ApiAdgroupType {
   }
 
 
-  public ApiAdgroupType knowledgeTextStatus(Boolean knowledgeTextStatus) {
-    
-    this.knowledgeTextStatus = knowledgeTextStatus;
-    return this;
-  }
-
-   /**
-   * Get knowledgeTextStatus
-   * @return knowledgeTextStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_KNOWLEDGE_TEXT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getKnowledgeTextStatus() {
-    return knowledgeTextStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_KNOWLEDGE_TEXT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKnowledgeTextStatus(Boolean knowledgeTextStatus) {
-    this.knowledgeTextStatus = knowledgeTextStatus;
-  }
-
-
-  public ApiAdgroupType jimuyuContentStatus(Boolean jimuyuContentStatus) {
-    
-    this.jimuyuContentStatus = jimuyuContentStatus;
-    return this;
-  }
-
-   /**
-   * Get jimuyuContentStatus
-   * @return jimuyuContentStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_JIMUYU_CONTENT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getJimuyuContentStatus() {
-    return jimuyuContentStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_JIMUYU_CONTENT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJimuyuContentStatus(Boolean jimuyuContentStatus) {
-    this.jimuyuContentStatus = jimuyuContentStatus;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -890,14 +828,12 @@ public class ApiAdgroupType {
         Objects.equals(this.mobileFinalUrl, apiAdgroupType.mobileFinalUrl) &&
         Objects.equals(this.mobileTrackParam, apiAdgroupType.mobileTrackParam) &&
         Objects.equals(this.mobileTrackTemplate, apiAdgroupType.mobileTrackTemplate) &&
-        Objects.equals(this.creativeTextOptimizationStatus, apiAdgroupType.creativeTextOptimizationStatus) &&
-        Objects.equals(this.knowledgeTextStatus, apiAdgroupType.knowledgeTextStatus) &&
-        Objects.equals(this.jimuyuContentStatus, apiAdgroupType.jimuyuContentStatus);
+        Objects.equals(this.creativeTextOptimizationStatus, apiAdgroupType.creativeTextOptimizationStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, campaignId, adgroupName, maxPrice, pause, negativeWords, exactNegativeWords, status, priceRatio, pcPriceRatio, adType, segmentRecommendStatus, productSetId, paPrice, monitorUrl, createTime, adgroupAutoTargetingStatus, pcFinalUrl, pcTrackParam, pcTrackTemplate, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, creativeTextOptimizationStatus, knowledgeTextStatus, jimuyuContentStatus);
+    return Objects.hash(adgroupId, campaignId, adgroupName, maxPrice, pause, negativeWords, exactNegativeWords, status, priceRatio, pcPriceRatio, adType, segmentRecommendStatus, productSetId, paPrice, monitorUrl, createTime, adgroupAutoTargetingStatus, pcFinalUrl, pcTrackParam, pcTrackTemplate, mobileFinalUrl, mobileTrackParam, mobileTrackTemplate, creativeTextOptimizationStatus);
   }
 
   @Override
@@ -928,8 +864,6 @@ public class ApiAdgroupType {
     sb.append("    mobileTrackParam: ").append(toIndentedString(mobileTrackParam)).append("\n");
     sb.append("    mobileTrackTemplate: ").append(toIndentedString(mobileTrackTemplate)).append("\n");
     sb.append("    creativeTextOptimizationStatus: ").append(toIndentedString(creativeTextOptimizationStatus)).append("\n");
-    sb.append("    knowledgeTextStatus: ").append(toIndentedString(knowledgeTextStatus)).append("\n");
-    sb.append("    jimuyuContentStatus: ").append(toIndentedString(jimuyuContentStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

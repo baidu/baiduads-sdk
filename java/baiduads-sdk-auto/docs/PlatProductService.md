@@ -7,8 +7,10 @@ Method | HTTP request | Description
 [**deleteProduct**](PlatProductService.md#deleteProduct) | **POST** /json/sms/service/PlatProductService/deleteProduct | 
 [**getProductDetail**](PlatProductService.md#getProductDetail) | **POST** /json/sms/service/PlatProductService/getProductDetail | 
 [**getProductList**](PlatProductService.md#getProductList) | **POST** /json/sms/service/PlatProductService/getProductList | 
+[**getProductSkus**](PlatProductService.md#getProductSkus) | **POST** /json/sms/service/PlatProductService/getProductSkus | 
 [**modOnlineStatus**](PlatProductService.md#modOnlineStatus) | **POST** /json/sms/service/PlatProductService/modOnlineStatus | 
 [**saveOrUpdateProduct**](PlatProductService.md#saveOrUpdateProduct) | **POST** /json/sms/service/PlatProductService/saveOrUpdateProduct | 
+[**updateStock**](PlatProductService.md#updateStock) | **POST** /json/sms/service/PlatProductService/updateStock | 
 
 
 
@@ -204,6 +206,70 @@ No authorization required
 | **200** | response |  -  |
 
 
+## getProductSkus
+
+> GetProductSkusResponseWrapper getProductSkus(getProductSkusRequestWrapper)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.baidu.dev2.api.sdk.invoke.ApiClient;
+import com.baidu.dev2.api.sdk.invoke.ApiException;
+import com.baidu.dev2.api.sdk.invoke.Configuration;
+import com.baidu.dev2.api.sdk.invoke.models.*;
+import com.baidu.dev2.api.sdk.platproduct.api.PlatProductService;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.baidu.com");
+
+        PlatProductService apiInstance = new PlatProductService(defaultClient);
+        GetProductSkusRequestWrapper getProductSkusRequestWrapper = new GetProductSkusRequestWrapper(); // GetProductSkusRequestWrapper | 
+        try {
+            GetProductSkusResponseWrapper result = apiInstance.getProductSkus(getProductSkusRequestWrapper);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PlatProductService#getProductSkus");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getProductSkusRequestWrapper** | [**GetProductSkusRequestWrapper**](GetProductSkusRequestWrapper.md)|  |
+
+### Return type
+
+[**GetProductSkusResponseWrapper**](GetProductSkusResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=UTF-8
+- **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | response |  -  |
+
+
 ## modOnlineStatus
 
 > ModOnlineStatusResponseWrapper modOnlineStatus(modOnlineStatusRequestWrapper)
@@ -315,6 +381,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SaveOrUpdateProductResponseWrapper**](SaveOrUpdateProductResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=UTF-8
+- **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | response |  -  |
+
+
+## updateStock
+
+> UpdateStockResponseWrapper updateStock(updateStockRequestWrapper)
+
+
+
+### Example
+
+```java
+// Import classes:
+import com.baidu.dev2.api.sdk.invoke.ApiClient;
+import com.baidu.dev2.api.sdk.invoke.ApiException;
+import com.baidu.dev2.api.sdk.invoke.Configuration;
+import com.baidu.dev2.api.sdk.invoke.models.*;
+import com.baidu.dev2.api.sdk.platproduct.api.PlatProductService;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.baidu.com");
+
+        PlatProductService apiInstance = new PlatProductService(defaultClient);
+        UpdateStockRequestWrapper updateStockRequestWrapper = new UpdateStockRequestWrapper(); // UpdateStockRequestWrapper | 
+        try {
+            UpdateStockResponseWrapper result = apiInstance.updateStock(updateStockRequestWrapper);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PlatProductService#updateStock");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateStockRequestWrapper** | [**UpdateStockRequestWrapper**](UpdateStockRequestWrapper.md)|  |
+
+### Return type
+
+[**UpdateStockResponseWrapper**](UpdateStockResponseWrapper.md)
 
 ### Authorization
 
