@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.searchfeed.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.searchfeed.model.PageMiniInfo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -48,7 +49,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OcpcTransApiType.JSON_PROPERTY_APPID,
   OcpcTransApiType.JSON_PROPERTY_SDK_APP_ID,
   OcpcTransApiType.JSON_PROPERTY_SDK_SECRET_KEY,
-  OcpcTransApiType.JSON_PROPERTY_CHANNEL_ID
+  OcpcTransApiType.JSON_PROPERTY_CHANNEL_ID,
+  OcpcTransApiType.JSON_PROPERTY_PAGE_INFO
 })
 @JsonTypeName("OcpcTransApiType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -112,6 +114,9 @@ public class OcpcTransApiType {
 
   public static final String JSON_PROPERTY_CHANNEL_ID = "channelId";
   private Long channelId;
+
+  public static final String JSON_PROPERTY_PAGE_INFO = "pageInfo";
+  private List<PageMiniInfo> pageInfo = null;
 
   public OcpcTransApiType() { 
   }
@@ -680,6 +685,41 @@ public class OcpcTransApiType {
   }
 
 
+  public OcpcTransApiType pageInfo(List<PageMiniInfo> pageInfo) {
+    
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  public OcpcTransApiType addPageInfoItem(PageMiniInfo pageInfoItem) {
+    if (this.pageInfo == null) {
+      this.pageInfo = new ArrayList<>();
+    }
+    this.pageInfo.add(pageInfoItem);
+    return this;
+  }
+
+   /**
+   * Get pageInfo
+   * @return pageInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PAGE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<PageMiniInfo> getPageInfo() {
+    return pageInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PAGE_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPageInfo(List<PageMiniInfo> pageInfo) {
+    this.pageInfo = pageInfo;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -708,12 +748,13 @@ public class OcpcTransApiType {
         Objects.equals(this.appid, ocpcTransApiType.appid) &&
         Objects.equals(this.sdkAppId, ocpcTransApiType.sdkAppId) &&
         Objects.equals(this.sdkSecretKey, ocpcTransApiType.sdkSecretKey) &&
-        Objects.equals(this.channelId, ocpcTransApiType.channelId);
+        Objects.equals(this.channelId, ocpcTransApiType.channelId) &&
+        Objects.equals(this.pageInfo, ocpcTransApiType.pageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appTransId, transFrom, transTypes, monitorUrl, lpUrl, relatedUrls, transName, appType, downloadUrl, exposureUrl, mode, transStatus, deepTransTypes, docid, appName, apkName, appid, sdkAppId, sdkSecretKey, channelId);
+    return Objects.hash(appTransId, transFrom, transTypes, monitorUrl, lpUrl, relatedUrls, transName, appType, downloadUrl, exposureUrl, mode, transStatus, deepTransTypes, docid, appName, apkName, appid, sdkAppId, sdkSecretKey, channelId, pageInfo);
   }
 
   @Override
@@ -740,6 +781,7 @@ public class OcpcTransApiType {
     sb.append("    sdkAppId: ").append(toIndentedString(sdkAppId)).append("\n");
     sb.append("    sdkSecretKey: ").append(toIndentedString(sdkSecretKey)).append("\n");
     sb.append("    channelId: ").append(toIndentedString(channelId)).append("\n");
+    sb.append("    pageInfo: ").append(toIndentedString(pageInfo)).append("\n");
     sb.append("}");
     return sb.toString();
   }

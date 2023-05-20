@@ -82,6 +82,9 @@ class GetVirtualPhoneRequest(ModelNormal):
         return {
             'ref_clue_id': (str,),  # noqa: E501
             'callee': (str,),  # noqa: E501
+            'custom_param': (str,),  # noqa: E501
+            'mode': (int,),  # noqa: E501
+            'caller': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -92,6 +95,9 @@ class GetVirtualPhoneRequest(ModelNormal):
     attribute_map = {
         'ref_clue_id': 'refClueId',  # noqa: E501
         'callee': 'callee',  # noqa: E501
+        'custom_param': 'customParam',  # noqa: E501
+        'mode': 'mode',  # noqa: E501
+        'caller': 'caller',  # noqa: E501
     }
 
     read_only_vars = {
@@ -137,6 +143,9 @@ class GetVirtualPhoneRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             ref_clue_id (str): [optional]  # noqa: E501
             callee (str): [optional]  # noqa: E501
+            custom_param (str): [optional]  # noqa: E501
+            mode (int): [optional]  # noqa: E501
+            caller (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -220,6 +229,9 @@ class GetVirtualPhoneRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             ref_clue_id (str): [optional]  # noqa: E501
             callee (str): [optional]  # noqa: E501
+            custom_param (str): [optional]  # noqa: E501
+            mode (int): [optional]  # noqa: E501
+            caller (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

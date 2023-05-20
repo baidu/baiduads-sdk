@@ -123,6 +123,7 @@ with baiduads.ApiClient() as api_client:
                 budget_offline_time=[
                     {},
                 ],
+                lice_name="lice_name_example",
             ),
         ),
     ) # UpdateAccountFeedRequestWrapper | 

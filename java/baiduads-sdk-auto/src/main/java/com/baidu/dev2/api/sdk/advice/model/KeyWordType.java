@@ -13,7 +13,6 @@ package com.baidu.dev2.api.sdk.advice.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.advice.model.MaterialOfflineReason;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -21,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
@@ -36,22 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeyWordType.JSON_PROPERTY_CAMPAIGN_NAME,
   KeyWordType.JSON_PROPERTY_ADGROUP_ID,
   KeyWordType.JSON_PROPERTY_ADGROUP_NAME,
-  KeyWordType.JSON_PROPERTY_WMATCHPREFER,
   KeyWordType.JSON_PROPERTY_MATCH_TYPE,
-  KeyWordType.JSON_PROPERTY_MATCH_TYPE_NAME,
-  KeyWordType.JSON_PROPERTY_PHRASE_TYPE,
-  KeyWordType.JSON_PROPERTY_WORD_ID,
-  KeyWordType.JSON_PROPERTY_PRICE,
-  KeyWordType.JSON_PROPERTY_IMPRESSION,
-  KeyWordType.JSON_PROPERTY_CLICK,
-  KeyWordType.JSON_PROPERTY_COST,
-  KeyWordType.JSON_PROPERTY_MIX_MATCH_TYPE,
-  KeyWordType.JSON_PROPERTY_REASONS,
-  KeyWordType.JSON_PROPERTY_REASON_IDS,
-  KeyWordType.JSON_PROPERTY_STRATEGY_PRICE,
-  KeyWordType.JSON_PROPERTY_STATUS,
-  KeyWordType.JSON_PROPERTY_PC_MIN_PRICE,
-  KeyWordType.JSON_PROPERTY_MOBILE_MIN_PRICE,
   KeyWordType.JSON_PROPERTY_MIN_BID,
   KeyWordType.JSON_PROPERTY_GUIDE_PRICE,
   KeyWordType.JSON_PROPERTY_MATCH_PRICE_STATUS,
@@ -59,12 +41,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeyWordType.JSON_PROPERTY_ADGROUP_STATUS_NAME,
   KeyWordType.JSON_PROPERTY_ES_IMPRESSION,
   KeyWordType.JSON_PROPERTY_PC_DESTINATION_URL,
-  KeyWordType.JSON_PROPERTY_MOBILE_DESTINATION_URL,
-  KeyWordType.JSON_PROPERTY_OFFLINE_REASONS,
   KeyWordType.JSON_PROPERTY_MULTI_PRICE,
-  KeyWordType.JSON_PROPERTY_STRATEGY_ADGROUP_ID,
-  KeyWordType.JSON_PROPERTY_ADGROUP_PRICE,
-  KeyWordType.JSON_PROPERTY_BASIS_TYPE,
   KeyWordType.JSON_PROPERTY_BASIS_TYPE_NAME,
   KeyWordType.JSON_PROPERTY_BUSINESS_POINT_ID,
   KeyWordType.JSON_PROPERTY_AD_TYPE,
@@ -79,7 +56,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeyWordType.JSON_PROPERTY_TOP_PAGE_VIEWS,
   KeyWordType.JSON_PROPERTY_TOP_P_CLICKS,
   KeyWordType.JSON_PROPERTY_CAMPAIGN_BID_TYPE,
-  KeyWordType.JSON_PROPERTY_ES_CONVERSION
+  KeyWordType.JSON_PROPERTY_ES_CONVERSION,
+  KeyWordType.JSON_PROPERTY_TOP_PAY
 })
 @JsonTypeName("KeyWordType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -102,53 +80,8 @@ public class KeyWordType {
   public static final String JSON_PROPERTY_ADGROUP_NAME = "adgroupName";
   private String adgroupName;
 
-  public static final String JSON_PROPERTY_WMATCHPREFER = "wmatchprefer";
-  private Integer wmatchprefer;
-
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
   private Integer matchType;
-
-  public static final String JSON_PROPERTY_MATCH_TYPE_NAME = "matchTypeName";
-  private String matchTypeName;
-
-  public static final String JSON_PROPERTY_PHRASE_TYPE = "phraseType";
-  private Integer phraseType;
-
-  public static final String JSON_PROPERTY_WORD_ID = "wordId";
-  private Long wordId;
-
-  public static final String JSON_PROPERTY_PRICE = "price";
-  private Double price;
-
-  public static final String JSON_PROPERTY_IMPRESSION = "impression";
-  private Long impression;
-
-  public static final String JSON_PROPERTY_CLICK = "click";
-  private Long click;
-
-  public static final String JSON_PROPERTY_COST = "cost";
-  private Double cost;
-
-  public static final String JSON_PROPERTY_MIX_MATCH_TYPE = "mixMatchType";
-  private Integer mixMatchType;
-
-  public static final String JSON_PROPERTY_REASONS = "reasons";
-  private String reasons;
-
-  public static final String JSON_PROPERTY_REASON_IDS = "reasonIds";
-  private List<Integer> reasonIds = null;
-
-  public static final String JSON_PROPERTY_STRATEGY_PRICE = "strategyPrice";
-  private Double strategyPrice;
-
-  public static final String JSON_PROPERTY_STATUS = "status";
-  private Integer status;
-
-  public static final String JSON_PROPERTY_PC_MIN_PRICE = "pcMinPrice";
-  private Double pcMinPrice;
-
-  public static final String JSON_PROPERTY_MOBILE_MIN_PRICE = "mobileMinPrice";
-  private Double mobileMinPrice;
 
   public static final String JSON_PROPERTY_MIN_BID = "minBid";
   private Double minBid;
@@ -171,23 +104,8 @@ public class KeyWordType {
   public static final String JSON_PROPERTY_PC_DESTINATION_URL = "pcDestinationUrl";
   private String pcDestinationUrl;
 
-  public static final String JSON_PROPERTY_MOBILE_DESTINATION_URL = "mobileDestinationUrl";
-  private String mobileDestinationUrl;
-
-  public static final String JSON_PROPERTY_OFFLINE_REASONS = "offlineReasons";
-  private List<MaterialOfflineReason> offlineReasons = null;
-
   public static final String JSON_PROPERTY_MULTI_PRICE = "multiPrice";
   private String multiPrice;
-
-  public static final String JSON_PROPERTY_STRATEGY_ADGROUP_ID = "strategyAdgroupId";
-  private Long strategyAdgroupId;
-
-  public static final String JSON_PROPERTY_ADGROUP_PRICE = "adgroupPrice";
-  private Double adgroupPrice;
-
-  public static final String JSON_PROPERTY_BASIS_TYPE = "basisType";
-  private Integer basisType;
 
   public static final String JSON_PROPERTY_BASIS_TYPE_NAME = "basisTypeName";
   private String basisTypeName;
@@ -233,6 +151,9 @@ public class KeyWordType {
 
   public static final String JSON_PROPERTY_ES_CONVERSION = "esConversion";
   private Double esConversion;
+
+  public static final String JSON_PROPERTY_TOP_PAY = "topPay";
+  private Double topPay;
 
   public KeyWordType() { 
   }
@@ -399,33 +320,6 @@ public class KeyWordType {
   }
 
 
-  public KeyWordType wmatchprefer(Integer wmatchprefer) {
-    
-    this.wmatchprefer = wmatchprefer;
-    return this;
-  }
-
-   /**
-   * Get wmatchprefer
-   * @return wmatchprefer
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_WMATCHPREFER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getWmatchprefer() {
-    return wmatchprefer;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_WMATCHPREFER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWmatchprefer(Integer wmatchprefer) {
-    this.wmatchprefer = wmatchprefer;
-  }
-
-
   public KeyWordType matchType(Integer matchType) {
     
     this.matchType = matchType;
@@ -450,392 +344,6 @@ public class KeyWordType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchType(Integer matchType) {
     this.matchType = matchType;
-  }
-
-
-  public KeyWordType matchTypeName(String matchTypeName) {
-    
-    this.matchTypeName = matchTypeName;
-    return this;
-  }
-
-   /**
-   * Get matchTypeName
-   * @return matchTypeName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getMatchTypeName() {
-    return matchTypeName;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMatchTypeName(String matchTypeName) {
-    this.matchTypeName = matchTypeName;
-  }
-
-
-  public KeyWordType phraseType(Integer phraseType) {
-    
-    this.phraseType = phraseType;
-    return this;
-  }
-
-   /**
-   * Get phraseType
-   * @return phraseType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PHRASE_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getPhraseType() {
-    return phraseType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PHRASE_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPhraseType(Integer phraseType) {
-    this.phraseType = phraseType;
-  }
-
-
-  public KeyWordType wordId(Long wordId) {
-    
-    this.wordId = wordId;
-    return this;
-  }
-
-   /**
-   * Get wordId
-   * @return wordId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_WORD_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getWordId() {
-    return wordId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_WORD_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWordId(Long wordId) {
-    this.wordId = wordId;
-  }
-
-
-  public KeyWordType price(Double price) {
-    
-    this.price = price;
-    return this;
-  }
-
-   /**
-   * Get price
-   * @return price
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getPrice() {
-    return price;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrice(Double price) {
-    this.price = price;
-  }
-
-
-  public KeyWordType impression(Long impression) {
-    
-    this.impression = impression;
-    return this;
-  }
-
-   /**
-   * Get impression
-   * @return impression
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IMPRESSION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getImpression() {
-    return impression;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_IMPRESSION)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpression(Long impression) {
-    this.impression = impression;
-  }
-
-
-  public KeyWordType click(Long click) {
-    
-    this.click = click;
-    return this;
-  }
-
-   /**
-   * Get click
-   * @return click
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CLICK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getClick() {
-    return click;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CLICK)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClick(Long click) {
-    this.click = click;
-  }
-
-
-  public KeyWordType cost(Double cost) {
-    
-    this.cost = cost;
-    return this;
-  }
-
-   /**
-   * Get cost
-   * @return cost
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_COST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getCost() {
-    return cost;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_COST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCost(Double cost) {
-    this.cost = cost;
-  }
-
-
-  public KeyWordType mixMatchType(Integer mixMatchType) {
-    
-    this.mixMatchType = mixMatchType;
-    return this;
-  }
-
-   /**
-   * Get mixMatchType
-   * @return mixMatchType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MIX_MATCH_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getMixMatchType() {
-    return mixMatchType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MIX_MATCH_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMixMatchType(Integer mixMatchType) {
-    this.mixMatchType = mixMatchType;
-  }
-
-
-  public KeyWordType reasons(String reasons) {
-    
-    this.reasons = reasons;
-    return this;
-  }
-
-   /**
-   * Get reasons
-   * @return reasons
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REASONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getReasons() {
-    return reasons;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REASONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReasons(String reasons) {
-    this.reasons = reasons;
-  }
-
-
-  public KeyWordType reasonIds(List<Integer> reasonIds) {
-    
-    this.reasonIds = reasonIds;
-    return this;
-  }
-
-  public KeyWordType addReasonIdsItem(Integer reasonIdsItem) {
-    if (this.reasonIds == null) {
-      this.reasonIds = new ArrayList<>();
-    }
-    this.reasonIds.add(reasonIdsItem);
-    return this;
-  }
-
-   /**
-   * Get reasonIds
-   * @return reasonIds
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REASON_IDS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getReasonIds() {
-    return reasonIds;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REASON_IDS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReasonIds(List<Integer> reasonIds) {
-    this.reasonIds = reasonIds;
-  }
-
-
-  public KeyWordType strategyPrice(Double strategyPrice) {
-    
-    this.strategyPrice = strategyPrice;
-    return this;
-  }
-
-   /**
-   * Get strategyPrice
-   * @return strategyPrice
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_STRATEGY_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getStrategyPrice() {
-    return strategyPrice;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STRATEGY_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStrategyPrice(Double strategyPrice) {
-    this.strategyPrice = strategyPrice;
-  }
-
-
-  public KeyWordType status(Integer status) {
-    
-    this.status = status;
-    return this;
-  }
-
-   /**
-   * Get status
-   * @return status
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getStatus() {
-    return status;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(Integer status) {
-    this.status = status;
-  }
-
-
-  public KeyWordType pcMinPrice(Double pcMinPrice) {
-    
-    this.pcMinPrice = pcMinPrice;
-    return this;
-  }
-
-   /**
-   * Get pcMinPrice
-   * @return pcMinPrice
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PC_MIN_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getPcMinPrice() {
-    return pcMinPrice;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PC_MIN_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPcMinPrice(Double pcMinPrice) {
-    this.pcMinPrice = pcMinPrice;
-  }
-
-
-  public KeyWordType mobileMinPrice(Double mobileMinPrice) {
-    
-    this.mobileMinPrice = mobileMinPrice;
-    return this;
-  }
-
-   /**
-   * Get mobileMinPrice
-   * @return mobileMinPrice
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MOBILE_MIN_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getMobileMinPrice() {
-    return mobileMinPrice;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MOBILE_MIN_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMobileMinPrice(Double mobileMinPrice) {
-    this.mobileMinPrice = mobileMinPrice;
   }
 
 
@@ -1028,68 +536,6 @@ public class KeyWordType {
   }
 
 
-  public KeyWordType mobileDestinationUrl(String mobileDestinationUrl) {
-    
-    this.mobileDestinationUrl = mobileDestinationUrl;
-    return this;
-  }
-
-   /**
-   * Get mobileDestinationUrl
-   * @return mobileDestinationUrl
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_MOBILE_DESTINATION_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getMobileDestinationUrl() {
-    return mobileDestinationUrl;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_MOBILE_DESTINATION_URL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMobileDestinationUrl(String mobileDestinationUrl) {
-    this.mobileDestinationUrl = mobileDestinationUrl;
-  }
-
-
-  public KeyWordType offlineReasons(List<MaterialOfflineReason> offlineReasons) {
-    
-    this.offlineReasons = offlineReasons;
-    return this;
-  }
-
-  public KeyWordType addOfflineReasonsItem(MaterialOfflineReason offlineReasonsItem) {
-    if (this.offlineReasons == null) {
-      this.offlineReasons = new ArrayList<>();
-    }
-    this.offlineReasons.add(offlineReasonsItem);
-    return this;
-  }
-
-   /**
-   * Get offlineReasons
-   * @return offlineReasons
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_OFFLINE_REASONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<MaterialOfflineReason> getOfflineReasons() {
-    return offlineReasons;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_OFFLINE_REASONS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOfflineReasons(List<MaterialOfflineReason> offlineReasons) {
-    this.offlineReasons = offlineReasons;
-  }
-
-
   public KeyWordType multiPrice(String multiPrice) {
     
     this.multiPrice = multiPrice;
@@ -1114,87 +560,6 @@ public class KeyWordType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMultiPrice(String multiPrice) {
     this.multiPrice = multiPrice;
-  }
-
-
-  public KeyWordType strategyAdgroupId(Long strategyAdgroupId) {
-    
-    this.strategyAdgroupId = strategyAdgroupId;
-    return this;
-  }
-
-   /**
-   * Get strategyAdgroupId
-   * @return strategyAdgroupId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_STRATEGY_ADGROUP_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getStrategyAdgroupId() {
-    return strategyAdgroupId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STRATEGY_ADGROUP_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStrategyAdgroupId(Long strategyAdgroupId) {
-    this.strategyAdgroupId = strategyAdgroupId;
-  }
-
-
-  public KeyWordType adgroupPrice(Double adgroupPrice) {
-    
-    this.adgroupPrice = adgroupPrice;
-    return this;
-  }
-
-   /**
-   * Get adgroupPrice
-   * @return adgroupPrice
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADGROUP_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Double getAdgroupPrice() {
-    return adgroupPrice;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADGROUP_PRICE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdgroupPrice(Double adgroupPrice) {
-    this.adgroupPrice = adgroupPrice;
-  }
-
-
-  public KeyWordType basisType(Integer basisType) {
-    
-    this.basisType = basisType;
-    return this;
-  }
-
-   /**
-   * Get basisType
-   * @return basisType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BASIS_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getBasisType() {
-    return basisType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BASIS_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBasisType(Integer basisType) {
-    this.basisType = basisType;
   }
 
 
@@ -1603,6 +968,33 @@ public class KeyWordType {
   }
 
 
+  public KeyWordType topPay(Double topPay) {
+    
+    this.topPay = topPay;
+    return this;
+  }
+
+   /**
+   * Get topPay
+   * @return topPay
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_TOP_PAY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Double getTopPay() {
+    return topPay;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_TOP_PAY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setTopPay(Double topPay) {
+    this.topPay = topPay;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -1618,22 +1010,7 @@ public class KeyWordType {
         Objects.equals(this.campaignName, keyWordType.campaignName) &&
         Objects.equals(this.adgroupId, keyWordType.adgroupId) &&
         Objects.equals(this.adgroupName, keyWordType.adgroupName) &&
-        Objects.equals(this.wmatchprefer, keyWordType.wmatchprefer) &&
         Objects.equals(this.matchType, keyWordType.matchType) &&
-        Objects.equals(this.matchTypeName, keyWordType.matchTypeName) &&
-        Objects.equals(this.phraseType, keyWordType.phraseType) &&
-        Objects.equals(this.wordId, keyWordType.wordId) &&
-        Objects.equals(this.price, keyWordType.price) &&
-        Objects.equals(this.impression, keyWordType.impression) &&
-        Objects.equals(this.click, keyWordType.click) &&
-        Objects.equals(this.cost, keyWordType.cost) &&
-        Objects.equals(this.mixMatchType, keyWordType.mixMatchType) &&
-        Objects.equals(this.reasons, keyWordType.reasons) &&
-        Objects.equals(this.reasonIds, keyWordType.reasonIds) &&
-        Objects.equals(this.strategyPrice, keyWordType.strategyPrice) &&
-        Objects.equals(this.status, keyWordType.status) &&
-        Objects.equals(this.pcMinPrice, keyWordType.pcMinPrice) &&
-        Objects.equals(this.mobileMinPrice, keyWordType.mobileMinPrice) &&
         Objects.equals(this.minBid, keyWordType.minBid) &&
         Objects.equals(this.guidePrice, keyWordType.guidePrice) &&
         Objects.equals(this.matchPriceStatus, keyWordType.matchPriceStatus) &&
@@ -1641,12 +1018,7 @@ public class KeyWordType {
         Objects.equals(this.adgroupStatusName, keyWordType.adgroupStatusName) &&
         Objects.equals(this.esImpression, keyWordType.esImpression) &&
         Objects.equals(this.pcDestinationUrl, keyWordType.pcDestinationUrl) &&
-        Objects.equals(this.mobileDestinationUrl, keyWordType.mobileDestinationUrl) &&
-        Objects.equals(this.offlineReasons, keyWordType.offlineReasons) &&
         Objects.equals(this.multiPrice, keyWordType.multiPrice) &&
-        Objects.equals(this.strategyAdgroupId, keyWordType.strategyAdgroupId) &&
-        Objects.equals(this.adgroupPrice, keyWordType.adgroupPrice) &&
-        Objects.equals(this.basisType, keyWordType.basisType) &&
         Objects.equals(this.basisTypeName, keyWordType.basisTypeName) &&
         Objects.equals(this.businessPointId, keyWordType.businessPointId) &&
         Objects.equals(this.adType, keyWordType.adType) &&
@@ -1661,12 +1033,13 @@ public class KeyWordType {
         Objects.equals(this.topPageViews, keyWordType.topPageViews) &&
         Objects.equals(this.topPClicks, keyWordType.topPClicks) &&
         Objects.equals(this.campaignBidType, keyWordType.campaignBidType) &&
-        Objects.equals(this.esConversion, keyWordType.esConversion);
+        Objects.equals(this.esConversion, keyWordType.esConversion) &&
+        Objects.equals(this.topPay, keyWordType.topPay);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(keywordId, keyword, campaignId, campaignName, adgroupId, adgroupName, wmatchprefer, matchType, matchTypeName, phraseType, wordId, price, impression, click, cost, mixMatchType, reasons, reasonIds, strategyPrice, status, pcMinPrice, mobileMinPrice, minBid, guidePrice, matchPriceStatus, adgroupStatus, adgroupStatusName, esImpression, pcDestinationUrl, mobileDestinationUrl, offlineReasons, multiPrice, strategyAdgroupId, adgroupPrice, basisType, basisTypeName, businessPointId, adType, marketingTargetId, reasonCode, reasonText, priceStrategyId, pause, shopType, esClick, suggestReasonCode, topPageViews, topPClicks, campaignBidType, esConversion);
+    return Objects.hash(keywordId, keyword, campaignId, campaignName, adgroupId, adgroupName, matchType, minBid, guidePrice, matchPriceStatus, adgroupStatus, adgroupStatusName, esImpression, pcDestinationUrl, multiPrice, basisTypeName, businessPointId, adType, marketingTargetId, reasonCode, reasonText, priceStrategyId, pause, shopType, esClick, suggestReasonCode, topPageViews, topPClicks, campaignBidType, esConversion, topPay);
   }
 
   @Override
@@ -1679,22 +1052,7 @@ public class KeyWordType {
     sb.append("    campaignName: ").append(toIndentedString(campaignName)).append("\n");
     sb.append("    adgroupId: ").append(toIndentedString(adgroupId)).append("\n");
     sb.append("    adgroupName: ").append(toIndentedString(adgroupName)).append("\n");
-    sb.append("    wmatchprefer: ").append(toIndentedString(wmatchprefer)).append("\n");
     sb.append("    matchType: ").append(toIndentedString(matchType)).append("\n");
-    sb.append("    matchTypeName: ").append(toIndentedString(matchTypeName)).append("\n");
-    sb.append("    phraseType: ").append(toIndentedString(phraseType)).append("\n");
-    sb.append("    wordId: ").append(toIndentedString(wordId)).append("\n");
-    sb.append("    price: ").append(toIndentedString(price)).append("\n");
-    sb.append("    impression: ").append(toIndentedString(impression)).append("\n");
-    sb.append("    click: ").append(toIndentedString(click)).append("\n");
-    sb.append("    cost: ").append(toIndentedString(cost)).append("\n");
-    sb.append("    mixMatchType: ").append(toIndentedString(mixMatchType)).append("\n");
-    sb.append("    reasons: ").append(toIndentedString(reasons)).append("\n");
-    sb.append("    reasonIds: ").append(toIndentedString(reasonIds)).append("\n");
-    sb.append("    strategyPrice: ").append(toIndentedString(strategyPrice)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    pcMinPrice: ").append(toIndentedString(pcMinPrice)).append("\n");
-    sb.append("    mobileMinPrice: ").append(toIndentedString(mobileMinPrice)).append("\n");
     sb.append("    minBid: ").append(toIndentedString(minBid)).append("\n");
     sb.append("    guidePrice: ").append(toIndentedString(guidePrice)).append("\n");
     sb.append("    matchPriceStatus: ").append(toIndentedString(matchPriceStatus)).append("\n");
@@ -1702,12 +1060,7 @@ public class KeyWordType {
     sb.append("    adgroupStatusName: ").append(toIndentedString(adgroupStatusName)).append("\n");
     sb.append("    esImpression: ").append(toIndentedString(esImpression)).append("\n");
     sb.append("    pcDestinationUrl: ").append(toIndentedString(pcDestinationUrl)).append("\n");
-    sb.append("    mobileDestinationUrl: ").append(toIndentedString(mobileDestinationUrl)).append("\n");
-    sb.append("    offlineReasons: ").append(toIndentedString(offlineReasons)).append("\n");
     sb.append("    multiPrice: ").append(toIndentedString(multiPrice)).append("\n");
-    sb.append("    strategyAdgroupId: ").append(toIndentedString(strategyAdgroupId)).append("\n");
-    sb.append("    adgroupPrice: ").append(toIndentedString(adgroupPrice)).append("\n");
-    sb.append("    basisType: ").append(toIndentedString(basisType)).append("\n");
     sb.append("    basisTypeName: ").append(toIndentedString(basisTypeName)).append("\n");
     sb.append("    businessPointId: ").append(toIndentedString(businessPointId)).append("\n");
     sb.append("    adType: ").append(toIndentedString(adType)).append("\n");
@@ -1723,6 +1076,7 @@ public class KeyWordType {
     sb.append("    topPClicks: ").append(toIndentedString(topPClicks)).append("\n");
     sb.append("    campaignBidType: ").append(toIndentedString(campaignBidType)).append("\n");
     sb.append("    esConversion: ").append(toIndentedString(esConversion)).append("\n");
+    sb.append("    topPay: ").append(toIndentedString(topPay)).append("\n");
     sb.append("}");
     return sb.toString();
   }

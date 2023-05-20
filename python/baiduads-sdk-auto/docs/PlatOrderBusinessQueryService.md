@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_express_name_list**](PlatOrderBusinessQueryService.md#get_express_name_list) | **POST** /json/sms/service/PlatOrderBusinessQueryService/getExpressNameList | 
 [**get_order_detail**](PlatOrderBusinessQueryService.md#get_order_detail) | **POST** /json/sms/service/PlatOrderBusinessQueryService/getOrderDetail | 
+[**get_order_express_package**](PlatOrderBusinessQueryService.md#get_order_express_package) | **POST** /json/sms/service/PlatOrderBusinessQueryService/getOrderExpressPackage | 
 [**get_part_consign_order_list**](PlatOrderBusinessQueryService.md#get_part_consign_order_list) | **POST** /json/sms/service/PlatOrderBusinessQueryService/getPartConsignOrderList | 
 
 
@@ -39,7 +40,6 @@ with baiduads.ApiClient() as api_client:
         header=ApiRequestHeader(),
         body=ExpressNameReq(
             express_name="express_name_example",
-            ucid=1,
             shop_id=1,
             app_id=1,
         ),
@@ -112,7 +112,6 @@ with baiduads.ApiClient() as api_client:
         header=ApiRequestHeader(),
         body=PlatOrderIdRequest(
             order_id=1,
-            ucid=1,
             shop_id=1,
             app_id=1,
         ),
@@ -136,6 +135,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetOrderDetailResponseWrapper**](GetOrderDetailResponseWrapper.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json;charset=UTF-8
+ - **Accept**: application/json;charset=UTF-8
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_order_express_package**
+> GetOrderExpressPackageResponseWrapper get_order_express_package(get_order_express_package_request_wrapper)
+
+
+
+### Example
+
+
+```python
+import time
+import baiduads
+from platorderbusinessquery.api import plat_order_business_query_service
+from baiduads.platorderbusinessquery.model.get_order_express_package_response_wrapper import GetOrderExpressPackageResponseWrapper
+from baiduads.platorderbusinessquery.model.get_order_express_package_request_wrapper import GetOrderExpressPackageRequestWrapper
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.baidu.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = baiduads.Configuration(
+    host = "https://api.baidu.com"
+)
+
+
+# Enter a context with an instance of the API client
+with baiduads.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = plat_order_business_query_service.PlatOrderBusinessQueryService(api_client)
+    get_order_express_package_request_wrapper = GetOrderExpressPackageRequestWrapper(
+        header=ApiRequestHeader(),
+        body=PlatOrderExpressInfoRequest(
+            order_id=1,
+            tracking_number="tracking_number_example",
+            shop_id=1,
+            app_id=1,
+        ),
+    ) # GetOrderExpressPackageRequestWrapper | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_order_express_package(get_order_express_package_request_wrapper)
+        pprint(api_response)
+    except baiduads.ApiException as e:
+        print("Exception when calling PlatOrderBusinessQueryService->get_order_express_package: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **get_order_express_package_request_wrapper** | [**GetOrderExpressPackageRequestWrapper**](GetOrderExpressPackageRequestWrapper.md)|  |
+
+### Return type
+
+[**GetOrderExpressPackageResponseWrapper**](GetOrderExpressPackageResponseWrapper.md)
 
 ### Authorization
 
@@ -228,6 +300,8 @@ with baiduads.ApiClient() as api_client:
             click_ucid="click_ucid_example",
             download_options=1,
             pay_order_id=1,
+            start_update_time="start_update_time_example",
+            end_update_time="end_update_time_example",
             page_size=1,
             page_num=1,
         ),

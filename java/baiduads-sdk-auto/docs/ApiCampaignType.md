@@ -43,6 +43,9 @@ Name | Type | Description | Notes
 **sharedBudgetName** | **String** |  |  [optional]
 **sharedBudget** | **Double** |  |  [optional]
 **budgetType** | **Integer** |  |  [optional]
+**catalogId** | **Long** |  |  [optional]
+**transAsset** | **Integer** |  |  [optional]
+**transAssetId** | **Long** |  |  [optional]
 
 
 

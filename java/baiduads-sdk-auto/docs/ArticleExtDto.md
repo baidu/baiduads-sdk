@@ -18,7 +18,8 @@ Name | Type | Description | Notes
 **constructionFee** | [**CaseFee**](CaseFee.md) |  |  [optional]
 **author** | [**AuthorInfo**](AuthorInfo.md) |  |  [optional]
 **detailCategory** | [**List&lt;DetailCategoryDto&gt;**](DetailCategoryDto.md) |  |  [optional]
-**tpInfo** | [**TpInfo**](TpInfo.md) |  |  [optional]
+**articleSource** | **String** |  |  [optional]
+**articleLink** | **String** |  |  [optional]
 
 
 

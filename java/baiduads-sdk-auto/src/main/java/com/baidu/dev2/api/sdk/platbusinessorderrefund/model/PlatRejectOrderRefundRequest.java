@@ -39,7 +39,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatRejectOrderRefundRequest.JSON_PROPERTY_REJECT_REASON,
   PlatRejectOrderRefundRequest.JSON_PROPERTY_REJECT_PROOF,
   PlatRejectOrderRefundRequest.JSON_PROPERTY_SHOP_NAME,
-  PlatRejectOrderRefundRequest.JSON_PROPERTY_SHOP_LOGO_URL
+  PlatRejectOrderRefundRequest.JSON_PROPERTY_SHOP_LOGO_URL,
+  PlatRejectOrderRefundRequest.JSON_PROPERTY_REJECT_MARKS
 })
 @JsonTypeName("PlatRejectOrderRefundRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -76,6 +77,9 @@ public class PlatRejectOrderRefundRequest {
 
   public static final String JSON_PROPERTY_SHOP_LOGO_URL = "shopLogoUrl";
   private String shopLogoUrl;
+
+  public static final String JSON_PROPERTY_REJECT_MARKS = "rejectMarks";
+  private String rejectMarks;
 
   public PlatRejectOrderRefundRequest() { 
   }
@@ -385,6 +389,33 @@ public class PlatRejectOrderRefundRequest {
   }
 
 
+  public PlatRejectOrderRefundRequest rejectMarks(String rejectMarks) {
+    
+    this.rejectMarks = rejectMarks;
+    return this;
+  }
+
+   /**
+   * Get rejectMarks
+   * @return rejectMarks
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_REJECT_MARKS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getRejectMarks() {
+    return rejectMarks;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_REJECT_MARKS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setRejectMarks(String rejectMarks) {
+    this.rejectMarks = rejectMarks;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -404,12 +435,13 @@ public class PlatRejectOrderRefundRequest {
         Objects.equals(this.rejectReason, platRejectOrderRefundRequest.rejectReason) &&
         Objects.equals(this.rejectProof, platRejectOrderRefundRequest.rejectProof) &&
         Objects.equals(this.shopName, platRejectOrderRefundRequest.shopName) &&
-        Objects.equals(this.shopLogoUrl, platRejectOrderRefundRequest.shopLogoUrl);
+        Objects.equals(this.shopLogoUrl, platRejectOrderRefundRequest.shopLogoUrl) &&
+        Objects.equals(this.rejectMarks, platRejectOrderRefundRequest.rejectMarks);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ucid, shopId, appId, refundId, orderId, subOrderId, complaintId, rejectReason, rejectProof, shopName, shopLogoUrl);
+    return Objects.hash(ucid, shopId, appId, refundId, orderId, subOrderId, complaintId, rejectReason, rejectProof, shopName, shopLogoUrl, rejectMarks);
   }
 
   @Override
@@ -427,6 +459,7 @@ public class PlatRejectOrderRefundRequest {
     sb.append("    rejectProof: ").append(toIndentedString(rejectProof)).append("\n");
     sb.append("    shopName: ").append(toIndentedString(shopName)).append("\n");
     sb.append("    shopLogoUrl: ").append(toIndentedString(shopLogoUrl)).append("\n");
+    sb.append("    rejectMarks: ").append(toIndentedString(rejectMarks)).append("\n");
     sb.append("}");
     return sb.toString();
   }

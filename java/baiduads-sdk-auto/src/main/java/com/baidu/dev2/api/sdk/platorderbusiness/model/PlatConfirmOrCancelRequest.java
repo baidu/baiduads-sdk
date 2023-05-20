@@ -29,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   PlatConfirmOrCancelRequest.JSON_PROPERTY_ORDER_ID,
   PlatConfirmOrCancelRequest.JSON_PROPERTY_TYPE,
-  PlatConfirmOrCancelRequest.JSON_PROPERTY_UCID,
   PlatConfirmOrCancelRequest.JSON_PROPERTY_SHOP_ID,
   PlatConfirmOrCancelRequest.JSON_PROPERTY_APP_ID
 })
@@ -41,9 +40,6 @@ public class PlatConfirmOrCancelRequest {
 
   public static final String JSON_PROPERTY_TYPE = "type";
   private Integer type;
-
-  public static final String JSON_PROPERTY_UCID = "ucid";
-  private Long ucid;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -105,33 +101,6 @@ public class PlatConfirmOrCancelRequest {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setType(Integer type) {
     this.type = type;
-  }
-
-
-  public PlatConfirmOrCancelRequest ucid(Long ucid) {
-    
-    this.ucid = ucid;
-    return this;
-  }
-
-   /**
-   * Get ucid
-   * @return ucid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUcid() {
-    return ucid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcid(Long ucid) {
-    this.ucid = ucid;
   }
 
 
@@ -200,14 +169,13 @@ public class PlatConfirmOrCancelRequest {
     PlatConfirmOrCancelRequest platConfirmOrCancelRequest = (PlatConfirmOrCancelRequest) o;
     return Objects.equals(this.orderId, platConfirmOrCancelRequest.orderId) &&
         Objects.equals(this.type, platConfirmOrCancelRequest.type) &&
-        Objects.equals(this.ucid, platConfirmOrCancelRequest.ucid) &&
         Objects.equals(this.shopId, platConfirmOrCancelRequest.shopId) &&
         Objects.equals(this.appId, platConfirmOrCancelRequest.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, type, ucid, shopId, appId);
+    return Objects.hash(orderId, type, shopId, appId);
   }
 
   @Override
@@ -216,7 +184,6 @@ public class PlatConfirmOrCancelRequest {
     sb.append("class PlatConfirmOrCancelRequest {\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
-    sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");

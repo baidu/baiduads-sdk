@@ -29,8 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  */
 @JsonPropertyOrder({
   AdviceDetailQueryRequest.JSON_PROPERTY_CONDITION,
-  AdviceDetailQueryRequest.JSON_PROPERTY_REQ_NEWEST,
-  AdviceDetailQueryRequest.JSON_PROPERTY_SOURCE,
   AdviceDetailQueryRequest.JSON_PROPERTY_ADVICE_KEY
 })
 @JsonTypeName("AdviceDetailQueryRequest")
@@ -38,12 +36,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class AdviceDetailQueryRequest {
   public static final String JSON_PROPERTY_CONDITION = "condition";
   private DetailQueryCondition condition;
-
-  public static final String JSON_PROPERTY_REQ_NEWEST = "reqNewest";
-  private Boolean reqNewest;
-
-  public static final String JSON_PROPERTY_SOURCE = "source";
-  private Integer source;
 
   public static final String JSON_PROPERTY_ADVICE_KEY = "adviceKey";
   private String adviceKey;
@@ -75,60 +67,6 @@ public class AdviceDetailQueryRequest {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCondition(DetailQueryCondition condition) {
     this.condition = condition;
-  }
-
-
-  public AdviceDetailQueryRequest reqNewest(Boolean reqNewest) {
-    
-    this.reqNewest = reqNewest;
-    return this;
-  }
-
-   /**
-   * Get reqNewest
-   * @return reqNewest
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_REQ_NEWEST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getReqNewest() {
-    return reqNewest;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_REQ_NEWEST)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReqNewest(Boolean reqNewest) {
-    this.reqNewest = reqNewest;
-  }
-
-
-  public AdviceDetailQueryRequest source(Integer source) {
-    
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Get source
-   * @return source
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getSource() {
-    return source;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSource(Integer source) {
-    this.source = source;
   }
 
 
@@ -169,14 +107,12 @@ public class AdviceDetailQueryRequest {
     }
     AdviceDetailQueryRequest adviceDetailQueryRequest = (AdviceDetailQueryRequest) o;
     return Objects.equals(this.condition, adviceDetailQueryRequest.condition) &&
-        Objects.equals(this.reqNewest, adviceDetailQueryRequest.reqNewest) &&
-        Objects.equals(this.source, adviceDetailQueryRequest.source) &&
         Objects.equals(this.adviceKey, adviceDetailQueryRequest.adviceKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(condition, reqNewest, source, adviceKey);
+    return Objects.hash(condition, adviceKey);
   }
 
   @Override
@@ -184,8 +120,6 @@ public class AdviceDetailQueryRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class AdviceDetailQueryRequest {\n");
     sb.append("    condition: ").append(toIndentedString(condition)).append("\n");
-    sb.append("    reqNewest: ").append(toIndentedString(reqNewest)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    adviceKey: ").append(toIndentedString(adviceKey)).append("\n");
     sb.append("}");
     return sb.toString();

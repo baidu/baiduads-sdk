@@ -24,6 +24,10 @@ Name | Type | Description | Notes
 **improveTransPriceTMax** | **Long** |  |  [optional]
 **improveTransPriceTMin** | **Long** |  |  [optional]
 **oldBudget** | **Double** |  |  [optional]
+**conversionMax** | **Long** |  |  [optional]
+**conversionMin** | **Long** |  |  [optional]
+**costMax** | **Long** |  |  [optional]
+**costMin** | **Long** |  |  [optional]
 
 
 

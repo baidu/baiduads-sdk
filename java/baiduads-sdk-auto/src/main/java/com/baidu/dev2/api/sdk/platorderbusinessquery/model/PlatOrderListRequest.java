@@ -61,6 +61,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderListRequest.JSON_PROPERTY_CLICK_UCID,
   PlatOrderListRequest.JSON_PROPERTY_DOWNLOAD_OPTIONS,
   PlatOrderListRequest.JSON_PROPERTY_PAY_ORDER_ID,
+  PlatOrderListRequest.JSON_PROPERTY_START_UPDATE_TIME,
+  PlatOrderListRequest.JSON_PROPERTY_END_UPDATE_TIME,
   PlatOrderListRequest.JSON_PROPERTY_PAGE_SIZE,
   PlatOrderListRequest.JSON_PROPERTY_PAGE_NUM
 })
@@ -162,6 +164,12 @@ public class PlatOrderListRequest {
 
   public static final String JSON_PROPERTY_PAY_ORDER_ID = "payOrderId";
   private Long payOrderId;
+
+  public static final String JSON_PROPERTY_START_UPDATE_TIME = "startUpdateTime";
+  private String startUpdateTime;
+
+  public static final String JSON_PROPERTY_END_UPDATE_TIME = "endUpdateTime";
+  private String endUpdateTime;
 
   public static final String JSON_PROPERTY_PAGE_SIZE = "pageSize";
   private Integer pageSize;
@@ -1084,6 +1092,60 @@ public class PlatOrderListRequest {
   }
 
 
+  public PlatOrderListRequest startUpdateTime(String startUpdateTime) {
+    
+    this.startUpdateTime = startUpdateTime;
+    return this;
+  }
+
+   /**
+   * Get startUpdateTime
+   * @return startUpdateTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_START_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getStartUpdateTime() {
+    return startUpdateTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_START_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setStartUpdateTime(String startUpdateTime) {
+    this.startUpdateTime = startUpdateTime;
+  }
+
+
+  public PlatOrderListRequest endUpdateTime(String endUpdateTime) {
+    
+    this.endUpdateTime = endUpdateTime;
+    return this;
+  }
+
+   /**
+   * Get endUpdateTime
+   * @return endUpdateTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_END_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getEndUpdateTime() {
+    return endUpdateTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_END_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEndUpdateTime(String endUpdateTime) {
+    this.endUpdateTime = endUpdateTime;
+  }
+
+
   public PlatOrderListRequest pageSize(Integer pageSize) {
     
     this.pageSize = pageSize;
@@ -1179,13 +1241,15 @@ public class PlatOrderListRequest {
         Objects.equals(this.clickUcid, platOrderListRequest.clickUcid) &&
         Objects.equals(this.downloadOptions, platOrderListRequest.downloadOptions) &&
         Objects.equals(this.payOrderId, platOrderListRequest.payOrderId) &&
+        Objects.equals(this.startUpdateTime, platOrderListRequest.startUpdateTime) &&
+        Objects.equals(this.endUpdateTime, platOrderListRequest.endUpdateTime) &&
         Objects.equals(this.pageSize, platOrderListRequest.pageSize) &&
         Objects.equals(this.pageNum, platOrderListRequest.pageNum);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, productName, receiver, receiverMobile, orderStatus, refundStatus, orderType, fields, startCreateTime, endCreateTime, desc, sortField, antiUserId, expressStatus, ucid, shopId, appId, orderIds, clickType, completeStartTime, completeEndTime, productId, trackingNumber, normalOrderType, abnormalOrderType, operateTag, bringGoodsType, passportId, cuid, clickUcid, downloadOptions, payOrderId, pageSize, pageNum);
+    return Objects.hash(orderId, productName, receiver, receiverMobile, orderStatus, refundStatus, orderType, fields, startCreateTime, endCreateTime, desc, sortField, antiUserId, expressStatus, ucid, shopId, appId, orderIds, clickType, completeStartTime, completeEndTime, productId, trackingNumber, normalOrderType, abnormalOrderType, operateTag, bringGoodsType, passportId, cuid, clickUcid, downloadOptions, payOrderId, startUpdateTime, endUpdateTime, pageSize, pageNum);
   }
 
   @Override
@@ -1224,6 +1288,8 @@ public class PlatOrderListRequest {
     sb.append("    clickUcid: ").append(toIndentedString(clickUcid)).append("\n");
     sb.append("    downloadOptions: ").append(toIndentedString(downloadOptions)).append("\n");
     sb.append("    payOrderId: ").append(toIndentedString(payOrderId)).append("\n");
+    sb.append("    startUpdateTime: ").append(toIndentedString(startUpdateTime)).append("\n");
+    sb.append("    endUpdateTime: ").append(toIndentedString(endUpdateTime)).append("\n");
     sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
     sb.append("    pageNum: ").append(toIndentedString(pageNum)).append("\n");
     sb.append("}");

@@ -39,6 +39,8 @@ Name | Type | Description | Notes
 **clickUcid** | **String** |  |  [optional]
 **downloadOptions** | **Integer** |  |  [optional]
 **payOrderId** | **Long** |  |  [optional]
+**startUpdateTime** | **String** |  |  [optional]
+**endUpdateTime** | **String** |  |  [optional]
 **pageSize** | **Integer** |  |  [optional]
 **pageNum** | **Integer** |  |  [optional]
 

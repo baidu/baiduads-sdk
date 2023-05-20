@@ -29,17 +29,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * VideoPreviewRequest
  */
 @JsonPropertyOrder({
-  VideoPreviewRequest.JSON_PROPERTY_TASK_IDS,
-  VideoPreviewRequest.JSON_PROPERTY_TAG
+  VideoPreviewRequest.JSON_PROPERTY_TASK_IDS
 })
 @JsonTypeName("VideoPreviewRequest")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoPreviewRequest {
   public static final String JSON_PROPERTY_TASK_IDS = "taskIds";
   private List<Long> taskIds = null;
-
-  public static final String JSON_PROPERTY_TAG = "tag";
-  private Integer tag;
 
   public VideoPreviewRequest() { 
   }
@@ -79,33 +75,6 @@ public class VideoPreviewRequest {
   }
 
 
-  public VideoPreviewRequest tag(Integer tag) {
-    
-    this.tag = tag;
-    return this;
-  }
-
-   /**
-   * Get tag
-   * @return tag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getTag() {
-    return tag;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTag(Integer tag) {
-    this.tag = tag;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -115,13 +84,12 @@ public class VideoPreviewRequest {
       return false;
     }
     VideoPreviewRequest videoPreviewRequest = (VideoPreviewRequest) o;
-    return Objects.equals(this.taskIds, videoPreviewRequest.taskIds) &&
-        Objects.equals(this.tag, videoPreviewRequest.tag);
+    return Objects.equals(this.taskIds, videoPreviewRequest.taskIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(taskIds, tag);
+    return Objects.hash(taskIds);
   }
 
   @Override
@@ -129,7 +97,6 @@ public class VideoPreviewRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class VideoPreviewRequest {\n");
     sb.append("    taskIds: ").append(toIndentedString(taskIds)).append("\n");
-    sb.append("    tag: ").append(toIndentedString(tag)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -91,6 +91,7 @@ class PlatRejectOrderRefundRequest(ModelNormal):
             'reject_proof': ([str],),  # noqa: E501
             'shop_name': (str,),  # noqa: E501
             'shop_logo_url': (str,),  # noqa: E501
+            'reject_marks': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -110,6 +111,7 @@ class PlatRejectOrderRefundRequest(ModelNormal):
         'reject_proof': 'rejectProof',  # noqa: E501
         'shop_name': 'shopName',  # noqa: E501
         'shop_logo_url': 'shopLogoUrl',  # noqa: E501
+        'reject_marks': 'rejectMarks',  # noqa: E501
     }
 
     read_only_vars = {
@@ -164,6 +166,7 @@ class PlatRejectOrderRefundRequest(ModelNormal):
             reject_proof ([str]): [optional]  # noqa: E501
             shop_name (str): [optional]  # noqa: E501
             shop_logo_url (str): [optional]  # noqa: E501
+            reject_marks (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -256,6 +259,7 @@ class PlatRejectOrderRefundRequest(ModelNormal):
             reject_proof ([str]): [optional]  # noqa: E501
             shop_name (str): [optional]  # noqa: E501
             shop_logo_url (str): [optional]  # noqa: E501
+            reject_marks (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

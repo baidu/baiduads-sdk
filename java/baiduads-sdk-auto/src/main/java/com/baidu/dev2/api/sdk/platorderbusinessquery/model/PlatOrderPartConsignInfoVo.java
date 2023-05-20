@@ -13,12 +13,7 @@ package com.baidu.dev2.api.sdk.platorderbusinessquery.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.AppointmentInfoModInfo;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatAddressRecordVo;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatAppointmentVo;
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatOrderDetailPartConsignVo;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatOrderDetailVo;
-import com.baidu.dev2.api.sdk.platorderbusinessquery.model.PlatOrderTagVo;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -35,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
  * PlatOrderPartConsignInfoVo
  */
 @JsonPropertyOrder({
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_PACKAGE_INFOS,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_TOTAL_AMOUNT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PAYMENT_AMOUNT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_FREIGHT_AMOUNT,
@@ -43,12 +37,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_BIZ_COUPON_DISCOUNT_AMOUNT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PLAT_PROMOTION_DISCOUNT_AMOUNT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_BIZ_PROMOTION_DISCOUNT_AMOUNT,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ADDRESS_RECORD,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_DETAIL_NEW,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PART_CONSIGN,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PRODUCT_TOTAL_AMOUNT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PLAT_RED_PACKET_DISCOUNT_AMOUNT,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_APPOINTMENT_INFO_MOD_INFO,
+  PlatOrderPartConsignInfoVo.JSON_PROPERTY_DUE_PAY_TIME,
+  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ADJUST_PRICE_AMOUNT,
+  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_PAY_TIME,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_ID,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_REFUND_ID,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_TYPE,
@@ -65,47 +60,20 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_EXPRESS_NAME,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_CONSIGN_TIME,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_UC_ID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_UC_NAME,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_CLICK_TYPE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ANTI_USER_ID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_PASS_ID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_CUID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_COMPLETE_TIME,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_EXPRESS_STATUS,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_EXPRESS_STATUS_TEXT,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_BLACKED,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_TAG_VOS,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_TYPE_TEXT,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_CLICK_TYPE_TEXT,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_BUSINESS_CODE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ORDER_DETAIL,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_PROVINCE_CODE,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_PROVINCE_NAME,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_CITY_CODE,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_CITY_NAME,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_AREA_CODE,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_AREA_NAME,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_TOWN_CODE,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_TOWN_NAME,
   PlatOrderPartConsignInfoVo.JSON_PROPERTY_ADDRESS,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_GROUP_PURCHASE_ORDER,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_BATCH_ID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_SUBMIT_TYPE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_PASS_NICK_NAME,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_PAY_GATE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_APPOINTMENT,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_APP_ID,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_PRODUCT_TYPE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_ADDITIONAL_DELIVER_TAG,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_DB_PRODUCT_TYPE,
-  PlatOrderPartConsignInfoVo.JSON_PROPERTY_TRANSACTION_MODE
+  PlatOrderPartConsignInfoVo.JSON_PROPERTY_APP_ID
 })
 @JsonTypeName("PlatOrderPartConsignInfoVo")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlatOrderPartConsignInfoVo {
-  public static final String JSON_PROPERTY_ORDER_PACKAGE_INFOS = "orderPackageInfos";
-  private List<List<PlatOrderDetailPartConsignVo>> orderPackageInfos = null;
-
   public static final String JSON_PROPERTY_ORDER_TOTAL_AMOUNT = "orderTotalAmount";
   private String orderTotalAmount;
 
@@ -127,9 +95,6 @@ public class PlatOrderPartConsignInfoVo {
   public static final String JSON_PROPERTY_BIZ_PROMOTION_DISCOUNT_AMOUNT = "bizPromotionDiscountAmount";
   private String bizPromotionDiscountAmount;
 
-  public static final String JSON_PROPERTY_ADDRESS_RECORD = "addressRecord";
-  private List<PlatAddressRecordVo> addressRecord = null;
-
   public static final String JSON_PROPERTY_ORDER_DETAIL_NEW = "orderDetailNew";
   private List<PlatOrderDetailPartConsignVo> orderDetailNew = null;
 
@@ -142,8 +107,14 @@ public class PlatOrderPartConsignInfoVo {
   public static final String JSON_PROPERTY_PLAT_RED_PACKET_DISCOUNT_AMOUNT = "platRedPacketDiscountAmount";
   private String platRedPacketDiscountAmount;
 
-  public static final String JSON_PROPERTY_APPOINTMENT_INFO_MOD_INFO = "appointmentInfoModInfo";
-  private AppointmentInfoModInfo appointmentInfoModInfo;
+  public static final String JSON_PROPERTY_DUE_PAY_TIME = "duePayTime";
+  private String duePayTime;
+
+  public static final String JSON_PROPERTY_ADJUST_PRICE_AMOUNT = "adjustPriceAmount";
+  private String adjustPriceAmount;
+
+  public static final String JSON_PROPERTY_ORDER_PAY_TIME = "orderPayTime";
+  private String orderPayTime;
 
   public static final String JSON_PROPERTY_ORDER_ID = "orderId";
   private String orderId;
@@ -193,35 +164,11 @@ public class PlatOrderPartConsignInfoVo {
   public static final String JSON_PROPERTY_UC_ID = "ucId";
   private String ucId;
 
-  public static final String JSON_PROPERTY_UC_NAME = "ucName";
-  private String ucName;
-
-  public static final String JSON_PROPERTY_CLICK_TYPE = "clickType";
-  private Integer clickType;
-
-  public static final String JSON_PROPERTY_ANTI_USER_ID = "antiUserId";
-  private Long antiUserId;
-
-  public static final String JSON_PROPERTY_PASS_ID = "passId";
-  private Long passId;
-
-  public static final String JSON_PROPERTY_CUID = "cuid";
-  private String cuid;
-
-  public static final String JSON_PROPERTY_ORDER_COMPLETE_TIME = "orderCompleteTime";
-  private String orderCompleteTime;
-
   public static final String JSON_PROPERTY_EXPRESS_STATUS = "expressStatus";
   private Integer expressStatus;
 
   public static final String JSON_PROPERTY_EXPRESS_STATUS_TEXT = "expressStatusText";
   private String expressStatusText;
-
-  public static final String JSON_PROPERTY_BLACKED = "blacked";
-  private Integer blacked;
-
-  public static final String JSON_PROPERTY_ORDER_TAG_VOS = "orderTagVos";
-  private List<PlatOrderTagVo> orderTagVos = null;
 
   public static final String JSON_PROPERTY_ORDER_TYPE_TEXT = "orderTypeText";
   private String orderTypeText;
@@ -229,32 +176,14 @@ public class PlatOrderPartConsignInfoVo {
   public static final String JSON_PROPERTY_CLICK_TYPE_TEXT = "clickTypeText";
   private String clickTypeText;
 
-  public static final String JSON_PROPERTY_BUSINESS_CODE = "businessCode";
-  private Integer businessCode;
-
-  public static final String JSON_PROPERTY_ORDER_DETAIL = "orderDetail";
-  private List<PlatOrderDetailVo> orderDetail = null;
-
-  public static final String JSON_PROPERTY_PROVINCE_CODE = "provinceCode";
-  private String provinceCode;
-
   public static final String JSON_PROPERTY_PROVINCE_NAME = "provinceName";
   private String provinceName;
-
-  public static final String JSON_PROPERTY_CITY_CODE = "cityCode";
-  private String cityCode;
 
   public static final String JSON_PROPERTY_CITY_NAME = "cityName";
   private String cityName;
 
-  public static final String JSON_PROPERTY_AREA_CODE = "areaCode";
-  private String areaCode;
-
   public static final String JSON_PROPERTY_AREA_NAME = "areaName";
   private String areaName;
-
-  public static final String JSON_PROPERTY_TOWN_CODE = "townCode";
-  private String townCode;
 
   public static final String JSON_PROPERTY_TOWN_NAME = "townName";
   private String townName;
@@ -262,76 +191,11 @@ public class PlatOrderPartConsignInfoVo {
   public static final String JSON_PROPERTY_ADDRESS = "address";
   private String address;
 
-  public static final String JSON_PROPERTY_GROUP_PURCHASE_ORDER = "groupPurchaseOrder";
-  private Boolean groupPurchaseOrder;
-
-  public static final String JSON_PROPERTY_BATCH_ID = "batchId";
-  private Long batchId;
-
-  public static final String JSON_PROPERTY_SUBMIT_TYPE = "submitType";
-  private Integer submitType;
-
-  public static final String JSON_PROPERTY_PASS_NICK_NAME = "passNickName";
-  private String passNickName;
-
-  public static final String JSON_PROPERTY_PAY_GATE = "payGate";
-  private String payGate;
-
-  public static final String JSON_PROPERTY_APPOINTMENT = "appointment";
-  private PlatAppointmentVo appointment;
-
   public static final String JSON_PROPERTY_APP_ID = "appId";
   private Integer appId;
 
-  public static final String JSON_PROPERTY_PRODUCT_TYPE = "productType";
-  private Integer productType;
-
-  public static final String JSON_PROPERTY_ADDITIONAL_DELIVER_TAG = "additionalDeliverTag";
-  private Integer additionalDeliverTag;
-
-  public static final String JSON_PROPERTY_DB_PRODUCT_TYPE = "dbProductType";
-  private Integer dbProductType;
-
-  public static final String JSON_PROPERTY_TRANSACTION_MODE = "transactionMode";
-  private Integer transactionMode;
-
   public PlatOrderPartConsignInfoVo() { 
   }
-
-  public PlatOrderPartConsignInfoVo orderPackageInfos(List<List<PlatOrderDetailPartConsignVo>> orderPackageInfos) {
-    
-    this.orderPackageInfos = orderPackageInfos;
-    return this;
-  }
-
-  public PlatOrderPartConsignInfoVo addOrderPackageInfosItem(List<PlatOrderDetailPartConsignVo> orderPackageInfosItem) {
-    if (this.orderPackageInfos == null) {
-      this.orderPackageInfos = new ArrayList<>();
-    }
-    this.orderPackageInfos.add(orderPackageInfosItem);
-    return this;
-  }
-
-   /**
-   * Get orderPackageInfos
-   * @return orderPackageInfos
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_PACKAGE_INFOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<List<PlatOrderDetailPartConsignVo>> getOrderPackageInfos() {
-    return orderPackageInfos;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_PACKAGE_INFOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderPackageInfos(List<List<PlatOrderDetailPartConsignVo>> orderPackageInfos) {
-    this.orderPackageInfos = orderPackageInfos;
-  }
-
 
   public PlatOrderPartConsignInfoVo orderTotalAmount(String orderTotalAmount) {
     
@@ -522,41 +386,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo addressRecord(List<PlatAddressRecordVo> addressRecord) {
-    
-    this.addressRecord = addressRecord;
-    return this;
-  }
-
-  public PlatOrderPartConsignInfoVo addAddressRecordItem(PlatAddressRecordVo addressRecordItem) {
-    if (this.addressRecord == null) {
-      this.addressRecord = new ArrayList<>();
-    }
-    this.addressRecord.add(addressRecordItem);
-    return this;
-  }
-
-   /**
-   * Get addressRecord
-   * @return addressRecord
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADDRESS_RECORD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<PlatAddressRecordVo> getAddressRecord() {
-    return addressRecord;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADDRESS_RECORD)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAddressRecord(List<PlatAddressRecordVo> addressRecord) {
-    this.addressRecord = addressRecord;
-  }
-
-
   public PlatOrderPartConsignInfoVo orderDetailNew(List<PlatOrderDetailPartConsignVo> orderDetailNew) {
     
     this.orderDetailNew = orderDetailNew;
@@ -673,30 +502,84 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo appointmentInfoModInfo(AppointmentInfoModInfo appointmentInfoModInfo) {
+  public PlatOrderPartConsignInfoVo duePayTime(String duePayTime) {
     
-    this.appointmentInfoModInfo = appointmentInfoModInfo;
+    this.duePayTime = duePayTime;
     return this;
   }
 
    /**
-   * Get appointmentInfoModInfo
-   * @return appointmentInfoModInfo
+   * Get duePayTime
+   * @return duePayTime
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_APPOINTMENT_INFO_MOD_INFO)
+  @JsonProperty(JSON_PROPERTY_DUE_PAY_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public AppointmentInfoModInfo getAppointmentInfoModInfo() {
-    return appointmentInfoModInfo;
+  public String getDuePayTime() {
+    return duePayTime;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPOINTMENT_INFO_MOD_INFO)
+  @JsonProperty(JSON_PROPERTY_DUE_PAY_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppointmentInfoModInfo(AppointmentInfoModInfo appointmentInfoModInfo) {
-    this.appointmentInfoModInfo = appointmentInfoModInfo;
+  public void setDuePayTime(String duePayTime) {
+    this.duePayTime = duePayTime;
+  }
+
+
+  public PlatOrderPartConsignInfoVo adjustPriceAmount(String adjustPriceAmount) {
+    
+    this.adjustPriceAmount = adjustPriceAmount;
+    return this;
+  }
+
+   /**
+   * Get adjustPriceAmount
+   * @return adjustPriceAmount
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ADJUST_PRICE_AMOUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getAdjustPriceAmount() {
+    return adjustPriceAmount;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ADJUST_PRICE_AMOUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAdjustPriceAmount(String adjustPriceAmount) {
+    this.adjustPriceAmount = adjustPriceAmount;
+  }
+
+
+  public PlatOrderPartConsignInfoVo orderPayTime(String orderPayTime) {
+    
+    this.orderPayTime = orderPayTime;
+    return this;
+  }
+
+   /**
+   * Get orderPayTime
+   * @return orderPayTime
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_ORDER_PAY_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getOrderPayTime() {
+    return orderPayTime;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ORDER_PAY_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setOrderPayTime(String orderPayTime) {
+    this.orderPayTime = orderPayTime;
   }
 
 
@@ -1132,168 +1015,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo ucName(String ucName) {
-    
-    this.ucName = ucName;
-    return this;
-  }
-
-   /**
-   * Get ucName
-   * @return ucName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UC_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getUcName() {
-    return ucName;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UC_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcName(String ucName) {
-    this.ucName = ucName;
-  }
-
-
-  public PlatOrderPartConsignInfoVo clickType(Integer clickType) {
-    
-    this.clickType = clickType;
-    return this;
-  }
-
-   /**
-   * Get clickType
-   * @return clickType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CLICK_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getClickType() {
-    return clickType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CLICK_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClickType(Integer clickType) {
-    this.clickType = clickType;
-  }
-
-
-  public PlatOrderPartConsignInfoVo antiUserId(Long antiUserId) {
-    
-    this.antiUserId = antiUserId;
-    return this;
-  }
-
-   /**
-   * Get antiUserId
-   * @return antiUserId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ANTI_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getAntiUserId() {
-    return antiUserId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ANTI_USER_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAntiUserId(Long antiUserId) {
-    this.antiUserId = antiUserId;
-  }
-
-
-  public PlatOrderPartConsignInfoVo passId(Long passId) {
-    
-    this.passId = passId;
-    return this;
-  }
-
-   /**
-   * Get passId
-   * @return passId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PASS_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getPassId() {
-    return passId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PASS_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPassId(Long passId) {
-    this.passId = passId;
-  }
-
-
-  public PlatOrderPartConsignInfoVo cuid(String cuid) {
-    
-    this.cuid = cuid;
-    return this;
-  }
-
-   /**
-   * Get cuid
-   * @return cuid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CUID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCuid() {
-    return cuid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CUID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCuid(String cuid) {
-    this.cuid = cuid;
-  }
-
-
-  public PlatOrderPartConsignInfoVo orderCompleteTime(String orderCompleteTime) {
-    
-    this.orderCompleteTime = orderCompleteTime;
-    return this;
-  }
-
-   /**
-   * Get orderCompleteTime
-   * @return orderCompleteTime
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_COMPLETE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getOrderCompleteTime() {
-    return orderCompleteTime;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_COMPLETE_TIME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderCompleteTime(String orderCompleteTime) {
-    this.orderCompleteTime = orderCompleteTime;
-  }
-
-
   public PlatOrderPartConsignInfoVo expressStatus(Integer expressStatus) {
     
     this.expressStatus = expressStatus;
@@ -1345,68 +1066,6 @@ public class PlatOrderPartConsignInfoVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExpressStatusText(String expressStatusText) {
     this.expressStatusText = expressStatusText;
-  }
-
-
-  public PlatOrderPartConsignInfoVo blacked(Integer blacked) {
-    
-    this.blacked = blacked;
-    return this;
-  }
-
-   /**
-   * Get blacked
-   * @return blacked
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BLACKED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getBlacked() {
-    return blacked;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BLACKED)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBlacked(Integer blacked) {
-    this.blacked = blacked;
-  }
-
-
-  public PlatOrderPartConsignInfoVo orderTagVos(List<PlatOrderTagVo> orderTagVos) {
-    
-    this.orderTagVos = orderTagVos;
-    return this;
-  }
-
-  public PlatOrderPartConsignInfoVo addOrderTagVosItem(PlatOrderTagVo orderTagVosItem) {
-    if (this.orderTagVos == null) {
-      this.orderTagVos = new ArrayList<>();
-    }
-    this.orderTagVos.add(orderTagVosItem);
-    return this;
-  }
-
-   /**
-   * Get orderTagVos
-   * @return orderTagVos
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_TAG_VOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<PlatOrderTagVo> getOrderTagVos() {
-    return orderTagVos;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_TAG_VOS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderTagVos(List<PlatOrderTagVo> orderTagVos) {
-    this.orderTagVos = orderTagVos;
   }
 
 
@@ -1464,95 +1123,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo businessCode(Integer businessCode) {
-    
-    this.businessCode = businessCode;
-    return this;
-  }
-
-   /**
-   * Get businessCode
-   * @return businessCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BUSINESS_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getBusinessCode() {
-    return businessCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BUSINESS_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBusinessCode(Integer businessCode) {
-    this.businessCode = businessCode;
-  }
-
-
-  public PlatOrderPartConsignInfoVo orderDetail(List<PlatOrderDetailVo> orderDetail) {
-    
-    this.orderDetail = orderDetail;
-    return this;
-  }
-
-  public PlatOrderPartConsignInfoVo addOrderDetailItem(PlatOrderDetailVo orderDetailItem) {
-    if (this.orderDetail == null) {
-      this.orderDetail = new ArrayList<>();
-    }
-    this.orderDetail.add(orderDetailItem);
-    return this;
-  }
-
-   /**
-   * Get orderDetail
-   * @return orderDetail
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ORDER_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<PlatOrderDetailVo> getOrderDetail() {
-    return orderDetail;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ORDER_DETAIL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrderDetail(List<PlatOrderDetailVo> orderDetail) {
-    this.orderDetail = orderDetail;
-  }
-
-
-  public PlatOrderPartConsignInfoVo provinceCode(String provinceCode) {
-    
-    this.provinceCode = provinceCode;
-    return this;
-  }
-
-   /**
-   * Get provinceCode
-   * @return provinceCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PROVINCE_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getProvinceCode() {
-    return provinceCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PROVINCE_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProvinceCode(String provinceCode) {
-    this.provinceCode = provinceCode;
-  }
-
-
   public PlatOrderPartConsignInfoVo provinceName(String provinceName) {
     
     this.provinceName = provinceName;
@@ -1577,33 +1147,6 @@ public class PlatOrderPartConsignInfoVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProvinceName(String provinceName) {
     this.provinceName = provinceName;
-  }
-
-
-  public PlatOrderPartConsignInfoVo cityCode(String cityCode) {
-    
-    this.cityCode = cityCode;
-    return this;
-  }
-
-   /**
-   * Get cityCode
-   * @return cityCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CITY_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getCityCode() {
-    return cityCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_CITY_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCityCode(String cityCode) {
-    this.cityCode = cityCode;
   }
 
 
@@ -1634,33 +1177,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo areaCode(String areaCode) {
-    
-    this.areaCode = areaCode;
-    return this;
-  }
-
-   /**
-   * Get areaCode
-   * @return areaCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_AREA_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getAreaCode() {
-    return areaCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_AREA_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAreaCode(String areaCode) {
-    this.areaCode = areaCode;
-  }
-
-
   public PlatOrderPartConsignInfoVo areaName(String areaName) {
     
     this.areaName = areaName;
@@ -1685,33 +1201,6 @@ public class PlatOrderPartConsignInfoVo {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAreaName(String areaName) {
     this.areaName = areaName;
-  }
-
-
-  public PlatOrderPartConsignInfoVo townCode(String townCode) {
-    
-    this.townCode = townCode;
-    return this;
-  }
-
-   /**
-   * Get townCode
-   * @return townCode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TOWN_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getTownCode() {
-    return townCode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TOWN_CODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTownCode(String townCode) {
-    this.townCode = townCode;
   }
 
 
@@ -1769,168 +1258,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo groupPurchaseOrder(Boolean groupPurchaseOrder) {
-    
-    this.groupPurchaseOrder = groupPurchaseOrder;
-    return this;
-  }
-
-   /**
-   * Get groupPurchaseOrder
-   * @return groupPurchaseOrder
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_GROUP_PURCHASE_ORDER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getGroupPurchaseOrder() {
-    return groupPurchaseOrder;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_GROUP_PURCHASE_ORDER)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGroupPurchaseOrder(Boolean groupPurchaseOrder) {
-    this.groupPurchaseOrder = groupPurchaseOrder;
-  }
-
-
-  public PlatOrderPartConsignInfoVo batchId(Long batchId) {
-    
-    this.batchId = batchId;
-    return this;
-  }
-
-   /**
-   * Get batchId
-   * @return batchId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BATCH_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getBatchId() {
-    return batchId;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_BATCH_ID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBatchId(Long batchId) {
-    this.batchId = batchId;
-  }
-
-
-  public PlatOrderPartConsignInfoVo submitType(Integer submitType) {
-    
-    this.submitType = submitType;
-    return this;
-  }
-
-   /**
-   * Get submitType
-   * @return submitType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SUBMIT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getSubmitType() {
-    return submitType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SUBMIT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSubmitType(Integer submitType) {
-    this.submitType = submitType;
-  }
-
-
-  public PlatOrderPartConsignInfoVo passNickName(String passNickName) {
-    
-    this.passNickName = passNickName;
-    return this;
-  }
-
-   /**
-   * Get passNickName
-   * @return passNickName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PASS_NICK_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPassNickName() {
-    return passNickName;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PASS_NICK_NAME)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPassNickName(String passNickName) {
-    this.passNickName = passNickName;
-  }
-
-
-  public PlatOrderPartConsignInfoVo payGate(String payGate) {
-    
-    this.payGate = payGate;
-    return this;
-  }
-
-   /**
-   * Get payGate
-   * @return payGate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PAY_GATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getPayGate() {
-    return payGate;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PAY_GATE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayGate(String payGate) {
-    this.payGate = payGate;
-  }
-
-
-  public PlatOrderPartConsignInfoVo appointment(PlatAppointmentVo appointment) {
-    
-    this.appointment = appointment;
-    return this;
-  }
-
-   /**
-   * Get appointment
-   * @return appointment
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_APPOINTMENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public PlatAppointmentVo getAppointment() {
-    return appointment;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_APPOINTMENT)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppointment(PlatAppointmentVo appointment) {
-    this.appointment = appointment;
-  }
-
-
   public PlatOrderPartConsignInfoVo appId(Integer appId) {
     
     this.appId = appId;
@@ -1958,114 +1285,6 @@ public class PlatOrderPartConsignInfoVo {
   }
 
 
-  public PlatOrderPartConsignInfoVo productType(Integer productType) {
-    
-    this.productType = productType;
-    return this;
-  }
-
-   /**
-   * Get productType
-   * @return productType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getProductType() {
-    return productType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProductType(Integer productType) {
-    this.productType = productType;
-  }
-
-
-  public PlatOrderPartConsignInfoVo additionalDeliverTag(Integer additionalDeliverTag) {
-    
-    this.additionalDeliverTag = additionalDeliverTag;
-    return this;
-  }
-
-   /**
-   * Get additionalDeliverTag
-   * @return additionalDeliverTag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_ADDITIONAL_DELIVER_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getAdditionalDeliverTag() {
-    return additionalDeliverTag;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_ADDITIONAL_DELIVER_TAG)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdditionalDeliverTag(Integer additionalDeliverTag) {
-    this.additionalDeliverTag = additionalDeliverTag;
-  }
-
-
-  public PlatOrderPartConsignInfoVo dbProductType(Integer dbProductType) {
-    
-    this.dbProductType = dbProductType;
-    return this;
-  }
-
-   /**
-   * Get dbProductType
-   * @return dbProductType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DB_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getDbProductType() {
-    return dbProductType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DB_PRODUCT_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDbProductType(Integer dbProductType) {
-    this.dbProductType = dbProductType;
-  }
-
-
-  public PlatOrderPartConsignInfoVo transactionMode(Integer transactionMode) {
-    
-    this.transactionMode = transactionMode;
-    return this;
-  }
-
-   /**
-   * Get transactionMode
-   * @return transactionMode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TRANSACTION_MODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getTransactionMode() {
-    return transactionMode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TRANSACTION_MODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTransactionMode(Integer transactionMode) {
-    this.transactionMode = transactionMode;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -2075,20 +1294,20 @@ public class PlatOrderPartConsignInfoVo {
       return false;
     }
     PlatOrderPartConsignInfoVo platOrderPartConsignInfoVo = (PlatOrderPartConsignInfoVo) o;
-    return Objects.equals(this.orderPackageInfos, platOrderPartConsignInfoVo.orderPackageInfos) &&
-        Objects.equals(this.orderTotalAmount, platOrderPartConsignInfoVo.orderTotalAmount) &&
+    return Objects.equals(this.orderTotalAmount, platOrderPartConsignInfoVo.orderTotalAmount) &&
         Objects.equals(this.paymentAmount, platOrderPartConsignInfoVo.paymentAmount) &&
         Objects.equals(this.freightAmount, platOrderPartConsignInfoVo.freightAmount) &&
         Objects.equals(this.platCouponDiscountAmount, platOrderPartConsignInfoVo.platCouponDiscountAmount) &&
         Objects.equals(this.bizCouponDiscountAmount, platOrderPartConsignInfoVo.bizCouponDiscountAmount) &&
         Objects.equals(this.platPromotionDiscountAmount, platOrderPartConsignInfoVo.platPromotionDiscountAmount) &&
         Objects.equals(this.bizPromotionDiscountAmount, platOrderPartConsignInfoVo.bizPromotionDiscountAmount) &&
-        Objects.equals(this.addressRecord, platOrderPartConsignInfoVo.addressRecord) &&
         Objects.equals(this.orderDetailNew, platOrderPartConsignInfoVo.orderDetailNew) &&
         Objects.equals(this.partConsign, platOrderPartConsignInfoVo.partConsign) &&
         Objects.equals(this.productTotalAmount, platOrderPartConsignInfoVo.productTotalAmount) &&
         Objects.equals(this.platRedPacketDiscountAmount, platOrderPartConsignInfoVo.platRedPacketDiscountAmount) &&
-        Objects.equals(this.appointmentInfoModInfo, platOrderPartConsignInfoVo.appointmentInfoModInfo) &&
+        Objects.equals(this.duePayTime, platOrderPartConsignInfoVo.duePayTime) &&
+        Objects.equals(this.adjustPriceAmount, platOrderPartConsignInfoVo.adjustPriceAmount) &&
+        Objects.equals(this.orderPayTime, platOrderPartConsignInfoVo.orderPayTime) &&
         Objects.equals(this.orderId, platOrderPartConsignInfoVo.orderId) &&
         Objects.equals(this.refundId, platOrderPartConsignInfoVo.refundId) &&
         Objects.equals(this.orderType, platOrderPartConsignInfoVo.orderType) &&
@@ -2105,52 +1324,27 @@ public class PlatOrderPartConsignInfoVo {
         Objects.equals(this.expressName, platOrderPartConsignInfoVo.expressName) &&
         Objects.equals(this.consignTime, platOrderPartConsignInfoVo.consignTime) &&
         Objects.equals(this.ucId, platOrderPartConsignInfoVo.ucId) &&
-        Objects.equals(this.ucName, platOrderPartConsignInfoVo.ucName) &&
-        Objects.equals(this.clickType, platOrderPartConsignInfoVo.clickType) &&
-        Objects.equals(this.antiUserId, platOrderPartConsignInfoVo.antiUserId) &&
-        Objects.equals(this.passId, platOrderPartConsignInfoVo.passId) &&
-        Objects.equals(this.cuid, platOrderPartConsignInfoVo.cuid) &&
-        Objects.equals(this.orderCompleteTime, platOrderPartConsignInfoVo.orderCompleteTime) &&
         Objects.equals(this.expressStatus, platOrderPartConsignInfoVo.expressStatus) &&
         Objects.equals(this.expressStatusText, platOrderPartConsignInfoVo.expressStatusText) &&
-        Objects.equals(this.blacked, platOrderPartConsignInfoVo.blacked) &&
-        Objects.equals(this.orderTagVos, platOrderPartConsignInfoVo.orderTagVos) &&
         Objects.equals(this.orderTypeText, platOrderPartConsignInfoVo.orderTypeText) &&
         Objects.equals(this.clickTypeText, platOrderPartConsignInfoVo.clickTypeText) &&
-        Objects.equals(this.businessCode, platOrderPartConsignInfoVo.businessCode) &&
-        Objects.equals(this.orderDetail, platOrderPartConsignInfoVo.orderDetail) &&
-        Objects.equals(this.provinceCode, platOrderPartConsignInfoVo.provinceCode) &&
         Objects.equals(this.provinceName, platOrderPartConsignInfoVo.provinceName) &&
-        Objects.equals(this.cityCode, platOrderPartConsignInfoVo.cityCode) &&
         Objects.equals(this.cityName, platOrderPartConsignInfoVo.cityName) &&
-        Objects.equals(this.areaCode, platOrderPartConsignInfoVo.areaCode) &&
         Objects.equals(this.areaName, platOrderPartConsignInfoVo.areaName) &&
-        Objects.equals(this.townCode, platOrderPartConsignInfoVo.townCode) &&
         Objects.equals(this.townName, platOrderPartConsignInfoVo.townName) &&
         Objects.equals(this.address, platOrderPartConsignInfoVo.address) &&
-        Objects.equals(this.groupPurchaseOrder, platOrderPartConsignInfoVo.groupPurchaseOrder) &&
-        Objects.equals(this.batchId, platOrderPartConsignInfoVo.batchId) &&
-        Objects.equals(this.submitType, platOrderPartConsignInfoVo.submitType) &&
-        Objects.equals(this.passNickName, platOrderPartConsignInfoVo.passNickName) &&
-        Objects.equals(this.payGate, platOrderPartConsignInfoVo.payGate) &&
-        Objects.equals(this.appointment, platOrderPartConsignInfoVo.appointment) &&
-        Objects.equals(this.appId, platOrderPartConsignInfoVo.appId) &&
-        Objects.equals(this.productType, platOrderPartConsignInfoVo.productType) &&
-        Objects.equals(this.additionalDeliverTag, platOrderPartConsignInfoVo.additionalDeliverTag) &&
-        Objects.equals(this.dbProductType, platOrderPartConsignInfoVo.dbProductType) &&
-        Objects.equals(this.transactionMode, platOrderPartConsignInfoVo.transactionMode);
+        Objects.equals(this.appId, platOrderPartConsignInfoVo.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderPackageInfos, orderTotalAmount, paymentAmount, freightAmount, platCouponDiscountAmount, bizCouponDiscountAmount, platPromotionDiscountAmount, bizPromotionDiscountAmount, addressRecord, orderDetailNew, partConsign, productTotalAmount, platRedPacketDiscountAmount, appointmentInfoModInfo, orderId, refundId, orderType, createTime, orderStatus, orderStatusText, receiver, receiverMobile, receiverAddress, message, remark, expressInfo, trackingNumber, expressName, consignTime, ucId, ucName, clickType, antiUserId, passId, cuid, orderCompleteTime, expressStatus, expressStatusText, blacked, orderTagVos, orderTypeText, clickTypeText, businessCode, orderDetail, provinceCode, provinceName, cityCode, cityName, areaCode, areaName, townCode, townName, address, groupPurchaseOrder, batchId, submitType, passNickName, payGate, appointment, appId, productType, additionalDeliverTag, dbProductType, transactionMode);
+    return Objects.hash(orderTotalAmount, paymentAmount, freightAmount, platCouponDiscountAmount, bizCouponDiscountAmount, platPromotionDiscountAmount, bizPromotionDiscountAmount, orderDetailNew, partConsign, productTotalAmount, platRedPacketDiscountAmount, duePayTime, adjustPriceAmount, orderPayTime, orderId, refundId, orderType, createTime, orderStatus, orderStatusText, receiver, receiverMobile, receiverAddress, message, remark, expressInfo, trackingNumber, expressName, consignTime, ucId, expressStatus, expressStatusText, orderTypeText, clickTypeText, provinceName, cityName, areaName, townName, address, appId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PlatOrderPartConsignInfoVo {\n");
-    sb.append("    orderPackageInfos: ").append(toIndentedString(orderPackageInfos)).append("\n");
     sb.append("    orderTotalAmount: ").append(toIndentedString(orderTotalAmount)).append("\n");
     sb.append("    paymentAmount: ").append(toIndentedString(paymentAmount)).append("\n");
     sb.append("    freightAmount: ").append(toIndentedString(freightAmount)).append("\n");
@@ -2158,12 +1352,13 @@ public class PlatOrderPartConsignInfoVo {
     sb.append("    bizCouponDiscountAmount: ").append(toIndentedString(bizCouponDiscountAmount)).append("\n");
     sb.append("    platPromotionDiscountAmount: ").append(toIndentedString(platPromotionDiscountAmount)).append("\n");
     sb.append("    bizPromotionDiscountAmount: ").append(toIndentedString(bizPromotionDiscountAmount)).append("\n");
-    sb.append("    addressRecord: ").append(toIndentedString(addressRecord)).append("\n");
     sb.append("    orderDetailNew: ").append(toIndentedString(orderDetailNew)).append("\n");
     sb.append("    partConsign: ").append(toIndentedString(partConsign)).append("\n");
     sb.append("    productTotalAmount: ").append(toIndentedString(productTotalAmount)).append("\n");
     sb.append("    platRedPacketDiscountAmount: ").append(toIndentedString(platRedPacketDiscountAmount)).append("\n");
-    sb.append("    appointmentInfoModInfo: ").append(toIndentedString(appointmentInfoModInfo)).append("\n");
+    sb.append("    duePayTime: ").append(toIndentedString(duePayTime)).append("\n");
+    sb.append("    adjustPriceAmount: ").append(toIndentedString(adjustPriceAmount)).append("\n");
+    sb.append("    orderPayTime: ").append(toIndentedString(orderPayTime)).append("\n");
     sb.append("    orderId: ").append(toIndentedString(orderId)).append("\n");
     sb.append("    refundId: ").append(toIndentedString(refundId)).append("\n");
     sb.append("    orderType: ").append(toIndentedString(orderType)).append("\n");
@@ -2180,40 +1375,16 @@ public class PlatOrderPartConsignInfoVo {
     sb.append("    expressName: ").append(toIndentedString(expressName)).append("\n");
     sb.append("    consignTime: ").append(toIndentedString(consignTime)).append("\n");
     sb.append("    ucId: ").append(toIndentedString(ucId)).append("\n");
-    sb.append("    ucName: ").append(toIndentedString(ucName)).append("\n");
-    sb.append("    clickType: ").append(toIndentedString(clickType)).append("\n");
-    sb.append("    antiUserId: ").append(toIndentedString(antiUserId)).append("\n");
-    sb.append("    passId: ").append(toIndentedString(passId)).append("\n");
-    sb.append("    cuid: ").append(toIndentedString(cuid)).append("\n");
-    sb.append("    orderCompleteTime: ").append(toIndentedString(orderCompleteTime)).append("\n");
     sb.append("    expressStatus: ").append(toIndentedString(expressStatus)).append("\n");
     sb.append("    expressStatusText: ").append(toIndentedString(expressStatusText)).append("\n");
-    sb.append("    blacked: ").append(toIndentedString(blacked)).append("\n");
-    sb.append("    orderTagVos: ").append(toIndentedString(orderTagVos)).append("\n");
     sb.append("    orderTypeText: ").append(toIndentedString(orderTypeText)).append("\n");
     sb.append("    clickTypeText: ").append(toIndentedString(clickTypeText)).append("\n");
-    sb.append("    businessCode: ").append(toIndentedString(businessCode)).append("\n");
-    sb.append("    orderDetail: ").append(toIndentedString(orderDetail)).append("\n");
-    sb.append("    provinceCode: ").append(toIndentedString(provinceCode)).append("\n");
     sb.append("    provinceName: ").append(toIndentedString(provinceName)).append("\n");
-    sb.append("    cityCode: ").append(toIndentedString(cityCode)).append("\n");
     sb.append("    cityName: ").append(toIndentedString(cityName)).append("\n");
-    sb.append("    areaCode: ").append(toIndentedString(areaCode)).append("\n");
     sb.append("    areaName: ").append(toIndentedString(areaName)).append("\n");
-    sb.append("    townCode: ").append(toIndentedString(townCode)).append("\n");
     sb.append("    townName: ").append(toIndentedString(townName)).append("\n");
     sb.append("    address: ").append(toIndentedString(address)).append("\n");
-    sb.append("    groupPurchaseOrder: ").append(toIndentedString(groupPurchaseOrder)).append("\n");
-    sb.append("    batchId: ").append(toIndentedString(batchId)).append("\n");
-    sb.append("    submitType: ").append(toIndentedString(submitType)).append("\n");
-    sb.append("    passNickName: ").append(toIndentedString(passNickName)).append("\n");
-    sb.append("    payGate: ").append(toIndentedString(payGate)).append("\n");
-    sb.append("    appointment: ").append(toIndentedString(appointment)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
-    sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
-    sb.append("    additionalDeliverTag: ").append(toIndentedString(additionalDeliverTag)).append("\n");
-    sb.append("    dbProductType: ").append(toIndentedString(dbProductType)).append("\n");
-    sb.append("    transactionMode: ").append(toIndentedString(transactionMode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

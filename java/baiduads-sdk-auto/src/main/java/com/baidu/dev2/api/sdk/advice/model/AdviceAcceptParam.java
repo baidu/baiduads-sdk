@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Arrays;
 import com.baidu.dev2.api.sdk.advice.model.AdgroupAutoTargetingInfo;
 import com.baidu.dev2.api.sdk.advice.model.BusinessLabelAcceptInfo;
+import com.baidu.dev2.api.sdk.advice.model.CampaignEquipmentAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.CampaignEstBudgetAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.CampaignRecBudgetAcceptInfo;
 import com.baidu.dev2.api.sdk.advice.model.CreativeRecommendAcceptInfo;
@@ -66,7 +67,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdviceAcceptParam.JSON_PROPERTY_PRODUCT_SEGMENT_INFO,
   AdviceAcceptParam.JSON_PROPERTY_ECPC_CAMPAIGN_EFFECT,
   AdviceAcceptParam.JSON_PROPERTY_OCPC_TRANS_TYPE_INFO,
-  AdviceAcceptParam.JSON_PROPERTY_CAMPAIGN_EST_BUDGET
+  AdviceAcceptParam.JSON_PROPERTY_CAMPAIGN_EST_BUDGET,
+  AdviceAcceptParam.JSON_PROPERTY_CAMPAIGN_EQUIPMENT
 })
 @JsonTypeName("AdviceAcceptParam")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -130,6 +132,9 @@ public class AdviceAcceptParam {
 
   public static final String JSON_PROPERTY_CAMPAIGN_EST_BUDGET = "campaignEstBudget";
   private CampaignEstBudgetAcceptInfo campaignEstBudget;
+
+  public static final String JSON_PROPERTY_CAMPAIGN_EQUIPMENT = "campaignEquipment";
+  private CampaignEquipmentAcceptInfo campaignEquipment;
 
   public AdviceAcceptParam() { 
   }
@@ -674,6 +679,33 @@ public class AdviceAcceptParam {
   }
 
 
+  public AdviceAcceptParam campaignEquipment(CampaignEquipmentAcceptInfo campaignEquipment) {
+    
+    this.campaignEquipment = campaignEquipment;
+    return this;
+  }
+
+   /**
+   * Get campaignEquipment
+   * @return campaignEquipment
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EQUIPMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public CampaignEquipmentAcceptInfo getCampaignEquipment() {
+    return campaignEquipment;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CAMPAIGN_EQUIPMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setCampaignEquipment(CampaignEquipmentAcceptInfo campaignEquipment) {
+    this.campaignEquipment = campaignEquipment;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -702,12 +734,13 @@ public class AdviceAcceptParam {
         Objects.equals(this.productSegmentInfo, adviceAcceptParam.productSegmentInfo) &&
         Objects.equals(this.ecpcCampaignEffect, adviceAcceptParam.ecpcCampaignEffect) &&
         Objects.equals(this.ocpcTransTypeInfo, adviceAcceptParam.ocpcTransTypeInfo) &&
-        Objects.equals(this.campaignEstBudget, adviceAcceptParam.campaignEstBudget);
+        Objects.equals(this.campaignEstBudget, adviceAcceptParam.campaignEstBudget) &&
+        Objects.equals(this.campaignEquipment, adviceAcceptParam.campaignEquipment);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(keyWord, ngtWord, industryUrl, campaignBudegt, landingPageQuality, creativeRecommend, ocpcPriceInfo, businessLabel, feedCreativeInfo, feedCampaignBudget, feedAccountBudget, landingPageCorrelation, feedCampaignAutoBidInfo, feedPluginInfo, keywordUncorrelated, fcAdgroupAutoTargeting, productSegmentInfo, ecpcCampaignEffect, ocpcTransTypeInfo, campaignEstBudget);
+    return Objects.hash(keyWord, ngtWord, industryUrl, campaignBudegt, landingPageQuality, creativeRecommend, ocpcPriceInfo, businessLabel, feedCreativeInfo, feedCampaignBudget, feedAccountBudget, landingPageCorrelation, feedCampaignAutoBidInfo, feedPluginInfo, keywordUncorrelated, fcAdgroupAutoTargeting, productSegmentInfo, ecpcCampaignEffect, ocpcTransTypeInfo, campaignEstBudget, campaignEquipment);
   }
 
   @Override
@@ -734,6 +767,7 @@ public class AdviceAcceptParam {
     sb.append("    ecpcCampaignEffect: ").append(toIndentedString(ecpcCampaignEffect)).append("\n");
     sb.append("    ocpcTransTypeInfo: ").append(toIndentedString(ocpcTransTypeInfo)).append("\n");
     sb.append("    campaignEstBudget: ").append(toIndentedString(campaignEstBudget)).append("\n");
+    sb.append("    campaignEquipment: ").append(toIndentedString(campaignEquipment)).append("\n");
     sb.append("}");
     return sb.toString();
   }

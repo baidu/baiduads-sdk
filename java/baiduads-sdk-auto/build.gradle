@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.baidu.dev2'
-version = '2023.0.0'
+version = '2023.1.0'
 
 buildscript {
     repositories {

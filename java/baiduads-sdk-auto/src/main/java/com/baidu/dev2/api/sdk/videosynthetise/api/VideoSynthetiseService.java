@@ -20,8 +20,20 @@ import com.baidu.dev2.api.sdk.invoke.Pair;
 
 import com.baidu.dev2.api.sdk.videosynthetise.model.ClipVideoRequestWrapper;
 import com.baidu.dev2.api.sdk.videosynthetise.model.ClipVideoResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.GetSmartAudioStatusRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.GetSmartAudioStatusResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.GetTaskVideosRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.GetTaskVideosResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.PushSmartVideoRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.PushSmartVideoResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.PushVideoRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.PushVideoResponseWrapper;
 import com.baidu.dev2.api.sdk.videosynthetise.model.QueryVideoClipStatusRequestWrapper;
 import com.baidu.dev2.api.sdk.videosynthetise.model.QueryVideoClipStatusResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.SmartSynthetiseRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.SmartSynthetiseResponseWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.SynthetiseStatusRequestWrapper;
+import com.baidu.dev2.api.sdk.videosynthetise.model.SynthetiseStatusResponseWrapper;
 
 
 import java.util.ArrayList;
@@ -109,6 +121,234 @@ public class VideoSynthetiseService {
   /**
    * 
    * 
+   * @param getSmartAudioStatusRequestWrapper  (required)
+   * @return GetSmartAudioStatusResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetSmartAudioStatusResponseWrapper getSmartAudioStatus(GetSmartAudioStatusRequestWrapper getSmartAudioStatusRequestWrapper) throws ApiException {
+    Object localVarPostBody = getSmartAudioStatusRequestWrapper;
+    
+    // verify the required parameter 'getSmartAudioStatusRequestWrapper' is set
+    if (getSmartAudioStatusRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getSmartAudioStatusRequestWrapper' when calling getSmartAudioStatus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/getSmartAudioStatus";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetSmartAudioStatusResponseWrapper> localVarReturnType = new TypeReference<GetSmartAudioStatusResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param getTaskVideosRequestWrapper  (required)
+   * @return GetTaskVideosResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetTaskVideosResponseWrapper getTaskVideos(GetTaskVideosRequestWrapper getTaskVideosRequestWrapper) throws ApiException {
+    Object localVarPostBody = getTaskVideosRequestWrapper;
+    
+    // verify the required parameter 'getTaskVideosRequestWrapper' is set
+    if (getTaskVideosRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getTaskVideosRequestWrapper' when calling getTaskVideos");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/getTaskVideos";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetTaskVideosResponseWrapper> localVarReturnType = new TypeReference<GetTaskVideosResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param pushSmartVideoRequestWrapper  (required)
+   * @return PushSmartVideoResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public PushSmartVideoResponseWrapper pushSmartVideo(PushSmartVideoRequestWrapper pushSmartVideoRequestWrapper) throws ApiException {
+    Object localVarPostBody = pushSmartVideoRequestWrapper;
+    
+    // verify the required parameter 'pushSmartVideoRequestWrapper' is set
+    if (pushSmartVideoRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'pushSmartVideoRequestWrapper' when calling pushSmartVideo");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/pushSmartVideo";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<PushSmartVideoResponseWrapper> localVarReturnType = new TypeReference<PushSmartVideoResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param pushVideoRequestWrapper  (required)
+   * @return PushVideoResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public PushVideoResponseWrapper pushVideo(PushVideoRequestWrapper pushVideoRequestWrapper) throws ApiException {
+    Object localVarPostBody = pushVideoRequestWrapper;
+    
+    // verify the required parameter 'pushVideoRequestWrapper' is set
+    if (pushVideoRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'pushVideoRequestWrapper' when calling pushVideo");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/pushVideo";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<PushVideoResponseWrapper> localVarReturnType = new TypeReference<PushVideoResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
    * @param queryVideoClipStatusRequestWrapper  (required)
    * @return QueryVideoClipStatusResponseWrapper
    * @throws ApiException if fails to make API call
@@ -148,6 +388,120 @@ public class VideoSynthetiseService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<QueryVideoClipStatusResponseWrapper> localVarReturnType = new TypeReference<QueryVideoClipStatusResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param smartSynthetiseRequestWrapper  (required)
+   * @return SmartSynthetiseResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public SmartSynthetiseResponseWrapper smartSynthetise(SmartSynthetiseRequestWrapper smartSynthetiseRequestWrapper) throws ApiException {
+    Object localVarPostBody = smartSynthetiseRequestWrapper;
+    
+    // verify the required parameter 'smartSynthetiseRequestWrapper' is set
+    if (smartSynthetiseRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'smartSynthetiseRequestWrapper' when calling smartSynthetise");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/smartSynthetise";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<SmartSynthetiseResponseWrapper> localVarReturnType = new TypeReference<SmartSynthetiseResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param synthetiseStatusRequestWrapper  (required)
+   * @return SynthetiseStatusResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public SynthetiseStatusResponseWrapper synthetiseStatus(SynthetiseStatusRequestWrapper synthetiseStatusRequestWrapper) throws ApiException {
+    Object localVarPostBody = synthetiseStatusRequestWrapper;
+    
+    // verify the required parameter 'synthetiseStatusRequestWrapper' is set
+    if (synthetiseStatusRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'synthetiseStatusRequestWrapper' when calling synthetiseStatus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/VideoSynthetiseService/synthetiseStatus";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<SynthetiseStatusResponseWrapper> localVarReturnType = new TypeReference<SynthetiseStatusResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

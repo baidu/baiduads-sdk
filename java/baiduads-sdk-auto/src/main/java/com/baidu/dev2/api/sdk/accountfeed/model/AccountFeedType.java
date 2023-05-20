@@ -37,7 +37,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountFeedType.JSON_PROPERTY_UA_STATUS,
   AccountFeedType.JSON_PROPERTY_VALID_FLOWS,
   AccountFeedType.JSON_PROPERTY_CID,
-  AccountFeedType.JSON_PROPERTY_BUDGET_OFFLINE_TIME
+  AccountFeedType.JSON_PROPERTY_BUDGET_OFFLINE_TIME,
+  AccountFeedType.JSON_PROPERTY_LICE_NAME
 })
 @JsonTypeName("AccountFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -68,6 +69,9 @@ public class AccountFeedType {
 
   public static final String JSON_PROPERTY_BUDGET_OFFLINE_TIME = "budgetOfflineTime";
   private List<java.util.Map> budgetOfflineTime = null;
+
+  public static final String JSON_PROPERTY_LICE_NAME = "liceName";
+  private String liceName;
 
   public AccountFeedType() { 
   }
@@ -331,6 +335,33 @@ public class AccountFeedType {
   }
 
 
+  public AccountFeedType liceName(String liceName) {
+    
+    this.liceName = liceName;
+    return this;
+  }
+
+   /**
+   * Get liceName
+   * @return liceName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_LICE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getLiceName() {
+    return liceName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_LICE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setLiceName(String liceName) {
+    this.liceName = liceName;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -348,12 +379,13 @@ public class AccountFeedType {
         Objects.equals(this.uaStatus, accountFeedType.uaStatus) &&
         Objects.equals(this.validFlows, accountFeedType.validFlows) &&
         Objects.equals(this.cid, accountFeedType.cid) &&
-        Objects.equals(this.budgetOfflineTime, accountFeedType.budgetOfflineTime);
+        Objects.equals(this.budgetOfflineTime, accountFeedType.budgetOfflineTime) &&
+        Objects.equals(this.liceName, accountFeedType.liceName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, balance, budget, balancePackage, userStat, uaStatus, validFlows, cid, budgetOfflineTime);
+    return Objects.hash(userId, balance, budget, balancePackage, userStat, uaStatus, validFlows, cid, budgetOfflineTime, liceName);
   }
 
   @Override
@@ -369,6 +401,7 @@ public class AccountFeedType {
     sb.append("    validFlows: ").append(toIndentedString(validFlows)).append("\n");
     sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
     sb.append("    budgetOfflineTime: ").append(toIndentedString(budgetOfflineTime)).append("\n");
+    sb.append("    liceName: ").append(toIndentedString(liceName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

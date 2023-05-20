@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **ecpcCampaignEffect** | [**TargetPackageAcceptCampaign**](TargetPackageAcceptCampaign.md) |  |  [optional]
 **ocpcTransTypeInfo** | [**OcpcTransTypeAcceptInfo**](OcpcTransTypeAcceptInfo.md) |  |  [optional]
 **campaignEstBudget** | [**CampaignEstBudgetAcceptInfo**](CampaignEstBudgetAcceptInfo.md) |  |  [optional]
+**campaignEquipment** | [**CampaignEquipmentAcceptInfo**](CampaignEquipmentAcceptInfo.md) |  |  [optional]
 
 
 

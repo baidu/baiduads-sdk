@@ -32,17 +32,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OcpcType.JSON_PROPERTY_OCPC_BID,
   OcpcType.JSON_PROPERTY_LP_URL,
   OcpcType.JSON_PROPERTY_TRANS_TYPE,
-  OcpcType.JSON_PROPERTY_OCPC_LEVEL,
-  OcpcType.JSON_PROPERTY_IS_SKIP_STAGE_ONE,
-  OcpcType.JSON_PROPERTY_IS_OPEN_OCPC_LAB,
-  OcpcType.JSON_PROPERTY_PAY_MODE,
   OcpcType.JSON_PROPERTY_OPTIMIZE_DEEP_TRANS,
   OcpcType.JSON_PROPERTY_DEEP_OCPC_BID,
   OcpcType.JSON_PROPERTY_DEEP_TRANS_TYPE,
+  OcpcType.JSON_PROPERTY_URL_TYPE,
   OcpcType.JSON_PROPERTY_USE_ROI,
   OcpcType.JSON_PROPERTY_ROI_RATIO,
-  OcpcType.JSON_PROPERTY_IS_MANUAL_BID_FOR_MAX_MODE,
-  OcpcType.JSON_PROPERTY_IS_MANUAL_DEEP_BID_FOR_MAX_MODE,
+  OcpcType.JSON_PROPERTY_MINI_PROGRAM_TYPE,
+  OcpcType.JSON_PROPERTY_APP_KEY,
+  OcpcType.JSON_PROPERTY_PAGE_PATH,
   OcpcType.JSON_PROPERTY_BROAD_CAST_MODE,
   OcpcType.JSON_PROPERTY_ANCHOR_ID,
   OcpcType.JSON_PROPERTY_TRANS_TYPE_ATTRIBUTE
@@ -65,18 +63,6 @@ public class OcpcType {
   public static final String JSON_PROPERTY_TRANS_TYPE = "transType";
   private Integer transType;
 
-  public static final String JSON_PROPERTY_OCPC_LEVEL = "ocpcLevel";
-  private Integer ocpcLevel;
-
-  public static final String JSON_PROPERTY_IS_SKIP_STAGE_ONE = "isSkipStageOne";
-  private Boolean isSkipStageOne;
-
-  public static final String JSON_PROPERTY_IS_OPEN_OCPC_LAB = "isOpenOcpcLab";
-  private Boolean isOpenOcpcLab;
-
-  public static final String JSON_PROPERTY_PAY_MODE = "payMode";
-  private Integer payMode;
-
   public static final String JSON_PROPERTY_OPTIMIZE_DEEP_TRANS = "optimizeDeepTrans";
   private Boolean optimizeDeepTrans;
 
@@ -86,17 +72,23 @@ public class OcpcType {
   public static final String JSON_PROPERTY_DEEP_TRANS_TYPE = "deepTransType";
   private Integer deepTransType;
 
+  public static final String JSON_PROPERTY_URL_TYPE = "urlType";
+  private Integer urlType;
+
   public static final String JSON_PROPERTY_USE_ROI = "useRoi";
   private Boolean useRoi;
 
   public static final String JSON_PROPERTY_ROI_RATIO = "roiRatio";
   private Double roiRatio;
 
-  public static final String JSON_PROPERTY_IS_MANUAL_BID_FOR_MAX_MODE = "isManualBidForMaxMode";
-  private Integer isManualBidForMaxMode;
+  public static final String JSON_PROPERTY_MINI_PROGRAM_TYPE = "miniProgramType";
+  private Integer miniProgramType;
 
-  public static final String JSON_PROPERTY_IS_MANUAL_DEEP_BID_FOR_MAX_MODE = "isManualDeepBidForMaxMode";
-  private Integer isManualDeepBidForMaxMode;
+  public static final String JSON_PROPERTY_APP_KEY = "appKey";
+  private String appKey;
+
+  public static final String JSON_PROPERTY_PAGE_PATH = "pagePath";
+  private String pagePath;
 
   public static final String JSON_PROPERTY_BROAD_CAST_MODE = "broadCastMode";
   private Integer broadCastMode;
@@ -245,114 +237,6 @@ public class OcpcType {
   }
 
 
-  public OcpcType ocpcLevel(Integer ocpcLevel) {
-    
-    this.ocpcLevel = ocpcLevel;
-    return this;
-  }
-
-   /**
-   * Get ocpcLevel
-   * @return ocpcLevel
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_OCPC_LEVEL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getOcpcLevel() {
-    return ocpcLevel;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_OCPC_LEVEL)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOcpcLevel(Integer ocpcLevel) {
-    this.ocpcLevel = ocpcLevel;
-  }
-
-
-  public OcpcType isSkipStageOne(Boolean isSkipStageOne) {
-    
-    this.isSkipStageOne = isSkipStageOne;
-    return this;
-  }
-
-   /**
-   * Get isSkipStageOne
-   * @return isSkipStageOne
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IS_SKIP_STAGE_ONE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getIsSkipStageOne() {
-    return isSkipStageOne;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_IS_SKIP_STAGE_ONE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsSkipStageOne(Boolean isSkipStageOne) {
-    this.isSkipStageOne = isSkipStageOne;
-  }
-
-
-  public OcpcType isOpenOcpcLab(Boolean isOpenOcpcLab) {
-    
-    this.isOpenOcpcLab = isOpenOcpcLab;
-    return this;
-  }
-
-   /**
-   * Get isOpenOcpcLab
-   * @return isOpenOcpcLab
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IS_OPEN_OCPC_LAB)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getIsOpenOcpcLab() {
-    return isOpenOcpcLab;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_IS_OPEN_OCPC_LAB)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsOpenOcpcLab(Boolean isOpenOcpcLab) {
-    this.isOpenOcpcLab = isOpenOcpcLab;
-  }
-
-
-  public OcpcType payMode(Integer payMode) {
-    
-    this.payMode = payMode;
-    return this;
-  }
-
-   /**
-   * Get payMode
-   * @return payMode
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PAY_MODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getPayMode() {
-    return payMode;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PAY_MODE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPayMode(Integer payMode) {
-    this.payMode = payMode;
-  }
-
-
   public OcpcType optimizeDeepTrans(Boolean optimizeDeepTrans) {
     
     this.optimizeDeepTrans = optimizeDeepTrans;
@@ -434,6 +318,33 @@ public class OcpcType {
   }
 
 
+  public OcpcType urlType(Integer urlType) {
+    
+    this.urlType = urlType;
+    return this;
+  }
+
+   /**
+   * Get urlType
+   * @return urlType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUrlType() {
+    return urlType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUrlType(Integer urlType) {
+    this.urlType = urlType;
+  }
+
+
   public OcpcType useRoi(Boolean useRoi) {
     
     this.useRoi = useRoi;
@@ -488,57 +399,84 @@ public class OcpcType {
   }
 
 
-  public OcpcType isManualBidForMaxMode(Integer isManualBidForMaxMode) {
+  public OcpcType miniProgramType(Integer miniProgramType) {
     
-    this.isManualBidForMaxMode = isManualBidForMaxMode;
+    this.miniProgramType = miniProgramType;
     return this;
   }
 
    /**
-   * Get isManualBidForMaxMode
-   * @return isManualBidForMaxMode
+   * Get miniProgramType
+   * @return miniProgramType
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IS_MANUAL_BID_FOR_MAX_MODE)
+  @JsonProperty(JSON_PROPERTY_MINI_PROGRAM_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getIsManualBidForMaxMode() {
-    return isManualBidForMaxMode;
+  public Integer getMiniProgramType() {
+    return miniProgramType;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_MANUAL_BID_FOR_MAX_MODE)
+  @JsonProperty(JSON_PROPERTY_MINI_PROGRAM_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsManualBidForMaxMode(Integer isManualBidForMaxMode) {
-    this.isManualBidForMaxMode = isManualBidForMaxMode;
+  public void setMiniProgramType(Integer miniProgramType) {
+    this.miniProgramType = miniProgramType;
   }
 
 
-  public OcpcType isManualDeepBidForMaxMode(Integer isManualDeepBidForMaxMode) {
+  public OcpcType appKey(String appKey) {
     
-    this.isManualDeepBidForMaxMode = isManualDeepBidForMaxMode;
+    this.appKey = appKey;
     return this;
   }
 
    /**
-   * Get isManualDeepBidForMaxMode
-   * @return isManualDeepBidForMaxMode
+   * Get appKey
+   * @return appKey
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_IS_MANUAL_DEEP_BID_FOR_MAX_MODE)
+  @JsonProperty(JSON_PROPERTY_APP_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Integer getIsManualDeepBidForMaxMode() {
-    return isManualDeepBidForMaxMode;
+  public String getAppKey() {
+    return appKey;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_MANUAL_DEEP_BID_FOR_MAX_MODE)
+  @JsonProperty(JSON_PROPERTY_APP_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsManualDeepBidForMaxMode(Integer isManualDeepBidForMaxMode) {
-    this.isManualDeepBidForMaxMode = isManualDeepBidForMaxMode;
+  public void setAppKey(String appKey) {
+    this.appKey = appKey;
+  }
+
+
+  public OcpcType pagePath(String pagePath) {
+    
+    this.pagePath = pagePath;
+    return this;
+  }
+
+   /**
+   * Get pagePath
+   * @return pagePath
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_PAGE_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getPagePath() {
+    return pagePath;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_PAGE_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setPagePath(String pagePath) {
+    this.pagePath = pagePath;
   }
 
 
@@ -637,17 +575,15 @@ public class OcpcType {
         Objects.equals(this.ocpcBid, ocpcType.ocpcBid) &&
         Objects.equals(this.lpUrl, ocpcType.lpUrl) &&
         Objects.equals(this.transType, ocpcType.transType) &&
-        Objects.equals(this.ocpcLevel, ocpcType.ocpcLevel) &&
-        Objects.equals(this.isSkipStageOne, ocpcType.isSkipStageOne) &&
-        Objects.equals(this.isOpenOcpcLab, ocpcType.isOpenOcpcLab) &&
-        Objects.equals(this.payMode, ocpcType.payMode) &&
         Objects.equals(this.optimizeDeepTrans, ocpcType.optimizeDeepTrans) &&
         Objects.equals(this.deepOcpcBid, ocpcType.deepOcpcBid) &&
         Objects.equals(this.deepTransType, ocpcType.deepTransType) &&
+        Objects.equals(this.urlType, ocpcType.urlType) &&
         Objects.equals(this.useRoi, ocpcType.useRoi) &&
         Objects.equals(this.roiRatio, ocpcType.roiRatio) &&
-        Objects.equals(this.isManualBidForMaxMode, ocpcType.isManualBidForMaxMode) &&
-        Objects.equals(this.isManualDeepBidForMaxMode, ocpcType.isManualDeepBidForMaxMode) &&
+        Objects.equals(this.miniProgramType, ocpcType.miniProgramType) &&
+        Objects.equals(this.appKey, ocpcType.appKey) &&
+        Objects.equals(this.pagePath, ocpcType.pagePath) &&
         Objects.equals(this.broadCastMode, ocpcType.broadCastMode) &&
         Objects.equals(this.anchorId, ocpcType.anchorId) &&
         Objects.equals(this.transTypeAttribute, ocpcType.transTypeAttribute);
@@ -655,7 +591,7 @@ public class OcpcType {
 
   @Override
   public int hashCode() {
-    return Objects.hash(appTransId, transFrom, ocpcBid, lpUrl, transType, ocpcLevel, isSkipStageOne, isOpenOcpcLab, payMode, optimizeDeepTrans, deepOcpcBid, deepTransType, useRoi, roiRatio, isManualBidForMaxMode, isManualDeepBidForMaxMode, broadCastMode, anchorId, transTypeAttribute);
+    return Objects.hash(appTransId, transFrom, ocpcBid, lpUrl, transType, optimizeDeepTrans, deepOcpcBid, deepTransType, urlType, useRoi, roiRatio, miniProgramType, appKey, pagePath, broadCastMode, anchorId, transTypeAttribute);
   }
 
   @Override
@@ -667,17 +603,15 @@ public class OcpcType {
     sb.append("    ocpcBid: ").append(toIndentedString(ocpcBid)).append("\n");
     sb.append("    lpUrl: ").append(toIndentedString(lpUrl)).append("\n");
     sb.append("    transType: ").append(toIndentedString(transType)).append("\n");
-    sb.append("    ocpcLevel: ").append(toIndentedString(ocpcLevel)).append("\n");
-    sb.append("    isSkipStageOne: ").append(toIndentedString(isSkipStageOne)).append("\n");
-    sb.append("    isOpenOcpcLab: ").append(toIndentedString(isOpenOcpcLab)).append("\n");
-    sb.append("    payMode: ").append(toIndentedString(payMode)).append("\n");
     sb.append("    optimizeDeepTrans: ").append(toIndentedString(optimizeDeepTrans)).append("\n");
     sb.append("    deepOcpcBid: ").append(toIndentedString(deepOcpcBid)).append("\n");
     sb.append("    deepTransType: ").append(toIndentedString(deepTransType)).append("\n");
+    sb.append("    urlType: ").append(toIndentedString(urlType)).append("\n");
     sb.append("    useRoi: ").append(toIndentedString(useRoi)).append("\n");
     sb.append("    roiRatio: ").append(toIndentedString(roiRatio)).append("\n");
-    sb.append("    isManualBidForMaxMode: ").append(toIndentedString(isManualBidForMaxMode)).append("\n");
-    sb.append("    isManualDeepBidForMaxMode: ").append(toIndentedString(isManualDeepBidForMaxMode)).append("\n");
+    sb.append("    miniProgramType: ").append(toIndentedString(miniProgramType)).append("\n");
+    sb.append("    appKey: ").append(toIndentedString(appKey)).append("\n");
+    sb.append("    pagePath: ").append(toIndentedString(pagePath)).append("\n");
     sb.append("    broadCastMode: ").append(toIndentedString(broadCastMode)).append("\n");
     sb.append("    anchorId: ").append(toIndentedString(anchorId)).append("\n");
     sb.append("    transTypeAttribute: ").append(toIndentedString(transTypeAttribute)).append("\n");

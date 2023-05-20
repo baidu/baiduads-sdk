@@ -36,7 +36,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatOrderDeliverRequest.JSON_PROPERTY_MEMO,
   PlatOrderDeliverRequest.JSON_PROPERTY_ORDER_PACKAGE_INFOS,
   PlatOrderDeliverRequest.JSON_PROPERTY_ADDITIONAL_DELIVER_TAG,
-  PlatOrderDeliverRequest.JSON_PROPERTY_UCID,
   PlatOrderDeliverRequest.JSON_PROPERTY_SHOP_ID,
   PlatOrderDeliverRequest.JSON_PROPERTY_APP_ID
 })
@@ -60,9 +59,6 @@ public class PlatOrderDeliverRequest {
 
   public static final String JSON_PROPERTY_ADDITIONAL_DELIVER_TAG = "additionalDeliverTag";
   private Integer additionalDeliverTag;
-
-  public static final String JSON_PROPERTY_UCID = "ucid";
-  private Long ucid;
 
   public static final String JSON_PROPERTY_SHOP_ID = "shopId";
   private Long shopId;
@@ -243,33 +239,6 @@ public class PlatOrderDeliverRequest {
   }
 
 
-  public PlatOrderDeliverRequest ucid(Long ucid) {
-    
-    this.ucid = ucid;
-    return this;
-  }
-
-   /**
-   * Get ucid
-   * @return ucid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Long getUcid() {
-    return ucid;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_UCID)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUcid(Long ucid) {
-    this.ucid = ucid;
-  }
-
-
   public PlatOrderDeliverRequest shopId(Long shopId) {
     
     this.shopId = shopId;
@@ -339,14 +308,13 @@ public class PlatOrderDeliverRequest {
         Objects.equals(this.memo, platOrderDeliverRequest.memo) &&
         Objects.equals(this.orderPackageInfos, platOrderDeliverRequest.orderPackageInfos) &&
         Objects.equals(this.additionalDeliverTag, platOrderDeliverRequest.additionalDeliverTag) &&
-        Objects.equals(this.ucid, platOrderDeliverRequest.ucid) &&
         Objects.equals(this.shopId, platOrderDeliverRequest.shopId) &&
         Objects.equals(this.appId, platOrderDeliverRequest.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(orderId, trackingNumber, expressName, memo, orderPackageInfos, additionalDeliverTag, ucid, shopId, appId);
+    return Objects.hash(orderId, trackingNumber, expressName, memo, orderPackageInfos, additionalDeliverTag, shopId, appId);
   }
 
   @Override
@@ -359,7 +327,6 @@ public class PlatOrderDeliverRequest {
     sb.append("    memo: ").append(toIndentedString(memo)).append("\n");
     sb.append("    orderPackageInfos: ").append(toIndentedString(orderPackageInfos)).append("\n");
     sb.append("    additionalDeliverTag: ").append(toIndentedString(additionalDeliverTag)).append("\n");
-    sb.append("    ucid: ").append(toIndentedString(ucid)).append("\n");
     sb.append("    shopId: ").append(toIndentedString(shopId)).append("\n");
     sb.append("    appId: ").append(toIndentedString(appId)).append("\n");
     sb.append("}");

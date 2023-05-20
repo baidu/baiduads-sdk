@@ -87,8 +87,6 @@ class AdviceDetailQueryRequest(ModelNormal):
         lazy_import()
         return {
             'condition': (DetailQueryCondition,),  # noqa: E501
-            'req_newest': (bool,),  # noqa: E501
-            'source': (int,),  # noqa: E501
             'advice_key': (str,),  # noqa: E501
         }
 
@@ -99,8 +97,6 @@ class AdviceDetailQueryRequest(ModelNormal):
 
     attribute_map = {
         'condition': 'condition',  # noqa: E501
-        'req_newest': 'reqNewest',  # noqa: E501
-        'source': 'source',  # noqa: E501
         'advice_key': 'adviceKey',  # noqa: E501
     }
 
@@ -146,8 +142,6 @@ class AdviceDetailQueryRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             condition (DetailQueryCondition): [optional]  # noqa: E501
-            req_newest (bool): [optional]  # noqa: E501
-            source (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 
@@ -231,8 +225,6 @@ class AdviceDetailQueryRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             condition (DetailQueryCondition): [optional]  # noqa: E501
-            req_newest (bool): [optional]  # noqa: E501
-            source (int): [optional]  # noqa: E501
             advice_key (str): [optional]  # noqa: E501
         """
 

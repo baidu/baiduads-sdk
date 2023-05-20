@@ -38,7 +38,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdgroupFeedType.JSON_PROPERTY_STATUS,
   AdgroupFeedType.JSON_PROPERTY_AUDIENCE,
   AdgroupFeedType.JSON_PROPERTY_BID,
-  AdgroupFeedType.JSON_PROPERTY_PRODUCTTYPES,
   AdgroupFeedType.JSON_PROPERTY_FTYPES,
   AdgroupFeedType.JSON_PROPERTY_BIDTYPE,
   AdgroupFeedType.JSON_PROPERTY_OCPC,
@@ -46,7 +45,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdgroupFeedType.JSON_PROPERTY_DELIVERY_TYPE,
   AdgroupFeedType.JSON_PROPERTY_UNEFFICIENT_ADGROUP,
   AdgroupFeedType.JSON_PROPERTY_PRODUCT_SET_ID,
-  AdgroupFeedType.JSON_PROPERTY_UNIT_PRODUCTS
+  AdgroupFeedType.JSON_PROPERTY_UNIT_PRODUCTS,
+  AdgroupFeedType.JSON_PROPERTY_FTYPE_SELECTION,
+  AdgroupFeedType.JSON_PROPERTY_BID_SOURCE,
+  AdgroupFeedType.JSON_PROPERTY_URL_TYPE,
+  AdgroupFeedType.JSON_PROPERTY_MINI_PROGRAM,
+  AdgroupFeedType.JSON_PROPERTY_BROAD_CAST_INFO,
+  AdgroupFeedType.JSON_PROPERTY_URL
 })
 @JsonTypeName("AdgroupFeedType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -72,9 +77,6 @@ public class AdgroupFeedType {
   public static final String JSON_PROPERTY_BID = "bid";
   private Double bid;
 
-  public static final String JSON_PROPERTY_PRODUCTTYPES = "producttypes";
-  private List<Integer> producttypes = null;
-
   public static final String JSON_PROPERTY_FTYPES = "ftypes";
   private List<Integer> ftypes = null;
 
@@ -98,6 +100,24 @@ public class AdgroupFeedType {
 
   public static final String JSON_PROPERTY_UNIT_PRODUCTS = "unitProducts";
   private UnitProducts unitProducts;
+
+  public static final String JSON_PROPERTY_FTYPE_SELECTION = "ftypeSelection";
+  private Integer ftypeSelection;
+
+  public static final String JSON_PROPERTY_BID_SOURCE = "bidSource";
+  private Integer bidSource;
+
+  public static final String JSON_PROPERTY_URL_TYPE = "urlType";
+  private Integer urlType;
+
+  public static final String JSON_PROPERTY_MINI_PROGRAM = "miniProgram";
+  private String miniProgram;
+
+  public static final String JSON_PROPERTY_BROAD_CAST_INFO = "broadCastInfo";
+  private String broadCastInfo;
+
+  public static final String JSON_PROPERTY_URL = "url";
+  private String url;
 
   public AdgroupFeedType() { 
   }
@@ -288,41 +308,6 @@ public class AdgroupFeedType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBid(Double bid) {
     this.bid = bid;
-  }
-
-
-  public AdgroupFeedType producttypes(List<Integer> producttypes) {
-    
-    this.producttypes = producttypes;
-    return this;
-  }
-
-  public AdgroupFeedType addProducttypesItem(Integer producttypesItem) {
-    if (this.producttypes == null) {
-      this.producttypes = new ArrayList<>();
-    }
-    this.producttypes.add(producttypesItem);
-    return this;
-  }
-
-   /**
-   * Get producttypes
-   * @return producttypes
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PRODUCTTYPES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public List<Integer> getProducttypes() {
-    return producttypes;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PRODUCTTYPES)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProducttypes(List<Integer> producttypes) {
-    this.producttypes = producttypes;
   }
 
 
@@ -558,6 +543,168 @@ public class AdgroupFeedType {
   }
 
 
+  public AdgroupFeedType ftypeSelection(Integer ftypeSelection) {
+    
+    this.ftypeSelection = ftypeSelection;
+    return this;
+  }
+
+   /**
+   * Get ftypeSelection
+   * @return ftypeSelection
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_FTYPE_SELECTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getFtypeSelection() {
+    return ftypeSelection;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FTYPE_SELECTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFtypeSelection(Integer ftypeSelection) {
+    this.ftypeSelection = ftypeSelection;
+  }
+
+
+  public AdgroupFeedType bidSource(Integer bidSource) {
+    
+    this.bidSource = bidSource;
+    return this;
+  }
+
+   /**
+   * Get bidSource
+   * @return bidSource
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BID_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getBidSource() {
+    return bidSource;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BID_SOURCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBidSource(Integer bidSource) {
+    this.bidSource = bidSource;
+  }
+
+
+  public AdgroupFeedType urlType(Integer urlType) {
+    
+    this.urlType = urlType;
+    return this;
+  }
+
+   /**
+   * Get urlType
+   * @return urlType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getUrlType() {
+    return urlType;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUrlType(Integer urlType) {
+    this.urlType = urlType;
+  }
+
+
+  public AdgroupFeedType miniProgram(String miniProgram) {
+    
+    this.miniProgram = miniProgram;
+    return this;
+  }
+
+   /**
+   * Get miniProgram
+   * @return miniProgram
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_MINI_PROGRAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getMiniProgram() {
+    return miniProgram;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_MINI_PROGRAM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setMiniProgram(String miniProgram) {
+    this.miniProgram = miniProgram;
+  }
+
+
+  public AdgroupFeedType broadCastInfo(String broadCastInfo) {
+    
+    this.broadCastInfo = broadCastInfo;
+    return this;
+  }
+
+   /**
+   * Get broadCastInfo
+   * @return broadCastInfo
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_BROAD_CAST_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getBroadCastInfo() {
+    return broadCastInfo;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_BROAD_CAST_INFO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setBroadCastInfo(String broadCastInfo) {
+    this.broadCastInfo = broadCastInfo;
+  }
+
+
+  public AdgroupFeedType url(String url) {
+    
+    this.url = url;
+    return this;
+  }
+
+   /**
+   * Get url
+   * @return url
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getUrl() {
+    return url;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -574,7 +721,6 @@ public class AdgroupFeedType {
         Objects.equals(this.status, adgroupFeedType.status) &&
         Objects.equals(this.audience, adgroupFeedType.audience) &&
         Objects.equals(this.bid, adgroupFeedType.bid) &&
-        Objects.equals(this.producttypes, adgroupFeedType.producttypes) &&
         Objects.equals(this.ftypes, adgroupFeedType.ftypes) &&
         Objects.equals(this.bidtype, adgroupFeedType.bidtype) &&
         Objects.equals(this.ocpc, adgroupFeedType.ocpc) &&
@@ -582,12 +728,18 @@ public class AdgroupFeedType {
         Objects.equals(this.deliveryType, adgroupFeedType.deliveryType) &&
         Objects.equals(this.unefficientAdgroup, adgroupFeedType.unefficientAdgroup) &&
         Objects.equals(this.productSetId, adgroupFeedType.productSetId) &&
-        Objects.equals(this.unitProducts, adgroupFeedType.unitProducts);
+        Objects.equals(this.unitProducts, adgroupFeedType.unitProducts) &&
+        Objects.equals(this.ftypeSelection, adgroupFeedType.ftypeSelection) &&
+        Objects.equals(this.bidSource, adgroupFeedType.bidSource) &&
+        Objects.equals(this.urlType, adgroupFeedType.urlType) &&
+        Objects.equals(this.miniProgram, adgroupFeedType.miniProgram) &&
+        Objects.equals(this.broadCastInfo, adgroupFeedType.broadCastInfo) &&
+        Objects.equals(this.url, adgroupFeedType.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, producttypes, ftypes, bidtype, ocpc, atpFeedId, deliveryType, unefficientAdgroup, productSetId, unitProducts);
+    return Objects.hash(adgroupFeedId, campaignFeedId, adgroupFeedName, pause, status, audience, bid, ftypes, bidtype, ocpc, atpFeedId, deliveryType, unefficientAdgroup, productSetId, unitProducts, ftypeSelection, bidSource, urlType, miniProgram, broadCastInfo, url);
   }
 
   @Override
@@ -601,7 +753,6 @@ public class AdgroupFeedType {
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    audience: ").append(toIndentedString(audience)).append("\n");
     sb.append("    bid: ").append(toIndentedString(bid)).append("\n");
-    sb.append("    producttypes: ").append(toIndentedString(producttypes)).append("\n");
     sb.append("    ftypes: ").append(toIndentedString(ftypes)).append("\n");
     sb.append("    bidtype: ").append(toIndentedString(bidtype)).append("\n");
     sb.append("    ocpc: ").append(toIndentedString(ocpc)).append("\n");
@@ -610,6 +761,12 @@ public class AdgroupFeedType {
     sb.append("    unefficientAdgroup: ").append(toIndentedString(unefficientAdgroup)).append("\n");
     sb.append("    productSetId: ").append(toIndentedString(productSetId)).append("\n");
     sb.append("    unitProducts: ").append(toIndentedString(unitProducts)).append("\n");
+    sb.append("    ftypeSelection: ").append(toIndentedString(ftypeSelection)).append("\n");
+    sb.append("    bidSource: ").append(toIndentedString(bidSource)).append("\n");
+    sb.append("    urlType: ").append(toIndentedString(urlType)).append("\n");
+    sb.append("    miniProgram: ").append(toIndentedString(miniProgram)).append("\n");
+    sb.append("    broadCastInfo: ").append(toIndentedString(broadCastInfo)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }

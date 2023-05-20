@@ -31,9 +31,11 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.campaignfeed.model.app_info_shadow_type import AppInfoShadowType
     from baiduads.campaignfeed.model.app_info_type import AppInfoType
+    from baiduads.campaignfeed.model.ocpc_model import OcpcModel
     from baiduads.campaignfeed.model.schedule_type import ScheduleType
     globals()['AppInfoShadowType'] = AppInfoShadowType
     globals()['AppInfoType'] = AppInfoType
+    globals()['OcpcModel'] = OcpcModel
     globals()['ScheduleType'] = ScheduleType
 
 
@@ -98,7 +100,6 @@ class CampaignFeedType(ModelNormal):
             'starttime': (str,),  # noqa: E501
             'endtime': (str,),  # noqa: E501
             'schedule': ([ScheduleType],),  # noqa: E501
-            'bgtctltype': (int,),  # noqa: E501
             'pause': (bool,),  # noqa: E501
             'status': (int,),  # noqa: E501
             'bstype': (int,),  # noqa: E501
@@ -107,11 +108,13 @@ class CampaignFeedType(ModelNormal):
             'eshop_type': (str,),  # noqa: E501
             'shadow': (AppInfoShadowType,),  # noqa: E501
             'rta_status': (int,),  # noqa: E501
-            'inherit_ascription_type': (int,),  # noqa: E501
-            'inherit_userids': ([int],),  # noqa: E501
-            'mandatory_operation': (int,),  # noqa: E501
-            'ad_source': (int,),  # noqa: E501
-            'nid': (str,),  # noqa: E501
+            'ftypes': ([int],),  # noqa: E501
+            'bidtype': (int,),  # noqa: E501
+            'bid': (float,),  # noqa: E501
+            'ocpc': (OcpcModel,),  # noqa: E501
+            'unefficient_campaign': (int,),  # noqa: E501
+            'bmc_user_id': (int,),  # noqa: E501
+            'catalog_id': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -128,7 +131,6 @@ class CampaignFeedType(ModelNormal):
         'starttime': 'starttime',  # noqa: E501
         'endtime': 'endtime',  # noqa: E501
         'schedule': 'schedule',  # noqa: E501
-        'bgtctltype': 'bgtctltype',  # noqa: E501
         'pause': 'pause',  # noqa: E501
         'status': 'status',  # noqa: E501
         'bstype': 'bstype',  # noqa: E501
@@ -137,11 +139,13 @@ class CampaignFeedType(ModelNormal):
         'eshop_type': 'eshopType',  # noqa: E501
         'shadow': 'shadow',  # noqa: E501
         'rta_status': 'rtaStatus',  # noqa: E501
-        'inherit_ascription_type': 'inheritAscriptionType',  # noqa: E501
-        'inherit_userids': 'inheritUserids',  # noqa: E501
-        'mandatory_operation': 'mandatoryOperation',  # noqa: E501
-        'ad_source': 'adSource',  # noqa: E501
-        'nid': 'nid',  # noqa: E501
+        'ftypes': 'ftypes',  # noqa: E501
+        'bidtype': 'bidtype',  # noqa: E501
+        'bid': 'bid',  # noqa: E501
+        'ocpc': 'ocpc',  # noqa: E501
+        'unefficient_campaign': 'unefficientCampaign',  # noqa: E501
+        'bmc_user_id': 'bmcUserId',  # noqa: E501
+        'catalog_id': 'catalogId',  # noqa: E501
     }
 
     read_only_vars = {
@@ -193,7 +197,6 @@ class CampaignFeedType(ModelNormal):
             starttime (str): [optional]  # noqa: E501
             endtime (str): [optional]  # noqa: E501
             schedule ([ScheduleType]): [optional]  # noqa: E501
-            bgtctltype (int): [optional]  # noqa: E501
             pause (bool): [optional]  # noqa: E501
             status (int): [optional]  # noqa: E501
             bstype (int): [optional]  # noqa: E501
@@ -202,11 +205,13 @@ class CampaignFeedType(ModelNormal):
             eshop_type (str): [optional]  # noqa: E501
             shadow (AppInfoShadowType): [optional]  # noqa: E501
             rta_status (int): [optional]  # noqa: E501
-            inherit_ascription_type (int): [optional]  # noqa: E501
-            inherit_userids ([int]): [optional]  # noqa: E501
-            mandatory_operation (int): [optional]  # noqa: E501
-            ad_source (int): [optional]  # noqa: E501
-            nid (str): [optional]  # noqa: E501
+            ftypes ([int]): [optional]  # noqa: E501
+            bidtype (int): [optional]  # noqa: E501
+            bid (float): [optional]  # noqa: E501
+            ocpc (OcpcModel): [optional]  # noqa: E501
+            unefficient_campaign (int): [optional]  # noqa: E501
+            bmc_user_id (int): [optional]  # noqa: E501
+            catalog_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -296,7 +301,6 @@ class CampaignFeedType(ModelNormal):
             starttime (str): [optional]  # noqa: E501
             endtime (str): [optional]  # noqa: E501
             schedule ([ScheduleType]): [optional]  # noqa: E501
-            bgtctltype (int): [optional]  # noqa: E501
             pause (bool): [optional]  # noqa: E501
             status (int): [optional]  # noqa: E501
             bstype (int): [optional]  # noqa: E501
@@ -305,11 +309,13 @@ class CampaignFeedType(ModelNormal):
             eshop_type (str): [optional]  # noqa: E501
             shadow (AppInfoShadowType): [optional]  # noqa: E501
             rta_status (int): [optional]  # noqa: E501
-            inherit_ascription_type (int): [optional]  # noqa: E501
-            inherit_userids ([int]): [optional]  # noqa: E501
-            mandatory_operation (int): [optional]  # noqa: E501
-            ad_source (int): [optional]  # noqa: E501
-            nid (str): [optional]  # noqa: E501
+            ftypes ([int]): [optional]  # noqa: E501
+            bidtype (int): [optional]  # noqa: E501
+            bid (float): [optional]  # noqa: E501
+            ocpc (OcpcModel): [optional]  # noqa: E501
+            unefficient_campaign (int): [optional]  # noqa: E501
+            bmc_user_id (int): [optional]  # noqa: E501
+            catalog_id (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

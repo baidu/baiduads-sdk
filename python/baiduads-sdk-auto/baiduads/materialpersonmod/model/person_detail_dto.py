@@ -29,7 +29,9 @@ from baiduads.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from baiduads.materialpersonmod.model.content_quality_detail import ContentQualityDetail
     from baiduads.materialpersonmod.model.person_ext_dto import PersonExtDto
+    globals()['ContentQualityDetail'] = ContentQualityDetail
     globals()['PersonExtDto'] = PersonExtDto
 
 
@@ -111,6 +113,9 @@ class PersonDetailDto(ModelNormal):
             'id_number': (str,),  # noqa: E501
             'location': (str,),  # noqa: E501
             'reaudit_status': (int,),  # noqa: E501
+            'content_quality_status': (int,),  # noqa: E501
+            'content_quality_detail': (ContentQualityDetail,),  # noqa: E501
+            'human_audit': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -144,6 +149,9 @@ class PersonDetailDto(ModelNormal):
         'id_number': 'idNumber',  # noqa: E501
         'location': 'location',  # noqa: E501
         'reaudit_status': 'reauditStatus',  # noqa: E501
+        'content_quality_status': 'contentQualityStatus',  # noqa: E501
+        'content_quality_detail': 'contentQualityDetail',  # noqa: E501
+        'human_audit': 'humanAudit',  # noqa: E501
     }
 
     read_only_vars = {
@@ -212,6 +220,9 @@ class PersonDetailDto(ModelNormal):
             id_number (str): [optional]  # noqa: E501
             location (str): [optional]  # noqa: E501
             reaudit_status (int): [optional]  # noqa: E501
+            content_quality_status (int): [optional]  # noqa: E501
+            content_quality_detail (ContentQualityDetail): [optional]  # noqa: E501
+            human_audit (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -318,6 +329,9 @@ class PersonDetailDto(ModelNormal):
             id_number (str): [optional]  # noqa: E501
             location (str): [optional]  # noqa: E501
             reaudit_status (int): [optional]  # noqa: E501
+            content_quality_status (int): [optional]  # noqa: E501
+            content_quality_detail (ContentQualityDetail): [optional]  # noqa: E501
+            human_audit (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

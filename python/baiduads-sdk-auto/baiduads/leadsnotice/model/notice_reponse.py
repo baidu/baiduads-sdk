@@ -119,6 +119,9 @@ class NoticeReponse(ModelNormal):
             'site_name': (str,),  # noqa: E501
             'site_url': (str,),  # noqa: E501
             'page_name': (str,),  # noqa: E501
+            'return_call_url': (str,),  # noqa: E501
+            'refund_supportive': (str,),  # noqa: E501
+            'refund_view_url': (str,),  # noqa: E501
         }
 
     @cached_property
@@ -166,6 +169,9 @@ class NoticeReponse(ModelNormal):
         'site_name': 'siteName',  # noqa: E501
         'site_url': 'siteUrl',  # noqa: E501
         'page_name': 'pageName',  # noqa: E501
+        'return_call_url': 'returnCallUrl',  # noqa: E501
+        'refund_supportive': 'refundSupportive',  # noqa: E501
+        'refund_view_url': 'refundViewUrl',  # noqa: E501
     }
 
     read_only_vars = {
@@ -248,6 +254,9 @@ class NoticeReponse(ModelNormal):
             site_name (str): [optional]  # noqa: E501
             site_url (str): [optional]  # noqa: E501
             page_name (str): [optional]  # noqa: E501
+            return_call_url (str): [optional]  # noqa: E501
+            refund_supportive (str): [optional]  # noqa: E501
+            refund_view_url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -368,6 +377,9 @@ class NoticeReponse(ModelNormal):
             site_name (str): [optional]  # noqa: E501
             site_url (str): [optional]  # noqa: E501
             page_name (str): [optional]  # noqa: E501
+            return_call_url (str): [optional]  # noqa: E501
+            refund_supportive (str): [optional]  # noqa: E501
+            refund_view_url (str): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

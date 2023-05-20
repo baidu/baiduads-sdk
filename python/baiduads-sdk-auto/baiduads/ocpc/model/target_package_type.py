@@ -31,9 +31,11 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.ocpc.model.target_package_bind_info import TargetPackageBindInfo
     from baiduads.ocpc.model.target_package_dataflow_info import TargetPackageDataflowInfo
+    from baiduads.ocpc.model.trans_asset_info import TransAssetInfo
     from baiduads.ocpc.model.unbind_shared_budget_info import UnbindSharedBudgetInfo
     globals()['TargetPackageBindInfo'] = TargetPackageBindInfo
     globals()['TargetPackageDataflowInfo'] = TargetPackageDataflowInfo
+    globals()['TransAssetInfo'] = TransAssetInfo
     globals()['UnbindSharedBudgetInfo'] = UnbindSharedBudgetInfo
 
 
@@ -117,6 +119,12 @@ class TargetPackageType(ModelNormal):
             'unbind_shared_budget_info': ([UnbindSharedBudgetInfo],),  # noqa: E501
             'shared_budget_id': (int,),  # noqa: E501
             'use_shared_budget': (int,),  # noqa: E501
+            'trans_id': (int,),  # noqa: E501
+            'target_roi_ratio': (float,),  # noqa: E501
+            'trans_asset': (int,),  # noqa: E501
+            'asset_type': ([int],),  # noqa: E501
+            'trans_asset_id': (int,),  # noqa: E501
+            'trans_asset_info': (TransAssetInfo,),  # noqa: E501
         }
 
     @cached_property
@@ -152,6 +160,12 @@ class TargetPackageType(ModelNormal):
         'unbind_shared_budget_info': 'unbindSharedBudgetInfo',  # noqa: E501
         'shared_budget_id': 'sharedBudgetId',  # noqa: E501
         'use_shared_budget': 'useSharedBudget',  # noqa: E501
+        'trans_id': 'transId',  # noqa: E501
+        'target_roi_ratio': 'targetRoiRatio',  # noqa: E501
+        'trans_asset': 'transAsset',  # noqa: E501
+        'asset_type': 'assetType',  # noqa: E501
+        'trans_asset_id': 'transAssetId',  # noqa: E501
+        'trans_asset_info': 'transAssetInfo',  # noqa: E501
     }
 
     read_only_vars = {
@@ -222,6 +236,12 @@ class TargetPackageType(ModelNormal):
             unbind_shared_budget_info ([UnbindSharedBudgetInfo]): [optional]  # noqa: E501
             shared_budget_id (int): [optional]  # noqa: E501
             use_shared_budget (int): [optional]  # noqa: E501
+            trans_id (int): [optional]  # noqa: E501
+            target_roi_ratio (float): [optional]  # noqa: E501
+            trans_asset (int): [optional]  # noqa: E501
+            asset_type ([int]): [optional]  # noqa: E501
+            trans_asset_id (int): [optional]  # noqa: E501
+            trans_asset_info (TransAssetInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -330,6 +350,12 @@ class TargetPackageType(ModelNormal):
             unbind_shared_budget_info ([UnbindSharedBudgetInfo]): [optional]  # noqa: E501
             shared_budget_id (int): [optional]  # noqa: E501
             use_shared_budget (int): [optional]  # noqa: E501
+            trans_id (int): [optional]  # noqa: E501
+            target_roi_ratio (float): [optional]  # noqa: E501
+            trans_asset (int): [optional]  # noqa: E501
+            asset_type ([int]): [optional]  # noqa: E501
+            trans_asset_id (int): [optional]  # noqa: E501
+            trans_asset_info (TransAssetInfo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

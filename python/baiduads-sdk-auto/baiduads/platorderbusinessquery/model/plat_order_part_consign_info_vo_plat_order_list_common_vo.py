@@ -87,7 +87,6 @@ class PlatOrderPartConsignInfoVoPlatOrderListCommonVo(ModelNormal):
         lazy_import()
         return {
             'total': (int,),  # noqa: E501
-            'show_open_api_btn': (bool,),  # noqa: E501
             'list': ([PlatOrderPartConsignInfoVo],),  # noqa: E501
         }
 
@@ -98,7 +97,6 @@ class PlatOrderPartConsignInfoVoPlatOrderListCommonVo(ModelNormal):
 
     attribute_map = {
         'total': 'total',  # noqa: E501
-        'show_open_api_btn': 'showOpenApiBtn',  # noqa: E501
         'list': 'list',  # noqa: E501
     }
 
@@ -144,7 +142,6 @@ class PlatOrderPartConsignInfoVoPlatOrderListCommonVo(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             total (int): [optional]  # noqa: E501
-            show_open_api_btn (bool): [optional]  # noqa: E501
             list ([PlatOrderPartConsignInfoVo]): [optional]  # noqa: E501
         """
 
@@ -228,7 +225,6 @@ class PlatOrderPartConsignInfoVoPlatOrderListCommonVo(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             total (int): [optional]  # noqa: E501
-            show_open_api_btn (bool): [optional]  # noqa: E501
             list ([PlatOrderPartConsignInfoVo]): [optional]  # noqa: E501
         """
 

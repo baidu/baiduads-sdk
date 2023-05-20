@@ -33,19 +33,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VideoInfoType.JSON_PROPERTY_VIDEO_URL,
   VideoInfoType.JSON_PROPERTY_ERRORS,
   VideoInfoType.JSON_PROPERTY_VIDEO_NAME,
-  VideoInfoType.JSON_PROPERTY_SOURCE,
-  VideoInfoType.JSON_PROPERTY_PROGRESS,
   VideoInfoType.JSON_PROPERTY_CREATE_TIME,
-  VideoInfoType.JSON_PROPERTY_TAGS,
   VideoInfoType.JSON_PROPERTY_ID,
   VideoInfoType.JSON_PROPERTY_THUMBNAIL,
   VideoInfoType.JSON_PROPERTY_DURATION,
   VideoInfoType.JSON_PROPERTY_WIDTH,
   VideoInfoType.JSON_PROPERTY_HEIGHT,
-  VideoInfoType.JSON_PROPERTY_RENDER_TYPE,
   VideoInfoType.JSON_PROPERTY_MD5,
-  VideoInfoType.JSON_PROPERTY_BATCH_TASK_ID,
-  VideoInfoType.JSON_PROPERTY_EXT
+  VideoInfoType.JSON_PROPERTY_TEXTS,
+  VideoInfoType.JSON_PROPERTY_MATERIAL
 })
 @JsonTypeName("VideoInfoType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -68,17 +64,8 @@ public class VideoInfoType {
   public static final String JSON_PROPERTY_VIDEO_NAME = "videoName";
   private String videoName;
 
-  public static final String JSON_PROPERTY_SOURCE = "source";
-  private Integer source;
-
-  public static final String JSON_PROPERTY_PROGRESS = "progress";
-  private Integer progress;
-
   public static final String JSON_PROPERTY_CREATE_TIME = "createTime";
   private String createTime;
-
-  public static final String JSON_PROPERTY_TAGS = "tags";
-  private String tags;
 
   public static final String JSON_PROPERTY_ID = "id";
   private Long id;
@@ -95,17 +82,14 @@ public class VideoInfoType {
   public static final String JSON_PROPERTY_HEIGHT = "height";
   private Integer height;
 
-  public static final String JSON_PROPERTY_RENDER_TYPE = "renderType";
-  private Integer renderType;
-
   public static final String JSON_PROPERTY_MD5 = "md5";
   private String md5;
 
-  public static final String JSON_PROPERTY_BATCH_TASK_ID = "batchTaskId";
-  private Long batchTaskId;
+  public static final String JSON_PROPERTY_TEXTS = "texts";
+  private String texts;
 
-  public static final String JSON_PROPERTY_EXT = "ext";
-  private String ext;
+  public static final String JSON_PROPERTY_MATERIAL = "material";
+  private String material;
 
   public VideoInfoType() { 
   }
@@ -272,60 +256,6 @@ public class VideoInfoType {
   }
 
 
-  public VideoInfoType source(Integer source) {
-    
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Get source
-   * @return source
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getSource() {
-    return source;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_SOURCE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSource(Integer source) {
-    this.source = source;
-  }
-
-
-  public VideoInfoType progress(Integer progress) {
-    
-    this.progress = progress;
-    return this;
-  }
-
-   /**
-   * Get progress
-   * @return progress
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getProgress() {
-    return progress;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProgress(Integer progress) {
-    this.progress = progress;
-  }
-
-
   public VideoInfoType createTime(String createTime) {
     
     this.createTime = createTime;
@@ -350,33 +280,6 @@ public class VideoInfoType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCreateTime(String createTime) {
     this.createTime = createTime;
-  }
-
-
-  public VideoInfoType tags(String tags) {
-    
-    this.tags = tags;
-    return this;
-  }
-
-   /**
-   * Get tags
-   * @return tags
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TAGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public String getTags() {
-    return tags;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TAGS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTags(String tags) {
-    this.tags = tags;
   }
 
 
@@ -515,33 +418,6 @@ public class VideoInfoType {
   }
 
 
-  public VideoInfoType renderType(Integer renderType) {
-    
-    this.renderType = renderType;
-    return this;
-  }
-
-   /**
-   * Get renderType
-   * @return renderType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_RENDER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getRenderType() {
-    return renderType;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_RENDER_TYPE)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRenderType(Integer renderType) {
-    this.renderType = renderType;
-  }
-
-
   public VideoInfoType md5(String md5) {
     
     this.md5 = md5;
@@ -569,57 +445,57 @@ public class VideoInfoType {
   }
 
 
-  public VideoInfoType batchTaskId(Long batchTaskId) {
+  public VideoInfoType texts(String texts) {
     
-    this.batchTaskId = batchTaskId;
+    this.texts = texts;
     return this;
   }
 
    /**
-   * Get batchTaskId
-   * @return batchTaskId
+   * Get texts
+   * @return texts
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_BATCH_TASK_ID)
+  @JsonProperty(JSON_PROPERTY_TEXTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Long getBatchTaskId() {
-    return batchTaskId;
+  public String getTexts() {
+    return texts;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BATCH_TASK_ID)
+  @JsonProperty(JSON_PROPERTY_TEXTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBatchTaskId(Long batchTaskId) {
-    this.batchTaskId = batchTaskId;
+  public void setTexts(String texts) {
+    this.texts = texts;
   }
 
 
-  public VideoInfoType ext(String ext) {
+  public VideoInfoType material(String material) {
     
-    this.ext = ext;
+    this.material = material;
     return this;
   }
 
    /**
-   * Get ext
-   * @return ext
+   * Get material
+   * @return material
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_EXT)
+  @JsonProperty(JSON_PROPERTY_MATERIAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public String getExt() {
-    return ext;
+  public String getMaterial() {
+    return material;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXT)
+  @JsonProperty(JSON_PROPERTY_MATERIAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExt(String ext) {
-    this.ext = ext;
+  public void setMaterial(String material) {
+    this.material = material;
   }
 
 
@@ -638,24 +514,20 @@ public class VideoInfoType {
         Objects.equals(this.videoUrl, videoInfoType.videoUrl) &&
         Objects.equals(this.errors, videoInfoType.errors) &&
         Objects.equals(this.videoName, videoInfoType.videoName) &&
-        Objects.equals(this.source, videoInfoType.source) &&
-        Objects.equals(this.progress, videoInfoType.progress) &&
         Objects.equals(this.createTime, videoInfoType.createTime) &&
-        Objects.equals(this.tags, videoInfoType.tags) &&
         Objects.equals(this.id, videoInfoType.id) &&
         Objects.equals(this.thumbnail, videoInfoType.thumbnail) &&
         Objects.equals(this.duration, videoInfoType.duration) &&
         Objects.equals(this.width, videoInfoType.width) &&
         Objects.equals(this.height, videoInfoType.height) &&
-        Objects.equals(this.renderType, videoInfoType.renderType) &&
         Objects.equals(this.md5, videoInfoType.md5) &&
-        Objects.equals(this.batchTaskId, videoInfoType.batchTaskId) &&
-        Objects.equals(this.ext, videoInfoType.ext);
+        Objects.equals(this.texts, videoInfoType.texts) &&
+        Objects.equals(this.material, videoInfoType.material);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(taskId, status, videoId, videoUrl, errors, videoName, source, progress, createTime, tags, id, thumbnail, duration, width, height, renderType, md5, batchTaskId, ext);
+    return Objects.hash(taskId, status, videoId, videoUrl, errors, videoName, createTime, id, thumbnail, duration, width, height, md5, texts, material);
   }
 
   @Override
@@ -668,19 +540,15 @@ public class VideoInfoType {
     sb.append("    videoUrl: ").append(toIndentedString(videoUrl)).append("\n");
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("    videoName: ").append(toIndentedString(videoName)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
-    sb.append("    progress: ").append(toIndentedString(progress)).append("\n");
     sb.append("    createTime: ").append(toIndentedString(createTime)).append("\n");
-    sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
     sb.append("    duration: ").append(toIndentedString(duration)).append("\n");
     sb.append("    width: ").append(toIndentedString(width)).append("\n");
     sb.append("    height: ").append(toIndentedString(height)).append("\n");
-    sb.append("    renderType: ").append(toIndentedString(renderType)).append("\n");
     sb.append("    md5: ").append(toIndentedString(md5)).append("\n");
-    sb.append("    batchTaskId: ").append(toIndentedString(batchTaskId)).append("\n");
-    sb.append("    ext: ").append(toIndentedString(ext)).append("\n");
+    sb.append("    texts: ").append(toIndentedString(texts)).append("\n");
+    sb.append("    material: ").append(toIndentedString(material)).append("\n");
     sb.append("}");
     return sb.toString();
   }

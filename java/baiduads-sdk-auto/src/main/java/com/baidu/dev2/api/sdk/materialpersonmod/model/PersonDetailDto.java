@@ -13,6 +13,7 @@ package com.baidu.dev2.api.sdk.materialpersonmod.model;
 
 import java.util.Objects;
 import java.util.Arrays;
+import com.baidu.dev2.api.sdk.materialpersonmod.model.ContentQualityDetail;
 import com.baidu.dev2.api.sdk.materialpersonmod.model.PersonExtDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -52,7 +53,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PersonDetailDto.JSON_PROPERTY_GENDER,
   PersonDetailDto.JSON_PROPERTY_ID_NUMBER,
   PersonDetailDto.JSON_PROPERTY_LOCATION,
-  PersonDetailDto.JSON_PROPERTY_REAUDIT_STATUS
+  PersonDetailDto.JSON_PROPERTY_REAUDIT_STATUS,
+  PersonDetailDto.JSON_PROPERTY_CONTENT_QUALITY_STATUS,
+  PersonDetailDto.JSON_PROPERTY_CONTENT_QUALITY_DETAIL,
+  PersonDetailDto.JSON_PROPERTY_HUMAN_AUDIT
 })
 @JsonTypeName("PersonDetailDto")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -131,6 +135,15 @@ public class PersonDetailDto {
 
   public static final String JSON_PROPERTY_REAUDIT_STATUS = "reauditStatus";
   private Integer reauditStatus;
+
+  public static final String JSON_PROPERTY_CONTENT_QUALITY_STATUS = "contentQualityStatus";
+  private Integer contentQualityStatus;
+
+  public static final String JSON_PROPERTY_CONTENT_QUALITY_DETAIL = "contentQualityDetail";
+  private ContentQualityDetail contentQualityDetail;
+
+  public static final String JSON_PROPERTY_HUMAN_AUDIT = "humanAudit";
+  private Integer humanAudit;
 
   public PersonDetailDto() { 
   }
@@ -810,6 +823,87 @@ public class PersonDetailDto {
   }
 
 
+  public PersonDetailDto contentQualityStatus(Integer contentQualityStatus) {
+    
+    this.contentQualityStatus = contentQualityStatus;
+    return this;
+  }
+
+   /**
+   * Get contentQualityStatus
+   * @return contentQualityStatus
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getContentQualityStatus() {
+    return contentQualityStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContentQualityStatus(Integer contentQualityStatus) {
+    this.contentQualityStatus = contentQualityStatus;
+  }
+
+
+  public PersonDetailDto contentQualityDetail(ContentQualityDetail contentQualityDetail) {
+    
+    this.contentQualityDetail = contentQualityDetail;
+    return this;
+  }
+
+   /**
+   * Get contentQualityDetail
+   * @return contentQualityDetail
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public ContentQualityDetail getContentQualityDetail() {
+    return contentQualityDetail;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTENT_QUALITY_DETAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContentQualityDetail(ContentQualityDetail contentQualityDetail) {
+    this.contentQualityDetail = contentQualityDetail;
+  }
+
+
+  public PersonDetailDto humanAudit(Integer humanAudit) {
+    
+    this.humanAudit = humanAudit;
+    return this;
+  }
+
+   /**
+   * Get humanAudit
+   * @return humanAudit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_HUMAN_AUDIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Integer getHumanAudit() {
+    return humanAudit;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_HUMAN_AUDIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setHumanAudit(Integer humanAudit) {
+    this.humanAudit = humanAudit;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -843,12 +937,15 @@ public class PersonDetailDto {
         Objects.equals(this.gender, personDetailDto.gender) &&
         Objects.equals(this.idNumber, personDetailDto.idNumber) &&
         Objects.equals(this.location, personDetailDto.location) &&
-        Objects.equals(this.reauditStatus, personDetailDto.reauditStatus);
+        Objects.equals(this.reauditStatus, personDetailDto.reauditStatus) &&
+        Objects.equals(this.contentQualityStatus, personDetailDto.contentQualityStatus) &&
+        Objects.equals(this.contentQualityDetail, personDetailDto.contentQualityDetail) &&
+        Objects.equals(this.humanAudit, personDetailDto.humanAudit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(personId, name, profileImage, job, workingYears, goodAt, education, educationBackground, introduction, qualification, categoryId, categoryName, status, auditRemark, rank, createTime, updateTime, tradeId, roleType, personExt, honour, gender, idNumber, location, reauditStatus);
+    return Objects.hash(personId, name, profileImage, job, workingYears, goodAt, education, educationBackground, introduction, qualification, categoryId, categoryName, status, auditRemark, rank, createTime, updateTime, tradeId, roleType, personExt, honour, gender, idNumber, location, reauditStatus, contentQualityStatus, contentQualityDetail, humanAudit);
   }
 
   @Override
@@ -880,6 +977,9 @@ public class PersonDetailDto {
     sb.append("    idNumber: ").append(toIndentedString(idNumber)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("    reauditStatus: ").append(toIndentedString(reauditStatus)).append("\n");
+    sb.append("    contentQualityStatus: ").append(toIndentedString(contentQualityStatus)).append("\n");
+    sb.append("    contentQualityDetail: ").append(toIndentedString(contentQualityDetail)).append("\n");
+    sb.append("    humanAudit: ").append(toIndentedString(humanAudit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

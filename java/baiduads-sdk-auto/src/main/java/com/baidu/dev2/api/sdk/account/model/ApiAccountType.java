@@ -47,17 +47,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ApiAccountType.JSON_PROPERTY_USER_LEVEL,
   ApiAccountType.JSON_PROPERTY_REGION_PRICE_FACTOR,
   ApiAccountType.JSON_PROPERTY_CID,
-  ApiAccountType.JSON_PROPERTY_STORE_SHOW,
   ApiAccountType.JSON_PROPERTY_QUERY_REGION_STATUS,
   ApiAccountType.JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS,
-  ApiAccountType.JSON_PROPERTY_DYNAMIC_CREATIVE_TITLE_STATUS,
-  ApiAccountType.JSON_PROPERTY_TEXT_TITLE_STATUS,
-  ApiAccountType.JSON_PROPERTY_PICTURE_OPTIMIZE_CREATIVE_STATUS,
-  ApiAccountType.JSON_PROPERTY_PICTURE_OPTIMIZE_SEGMENT_STATUS,
   ApiAccountType.JSON_PROPERTY_TEXT_OPTIMIZE_SEGMENT_STATUS,
   ApiAccountType.JSON_PROPERTY_SYS_LONG_LINK_SEGMENT_STATUS,
   ApiAccountType.JSON_PROPERTY_LONG_MONITOR_SUBLINK,
-  ApiAccountType.JSON_PROPERTY_CROWD_PARAM_STATUS
+  ApiAccountType.JSON_PROPERTY_ACCOUNT_MONITOR_URL,
+  ApiAccountType.JSON_PROPERTY_LICE_NAME
 })
 @JsonTypeName("ApiAccountType")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
@@ -110,26 +106,11 @@ public class ApiAccountType {
   public static final String JSON_PROPERTY_CID = "cid";
   private Long cid;
 
-  public static final String JSON_PROPERTY_STORE_SHOW = "storeShow";
-  private Integer storeShow;
-
   public static final String JSON_PROPERTY_QUERY_REGION_STATUS = "queryRegionStatus";
   private Boolean queryRegionStatus;
 
   public static final String JSON_PROPERTY_EXCLUDE_QUERY_REGION_STATUS = "excludeQueryRegionStatus";
   private Boolean excludeQueryRegionStatus;
-
-  public static final String JSON_PROPERTY_DYNAMIC_CREATIVE_TITLE_STATUS = "dynamicCreativeTitleStatus";
-  private Boolean dynamicCreativeTitleStatus;
-
-  public static final String JSON_PROPERTY_TEXT_TITLE_STATUS = "textTitleStatus";
-  private Boolean textTitleStatus;
-
-  public static final String JSON_PROPERTY_PICTURE_OPTIMIZE_CREATIVE_STATUS = "pictureOptimizeCreativeStatus";
-  private Boolean pictureOptimizeCreativeStatus;
-
-  public static final String JSON_PROPERTY_PICTURE_OPTIMIZE_SEGMENT_STATUS = "pictureOptimizeSegmentStatus";
-  private Boolean pictureOptimizeSegmentStatus;
 
   public static final String JSON_PROPERTY_TEXT_OPTIMIZE_SEGMENT_STATUS = "textOptimizeSegmentStatus";
   private Boolean textOptimizeSegmentStatus;
@@ -140,8 +121,11 @@ public class ApiAccountType {
   public static final String JSON_PROPERTY_LONG_MONITOR_SUBLINK = "longMonitorSublink";
   private String longMonitorSublink;
 
-  public static final String JSON_PROPERTY_CROWD_PARAM_STATUS = "crowdParamStatus";
-  private Boolean crowdParamStatus;
+  public static final String JSON_PROPERTY_ACCOUNT_MONITOR_URL = "accountMonitorUrl";
+  private String accountMonitorUrl;
+
+  public static final String JSON_PROPERTY_LICE_NAME = "liceName";
+  private String liceName;
 
   public ApiAccountType() { 
   }
@@ -618,33 +602,6 @@ public class ApiAccountType {
   }
 
 
-  public ApiAccountType storeShow(Integer storeShow) {
-    
-    this.storeShow = storeShow;
-    return this;
-  }
-
-   /**
-   * Get storeShow
-   * @return storeShow
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_STORE_SHOW)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Integer getStoreShow() {
-    return storeShow;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_STORE_SHOW)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStoreShow(Integer storeShow) {
-    this.storeShow = storeShow;
-  }
-
-
   public ApiAccountType queryRegionStatus(Boolean queryRegionStatus) {
     
     this.queryRegionStatus = queryRegionStatus;
@@ -696,114 +653,6 @@ public class ApiAccountType {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExcludeQueryRegionStatus(Boolean excludeQueryRegionStatus) {
     this.excludeQueryRegionStatus = excludeQueryRegionStatus;
-  }
-
-
-  public ApiAccountType dynamicCreativeTitleStatus(Boolean dynamicCreativeTitleStatus) {
-    
-    this.dynamicCreativeTitleStatus = dynamicCreativeTitleStatus;
-    return this;
-  }
-
-   /**
-   * Get dynamicCreativeTitleStatus
-   * @return dynamicCreativeTitleStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_CREATIVE_TITLE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getDynamicCreativeTitleStatus() {
-    return dynamicCreativeTitleStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_CREATIVE_TITLE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDynamicCreativeTitleStatus(Boolean dynamicCreativeTitleStatus) {
-    this.dynamicCreativeTitleStatus = dynamicCreativeTitleStatus;
-  }
-
-
-  public ApiAccountType textTitleStatus(Boolean textTitleStatus) {
-    
-    this.textTitleStatus = textTitleStatus;
-    return this;
-  }
-
-   /**
-   * Get textTitleStatus
-   * @return textTitleStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_TEXT_TITLE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getTextTitleStatus() {
-    return textTitleStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_TEXT_TITLE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTextTitleStatus(Boolean textTitleStatus) {
-    this.textTitleStatus = textTitleStatus;
-  }
-
-
-  public ApiAccountType pictureOptimizeCreativeStatus(Boolean pictureOptimizeCreativeStatus) {
-    
-    this.pictureOptimizeCreativeStatus = pictureOptimizeCreativeStatus;
-    return this;
-  }
-
-   /**
-   * Get pictureOptimizeCreativeStatus
-   * @return pictureOptimizeCreativeStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PICTURE_OPTIMIZE_CREATIVE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getPictureOptimizeCreativeStatus() {
-    return pictureOptimizeCreativeStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PICTURE_OPTIMIZE_CREATIVE_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPictureOptimizeCreativeStatus(Boolean pictureOptimizeCreativeStatus) {
-    this.pictureOptimizeCreativeStatus = pictureOptimizeCreativeStatus;
-  }
-
-
-  public ApiAccountType pictureOptimizeSegmentStatus(Boolean pictureOptimizeSegmentStatus) {
-    
-    this.pictureOptimizeSegmentStatus = pictureOptimizeSegmentStatus;
-    return this;
-  }
-
-   /**
-   * Get pictureOptimizeSegmentStatus
-   * @return pictureOptimizeSegmentStatus
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_PICTURE_OPTIMIZE_SEGMENT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
-  public Boolean getPictureOptimizeSegmentStatus() {
-    return pictureOptimizeSegmentStatus;
-  }
-
-
-  @JsonProperty(JSON_PROPERTY_PICTURE_OPTIMIZE_SEGMENT_STATUS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPictureOptimizeSegmentStatus(Boolean pictureOptimizeSegmentStatus) {
-    this.pictureOptimizeSegmentStatus = pictureOptimizeSegmentStatus;
   }
 
 
@@ -888,30 +737,57 @@ public class ApiAccountType {
   }
 
 
-  public ApiAccountType crowdParamStatus(Boolean crowdParamStatus) {
+  public ApiAccountType accountMonitorUrl(String accountMonitorUrl) {
     
-    this.crowdParamStatus = crowdParamStatus;
+    this.accountMonitorUrl = accountMonitorUrl;
     return this;
   }
 
    /**
-   * Get crowdParamStatus
-   * @return crowdParamStatus
+   * Get accountMonitorUrl
+   * @return accountMonitorUrl
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
-  @JsonProperty(JSON_PROPERTY_CROWD_PARAM_STATUS)
+  @JsonProperty(JSON_PROPERTY_ACCOUNT_MONITOR_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
-  public Boolean getCrowdParamStatus() {
-    return crowdParamStatus;
+  public String getAccountMonitorUrl() {
+    return accountMonitorUrl;
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROWD_PARAM_STATUS)
+  @JsonProperty(JSON_PROPERTY_ACCOUNT_MONITOR_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrowdParamStatus(Boolean crowdParamStatus) {
-    this.crowdParamStatus = crowdParamStatus;
+  public void setAccountMonitorUrl(String accountMonitorUrl) {
+    this.accountMonitorUrl = accountMonitorUrl;
+  }
+
+
+  public ApiAccountType liceName(String liceName) {
+    
+    this.liceName = liceName;
+    return this;
+  }
+
+   /**
+   * Get liceName
+   * @return liceName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_LICE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getLiceName() {
+    return liceName;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_LICE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setLiceName(String liceName) {
+    this.liceName = liceName;
   }
 
 
@@ -940,22 +816,18 @@ public class ApiAccountType {
         Objects.equals(this.userLevel, apiAccountType.userLevel) &&
         Objects.equals(this.regionPriceFactor, apiAccountType.regionPriceFactor) &&
         Objects.equals(this.cid, apiAccountType.cid) &&
-        Objects.equals(this.storeShow, apiAccountType.storeShow) &&
         Objects.equals(this.queryRegionStatus, apiAccountType.queryRegionStatus) &&
         Objects.equals(this.excludeQueryRegionStatus, apiAccountType.excludeQueryRegionStatus) &&
-        Objects.equals(this.dynamicCreativeTitleStatus, apiAccountType.dynamicCreativeTitleStatus) &&
-        Objects.equals(this.textTitleStatus, apiAccountType.textTitleStatus) &&
-        Objects.equals(this.pictureOptimizeCreativeStatus, apiAccountType.pictureOptimizeCreativeStatus) &&
-        Objects.equals(this.pictureOptimizeSegmentStatus, apiAccountType.pictureOptimizeSegmentStatus) &&
         Objects.equals(this.textOptimizeSegmentStatus, apiAccountType.textOptimizeSegmentStatus) &&
         Objects.equals(this.sysLongLinkSegmentStatus, apiAccountType.sysLongLinkSegmentStatus) &&
         Objects.equals(this.longMonitorSublink, apiAccountType.longMonitorSublink) &&
-        Objects.equals(this.crowdParamStatus, apiAccountType.crowdParamStatus);
+        Objects.equals(this.accountMonitorUrl, apiAccountType.accountMonitorUrl) &&
+        Objects.equals(this.liceName, apiAccountType.liceName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, balance, pcBalance, cost, payment, budget, regionTarget, excludeIp, openDomains, budgetType, regDomain, userStat, budgetOfflineTime, userLevel, regionPriceFactor, cid, storeShow, queryRegionStatus, excludeQueryRegionStatus, dynamicCreativeTitleStatus, textTitleStatus, pictureOptimizeCreativeStatus, pictureOptimizeSegmentStatus, textOptimizeSegmentStatus, sysLongLinkSegmentStatus, longMonitorSublink, crowdParamStatus);
+    return Objects.hash(userId, balance, pcBalance, cost, payment, budget, regionTarget, excludeIp, openDomains, budgetType, regDomain, userStat, budgetOfflineTime, userLevel, regionPriceFactor, cid, queryRegionStatus, excludeQueryRegionStatus, textOptimizeSegmentStatus, sysLongLinkSegmentStatus, longMonitorSublink, accountMonitorUrl, liceName);
   }
 
   @Override
@@ -978,17 +850,13 @@ public class ApiAccountType {
     sb.append("    userLevel: ").append(toIndentedString(userLevel)).append("\n");
     sb.append("    regionPriceFactor: ").append(toIndentedString(regionPriceFactor)).append("\n");
     sb.append("    cid: ").append(toIndentedString(cid)).append("\n");
-    sb.append("    storeShow: ").append(toIndentedString(storeShow)).append("\n");
     sb.append("    queryRegionStatus: ").append(toIndentedString(queryRegionStatus)).append("\n");
     sb.append("    excludeQueryRegionStatus: ").append(toIndentedString(excludeQueryRegionStatus)).append("\n");
-    sb.append("    dynamicCreativeTitleStatus: ").append(toIndentedString(dynamicCreativeTitleStatus)).append("\n");
-    sb.append("    textTitleStatus: ").append(toIndentedString(textTitleStatus)).append("\n");
-    sb.append("    pictureOptimizeCreativeStatus: ").append(toIndentedString(pictureOptimizeCreativeStatus)).append("\n");
-    sb.append("    pictureOptimizeSegmentStatus: ").append(toIndentedString(pictureOptimizeSegmentStatus)).append("\n");
     sb.append("    textOptimizeSegmentStatus: ").append(toIndentedString(textOptimizeSegmentStatus)).append("\n");
     sb.append("    sysLongLinkSegmentStatus: ").append(toIndentedString(sysLongLinkSegmentStatus)).append("\n");
     sb.append("    longMonitorSublink: ").append(toIndentedString(longMonitorSublink)).append("\n");
-    sb.append("    crowdParamStatus: ").append(toIndentedString(crowdParamStatus)).append("\n");
+    sb.append("    accountMonitorUrl: ").append(toIndentedString(accountMonitorUrl)).append("\n");
+    sb.append("    liceName: ").append(toIndentedString(liceName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

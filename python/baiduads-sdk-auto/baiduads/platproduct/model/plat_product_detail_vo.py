@@ -31,6 +31,7 @@ from baiduads.exceptions import ApiAttributeError
 def lazy_import():
     from baiduads.platproduct.model.plat_product_delivery_config_vo import PlatProductDeliveryConfigVo
     from baiduads.platproduct.model.plat_product_sku_vo import PlatProductSkuVo
+    from baiduads.platproduct.model.product_book_price_vo import ProductBookPriceVo
     from baiduads.platproduct.model.product_category_vo import ProductCategoryVo
     from baiduads.platproduct.model.product_image_vo import ProductImageVo
     from baiduads.platproduct.model.product_spu_attribute_vo import ProductSpuAttributeVo
@@ -38,6 +39,7 @@ def lazy_import():
     from baiduads.platproduct.model.service_item import ServiceItem
     globals()['PlatProductDeliveryConfigVo'] = PlatProductDeliveryConfigVo
     globals()['PlatProductSkuVo'] = PlatProductSkuVo
+    globals()['ProductBookPriceVo'] = ProductBookPriceVo
     globals()['ProductCategoryVo'] = ProductCategoryVo
     globals()['ProductImageVo'] = ProductImageVo
     globals()['ProductSpuAttributeVo'] = ProductSpuAttributeVo
@@ -108,6 +110,7 @@ class PlatProductDetailVo(ModelNormal):
             'spu_state': (int,),  # noqa: E501
             'category': ([ProductCategoryVo],),  # noqa: E501
             'attributes': ([ProductSpuAttributeVo],),  # noqa: E501
+            'specification_type': (int,),  # noqa: E501
             'support_pay_type': (int,),  # noqa: E501
             'specifications': ([ProductSpuSpecificationVo],),  # noqa: E501
             'sku_list': ([PlatProductSkuVo],),  # noqa: E501
@@ -128,6 +131,10 @@ class PlatProductDetailVo(ModelNormal):
             'limit_stock': (int,),  # noqa: E501
             'shop_brand_name': (str,),  # noqa: E501
             'shop_brand_id': (int,),  # noqa: E501
+            'spu_settle_type': (int,),  # noqa: E501
+            'is_use_product_brand': (bool,),  # noqa: E501
+            'door_time': (int,),  # noqa: E501
+            'product_book_price_vo': (ProductBookPriceVo,),  # noqa: E501
         }
 
     @cached_property
@@ -146,6 +153,7 @@ class PlatProductDetailVo(ModelNormal):
         'spu_state': 'spuState',  # noqa: E501
         'category': 'category',  # noqa: E501
         'attributes': 'attributes',  # noqa: E501
+        'specification_type': 'specificationType',  # noqa: E501
         'support_pay_type': 'supportPayType',  # noqa: E501
         'specifications': 'specifications',  # noqa: E501
         'sku_list': 'skuList',  # noqa: E501
@@ -166,6 +174,10 @@ class PlatProductDetailVo(ModelNormal):
         'limit_stock': 'limitStock',  # noqa: E501
         'shop_brand_name': 'shopBrandName',  # noqa: E501
         'shop_brand_id': 'shopBrandId',  # noqa: E501
+        'spu_settle_type': 'spuSettleType',  # noqa: E501
+        'is_use_product_brand': 'isUseProductBrand',  # noqa: E501
+        'door_time': 'doorTime',  # noqa: E501
+        'product_book_price_vo': 'productBookPriceVo',  # noqa: E501
     }
 
     read_only_vars = {
@@ -219,6 +231,7 @@ class PlatProductDetailVo(ModelNormal):
             spu_state (int): [optional]  # noqa: E501
             category ([ProductCategoryVo]): [optional]  # noqa: E501
             attributes ([ProductSpuAttributeVo]): [optional]  # noqa: E501
+            specification_type (int): [optional]  # noqa: E501
             support_pay_type (int): [optional]  # noqa: E501
             specifications ([ProductSpuSpecificationVo]): [optional]  # noqa: E501
             sku_list ([PlatProductSkuVo]): [optional]  # noqa: E501
@@ -239,6 +252,10 @@ class PlatProductDetailVo(ModelNormal):
             limit_stock (int): [optional]  # noqa: E501
             shop_brand_name (str): [optional]  # noqa: E501
             shop_brand_id (int): [optional]  # noqa: E501
+            spu_settle_type (int): [optional]  # noqa: E501
+            is_use_product_brand (bool): [optional]  # noqa: E501
+            door_time (int): [optional]  # noqa: E501
+            product_book_price_vo (ProductBookPriceVo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -330,6 +347,7 @@ class PlatProductDetailVo(ModelNormal):
             spu_state (int): [optional]  # noqa: E501
             category ([ProductCategoryVo]): [optional]  # noqa: E501
             attributes ([ProductSpuAttributeVo]): [optional]  # noqa: E501
+            specification_type (int): [optional]  # noqa: E501
             support_pay_type (int): [optional]  # noqa: E501
             specifications ([ProductSpuSpecificationVo]): [optional]  # noqa: E501
             sku_list ([PlatProductSkuVo]): [optional]  # noqa: E501
@@ -350,6 +368,10 @@ class PlatProductDetailVo(ModelNormal):
             limit_stock (int): [optional]  # noqa: E501
             shop_brand_name (str): [optional]  # noqa: E501
             shop_brand_id (int): [optional]  # noqa: E501
+            spu_settle_type (int): [optional]  # noqa: E501
+            is_use_product_brand (bool): [optional]  # noqa: E501
+            door_time (int): [optional]  # noqa: E501
+            product_book_price_vo (ProductBookPriceVo): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

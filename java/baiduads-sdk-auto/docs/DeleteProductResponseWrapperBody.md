@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List&lt;TeslaProductDeleteResponse&gt;**](TeslaProductDeleteResponse.md) |  |  [optional]
+**data** | **List&lt;Object&gt;** |  |  [optional]
 
 
 

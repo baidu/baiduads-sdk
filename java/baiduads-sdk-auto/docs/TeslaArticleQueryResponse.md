@@ -28,6 +28,9 @@ Name | Type | Description | Notes
 **ext** | [**ArticleExtDto**](ArticleExtDto.md) |  |  [optional]
 **bindMaterial** | [**List&lt;BindMaterialDto&gt;**](BindMaterialDto.md) |  |  [optional]
 **reauditStatus** | **Integer** |  |  [optional]
+**contentQualityStatus** | **Integer** |  |  [optional]
+**contentQualityDetail** | [**ContentQualityDetail**](ContentQualityDetail.md) |  |  [optional]
+**humanAudit** | **Integer** |  |  [optional]
 
 
 

@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **shopId** | **Long** |  |  [optional]
 **spuId** | **Long** |  |  [optional]
 **opType** | **Integer** |  |  [optional]
+**amisUser** | **String** |  |  [optional]
 
 
 

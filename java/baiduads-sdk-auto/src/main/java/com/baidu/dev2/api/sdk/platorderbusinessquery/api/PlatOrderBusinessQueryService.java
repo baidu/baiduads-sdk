@@ -22,6 +22,8 @@ import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetExpressNameListReq
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetExpressNameListResponseWrapper;
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetOrderDetailRequestWrapper;
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetOrderDetailResponseWrapper;
+import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetOrderExpressPackageRequestWrapper;
+import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetOrderExpressPackageResponseWrapper;
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetPartConsignOrderListRequestWrapper;
 import com.baidu.dev2.api.sdk.platorderbusinessquery.model.GetPartConsignOrderListResponseWrapper;
 
@@ -150,6 +152,63 @@ public class PlatOrderBusinessQueryService {
     String[] localVarAuthNames = new String[] {  };
 
     TypeReference<GetOrderDetailResponseWrapper> localVarReturnType = new TypeReference<GetOrderDetailResponseWrapper>() {};
+    return apiClient.invokeAPI(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarCookieParams,
+        localVarFormParams,
+        localVarAccept,
+        localVarContentType,
+        localVarAuthNames,
+        localVarReturnType
+    );
+  }
+  /**
+   * 
+   * 
+   * @param getOrderExpressPackageRequestWrapper  (required)
+   * @return GetOrderExpressPackageResponseWrapper
+   * @throws ApiException if fails to make API call
+   */
+  public GetOrderExpressPackageResponseWrapper getOrderExpressPackage(GetOrderExpressPackageRequestWrapper getOrderExpressPackageRequestWrapper) throws ApiException {
+    Object localVarPostBody = getOrderExpressPackageRequestWrapper;
+    
+    // verify the required parameter 'getOrderExpressPackageRequestWrapper' is set
+    if (getOrderExpressPackageRequestWrapper == null) {
+      throw new ApiException(400, "Missing the required parameter 'getOrderExpressPackageRequestWrapper' when calling getOrderExpressPackage");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/json/sms/service/PlatOrderBusinessQueryService/getOrderExpressPackage";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, String> localVarCookieParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    
+    final String[] localVarAccepts = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json;charset=UTF-8"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    TypeReference<GetOrderExpressPackageResponseWrapper> localVarReturnType = new TypeReference<GetOrderExpressPackageResponseWrapper>() {};
     return apiClient.invokeAPI(
         localVarPath,
         "POST",

@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **pc_track_param** | **str** |  | [optional] 
 **pc_track_template** | **str** |  | [optional] 
 **ulink** | **str** |  | [optional] 
+**api_inefficient** | **int** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
