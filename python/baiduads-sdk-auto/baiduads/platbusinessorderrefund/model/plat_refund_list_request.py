@@ -95,6 +95,8 @@ class PlatRefundListRequest(ModelNormal):
             'product_type': (int,),  # noqa: E501
             'start_time': (str,),  # noqa: E501
             'end_time': (str,),  # noqa: E501
+            'start_update_time': (str,),  # noqa: E501
+            'end_update_time': (str,),  # noqa: E501
             'product_name': (str,),  # noqa: E501
             'express_info': (str,),  # noqa: E501
         }
@@ -120,6 +122,8 @@ class PlatRefundListRequest(ModelNormal):
         'product_type': 'productType',  # noqa: E501
         'start_time': 'startTime',  # noqa: E501
         'end_time': 'endTime',  # noqa: E501
+        'start_update_time': 'startUpdateTime',  # noqa: E501
+        'end_update_time': 'endUpdateTime',  # noqa: E501
         'product_name': 'productName',  # noqa: E501
         'express_info': 'expressInfo',  # noqa: E501
     }
@@ -180,6 +184,8 @@ class PlatRefundListRequest(ModelNormal):
             product_type (int): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
             end_time (str): [optional]  # noqa: E501
+            start_update_time (str): [optional] # noqa: E501
+            end_update_time (str): [optional] # noqa: E501
             product_name (str): [optional]  # noqa: E501
             express_info (str): [optional]  # noqa: E501
         """
@@ -278,6 +284,8 @@ class PlatRefundListRequest(ModelNormal):
             product_type (int): [optional]  # noqa: E501
             start_time (str): [optional]  # noqa: E501
             end_time (str): [optional]  # noqa: E501
+            start_update_time (str): [optional] # noqa: E501
+            end_update_time (str): [optional] # noqa: E501
             product_name (str): [optional]  # noqa: E501
             express_info (str): [optional]  # noqa: E501
         """

@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **product_type** | **int** |  | [optional] 
 **start_time** | **str** |  | [optional] 
 **end_time** | **str** |  | [optional] 
+**start_update_time** | **str** |  | [optional] 
+**end_update_time** | **str** |  | [optional] 
 **product_name** | **str** |  | [optional] 
 **express_info** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

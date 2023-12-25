@@ -42,6 +42,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlatRefundListRequest.JSON_PROPERTY_PRODUCT_TYPE,
   PlatRefundListRequest.JSON_PROPERTY_START_TIME,
   PlatRefundListRequest.JSON_PROPERTY_END_TIME,
+  PlatRefundListRequest.JSON_PROPERTY_START_UPDATE_TIME,
+  PlatRefundListRequest.JSON_PROPERTY_END_UPDATE_TIME,
   PlatRefundListRequest.JSON_PROPERTY_PRODUCT_NAME,
   PlatRefundListRequest.JSON_PROPERTY_EXPRESS_INFO
 })
@@ -92,6 +94,12 @@ public class PlatRefundListRequest {
 
   public static final String JSON_PROPERTY_END_TIME = "endTime";
   private String endTime;
+
+  public static final String JSON_PROPERTY_START_UPDATE_TIME = "startUpdateTime";
+  private String startUpdateTime;
+
+  public static final String JSON_PROPERTY_END_UPDATE_TIME = "endUpdateTime";
+  private String endUpdateTime;
 
   public static final String JSON_PROPERTY_PRODUCT_NAME = "productName";
   private String productName;
@@ -472,6 +480,13 @@ public class PlatRefundListRequest {
     return startTime;
   }
 
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_START_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public String getStartUpdateTime() {
+    return startUpdateTime;
+  }
 
   @JsonProperty(JSON_PROPERTY_START_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
@@ -479,6 +494,11 @@ public class PlatRefundListRequest {
     this.startTime = startTime;
   }
 
+  @JsonProperty(JSON_PROPERTY_START_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setStartUpdateTime(String startUpdateTime) {
+    this.startUpdateTime = startUpdateTime;
+  }
 
   public PlatRefundListRequest endTime(String endTime) {
     
@@ -499,6 +519,13 @@ public class PlatRefundListRequest {
     return endTime;
   }
 
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+  @JsonProperty(JSON_PROPERTY_END_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public String getEndUpdateTime() {
+    return endUpdateTime;
+  }
 
   @JsonProperty(JSON_PROPERTY_END_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
@@ -506,6 +533,11 @@ public class PlatRefundListRequest {
     this.endTime = endTime;
   }
 
+  @JsonProperty(JSON_PROPERTY_END_UPDATE_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEndUpdateTime(String endUpdateTime) {
+    this.endUpdateTime = endUpdateTime;
+  }
 
   public PlatRefundListRequest productName(String productName) {
     
@@ -585,13 +617,15 @@ public class PlatRefundListRequest {
         Objects.equals(this.productType, platRefundListRequest.productType) &&
         Objects.equals(this.startTime, platRefundListRequest.startTime) &&
         Objects.equals(this.endTime, platRefundListRequest.endTime) &&
+        Objects.equals(this.startUpdateTime, platRefundListRequest.startUpdateTime) &&
+        Objects.equals(this.endUpdateTime, platRefundListRequest.endUpdateTime) &&
         Objects.equals(this.productName, platRefundListRequest.productName) &&
         Objects.equals(this.expressInfo, platRefundListRequest.expressInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ucid, appId, orderId, shopId, passportId, refundId, refundType, refundStatus, refundReason, expressPhone, pageNum, pageCount, productType, startTime, endTime, productName, expressInfo);
+    return Objects.hash(ucid, appId, orderId, shopId, passportId, refundId, refundType, refundStatus, refundReason, expressPhone, pageNum, pageCount, productType, startTime, endTime, startUpdateTime, endUpdateTime, productName, expressInfo);
   }
 
   @Override
@@ -613,6 +647,8 @@ public class PlatRefundListRequest {
     sb.append("    productType: ").append(toIndentedString(productType)).append("\n");
     sb.append("    startTime: ").append(toIndentedString(startTime)).append("\n");
     sb.append("    endTime: ").append(toIndentedString(endTime)).append("\n");
+    sb.append("    startUpdateTime: ").append(toIndentedString(startTime)).append("\n");
+    sb.append("    endUpdateTime: ").append(toIndentedString(endUpdateTime)).append("\n");
     sb.append("    productName: ").append(toIndentedString(productName)).append("\n");
     sb.append("    expressInfo: ").append(toIndentedString(expressInfo)).append("\n");
     sb.append("}");

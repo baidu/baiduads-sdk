@@ -22,6 +22,8 @@ Name | Type | Description | Notes
 **productType** | **Integer** |  |  [optional]
 **startTime** | **String** |  |  [optional]
 **endTime** | **String** |  |  [optional]
+**startUpdateTime** | **String** |  |  [optional]
+**endUpdateTime** | **String** |  |  [optional]
 **productName** | **String** |  |  [optional]
 **expressInfo** | **String** |  |  [optional]
 
